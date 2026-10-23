@@ -23,6 +23,20 @@ class VocabEntry {
       );
 }
 
+/// 雑学の出典。
+class TriviaSource {
+  const TriviaSource({required this.title, this.publisher = '', this.url = ''});
+  final String title;
+  final String publisher;
+  final String url;
+
+  factory TriviaSource.fromJson(Map<String, dynamic> json) => TriviaSource(
+        title: json['title'] as String? ?? '',
+        publisher: json['publisher'] as String? ?? '',
+        url: json['url'] as String? ?? '',
+      );
+}
+
 /// 言語ごとの翻訳。`reviewStatus` が published / reviewed のものだけを配信する。
 class TriviaTranslation {
   const TriviaTranslation({required this.reviewStatus, required this.levels});
@@ -54,6 +68,7 @@ class Trivia {
     this.related = const [],
     this.contentFlags = const {},
     this.vocab = const [],
+    this.sources = const [],
   });
 
   final String id;
@@ -96,6 +111,9 @@ class Trivia {
   /// 「雑学で英語」: この雑学に出てくることばの対訳。
   final List<VocabEntry> vocab;
 
+  /// 出典（Teen/Adult の詳細画面に表示する）。
+  final List<TriviaSource> sources;
+
   factory Trivia.fromJson(Map<String, dynamic> json) {
     final translations = <String, TriviaTranslation>{};
     (json['translations'] as Map<String, dynamic>).forEach((locale, value) {
@@ -135,6 +153,10 @@ class Trivia {
       vocab: [
         for (final v in json['vocab'] as List? ?? const [])
           VocabEntry.fromJson(v as Map<String, dynamic>),
+      ],
+      sources: [
+        for (final v in json['sources'] as List? ?? const [])
+          TriviaSource.fromJson(v as Map<String, dynamic>),
       ],
     );
   }

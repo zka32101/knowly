@@ -1447,6 +1447,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'データを削除しました'**
   String get privacyDeleted;
+
+  /// No description provided for @shareImage.
+  ///
+  /// In ja, this message translates to:
+  /// **'画像でシェア'**
+  String get shareImage;
+
+  /// No description provided for @sourcesSection.
+  ///
+  /// In ja, this message translates to:
+  /// **'出典'**
+  String get sourcesSection;
 }
 
 class _AppLocalizationsDelegate

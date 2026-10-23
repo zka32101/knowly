@@ -737,4 +737,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyDeleted => 'Data deleted';
+
+  @override
+  String get shareImage => 'Share as image';
+
+  @override
+  String get sourcesSection => 'Sources';
 }

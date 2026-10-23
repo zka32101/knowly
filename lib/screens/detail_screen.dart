@@ -16,6 +16,7 @@ import '../state/settings.dart';
 import '../widgets/illustration.dart';
 import '../widgets/ja_wrap_text.dart';
 import '../widgets/quiz_sheet.dart';
+import '../widgets/share_card.dart';
 
 class DetailScreen extends ConsumerStatefulWidget {
   const DetailScreen({super.key, required this.triviaId, this.chain = 0});
@@ -328,6 +329,18 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                       }
                     },
                   ),
+                if (ownBand.isTeenOrAdult)
+                  OutlinedButton.icon(
+                    key: const Key('share_button'),
+                    icon: const Icon(Icons.ios_share),
+                    label: Text(l.shareImage),
+                    onPressed: () => showShareSheet(
+                      context,
+                      illustration: item.illustration,
+                      title: level.title,
+                      body: level.body,
+                    ),
+                  ),
                 if (project != null)
                   FilledButton.tonalIcon(
                     key: const Key('open_project_from_fact'),
@@ -349,6 +362,20 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                   ),
               ],
             ),
+            if (ownBand.isTeenOrAdult && item.sources.isNotEmpty) ...[
+              const SizedBox(height: 24),
+              Text(l.sourcesSection,
+                  key: const Key('sources_title'), style: theme.textTheme.titleSmall),
+              const SizedBox(height: 4),
+              for (final src in item.sources)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 2),
+                  child: Text(
+                    src.publisher.isEmpty ? src.title : '${src.title}（${src.publisher}）',
+                    style: theme.textTheme.bodySmall,
+                  ),
+                ),
+            ],
             if (related.isNotEmpty) ...[
               const SizedBox(height: 24),
               Text(l.relatedSection, style: theme.textTheme.titleSmall),

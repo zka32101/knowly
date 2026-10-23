@@ -1,3 +1,4 @@
+import 'dart:typed_data';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -7,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
+import 'package:knowly/services/share.dart';
 import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
@@ -65,6 +67,16 @@ class FakeTts implements TtsService {
   int stops = 0;
 }
 
+class FakeShare implements ShareService {
+  Uint8List? png;
+  String? text;
+  @override
+  Future<void> shareImage(Uint8List png, {required String text}) async {
+    this.png = png;
+    this.text = text;
+  }
+}
+
 class FakeNotifications implements NotificationService {
   FakeNotifications({this.grant = true});
   final bool grant;
@@ -89,7 +101,7 @@ class FakeNotifications implements NotificationService {
   }
 }
 
-TriviaRepository _repo() {
+TriviaRepository _repo({bool withSources = false}) {
   final raw = jsonDecode(File('assets/trivia/trivia.json').readAsStringSync())
       as Map<String, dynamic>;
   final quiz = jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())
@@ -97,9 +109,15 @@ TriviaRepository _repo() {
   final why = jsonDecode(File('assets/trivia/why_chains.json').readAsStringSync())
       as Map<String, dynamic>;
   return TriviaRepository(
-    (raw['items'] as List)
-        .map((e) => Trivia.fromJson(e as Map<String, dynamic>))
-        .toList(),
+    (raw['items'] as List).map((e) {
+      final m = e as Map<String, dynamic>;
+      if (withSources) {
+        m['sources'] = [
+          {'title': 'テスト出典', 'publisher': '国立テスト館', 'url': 'https://example.com'},
+        ];
+      }
+      return Trivia.fromJson(m);
+    }).toList(),
     quizzes: (quiz['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -177,6 +195,8 @@ Future<FakeTts> _pump(
   String? deviceRegion = 'JP',
   DateTime? now,
   EntitlementService? entitlement,
+  bool withSources = false,
+  ShareService? share,
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
   SharedPreferences.setMockInitialValues(prefs);
@@ -185,7 +205,8 @@ Future<FakeTts> _pump(
   await tester.pumpWidget(ProviderScope(
     overrides: [
       sharedPreferencesProvider.overrideWithValue(sp),
-      triviaRepositoryProvider.overrideWithValue(_repo()),
+      triviaRepositoryProvider.overrideWithValue(_repo(withSources: withSources)),
+      if (share != null) shareServiceProvider.overrideWithValue(share),
       deviceLanguageProvider.overrideWithValue(deviceLanguage),
       nowProvider.overrideWithValue(now ?? DateTime(2026, 10, 23)),
       deviceRegionProvider.overrideWithValue(deviceRegion),
@@ -1768,6 +1789,53 @@ void main() {
       await _solveGate(tester, wrong: true);
       expect(find.byKey(const Key('privacy_delete_confirm')), findsNothing);
       expect(containerOf(tester).read(settingsProvider).ageBand, AgeBand.kids);
+    });
+  });
+
+  group('出典と画像共有', () {
+    testWidgets('Adult: 出典があれば詳細に表示される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, withSources: true);
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('sources_title'));
+      expect(find.text('テスト出典（国立テスト館）'), findsOneWidget);
+    });
+
+    testWidgets('出典がなければ、見出しも出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('copy_button'));
+      expect(find.byKey(const Key('sources_title')), findsNothing);
+    });
+
+    testWidgets('Junior: 出典も画像共有も出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'}, withSources: true);
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('save_button'));
+      expect(find.byKey(const Key('sources_title')), findsNothing);
+      expect(find.byKey(const Key('share_button')), findsNothing);
+    });
+
+    testWidgets('Adult: 画像でシェアすると、PNG が共有サービスに渡る', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('share_button'));
+      await tester.tap(find.byKey(const Key('share_button')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('share_card')), findsOneWidget);
+      await tester.runAsync(() async {
+        await tester.tap(find.byKey(const Key('share_confirm')));
+        await Future<void>.delayed(const Duration(milliseconds: 500));
+      });
+      await tester.pumpAndSettle();
+      expect(share.png, isNotNull);
+      // PNG のシグネチャ
+      expect(share.png!.sublist(0, 4), [0x89, 0x50, 0x4E, 0x47]);
+      expect(find.byKey(const Key('share_card')), findsNothing);
     });
   });
 }

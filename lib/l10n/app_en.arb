@@ -337,5 +337,7 @@
   "privacyDeleteBody": "All settings, saved facts, records and scheduled notifications will be erased and the app returns to the first screen. This cannot be undone. Premium you purchased is kept (restore it from the store).",
   "privacyDeleteConfirm": "Delete",
   "privacyDeleteCancel": "Cancel",
-  "privacyDeleted": "Data deleted"
+  "privacyDeleted": "Data deleted",
+  "shareImage": "Share as image",
+  "sourcesSection": "Sources"
 }

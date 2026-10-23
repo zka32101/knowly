@@ -721,4 +721,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get privacyDeleted => 'データを削除しました';
+
+  @override
+  String get shareImage => '画像でシェア';
+
+  @override
+  String get sourcesSection => '出典';
 }

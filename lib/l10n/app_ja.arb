@@ -337,5 +337,7 @@
   "privacyDeleteBody": "設定・保存した雑学・記録・通知の予約がすべて消え、最初の画面に戻ります。元に戻せません。購入済みのプレミアムは消えません（ストアで復元できます）。",
   "privacyDeleteConfirm": "削除する",
   "privacyDeleteCancel": "やめる",
-  "privacyDeleted": "データを削除しました"
+  "privacyDeleted": "データを削除しました",
+  "shareImage": "画像でシェア",
+  "sourcesSection": "出典"
 }
