@@ -1305,6 +1305,14 @@ void main() {
       final tts = await _pump(tester,
           prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
       await openById(tester, 'octopus_blue_blood');
+      // 「日本語で聞く」は、ことば一覧より上にある
+      await _scrollTo(tester, const Key('listen_other'));
+      expect(find.text('Listen in Japanese'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_other')));
+      await tester.pump();
+      expect(tts.languages.last, 'ja');
+      expect(RegExp(r'[ぁ-んァ-ヶ一-龥]').hasMatch(tts.spoken.last), isTrue);
+
       await _scrollTo(tester, const Key('vocab_octopus'));
       expect(tester.widget<Text>(find.byKey(const Key('vocab_title'), skipOffstage: false)).data,
           'Japanese words');
@@ -1312,11 +1320,6 @@ void main() {
       await tester.tap(find.byKey(const Key('vocab_octopus')));
       await tester.pump();
       expect(tts.spoken.last, 'たこ');
-      expect(tts.languages.last, 'ja');
-      await _scrollTo(tester, const Key('listen_other'));
-      expect(find.text('Listen in Japanese'), findsOneWidget);
-      await tester.tap(find.byKey(const Key('listen_other')));
-      await tester.pump();
       expect(tts.languages.last, 'ja');
     });
 
