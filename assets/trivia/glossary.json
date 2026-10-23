@@ -1,0 +1,1037 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "id": "hemocyanin",
+   "ja": {
+    "term": "ヘモシアニン",
+    "match": [
+     "ヘモシアニン"
+    ],
+    "simple": "血のなかで、さんそを はこぶ ものです。タコや イカなどは、これを つかっています。",
+    "detail": "銅を含むたんぱく質で、酸素と結びつくと青くなります。人の血液の赤いヘモグロビン（鉄を含む）と同じ役目をします。"
+   },
+   "en": {
+    "term": "hemocyanin",
+    "match": [
+     "hemocyanin"
+    ],
+    "simple": "A substance in the blood that carries oxygen. Octopuses and some other animals use it.",
+    "detail": "A copper-containing protein that turns blue when it binds oxygen. It does the job that iron-based hemoglobin does in human blood."
+   }
+  },
+  {
+   "id": "osmotic_pressure",
+   "ja": {
+    "term": "浸透圧",
+    "match": [
+     "浸透圧"
+    ],
+    "simple": "水が、うすい ほうから こい ほうへ うつろうとする ちからです。",
+    "detail": "濃度の違う2つの液体が薄い膜で隔てられると、水が濃い側へ移動します。このとき水を引き寄せる圧力が浸透圧で、高濃度の糖は微生物の水分を奪います。"
+   },
+   "en": {
+    "term": "osmotic pressure",
+    "match": [
+     "osmotic pressure"
+    ],
+    "simple": "The pull that moves water from a weaker solution toward a stronger one.",
+    "detail": "When two solutions of different concentration are separated by a thin membrane, water moves toward the stronger side. Very sugary honey draws water out of microbes this way."
+   }
+  },
+  {
+   "id": "hydrogen_peroxide",
+   "ja": {
+    "term": "過酸化水素",
+    "match": [
+     "過酸化水素"
+    ],
+    "simple": "きずぐちの しょうどくに つかわれる、ばいきんに きく えきたいです。",
+    "detail": "水（H₂O）より酸素が1つ多い化合物（H₂O₂）で、強い酸化力で微生物を抑えます。蜂蜜では酵素の働きで少しずつ作られます。"
+   },
+   "en": {
+    "term": "hydrogen peroxide",
+    "match": [
+     "hydrogen peroxide"
+    ],
+    "simple": "A liquid that stops germs from growing, often used to clean small cuts.",
+    "detail": "A compound (H₂O₂) with one more oxygen atom than water. Its strong oxidizing power suppresses microbes, and bee enzymes make a little of it in honey."
+   }
+  },
+  {
+   "id": "ph",
+   "ja": {
+    "term": "pH",
+    "match": [
+     "pH"
+    ],
+    "simple": "すっぱさ・アルカリの つよさを あらわす すうじです。",
+    "detail": "水素イオンの濃度を表す尺度で、7が中性、小さいほど酸性、大きいほどアルカリ性です。レモン果汁は約2、水は約7です。"
+   },
+   "en": {
+    "term": "pH",
+    "match": [
+     "pH"
+    ],
+    "simple": "A number that shows how acidic or alkaline something is.",
+    "detail": "A scale of hydrogen-ion concentration: 7 is neutral, lower is more acidic and higher is more alkaline. Lemon juice is about 2 and pure water is about 7."
+   }
+  },
+  {
+   "id": "berry",
+   "ja": {
+    "term": "液果",
+    "match": [
+     "液果"
+    ],
+    "simple": "やわらかい にくが ついた、たねの はいった くだものの なかまです。",
+    "detail": "植物学では、1つの花の子房全体が肉質に育った果実を指します。バナナ、トマト、ブドウなどが該当し、イチゴは含まれません。"
+   },
+   "en": {
+    "term": "botanical berry",
+    "match": [
+     "botanical berry"
+    ],
+    "simple": "In science, a fruit with soft flesh and seeds that grows from one flower.",
+    "detail": "A fruit in which the whole ovary of a single flower becomes fleshy. Bananas, tomatoes and grapes qualify; strawberries do not."
+   }
+  },
+  {
+   "id": "ovary",
+   "ja": {
+    "term": "子房",
+    "match": [
+     "子房"
+    ],
+    "simple": "花の まんなかに ある、たねに なる ところを つつむ ふくろです。",
+    "detail": "めしべの根元のふくらんだ部分で、中に胚珠があります。受粉すると、子房が育って果実になります。"
+   },
+   "en": {
+    "term": "ovary",
+    "match": [
+     "ovary"
+    ],
+    "simple": "The swollen base of a flower that holds the future seeds.",
+    "detail": "The enlarged base of the pistil containing the ovules. After pollination it grows into the fruit."
+   }
+  },
+  {
+   "id": "receptacle",
+   "ja": {
+    "term": "花托",
+    "match": [
+     "花托"
+    ],
+    "simple": "花の いちばん した、がくや はなびらが ついている ところです。",
+    "detail": "花の付け根にある台座のような部分です。イチゴでは、この花托が大きくふくらんで赤い果肉になります。"
+   },
+   "en": {
+    "term": "receptacle",
+    "match": [
+     "receptacle"
+    ],
+    "simple": "The base of a flower where the petals and sepals attach.",
+    "detail": "The platform at the base of a flower. In strawberries, the receptacle swells into the red, fleshy part we eat."
+   }
+  },
+  {
+   "id": "accessory_fruit",
+   "ja": {
+    "term": "偽果",
+    "match": [
+     "偽果"
+    ],
+    "simple": "ほんとうの くだもの いがいの ぶぶんが ふくらんで、くだもののように なったものです。",
+    "detail": "子房以外の部分（花托など）が発達して果実のようになったものです。イチゴやリンゴが代表例です。"
+   },
+   "en": {
+    "term": "accessory fruit",
+    "match": [
+     "accessory fruit"
+    ],
+    "simple": "A fruit where the part we eat is not the true fruit but another part of the flower.",
+    "detail": "A fruit formed mostly from tissue other than the ovary, such as the receptacle. Strawberries and apples are typical examples."
+   }
+  },
+  {
+   "id": "achene",
+   "ja": {
+    "term": "痩果",
+    "match": [
+     "痩果"
+    ],
+    "simple": "かわいた かわの なかに、たねが 1つ はいっている ちいさな み です。",
+    "detail": "乾いた薄い果皮に包まれ、種子が1つだけ入った小さな果実です。イチゴの表面の粒がこれにあたります。"
+   },
+   "en": {
+    "term": "achene",
+    "match": [
+     "achenes",
+     "achene"
+    ],
+    "simple": "A tiny dry fruit with one seed inside.",
+    "detail": "A small dry fruit with a thin wall that holds a single seed. The dots on a strawberry's surface are achenes."
+   }
+  },
+  {
+   "id": "rotation_period",
+   "ja": {
+    "term": "自転周期",
+    "match": [
+     "自転周期"
+    ],
+    "simple": "わくせいが 1かい、くるっと まわるのに かかる じかんです。",
+    "detail": "天体が自分の軸のまわりを1回転するのにかかる時間です。地球は約24時間（恒星日では約23時間56分）です。"
+   },
+   "en": {
+    "term": "rotation period",
+    "match": [
+     "rotation period"
+    ],
+    "simple": "The time a planet takes to spin around once.",
+    "detail": "The time a body takes to turn once around its own axis. Earth's is about 24 hours (23 h 56 min measured against the stars)."
+   }
+  },
+  {
+   "id": "orbital_period",
+   "ja": {
+    "term": "公転周期",
+    "match": [
+     "公転周期"
+    ],
+    "simple": "わくせいが たいようの まわりを 1しゅう するのに かかる じかんです。",
+    "detail": "天体が別の天体のまわりを1周するのにかかる時間です。地球の公転周期が1年です。"
+   },
+   "en": {
+    "term": "orbital period",
+    "match": [
+     "orbital period"
+    ],
+    "simple": "The time a planet takes to go once around the Sun.",
+    "detail": "The time a body takes to complete one orbit around another. Earth's orbital period is one year."
+   }
+  },
+  {
+   "id": "sidereal_day",
+   "ja": {
+    "term": "恒星日",
+    "match": [
+     "恒星日"
+    ],
+    "simple": "ほしを もとに はかった、わくせいが 1かい まわる じかんです。",
+    "detail": "遠くの恒星に対して天体が1回自転する時間です。太陽を基準にした「太陽日」とは少し違います。"
+   },
+   "en": {
+    "term": "sidereal day",
+    "match": [
+     "sidereal day"
+    ],
+    "simple": "One spin of a planet measured against the distant stars.",
+    "detail": "The time for one rotation relative to distant stars. It differs slightly from the solar day, which is measured against the Sun."
+   }
+  },
+  {
+   "id": "cartilaginous_fish",
+   "ja": {
+    "term": "軟骨魚類",
+    "match": [
+     "軟骨魚類"
+    ],
+    "simple": "ほねが やわらかい 「なんこつ」で できている さかなの なかまです。サメや エイが そうです。",
+    "detail": "骨格が硬い骨ではなく軟骨でできている魚のグループです。サメ、エイ、ギンザメなどが含まれます。"
+   },
+   "en": {
+    "term": "cartilaginous fishes",
+    "match": [
+     "cartilaginous fishes",
+     "cartilaginous fish"
+    ],
+    "simple": "Fish whose skeletons are made of soft cartilage instead of bone, like sharks and rays.",
+    "detail": "A group of fish whose skeleton is made of cartilage rather than hard bone. It includes sharks, rays and chimaeras."
+   }
+  },
+  {
+   "id": "devonian",
+   "ja": {
+    "term": "デボン紀",
+    "match": [
+     "デボン紀"
+    ],
+    "simple": "いまから 4おくねんぐらい まえの、さかなが さかえた じだいです。",
+    "detail": "約4億1900万〜3億5900万年前の地質時代で、「魚の時代」と呼ばれます。陸上に森が現れ始めた時期でもあります。"
+   }
+  },
+  {
+   "id": "ossification_fuse",
+   "ja": {
+    "term": "癒合",
+    "match": [
+     "癒合"
+    ],
+    "simple": "ばらばらだった ものが くっついて ひとつに なることです。",
+    "detail": "赤ちゃんのときは分かれていた骨が、成長につれてつながって1つの骨になることを指します。"
+   },
+   "en": {
+    "term": "ossification centers",
+    "match": [
+     "ossification centers"
+    ],
+    "simple": "Spots where bone starts to form; they later join together.",
+    "detail": "Places in the developing skeleton where cartilage turns into bone. During growth many of them fuse into single bones."
+   }
+  },
+  {
+   "id": "cervical_vertebrae",
+   "ja": {
+    "term": "頸椎",
+    "match": [
+     "頸椎"
+    ],
+    "simple": "くびに ある ほねです。",
+    "detail": ""
+   },
+   "en": {
+    "term": "cervical vertebrae",
+    "match": [
+     "cervical vertebrae"
+    ],
+    "simple": "The bones of the neck.",
+    "detail": ""
+   }
+  },
+  {
+   "id": "photosphere",
+   "ja": {
+    "term": "光球",
+    "match": [
+     "光球"
+    ],
+    "simple": "たいようの ひょうめんの、わたしたちが みている かがやく ところです。",
+    "detail": "太陽の「表面」とされる、光を宇宙へ放つ層です。厚さは数百kmで、温度は約5,500℃です。"
+   },
+   "en": {
+    "term": "photosphere",
+    "match": [
+     "photosphere"
+    ],
+    "simple": "The glowing 'surface' of the Sun that we see.",
+    "detail": "The layer of the Sun that gives off the light we see, a few hundred kilometers thick, at about 5,500 °C."
+   }
+  },
+  {
+   "id": "tidal_interaction",
+   "ja": {
+    "term": "潮汐相互作用",
+    "match": [
+     "潮汐相互作用"
+    ],
+    "simple": "つきと ちきゅうが おたがいを ひっぱりあって おこる ちからの はたらきです。",
+    "detail": "月と地球が引力で互いの形をわずかに変形させ合う作用です。海の満ち引きの原因でもあり、月を少しずつ遠ざけます。"
+   },
+   "en": {
+    "term": "tidal interaction",
+    "match": [
+     "Tidal interaction",
+     "tidal interaction"
+    ],
+    "simple": "The way the Moon and Earth pull on each other and slightly stretch each other.",
+    "detail": "The mutual pull by which the Moon and Earth slightly deform each other. It causes ocean tides and slowly pushes the Moon outward."
+   }
+  },
+  {
+   "id": "medium_wave",
+   "ja": {
+    "term": "媒質",
+    "match": [
+     "媒質"
+    ],
+    "simple": "おとなどが つたわる とき、ふるえを うけついでいく もの（くうき・みず など）です。",
+    "detail": "波を伝える物質のことです。音は空気や水、固体などの媒質があって初めて伝わります。"
+   },
+   "en": {
+    "term": "medium",
+    "match": [
+     "a medium"
+    ],
+    "simple": "The material, like air or water, that carries a wave.",
+    "detail": "The substance that carries a wave. Sound needs a medium such as air, water or a solid to travel."
+   }
+  },
+  {
+   "id": "hydrogen_bond",
+   "ja": {
+    "term": "水素結合",
+    "match": [
+     "水素結合"
+    ],
+    "simple": "水の つぶどうしが、よわい ちからで くっつきあう しくみです。",
+    "detail": "水素原子が、隣の分子の酸素などと弱く引き合う結合です。水が氷になるとき、これで隙間の多い構造になります。"
+   },
+   "en": {
+    "term": "hydrogen bond",
+    "match": [
+     "hydrogen-bonded",
+     "hydrogen bond"
+    ],
+    "simple": "A weak attraction that makes water molecules stick together.",
+    "detail": "A weak attraction between a hydrogen atom and a nearby oxygen atom of another molecule. When water freezes, it arranges ice into an open structure."
+   }
+  },
+  {
+   "id": "wrought_iron",
+   "ja": {
+    "term": "錬鉄",
+    "match": [
+     "錬鉄"
+    ],
+    "simple": "かたく たたいて きたえた、てつの いっしゅです。",
+    "detail": "炭素の少ない鉄を何度も鍛えて作った素材です。エッフェル塔など19世紀の建築によく使われました。"
+   },
+   "en": {
+    "term": "wrought iron",
+    "match": [
+     "wrought iron"
+    ],
+    "simple": "A tough kind of iron hammered into shape.",
+    "detail": "A low-carbon iron that is worked by hammering. It was widely used in 19th-century structures such as the Eiffel Tower."
+   }
+  },
+  {
+   "id": "thermal_expansion",
+   "ja": {
+    "term": "熱膨張",
+    "match": [
+     "熱膨張"
+    ],
+    "simple": "ものが あたたまると、すこし おおきく なる ことです。",
+    "detail": "温度が上がると物体の体積や長さが増える現象です。鉄道のレールの継ぎ目にすき間があるのはこのためです。"
+   }
+  },
+  {
+   "id": "elasticity",
+   "ja": {
+    "term": "弾性",
+    "match": [
+     "弾性"
+    ],
+    "simple": "ひっぱったり おしたりしても、もとに もどろうとする せいしつです。",
+    "detail": "力を加えて変形しても、力を除くと元に戻る性質です。ゴムやバネが代表的です。"
+   },
+   "en": {
+    "term": "elasticity",
+    "match": [
+     "elasticity"
+    ],
+    "simple": "The ability of something to spring back after being stretched or pressed.",
+    "detail": "The property of returning to the original shape after being deformed. Rubber and springs are typical examples."
+   }
+  },
+  {
+   "id": "dna_sequence",
+   "ja": {
+    "term": "塩基配列",
+    "match": [
+     "塩基配列"
+    ],
+    "simple": "DNAの なかの 4しゅるいの もじ（A・T・G・C）の ならびかたです。",
+    "detail": "DNAを作る4種類の塩基（A・T・G・C）が並ぶ順序で、これが遺伝情報になります。"
+   },
+   "en": {
+    "term": "DNA sequence",
+    "match": [
+     "DNA sequence"
+    ],
+    "simple": "The order of the four 'letters' (A, T, G, C) in DNA.",
+    "detail": "The order of the four bases (A, T, G, C) that make up DNA. This order carries genetic information."
+   }
+  },
+  {
+   "id": "sweet_receptor",
+   "ja": {
+    "term": "甘味受容体",
+    "match": [
+     "甘味受容体"
+    ],
+    "simple": "したに あって、あまさを かんじとる しくみです。",
+    "detail": "舌などの味細胞にあって、糖などの甘味物質を検知するたんぱく質です。"
+   },
+   "en": {
+    "term": "sweet taste receptor",
+    "match": [
+     "sweet taste receptor"
+    ],
+    "simple": "The part of the tongue that detects sweetness.",
+    "detail": "A protein on taste cells that detects sugars and other sweet substances."
+   }
+  },
+  {
+   "id": "pseudogene",
+   "ja": {
+    "term": "偽遺伝子",
+    "match": [
+     "偽遺伝子"
+    ],
+    "simple": "むかしは はたらいていたが、いまは はたらかなくなった いでんしです。",
+    "detail": "変異などにより機能を失った遺伝子の残骸です。進化の過程で不要になった機能の痕跡と考えられます。"
+   },
+   "en": {
+    "term": "pseudogene",
+    "match": [
+     "pseudogene"
+    ],
+    "simple": "A gene that used to work but no longer does.",
+    "detail": "A gene that has lost its function through mutations, often a leftover from a function that became unnecessary during evolution."
+   }
+  },
+  {
+   "id": "convergent_evolution",
+   "ja": {
+    "term": "収斂進化",
+    "match": [
+     "収斂進化"
+    ],
+    "simple": "ちがう いきものが、にた すがたや はたらきに なっていく ことです。",
+    "detail": "系統の離れた生物が、似た環境に適応して似た形質を独立に進化させる現象です。"
+   },
+   "en": {
+    "term": "convergent evolution",
+    "match": [
+     "convergent evolution"
+    ],
+    "simple": "When unrelated animals end up with similar features.",
+    "detail": "The independent evolution of similar traits in distantly related organisms adapting to similar conditions."
+   }
+  },
+  {
+   "id": "unihemispheric_sleep",
+   "ja": {
+    "term": "単半球徐波睡眠",
+    "match": [
+     "単半球徐波睡眠"
+    ],
+    "simple": "のうの かたほうだけ ねむり、もう かたほうは おきている ねむりかたです。",
+    "detail": "脳の片側の半球だけが徐波睡眠に入り、もう片方が覚醒を保つ睡眠です。イルカや一部の鳥で知られます。"
+   },
+   "en": {
+    "term": "unihemispheric slow-wave sleep",
+    "match": [
+     "unihemispheric slow-wave sleep"
+    ],
+    "simple": "Sleeping with only half of the brain at a time.",
+    "detail": "Sleep in which one brain hemisphere enters slow-wave sleep while the other stays awake. Known in dolphins and some birds."
+   }
+  },
+  {
+   "id": "infrasound",
+   "ja": {
+    "term": "インフラサウンド",
+    "match": [
+     "インフラサウンド"
+    ],
+    "simple": "ひとの みみには きこえない、とても ひくい おとです。",
+    "detail": "周波数が約20Hz未満で、人には聞き取れない低い音です。ゾウやクジラが仲間との交信に使うと考えられています。"
+   }
+  },
+  {
+   "id": "audible_range",
+   "ja": {
+    "term": "可聴域",
+    "match": [
+     "可聴域"
+    ],
+    "simple": "ひとの みみで きける おとの はんいです。",
+    "detail": "人が聞き取れる周波数の範囲で、おおよそ20Hz〜20,000Hzです。年齢とともに高い音から聞こえにくくなります。"
+   }
+  },
+  {
+   "id": "carboniferous",
+   "ja": {
+    "term": "石炭紀",
+    "match": [
+     "石炭紀"
+    ],
+    "simple": "いまから 3おくねん ぐらい まえ、おおきな もりが ひろがっていた じだいです。",
+    "detail": "約3億5900万〜2億9900万年前の地質時代で、巨大なシダ類の森が広がり、現在の石炭のもとになりました。"
+   },
+   "en": {
+    "term": "Carboniferous",
+    "match": [
+     "Carboniferous"
+    ],
+    "simple": "A time about 300 million years ago when huge forests covered the land.",
+    "detail": "The geological period from about 359 to 299 million years ago, when vast fern forests formed what later became coal."
+   }
+  },
+  {
+   "id": "luciferin",
+   "ja": {
+    "term": "ルシフェリン",
+    "match": [
+     "ルシフェリン"
+    ],
+    "simple": "ホタルが ひかる ときに つかう、ひかりの もとに なる ぶっしつです。",
+    "detail": "生物発光の基質となる化合物で、酵素ルシフェラーゼの働きで酸素と反応して光を出します。"
+   },
+   "en": {
+    "term": "luciferin",
+    "match": [
+     "luciferin"
+    ],
+    "simple": "The substance fireflies use to make light.",
+    "detail": "The light-producing molecule in bioluminescence. With the enzyme luciferase it reacts with oxygen and emits light."
+   }
+  },
+  {
+   "id": "bioluminescence",
+   "ja": {
+    "term": "生物発光",
+    "match": [
+     "生物発光"
+    ],
+    "simple": "いきものが じぶんの からだの なかで ひかりを つくる ことです。",
+    "detail": "生物が化学反応で光を出す現象です。ホタル、ホタルイカ、深海の魚などで知られます。"
+   },
+   "en": {
+    "term": "bioluminescence",
+    "match": [
+     "bioluminescence"
+    ],
+    "simple": "When a living thing makes its own light.",
+    "detail": "The emission of light by a living organism through a chemical reaction, seen in fireflies, firefly squid and deep-sea fishes."
+   }
+  },
+  {
+   "id": "prime_number",
+   "ja": {
+    "term": "素数",
+    "match": [
+     "素数"
+    ],
+    "simple": "1と そのかず いがいの かずでは わりきれない かずです。（2・3・5・7・11・13…）",
+    "detail": "1とその数自身以外に約数を持たない2以上の整数です。13や17のように、他の周期と重なりにくい性質があります。"
+   },
+   "en": {
+    "term": "prime number",
+    "match": [
+     "prime-numbered",
+     "prime number"
+    ],
+    "simple": "A number that can only be divided evenly by 1 and itself (2, 3, 5, 7, 11, 13...).",
+    "detail": "An integer above 1 with no divisors other than 1 and itself. Cycles like 13 or 17 years rarely line up with shorter cycles."
+   }
+  },
+  {
+   "id": "hexapod",
+   "ja": {
+    "term": "六脚類",
+    "match": [
+     "六脚類"
+    ],
+    "simple": "あしが 6ぽん ある むしの なかまの ことです。",
+    "detail": "昆虫を含む、脚が6本の節足動物のグループです。体は頭・胸・腹に分かれます。"
+   },
+   "en": {
+    "term": "hexapods",
+    "match": [
+     "hexapods",
+     "hexapod"
+    ],
+    "simple": "The group of six-legged animals, including insects.",
+    "detail": "The group of six-legged arthropods that includes insects, with the body divided into head, thorax and abdomen."
+   }
+  },
+  {
+   "id": "arachnid",
+   "ja": {
+    "term": "鋏角類",
+    "match": [
+     "鋏角類"
+    ],
+    "simple": "クモや ダニ、サソリなどの なかまです。むしの なかまとは ちがいます。",
+    "detail": "触角を持たず、ハサミ状の口の器官（鋏角）を持つ節足動物のグループです。クモ、ダニ、サソリなどが含まれます。"
+   },
+   "en": {
+    "term": "arachnids",
+    "match": [
+     "arachnids",
+     "arachnid"
+    ],
+    "simple": "Spiders, scorpions and mites. They are not insects.",
+    "detail": "Arthropods with no antennae and with pincer-like mouthparts. The group includes spiders, scorpions and mites."
+   }
+  },
+  {
+   "id": "coleoptera",
+   "ja": {
+    "term": "甲虫目",
+    "match": [
+     "甲虫目"
+    ],
+    "simple": "カブトムシや テントウムシなど、かたい はねを もつ むしの グループです。",
+    "detail": "前翅が硬い鞘になった昆虫の目（グループ）です。種数が最も多く、約40万種が知られています。"
+   },
+   "en": {
+    "term": "Coleoptera",
+    "match": [
+     "Coleoptera"
+    ],
+    "simple": "The group of beetles, which have hard wing covers.",
+    "detail": "The insect order whose front wings are hardened into covers. It is the most species-rich order, with about 400,000 known species."
+   }
+  },
+  {
+   "id": "fibroin",
+   "ja": {
+    "term": "フィブロイン",
+    "match": [
+     "フィブロイン"
+    ],
+    "simple": "きぬいとの おもな ざいりょうに なる たんぱくしつです。",
+    "detail": "カイコなどが作る絹糸の中心となる繊維状のたんぱく質です。"
+   },
+   "en": {
+    "term": "fibroin",
+    "match": [
+     "fibroin"
+    ],
+    "simple": "The main protein that silk threads are made of.",
+    "detail": "The fibrous protein at the core of silk produced by silkworms."
+   }
+  },
+  {
+   "id": "sericin",
+   "ja": {
+    "term": "セリシン",
+    "match": [
+     "セリシン"
+    ],
+    "simple": "きぬいとの まわりを のりのように つつんでいる たんぱくしつです。",
+    "detail": "絹糸（フィブロイン）を包んで固める接着剤の役割をするたんぱく質です。精練で取り除くと絹はなめらかになります。"
+   },
+   "en": {
+    "term": "sericin",
+    "match": [
+     "sericin"
+    ],
+    "simple": "A sticky protein that coats silk threads like glue.",
+    "detail": "A protein that wraps and binds the fibroin strands. Removing it makes silk smooth and glossy."
+   }
+  },
+  {
+   "id": "pressurized",
+   "ja": {
+    "term": "与圧",
+    "match": [
+     "与圧"
+    ],
+    "simple": "そらを とぶ のりものの なかを、じめんと にた くうきの こさに たもつ ことです。",
+    "detail": "高い空では気圧が低いので、機内の気圧を人が快適に過ごせる程度に高めて保つことです。"
+   },
+   "en": {
+    "term": "pressurized",
+    "match": [
+     "pressurized"
+    ],
+    "simple": "Kept at a higher air pressure inside, so people can breathe comfortably high in the sky.",
+    "detail": "Raised to a higher pressure than the thin air outside so passengers can breathe and feel comfortable at altitude."
+   }
+  },
+  {
+   "id": "archimedes_principle",
+   "ja": {
+    "term": "アルキメデスの原理",
+    "match": [
+     "アルキメデスの原理"
+    ],
+    "simple": "水に ものを いれると、おしのけた 水と おなじ おもさの ちからで うきあがる という きまりです。",
+    "detail": "流体中の物体には、その物体が押しのけた流体の重さに等しい浮力が働くという原理です。"
+   },
+   "en": {
+    "term": "Archimedes' principle",
+    "match": [
+     "Archimedes' principle"
+    ],
+    "simple": "An object in water is pushed up by a force equal to the weight of the water it pushes aside.",
+    "detail": "The principle that an object in a fluid feels an upward buoyant force equal to the weight of the fluid it displaces."
+   }
+  },
+  {
+   "id": "buoyancy",
+   "ja": {
+    "term": "浮力",
+    "match": [
+     "浮力"
+    ],
+    "simple": "水の なかで、ものを うえに おしあげる ちからです。",
+    "detail": "流体が物体を押し上げる力です。物体より流体のほうが重い（密度が大きい）と、物体は浮かびます。"
+   },
+   "en": {
+    "term": "buoyant force",
+    "match": [
+     "buoyant force"
+    ],
+    "simple": "The upward push that water gives to objects in it.",
+    "detail": "The upward force a fluid exerts on an object. If the object is less dense than the fluid, it floats."
+   }
+  },
+  {
+   "id": "first_cosmic_velocity",
+   "ja": {
+    "term": "第一宇宙速度",
+    "match": [
+     "第一宇宙速度"
+    ],
+    "simple": "ひこうきや ロケットが ちきゅうの まわりを まわりつづけられる、はやさです。",
+    "detail": "地表すれすれの円軌道を保つために必要な速度で、約7.9km/sです。人工衛星はおおむねこの速度で周回します。"
+   }
+  },
+  {
+   "id": "superconducting",
+   "ja": {
+    "term": "超電導",
+    "match": [
+     "超電導"
+    ],
+    "simple": "とても つめたく すると、でんきが ぜんぜん ロスなく ながれる ふしぎな げんしょうです。",
+    "detail": "ある種の物質を極低温に冷やすと、電気抵抗がゼロになる現象です。強力な電磁石を作るのに使われます。"
+   },
+   "en": {
+    "term": "superconducting",
+    "match": [
+     "superconducting"
+    ],
+    "simple": "Describes materials that carry electricity with no loss when very cold.",
+    "detail": "Materials that, when cooled to extremely low temperatures, lose all electrical resistance. They enable very powerful magnets."
+   }
+  },
+  {
+   "id": "magnetic_levitation",
+   "ja": {
+    "term": "磁気浮上",
+    "match": [
+     "磁気浮上"
+    ],
+    "simple": "じしゃくの ちからで、ものを うかせる ことです。",
+    "detail": "磁石の反発や吸引を使って物体を浮かせる技術です。浮くことで車輪との摩擦がなくなります。"
+   },
+   "en": {
+    "term": "levitation",
+    "match": [
+     "levitates"
+    ],
+    "simple": "Floating in the air using the power of magnets.",
+    "detail": "Lifting an object with magnetic repulsion or attraction. With no wheels touching the track, friction nearly disappears."
+   }
+  },
+  {
+   "id": "breather_hole",
+   "ja": {
+    "term": "ブリーザーホール",
+    "match": [
+     "ブリーザーホール"
+    ],
+    "simple": "ひこうきの まどに ある、とても ちいさな あなです。",
+    "detail": "窓の中間の板に開けられた小さな穴で、気圧差を外側の窓に受け持たせ、曇りも防ぎます。"
+   },
+   "en": {
+    "term": "breather hole",
+    "match": [
+     "breather hole"
+    ],
+    "simple": "A tiny hole in an airplane window pane.",
+    "detail": "A small hole in a middle pane that lets the outer pane carry the pressure difference and keeps the window from fogging."
+   }
+  },
+  {
+   "id": "lycopene",
+   "ja": {
+    "term": "リコピン",
+    "match": [
+     "リコピン"
+    ],
+    "simple": "トマトや スイカの あかい いろの もとに なる しきそです。",
+    "detail": "赤い色のカロテノイド色素で、トマトやスイカに多く含まれます。抗酸化作用があるといわれます。"
+   },
+   "en": {
+    "term": "lycopene",
+    "match": [
+     "lycopene"
+    ],
+    "simple": "The substance that makes tomatoes and watermelons red.",
+    "detail": "A red carotenoid pigment found in tomatoes and watermelon. It acts as an antioxidant."
+   }
+  },
+  {
+   "id": "citrulline",
+   "ja": {
+    "term": "シトルリン",
+    "match": [
+     "シトルリン"
+    ],
+    "simple": "スイカに おおく ふくまれる アミノさんの いっしゅです。",
+    "detail": "スイカ（学名 Citrullus）から名付けられたアミノ酸です。体内でアルギニンに変わります。"
+   },
+   "en": {
+    "term": "citrulline",
+    "match": [
+     "citrulline"
+    ],
+    "simple": "An amino acid named after watermelon, where it is found in large amounts.",
+    "detail": "An amino acid first isolated from watermelon (Citrullus). The body converts it into arginine."
+   }
+  },
+  {
+   "id": "beta_carotene",
+   "ja": {
+    "term": "βカロテン",
+    "match": [
+     "βカロテン"
+    ],
+    "simple": "ニンジンの オレンジいろの もと。からだの なかで ビタミンAに かわります。",
+    "detail": "カロテノイドの一種で、体内でビタミンAに変換されます。ニンジンやカボチャに多く含まれます。"
+   },
+   "en": {
+    "term": "beta-carotene",
+    "match": [
+     "beta-carotene"
+    ],
+    "simple": "The orange pigment in carrots, which the body turns into vitamin A.",
+    "detail": "A carotenoid that the body converts into vitamin A, found in carrots and pumpkins."
+   }
+  },
+  {
+   "id": "geocarpy",
+   "ja": {
+    "term": "地下結実",
+    "match": [
+     "地下結実"
+    ],
+    "simple": "はなが さいた あと、じめんの なかで みが できる ことです。",
+    "detail": "受粉後に子房柄が地中に伸び、その先で果実ができる性質です。落花生が代表的です。"
+   },
+   "en": {
+    "term": "geocarpy",
+    "match": [
+     "geocarpy"
+    ],
+    "simple": "When a plant ripens its fruit underground.",
+    "detail": "A habit in which, after pollination, a stalk pushes into the soil and the fruit develops there, as in peanuts."
+   }
+  },
+  {
+   "id": "sucker_shoot",
+   "ja": {
+    "term": "吸芽",
+    "match": [
+     "吸芽"
+    ],
+    "simple": "かぶの もとから でてくる わかい め です。これで なかまを ふやせます。",
+    "detail": "植物の株元や茎の途中から出る芽で、切り取って植えると新しい株になります。"
+   },
+   "en": {
+    "term": "sucker",
+    "match": [
+     "suckers"
+    ],
+    "simple": "A young shoot growing from the base of a plant, used to grow new plants.",
+    "detail": "A shoot that grows from the base or stem of a plant and can be cut off and planted as a new plant."
+   }
+  },
+  {
+   "id": "allyl_isothiocyanate",
+   "ja": {
+    "term": "アリルイソチオシアネート",
+    "match": [
+     "アリルイソチオシアネート"
+    ],
+    "simple": "わさびの つーんと する からさの もとに なる ぶっしつです。",
+    "detail": "アブラナ科の植物に含まれる辛味成分です。すりおろすと酵素で作られ、揮発して鼻に抜けます。"
+   },
+   "en": {
+    "term": "allyl isothiocyanate",
+    "match": [
+     "allyl isothiocyanate"
+    ],
+    "simple": "The substance that gives wasabi its sharp, nose-tingling heat.",
+    "detail": "A pungent compound in plants of the mustard family. It forms when wasabi is grated and evaporates into the nose."
+   }
+  },
+  {
+   "id": "capsaicin",
+   "ja": {
+    "term": "カプサイシン",
+    "match": [
+     "カプサイシン"
+    ],
+    "simple": "とうがらしの からさの もとに なる ぶっしつです。",
+    "detail": "唐辛子の辛味成分で、舌などの痛覚を刺激します。水に溶けにくいため、水を飲んでも辛さが残ります。"
+   },
+   "en": {
+    "term": "capsaicin",
+    "match": [
+     "capsaicin"
+    ],
+    "simple": "The substance that makes chili peppers hot.",
+    "detail": "The pungent compound in chili peppers that stimulates pain-sensing nerves. It does not dissolve well in water."
+   }
+  },
+  {
+   "id": "gelatinization",
+   "ja": {
+    "term": "糊化",
+    "match": [
+     "糊化"
+    ],
+    "simple": "でんぷんが みずと ねつで、のりのように ねばねばに なる ことです。",
+    "detail": "デンプンが水と熱を受けて膨らみ、粘りのある状態になる変化です。ご飯が炊けるのも糊化です。"
+   },
+   "en": {
+    "term": "gelatinize",
+    "match": [
+     "gelatinizes"
+    ],
+    "simple": "When starch turns sticky and soft with water and heat.",
+    "detail": "The change in which starch swells with water and heat into a thick, sticky state. Cooking rice does the same."
+   }
+  },
+  {
+   "id": "collective_noun",
+   "ja": {
+    "term": "集合名詞",
+    "match": [
+     "集合名詞"
+    ],
+    "simple": "なかまの あつまりを あらわす ことばです。（たとえば「むれ」）",
+    "detail": "同じ種類のものの集まりをまとめて指す名詞です。英語ではフラミンゴの群れを flamboyance と呼ぶように、動物ごとに面白い言い方があります。"
+   },
+   "en": {
+    "term": "collective nouns",
+    "match": [
+     "collective nouns",
+     "collective noun"
+    ],
+    "simple": "Words for a group of things, like 'a flock'.",
+    "detail": "Nouns that name a group of the same kind of thing. English has many playful ones for animals, such as a 'flamboyance' of flamingos."
+   }
+  },
+  {
+   "id": "kelp",
+   "ja": {
+    "term": "ケルプ",
+    "match": [
+     "ケルプ"
+    ],
+    "simple": "うみに はえる、とても おおきな こんぶの なかまの かいそうです。",
+    "detail": "海中で森のように育つ大型の褐藻類です。多くの海の生き物のすみかになります。"
+   },
+   "en": {
+    "term": "kelp",
+    "match": [
+     "kelp"
+    ],
+    "simple": "A very large seaweed that grows in the sea like an underwater forest.",
+    "detail": "A large brown seaweed that forms underwater forests and shelters many sea animals."
+   }
+  }
+ ]
+}

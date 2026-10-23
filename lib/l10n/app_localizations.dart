@@ -2221,6 +2221,42 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'Español'**
   String get languageEs;
+
+  /// No description provided for @wordTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばの せつめい'**
+  String get wordTitle;
+
+  /// No description provided for @wordSimple.
+  ///
+  /// In ja, this message translates to:
+  /// **'かんたんに いうと'**
+  String get wordSimple;
+
+  /// No description provided for @wordDetail.
+  ///
+  /// In ja, this message translates to:
+  /// **'くわしく'**
+  String get wordDetail;
+
+  /// No description provided for @wordFacts.
+  ///
+  /// In ja, this message translates to:
+  /// **'この ことばが でてくる ざつがく'**
+  String get wordFacts;
+
+  /// No description provided for @wordHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'線のついた ことばを タップすると、いみが わかるよ。'**
+  String get wordHint;
+
+  /// No description provided for @wordNotFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'せつめいが みつかりません。'**
+  String get wordNotFound;
 }
 
 class _AppLocalizationsDelegate

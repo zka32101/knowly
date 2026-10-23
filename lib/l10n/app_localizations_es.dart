@@ -1188,4 +1188,22 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => 'Palabra explicada';
+
+  @override
+  String get wordSimple => 'En pocas palabras';
+
+  @override
+  String get wordDetail => 'Con más detalle';
+
+  @override
+  String get wordFacts => 'Datos que usan esta palabra';
+
+  @override
+  String get wordHint => 'Toca una palabra subrayada para ver qué significa.';
+
+  @override
+  String get wordNotFound => 'No se encontró la explicación.';
 }

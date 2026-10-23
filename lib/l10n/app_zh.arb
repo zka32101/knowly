@@ -352,5 +352,11 @@
   "hubListenSub": "关闭屏幕也能听",
   "languageZh": "简体中文",
   "languageKo": "한국어",
-  "languageEs": "Español"
+  "languageEs": "Español",
+  "wordTitle": "词语解释",
+  "wordSimple": "简单来说",
+  "wordDetail": "详细说明",
+  "wordFacts": "用到这个词的冷知识",
+  "wordHint": "点击带下划线的词语，就能看到它的意思。",
+  "wordNotFound": "没有找到解释。"
 }

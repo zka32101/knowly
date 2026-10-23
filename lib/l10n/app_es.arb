@@ -352,5 +352,11 @@
   "hubListenSub": "Suena con la pantalla apagada",
   "languageZh": "简体中文",
   "languageKo": "한국어",
-  "languageEs": "Español"
+  "languageEs": "Español",
+  "wordTitle": "Palabra explicada",
+  "wordSimple": "En pocas palabras",
+  "wordDetail": "Con más detalle",
+  "wordFacts": "Datos que usan esta palabra",
+  "wordHint": "Toca una palabra subrayada para ver qué significa.",
+  "wordNotFound": "No se encontró la explicación."
 }

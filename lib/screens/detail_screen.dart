@@ -13,6 +13,7 @@ import '../models/why_link.dart';
 import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
+import '../widgets/glossary_text.dart';
 import '../widgets/illustration.dart';
 import '../widgets/ja_wrap_text.dart';
 import '../widgets/quiz_sheet.dart';
@@ -174,9 +175,14 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                 wordWrap: lang == 'ja' && shownBand.isChild,
                 style: theme.textTheme.headlineSmall),
             const SizedBox(height: 12),
-            WrapText(level.body,
-                wordWrap: lang == 'ja' && shownBand.isChild,
-                style: theme.textTheme.bodyLarge?.copyWith(height: 1.6)),
+            // 難しいことばはタップで説明（Kids と、単語ごとに折り返す日本語の子ども向けは対象外）。
+            if (shownBand != AgeBand.kids && !(lang == 'ja' && shownBand.isChild))
+              GlossaryText(level.body,
+                  showHint: true, style: theme.textTheme.bodyLarge?.copyWith(height: 1.6))
+            else
+              WrapText(level.body,
+                  wordWrap: lang == 'ja' && shownBand.isChild,
+                  style: theme.textTheme.bodyLarge?.copyWith(height: 1.6)),
             if (why != null) ...[
               const SizedBox(height: 16),
               Card(

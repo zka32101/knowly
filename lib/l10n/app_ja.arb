@@ -674,5 +674,11 @@
   "hubListenSub": "画面を消しても聞ける",
   "languageZh": "简体中文",
   "languageKo": "한국어",
-  "languageEs": "Español"
+  "languageEs": "Español",
+  "wordTitle": "ことばの せつめい",
+  "wordSimple": "かんたんに いうと",
+  "wordDetail": "くわしく",
+  "wordFacts": "この ことばが でてくる ざつがく",
+  "wordHint": "線のついた ことばを タップすると、いみが わかるよ。",
+  "wordNotFound": "せつめいが みつかりません。"
 }

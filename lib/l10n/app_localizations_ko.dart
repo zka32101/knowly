@@ -1159,4 +1159,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => '낱말 설명';
+
+  @override
+  String get wordSimple => '쉽게 말하면';
+
+  @override
+  String get wordDetail => '자세히';
+
+  @override
+  String get wordFacts => '이 낱말이 나오는 상식';
+
+  @override
+  String get wordHint => '밑줄 친 낱말을 누르면 뜻을 알 수 있어요.';
+
+  @override
+  String get wordNotFound => '설명을 찾지 못했어요.';
 }

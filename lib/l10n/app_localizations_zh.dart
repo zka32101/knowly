@@ -1156,4 +1156,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => '词语解释';
+
+  @override
+  String get wordSimple => '简单来说';
+
+  @override
+  String get wordDetail => '详细说明';
+
+  @override
+  String get wordFacts => '用到这个词的冷知识';
+
+  @override
+  String get wordHint => '点击带下划线的词语，就能看到它的意思。';
+
+  @override
+  String get wordNotFound => '没有找到解释。';
 }

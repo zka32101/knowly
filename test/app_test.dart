@@ -18,6 +18,7 @@ import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
 import 'package:knowly/models/project.dart';
+import 'package:knowly/models/glossary.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/models/why_link.dart';
@@ -178,6 +179,10 @@ TriviaRepository _repo({bool withSources = false}) {
     quizzes: (quiz['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
         .toList(),
+    glossary: ((jsonDecode(File('assets/trivia/glossary.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => GlossaryEntry.fromJson(e as Map<String, dynamic>))
+        .toList(),
     choiceQuizzes: ((jsonDecode(File('assets/trivia/quiz_choice.json').readAsStringSync())
             as Map<String, dynamic>)['items'] as List)
         .map((e) => ChoiceQuiz.fromJson(e as Map<String, dynamic>))
@@ -324,6 +329,8 @@ Future<void> _tab(WidgetTester tester, String key) async {
 Future<void> _reveal(WidgetTester tester, Key key) async {
   await tester.scrollUntilVisible(find.byKey(key), 200,
       scrollable: find.byType(Scrollable).last);
+  await tester.ensureVisible(find.byKey(key));
+  await tester.pumpAndSettle();
 }
 
 Future<void> _back(WidgetTester tester) async {
@@ -2791,6 +2798,76 @@ void main() {
       expect(regionName('KR', 'zh'), '韩国');
       expect(regionName('US', 'ko'), '미국');
       expect(regionName('XX', 'es'), 'XX');
+    });
+  });
+
+  group('ことばの説明（サブ画面）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    Future<void> openOctopus(WidgetTester tester) async {
+      await _open(tester, const Key('open_zukan'));
+      await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('本文の難しいことばがリンクになり、案内が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await openOctopus(tester);
+      expect(find.byKey(const Key('glossary_text')), findsOneWidget);
+      expect(find.byKey(const Key('glossary_hint')), findsOneWidget);
+    });
+
+    testWidgets('ことばをタップすると、説明の画面が開く（Adult はくわしい説明つき）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await openOctopus(tester);
+      await tester.tapOnText(find.textRange.ofSubstring('ヘモシアニン'));
+      await tester.pumpAndSettle();
+      expect(tester.widget<Text>(find.byKey(const Key('word_term'))).data, 'ヘモシアニン');
+      expect(find.byKey(const Key('word_simple')), findsOneWidget);
+      expect(find.byKey(const Key('word_detail')), findsOneWidget);
+      // この言葉が出てくる雑学へ戻れる
+      expect(find.byKey(const Key('word_fact_octopus_blue_blood')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('word_fact_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('説明の画面から戻ると、元の雑学に戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'teen', 'seen': ['octopus_blue_blood']});
+      await openOctopus(tester);
+      await tester.tapOnText(find.textRange.ofSubstring('ヘモシアニン'));
+      await tester.pumpAndSettle();
+      await _back(tester);
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('Kids の本文にはリンクがない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids', 'seen': ['octopus_blue_blood']});
+      await _open(tester, const Key('open_zukan'));
+      await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('glossary_text')), findsNothing);
+    });
+
+    testWidgets('英語の本文でも、ことばが説明される', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']},
+          deviceLanguage: 'en',
+          deviceRegion: 'US');
+      await openOctopus(tester);
+      await tester.tapOnText(find.textRange.ofSubstring('hemocyanin'));
+      await tester.pumpAndSettle();
+      expect(tester.widget<Text>(find.byKey(const Key('word_term'))).data, 'hemocyanin');
+      expect(find.text('In short'), findsOneWidget);
+    });
+
+    testWidgets('存在しない用語の画面は、見つからない案内', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final router = containerOf(tester).read(routerProvider);
+      router.push('/word/not_a_word');
+      await tester.pumpAndSettle();
+      expect(find.text('せつめいが みつかりません。'), findsOneWidget);
     });
   });
 }

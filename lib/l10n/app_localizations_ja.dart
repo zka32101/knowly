@@ -1159,4 +1159,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => 'ことばの せつめい';
+
+  @override
+  String get wordSimple => 'かんたんに いうと';
+
+  @override
+  String get wordDetail => 'くわしく';
+
+  @override
+  String get wordFacts => 'この ことばが でてくる ざつがく';
+
+  @override
+  String get wordHint => '線のついた ことばを タップすると、いみが わかるよ。';
+
+  @override
+  String get wordNotFound => 'せつめいが みつかりません。';
 }

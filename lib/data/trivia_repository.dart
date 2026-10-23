@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../models/age_band.dart';
 import '../models/calendar_event.dart';
+import '../models/glossary.dart';
 import '../models/myth.dart';
 import '../models/project.dart';
 import '../models/quiz.dart';
@@ -33,6 +34,7 @@ class TriviaRepository {
     this.items, {
     List<QuizItem> quizzes = const [],
     this.choiceQuizzes = const [],
+    this.glossary = const [],
     List<WhyLink> whyLinks = const [],
     this.myths = const [],
     this.events = const [],
@@ -43,6 +45,9 @@ class TriviaRepository {
   final List<Trivia> items;
   final List<Myth> myths;
   final List<ChoiceQuiz> choiceQuizzes;
+
+  /// 難しいことばの説明。
+  final List<GlossaryEntry> glossary;
   final List<CalendarEvent> events;
   final List<Project> projects;
   final Map<String, QuizItem> _quizzes;
@@ -51,6 +56,7 @@ class TriviaRepository {
   static const assetPath = 'assets/trivia/trivia.json';
   static const quizAssetPath = 'assets/trivia/quiz.json';
   static const choiceQuizAssetPath = 'assets/trivia/quiz_choice.json';
+  static const glossaryAssetPath = 'assets/trivia/glossary.json';
   static const whyAssetPath = 'assets/trivia/why_chains.json';
   static const mythAssetPath = 'assets/trivia/myths.json';
   static const calendarAssetPath = 'assets/trivia/calendar.json';
@@ -72,6 +78,11 @@ class TriviaRepository {
     final choiceQuizzes = (choiceDecoded['items'] as List)
         .map((e) => ChoiceQuiz.fromJson(e as Map<String, dynamic>))
         .toList();
+    final glossaryDecoded =
+        jsonDecode(await b.loadString(glossaryAssetPath)) as Map<String, dynamic>;
+    final glossary = (glossaryDecoded['items'] as List)
+        .map((e) => GlossaryEntry.fromJson(e as Map<String, dynamic>))
+        .toList();
     final whyDecoded = jsonDecode(await b.loadString(whyAssetPath)) as Map<String, dynamic>;
     final whyLinks = (whyDecoded['links'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
@@ -91,6 +102,7 @@ class TriviaRepository {
     return TriviaRepository(list,
         quizzes: quizzes,
         choiceQuizzes: choiceQuizzes,
+        glossary: glossary,
         whyLinks: whyLinks,
         myths: myths,
         events: events,
@@ -143,6 +155,13 @@ class TriviaRepository {
   WhyLink? whyFrom(String factId) => _whyLinks[factId];
 
   QuizItem? quizFor(String factId) => _quizzes[factId];
+
+  GlossaryEntry? glossaryEntry(String id) {
+    for (final g in glossary) {
+      if (g.id == id) return g;
+    }
+    return null;
+  }
 
   Trivia? byId(String id) {
     for (final t in items) {

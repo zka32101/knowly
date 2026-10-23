@@ -352,5 +352,11 @@
   "hubListenSub": "화면을 꺼도 들어요",
   "languageZh": "简体中文",
   "languageKo": "한국어",
-  "languageEs": "Español"
+  "languageEs": "Español",
+  "wordTitle": "낱말 설명",
+  "wordSimple": "쉽게 말하면",
+  "wordDetail": "자세히",
+  "wordFacts": "이 낱말이 나오는 상식",
+  "wordHint": "밑줄 친 낱말을 누르면 뜻을 알 수 있어요.",
+  "wordNotFound": "설명을 찾지 못했어요."
 }

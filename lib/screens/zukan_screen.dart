@@ -110,7 +110,8 @@ class _Cell extends StatelessWidget {
       onTap: found ? () => context.push('/detail/${item.id}') : null,
       child: Container(
         width: 64,
-        height: 72,
+        constraints: const BoxConstraints(minHeight: 72),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -120,6 +121,7 @@ class _Cell extends StatelessWidget {
         ),
         child: found
             ? Column(
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TriviaIllustration(id: item.illustration, size: 28),
