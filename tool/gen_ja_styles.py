@@ -34,6 +34,24 @@ unknown = [k for k in teen if k not in adult]
 if unknown:
     sys.exit('tool/ja_teen.tsv のキーが ja_adult.tsv にない: ' + ', '.join(unknown))
 
+# Junior（小学生）の表記: ひらがなのうち、小学1〜3年で習う漢字だけで書ける、よく使うことばを漢字にする。
+# 長いことばを先に（たとえば「まいにち」を「にち」より先に）。数字のあとの「にち・もん」なども漢字にする。
+JUNIOR_WORDS = [
+    ('まいにち', '毎日'), ('こんしゅう', '今週'), ('せんしゅう', '先週'), ('いっしゅうかん', '1週間'),
+    ('1しゅうかん', '1週間'), ('きょう', '今日'), ('あした', '明日'),
+    ('あそぶ', '遊ぶ'), ('あそんだ', '遊んだ'), ('あそんで', '遊んで'), ('あそべる', '遊べる'), ('あそぼう', '遊ぼう'),
+    ('あつめる', '集める'), ('もんだい', '問題'),
+    ('みつけた', '見つけた'), ('みるほど', '見るほど'), ('みると', '見ると'), ('みる', '見る'),
+    ('よんだ', '読んだ'), ('よんで', '読んで'), ('よむ', '読む'), ('きく', '聞く'),
+    ('ほんとう', '本当'), ('ほんと', '本当'), ('こたえ', '答え'), ('ことば', '言葉'),
+    ('はやく', '早く'), ('あたらしく', '新しく'), ('ぜんぶ', '全部'), ('ともだち', '友だち'),
+    ('おとな', '大人'), ('こども', '子ども'), ('ひとつ', '一つ'), ('すこしずつ', '少しずつ'),
+    ('いちばん', '一番'), ('あんぜん', '安全'), ('つかう', '使う'), ('はじめる', '始める'), ('おわる', '終わる'),
+    ('つぎ', '次'), ('まえ', '前'), ('いま', '今'), ('かち', '勝ち'),
+]
+JUNIOR_AFTER_DIGIT = [('にちかん', '日間'), ('しゅうかん', '週間'), ('にち', '日'), ('もん', '問'), ('かい', '回'), ('ふん', '分'), ('にん', '人'), ('てん', '点'), ('しょう', '勝')]
+junior_kanji = ''.join(sorted(set(ch for _, v in JUNIOR_WORDS + JUNIOR_AFTER_DIGIT for ch in v if kanji.match(ch))))
+
 missing = [k for k in cands if k not in adult]
 if missing:
     sys.exit('tool/ja_adult.tsv に足りないキー: ' + ', '.join(missing))
@@ -82,7 +100,7 @@ for k in cands:
 
 header = """// 日本語の「表記」を、モード（年代）で変えるための、AppLocalizationsJa の派生クラス。
 // - AppLocalizationsJa（基本）: ひらがなと分かち書き（Kids）
-// - AppLocalizationsJaJunior: 基本から、ことばの間のスペースを取った表記（Junior）
+// - AppLocalizationsJaJunior: 基本から、スペースを取り、小学1〜3年の漢字のことばを漢字にした表記（Junior）
 // - AppLocalizationsJaTeen: 漢字まじりで、すこしくだけた言い回し（Teen）\n// - AppLocalizationsJaAdult: 漢字まじりの、ふつうの表記（Adult）
 // このファイルは tool/gen_ja_styles.py で作る。ひらがなの文言を足したら、tool/ja_adult.tsv にも書いて作り直す。
 // ignore_for_file: type=lint
@@ -92,9 +110,46 @@ import 'app_localizations_ja.dart';
 /// 日本語どうしの間にあるスペースを取る（数字やアルファベットの前後のスペースは残す）。
 final _jaSpace = RegExp(
     r'(?<=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー])[ \\u3000]+(?=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー])');
-String _jr(String s) => s.replaceAll(_jaSpace, '');
+/// ことばの前が「ひらがな」でなく、後ろが助詞・記号・終わりのとき、1つのことばとみなす
+/// （「おおきく」の中の「きく」や、「います」の中の「いま」を、漢字にしないため）。
+const _wordAfter = r'(?=[はがをにへでとのもやかよねなご、。！？…「」\\s]|$|[0-9A-Za-z])';
+
+final _juniorWordRegexps = [
+  for (final (from, to) in _juniorWords)
+    (RegExp('(?<![\\u3040-\\u309f])$from$_wordAfter'), to),
+];
+
+final _juniorDigitRegexps = [
+  for (final (from, to) in _juniorAfterDigit) (RegExp('(?<=[0-9])$from$_wordAfter'), to),
+];
+
+/// Junior: 先に、スペースで分かれたことばごとに漢字にして、そのあとスペースを取る。
+String _jr(String s) {
+  var t = s;
+  for (final (re, to) in _juniorWordRegexps) {
+    t = t.replaceAll(re, to);
+  }
+  for (final (re, to) in _juniorDigitRegexps) {
+    t = t.replaceAll(re, to);
+  }
+  return t.replaceAll(_jaSpace, '');
+}
+
+/// Junior の表記で漢字にする、よく使うことば（小学1〜3年で習う漢字だけ）。
+const _juniorWords = <(String, String)>[
+@@WORDS@@];
+
+/// 数字のあとの「にち・もん」など。
+const _juniorAfterDigit = <(String, String)>[
+@@DIGITS@@];
+
+/// Junior の表記に出てくる漢字（テストで、小学1〜3年の漢字だけか確かめる）。
+const juniorKanji = '@@KANJI@@';
 
 """
+header = header.replace('@@WORDS@@', ''.join(f"  ('{a}', '{b}'),\n" for a, b in JUNIOR_WORDS))
+header = header.replace('@@DIGITS@@', ''.join(f"  ('{a}', '{b}'),\n" for a, b in JUNIOR_AFTER_DIGIT))
+header = header.replace('@@KANJI@@', junior_kanji)
 out = (header
        + "class AppLocalizationsJaJunior extends AppLocalizationsJa {\n  AppLocalizationsJaJunior([super.locale]);\n\n"
        + "\n".join(junior_members) + "}\n\n"
