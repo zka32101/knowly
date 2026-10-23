@@ -961,4 +961,62 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get reportOpen => 'がくしゅうの ようす（おうちの ひとへ）';
+
+  @override
+  String get mascotTitle => 'あいぼう';
+
+  @override
+  String mascotNext(int n, String name) {
+    return 'あと $n で「$name」に なるよ';
+  }
+
+  @override
+  String get mascotMax => 'いちばん おおきく なったよ！';
+
+  @override
+  String get mascotHint => 'ざつがくを ひらくと +1、「しらなかった」を おぼえると +2 で そだつよ。';
+
+  @override
+  String mascotPoints(int n) {
+    return '$n ポイント';
+  }
+
+  @override
+  String get mascotLocked => '？？？';
+
+  @override
+  String get mascotName_egg => 'たまご';
+
+  @override
+  String get mascotSay_egg => '…ざつがく、まってるよ。';
+
+  @override
+  String get mascotName_chick => 'ひよこ';
+
+  @override
+  String get mascotSay_chick => 'ぴよっ！ ざつがく おもしろいね！';
+
+  @override
+  String get mascotName_chicklet => 'ちびふくろう';
+
+  @override
+  String get mascotSay_chicklet => 'ふわふわ！ もっと しりたいな。';
+
+  @override
+  String get mascotName_owl => 'ふくろう';
+
+  @override
+  String get mascotSay_owl => 'ほー！ ものしりに なってきたよ。';
+
+  @override
+  String get mascotName_professor => 'はかせふくろう';
+
+  @override
+  String get mascotSay_professor => 'ふむふむ、なるほど。きみは はかせだね。';
+
+  @override
+  String get mascotName_king => 'ふくろうおう';
+
+  @override
+  String get mascotSay_king => 'ほっほー！ ざつがくの おうさまだ！';
 }

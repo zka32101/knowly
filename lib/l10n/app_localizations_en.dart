@@ -978,4 +978,63 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reportOpen => 'Learning report (for parents)';
+
+  @override
+  String get mascotTitle => 'Buddy';
+
+  @override
+  String mascotNext(int n, String name) {
+    return '$n more to become \"$name\"';
+  }
+
+  @override
+  String get mascotMax => 'Fully grown!';
+
+  @override
+  String get mascotHint =>
+      'Open a fact: +1. Mark \"I learned something\": +2. Your buddy grows as you go.';
+
+  @override
+  String mascotPoints(int n) {
+    return '$n points';
+  }
+
+  @override
+  String get mascotLocked => '???';
+
+  @override
+  String get mascotName_egg => 'Egg';
+
+  @override
+  String get mascotSay_egg => '…waiting for a fun fact.';
+
+  @override
+  String get mascotName_chick => 'Chick';
+
+  @override
+  String get mascotSay_chick => 'Peep! Facts are fun!';
+
+  @override
+  String get mascotName_chicklet => 'Little Owlet';
+
+  @override
+  String get mascotSay_chicklet => 'So fluffy! Tell me more.';
+
+  @override
+  String get mascotName_owl => 'Owl';
+
+  @override
+  String get mascotSay_owl => 'Hoo! I\'m getting wise.';
+
+  @override
+  String get mascotName_professor => 'Professor Owl';
+
+  @override
+  String get mascotSay_professor => 'Hmm, I see. You\'re a true scholar.';
+
+  @override
+  String get mascotName_king => 'Owl King';
+
+  @override
+  String get mascotSay_king => 'Hoo-hoo! The king of trivia!';
 }

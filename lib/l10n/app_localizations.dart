@@ -1843,6 +1843,114 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'がくしゅうの ようす（おうちの ひとへ）'**
   String get reportOpen;
+
+  /// No description provided for @mascotTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'あいぼう'**
+  String get mascotTitle;
+
+  /// No description provided for @mascotNext.
+  ///
+  /// In ja, this message translates to:
+  /// **'あと {n} で「{name}」に なるよ'**
+  String mascotNext(int n, String name);
+
+  /// No description provided for @mascotMax.
+  ///
+  /// In ja, this message translates to:
+  /// **'いちばん おおきく なったよ！'**
+  String get mascotMax;
+
+  /// No description provided for @mascotHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを ひらくと +1、「しらなかった」を おぼえると +2 で そだつよ。'**
+  String get mascotHint;
+
+  /// No description provided for @mascotPoints.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} ポイント'**
+  String mascotPoints(int n);
+
+  /// No description provided for @mascotLocked.
+  ///
+  /// In ja, this message translates to:
+  /// **'？？？'**
+  String get mascotLocked;
+
+  /// No description provided for @mascotName_egg.
+  ///
+  /// In ja, this message translates to:
+  /// **'たまご'**
+  String get mascotName_egg;
+
+  /// No description provided for @mascotSay_egg.
+  ///
+  /// In ja, this message translates to:
+  /// **'…ざつがく、まってるよ。'**
+  String get mascotSay_egg;
+
+  /// No description provided for @mascotName_chick.
+  ///
+  /// In ja, this message translates to:
+  /// **'ひよこ'**
+  String get mascotName_chick;
+
+  /// No description provided for @mascotSay_chick.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぴよっ！ ざつがく おもしろいね！'**
+  String get mascotSay_chick;
+
+  /// No description provided for @mascotName_chicklet.
+  ///
+  /// In ja, this message translates to:
+  /// **'ちびふくろう'**
+  String get mascotName_chicklet;
+
+  /// No description provided for @mascotSay_chicklet.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふわふわ！ もっと しりたいな。'**
+  String get mascotSay_chicklet;
+
+  /// No description provided for @mascotName_owl.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふくろう'**
+  String get mascotName_owl;
+
+  /// No description provided for @mascotSay_owl.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほー！ ものしりに なってきたよ。'**
+  String get mascotSay_owl;
+
+  /// No description provided for @mascotName_professor.
+  ///
+  /// In ja, this message translates to:
+  /// **'はかせふくろう'**
+  String get mascotName_professor;
+
+  /// No description provided for @mascotSay_professor.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふむふむ、なるほど。きみは はかせだね。'**
+  String get mascotSay_professor;
+
+  /// No description provided for @mascotName_king.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふくろうおう'**
+  String get mascotName_king;
+
+  /// No description provided for @mascotSay_king.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほっほー！ ざつがくの おうさまだ！'**
+  String get mascotSay_king;
 }
 
 class _AppLocalizationsDelegate

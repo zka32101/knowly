@@ -12,6 +12,7 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
+import 'screens/mascot_screen.dart';
 import 'screens/premium_screen.dart';
 import 'screens/report_screen.dart';
 import 'screens/solo_quiz_screens.dart';
@@ -66,6 +67,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/daily', builder: (_, _) => const DailyChallengeScreen()),
       GoRoute(path: '/badges', builder: (_, _) => const BadgesScreen()),
       GoRoute(path: '/report', builder: (_, _) => const ReportScreen()),
+      GoRoute(path: '/mascot', builder: (_, _) => const MascotScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

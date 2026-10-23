@@ -56,6 +56,7 @@ class AppSettings {
     this.quizAnswered = 0,
     this.quizCorrect = 0,
     this.dailyResults = const {},
+    this.seen = const {},
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -99,6 +100,9 @@ class AppSettings {
   /// 今日のチャレンジの結果（日付 → 正誤の並び。例 "101"）。
   final Map<String, String> dailyResults;
 
+  /// 開いたことのある雑学の id（相棒の成長に使う）。端末内にだけ保存する。
+  final Set<String> seen;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -131,6 +135,7 @@ class AppSettings {
     int? quizAnswered,
     int? quizCorrect,
     Map<String, String>? dailyResults,
+    Set<String>? seen,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -155,6 +160,7 @@ class AppSettings {
         quizAnswered: quizAnswered ?? this.quizAnswered,
         quizCorrect: quizCorrect ?? this.quizCorrect,
         dailyResults: dailyResults ?? this.dailyResults,
+        seen: seen ?? this.seen,
       );
 }
 
@@ -211,6 +217,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       },
       quizAnswered: p.getInt('quizAnswered') ?? 0,
       quizCorrect: p.getInt('quizCorrect') ?? 0,
+      seen: (p.getStringList('seen') ?? const []).toSet(),
       dailyResults: {
         for (final raw in (p.getStringList('dailyResults') ?? const []))
           if (raw.split(':') case [final day, final r]) day: r,
@@ -364,6 +371,14 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     next == null ? reviews.remove(id) : reviews[id] = next;
     state = state.copyWith(reviews: reviews);
     _saveReviews(reviews);
+  }
+
+  /// 雑学を開いたことを記録する（相棒の成長用）。初めて開いたときだけ状態が変わる。
+  void markSeen(String id) {
+    if (state.seen.contains(id)) return;
+    final seen = {...state.seen, id};
+    state = state.copyWith(seen: seen);
+    _prefs.setStringList('seen', seen.toList());
   }
 
   /// 1人用クイズの回答を通算に加える。

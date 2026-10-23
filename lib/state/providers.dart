@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 
 import '../data/trivia_repository.dart';
+import '../logic/mascot.dart';
 import '../logic/daily_pick.dart';
 import '../logic/interests.dart';
 import '../logic/search.dart';
@@ -319,4 +320,13 @@ final projectForFactProvider = Provider.family<Project?, String>((ref, factId) {
     if (p.factId == factId) return p;
   }
   return null;
+});
+
+/// 相棒の成長ポイント（開いた雑学の数 ＋ 知れた数×2）。
+final mascotPointsProvider = Provider<int>((ref) {
+  final s = ref.watch(settingsProvider);
+  return mascotPoints(
+    seen: s.seen.length,
+    learned: s.knowledge.values.where((k) => k == Knowledge.learned).length,
+  );
 });

@@ -855,6 +855,7 @@ void main() {
   group('関心事', () {
     testWidgets('未登録のホームには登録を促すカードが出る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _scrollTo(tester, const Key('interests_empty'));
       expect(find.byKey(const Key('interests_empty')), findsOneWidget);
       expect(find.byKey(const Key('interests_section')), findsNothing);
     });
@@ -864,6 +865,7 @@ void main() {
         'ageBand': 'adult',
         'interestCategories': ['bugs', 'vehicles'],
       });
+      await _scrollTo(tester, const Key('interests_section'));
       expect(find.byKey(const Key('interests_section')), findsOneWidget);
       expect(find.text('あなたの関心'), findsOneWidget);
       final section = find.byKey(const Key('interests_section'));
@@ -879,6 +881,7 @@ void main() {
         'ageBand': 'adult',
         'interestKeywords': ['ラッコ'],
       });
+      await _scrollTo(tester, const Key('interests_section'));
       final section = find.byKey(const Key('interests_section'));
       expect(section, findsOneWidget);
       expect(find.descendant(of: section, matching: find.textContaining('ラッコ')), findsWidgets);
@@ -946,6 +949,7 @@ void main() {
       final sp = await SharedPreferences.getInstance();
       expect(sp.getStringList('interestCategories'), ['bugs']);
       expect(sp.getStringList('categories'), isNull);
+      await _scrollTo(tester, const Key('interests_section'));
       expect(find.byKey(const Key('interests_section')), findsOneWidget);
     });
 
@@ -2246,6 +2250,63 @@ void main() {
       expect(bg.updates.last.playing, isFalse);
       await _back(tester);
       expect(bg.stops, greaterThan(0));
+    });
+  });
+
+  group('相棒（成長するキャラ）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('はじめは たまご。雑学を開くと +1、「知らなかった」で +2 になる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('mascot_card')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
+      expect(find.text('🥚'), findsOneWidget);
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+      await _reveal(tester, const Key('learned_it'));
+      await tester.tap(find.byKey(const Key('learned_it')));
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(mascotPointsProvider), 3); // 開いた1 + 知れた2
+    });
+
+    testWidgets('同じ雑学を何度開いても、1点だけ', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': ['octopus_blue_blood'],
+      });
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+      containerOf(tester).read(settingsProvider.notifier).markSeen('octopus_blue_blood');
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+    });
+
+    testWidgets('ポイントが増えると見た目が変わり、一覧に「？？？」が残る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 16; i++) 'fact_$i'],
+      });
+      expect(find.text('🐥'), findsOneWidget); // 16点 → ちびふくろう
+      await tester.tap(find.byKey(const Key('mascot_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_current')), findsOneWidget);
+      expect(find.text('ちびふくろう'), findsWidgets);
+      expect(find.text('？？？'), findsWidgets); // まだなっていない姿
+    });
+
+    testWidgets('Kids にも出て、見た雑学が記録される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byKey(const Key('mascot_card')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), greaterThan(0));
+    });
+
+    testWidgets('データを削除すると たまご に戻る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 16; i++) 'fact_$i'],
+      });
+      await containerOf(tester).read(settingsProvider.notifier).resetAll();
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
     });
   });
 }

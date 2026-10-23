@@ -11,6 +11,7 @@ import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
 import '../widgets/ja_wrap_text.dart';
+import '../widgets/mascot_card.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
@@ -117,6 +118,9 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
     final why = ref.watch(whyStepProvider(item.id));
     if (level == null) return Center(child: Text(l.emptyFeed));
     final lang = ref.watch(contentLanguageProvider);
+    // 見た雑学として記録する（相棒の成長用）。
+    WidgetsBinding.instance.addPostFrameCallback(
+        (_) => ref.read(settingsProvider.notifier).markSeen(item.id));
 
     return Padding(
       padding: const EdgeInsets.all(24),
@@ -126,6 +130,8 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  const MascotCard(),
+                  const SizedBox(height: 16),
                   TriviaIllustration(id: item.illustration, size: 120),
                   const SizedBox(height: 16),
                   WrapText(level.title,
@@ -305,6 +311,7 @@ class _FeedHome extends ConsumerWidget {
       padding: const EdgeInsets.all(16),
       children: [
         const _QuickLinks(),
+        const MascotCard(),
         if (streak != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
