@@ -10,6 +10,13 @@ const _emoji = {
   'saturn': '🪐', 'tower': '🗼', 'heart': '❤️', 'bamboo': '🎋', 'crow': '🐦‍⬛',
   'rainbow': '🌈', 'elephant': '🐘', 'dolphin': '🐬', 'antarctica': '🧊',
   'koala': '🐨', 'japan': '🗾',
+  'ant': '🐜', 'dragonfly': '🪽', 'firefly': '✨', 'bee': '🐝', 'cicada': '🪲',
+  'mosquito': '🦟', 'spider': '🕷️', 'beetle': '🪲', 'dungbeetle': '🪲',
+  'silkworm': '🐛', 'train': '🚄', 'plane': '✈️', 'wright': '🛩️', 'subway': '🚇',
+  'ship': '🚢', 'rocket': '🚀', 'maglev': '🚅', 'window': '🪟', 'iss': '🛰️',
+  'container': '📦', 'watermelon': '🍉', 'cacao': '🍫', 'rice': '🍚', 'carrot': '🥕',
+  'peanut': '🥜', 'pineapple': '🍍', 'apple': '🍎', 'wasabi': '🌿', 'popcorn': '🍿',
+  'strawberry': '🍓',
 };
 
 class TriviaIllustration extends StatelessWidget {

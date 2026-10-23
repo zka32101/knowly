@@ -71,5 +71,50 @@
   "gateWrong": "答えが違います",
   "gateOk": "つぎへ",
   "gateCancel": "やめる",
-  "close": "閉じる"
+  "close": "閉じる",
+  "catBugs": "むし",
+  "catVehicles": "のりもの",
+  "catFood": "たべもの",
+  "viewAs": "読み方",
+  "viewOwn": "いつもの説明",
+  "viewJunior": "小学生向け",
+  "viewKids": "就学前向け",
+  "explainToKids": "こどもに説明するなら",
+  "bilingualOn": "二言語で見る",
+  "bilingualOff": "一つの言語にもどす",
+  "knewIt": "知ってた",
+  "learnedIt": "知らなかった！",
+  "streakDays": "連続{count}日",
+  "@streakDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "streakFreeze": "お休み券あり",
+  "streakStart": "今日の雑学を読んで連続をはじめよう",
+  "statsTitle": "あなたの雑学",
+  "statsKnowRate": "知っていた雑学: {percent}%（{knew}/{total}）",
+  "@statsKnowRate": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "knew": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "statsEmpty": "「知ってた」「知らなかった」を押すと、ここに表示されます",
+  "quizButton": "もんだい",
+  "quizTitle": "ほんとかな？",
+  "quizTrue": "ほんと",
+  "quizFalse": "うそ",
+  "quizCorrect": "せいかい！",
+  "quizWrong": "ざんねん！",
+  "quizNext": "つぎへ"
 }

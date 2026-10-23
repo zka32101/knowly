@@ -208,4 +208,84 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get close => 'Close';
+
+  @override
+  String get catBugs => 'Bugs';
+
+  @override
+  String get catVehicles => 'Vehicles';
+
+  @override
+  String get catFood => 'Food';
+
+  @override
+  String get viewAs => 'Reading level';
+
+  @override
+  String get viewOwn => 'Standard';
+
+  @override
+  String get viewJunior => 'For school kids';
+
+  @override
+  String get viewKids => 'For little ones';
+
+  @override
+  String get explainToKids => 'Explaining it to a child';
+
+  @override
+  String get bilingualOn => 'Show both languages';
+
+  @override
+  String get bilingualOff => 'Show one language';
+
+  @override
+  String get knewIt => 'I knew that';
+
+  @override
+  String get learnedIt => 'I learned something!';
+
+  @override
+  String streakDays(int count) {
+    return '$count-day streak';
+  }
+
+  @override
+  String get streakFreeze => 'Rest day ready';
+
+  @override
+  String get streakStart => 'Read today\'s fact to start a streak';
+
+  @override
+  String get statsTitle => 'Your facts';
+
+  @override
+  String statsKnowRate(int percent, int knew, int total) {
+    return 'Facts you already knew: $percent% ($knew/$total)';
+  }
+
+  @override
+  String get statsEmpty =>
+      'Tap I knew that / I learned something to see stats here';
+
+  @override
+  String get quizButton => 'Quiz';
+
+  @override
+  String get quizTitle => 'True or false?';
+
+  @override
+  String get quizTrue => 'True';
+
+  @override
+  String get quizFalse => 'False';
+
+  @override
+  String get quizCorrect => 'Correct!';
+
+  @override
+  String get quizWrong => 'Not quite!';
+
+  @override
+  String get quizNext => 'Next';
 }

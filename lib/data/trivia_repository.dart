@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../models/age_band.dart';
+import '../models/quiz.dart';
 import '../models/trivia.dart';
 
 /// 未レビュー(draft)の翻訳を配信してよいか。
@@ -24,20 +25,30 @@ class FeedFilter {
 }
 
 class TriviaRepository {
-  TriviaRepository(this.items);
+  TriviaRepository(this.items, {List<QuizItem> quizzes = const []})
+      : _quizzes = {for (final q in quizzes) q.factId: q};
 
   final List<Trivia> items;
+  final Map<String, QuizItem> _quizzes;
 
   static const assetPath = 'assets/trivia/trivia.json';
+  static const quizAssetPath = 'assets/trivia/quiz.json';
 
   static Future<TriviaRepository> load({AssetBundle? bundle}) async {
-    final raw = await (bundle ?? rootBundle).loadString(assetPath);
-    final decoded = jsonDecode(raw) as Map<String, dynamic>;
+    final b = bundle ?? rootBundle;
+    final decoded = jsonDecode(await b.loadString(assetPath)) as Map<String, dynamic>;
     final list = (decoded['items'] as List)
         .map((e) => Trivia.fromJson(e as Map<String, dynamic>))
         .toList();
-    return TriviaRepository(list);
+    final quizDecoded =
+        jsonDecode(await b.loadString(quizAssetPath)) as Map<String, dynamic>;
+    final quizzes = (quizDecoded['items'] as List)
+        .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
+        .toList();
+    return TriviaRepository(list, quizzes: quizzes);
   }
+
+  QuizItem? quizFor(String factId) => _quizzes[factId];
 
   Trivia? byId(String id) {
     for (final t in items) {

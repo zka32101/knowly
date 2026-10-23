@@ -11,6 +11,8 @@ import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
 import '../widgets/parental_gate.dart';
+import '../widgets/quiz_sheet.dart';
+import '../logic/streak.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -109,6 +111,21 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             ),
           ),
           const SizedBox(height: 16),
+          if (ref.watch(triviaRepositoryProvider).quizFor(item.id) case final quiz?) ...[
+            FilledButton.icon(
+              key: const Key('quiz_button'),
+              style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+              icon: const Icon(Icons.quiz_outlined, size: 32),
+              label: Text(l.quizButton, style: const TextStyle(fontSize: 20)),
+              onPressed: () => showQuizSheet(
+                context,
+                quiz: quiz,
+                language: lang,
+                explanation: level.body,
+              ),
+            ),
+            const SizedBox(height: 12),
+          ],
           Row(
             children: [
               Expanded(
@@ -159,9 +176,38 @@ class _FeedHome extends ConsumerWidget {
 
     final hasFilter = settings.categories.isNotEmpty || settings.scenes.isNotEmpty;
 
+    final streak = band.isTeenOrAdult
+        ? computeStreak(settings.readDays, ref.watch(nowProvider))
+        : null;
+
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
+        if (streak != null)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Row(
+              children: [
+                const Text('🔥', style: TextStyle(fontSize: 24)),
+                const SizedBox(width: 8),
+                Text(
+                  streak.current > 0
+                      ? l.streakDays(streak.current)
+                      : l.streakStart,
+                  key: const Key('streak_label'),
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                if (streak.hasFreeze) ...[
+                  const SizedBox(width: 8),
+                  Chip(
+                    key: const Key('streak_freeze'),
+                    label: Text(l.streakFreeze),
+                    visualDensity: VisualDensity.compact,
+                  ),
+                ],
+              ],
+            ),
+          ),
         Wrap(
           spacing: 8,
           runSpacing: 4,

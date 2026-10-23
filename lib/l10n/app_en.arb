@@ -71,5 +71,50 @@
   "gateWrong": "That is not the right answer",
   "gateOk": "Next",
   "gateCancel": "Cancel",
-  "close": "Close"
+  "close": "Close",
+  "catBugs": "Bugs",
+  "catVehicles": "Vehicles",
+  "catFood": "Food",
+  "viewAs": "Reading level",
+  "viewOwn": "Standard",
+  "viewJunior": "For school kids",
+  "viewKids": "For little ones",
+  "explainToKids": "Explaining it to a child",
+  "bilingualOn": "Show both languages",
+  "bilingualOff": "Show one language",
+  "knewIt": "I knew that",
+  "learnedIt": "I learned something!",
+  "streakDays": "{count}-day streak",
+  "@streakDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "streakFreeze": "Rest day ready",
+  "streakStart": "Read today's fact to start a streak",
+  "statsTitle": "Your facts",
+  "statsKnowRate": "Facts you already knew: {percent}% ({knew}/{total})",
+  "@statsKnowRate": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "knew": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "statsEmpty": "Tap I knew that / I learned something to see stats here",
+  "quizButton": "Quiz",
+  "quizTitle": "True or false?",
+  "quizTrue": "True",
+  "quizFalse": "False",
+  "quizCorrect": "Correct!",
+  "quizWrong": "Not quite!",
+  "quizNext": "Next"
 }

@@ -1669,6 +1669,1715 @@
      }
     }
    }
+  },
+  {
+   "id": "ant_strong",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "ant",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "アリは ちからもち",
+       "body": "アリは じぶんの おもさの 10ばいいじょうを はこべるよ。"
+      },
+      "junior": {
+       "title": "アリは すごい ちからもち",
+       "body": "アリは じぶんの からだの おもさの 10ばいから 50ばいも あるものを はこびます。"
+      },
+      "teen": {
+       "title": "アリは体重の10〜50倍を運べる",
+       "body": "アリは、種類にもよりますが、自分の体重の10〜50倍もの重さのものを運ぶことができます。体が小さいほど、体重に対する筋肉の断面積の割合が大きくなるためです。"
+      },
+      "adult": {
+       "title": "アリの怪力はスケール効果で説明できる",
+       "body": "アリは自分の体重の10〜50倍の荷物を運びます。体が小さいほど体重(体積に比例)に対して筋肉の断面積が相対的に大きくなるため、同じ筋力でも体重比の力が強く見えます。これは体長のスケール効果で、人間が同じ比率で運べるわけではありません。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Ants are strong",
+       "body": "An ant can carry things much heavier than itself!"
+      },
+      "junior": {
+       "title": "Ants are super strong",
+       "body": "An ant can carry 10 to 50 times its own weight."
+      },
+      "teen": {
+       "title": "Ants can carry 10 to 50 times their weight",
+       "body": "Depending on the species, ants can carry 10 to 50 times their own body weight. Smaller bodies have relatively more muscle cross-section compared to their weight."
+      },
+      "adult": {
+       "title": "Ant strength reflects scaling effects",
+       "body": "Ants carry loads of 10-50 times their body weight. Because weight scales with volume while muscle strength scales with cross-sectional area, smaller animals are relatively stronger. This does not mean a human could do the same at that ratio."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "dragonfly_before_dinosaurs",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "dragonfly",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "トンボは きょうりゅうより むかし",
+       "body": "トンボの ごせんぞさまは、きょうりゅうより まえから いたよ。"
+      },
+      "junior": {
+       "title": "トンボの なかまは とても ふるい",
+       "body": "トンボに にた むしは、3おくねんくらい まえから います。きょうりゅうが でてくる まえです。"
+      },
+      "teen": {
+       "title": "トンボの仲間は恐竜より古い",
+       "body": "トンボに近い仲間の昆虫は、約3億年前に現れました。恐竜が現れた約2億3千万年前より、ずっと昔のことです。"
+      },
+      "adult": {
+       "title": "トンボ類の祖先は恐竜より古い",
+       "body": "トンボ類に近縁なグループは石炭紀の約3億年前に出現し、翅を広げると70cmほどになる巨大な種もいました。恐竜の出現(約2億3千万年前)よりも古い系統です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Dragonflies are very old",
+       "body": "Dragonfly relatives lived before the dinosaurs!"
+      },
+      "junior": {
+       "title": "Dragonflies are older than dinosaurs",
+       "body": "Insects like dragonflies have been around for about 300 million years, long before dinosaurs."
+      },
+      "teen": {
+       "title": "Dragonfly relatives predate the dinosaurs",
+       "body": "Insects closely related to dragonflies appeared about 300 million years ago. Dinosaurs only showed up around 230 million years ago."
+      },
+      "adult": {
+       "title": "The dragonfly lineage predates dinosaurs",
+       "body": "Relatives of dragonflies appeared in the Carboniferous about 300 million years ago, including giant species with wingspans of around 70 cm. This predates the appearance of dinosaurs roughly 230 million years ago."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "firefly_cold_light",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "firefly",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ホタルの ひかり",
+       "body": "ホタルの ひかりは ほとんど あつくないんだよ。"
+      },
+      "junior": {
+       "title": "ホタルの ひかりは つめたい",
+       "body": "ホタルは おなかで ひかりを つくります。でも ほとんど ねつが でないので、さわっても あつくありません。"
+      },
+      "teen": {
+       "title": "ホタルの光はほとんど熱を出さない",
+       "body": "ホタルは体の中の化学反応で光を出します。電球と違い、ほとんど熱が出ないため「冷たい光」と呼ばれます。"
+      },
+      "adult": {
+       "title": "ホタルの生物発光は熱損失が非常に小さい",
+       "body": "ホタルの発光は、ルシフェリンという物質が酵素(ルシフェラーゼ)の働きで酸素と反応して起こる生物発光です。エネルギーのほとんどが光になり、熱としてはほとんど失われません。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Firefly light",
+       "body": "A firefly's light is not hot!"
+      },
+      "junior": {
+       "title": "A firefly's light is cool",
+       "body": "Fireflies make light inside their bodies. It gives off almost no heat, so it never feels hot."
+      },
+      "teen": {
+       "title": "Firefly light gives off almost no heat",
+       "body": "Fireflies make light through a chemical reaction in their bodies. Unlike a light bulb, almost no heat is produced, which is why it is called cold light."
+      },
+      "adult": {
+       "title": "Firefly bioluminescence loses very little energy as heat",
+       "body": "Firefly light is bioluminescence: the molecule luciferin reacts with oxygen under the enzyme luciferase. Nearly all the energy is emitted as light, with very little lost as heat."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "bee_waggle_dance",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "bee",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ミツバチの ダンス",
+       "body": "ミツバチは ダンスで おはなの ばしょを おしえるよ。"
+      },
+      "junior": {
+       "title": "ミツバチは ダンスで おしえる",
+       "body": "ミツバチは おはなを みつけると、なかまの まえで ダンスを します。ダンスで おはなが どこに あるか つたえます。"
+      },
+      "teen": {
+       "title": "ミツバチはダンスで花の場所を教える",
+       "body": "ミツバチは花のある場所を見つけると、巣の中で「8の字ダンス」をします。ダンスの向きで方向を、長さで距離を仲間に伝えます。"
+      },
+      "adult": {
+       "title": "ミツバチの8の字ダンス",
+       "body": "ミツバチの採餌バチは、巣の中で尻振りダンス(waggle dance)を踊ります。直線部分の向きが太陽に対する方角を、長さが餌場までの距離を表し、仲間はそれを読み取って飛んでいきます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Bees dance",
+       "body": "Honeybees dance to tell friends where flowers are!"
+      },
+      "junior": {
+       "title": "Bees dance to give directions",
+       "body": "When a honeybee finds flowers, it dances for the others. The dance tells them where to go."
+      },
+      "teen": {
+       "title": "Honeybees dance to point to flowers",
+       "body": "After finding flowers, a honeybee does a figure-eight \"waggle dance\" in the hive. The direction shows which way to fly, and the length shows how far."
+      },
+      "adult": {
+       "title": "The honeybee waggle dance encodes direction and distance",
+       "body": "A forager performs a waggle dance in the hive. The angle of the straight run relative to vertical encodes the direction of the food relative to the Sun, and its duration encodes the distance, which nestmates decode to find the source."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "cicada_17_years",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "cicada",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "セミは ながく つちの なか",
+       "body": "セミの なかには、つちの なかで 17ねんも すごす ものが いるよ。"
+      },
+      "junior": {
+       "title": "セミは なんねんも つちの なか",
+       "body": "セミの ようちゅうは、ながい あいだ つちの なかで くらします。アメリカには、13ねんや 17ねんも つちの なかに いる セミが います。"
+      },
+      "teen": {
+       "title": "17年間地中で暮らすセミがいる",
+       "body": "セミの幼虫は長い間、地中で木の根の汁を吸って育ちます。北アメリカには、13年または17年ごとに一斉に地上に出てくる「周期ゼミ」がいます。"
+      },
+      "adult": {
+       "title": "周期ゼミは13年または17年周期で一斉に羽化する",
+       "body": "北アメリカの周期ゼミ(マジシカダ属)は、13年または17年かけて地中で成長し、同じ年に数百万匹規模で一斉に羽化します。周期が素数であることは、天敵や他の周期の個体群と発生時期が重なりにくくするためだという説があります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Cicadas wait underground",
+       "body": "Some cicadas stay underground for 17 years!"
+      },
+      "junior": {
+       "title": "Cicadas can stay underground for years",
+       "body": "Young cicadas live underground for a long time. In America, some wait 13 or 17 years before coming out."
+      },
+      "teen": {
+       "title": "Some cicadas spend 17 years underground",
+       "body": "Cicada nymphs grow underground, feeding on root sap. In North America, periodical cicadas come out all at once every 13 or 17 years."
+      },
+      "adult": {
+       "title": "Periodical cicadas emerge in 13- or 17-year cycles",
+       "body": "North American periodical cicadas (Magicicada) develop underground for 13 or 17 years, then emerge in synchrony in the millions. One hypothesis is that prime-numbered cycles make it less likely to coincide with predator cycles or other broods."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "mosquito_female_bites",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "mosquito",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "かに さされるのは",
+       "body": "ひとを さす かは、めすだけなんだよ。"
+      },
+      "junior": {
+       "title": "さすのは めすの かだけ",
+       "body": "ひとの ちを すうのは、めすの かだけです。おすの かは はなの みつを のんで くらします。"
+      },
+      "teen": {
+       "title": "人を刺す蚊はメスだけ",
+       "body": "人や動物の血を吸うのは、メスの蚊だけです。卵を産むための栄養が必要だからで、オスは花の蜜や植物の汁を吸って生きています。"
+      },
+      "adult": {
+       "title": "吸血するのはメスの蚊のみ",
+       "body": "吸血するのは産卵のためにタンパク質を必要とするメスだけで、オスは花の蜜などの糖分を摂ります。メスも普段は蜜を吸い、吸血は卵を作るときに限られます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Mosquito bites",
+       "body": "Only girl mosquitoes bite people!"
+      },
+      "junior": {
+       "title": "Only female mosquitoes bite",
+       "body": "Only female mosquitoes drink blood. Male mosquitoes drink nectar from flowers."
+      },
+      "teen": {
+       "title": "Only female mosquitoes bite",
+       "body": "Only female mosquitoes drink blood, because they need it to make eggs. Males live on flower nectar and plant juices."
+      },
+      "adult": {
+       "title": "Only female mosquitoes feed on blood",
+       "body": "Only females take blood meals, since they need protein to develop eggs. Males feed on sugars such as nectar, and females also feed on nectar for energy, taking blood only for reproduction."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "spider_not_insect",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "spider",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "クモは むしじゃない？",
+       "body": "クモの あしは 8ほん。むしの あしは 6ぽんだよ。"
+      },
+      "junior": {
+       "title": "クモは こんちゅうでは ない",
+       "body": "こんちゅうの あしは 6ぽんで、からだは 3つに わかれます。クモは あしが 8ほんなので、こんちゅうでは ありません。"
+      },
+      "teen": {
+       "title": "クモは昆虫ではない",
+       "body": "昆虫は足が6本で、体が頭・胸・腹の3つに分かれています。クモは足が8本で体が2つに分かれるので、昆虫ではなくクモ類の仲間です。"
+      },
+      "adult": {
+       "title": "クモ類は昆虫と別の分類群",
+       "body": "昆虫は六脚類で、頭・胸・腹の3部に分かれ脚は6本、触角と翅(多くの種)を持ちます。クモは鋏角類のクモ綱で、頭胸部と腹部の2部に分かれ、脚は8本、触角と翅はありません。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Is a spider an insect?",
+       "body": "A spider has 8 legs. An insect has 6 legs!"
+      },
+      "junior": {
+       "title": "Spiders are not insects",
+       "body": "An insect has 6 legs and 3 body parts. A spider has 8 legs, so it is not an insect."
+      },
+      "teen": {
+       "title": "A spider is not an insect",
+       "body": "Insects have six legs and a body in three parts: head, thorax and abdomen. Spiders have eight legs and two body parts, so they belong to a different group."
+      },
+      "adult": {
+       "title": "Spiders are arachnids, not insects",
+       "body": "Insects (hexapods) have three body regions, six legs, antennae and often wings. Spiders are arachnids, with two body regions, eight legs, and no antennae or wings."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "beetle_quarter",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "beetle",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "カブトムシの なかま",
+       "body": "コウチュウの なかまは、いきものの なかで いちばん たくさん いるよ。"
+      },
+      "junior": {
+       "title": "コウチュウは すごく たくさん",
+       "body": "カブトムシや テントウムシは コウチュウの なかま。コウチュウは しゅるいが とても おおく、いきものの 4ぶんの 1くらいも います。"
+      },
+      "teen": {
+       "title": "昆虫の中で最も種類が多いのはコウチュウ",
+       "body": "カブトムシやテントウムシなどのコウチュウ(甲虫)の仲間は、名前が付けられている動物の種のうち、約4分の1を占めると言われます。"
+      },
+      "adult": {
+       "title": "甲虫は既知の動物種の約4分の1を占める",
+       "body": "甲虫目は約40万種が記載されており、既知の動物種の約4分の1を占めるとされる、最も種数の多い目です。「神は甲虫をこよなく愛している」という言葉でも知られます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Beetles are everywhere",
+       "body": "There are more kinds of beetles than almost any other animal!"
+      },
+      "junior": {
+       "title": "There are so many beetles",
+       "body": "Rhinoceros beetles and ladybugs are beetles. There are so many kinds that about 1 in 4 animals is a beetle."
+      },
+      "teen": {
+       "title": "About one in four animal species is a beetle",
+       "body": "Beetles, like rhinoceros beetles and ladybugs, are said to make up about a quarter of all the animal species that have been named."
+      },
+      "adult": {
+       "title": "Beetles make up roughly a quarter of known animal species",
+       "body": "Coleoptera has around 400,000 described species, about a quarter of all known animal species, making it the most species-rich order. It inspired the quip that God has an inordinate fondness for beetles."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "dung_beetle_milky_way",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "dungbeetle",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "フンコロガシと ほし",
+       "body": "フンコロガシは よぞらの ほしを みて あるくんだって。"
+      },
+      "junior": {
+       "title": "フンコロガシは ほしを めじるしに",
+       "body": "フンコロガシは ころがした だんごを まっすぐ はこぶ ために、よぞらの あまのがわを めじるしに することが わかりました。"
+      },
+      "teen": {
+       "title": "フンコロガシは天の川を目印にする",
+       "body": "フンコロガシ(糞虫)は、転がしたフンの玉を直進させるため、夜空の天の川の光の帯を目印にすることが、2013年の実験で明らかになりました。"
+      },
+      "adult": {
+       "title": "糞虫は天の川を使って方角を保つ",
+       "body": "2013年の研究で、アフリカの糞虫が月のない夜に、天の川の光の帯を手がかりに糞玉を直線で運ぶことが示されました。星空を方位の指標に使う昆虫として初めて報告されたものです。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Dung beetles and stars",
+       "body": "Dung beetles use the stars to find their way!"
+      },
+      "junior": {
+       "title": "Dung beetles use the Milky Way",
+       "body": "Dung beetles roll their balls in a straight line by looking at the Milky Way in the night sky."
+      },
+      "teen": {
+       "title": "Dung beetles navigate by the Milky Way",
+       "body": "A 2013 experiment showed that dung beetles use the band of light of the Milky Way to roll their dung balls in straight lines."
+      },
+      "adult": {
+       "title": "Dung beetles use the Milky Way for orientation",
+       "body": "A 2013 study showed that African dung beetles keep their dung balls on a straight course on moonless nights by using the Milky Way's band of light, the first insect reported to use the starry sky for orientation."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "silkworm_thread",
+   "category": "bugs",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "silkworm",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "カイコの いと",
+       "body": "カイコの まゆは、1ぽんの ながい いとで できているよ。"
+      },
+      "junior": {
+       "title": "まゆは 1ぽんの いと",
+       "body": "カイコが つくる まゆは、1ぽんの ながい いとで できています。ほどくと 1000メートルいじょうに なります。"
+      },
+      "teen": {
+       "title": "カイコのまゆは1本の糸でできている",
+       "body": "カイコのまゆは1本の長い糸でできていて、ほどくと1,000メートル以上になります。この糸から絹(シルク)が作られます。"
+      },
+      "adult": {
+       "title": "繭は1本の連続した糸",
+       "body": "カイコの繭は、1本の連続した繭糸(フィブロイン2本をセリシンで包んだもの)でできています。一つの繭からは約1,000〜1,500メートルの糸が得られ、生糸の原料になります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Silkworm thread",
+       "body": "A silkworm cocoon is made of one long thread!"
+      },
+      "junior": {
+       "title": "One cocoon, one thread",
+       "body": "A silkworm makes its cocoon from one long thread. If you unwind it, it is over 1,000 meters long."
+      },
+      "teen": {
+       "title": "A silk cocoon is a single thread",
+       "body": "A silkworm's cocoon is made from one long thread. Unwound, it can stretch over 1,000 meters, and silk is made from it."
+      },
+      "adult": {
+       "title": "A silkworm cocoon is one continuous filament",
+       "body": "A cocoon consists of a single continuous filament, two fibroin strands glued with sericin. Roughly 1,000-1,500 meters of thread can be reeled from one cocoon, which is the raw material of silk."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "shinkansen_1964",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [
+    "JP"
+   ],
+   "illustration": "train",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "しんかんせんの はじまり",
+       "body": "しんかんせんは 1964ねんに はしりはじめたよ。"
+      },
+      "junior": {
+       "title": "しんかんせんは 1964ねんから",
+       "body": "せかいで はじめての こうそくの でんしゃ、しんかんせんは 1964ねんに はしりはじめました。さいしょは じそく 210キロでした。"
+      },
+      "teen": {
+       "title": "東海道新幹線は1964年開業、最初は時速210km",
+       "body": "東海道新幹線は1964年に東京〜新大阪間で開業しました。開業当時の最高速度は時速210kmで、東京オリンピックの開催直前でした。"
+      },
+      "adult": {
+       "title": "東海道新幹線は1964年開業の世界初の高速鉄道",
+       "body": "東海道新幹線は東京オリンピック直前の1964年10月に、東京〜新大阪間で開業しました。最高速度は当初時速210kmで、営業運転で時速200kmを超える世界初の高速鉄道とされます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The start of the Shinkansen",
+       "body": "The Shinkansen started running in 1964!"
+      },
+      "junior": {
+       "title": "The Shinkansen began in 1964",
+       "body": "The Shinkansen, the world's first high-speed train, began running in 1964. At first it went 210 km per hour."
+      },
+      "teen": {
+       "title": "The Tokaido Shinkansen opened in 1964 at 210 km/h",
+       "body": "Japan's Tokaido Shinkansen opened between Tokyo and Shin-Osaka in 1964, just before the Tokyo Olympics, with a top speed of 210 km/h."
+      },
+      "adult": {
+       "title": "The Shinkansen opened in 1964 as the world's first high-speed rail",
+       "body": "The Tokaido Shinkansen opened between Tokyo and Shin-Osaka in October 1964, days before the Tokyo Olympics. Its initial top speed of 210 km/h made it the first railway in the world to operate regularly above 200 km/h."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "airliner_cruise",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "plane",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ひこうきは たかい そら",
+       "body": "ひこうきは とても たかい そらを とぶよ。とても さむいんだ。"
+      },
+      "junior": {
+       "title": "ひこうきは 1まんメートルを とぶ",
+       "body": "ひこうきは ふつう、1まんメートルくらいの たかさを とびます。そとは マイナス50どくらいで、とても さむいです。"
+      },
+      "teen": {
+       "title": "旅客機は高度約1万メートルを飛ぶ",
+       "body": "旅客機は高度約1万メートルを巡航します。外の気温はマイナス50℃ほどになり、空気がうすいため、機内は気圧を調整しています。"
+      },
+      "adult": {
+       "title": "旅客機の巡航高度は約10,000m",
+       "body": "旅客機は燃費のよい高度約9,000〜12,000mを巡航し、外気温はマイナス50℃前後になります。外の空気は薄く、機内は与圧して概ね標高2,000〜2,400m程度の気圧に保たれています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Airplanes fly high",
+       "body": "Airplanes fly very high, where it is very cold."
+      },
+      "junior": {
+       "title": "Airplanes fly at 10,000 meters",
+       "body": "Airplanes usually fly about 10,000 meters up. It is about minus 50 degrees outside, which is very cold."
+      },
+      "teen": {
+       "title": "Airliners cruise at about 10,000 meters",
+       "body": "Passenger planes cruise at about 10,000 meters, where it is around minus 50 °C. The air is thin, so the cabin air pressure is adjusted."
+      },
+      "adult": {
+       "title": "Airliners cruise at roughly 10,000 m",
+       "body": "Airliners cruise at an efficient altitude of about 9,000-12,000 m, where outside temperatures are around -50 °C. The air is thin, so the cabin is pressurized to roughly the equivalent of 2,000-2,400 m above sea level."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "wright_first_flight",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "wright",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "さいしょの ひこうき",
+       "body": "さいしょの ひこうきは、たった 12びょう とんだだけ。"
+      },
+      "junior": {
+       "title": "さいしょの ひこうきは 12びょう",
+       "body": "1903ねん、ライトきょうだいの ひこうきが はじめて ひとを のせて とびました。とんだ じかんは 12びょうで、ながさは 37メートルくらいでした。"
+      },
+      "teen": {
+       "title": "人類初の動力飛行は12秒",
+       "body": "1903年12月17日、ライト兄弟の飛行機が初めて人を乗せて動力で飛びました。最初の飛行は12秒間で、距離は約37メートルでした。"
+      },
+      "adult": {
+       "title": "ライト兄弟の初飛行は12秒・約37m",
+       "body": "1903年12月17日、ライト兄弟のフライヤー号が米国ノースカロライナ州キティホークで人類初の動力飛行に成功しました。1回目の飛行は12秒・約37メートルで、その日の最長飛行は59秒でした。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The first airplane",
+       "body": "The first airplane flew for only 12 seconds!"
+      },
+      "junior": {
+       "title": "The first flight lasted 12 seconds",
+       "body": "In 1903, the Wright brothers' airplane flew with a person on board for the first time. It flew for 12 seconds, about 37 meters."
+      },
+      "teen": {
+       "title": "The first powered flight lasted 12 seconds",
+       "body": "On December 17, 1903, the Wright brothers made the first powered flight with a pilot. The first flight lasted 12 seconds and covered about 37 meters."
+      },
+      "adult": {
+       "title": "The Wright brothers' first flight lasted 12 seconds",
+       "body": "On December 17, 1903, the Wright Flyer made the first powered, controlled flight at Kitty Hawk, North Carolina. The first flight lasted 12 seconds and covered about 37 m; the longest of that day's four flights was 59 seconds."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "tokyo_first_subway",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [
+    "JP"
+   ],
+   "illustration": "subway",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "アジアで はじめての ちかてつ",
+       "body": "にほんの ちかてつは、アジアで いちばん さいしょに できたよ。"
+      },
+      "junior": {
+       "title": "アジアで さいしょの ちかてつ",
+       "body": "1927ねん、とうきょうの うえのと あさくさの あいだに、アジアで はじめての ちかてつが できました。"
+      },
+      "teen": {
+       "title": "東京にアジア初の地下鉄ができたのは1927年",
+       "body": "1927年12月30日、東京の上野〜浅草間にアジア初の地下鉄が開業しました。これが今の東京メトロ銀座線のはじまりです。"
+      },
+      "adult": {
+       "title": "東京地下鉄道はアジア初の地下鉄(1927年)",
+       "body": "1927年12月30日、東京地下鉄道が上野〜浅草間(約2.2km)を開業し、アジア初の地下鉄となりました。現在の東京メトロ銀座線の一部にあたります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Asia's first subway",
+       "body": "Japan built the first subway in Asia!"
+      },
+      "junior": {
+       "title": "Asia's first subway",
+       "body": "In 1927, Asia's first subway opened in Tokyo, between Ueno and Asakusa."
+      },
+      "teen": {
+       "title": "Tokyo opened Asia's first subway in 1927",
+       "body": "On December 30, 1927, the first subway in Asia opened in Tokyo between Ueno and Asakusa. It is now part of the Ginza Line."
+      },
+      "adult": {
+       "title": "Asia's first subway opened in Tokyo in 1927",
+       "body": "Tokyo Underground Railway opened between Ueno and Asakusa (about 2.2 km) on December 30, 1927, as Asia's first subway. It is now part of the Tokyo Metro Ginza Line."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "steel_ship_floats",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "ship",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "てつの ふねは なぜ うく？",
+       "body": "てつは おもいのに、ふねは うかぶよ。"
+      },
+      "junior": {
+       "title": "てつの ふねが うく わけ",
+       "body": "ふねは ひろくて、なかが くうきで いっぱいです。だから おなじ おおきさの みずより かるく なって、うかびます。"
+      },
+      "teen": {
+       "title": "鉄の船が浮かぶ理由",
+       "body": "船は中が空洞で、同じ体積の水よりも全体として軽いため浮かびます。水は押しのけられた分だけ、船を上に押し上げます(浮力)。"
+      },
+      "adult": {
+       "title": "鉄の船が浮くのはアルキメデスの原理",
+       "body": "船は鉄でできていても、中が空洞で全体の平均密度が水より小さくなるため浮きます。押しのけた水の重さと同じ大きさの浮力が働くというアルキメデスの原理で説明されます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Why do steel ships float?",
+       "body": "Steel is heavy, but ships float!"
+      },
+      "junior": {
+       "title": "Why steel ships float",
+       "body": "A ship is wide and full of air inside. So it is lighter than the same amount of water, and it floats."
+      },
+      "teen": {
+       "title": "Why steel ships float",
+       "body": "A ship is hollow inside, so overall it weighs less than the water it pushes aside. The water pushes the ship upward. This is called buoyancy."
+      },
+      "adult": {
+       "title": "Steel ships float because of Archimedes' principle",
+       "body": "Even though steel is dense, a ship's hull encloses air, so its average density is below water's. The buoyant force equals the weight of the water displaced, per Archimedes' principle."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "orbital_speed",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "rocket",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ロケットは ものすごく はやい",
+       "body": "ロケットは うちゅうに いくとき、ものすごい はやさで とぶよ。"
+      },
+      "junior": {
+       "title": "ロケットの はやさ",
+       "body": "ちきゅうの まわりを まわる ためには、1びょうで 8キロメートルも すすむ はやさが いります。"
+      },
+      "teen": {
+       "title": "地球を回るには秒速約8kmが必要",
+       "body": "人工衛星が地球のまわりを回り続けるには、秒速約7.9キロメートル(時速約2万8千キロ)の速さが必要です。そのためロケットは、とても強い力で加速します。"
+      },
+      "adult": {
+       "title": "第一宇宙速度は約7.9km/s",
+       "body": "地表付近の円軌道を維持するための速度(第一宇宙速度)は約7.9km/s(時速約2万8千km)です。ロケットは主に上昇よりも、この水平方向の速度を得るために大量の燃料を使います。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Rockets are fast",
+       "body": "Rockets go super fast to reach space!"
+      },
+      "junior": {
+       "title": "How fast is a rocket?",
+       "body": "To go around the Earth, you need to move about 8 kilometers every second."
+      },
+      "teen": {
+       "title": "Orbiting Earth takes about 8 km per second",
+       "body": "To keep circling the Earth, a satellite must travel about 7.9 kilometers per second, or around 28,000 km per hour."
+      },
+      "adult": {
+       "title": "Orbital velocity is about 7.9 km/s",
+       "body": "Staying in a low circular orbit takes about 7.9 km/s (around 28,000 km/h). Rockets spend most of their fuel gaining this sideways speed rather than simply going up."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "maglev_603",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [
+    "JP"
+   ],
+   "illustration": "maglev",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ういて はしる でんしゃ",
+       "body": "リニアは ちょっと うきながら、すごく はやく はしるよ。"
+      },
+      "junior": {
+       "title": "リニアは うきながら はしる",
+       "body": "リニアモーターカーは、じしゃくの ちからで すこし うきあがって はしります。じそく 603キロも でたことが あります。"
+      },
+      "teen": {
+       "title": "リニアは時速603kmを記録した",
+       "body": "日本のリニア(超電導磁気浮上式鉄道)は、磁石の力で車体を少し浮かせて走ります。2015年に山梨県の実験線で、有人で時速603kmの世界記録を出しました。"
+      },
+      "adult": {
+       "title": "山梨リニア実験線で有人走行の世界記録603km/h",
+       "body": "超電導リニア(L0系)は、超電導磁石による磁気浮上と推進で走行します。2015年4月に山梨実験線で、鉄道の有人走行として世界最高速度の時速603kmを記録しました。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Floating trains",
+       "body": "The maglev train floats a little and goes very fast!"
+      },
+      "junior": {
+       "title": "Maglev trains float",
+       "body": "A maglev train floats a little using magnets. One reached 603 km per hour."
+      },
+      "teen": {
+       "title": "A maglev train hit 603 km/h",
+       "body": "Japan's maglev train floats slightly above the track using magnets. In 2015 it set a world record of 603 km/h in Yamanashi, with passengers aboard."
+      },
+      "adult": {
+       "title": "The SCMaglev set a 603 km/h manned record",
+       "body": "Japan's superconducting maglev (the L0 Series) levitates and is propelled magnetically. In April 2015 it set the world speed record for a manned rail vehicle, 603 km/h, on the Yamanashi test line."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "plane_window_hole",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "window",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ひこうきの まどの あな",
+       "body": "ひこうきの まどには ちいさな あなが あいているよ。"
+      },
+      "junior": {
+       "title": "ひこうきの まどの ちいさな あな",
+       "body": "ひこうきの まどには ちいさな あなが あります。まどが こわれにくく なるように しているんだよ。"
+      },
+      "teen": {
+       "title": "飛行機の窓には小さな穴がある",
+       "body": "旅客機の窓には、小さな穴(ブリーザーホール)があります。窓にかかる圧力を調整して、窓を丈夫にし、曇りを防ぐ役割があります。"
+      },
+      "adult": {
+       "title": "旅客機の窓のブリーザーホール",
+       "body": "旅客機の窓は多くが2〜3枚重ねで、内側以外の窓の1枚に小さな穴(ブリーザーホール)があります。機内外の気圧差を外側の窓に集中させて構造を守り、窓間の結露・曇りを防ぎます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The hole in the airplane window",
+       "body": "There is a tiny hole in an airplane window!"
+      },
+      "junior": {
+       "title": "A tiny hole in the window",
+       "body": "Airplane windows have a tiny hole. It helps keep the window strong."
+      },
+      "teen": {
+       "title": "Airplane windows have a tiny hole",
+       "body": "Passenger plane windows have a small \"breather hole\". It balances the pressure, keeps the window strong, and stops it from fogging."
+      },
+      "adult": {
+       "title": "The breather hole in an airliner window",
+       "body": "Airliner windows are typically multi-layered, and one pane has a small breather hole. It makes the outer pane carry the pressure difference between the cabin and outside, protecting the structure, and it lets moisture escape to prevent fogging."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "iss_sunrises",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "iss",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "うちゅうの 1にち",
+       "body": "うちゅうステーションでは、1にちに なんども ひが のぼるよ。"
+      },
+      "junior": {
+       "title": "うちゅうでは 1にちに 16かい ひのでが ある",
+       "body": "こくさいうちゅうステーションは、ちきゅうを 1しゅう するのに 90ぷんくらい。だから 1にちに 16かいも ひのでが みられます。"
+      },
+      "teen": {
+       "title": "宇宙ステーションでは1日に約16回、日の出がある",
+       "body": "国際宇宙ステーション(ISS)は、約90分で地球を1周します。そのため、宇宙飛行士は1日に約16回の日の出と日の入りを見ることができます。"
+      },
+      "adult": {
+       "title": "ISSは約90分で地球を1周する",
+       "body": "ISSは高度約400kmを時速約2万8千kmで飛び、約90分で地球を1周します。1日に約16周するので、宇宙飛行士は約16回の日の出と日の入りを経験します。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A day in space",
+       "body": "On the space station, the Sun rises many times a day!"
+      },
+      "junior": {
+       "title": "16 sunrises a day in space",
+       "body": "The International Space Station goes around the Earth in about 90 minutes. So it sees about 16 sunrises every day."
+      },
+      "teen": {
+       "title": "The space station sees about 16 sunrises a day",
+       "body": "The International Space Station circles the Earth about every 90 minutes, so astronauts see around 16 sunrises and sunsets each day."
+      },
+      "adult": {
+       "title": "The ISS orbits Earth about every 90 minutes",
+       "body": "The ISS orbits at about 400 km altitude and about 28,000 km/h, circling the Earth roughly every 90 minutes. That is about 16 orbits a day, so astronauts experience about 16 sunrises and sunsets."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "shipping_80_percent",
+   "category": "vehicles",
+   "scenes": [
+    "friends",
+    "work",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "container",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ものを はこぶ ふね",
+       "body": "せかいの にもつの たくさんは、ふねで はこばれているよ。"
+      },
+      "junior": {
+       "title": "にもつの 8わりは ふね",
+       "body": "せかいじゅうで はこばれる にもつの 8わりくらいは、ふねで はこばれています。"
+      },
+      "teen": {
+       "title": "世界の貿易の約8割は船で運ばれる",
+       "body": "世界で取引される貨物の量のうち、約8割は船で運ばれています。重い荷物を、少ない費用で運べるからです。"
+      },
+      "adult": {
+       "title": "世界貿易量の約80%は海上輸送",
+       "body": "国連貿易開発会議(UNCTAD)などによると、世界の貿易量(重量ベース)の約80%は海上輸送で運ばれています。大量の貨物を安い費用で運べるためで、コンテナ船が重要な役割を担っています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Ships carry things",
+       "body": "Ships carry most of the world's goods!"
+      },
+      "junior": {
+       "title": "Ships carry about 80% of goods",
+       "body": "About eight out of every ten things traded around the world travel by ship."
+      },
+      "teen": {
+       "title": "About 80% of world trade goes by sea",
+       "body": "Roughly 80% of the goods traded around the world are carried by ship, because ships can move huge loads cheaply."
+      },
+      "adult": {
+       "title": "About 80% of world trade volume moves by sea",
+       "body": "According to UNCTAD and others, roughly 80% of global trade by volume is carried by sea. Ships move enormous cargoes at low cost per unit, with container ships playing a central role."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "watermelon_92_water",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "watermelon",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "すいかは みず",
+       "body": "すいかは ほとんど みずで できているよ。"
+      },
+      "junior": {
+       "title": "すいかの 92パーセントは みず",
+       "body": "すいかは、おもさの 92パーセントくらいが みずです。だから のどが かわいた ときに ぴったりです。"
+      },
+      "teen": {
+       "title": "スイカの約92%は水分",
+       "body": "スイカは重さの約92%が水分です。水分補給にぴったりで、カリウムも含み、夏の食べ物として親しまれています。"
+      },
+      "adult": {
+       "title": "スイカの水分含有量は約92%",
+       "body": "スイカの可食部は水分が約90〜92%を占めます。カリウムや、赤い果肉の色素であるリコピン、シトルリンを含むことでも知られます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Watermelon is water",
+       "body": "A watermelon is almost all water!"
+      },
+      "junior": {
+       "title": "92% of a watermelon is water",
+       "body": "About 92 percent of a watermelon's weight is water. That is why it is great when you are thirsty."
+      },
+      "teen": {
+       "title": "A watermelon is about 92% water",
+       "body": "Watermelon is about 92% water by weight, which makes it a refreshing summer snack."
+      },
+      "adult": {
+       "title": "Watermelon is roughly 90-92% water",
+       "body": "The edible part of a watermelon is about 90-92% water. It is also known for containing potassium, the red pigment lycopene, and citrulline."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "cacao_money",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "cacao",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "カカオは おかね",
+       "body": "むかしの ひとは、カカオの みを おかねに つかったよ。"
+      },
+      "junior": {
+       "title": "カカオの みは おかねだった",
+       "body": "むかしの アステカの ひとたちは、チョコレートの もとの カカオの みを、おかねの ように つかっていました。"
+      },
+      "teen": {
+       "title": "昔はカカオ豆がお金として使われた",
+       "body": "チョコレートの原料のカカオ豆は、中央アメリカのアステカなどで、お金のように物と交換するために使われていました。"
+      },
+      "adult": {
+       "title": "カカオ豆は貨幣として流通した",
+       "body": "アステカ帝国などの中央アメリカでは、カカオ豆が貨幣代わりに使われ、税として納められることもありました。飲み物としても高貴な人に重んじられ、これが現在のチョコレートの起源になりました。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Cacao as money",
+       "body": "Long ago, people used cacao beans like money!"
+      },
+      "junior": {
+       "title": "Cacao beans were money",
+       "body": "The Aztecs used cacao beans, which chocolate comes from, as money."
+      },
+      "teen": {
+       "title": "Cacao beans were once used as money",
+       "body": "The cacao beans that chocolate is made from were used like money in Central America, including among the Aztecs, to trade for goods."
+      },
+      "adult": {
+       "title": "Cacao beans served as currency",
+       "body": "In Central America, including the Aztec Empire, cacao beans circulated as currency and could be paid as tribute. Cacao was also prized as a drink, the origin of today's chocolate."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "rice_half_world",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "rice",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "おこめは せかいの ごはん",
+       "body": "おこめは せかいの たくさんの ひとの ごはんだよ。"
+      },
+      "junior": {
+       "title": "せかいの はんぶんの ひとが おこめ",
+       "body": "おこめは、せかいの ひとの はんぶんくらいが、まいにち たべる だいじな ごはんです。"
+      },
+      "teen": {
+       "title": "世界の約半分の人が米を主食にする",
+       "body": "お米は、世界の人口の約半分が主食として食べていると言われます。特にアジアで多く食べられ、種類も数万あるとされます。"
+      },
+      "adult": {
+       "title": "世界人口の約半数がイネを主食とする",
+       "body": "イネは、世界人口の約半数にとっての主食作物とされ、特にアジアで多く生産・消費されます。栽培品種は数万にのぼるとされ、国際稲研究所には十万点以上の遺伝資源が保存されています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Rice around the world",
+       "body": "Rice is the main food for many people!"
+      },
+      "junior": {
+       "title": "Half the world eats rice",
+       "body": "About half of all people in the world eat rice every day as their main food."
+      },
+      "teen": {
+       "title": "About half the world relies on rice",
+       "body": "It is said that about half of the world's people eat rice as their main food, especially in Asia."
+      },
+      "adult": {
+       "title": "Rice is a staple for roughly half the world's population",
+       "body": "Rice is the staple crop for around half of the world's population, with production and consumption concentrated in Asia. Tens of thousands of varieties exist, and the International Rice Research Institute conserves more than 100,000 accessions."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "carrot_colors",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "carrot",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "むかしの にんじん",
+       "body": "むかしの にんじんは、むらさきや きいろが おおかったよ。"
+      },
+      "junior": {
+       "title": "むかしの にんじんの いろ",
+       "body": "むかしは、むらさきや きいろの にんじんが おおかったそうです。いまの オレンジいろは、あとから ひろまりました。"
+      },
+      "teen": {
+       "title": "昔のニンジンは紫や黄色が多かった",
+       "body": "昔のニンジンは、紫や黄色のものが多かったと言われています。今の鮮やかなオレンジ色は、その後の品種改良で広まりました。"
+      },
+      "adult": {
+       "title": "オレンジ色のニンジンは後に広まった",
+       "body": "栽培化された初期のニンジンは紫や黄色が中心で、オレンジ色のニンジンはその後の品種改良で広まったとされます。βカロテンを多く含み、体内でビタミンAに変わるのがオレンジ色の理由です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Old carrots",
+       "body": "Long ago, many carrots were purple or yellow!"
+      },
+      "junior": {
+       "title": "Carrots used to be other colors",
+       "body": "A long time ago, many carrots were purple or yellow. Orange ones became popular later."
+      },
+      "teen": {
+       "title": "Carrots used to be purple and yellow",
+       "body": "Early cultivated carrots were often purple or yellow. The bright orange kind spread later through breeding."
+      },
+      "adult": {
+       "title": "Orange carrots spread through later breeding",
+       "body": "Early domesticated carrots were mostly purple and yellow, and orange types spread later through selective breeding. Orange comes from beta-carotene, which the body converts to vitamin A."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "peanut_not_nut",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "peanut",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ピーナッツは まめ",
+       "body": "ピーナッツは ナッツじゃなくて、まめの なかまだよ。"
+      },
+      "junior": {
+       "title": "ピーナッツは つちの なかで できる",
+       "body": "ピーナッツは、まめの なかまです。はなが さいたあと、えだが のびて、つちの なかで みを つくります。"
+      },
+      "teen": {
+       "title": "ピーナッツは木の実ではなくマメの仲間",
+       "body": "ピーナッツ(落花生)はナッツと呼ばれますが、植物としてはマメの仲間です。花が咲いたあと、枝が地面に伸びて、土の中で実を作ります。"
+      },
+      "adult": {
+       "title": "落花生はナッツではなくマメ科",
+       "body": "落花生はマメ科の植物で、木の実(ナッツ)ではありません。受粉後に子房柄が地中に伸びて莢を作る「地下結実」が特徴で、名前の「落花生」は花が落ちて地中で実ることに由来します。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Peanuts are beans",
+       "body": "A peanut is not a nut. It is in the bean family!"
+      },
+      "junior": {
+       "title": "Peanuts grow underground",
+       "body": "Peanuts are in the bean family. After the flower blooms, the stem grows down and makes the peanut in the soil."
+      },
+      "teen": {
+       "title": "Peanuts are legumes, not nuts",
+       "body": "Peanuts are called nuts, but botanically they are legumes, like beans. After flowering, the stem bends down and the pod forms underground."
+      },
+      "adult": {
+       "title": "Peanuts are legumes that fruit underground",
+       "body": "The peanut is a legume, not a tree nut. After pollination, the stalk-like gynophore pushes into the soil, where the pod develops, a habit called geocarpy. The Japanese name rakkasei, 'flower falls, fruit grows,' reflects this."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "pineapple_two_years",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "pineapple",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "パイナップルは じかんが かかる",
+       "body": "パイナップルは みが なるまで 2ねんも かかるよ。"
+      },
+      "junior": {
+       "title": "パイナップルは 2ねんかかる",
+       "body": "パイナップルは、うえてから みが できるまで、2ねんくらい かかります。"
+      },
+      "teen": {
+       "title": "パイナップルは実るまで約2年かかる",
+       "body": "パイナップルは、植えてから実がなるまで、約1年半〜2年ほどかかります。1本の株に実がなるのは、基本的に1つだけです。"
+      },
+      "adult": {
+       "title": "パイナップルは結実まで約18〜24か月",
+       "body": "パイナップルは、苗を植えてから収穫まで条件によりますが約18〜24か月かかります。1株には基本的に1個の果実がなり、収穫後は株元から出る芽(吸芽)で増やします。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Pineapples take time",
+       "body": "A pineapple needs about two years to grow!"
+      },
+      "junior": {
+       "title": "A pineapple takes 2 years",
+       "body": "It takes about two years from planting a pineapple until it has fruit."
+      },
+      "teen": {
+       "title": "Pineapples take about two years to grow",
+       "body": "A pineapple takes roughly a year and a half to two years to produce fruit after planting, and each plant usually makes just one."
+      },
+      "adult": {
+       "title": "Pineapples take about 18-24 months to fruit",
+       "body": "From planting to harvest, a pineapple generally takes around 18-24 months depending on conditions. Each plant normally bears a single fruit, and growers propagate it afterward from suckers growing at the base."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "apple_floats",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "apple",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "りんごは みずに うく",
+       "body": "りんごは みずに うかぶよ。なかに くうきが あるんだ。"
+      },
+      "junior": {
+       "title": "りんごは なぜ うく？",
+       "body": "りんごの 4ぶんの 1くらいは くうきです。だから みずに うかびます。"
+      },
+      "teen": {
+       "title": "リンゴが水に浮くのは約4分の1が空気だから",
+       "body": "リンゴは、体積の約4分の1が空気でできています。そのため、水に入れると浮かびます。"
+      },
+      "adult": {
+       "title": "リンゴの体積の約25%は空気",
+       "body": "リンゴの果肉には細胞の隙間が多く、体積の約4分の1を空気が占めるため、全体の密度が水より小さく、水に浮かびます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Apples float",
+       "body": "Apples float because they have air inside!"
+      },
+      "junior": {
+       "title": "Why do apples float?",
+       "body": "About a quarter of an apple is air. That is why it floats in water."
+      },
+      "teen": {
+       "title": "Apples float because about 25% of them is air",
+       "body": "About a quarter of an apple's volume is air, so apples are lighter than water and float."
+      },
+      "adult": {
+       "title": "About a quarter of an apple's volume is air",
+       "body": "Apple flesh has many air-filled gaps between its cells, making up about 25% of its volume. This lowers its overall density below that of water, so apples float."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "wasabi_nose",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "wasabi",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "わさびの から",
+       "body": "わさびの からさは、はなに つーんと くるよ。"
+      },
+      "junior": {
+       "title": "わさびは はなに くる",
+       "body": "わさびの からさの もとは、くうきの ように ふわっと ひろがります。だから したより はなが つーんと します。"
+      },
+      "teen": {
+       "title": "わさびの辛さは鼻に抜ける",
+       "body": "わさびの辛い成分は、すりおろすと空気中に広がりやすい性質があります。そのため、舌よりも鼻にツンと抜ける辛さを感じます。"
+      },
+      "adult": {
+       "title": "わさびの辛味成分は揮発性",
+       "body": "わさびの辛味成分はアリルイソチオシアネートで、すりおろすと酵素の働きで生成され、揮発しやすいため鼻腔に抜けます。唐辛子のカプサイシンのような舌に残る辛さとは性質が異なり、持続時間も短めです。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Wasabi is spicy",
+       "body": "Wasabi's spice goes up your nose!"
+      },
+      "junior": {
+       "title": "Wasabi's spice goes to your nose",
+       "body": "The spicy part of wasabi spreads in the air. That is why you feel it in your nose more than on your tongue."
+      },
+      "teen": {
+       "title": "Wasabi's heat goes up your nose",
+       "body": "The spicy compound in wasabi easily turns into vapor when grated, so you feel it more in your nose than on your tongue."
+      },
+      "adult": {
+       "title": "Wasabi's pungency is volatile",
+       "body": "Wasabi's pungent compound is allyl isothiocyanate, produced by enzymes when it is grated. It is volatile and passes into the nasal cavity, unlike chili's capsaicin, which lingers on the tongue, and its effect fades faster."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "popcorn_pop",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "popcorn",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ポップコーンは なぜ はじける？",
+       "body": "ポップコーンは なかの みずが あつくて はじけるよ。"
+      },
+      "junior": {
+       "title": "ポップコーンが はじける わけ",
+       "body": "とうもろこしの つぶの なかの みずが あつくなって ゆげになります。その ちからで、ぱんっと はじけます。"
+      },
+      "teen": {
+       "title": "ポップコーンが弾ける仕組み",
+       "body": "トウモロコシの粒の中の水分が熱されて水蒸気になり、圧力が高まります。限界を超えると皮が破れ、中身が一気に膨らんで弾けます。"
+      },
+      "adult": {
+       "title": "ポップコーンは水蒸気圧で爆裂する",
+       "body": "爆裂種の粒は硬い外皮の内側に水分(約14%)を含み、約180℃に熱せられると水蒸気の圧力が高まり、外皮が破れて内部のデンプンが一気に膨張・糊化して弾けます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Why does popcorn pop?",
+       "body": "The water inside makes popcorn pop when it gets hot!"
+      },
+      "junior": {
+       "title": "Why popcorn pops",
+       "body": "The water inside a corn kernel turns into steam when it is hot. The steam pushes until the kernel goes pop!"
+      },
+      "teen": {
+       "title": "How popcorn pops",
+       "body": "Water inside the kernel turns into steam when heated and the pressure builds. When the hull can no longer hold, it bursts and the inside puffs out."
+      },
+      "adult": {
+       "title": "Popcorn pops from steam pressure",
+       "body": "A popcorn kernel holds about 14% moisture inside a tough hull. At roughly 180 °C the steam pressure ruptures the hull, and the starch inside expands and gelatinizes explosively into the fluffy shape."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "strawberry_200_seeds",
+   "category": "food",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "strawberry",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "いちごの つぶつぶ",
+       "body": "いちごの つぶつぶが ほんとうの みなんだよ。"
+      },
+      "junior": {
+       "title": "いちごの つぶつぶは み",
+       "body": "いちごの おもての つぶつぶは、1つ1つが ほんとうの みです。ぜんぶで 200こくらい あります。"
+      },
+      "teen": {
+       "title": "イチゴの表面のつぶつぶが本当の果実",
+       "body": "イチゴの赤い部分は、花のつけ根がふくらんだものです。表面のつぶつぶ(約200個)が、中に種を持った本当の果実です。"
+      },
+      "adult": {
+       "title": "イチゴの本当の果実は表面の粒(痩果)",
+       "body": "イチゴの可食部は花托が肥大した偽果で、表面の粒(痩果)が植物学上の果実です。1つのイチゴには約200個の痩果が付き、その中に1つずつ種が入っています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Strawberry dots",
+       "body": "The little dots on a strawberry are the real fruits!"
+      },
+      "junior": {
+       "title": "The dots are the real fruits",
+       "body": "Each little dot on a strawberry is a real fruit. A strawberry has about 200 of them."
+      },
+      "teen": {
+       "title": "The dots on a strawberry are the true fruits",
+       "body": "The red part of a strawberry is the swollen base of the flower. The dots on the outside, about 200 of them, are the true fruits, each holding a seed."
+      },
+      "adult": {
+       "title": "Strawberry achenes are the true fruits",
+       "body": "The edible part of a strawberry is an accessory fruit formed from the enlarged receptacle, and the surface dots (achenes) are the botanical fruits. A single strawberry carries about 200 achenes, each containing a seed."
+      }
+     }
+    }
+   }
   }
  ]
 }

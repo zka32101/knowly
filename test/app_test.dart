@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
+import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/services/tts.dart';
 import 'package:knowly/state/providers.dart';
@@ -23,9 +24,16 @@ class FakeTts implements TtsService {
 TriviaRepository _repo() {
   final raw = jsonDecode(File('assets/trivia/trivia.json').readAsStringSync())
       as Map<String, dynamic>;
-  return TriviaRepository((raw['items'] as List)
-      .map((e) => Trivia.fromJson(e as Map<String, dynamic>))
-      .toList());
+  final quiz = jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())
+      as Map<String, dynamic>;
+  return TriviaRepository(
+    (raw['items'] as List)
+        .map((e) => Trivia.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    quizzes: (quiz['items'] as List)
+        .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
 }
 
 Future<FakeTts> _pump(
@@ -55,6 +63,17 @@ Future<void> _pickYear(WidgetTester tester, int year) async {
   await tester.scrollUntilVisible(find.text('$year'), 100,
       scrollable: find.byType(Scrollable).last);
   await tester.tap(find.text('$year').last);
+  await tester.pumpAndSettle();
+}
+
+/// 縦に長い詳細画面で、遅延生成されるウィジェットが見える位置までスクロールする。
+Future<void> _reveal(WidgetTester tester, Key key) async {
+  await tester.scrollUntilVisible(find.byKey(key), 200,
+      scrollable: find.byType(Scrollable).last);
+}
+
+Future<void> _back(WidgetTester tester) async {
+  await tester.tap(find.byType(BackButton));
   await tester.pumpAndSettle();
 }
 
@@ -190,7 +209,9 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.chevron_right).last);
     await tester.pumpAndSettle();
+    await _reveal(tester, const Key('copy_button'));
     expect(find.byKey(const Key('copy_button')), findsOneWidget);
+    await _reveal(tester, const Key('rating_heh'));
     expect(find.byKey(const Key('rating_heh')), findsOneWidget);
   });
 
@@ -198,6 +219,7 @@ void main() {
     await _pump(tester, prefs: {'ageBand': 'junior'});
     await tester.tap(find.byIcon(Icons.chevron_right).first);
     await tester.pumpAndSettle();
+    await _reveal(tester, const Key('save_button'));
     expect(find.byKey(const Key('copy_button')), findsNothing);
     expect(find.byKey(const Key('save_button')), findsOneWidget);
   });
@@ -209,6 +231,7 @@ void main() {
     });
     await tester.tap(find.byIcon(Icons.chevron_right).first);
     await tester.pumpAndSettle();
+    await _reveal(tester, const Key('save_button'));
     await tester.tap(find.byKey(const Key('save_button')));
     await tester.pump();
     expect(find.textContaining('20件'), findsOneWidget);
@@ -222,5 +245,98 @@ void main() {
   testWidgets('未対応言語の端末は英語にフォールバック', (tester) async {
     await _pump(tester, deviceLanguage: 'fr');
     expect(find.text('Language'), findsOneWidget);
+  });
+
+  group('差別化機能', () {
+    Future<void> openFirstDetail(WidgetTester tester) async {
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+    }
+
+    Text title(WidgetTester tester) =>
+        tester.widget<Text>(find.byKey(const Key('detail_title')));
+
+    testWidgets('親子モード: 大人が「就学前向け」の説明に切り替えられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openFirstDetail(tester);
+      final own = title(tester).data;
+      expect(find.byKey(const Key('view_kids')), findsOneWidget);
+      expect(find.byKey(const Key('view_junior')), findsOneWidget);
+
+      await tester.tap(find.byKey(const Key('view_kids')));
+      await tester.pumpAndSettle();
+      final kids = title(tester).data;
+      expect(kids, isNot(equals(own)));
+
+      await tester.tap(find.byKey(const Key('view_own')));
+      await tester.pumpAndSettle();
+      expect(title(tester).data, own);
+    });
+
+    testWidgets('親子モード: 子どもモードには切り替えが出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openFirstDetail(tester);
+      expect(find.byKey(const Key('view_kids')), findsNothing);
+    });
+
+    testWidgets('二言語表示: 日本語の本文の下に英語を出せる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openFirstDetail(tester);
+      expect(find.byKey(const Key('bilingual_title')), findsNothing);
+      await _reveal(tester, const Key('bilingual_toggle'));
+      await tester.tap(find.byKey(const Key('bilingual_toggle')));
+      await tester.pumpAndSettle();
+      final en = tester.widget<Text>(find.byKey(const Key('bilingual_title'))).data!;
+      expect(RegExp(r'[A-Za-z]').hasMatch(en), isTrue);
+    });
+
+    testWidgets('「知ってた」を保存し、設定に知ってた率が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openFirstDetail(tester);
+      await _reveal(tester, const Key('knew_it'));
+      await tester.tap(find.byKey(const Key('knew_it')));
+      await tester.pumpAndSettle();
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('knowledge'), hasLength(1));
+
+      await _back(tester);
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('100%'), findsOneWidget);
+    });
+
+    testWidgets('Teen/Adult: 詳細を開くと読んだ日が記録され、連続日数が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('streak_label')), findsOneWidget);
+      await openFirstDetail(tester);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('readDays'), ['2026-10-23']);
+      await _back(tester);
+      expect(find.text('連続1日'), findsOneWidget);
+    });
+
+    testWidgets('Junior: ストリークは出ず、読んだ日も記録しない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      expect(find.byKey(const Key('streak_label')), findsNothing);
+      await openFirstDetail(tester);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('readDays'), isNull);
+    });
+
+    testWidgets('Kids: ○×クイズに答えられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await tester.tap(find.byKey(const Key('quiz_button')));
+      await tester.pumpAndSettle();
+      expect(find.text('ほんとかな？'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('quiz_true')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('quiz_result')), findsOneWidget);
+    });
+
+    testWidgets('Adult の詳細にはクイズは出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openFirstDetail(tester);
+      expect(find.byKey(const Key('quiz_button')), findsNothing);
+    });
   });
 }

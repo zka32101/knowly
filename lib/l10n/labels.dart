@@ -8,6 +8,9 @@ String categoryLabel(AppLocalizations l, String category) => switch (category) {
       'nature' => l.catNature,
       'science' => l.catScience,
       'geography' => l.catGeography,
+      'bugs' => l.catBugs,
+      'vehicles' => l.catVehicles,
+      'food' => l.catFood,
       _ => category,
     };
 
@@ -27,5 +30,7 @@ String modeLabel(AppLocalizations l, AgeBand band) => switch (band) {
       AgeBand.adult => l.modeAdult,
     };
 
-const allCategories = ['animals', 'space', 'body', 'nature', 'science', 'geography'];
+const allCategories = [
+  'animals', 'bugs', 'vehicles', 'food', 'space', 'body', 'nature', 'science', 'geography',
+];
 const allScenes = ['friends', 'kids', 'work', 'family', 'learning'];

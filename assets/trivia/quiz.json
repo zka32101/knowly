@@ -1,0 +1,577 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "factId": "octopus_blue_blood",
+   "ja": {
+    "statement": "タコの ちは あおいろ。",
+    "answer": true
+   },
+   "en": {
+    "statement": "An octopus has blue blood.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "honey_never_spoils",
+   "ja": {
+    "statement": "はちみつは すぐに くさる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Honey goes bad very quickly.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "banana_is_berry",
+   "ja": {
+    "statement": "いちごは、しょくぶつがくでは ベリーの なかま。",
+    "answer": false
+   },
+   "en": {
+    "statement": "A strawberry counts as a berry in science.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "venus_day_longer",
+   "ja": {
+    "statement": "きんせいの 1にちは、1ねんより ながい。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A day on Venus is longer than its year.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "sharks_older_than_trees",
+   "ja": {
+    "statement": "サメは、きが うまれたあとに うまれた。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Sharks appeared after trees did.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "baby_bones",
+   "ja": {
+    "statement": "あかちゃんの ほねは、おとなより すくない。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Babies have fewer bones than grown-ups.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "giraffe_seven_vertebrae",
+   "ja": {
+    "statement": "キリンの くびの ほねは 7こ。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A giraffe has seven neck bones.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "lightning_hotter_than_sun",
+   "ja": {
+    "statement": "かみなりは、たいように ひょうめんより つめたい。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Lightning is cooler than the surface of the Sun.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "sea_otters_hold_hands",
+   "ja": {
+    "statement": "ラッコは、ねるとき てを つなぐことが ある。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Sea otters sometimes hold hands when they sleep.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "no_sound_in_space",
+   "ja": {
+    "statement": "うちゅうでは、おとが よく きこえる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "You can hear sounds well in space.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "ice_floats",
+   "ja": {
+    "statement": "こおりは、みずに しずむ。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Ice sinks in water.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "wombat_cube_poop",
+   "ja": {
+    "statement": "ウォンバットの うんちは、しかくい かたち。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Wombat poop is shaped like cubes.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "moon_moving_away",
+   "ja": {
+    "statement": "おつきさまは、すこしずつ ちきゅうから とおざかっている。",
+    "answer": true
+   },
+   "en": {
+    "statement": "The Moon is slowly moving away from Earth.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "butterfly_taste_feet",
+   "ja": {
+    "statement": "ちょうちょは、あしで あじを かんじる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Butterflies taste with their feet.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "cats_no_sweet",
+   "ja": {
+    "statement": "ねこは、あまい あじを かんじる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Cats can taste sweet things.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "sunlight_8_minutes",
+   "ja": {
+    "statement": "たいようの ひかりは、1びょうで ちきゅうに とどく。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Sunlight reaches Earth in one second.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "saturn_would_float",
+   "ja": {
+    "statement": "どせいは、みずに うかぶほど かるい。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Saturn is light enough to float on water.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "eiffel_grows_summer",
+   "ja": {
+    "statement": "エッフェルとうは、ふゆに すこし たかくなる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "The Eiffel Tower gets a bit taller in winter.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "heart_100k",
+   "ja": {
+    "statement": "しんぞうは、1にちに 10まんかいくらい うごく。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Your heart beats about 100,000 times a day.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "bamboo_fast",
+   "ja": {
+    "statement": "たけは、1にちで 1メートルくらい のびることが ある。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Some bamboo grows about a meter in one day.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "crows_recognize_faces",
+   "ja": {
+    "statement": "カラスは、ひとの かおを おぼえられる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Crows can remember people's faces.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "rainbow_full_circle",
+   "ja": {
+    "statement": "にじは、ほんとうは しかくい かたち。",
+    "answer": false
+   },
+   "en": {
+    "statement": "A rainbow is really shaped like a square.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "elephant_ground_sounds",
+   "ja": {
+    "statement": "ぞうは、ひとに きこえない ひくい こえで はなす。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Elephants talk in low sounds that people cannot hear.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "dolphin_half_sleep",
+   "ja": {
+    "statement": "イルカは、あたま ぜんぶで ぐっすり ねむる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Dolphins sleep with their whole brain at once.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "antarctica_desert",
+   "ja": {
+    "statement": "せかいで いちばん おおきい さばくは、みなみきょく。",
+    "answer": true
+   },
+   "en": {
+    "statement": "The biggest desert in the world is Antarctica.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "koala_fingerprints",
+   "ja": {
+    "statement": "コアラにも、ゆびもようが ある。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Koalas have fingerprints too.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "ant_strong",
+   "ja": {
+    "statement": "アリは、じぶんの おもさの 10ばいを はこべる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "An ant can carry ten times its own weight.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "dragonfly_before_dinosaurs",
+   "ja": {
+    "statement": "トンボの なかまは、きょうりゅうより あとに できた。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Dragonfly relatives appeared after the dinosaurs.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "firefly_cold_light",
+   "ja": {
+    "statement": "ホタルの ひかりは、さわれないほど あつい。",
+    "answer": false
+   },
+   "en": {
+    "statement": "A firefly's light is too hot to touch.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "bee_waggle_dance",
+   "ja": {
+    "statement": "ミツバチは、ダンスで おはなの ばしょを おしえる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Honeybees dance to show where flowers are.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "mosquito_female_bites",
+   "ja": {
+    "statement": "ひとを さす かは、めすだけ。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Only female mosquitoes bite people.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "spider_not_insect",
+   "ja": {
+    "statement": "クモは、こんちゅうの なかま。",
+    "answer": false
+   },
+   "en": {
+    "statement": "A spider is an insect.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "beetle_quarter",
+   "ja": {
+    "statement": "いきものの 4ぶんの 1くらいは、コウチュウの なかま。",
+    "answer": true
+   },
+   "en": {
+    "statement": "About a quarter of all animals are beetles.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "cicada_17_years",
+   "ja": {
+    "statement": "17ねんも つちの なかに いる セミが いる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Some cicadas stay underground for 17 years.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "dung_beetle_milky_way",
+   "ja": {
+    "statement": "フンコロガシは、あまのがわを めじるしに あるく。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Dung beetles use the Milky Way to find their way.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "silkworm_thread",
+   "ja": {
+    "statement": "カイコの まゆは、1ぽんの ながい いとで できている。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A silkworm cocoon is made of one long thread.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "shinkansen_1964",
+   "ja": {
+    "statement": "しんかんせんは、1964ねんに はしりはじめた。",
+    "answer": true
+   },
+   "en": {
+    "statement": "The Shinkansen started running in 1964.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "airliner_cruise",
+   "ja": {
+    "statement": "ひこうきが とぶ たかさの そとは、とても さむい。",
+    "answer": true
+   },
+   "en": {
+    "statement": "It is very cold outside where airplanes fly.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "wright_first_flight",
+   "ja": {
+    "statement": "さいしょの ひこうきは、1じかん とびつづけた。",
+    "answer": false
+   },
+   "en": {
+    "statement": "The first airplane flew for a whole hour.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "tokyo_first_subway",
+   "ja": {
+    "statement": "アジアで さいしょの ちかてつは、とうきょうに できた。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Asia's first subway was built in Tokyo.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "steel_ship_floats",
+   "ja": {
+    "statement": "てつの ふねは、なかに くうきが あるから うく。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A steel ship floats because it has air inside.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "maglev_603",
+   "ja": {
+    "statement": "リニアは、じしゃくの ちからで すこし うきながら はしる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A maglev train floats a little using magnets.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "plane_window_hole",
+   "ja": {
+    "statement": "ひこうきの まどには、ちいさな あなが ある。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Airplane windows have a tiny hole.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "iss_sunrises",
+   "ja": {
+    "statement": "うちゅうステーションでは、1にちに 16かいくらい ひのでが ある。",
+    "answer": true
+   },
+   "en": {
+    "statement": "On the space station, the Sun rises about 16 times a day.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "watermelon_92_water",
+   "ja": {
+    "statement": "すいかは、ほとんど みずで できている。",
+    "answer": true
+   },
+   "en": {
+    "statement": "A watermelon is almost all water.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "cacao_money",
+   "ja": {
+    "statement": "むかし、カカオの みが おかねの ように つかわれた。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Long ago, cacao beans were used like money.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "carrot_colors",
+   "ja": {
+    "statement": "むかしの にんじんは、ぜんぶ オレンジいろだった。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Long ago, all carrots were orange.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "peanut_not_nut",
+   "ja": {
+    "statement": "ピーナッツは、つちの なかで できる。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Peanuts grow underground.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "pineapple_two_years",
+   "ja": {
+    "statement": "パイナップルは、うえて 1しゅうかんで たべられる。",
+    "answer": false
+   },
+   "en": {
+    "statement": "You can eat a pineapple one week after planting it.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "apple_floats",
+   "ja": {
+    "statement": "りんごは、みずに しずむ。",
+    "answer": false
+   },
+   "en": {
+    "statement": "Apples sink in water.",
+    "answer": false
+   }
+  },
+  {
+   "factId": "popcorn_pop",
+   "ja": {
+    "statement": "ポップコーンは、なかの みずが ゆげに なって はじける。",
+    "answer": true
+   },
+   "en": {
+    "statement": "Popcorn pops because the water inside turns to steam.",
+    "answer": true
+   }
+  },
+  {
+   "factId": "strawberry_200_seeds",
+   "ja": {
+    "statement": "いちごの つぶつぶは、ほんとうの み。",
+    "answer": true
+   },
+   "en": {
+    "statement": "The little dots on a strawberry are real fruits.",
+    "answer": true
+   }
+  }
+ ]
+}

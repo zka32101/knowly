@@ -487,6 +487,156 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'閉じる'**
   String get close;
+
+  /// No description provided for @catBugs.
+  ///
+  /// In ja, this message translates to:
+  /// **'むし'**
+  String get catBugs;
+
+  /// No description provided for @catVehicles.
+  ///
+  /// In ja, this message translates to:
+  /// **'のりもの'**
+  String get catVehicles;
+
+  /// No description provided for @catFood.
+  ///
+  /// In ja, this message translates to:
+  /// **'たべもの'**
+  String get catFood;
+
+  /// No description provided for @viewAs.
+  ///
+  /// In ja, this message translates to:
+  /// **'読み方'**
+  String get viewAs;
+
+  /// No description provided for @viewOwn.
+  ///
+  /// In ja, this message translates to:
+  /// **'いつもの説明'**
+  String get viewOwn;
+
+  /// No description provided for @viewJunior.
+  ///
+  /// In ja, this message translates to:
+  /// **'小学生向け'**
+  String get viewJunior;
+
+  /// No description provided for @viewKids.
+  ///
+  /// In ja, this message translates to:
+  /// **'就学前向け'**
+  String get viewKids;
+
+  /// No description provided for @explainToKids.
+  ///
+  /// In ja, this message translates to:
+  /// **'こどもに説明するなら'**
+  String get explainToKids;
+
+  /// No description provided for @bilingualOn.
+  ///
+  /// In ja, this message translates to:
+  /// **'二言語で見る'**
+  String get bilingualOn;
+
+  /// No description provided for @bilingualOff.
+  ///
+  /// In ja, this message translates to:
+  /// **'一つの言語にもどす'**
+  String get bilingualOff;
+
+  /// No description provided for @knewIt.
+  ///
+  /// In ja, this message translates to:
+  /// **'知ってた'**
+  String get knewIt;
+
+  /// No description provided for @learnedIt.
+  ///
+  /// In ja, this message translates to:
+  /// **'知らなかった！'**
+  String get learnedIt;
+
+  /// No description provided for @streakDays.
+  ///
+  /// In ja, this message translates to:
+  /// **'連続{count}日'**
+  String streakDays(int count);
+
+  /// No description provided for @streakFreeze.
+  ///
+  /// In ja, this message translates to:
+  /// **'お休み券あり'**
+  String get streakFreeze;
+
+  /// No description provided for @streakStart.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の雑学を読んで連続をはじめよう'**
+  String get streakStart;
+
+  /// No description provided for @statsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'あなたの雑学'**
+  String get statsTitle;
+
+  /// No description provided for @statsKnowRate.
+  ///
+  /// In ja, this message translates to:
+  /// **'知っていた雑学: {percent}%（{knew}/{total}）'**
+  String statsKnowRate(int percent, int knew, int total);
+
+  /// No description provided for @statsEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'「知ってた」「知らなかった」を押すと、ここに表示されます'**
+  String get statsEmpty;
+
+  /// No description provided for @quizButton.
+  ///
+  /// In ja, this message translates to:
+  /// **'もんだい'**
+  String get quizButton;
+
+  /// No description provided for @quizTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほんとかな？'**
+  String get quizTitle;
+
+  /// No description provided for @quizTrue.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほんと'**
+  String get quizTrue;
+
+  /// No description provided for @quizFalse.
+  ///
+  /// In ja, this message translates to:
+  /// **'うそ'**
+  String get quizFalse;
+
+  /// No description provided for @quizCorrect.
+  ///
+  /// In ja, this message translates to:
+  /// **'せいかい！'**
+  String get quizCorrect;
+
+  /// No description provided for @quizWrong.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざんねん！'**
+  String get quizWrong;
+
+  /// No description provided for @quizNext.
+  ///
+  /// In ja, this message translates to:
+  /// **'つぎへ'**
+  String get quizNext;
 }
 
 class _AppLocalizationsDelegate

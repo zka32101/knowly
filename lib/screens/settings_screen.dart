@@ -111,6 +111,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             trailing: const Icon(Icons.chevron_right),
             onTap: _openPremium,
           ),
+          if (band.isTeenOrAdult) _StatsTile(settings: settings),
           if (band.allowsPromo)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
@@ -126,6 +127,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
         ],
       ),
+    );
+  }
+}
+
+class _StatsTile extends StatelessWidget {
+  const _StatsTile({required this.settings});
+
+  final AppSettings settings;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final knew = settings.knowledge.values.where((k) => k == Knowledge.knew).length;
+    final total = settings.knowledge.length;
+    return ListTile(
+      key: const Key('stats_tile'),
+      title: Text(l.statsTitle),
+      subtitle: Text(total == 0
+          ? l.statsEmpty
+          : l.statsKnowRate((knew * 100 / total).round(), knew, total)),
     );
   }
 }

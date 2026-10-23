@@ -16,6 +16,9 @@ List<Trivia> _load() {
       .toList();
 }
 
+Map<String, dynamic> _loadQuiz() =>
+    jsonDecode(File('assets/trivia/quiz.json').readAsStringSync()) as Map<String, dynamic>;
+
 void main() {
   final items = _load();
 
@@ -85,5 +88,39 @@ void main() {
         expect(['draft', 'reviewed', 'published'], contains(tr.reviewStatus));
       }
     }
+  });
+
+  group('クイズ', () {
+    final quiz = (_loadQuiz()['items'] as List).cast<Map<String, dynamic>>();
+    final byId = {for (final t in items) t.id: t};
+
+    test('全問が実在する Kids/Junior 向けの雑学に紐づく', () {
+      expect(quiz, isNotEmpty);
+      expect(quiz.map((q) => q['factId']).toSet().length, quiz.length);
+      for (final q in quiz) {
+        final t = byId[q['factId']];
+        expect(t, isNotNull, reason: '${q['factId']}');
+        expect(t!.minAgeBand.index, lessThanOrEqualTo(AgeBand.junior.index),
+            reason: t.id);
+      }
+    });
+
+    test('日英が揃い、日本語はひらがな中心', () {
+      for (final q in quiz) {
+        for (final lang in ['ja', 'en']) {
+          final m = q[lang] as Map<String, dynamic>;
+          expect((m['statement'] as String).trim(), isNotEmpty, reason: '${q['factId']}');
+          expect(m['answer'], isA<bool>());
+        }
+        expect(q['ja']['answer'], q['en']['answer'], reason: '${q['factId']}');
+        expect(_kanji.hasMatch(q['ja']['statement'] as String), isFalse,
+            reason: '${q['factId']}');
+      }
+    });
+
+    test('○と×が両方ある', () {
+      final answers = quiz.map((q) => q['ja']['answer'] as bool).toSet();
+      expect(answers, {true, false});
+    });
   });
 }

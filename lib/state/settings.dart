@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../logic/streak.dart';
 import '../models/age_band.dart';
 
 const supportedLanguageCodes = ['ja', 'en'];
@@ -22,6 +23,9 @@ const premiumFeedDays = 30;
 /// 評価の種類。Kids/Junior の評価は端末内にのみ保存し、送信しない。
 enum Rating { heh, useful, wow }
 
+/// 「知ってた」「知らなかった」。端末内にのみ保存し、送信しない。
+enum Knowledge { knew, learned }
+
 class AppSettings {
   const AppSettings({
     this.ageBand,
@@ -31,6 +35,8 @@ class AppSettings {
     this.scenes = const {},
     this.saved = const [],
     this.ratings = const {},
+    this.knowledge = const {},
+    this.readDays = const [],
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -41,6 +47,10 @@ class AppSettings {
   final Set<String> scenes;
   final List<String> saved;
   final Map<String, Set<Rating>> ratings;
+  final Map<String, Knowledge> knowledge;
+
+  /// 雑学を読んだ日（yyyy-MM-dd）。Teen/Adult のストリーク用。
+  final List<String> readDays;
 
   bool get onboarded => ageBand != null;
 
@@ -54,6 +64,8 @@ class AppSettings {
     Set<String>? scenes,
     List<String>? saved,
     Map<String, Set<Rating>>? ratings,
+    Map<String, Knowledge>? knowledge,
+    List<String>? readDays,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -64,6 +76,8 @@ class AppSettings {
         scenes: scenes ?? this.scenes,
         saved: saved ?? this.saved,
         ratings: ratings ?? this.ratings,
+        knowledge: knowledge ?? this.knowledge,
+        readDays: readDays ?? this.readDays,
       );
 }
 
@@ -93,6 +107,13 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       scenes: (p.getStringList('scenes') ?? const []).toSet(),
       saved: p.getStringList('saved') ?? const [],
       ratings: ratings,
+      knowledge: {
+        for (final e in (p.getStringList('knowledge') ?? const []))
+          if (e.split(':') case [final id, final k])
+            for (final v in Knowledge.values)
+              if (v.name == k) id: v,
+      },
+      readDays: p.getStringList('readDays') ?? const [],
     );
   }
 
@@ -155,6 +176,25 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(saved: list);
     _prefs.setStringList('saved', list);
     return true;
+  }
+
+  void setKnowledge(String id, Knowledge value) {
+    final map = {...state.knowledge};
+    map[id] == value ? map.remove(id) : map[id] = value;
+    state = state.copyWith(knowledge: map);
+    _prefs.setStringList(
+        'knowledge', [for (final e in map.entries) '${e.key}:${e.value.name}']);
+  }
+
+  /// 今日、雑学を読んだことを記録する（Teen/Adult のストリーク用）。
+  void markRead(DateTime today) {
+    final key = dayKey(today);
+    if (state.readDays.contains(key)) return;
+    final days = [...state.readDays, key]..sort();
+    // 保存は直近400日だけ。
+    final trimmed = days.length > 400 ? days.sublist(days.length - 400) : days;
+    state = state.copyWith(readDays: trimmed);
+    _prefs.setStringList('readDays', trimmed);
   }
 
   void toggleRating(String id, Rating rating) {

@@ -205,4 +205,83 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get close => '閉じる';
+
+  @override
+  String get catBugs => 'むし';
+
+  @override
+  String get catVehicles => 'のりもの';
+
+  @override
+  String get catFood => 'たべもの';
+
+  @override
+  String get viewAs => '読み方';
+
+  @override
+  String get viewOwn => 'いつもの説明';
+
+  @override
+  String get viewJunior => '小学生向け';
+
+  @override
+  String get viewKids => '就学前向け';
+
+  @override
+  String get explainToKids => 'こどもに説明するなら';
+
+  @override
+  String get bilingualOn => '二言語で見る';
+
+  @override
+  String get bilingualOff => '一つの言語にもどす';
+
+  @override
+  String get knewIt => '知ってた';
+
+  @override
+  String get learnedIt => '知らなかった！';
+
+  @override
+  String streakDays(int count) {
+    return '連続$count日';
+  }
+
+  @override
+  String get streakFreeze => 'お休み券あり';
+
+  @override
+  String get streakStart => '今日の雑学を読んで連続をはじめよう';
+
+  @override
+  String get statsTitle => 'あなたの雑学';
+
+  @override
+  String statsKnowRate(int percent, int knew, int total) {
+    return '知っていた雑学: $percent%（$knew/$total）';
+  }
+
+  @override
+  String get statsEmpty => '「知ってた」「知らなかった」を押すと、ここに表示されます';
+
+  @override
+  String get quizButton => 'もんだい';
+
+  @override
+  String get quizTitle => 'ほんとかな？';
+
+  @override
+  String get quizTrue => 'ほんと';
+
+  @override
+  String get quizFalse => 'うそ';
+
+  @override
+  String get quizCorrect => 'せいかい！';
+
+  @override
+  String get quizWrong => 'ざんねん！';
+
+  @override
+  String get quizNext => 'つぎへ';
 }
