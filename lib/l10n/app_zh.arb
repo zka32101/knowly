@@ -394,5 +394,15 @@
   "recapMsgSome": "节奏不错！一点一点就会积累起来。",
   "recapMsgGreat": "太棒了！你几乎每天都来玩！",
   "recapChip": "回顾",
-  "recapBanner": "本周回顾已生成"
+  "recapBanner": "本周回顾已生成",
+  "stampsTitle": "季节印章册",
+  "stampsChip": "印章册",
+  "stampsHint": "阅读适合当前季节的冷知识就能获得一枚印章。集齐 {n} 枚，小伙伴就会换上该季节的装扮。",
+  "stampsSpring": "春天",
+  "stampsSummer": "夏天",
+  "stampsAutumn": "秋天",
+  "stampsWinter": "冬天",
+  "stampsNow": "当前",
+  "stampsOutfit": "获得装扮！",
+  "celebrateOutfit": "获得季节装扮！"
 }

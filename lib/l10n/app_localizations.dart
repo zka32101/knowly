@@ -2473,6 +2473,66 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'こんしゅうの ふりかえりが できたよ'**
   String get recapBanner;
+
+  /// No description provided for @stampsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'きせつの スタンプちょう'**
+  String get stampsTitle;
+
+  /// No description provided for @stampsChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'スタンプちょう'**
+  String get stampsChip;
+
+  /// No description provided for @stampsHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。{n}つ あつめると、あいぼうが その きせつの ようふくを きるよ。'**
+  String stampsHint(int n);
+
+  /// No description provided for @stampsSpring.
+  ///
+  /// In ja, this message translates to:
+  /// **'はる'**
+  String get stampsSpring;
+
+  /// No description provided for @stampsSummer.
+  ///
+  /// In ja, this message translates to:
+  /// **'なつ'**
+  String get stampsSummer;
+
+  /// No description provided for @stampsAutumn.
+  ///
+  /// In ja, this message translates to:
+  /// **'あき'**
+  String get stampsAutumn;
+
+  /// No description provided for @stampsWinter.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふゆ'**
+  String get stampsWinter;
+
+  /// No description provided for @stampsNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま'**
+  String get stampsNow;
+
+  /// No description provided for @stampsOutfit.
+  ///
+  /// In ja, this message translates to:
+  /// **'ようふくゲット！'**
+  String get stampsOutfit;
+
+  /// No description provided for @celebrateOutfit.
+  ///
+  /// In ja, this message translates to:
+  /// **'きせつの ようふくを ゲット！'**
+  String get celebrateOutfit;
 }
 
 class _AppLocalizationsDelegate

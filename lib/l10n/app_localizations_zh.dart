@@ -1292,4 +1292,36 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get recapBanner => '本周回顾已生成';
+
+  @override
+  String get stampsTitle => '季节印章册';
+
+  @override
+  String get stampsChip => '印章册';
+
+  @override
+  String stampsHint(int n) {
+    return '阅读适合当前季节的冷知识就能获得一枚印章。集齐 $n 枚，小伙伴就会换上该季节的装扮。';
+  }
+
+  @override
+  String get stampsSpring => '春天';
+
+  @override
+  String get stampsSummer => '夏天';
+
+  @override
+  String get stampsAutumn => '秋天';
+
+  @override
+  String get stampsWinter => '冬天';
+
+  @override
+  String get stampsNow => '当前';
+
+  @override
+  String get stampsOutfit => '获得装扮！';
+
+  @override
+  String get celebrateOutfit => '获得季节装扮！';
 }

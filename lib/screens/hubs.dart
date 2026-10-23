@@ -258,6 +258,11 @@ class CollectHub extends ConsumerWidget {
               subtitle: '$wordsFound / $wordsTotal',
               route: '/words'),
         HubTile(
+            key: const Key('open_stamps'),
+            emoji: '🌸',
+            title: l.stampsChip,
+            route: '/stamps'),
+        HubTile(
             key: const Key('open_recap'),
             emoji: '📊',
             title: l.recapChip,

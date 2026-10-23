@@ -716,5 +716,15 @@
   "recapMsgSome": "Nice pace! It adds up bit by bit.",
   "recapMsgGreat": "Amazing! You played almost every day!",
   "recapChip": "Recap",
-  "recapBanner": "Your weekly recap is ready"
+  "recapBanner": "Your weekly recap is ready",
+  "stampsTitle": "Seasonal stamp book",
+  "stampsChip": "Stamps",
+  "stampsHint": "Read a fact that suits the current season to earn a stamp. Collect {n} and your buddy wears that season's outfit.",
+  "stampsSpring": "Spring",
+  "stampsSummer": "Summer",
+  "stampsAutumn": "Autumn",
+  "stampsWinter": "Winter",
+  "stampsNow": "Now",
+  "stampsOutfit": "Outfit unlocked!",
+  "celebrateOutfit": "Seasonal outfit unlocked!"
 }

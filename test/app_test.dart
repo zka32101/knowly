@@ -3259,4 +3259,109 @@ void main() {
       expect(containerOf(tester).read(settingsProvider).activity.length, 60);
     });
   });
+
+  group('季節のスタンプ帳', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    const autumn = ['moon_moving_away', 'dragonfly_before_dinosaurs', 'apple_floats'];
+
+    testWidgets('いまの季節の雑学を開くと、スタンプが1つ。同じ雑学は1回だけ', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seasonMode': 'north'});
+      final n = containerOf(tester).read(settingsProvider.notifier);
+      n.markSeen(autumn[0]);
+      n.markSeen(autumn[0]);
+      expect(containerOf(tester).read(settingsProvider).stamps, {'2026-autumn:${autumn[0]}'});
+    });
+
+    testWidgets('季節外れの雑学・季節のない雑学にはスタンプは押されない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seasonMode': 'north'});
+      final n = containerOf(tester).read(settingsProvider.notifier);
+      n.markSeen('watermelon_92_water'); // 夏
+      n.markSeen('octopus_blue_blood'); // 季節なし
+      n.markSeen('nope'); // 存在しない
+      expect(containerOf(tester).read(settingsProvider).stamps, isEmpty);
+    });
+
+    testWidgets('南半球では10月は春。春の雑学にスタンプが押される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seasonMode': 'south'});
+      final n = containerOf(tester).read(settingsProvider.notifier);
+      n.markSeen('apple_floats'); // 秋 → 南半球では対象外
+      n.markSeen('bamboo_fast'); // 春
+      expect(containerOf(tester).read(settingsProvider).stamps, {'2026-spring:bamboo_fast'});
+    });
+
+    testWidgets('すでに見た雑学でも、新しい季節にはスタンプが押せる', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'seen': [autumn[0]],
+      });
+      containerOf(tester).read(settingsProvider.notifier).markSeen(autumn[0]);
+      expect(containerOf(tester).read(settingsProvider).stamps, contains('2026-autumn:${autumn[0]}'));
+    });
+
+    testWidgets('スタンプ帳の画面に、季節ごとの進みと、完成した飾りが出る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'stamps': ['2026-autumn:a', '2026-autumn:b', '2026-autumn:c', '2026-summer:x'],
+        'celebratedOutfits': ['2026-autumn'],
+      });
+      await _open(tester, const Key('open_stamps'));
+      expect(find.byKey(const Key('stamp_book_autumn')), findsOneWidget);
+      expect(tester.widget<Text>(find.byKey(const Key('stamp_progress_autumn'))).data, '3 / 3');
+      expect(tester.widget<Text>(find.byKey(const Key('stamp_progress_summer'))).data, '1 / 3');
+      expect(find.byKey(const Key('stamp_outfit_autumn')), findsOneWidget);
+      expect(find.byKey(const Key('stamp_outfit_summer')), findsNothing);
+    });
+
+    testWidgets('完成した季節は、相棒が飾りをつける', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'stamps': ['2026-autumn:a', '2026-autumn:b', '2026-autumn:c'],
+        'celebratedOutfits': ['2026-autumn'],
+      });
+      expect(find.byKey(const Key('mascot_accessory')), findsOneWidget);
+      expect(find.text('🍂'), findsWidgets);
+    });
+
+    testWidgets('未完成なら、飾りはない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'stamps': ['2026-autumn:a', '2026-autumn:b'],
+      });
+      expect(find.byKey(const Key('mascot_accessory')), findsNothing);
+    });
+
+    testWidgets('3つ目のスタンプで、お祝いが出る（最初の起動では出ない）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'stamps': ['2026-autumn:a', '2026-autumn:b'],
+        'celebratedStage': 0,
+        'celebratedBadges': <String>[],
+        'celebratedOutfits': <String>[],
+      });
+      final n = containerOf(tester).read(settingsProvider.notifier);
+      n.markSeen(autumn[2]);
+      await tester.pump();
+      await tester.pump();
+      expect(find.text('きせつの ようふくを ゲット！'), findsOneWidget);
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(settingsProvider).celebratedOutfits, contains('2026-autumn'));
+    });
+
+    testWidgets('すでに完成していた帳は、最初の起動でお祝いしない（基準にする）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seasonMode': 'north',
+        'stamps': ['2026-autumn:a', '2026-autumn:b', '2026-autumn:c'],
+      });
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).celebratedOutfits, {'2026-autumn'});
+    });
+  });
 }

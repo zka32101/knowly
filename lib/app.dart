@@ -23,6 +23,7 @@ import 'screens/recap_screen.dart';
 import 'screens/voice_quiz_screen.dart';
 import 'screens/word_screen.dart';
 import 'screens/words_screen.dart';
+import 'screens/stamps_screen.dart';
 import 'screens/swipe_quiz_screen.dart';
 import 'screens/zukan_screen.dart';
 import 'widgets/celebration_layer.dart';
@@ -116,6 +117,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/voicequiz', builder: (_, _) => const VoiceQuizScreen()),
       GoRoute(path: '/league', builder: (_, _) => const LeagueScreen()),
       GoRoute(path: '/recap', builder: (_, _) => const RecapScreen()),
+      GoRoute(path: '/stamps', builder: (_, _) => const StampsScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

@@ -757,5 +757,22 @@
   "recapMsgSome": "いい ちょうし！ すこしずつ ふえていくよ。",
   "recapMsgGreat": "すごい！ まいにちの ように あそんだね！",
   "recapChip": "ふりかえり",
-  "recapBanner": "こんしゅうの ふりかえりが できたよ"
+  "recapBanner": "こんしゅうの ふりかえりが できたよ",
+  "stampsTitle": "きせつの スタンプちょう",
+  "stampsChip": "スタンプちょう",
+  "stampsHint": "いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。{n}つ あつめると、あいぼうが その きせつの ようふくを きるよ。",
+  "@stampsHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "stampsSpring": "はる",
+  "stampsSummer": "なつ",
+  "stampsAutumn": "あき",
+  "stampsWinter": "ふゆ",
+  "stampsNow": "いま",
+  "stampsOutfit": "ようふくゲット！",
+  "celebrateOutfit": "きせつの ようふくを ゲット！"
 }

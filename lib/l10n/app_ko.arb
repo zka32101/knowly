@@ -394,5 +394,15 @@
   "recapMsgSome": "좋은 페이스예요! 조금씩 쌓여 가요.",
   "recapMsgGreat": "대단해요! 거의 매일 했어요!",
   "recapChip": "돌아보기",
-  "recapBanner": "이번 주 돌아보기가 준비됐어요"
+  "recapBanner": "이번 주 돌아보기가 준비됐어요",
+  "stampsTitle": "계절 스탬프북",
+  "stampsChip": "스탬프북",
+  "stampsHint": "지금 계절에 어울리는 상식을 읽으면 스탬프가 하나. {n}개를 모으면 단짝이 그 계절의 옷을 입어요.",
+  "stampsSpring": "봄",
+  "stampsSummer": "여름",
+  "stampsAutumn": "가을",
+  "stampsWinter": "겨울",
+  "stampsNow": "지금",
+  "stampsOutfit": "옷 획득!",
+  "celebrateOutfit": "계절 옷을 얻었어요!"
 }

@@ -394,5 +394,15 @@
   "recapMsgSome": "¡Buen ritmo! Se va sumando poco a poco.",
   "recapMsgGreat": "¡Increíble! ¡Casi todos los días!",
   "recapChip": "Resumen",
-  "recapBanner": "Tu resumen semanal está listo"
+  "recapBanner": "Tu resumen semanal está listo",
+  "stampsTitle": "Álbum de sellos de temporada",
+  "stampsChip": "Sellos",
+  "stampsHint": "Lee un dato que encaje con la temporada actual para ganar un sello. Con {n}, tu compañero se pone el atuendo de esa estación.",
+  "stampsSpring": "Primavera",
+  "stampsSummer": "Verano",
+  "stampsAutumn": "Otoño",
+  "stampsWinter": "Invierno",
+  "stampsNow": "Ahora",
+  "stampsOutfit": "¡Atuendo desbloqueado!",
+  "celebrateOutfit": "¡Atuendo de temporada desbloqueado!"
 }

@@ -35,7 +35,11 @@ class _MascotScreenState extends ConsumerState<MascotScreen> {
                 // さわると よろこぶ（もう一度さわると、また はねる）
                 onTap: () => setState(() => _mood =
                     _mood == MascotMood.happy ? MascotMood.idle : MascotMood.happy),
-                child: MascotFace(stage: stage, size: 96, mood: _mood),
+                child: MascotFace(
+                    stage: stage,
+                    size: 96,
+                    mood: _mood,
+                    accessory: ref.watch(mascotAccessoryProvider)),
               ),
             ),
             const SizedBox(height: 8),

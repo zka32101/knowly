@@ -1296,4 +1296,36 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get recapBanner => 'こんしゅうの ふりかえりが できたよ';
+
+  @override
+  String get stampsTitle => 'きせつの スタンプちょう';
+
+  @override
+  String get stampsChip => 'スタンプちょう';
+
+  @override
+  String stampsHint(int n) {
+    return 'いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。$nつ あつめると、あいぼうが その きせつの ようふくを きるよ。';
+  }
+
+  @override
+  String get stampsSpring => 'はる';
+
+  @override
+  String get stampsSummer => 'なつ';
+
+  @override
+  String get stampsAutumn => 'あき';
+
+  @override
+  String get stampsWinter => 'ふゆ';
+
+  @override
+  String get stampsNow => 'いま';
+
+  @override
+  String get stampsOutfit => 'ようふくゲット！';
+
+  @override
+  String get celebrateOutfit => 'きせつの ようふくを ゲット！';
 }

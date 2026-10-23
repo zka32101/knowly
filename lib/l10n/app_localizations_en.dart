@@ -1317,4 +1317,36 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get recapBanner => 'Your weekly recap is ready';
+
+  @override
+  String get stampsTitle => 'Seasonal stamp book';
+
+  @override
+  String get stampsChip => 'Stamps';
+
+  @override
+  String stampsHint(int n) {
+    return 'Read a fact that suits the current season to earn a stamp. Collect $n and your buddy wears that season\'s outfit.';
+  }
+
+  @override
+  String get stampsSpring => 'Spring';
+
+  @override
+  String get stampsSummer => 'Summer';
+
+  @override
+  String get stampsAutumn => 'Autumn';
+
+  @override
+  String get stampsWinter => 'Winter';
+
+  @override
+  String get stampsNow => 'Now';
+
+  @override
+  String get stampsOutfit => 'Outfit unlocked!';
+
+  @override
+  String get celebrateOutfit => 'Seasonal outfit unlocked!';
 }

@@ -1295,4 +1295,36 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get recapBanner => '이번 주 돌아보기가 준비됐어요';
+
+  @override
+  String get stampsTitle => '계절 스탬프북';
+
+  @override
+  String get stampsChip => '스탬프북';
+
+  @override
+  String stampsHint(int n) {
+    return '지금 계절에 어울리는 상식을 읽으면 스탬프가 하나. $n개를 모으면 단짝이 그 계절의 옷을 입어요.';
+  }
+
+  @override
+  String get stampsSpring => '봄';
+
+  @override
+  String get stampsSummer => '여름';
+
+  @override
+  String get stampsAutumn => '가을';
+
+  @override
+  String get stampsWinter => '겨울';
+
+  @override
+  String get stampsNow => '지금';
+
+  @override
+  String get stampsOutfit => '옷 획득!';
+
+  @override
+  String get celebrateOutfit => '계절 옷을 얻었어요!';
 }

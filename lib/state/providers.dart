@@ -3,6 +3,7 @@ import 'package:flutter_timezone/flutter_timezone.dart';
 
 import '../data/trivia_repository.dart';
 import '../logic/mascot.dart';
+import '../logic/stamps.dart';
 import '../logic/daily_pick.dart';
 import '../logic/interests.dart';
 import '../logic/search.dart';
@@ -49,7 +50,7 @@ final regionProvider = Provider<({String? code, bool any})>((ref) {
 const _southernRegions = {'AU', 'NZ', 'BR', 'AR', 'CL', 'ZA', 'PE', 'UY', 'PY', 'BO'};
 
 /// 季節に使う半球。null は「季節を使わない」。
-final hemisphereProvider = Provider<Hemisphere?>((ref) {
+final Provider<Hemisphere?> hemisphereProvider = Provider<Hemisphere?>((ref) {
   final settings = ref.watch(settingsProvider);
   switch (settings.seasonMode) {
     case 'off':
@@ -349,3 +350,25 @@ final glossaryListProvider = Provider<List<(GlossaryEntry, GlossaryText)>>((ref)
       if (e.forLanguage(lang) case final t?) (e, t),
   ];
 });
+
+/// 雑学を開いたとき、いまの季節の雑学なら、季節のスタンプを押す。
+/// 季節はタイムゾーンから推定した半球で決める（季節の設定がオフのときは北半球として数える）。
+final Provider<void Function(String id)> stampRecorderProvider = Provider<void Function(String id)>((ref) {
+  return (id) {
+    final t = ref.read(triviaRepositoryProvider).byId(id);
+    if (t == null || t.seasons.isEmpty) return;
+    final hemisphere = ref.read(hemisphereProvider) ?? Hemisphere.north;
+    final now = ref.read(nowProvider);
+    final season = seasonFor(now, hemisphere);
+    if (!t.seasons.contains(season.name)) return;
+    ref.read(settingsProvider.notifier).addStamp(
+        stampKey(stampYear(now, season, hemisphere), season, id));
+  };
+});
+
+/// 相棒が着ている、今の季節の飾り（なければ null）。
+final mascotAccessoryProvider = Provider<String?>((ref) => currentAccessory(
+      ref.watch(settingsProvider.select((s) => s.stamps)),
+      ref.watch(nowProvider),
+      ref.watch(hemisphereProvider),
+    ));

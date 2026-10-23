@@ -1329,4 +1329,36 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get recapBanner => 'Tu resumen semanal está listo';
+
+  @override
+  String get stampsTitle => 'Álbum de sellos de temporada';
+
+  @override
+  String get stampsChip => 'Sellos';
+
+  @override
+  String stampsHint(int n) {
+    return 'Lee un dato que encaje con la temporada actual para ganar un sello. Con $n, tu compañero se pone el atuendo de esa estación.';
+  }
+
+  @override
+  String get stampsSpring => 'Primavera';
+
+  @override
+  String get stampsSummer => 'Verano';
+
+  @override
+  String get stampsAutumn => 'Otoño';
+
+  @override
+  String get stampsWinter => 'Invierno';
+
+  @override
+  String get stampsNow => 'Ahora';
+
+  @override
+  String get stampsOutfit => '¡Atuendo desbloqueado!';
+
+  @override
+  String get celebrateOutfit => '¡Atuendo de temporada desbloqueado!';
 }

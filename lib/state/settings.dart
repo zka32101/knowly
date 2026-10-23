@@ -11,7 +11,7 @@ import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
-import 'providers.dart' show nowProvider;
+import 'providers.dart' show nowProvider, stampRecorderProvider;
 
 /// 画面の言語。
 const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
@@ -73,6 +73,8 @@ class AppSettings {
     this.words = const {},
     this.league = const LeagueData(),
     this.activity = const {},
+    this.stamps = const {},
+    this.celebratedOutfits,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -135,6 +137,12 @@ class AppSettings {
   /// 1日ごとの記録（週のふりかえり用。直近60日）。
   final Map<String, DayActivity> activity;
 
+  /// 季節のスタンプ（"年-季節:雑学のid"）。
+  final Set<String> stamps;
+
+  /// 飾り（スタンプ帳の完成）のお祝いを出し終えたもの（"年-季節"）。null は基準が未設定。
+  final Set<String>? celebratedOutfits;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -174,6 +182,8 @@ class AppSettings {
     Set<String>? words,
     LeagueData? league,
     Map<String, DayActivity>? activity,
+    Set<String>? stamps,
+    Set<String>? celebratedOutfits,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -205,18 +215,24 @@ class AppSettings {
         words: words ?? this.words,
         league: league ?? this.league,
         activity: activity ?? this.activity,
+        stamps: stamps ?? this.stamps,
+        celebratedOutfits: celebratedOutfits ?? this.celebratedOutfits,
       );
 }
 
 class SettingsNotifier extends StateNotifier<AppSettings> {
-  SettingsNotifier(this._prefs, {DateTime Function()? now})
+  SettingsNotifier(this._prefs, {DateTime Function()? now, void Function(String id)? onView})
       : _now = now ?? DateTime.now,
+        _onView = onView,
         super(_read(_prefs));
 
   final SharedPreferences _prefs;
 
   /// 「いま」。テストでは差し替える。
   final DateTime Function() _now;
+
+  /// 雑学を開くたびに呼ぶ（季節のスタンプ用。すでに見た雑学でも呼ぶ）。
+  final void Function(String id)? _onView;
 
   /// 今日の記録に [f] を加える（週のふりかえり用）。
   void _bump(DayActivity Function(DayActivity) f) {
@@ -323,6 +339,8 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
       league: _readLeague(p),
+      stamps: (p.getStringList('stamps') ?? const []).toSet(),
+      celebratedOutfits: p.getStringList('celebratedOutfits')?.toSet(),
       activity: {
         for (final raw in (p.getStringList('activity') ?? const <String>[]))
           if (DayActivity.decode(raw) case (final day, final a)?) day: a,
@@ -488,6 +506,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
 
   /// 雑学を開いたことを記録する（相棒の成長用）。初めて開いたときだけ状態が変わる。
   void markSeen(String id) {
+    _onView?.call(id);
     if (state.seen.contains(id)) return;
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
@@ -513,6 +532,21 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
         week: base.week, lastWinner: base.lastWinner, lastPoints: base.lastPoints);
     state = state.copyWith(league: next);
     _saveLeague(next);
+  }
+
+  /// 季節のスタンプを押す（同じ印は1回だけ）。
+  void addStamp(String key) {
+    if (state.stamps.contains(key)) return;
+    final stamps = {...state.stamps, key};
+    state = state.copyWith(stamps: stamps);
+    _prefs.setStringList('stamps', stamps.toList());
+  }
+
+  /// 飾りのお祝いを出し終えた（または最初の基準にした）ことを記録する。
+  void ackOutfits(Iterable<String> books) {
+    final set = {...?state.celebratedOutfits, ...books};
+    state = state.copyWith(celebratedOutfits: set);
+    _prefs.setStringList('celebratedOutfits', set.toList());
   }
 
   /// 用語の説明を見たことを記録する（ことばずかん用）。
@@ -597,8 +631,9 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
 final sharedPreferencesProvider =
     Provider<SharedPreferences>((ref) => throw UnimplementedError());
 
-final settingsProvider = StateNotifierProvider<SettingsNotifier, AppSettings>(
-  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider), now: () => ref.read(nowProvider)),
+final StateNotifierProvider<SettingsNotifier, AppSettings> settingsProvider =
+    StateNotifierProvider<SettingsNotifier, AppSettings>(
+  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider), now: () => ref.read(nowProvider), onView: (id) => ref.read(stampRecorderProvider)(id)),
 );
 
 /// 端末の言語。テストで差し替える。
