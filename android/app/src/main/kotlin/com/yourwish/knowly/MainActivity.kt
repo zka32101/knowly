@@ -1,5 +1,6 @@
 package com.yourwish.knowly
 
-import io.flutter.embedding.android.FlutterActivity
+import com.ryanheise.audioservice.AudioServiceActivity
 
-class MainActivity : FlutterActivity()
+// ながら聞きのメディア通知（audio_service）に必要
+class MainActivity : AudioServiceActivity()

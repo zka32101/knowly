@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -28,6 +29,15 @@ class DeviceTtsService implements TtsService {
       await _tts.setLanguage(language == 'ja' ? 'ja-JP' : 'en-US');
       await _tts.setSpeechRate(rate ?? 0.4);
       await _tts.awaitSpeakCompletion(true);
+      // iOS: 画面を消したり他のアプリに切り替えても読み上げが続くように、再生カテゴリにする。
+      if (defaultTargetPlatform == TargetPlatform.iOS) {
+        await _tts.setSharedInstance(true);
+        await _tts.setIosAudioCategory(IosTextToSpeechAudioCategory.playback, [
+          IosTextToSpeechAudioCategoryOptions.allowBluetooth,
+          IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
+          IosTextToSpeechAudioCategoryOptions.mixWithOthers,
+        ]);
+      }
       await _tts.speak(text);
     } catch (_) {}
   }

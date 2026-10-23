@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../logic/readings.dart';
 import '../models/trivia.dart';
+import '../services/listen_background.dart';
 import '../services/tts.dart';
 import 'providers.dart';
 import 'settings.dart';
@@ -170,4 +171,36 @@ final listenControllerProvider =
     lang,
     band == null ? const [] : ref.read(listenQueueProvider),
   );
+});
+
+/// ながら聞きの画面の間だけ、通知・ロック画面・イヤホンのボタンと読み上げをつなぐ。
+final listenBackgroundSyncProvider = Provider.autoDispose<void>((ref) {
+  final background = ref.watch(listenBackgroundProvider);
+  final controller = ref.read(listenControllerProvider.notifier);
+  final resolve = ref.watch(levelResolverProvider);
+  final lang = ref.watch(contentLanguageProvider);
+  const appNames = {'ja': '雑学コレ！', 'en': 'Knowly'};
+
+  background.bind(
+    onPlay: controller.play,
+    onPause: controller.pause,
+    onNext: controller.next,
+    onPrevious: controller.previous,
+  );
+
+  void push(ListenState s) {
+    final current = s.current;
+    final level = current == null ? null : resolve(current);
+    if (level == null) return;
+    background.update(
+      title: stripReadings(level.title),
+      appName: appNames[lang] ?? appNames['en']!,
+      playing: s.playing,
+      hasPrevious: s.index > 0,
+      hasNext: s.index + 1 < s.queue.length,
+    );
+  }
+
+  ref.listen<ListenState>(listenControllerProvider, (_, s) => push(s));
+  ref.onDispose(background.stop);
 });

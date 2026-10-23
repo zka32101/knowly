@@ -9,6 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/home_widget_service.dart';
+import 'package:knowly/services/listen_background.dart';
 import 'package:knowly/services/share.dart';
 import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
@@ -68,6 +69,39 @@ class FakeTts implements TtsService {
 
   int stops = 0;
 }
+
+class FakeListenBackground implements ListenBackground {
+  void Function()? onPlay, onPause, onNext, onPrevious;
+  final updates = <({String title, bool playing})>[];
+  int stops = 0;
+  @override
+  void bind({
+    required void Function() onPlay,
+    required void Function() onPause,
+    required void Function() onNext,
+    required void Function() onPrevious,
+  }) {
+    this.onPlay = onPlay;
+    this.onPause = onPause;
+    this.onNext = onNext;
+    this.onPrevious = onPrevious;
+  }
+
+  @override
+  Future<void> update({
+    required String title,
+    required String appName,
+    required bool playing,
+    required bool hasPrevious,
+    required bool hasNext,
+  }) async =>
+      updates.add((title: title, playing: playing));
+
+  @override
+  Future<void> stop() async => stops++;
+}
+
+FakeListenBackground? _lastBackground;
 
 class FakeHomeWidget implements HomeWidgetService {
   WidgetContent? last;
@@ -225,6 +259,7 @@ Future<FakeTts> _pump(
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
   final homeWidget = _lastWidget = FakeHomeWidget();
+  final background = _lastBackground = FakeListenBackground();
   SharedPreferences.setMockInitialValues(prefs);
   final sp = await SharedPreferences.getInstance();
   final tts = FakeTts();
@@ -240,6 +275,7 @@ Future<FakeTts> _pump(
       ttsProvider.overrideWithValue(tts),
       notificationServiceProvider.overrideWithValue(notif),
       homeWidgetServiceProvider.overrideWithValue(homeWidget),
+      listenBackgroundProvider.overrideWithValue(background),
     ],
     child: const KnowlyApp(),
   ));
@@ -1888,11 +1924,9 @@ void main() {
     Future<void> playAll(WidgetTester tester, int players, int rounds) async {
       for (var r = 0; r < rounds; r++) {
         for (var p = 0; p < players; p++) {
-          await tester.tap(find.byKey(const Key('battle_true')));
-          await tester.pumpAndSettle();
+          await tapSetup(tester, const Key('battle_true'));
         }
-        await tester.tap(find.byKey(const Key('battle_next')));
-        await tester.pumpAndSettle();
+        await tapSetup(tester, const Key('battle_next'));
       }
     }
 
@@ -2190,6 +2224,28 @@ void main() {
         expect(_lastWidget!.clears, greaterThan(0), reason: band);
         await tester.pumpWidget(const SizedBox());
       }
+    });
+  });
+
+  group('ながら聞き: 通知・ロック画面との連携', () {
+    testWidgets('再生すると通知に出て、通知の操作で止められる。画面を閉じると片づける', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      final bg = _lastBackground!;
+      await _scrollTo(tester, const Key('open_listen'));
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      expect(bg.onPause, isNotNull);
+      expect(bg.updates, isEmpty); // 再生するまでは通知を出さない
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(bg.updates.last.playing, isTrue);
+      expect(bg.updates.last.title, isNotEmpty);
+      bg.onPause!(); // 通知の「一時停止」
+      await tester.pump();
+      expect(bg.updates.last.playing, isFalse);
+      await _back(tester);
+      expect(bg.stops, greaterThan(0));
     });
   });
 }

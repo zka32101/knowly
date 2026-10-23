@@ -14,6 +14,7 @@ class ListenScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
+    ref.watch(listenBackgroundSyncProvider);
     final state = ref.watch(listenControllerProvider);
     final controller = ref.read(listenControllerProvider.notifier);
     final resolve = ref.watch(levelResolverProvider);
