@@ -1,0 +1,427 @@
+{
+  "@@locale": "ja",
+  "appName": "雑学コレ！",
+  "languageTitle": "言語 / Language",
+  "languageSystem": "端末の言語",
+  "languageJa": "日本語",
+  "languageEn": "English",
+  "continueButton": "つぎへ",
+  "birthYearTitle": "生まれた年を えらんでください",
+  "birthYearNote": "年齢に合った内容にするためだけに使います。生まれた年は保存せず、端末の外にも送りません。",
+  "parentNoteTitle": "保護者の方へ",
+  "parentNoteBody": "お子さまが使うときは、いっしょにご利用ください。このアプリは、お子さまの個人情報を集めず、広告も表示しません。",
+  "modeKids": "キッズ（就学前）",
+  "modeJunior": "ジュニア（小学生）",
+  "modeTeen": "ティーン（中高生）",
+  "modeAdult": "アダルト（大人）",
+  "interestsTitle": "すきなものを えらんでね",
+  "interestsAll": "ぜんぶ",
+  "catAnimals": "どうぶつ",
+  "catSpace": "うちゅう",
+  "catBody": "からだ",
+  "catNature": "しぜん",
+  "catScience": "かがく",
+  "catGeography": "ちり",
+  "sceneFriends": "友だちと",
+  "sceneKids": "こどもと",
+  "sceneWork": "仕事で",
+  "sceneFamily": "家族と",
+  "sceneLearning": "学びたい",
+  "filterReset": "リセット",
+  "today": "きょうの雑学",
+  "past": "これまでの雑学",
+  "kidsNext": "つぎへ",
+  "kidsListen": "きく",
+  "emptyFeed": "いま表示できる雑学がありません",
+  "lockedFeedNote": "さらに前の雑学は、プレミアムで読めます",
+  "savedTitle": "保存した雑学",
+  "savedEmpty": "まだ保存した雑学はありません",
+  "savedLimit": "無料プランで保存できるのは{count}件までです",
+  "@savedLimit": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "save": "保存",
+  "unsave": "保存済み",
+  "copy": "コピー",
+  "copied": "コピーしました",
+  "ratingHeh": "へぇ！",
+  "ratingUseful": "使える！",
+  "ratingWow": "スゴイ",
+  "settingsTitle": "設定",
+  "settingsUiLanguage": "画面の言語",
+  "settingsContentLanguage": "雑学の言語",
+  "settingsMode": "年代モード",
+  "settingsModeNote": "モードを変えるには保護者ゲートが必要です",
+  "settingsPremium": "プレミアム",
+  "settingsOtherApps": "他のアプリもチェック！",
+  "settingsPrivacy": "このアプリはお子さまの個人情報を集めません。広告も表示しません。",
+  "premiumTitle": "プレミアム",
+  "premiumBenefit1": "これまでの雑学を30日ぶんまで読める",
+  "premiumBenefit2": "保存が無制限",
+  "premiumBenefit3": "オフライン保存・深掘り解説（準備中）",
+  "premiumKidsFree": "キッズ・ジュニアの雑学はずっと無料です。",
+  "premiumUnavailable": "購入機能は準備中です",
+  "gateTitle": "保護者の方へ確認",
+  "gateDescription": "これは大人の方が行う操作です。\n下の計算の答えを入力してください。",
+  "gateHint": "答えを入力",
+  "gateWrong": "答えが違います",
+  "gateOk": "つぎへ",
+  "gateCancel": "やめる",
+  "close": "閉じる",
+  "catBugs": "むし",
+  "catVehicles": "のりもの",
+  "catFood": "たべもの",
+  "viewAs": "読み方",
+  "viewOwn": "いつもの説明",
+  "viewJunior": "小学生向け",
+  "viewKids": "就学前向け",
+  "explainToKids": "こどもに説明するなら",
+  "bilingualOn": "二言語で見る",
+  "bilingualOff": "一つの言語にもどす",
+  "knewIt": "知ってた",
+  "learnedIt": "知らなかった！",
+  "streakDays": "連続{count}日",
+  "@streakDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "streakFreeze": "お休み券あり",
+  "streakStart": "今日の雑学を読んで連続をはじめよう",
+  "statsTitle": "あなたの雑学",
+  "statsKnowRate": "知っていた雑学: {percent}%（{knew}/{total}）",
+  "@statsKnowRate": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "knew": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "statsEmpty": "「知ってた」「知らなかった」を押すと、ここに表示されます",
+  "quizButton": "もんだい",
+  "quizTitle": "ほんとかな？",
+  "quizTrue": "ほんと",
+  "quizFalse": "うそ",
+  "quizCorrect": "せいかい！",
+  "quizWrong": "ざんねん！",
+  "quizNext": "つぎへ",
+  "notifyTitle": "毎日の雑学を通知",
+  "notifySubtitle": "毎日、決まった時刻に今日の雑学をお知らせします。端末の中だけで動きます。",
+  "notifyJuniorNote": "保護者の方が設定してください。端末の中だけで動き、情報は送られません。",
+  "notifyTime": "通知の時刻",
+  "notifyDenied": "通知が許可されていません。端末の設定で許可してください。",
+  "birthYearHint": "生まれた年",
+  "filterButton": "絞り込み",
+  "filterButtonActive": "絞り込み（{count}）",
+  "@filterButtonActive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryTitle": "雑学ライブラリ",
+  "searchHint": "雑学をさがす（日本語・English）",
+  "searchClear": "消す",
+  "resultsCount": "{count}件",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noResults": "見つかりませんでした。ことばや絞り込みを変えてみてください",
+  "filterStatus": "状態",
+  "statusSaved": "保存済み",
+  "statusKnew": "知ってた",
+  "statusLearned": "知らなかった",
+  "statusUnrated": "未評価",
+  "filterCategoryHeader": "ジャンル",
+  "filterSceneHeader": "シーン",
+  "libraryLocked": "プレミアムで読めます",
+  "libraryOpen": "ライブラリ",
+  "interestsSection": "あなたの関心",
+  "interestsEdit": "編集",
+  "interestsEmptyTitle": "関心を登録すると、ここにおすすめを出します",
+  "interestsRegister": "関心を登録",
+  "interestsNoMatch": "関心に合う雑学は、いまはありません",
+  "interestsScreenTitle": "関心事",
+  "interestsCategories": "ジャンル",
+  "interestsScenes": "シーン",
+  "interestsKeywords": "キーワード",
+  "interestsKeywordHint": "例: 宇宙、ラッコ、お金",
+  "interestsAdd": "追加",
+  "interestsMax": "キーワードは{count}個までです",
+  "@interestsMax": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "interestsNote": "関心事は端末の中にだけ保存され、外には送られません。",
+  "settingsInterests": "関心事",
+  "timingSection": "いまのおすすめ",
+  "reasonDate": "今日は記念日",
+  "reasonSeason": "{season}にぴったり",
+  "@reasonSeason": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonNight": "夜にぴったり",
+  "reasonMorning": "朝にぴったり",
+  "reasonEvening": "夕方にぴったり",
+  "reasonWeekend": "週末に家族で",
+  "seasonSpring": "春",
+  "seasonSummer": "夏",
+  "seasonAutumn": "秋",
+  "seasonWinter": "冬",
+  "settingsRegion": "国・地域",
+  "regionAuto": "自動（端末の設定）",
+  "regionAll": "すべての国",
+  "regionNote": "国ごとの話題（日本の新幹線など）を、選んだ国でだけ出します。",
+  "settingsSeason": "季節のおすすめ",
+  "seasonAuto": "自動",
+  "seasonNorth": "北半球",
+  "seasonSouth": "南半球",
+  "seasonOff": "オフ",
+  "seasonNote": "端末のタイムゾーンから推定します（位置情報は使いません）。",
+  "relatedSection": "関連する雑学",
+  "whyButton": "なぜ？",
+  "whyCheer": "「なぜ？」を{count}回つづけたよ！すごい！",
+  "@whyCheer": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mythsTitle": "ほんと？うそ？",
+  "mythAnswerIs": "こたえは「{verdict}」！",
+  "mythRead": "くわしく よむ",
+  "mythProgress": "{current} / {total}",
+  "mythResult": "{total}もんちゅう {correct}もん せいかい！",
+  "mythAgain": "もういちど",
+  "mythNone": "いま あそべる もんだいが ありません",
+  "mythNext": "つぎへ",
+  "mythFinish": "けっかを みる",
+  "@mythAnswerIs": {
+    "placeholders": {
+      "verdict": {
+        "type": "String"
+      }
+    }
+  },
+  "@mythProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@mythResult": {
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "todayTitle": "今日は何の日",
+  "todayNone": "きょうは とくべつな ひでは ありません",
+  "todayUpcoming": "もうすぐ",
+  "todayBanner": "今日は「{title}」",
+  "todayCountry": "この国の行事",
+  "todayHome": "今日は何の日",
+  "@todayBanner": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "dateMonthDay": "{date}",
+  "@dateMonthDay": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "MMMd"
+      }
+    }
+  },
+  "listenInEnglish": "英語で聞く",
+  "listenInJapanese": "日本語で聞く",
+  "vocabEnglishTitle": "英語のことば",
+  "vocabJapaneseTitle": "日本語のことば",
+  "vocabTapToHear": "タップで発音を聞けます",
+  "listenTitle": "ながら聞き",
+  "listenPlay": "再生",
+  "listenPause": "一時停止",
+  "listenNext": "つぎへ",
+  "listenPrev": "まえへ",
+  "listenSpeedLabel": "速さ",
+  "listenSlow": "ゆっくり",
+  "listenNormal": "ふつう",
+  "listenFast": "はやい",
+  "listenFinished": "おしまい。もういちど聞くには再生を押してください",
+  "listenNote": "画面を開いたまま使います（通勤・料理中など）。",
+  "listenEmpty": "いま聞ける雑学がありません",
+  "listenOpen": "ながら聞き",
+  "projectsTitle": "自由研究ネタ帳",
+  "projectMinutes": "{minutes}分くらい",
+  "projectNeedsAdult": "おとなといっしょに",
+  "projectDifficulty": "むずかしさ",
+  "projectMaterials": "ようい するもの",
+  "projectSteps": "やりかた",
+  "projectObserve": "かんさつ ポイント",
+  "projectSafety": "あんぜんに ちゅうい",
+  "projectFromFact": "自由研究にしてみよう",
+  "projectsEmpty": "いま表示できる自由研究がありません",
+  "projectsSummer": "夏休みにぴったり",
+  "quickLinks": "もっと見る",
+  "projectsIntro": "雑学から、おうちでできる実験・観察へ。",
+  "@projectMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumActive": "プレミアムをご利用中です",
+  "premiumMonthly": "月額プラン",
+  "premiumAnnual": "年額プラン",
+  "premiumTrial": "無料トライアルあり",
+  "premiumBuy": "このプランで始める",
+  "premiumRestore": "購入を復元",
+  "premiumLegal": "お支払いはお使いのストアのアカウントに請求されます。プランは自動で更新され、解約はストアの設定からいつでもできます。無料トライアルがあるプランは、期間が終わると自動で課金が始まります。",
+  "premiumPurchased": "ご購入ありがとうございます！",
+  "premiumCancelled": "購入をやめました",
+  "premiumFailed": "購入できませんでした。しばらくしてからもう一度お試しください",
+  "premiumRestored": "購入を復元しました",
+  "premiumNothingToRestore": "復元できる購入が見つかりませんでした",
+  "privacyTitle": "プライバシーとアプリについて",
+  "privacyDataHeading": "データの扱い",
+  "privacyPointLocal": "設定・保存した雑学・記録は、この端末の中だけに保存されます。",
+  "privacyPointBirthYear": "生まれた年は年代の判定にだけ使い、保存しません。",
+  "privacyPointNoAds": "広告も、利用状況の分析（アナリティクス）もありません。",
+  "privacyPointChildren": "Kids / Junior では、ネットワーク通信も課金のしくみも使いません。",
+  "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。",
+  "privacyContact": "お問い合わせ: {email}",
+  "@privacyContact": {"placeholders": {"email": {"type": "String"}}},
+  "privacyLicenses": "オープンソースライセンス",
+  "privacyVersion": "バージョン {version}",
+  "@privacyVersion": {"placeholders": {"version": {"type": "String"}}},
+  "privacyDeleteButton": "この端末のデータを削除",
+  "privacyDeleteTitle": "データを削除しますか？",
+  "privacyDeleteBody": "設定・保存した雑学・記録・通知の予約がすべて消え、最初の画面に戻ります。元に戻せません。購入済みのプレミアムは消えません（ストアで復元できます）。",
+  "privacyDeleteConfirm": "削除する",
+  "privacyDeleteCancel": "やめる",
+  "privacyDeleted": "データを削除しました",
+  "shareImage": "画像でシェア",
+  "sourcesSection": "出典",
+  "battleTitle": "クイズたいせん",
+  "battlePlayers": "なんにんで あそぶ？",
+  "battleSolo": "ひとり",
+  "battlePlayerCount": "{n}にん",
+  "@battlePlayerCount": {"placeholders": {"n": {"type": "int"}}},
+  "battlePlayerDefault": "プレイヤー{n}",
+  "@battlePlayerDefault": {"placeholders": {"n": {"type": "int"}}},
+  "battleRounds": "なんもん？",
+  "battleRoundCount": "{n}もん",
+  "@battleRoundCount": {"placeholders": {"n": {"type": "int"}}},
+  "battleHandHint": "1つの たんまつを じゅんばんに まわして あそぼう。",
+  "battleStart": "はじめる",
+  "battleNoQuestions": "だせる クイズが ありません。",
+  "battleRoundOf": "{n} / {total} もんめ",
+  "@battleRoundOf": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "battleTurnOf": "{name}の ばん",
+  "@battleTurnOf": {"placeholders": {"name": {"type": "String"}}},
+  "battleSeeResult": "けっかを みる",
+  "battleFinished": "おしまい！",
+  "battleSoloScore": "{score} / {total} もん せいかい！",
+  "@battleSoloScore": {"placeholders": {"score": {"type": "int"}, "total": {"type": "int"}}},
+  "battleDraw": "ひきわけ！",
+  "battleWinner": "{name}の かち！",
+  "@battleWinner": {"placeholders": {"name": {"type": "String"}}},
+  "battleRank": "{n}い",
+  "@battleRank": {"placeholders": {"n": {"type": "int"}}},
+  "battleAgain": "もういちど",
+  "battleChangeSettings": "せっていを かえる",
+  "battleExit": "おわる",
+  "battleKind": "クイズの しゅるい",
+  "battleKindAll": "ぜんぶ",
+  "battleKindTrueFalse": "○×",
+  "battleKindChoice": "えらぶ",
+  "battleGenre": "ジャンル",
+  "battleGenreAll": "ぜんぶ",
+  "battleTimeLimit": "せいげんじかん",
+  "battleTimeOff": "なし",
+  "battleSeconds": "{n}びょう",
+  "@battleSeconds": {"placeholders": {"n": {"type": "int"}}},
+  "battleSecondsLeft": "のこり {n}びょう",
+  "@battleSecondsLeft": {"placeholders": {"n": {"type": "int"}}},
+  "battleTimeHint": "はやく こたえるほど、おまけの てんが ふえるよ（おなじ せいかいすうの ときに くらべる）。",
+  "battleCorrectIs": "せいかいは「{answer}」",
+  "@battleCorrectIs": {"placeholders": {"answer": {"type": "String"}}},
+  "battlePoints": "{n}てん",
+  "@battlePoints": {"placeholders": {"n": {"type": "int"}}},
+  "reviewTitle": "おさらい",
+  "reviewNone": "きょうの おさらいは ありません。「しらなかった」を おした ざつがくが、あしたから でてくるよ。",
+  "reviewDoneNote": "また あした おさらいしよう。",
+  "reviewChip": "おさらい",
+  "reviewChipCount": "おさらい {n}",
+  "@reviewChipCount": {"placeholders": {"n": {"type": "int"}}},
+  "dailyTitle": "きょうの チャレンジ",
+  "dailyChip": "チャレンジ",
+  "dailyStreak": "{n}にち つづけて あそんだよ",
+  "@dailyStreak": {"placeholders": {"n": {"type": "int"}}},
+  "dailyComeBack": "また あした ちょうせんしよう！",
+  "dailyShare": "けっかを シェア",
+  "badgesTitle": "バッジ",
+  "badgesChip": "バッジ",
+  "badgesCount": "{n} / {total} こ ゲット！",
+  "@badgesCount": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "badgeStreak": "{n}にち れんぞく",
+  "@badgeStreak": {"placeholders": {"n": {"type": "int"}}},
+  "badgeReadDays": "{n}にち よんだ",
+  "@badgeReadDays": {"placeholders": {"n": {"type": "int"}}},
+  "badgeLearned": "{n}こ しれた",
+  "@badgeLearned": {"placeholders": {"n": {"type": "int"}}},
+  "badgeQuiz": "クイズ {n}もん せいかい",
+  "@badgeQuiz": {"placeholders": {"n": {"type": "int"}}},
+  "badgeDaily": "チャレンジ {n}にち",
+  "@badgeDaily": {"placeholders": {"n": {"type": "int"}}},
+  "badgePerfect": "チャレンジ ぜんもん せいかい",
+  "reportTitle": "がくしゅうの ようす",
+  "reportNote": "この ようすは、この たんまつの なかだけに ある きろくから つくっています。そとには おくりません。",
+  "reportLearned": "「しらなかった」と おぼえた ざつがく",
+  "reportKnew": "「しってた」ざつがく",
+  "reportQuiz": "クイズの せいかい",
+  "reportNoQuiz": "まだ なし",
+  "reportReviewPending": "おさらい まち",
+  "reportFavorite": "よく みた ジャンル",
+  "reportEmpty": "まだ きろくが ありません。",
+  "reportRecent": "さいきん しれたこと",
+  "reportOpen": "がくしゅうの ようす（おうちの ひとへ）"
+}

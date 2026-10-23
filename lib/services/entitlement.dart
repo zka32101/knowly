@@ -1,0 +1,168 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+
+import '../state/settings.dart';
+
+enum PurchasePeriod { monthly, annual }
+
+/// 購入できるプラン。価格の文字列は、ストアが返すもの（通貨・地域に合わせた表示）をそのまま使う。
+class PurchaseOffer {
+  const PurchaseOffer({
+    required this.id,
+    required this.period,
+    required this.priceString,
+    this.hasFreeTrial = false,
+  });
+
+  final String id;
+  final PurchasePeriod period;
+  final String priceString;
+  final bool hasFreeTrial;
+}
+
+enum PurchaseOutcome { success, cancelled, failed, unavailable }
+
+/// プレミアムの購入状態と購入処理。
+/// 購入の設定（API キー）がないときは [FreeEntitlementService]（常に無料プラン）になる。
+abstract class EntitlementService {
+  Future<bool> isPremium();
+  Future<List<PurchaseOffer>> offers();
+  Future<PurchaseOutcome> purchase(PurchaseOffer offer);
+
+  /// 購入の復元。復元できたら true。
+  Future<bool> restore();
+}
+
+class FreeEntitlementService implements EntitlementService {
+  const FreeEntitlementService();
+  @override
+  Future<bool> isPremium() async => false;
+  @override
+  Future<List<PurchaseOffer>> offers() async => const [];
+  @override
+  Future<PurchaseOutcome> purchase(PurchaseOffer offer) async => PurchaseOutcome.unavailable;
+  @override
+  Future<bool> restore() async => false;
+}
+
+/// RevenueCat のキー。ビルド時に `--dart-define` で渡す（ソースにキーを書かない）。
+///   --dart-define=REVENUECAT_IOS_KEY=appl_xxx --dart-define=REVENUECAT_ANDROID_KEY=goog_xxx
+const revenueCatIosKey = String.fromEnvironment('REVENUECAT_IOS_KEY');
+const revenueCatAndroidKey = String.fromEnvironment('REVENUECAT_ANDROID_KEY');
+
+/// RevenueCat のダッシュボードで作るエンタイトルメントの ID。
+const premiumEntitlementId = 'premium';
+
+class RevenueCatEntitlementService implements EntitlementService {
+  RevenueCatEntitlementService(this.apiKey, {this.entitlementId = premiumEntitlementId});
+
+  final String apiKey;
+  final String entitlementId;
+  Future<void>? _configured;
+  final Map<String, Package> _packages = {};
+
+  /// 最初に必要になったときに初期化する（起動時には初期化しない）。
+  Future<void> _ensureConfigured() => _configured ??= Purchases.configure(PurchasesConfiguration(apiKey));
+
+  bool _active(CustomerInfo info) => info.entitlements.active.containsKey(entitlementId);
+
+  @override
+  Future<bool> isPremium() async {
+    try {
+      await _ensureConfigured();
+      return _active(await Purchases.getCustomerInfo());
+    } catch (e) {
+      debugPrint('isPremium failed: $e');
+      return false;
+    }
+  }
+
+  @override
+  Future<List<PurchaseOffer>> offers() async {
+    try {
+      await _ensureConfigured();
+      final offering = (await Purchases.getOfferings()).current;
+      if (offering == null) return const [];
+      _packages.clear();
+      final out = <PurchaseOffer>[];
+      for (final p in offering.availablePackages) {
+        final period = switch (p.packageType) {
+          PackageType.monthly => PurchasePeriod.monthly,
+          PackageType.annual => PurchasePeriod.annual,
+          _ => null,
+        };
+        if (period == null) continue;
+        _packages[p.identifier] = p;
+        final intro = p.storeProduct.introductoryPrice;
+        out.add(PurchaseOffer(
+          id: p.identifier,
+          period: period,
+          priceString: p.storeProduct.priceString,
+          hasFreeTrial: intro != null && intro.price == 0,
+        ));
+      }
+      // 月額 → 年額の順。
+      out.sort((a, b) => a.period.index.compareTo(b.period.index));
+      return out;
+    } catch (e) {
+      debugPrint('offers failed: $e');
+      return const [];
+    }
+  }
+
+  @override
+  Future<PurchaseOutcome> purchase(PurchaseOffer offer) async {
+    final package = _packages[offer.id];
+    if (package == null) return PurchaseOutcome.unavailable;
+    try {
+      await _ensureConfigured();
+      final result = await Purchases.purchase(PurchaseParams.package(package));
+      return _active(result.customerInfo) ? PurchaseOutcome.success : PurchaseOutcome.failed;
+    } on PlatformException catch (e) {
+      final code = PurchasesErrorHelper.getErrorCode(e);
+      return code == PurchasesErrorCode.purchaseCancelledError
+          ? PurchaseOutcome.cancelled
+          : PurchaseOutcome.failed;
+    } catch (e) {
+      debugPrint('purchase failed: $e');
+      return PurchaseOutcome.failed;
+    }
+  }
+
+  @override
+  Future<bool> restore() async {
+    try {
+      await _ensureConfigured();
+      return _active(await Purchases.restorePurchases());
+    } catch (e) {
+      debugPrint('restore failed: $e');
+      return false;
+    }
+  }
+}
+
+/// このプラットフォームの購入キー。なければ空（購入機能は「準備中」になる）。
+String purchaseKeyFor(TargetPlatform platform) => switch (platform) {
+      TargetPlatform.iOS => revenueCatIosKey,
+      TargetPlatform.android => revenueCatAndroidKey,
+      _ => '',
+    };
+
+final entitlementServiceProvider = Provider<EntitlementService>((ref) {
+  final key = purchaseKeyFor(defaultTargetPlatform);
+  return key.isEmpty ? const FreeEntitlementService() : RevenueCatEntitlementService(key);
+});
+
+/// プレミアムかどうか。Kids/Junior は、すべて無料なので購入の SDK を呼ばない（通信を発生させない）。
+final isPremiumProvider = FutureProvider<bool>((ref) async {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null || band.isChild) return false;
+  return ref.watch(entitlementServiceProvider).isPremium();
+});
+
+/// 購入できるプラン（プレミアム画面を開いたときに取得する）。
+final offersProvider = FutureProvider.autoDispose<List<PurchaseOffer>>(
+  (ref) => ref.watch(entitlementServiceProvider).offers(),
+);
