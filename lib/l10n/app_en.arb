@@ -368,5 +368,22 @@
   "@battleRank": {"placeholders": {"n": {"type": "int"}}},
   "battleAgain": "Play again",
   "battleChangeSettings": "Change settings",
-  "battleExit": "Exit"
+  "battleExit": "Exit",
+  "battleKind": "Quiz type",
+  "battleKindAll": "All",
+  "battleKindTrueFalse": "True / false",
+  "battleKindChoice": "Multiple choice",
+  "battleGenre": "Genre",
+  "battleGenreAll": "All",
+  "battleTimeLimit": "Time limit",
+  "battleTimeOff": "None",
+  "battleSeconds": "{n} sec",
+  "@battleSeconds": {"placeholders": {"n": {"type": "int"}}},
+  "battleSecondsLeft": "{n} sec left",
+  "@battleSecondsLeft": {"placeholders": {"n": {"type": "int"}}},
+  "battleTimeHint": "Faster answers earn bonus points (used to break ties).",
+  "battleCorrectIs": "The answer: {answer}",
+  "@battleCorrectIs": {"placeholders": {"answer": {"type": "String"}}},
+  "battlePoints": "{n} pts",
+  "@battlePoints": {"placeholders": {"n": {"type": "int"}}}
 }

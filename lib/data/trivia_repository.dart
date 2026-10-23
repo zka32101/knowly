@@ -32,6 +32,7 @@ class TriviaRepository {
   TriviaRepository(
     this.items, {
     List<QuizItem> quizzes = const [],
+    this.choiceQuizzes = const [],
     List<WhyLink> whyLinks = const [],
     this.myths = const [],
     this.events = const [],
@@ -41,6 +42,7 @@ class TriviaRepository {
 
   final List<Trivia> items;
   final List<Myth> myths;
+  final List<ChoiceQuiz> choiceQuizzes;
   final List<CalendarEvent> events;
   final List<Project> projects;
   final Map<String, QuizItem> _quizzes;
@@ -48,6 +50,7 @@ class TriviaRepository {
 
   static const assetPath = 'assets/trivia/trivia.json';
   static const quizAssetPath = 'assets/trivia/quiz.json';
+  static const choiceQuizAssetPath = 'assets/trivia/quiz_choice.json';
   static const whyAssetPath = 'assets/trivia/why_chains.json';
   static const mythAssetPath = 'assets/trivia/myths.json';
   static const calendarAssetPath = 'assets/trivia/calendar.json';
@@ -63,6 +66,11 @@ class TriviaRepository {
         jsonDecode(await b.loadString(quizAssetPath)) as Map<String, dynamic>;
     final quizzes = (quizDecoded['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
+        .toList();
+    final choiceDecoded =
+        jsonDecode(await b.loadString(choiceQuizAssetPath)) as Map<String, dynamic>;
+    final choiceQuizzes = (choiceDecoded['items'] as List)
+        .map((e) => ChoiceQuiz.fromJson(e as Map<String, dynamic>))
         .toList();
     final whyDecoded = jsonDecode(await b.loadString(whyAssetPath)) as Map<String, dynamic>;
     final whyLinks = (whyDecoded['links'] as List)
@@ -82,6 +90,7 @@ class TriviaRepository {
         .toList();
     return TriviaRepository(list,
         quizzes: quizzes,
+        choiceQuizzes: choiceQuizzes,
         whyLinks: whyLinks,
         myths: myths,
         events: events,

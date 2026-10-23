@@ -6,37 +6,50 @@ import 'package:go_router/go_router.dart';
 
 import '../data/trivia_repository.dart';
 import '../l10n/app_localizations.dart';
+import '../l10n/labels.dart';
 import '../logic/quiz_game.dart';
 import '../models/age_band.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
-import '../widgets/ja_wrap_text.dart';
+import '../widgets/quiz_play.dart';
 
 /// 出題の乱数。テストでは固定する。
 final quizRandomProvider = Provider<Random>((ref) => Random());
 
-/// 対戦に出せる問題。いま表示できる雑学のうち、○×クイズがあるもの。
+/// 対戦などに出せる問題。いま表示できる雑学のうち、○×クイズ・選択式クイズがあるもの。
 final battlePoolProvider = Provider<List<BattleQuestion>>((ref) {
   final repo = ref.watch(triviaRepositoryProvider);
   final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
   final lang = ref.watch(contentLanguageProvider);
-  return [
-    for (final t in ref.watch(allEligibleProvider))
-      if (repo.quizFor(t.id) case final quiz?)
-        if (quiz.forLanguage(lang) case final q?)
-          if (t.levelFor(band, lang, allowDraft: kAllowDraftContent) case final level?)
-            BattleQuestion(
-              factId: t.id,
-              statement: q.statement,
-              answer: q.answer,
-              explanation: level.body,
-              illustration: t.illustration,
-            ),
-  ];
+  final out = <BattleQuestion>[];
+  for (final t in ref.watch(allEligibleProvider)) {
+    final level = t.levelFor(band, lang, allowDraft: kAllowDraftContent);
+    if (level == null) continue;
+    BattleQuestion make(String statement, List<String> options, int correct, bool tf) =>
+        BattleQuestion(
+          factId: t.id,
+          statement: statement,
+          options: options,
+          correct: correct,
+          explanation: level.body,
+          illustration: t.illustration,
+          category: t.category,
+          isTrueFalse: tf,
+        );
+    final quiz = repo.quizFor(t.id)?.forLanguage(lang);
+    if (quiz != null) {
+      out.add(make(quiz.statement, const ['○', '✕'], quiz.answer ? 0 : 1, true));
+    }
+    for (final c in repo.choiceQuizzes) {
+      if (c.factId != t.id) continue;
+      final q = c.forLanguage(lang);
+      if (q != null) out.add(make(q.question, q.options, q.answer, false));
+    }
+  }
+  return out;
 });
 
-const _avatars = ['🐶', '🐱', '🐰', '🐻'];
-const _colors = [Colors.orange, Colors.pink, Colors.teal, Colors.indigo];
+enum _Kind { all, trueFalse, choice }
 
 class QuizBattleScreen extends ConsumerStatefulWidget {
   const QuizBattleScreen({super.key});
@@ -48,8 +61,12 @@ class QuizBattleScreen extends ConsumerStatefulWidget {
 class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
   int _players = 1;
   int _rounds = 5;
+  int? _timeLimit;
+  _Kind _kind = _Kind.all;
+  String? _category;
   final _nameControllers = List.generate(4, (_) => TextEditingController());
   QuizGame? _game;
+  int _gameId = 0;
 
   @override
   void dispose() {
@@ -64,14 +81,26 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
     return typed.isEmpty ? l.battlePlayerDefault(p + 1) : typed;
   }
 
+  List<BattleQuestion> _filtered(List<BattleQuestion> pool) => [
+        for (final q in pool)
+          if ((_kind == _Kind.all ||
+                  (_kind == _Kind.trueFalse) == q.isTrueFalse) &&
+              (_category == null || q.category == _category))
+            q,
+      ];
+
   void _start(AppLocalizations l) {
-    final pool = ref.read(battlePoolProvider);
+    final pool = _filtered(ref.read(battlePoolProvider));
     if (pool.isEmpty) return;
     final questions = pickQuestions(pool, _rounds, ref.read(quizRandomProvider));
-    setState(() => _game = QuizGame(
-          names: [for (var p = 0; p < _players; p++) _name(l, p)],
-          questions: questions,
-        ));
+    setState(() {
+      _gameId++;
+      _game = QuizGame(
+        names: [for (var p = 0; p < _players; p++) _name(l, p)],
+        questions: questions,
+        timeLimit: _timeLimit,
+      );
+    });
   }
 
   @override
@@ -81,18 +110,29 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(l.battleTitle)),
       body: SafeArea(
-        child: game == null ? _setup(l) : _play(l, game),
+        child: game == null
+            ? _setup(l)
+            : QuizPlay(
+                key: ValueKey(_gameId),
+                game: game,
+                finishedBuilder: (context, g) => _finished(l, g),
+              ),
       ),
     );
   }
 
-  // ---- 設定 ----
   Widget _setup(AppLocalizations l) {
     final theme = Theme.of(context);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
-    final available = ref.watch(battlePoolProvider).length;
-    final lang = ref.watch(contentLanguageProvider);
-    final rounds = [for (final r in const [5, 10]) if (r <= available || r == 5) r];
+    final pool = ref.watch(battlePoolProvider);
+    final available = _filtered(pool).length;
+    final categories = {for (final q in pool) q.category}.toList()..sort();
+
+    Widget heading(String text) => Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 8),
+          child: Text(text, style: theme.textTheme.titleMedium),
+        );
+
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
@@ -116,7 +156,7 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
             padding: const EdgeInsets.symmetric(vertical: 4),
             child: Row(
               children: [
-                Text(_avatars[p], style: const TextStyle(fontSize: 28)),
+                Text(quizAvatars[p], style: const TextStyle(fontSize: 28)),
                 const SizedBox(width: 12),
                 Expanded(
                   child: TextField(
@@ -133,13 +173,11 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
               ],
             ),
           ),
-        const SizedBox(height: 16),
-        Text(l.battleRounds, style: theme.textTheme.titleMedium),
-        const SizedBox(height: 8),
+        heading(l.battleRounds),
         Wrap(
           spacing: 8,
           children: [
-            for (final r in rounds)
+            for (final r in const [5, 10])
               ChoiceChip(
                 key: Key('battle_rounds_$r'),
                 label: Text(l.battleRoundCount(r)),
@@ -148,140 +186,90 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
               ),
           ],
         ),
+        heading(l.battleKind),
+        Wrap(
+          spacing: 8,
+          children: [
+            ChoiceChip(
+              key: const Key('battle_kind_all'),
+              label: Text(l.battleKindAll),
+              selected: _kind == _Kind.all,
+              onSelected: (_) => setState(() => _kind = _Kind.all),
+            ),
+            ChoiceChip(
+              key: const Key('battle_kind_tf'),
+              label: Text(l.battleKindTrueFalse),
+              selected: _kind == _Kind.trueFalse,
+              onSelected: (_) => setState(() => _kind = _Kind.trueFalse),
+            ),
+            ChoiceChip(
+              key: const Key('battle_kind_choice'),
+              label: Text(l.battleKindChoice),
+              selected: _kind == _Kind.choice,
+              onSelected: (_) => setState(() => _kind = _Kind.choice),
+            ),
+          ],
+        ),
+        heading(l.battleGenre),
+        Wrap(
+          spacing: 8,
+          children: [
+            ChoiceChip(
+              key: const Key('battle_genre_all'),
+              label: Text(l.battleGenreAll),
+              selected: _category == null,
+              onSelected: (_) => setState(() => _category = null),
+            ),
+            for (final c in categories)
+              ChoiceChip(
+                key: Key('battle_genre_$c'),
+                label: Text(categoryLabel(l, c)),
+                selected: _category == c,
+                onSelected: (_) => setState(() => _category = c),
+              ),
+          ],
+        ),
+        heading(l.battleTimeLimit),
+        Wrap(
+          spacing: 8,
+          children: [
+            ChoiceChip(
+              key: const Key('battle_time_off'),
+              label: Text(l.battleTimeOff),
+              selected: _timeLimit == null,
+              onSelected: (_) => setState(() => _timeLimit = null),
+            ),
+            for (final s in const [10, 20])
+              ChoiceChip(
+                key: Key('battle_time_$s'),
+                label: Text(l.battleSeconds(s)),
+                selected: _timeLimit == s,
+                onSelected: (_) => setState(() => _timeLimit = s),
+              ),
+          ],
+        ),
         const SizedBox(height: 8),
+        if (_timeLimit != null) Text(l.battleTimeHint, style: theme.textTheme.bodySmall),
         if (band.isChild) Text(l.battleHandHint, style: theme.textTheme.bodySmall),
         const SizedBox(height: 24),
         FilledButton(
           key: const Key('battle_start'),
           style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(56)),
           onPressed: available == 0 ? null : () => _start(l),
-          child: Text(l.battleStart, style: TextStyle(fontSize: lang == 'ja' ? 20 : 18)),
+          child: Text(l.battleStart, style: const TextStyle(fontSize: 20)),
         ),
-        if (available == 0) Text(l.battleNoQuestions),
+        if (available == 0) Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Text(l.battleNoQuestions),
+        ),
       ],
     );
   }
 
-  // ---- 対戦中 ----
-  Widget _play(AppLocalizations l, QuizGame game) {
-    if (game.phase == BattlePhase.finished) return _finished(l, game);
-    final theme = Theme.of(context);
-    final lang = ref.watch(contentLanguageProvider);
-    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
-    final wrap = lang == 'ja' && band.isChild;
-    final q = game.question;
-    final reveal = game.phase == BattlePhase.reveal;
-
-    return ListView(
-      padding: const EdgeInsets.all(20),
-      children: [
-        Text(l.battleRoundOf(game.round + 1, game.questions.length),
-            key: const Key('battle_round'),
-            textAlign: TextAlign.center,
-            style: theme.textTheme.labelLarge),
-        const SizedBox(height: 8),
-        if (!game.isSolo) _scoreBar(l, game),
-        const SizedBox(height: 16),
-        WrapText(q.statement,
-            key: const Key('battle_statement'),
-            wordWrap: lang == 'ja',
-            textAlign: TextAlign.center,
-            style: theme.textTheme.headlineSmall),
-        const SizedBox(height: 24),
-        if (!reveal) ...[
-          if (!game.isSolo)
-            Container(
-              key: const Key('battle_turn'),
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              decoration: BoxDecoration(
-                color: _colors[game.turn].withValues(alpha: 0.15),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                '${_avatars[game.turn]} ${l.battleTurnOf(game.names[game.turn])}',
-                textAlign: TextAlign.center,
-                style: theme.textTheme.titleLarge,
-              ),
-            ),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              Expanded(
-                child: FilledButton(
-                  key: const Key('battle_true'),
-                  style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(80)),
-                  onPressed: () => setState(() => game.answer(true)),
-                  child: Text('○ ${l.quizTrue}', style: const TextStyle(fontSize: 22)),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: FilledButton.tonal(
-                  key: const Key('battle_false'),
-                  style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(80)),
-                  onPressed: () => setState(() => game.answer(false)),
-                  child: Text('✕ ${l.quizFalse}', style: const TextStyle(fontSize: 22)),
-                ),
-              ),
-            ],
-          ),
-        ] else ...[
-          Text(
-            q.answer ? '○ ${l.quizTrue}' : '✕ ${l.quizFalse}',
-            key: const Key('battle_answer'),
-            textAlign: TextAlign.center,
-            style: theme.textTheme.headlineMedium,
-          ),
-          const SizedBox(height: 12),
-          for (var p = 0; p < game.playerCount; p++)
-            ListTile(
-              key: Key('battle_result_$p'),
-              dense: true,
-              leading: Text(_avatars[p], style: const TextStyle(fontSize: 24)),
-              title: Text(game.names[p]),
-              trailing: Icon(
-                game.isCorrect(p)! ? Icons.check_circle : Icons.cancel,
-                color: game.isCorrect(p)! ? Colors.green : theme.colorScheme.error,
-              ),
-            ),
-          const SizedBox(height: 12),
-          WrapText(q.explanation,
-              wordWrap: wrap,
-              textAlign: TextAlign.center,
-              style: theme.textTheme.bodyLarge),
-          const SizedBox(height: 16),
-          FilledButton(
-            key: const Key('battle_next'),
-            onPressed: () => setState(game.next),
-            child: Text(game.isLastRound ? l.battleSeeResult : l.quizNext),
-          ),
-        ],
-      ],
-    );
-  }
-
-  Widget _scoreBar(AppLocalizations l, QuizGame game) {
-    final scores = game.scores;
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 12,
-      runSpacing: 4,
-      children: [
-        for (var p = 0; p < game.playerCount; p++)
-          Chip(
-            key: Key('battle_score_$p'),
-            avatar: Text(_avatars[p]),
-            label: Text('${game.names[p]} ${scores[p]}'),
-            side: BorderSide(color: _colors[p]),
-          ),
-      ],
-    );
-  }
-
-  // ---- 結果 ----
   Widget _finished(AppLocalizations l, QuizGame game) {
     final theme = Theme.of(context);
     final scores = game.scores;
+    final points = game.points;
     final total = game.questions.length;
     final ranks = game.ranks;
     final order = [for (var p = 0; p < game.playerCount; p++) p]
@@ -293,16 +281,17 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
         Text(l.battleFinished,
             textAlign: TextAlign.center, style: theme.textTheme.headlineMedium),
         const SizedBox(height: 12),
-        if (game.isSolo)
+        if (game.isSolo) ...[
           Text(l.battleSoloScore(scores[0], total),
               key: const Key('battle_final'),
               textAlign: TextAlign.center,
-              style: theme.textTheme.headlineSmall)
-        else ...[
+              style: theme.textTheme.headlineSmall),
+          if (game.timed)
+            Text(l.battlePoints(points[0]),
+                textAlign: TextAlign.center, style: theme.textTheme.titleMedium),
+        ] else ...[
           Text(
-            tied
-                ? l.battleDraw
-                : l.battleWinner(game.names[game.winners.first]),
+            tied ? l.battleDraw : l.battleWinner(game.names[game.winners.first]),
             key: const Key('battle_final'),
             textAlign: TextAlign.center,
             style: theme.textTheme.headlineSmall,
@@ -311,9 +300,9 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
           for (final p in order)
             ListTile(
               key: Key('battle_rank_$p'),
-              leading: Text(l.battleRank(ranks[p]),
-                  style: theme.textTheme.titleLarge),
-              title: Text('${_avatars[p]} ${game.names[p]}'),
+              leading: Text(l.battleRank(ranks[p]), style: theme.textTheme.titleLarge),
+              title: Text('${quizAvatars[p]} ${game.names[p]}'),
+              subtitle: game.timed ? Text(l.battlePoints(points[p])) : null,
               trailing: Text('${scores[p]} / $total', style: theme.textTheme.titleMedium),
             ),
         ],

@@ -9,6 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/share.dart';
+import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
@@ -120,6 +121,10 @@ TriviaRepository _repo({bool withSources = false}) {
     }).toList(),
     quizzes: (quiz['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    choiceQuizzes: ((jsonDecode(File('assets/trivia/quiz_choice.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => ChoiceQuiz.fromJson(e as Map<String, dynamic>))
         .toList(),
     whyLinks: (why['links'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
@@ -1840,6 +1845,17 @@ void main() {
   });
 
   group('クイズ対戦', () {
+    Future<void> tapSetup(WidgetTester tester, Key key) async {
+      await tester.scrollUntilVisible(find.byKey(key), 200,
+          scrollable: find
+              .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+              .first);
+      await tester.ensureVisible(find.byKey(key));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(key));
+      await tester.pumpAndSettle();
+    }
+
     Future<void> openQuiz(WidgetTester tester) async {
       await tester.tap(find.byKey(const Key('open_quiz')));
       await tester.pumpAndSettle();
@@ -1860,7 +1876,8 @@ void main() {
     testWidgets('1人: 5問やって、結果が出る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openQuiz(tester);
-      await tester.tap(find.byKey(const Key('battle_start')));
+      await tapSetup(tester, const Key('battle_kind_tf'));
+      await tapSetup(tester, const Key('battle_start'));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('battle_turn')), findsNothing); // 1人は順番表示なし
       await playAll(tester, 1, 5);
@@ -1875,9 +1892,12 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openQuiz(tester);
       await tester.tap(find.byKey(const Key('battle_players_4')));
+      await tapSetup(tester, const Key('battle_kind_tf'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byKey(const Key('battle_name_1')), 'ハナ');
-      await tester.tap(find.byKey(const Key('battle_start')));
+      FocusManager.instance.primaryFocus?.unfocus();
+      await tester.pumpAndSettle();
+      await tapSetup(tester, const Key('battle_start'));
       await tester.pumpAndSettle();
       expect(find.textContaining('プレイヤー1 の ばん'), findsNothing);
       expect(find.textContaining('プレイヤー1'), findsWidgets);
@@ -1896,6 +1916,47 @@ void main() {
       expect(find.byKey(const Key('battle_rank_0')), findsOneWidget);
       expect(find.byKey(const Key('battle_rank_3')), findsOneWidget);
       expect(find.text('ひきわけ！'), findsOneWidget); // 全員同じ答えなので同点
+    });
+
+    testWidgets('選択式だけ: 4択の問題が出て、選んで進める', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openQuiz(tester);
+      await tapSetup(tester, const Key('battle_kind_choice'));
+      await tapSetup(tester, const Key('battle_start'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('battle_true')), findsNothing);
+      await tapSetup(tester, const Key('battle_opt_1'));
+      expect(find.byKey(const Key('battle_answer')), findsOneWidget);
+      expect(find.byKey(const Key('battle_result_0')), findsOneWidget);
+    });
+
+    testWidgets('ジャンル: 選んだカテゴリーの問題だけが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openQuiz(tester);
+      await tapSetup(tester, const Key('battle_genre_space'));
+      await tapSetup(tester, const Key('battle_start'));
+      await tester.pumpAndSettle();
+      final game = tester.state<State>(find.byType(QuizPlay)).widget as QuizPlay;
+      expect(game.game.questions.every((q) => q.category == 'space'), isTrue);
+      expect(game.game.questions, isNotEmpty);
+    });
+
+    testWidgets('時間制限: 時間切れは不正解になり、次の人へ進む', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openQuiz(tester);
+      await tester.tap(find.byKey(const Key('battle_players_2')));
+      await tapSetup(tester, const Key('battle_time_10'));
+      await tapSetup(tester, const Key('battle_start'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('battle_timer')), findsOneWidget);
+      await tester.pump(const Duration(seconds: 10)); // 1人目が時間切れ
+      await tester.pump();
+      expect(find.textContaining('プレイヤー2 の ばん'), findsNothing);
+      expect(find.textContaining('プレイヤー2'), findsWidgets);
+      await tester.pump(const Duration(seconds: 10)); // 2人目も時間切れ → 発表
+      await tester.pump();
+      expect(find.byKey(const Key('battle_answer')), findsOneWidget);
+      expect(find.byIcon(Icons.cancel), findsNWidgets(2));
     });
 
     testWidgets('Kids でも遊べる（通信なし・ひらがな）', (tester) async {

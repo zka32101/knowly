@@ -806,4 +806,52 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get battleExit => 'おわる';
+
+  @override
+  String get battleKind => 'クイズの しゅるい';
+
+  @override
+  String get battleKindAll => 'ぜんぶ';
+
+  @override
+  String get battleKindTrueFalse => '○×';
+
+  @override
+  String get battleKindChoice => 'えらぶ';
+
+  @override
+  String get battleGenre => 'ジャンル';
+
+  @override
+  String get battleGenreAll => 'ぜんぶ';
+
+  @override
+  String get battleTimeLimit => 'せいげんじかん';
+
+  @override
+  String get battleTimeOff => 'なし';
+
+  @override
+  String battleSeconds(int n) {
+    return '$nびょう';
+  }
+
+  @override
+  String battleSecondsLeft(int n) {
+    return 'のこり $nびょう';
+  }
+
+  @override
+  String get battleTimeHint =>
+      'はやく こたえるほど、おまけの てんが ふえるよ（おなじ せいかいすうの ときに くらべる）。';
+
+  @override
+  String battleCorrectIs(String answer) {
+    return 'せいかいは「$answer」';
+  }
+
+  @override
+  String battlePoints(int n) {
+    return '$nてん';
+  }
 }

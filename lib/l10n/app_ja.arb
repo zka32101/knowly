@@ -368,5 +368,22 @@
   "@battleRank": {"placeholders": {"n": {"type": "int"}}},
   "battleAgain": "もういちど",
   "battleChangeSettings": "せっていを かえる",
-  "battleExit": "おわる"
+  "battleExit": "おわる",
+  "battleKind": "クイズの しゅるい",
+  "battleKindAll": "ぜんぶ",
+  "battleKindTrueFalse": "○×",
+  "battleKindChoice": "えらぶ",
+  "battleGenre": "ジャンル",
+  "battleGenreAll": "ぜんぶ",
+  "battleTimeLimit": "せいげんじかん",
+  "battleTimeOff": "なし",
+  "battleSeconds": "{n}びょう",
+  "@battleSeconds": {"placeholders": {"n": {"type": "int"}}},
+  "battleSecondsLeft": "のこり {n}びょう",
+  "@battleSecondsLeft": {"placeholders": {"n": {"type": "int"}}},
+  "battleTimeHint": "はやく こたえるほど、おまけの てんが ふえるよ（おなじ せいかいすうの ときに くらべる）。",
+  "battleCorrectIs": "せいかいは「{answer}」",
+  "@battleCorrectIs": {"placeholders": {"answer": {"type": "String"}}},
+  "battlePoints": "{n}てん",
+  "@battlePoints": {"placeholders": {"n": {"type": "int"}}}
 }

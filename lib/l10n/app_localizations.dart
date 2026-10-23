@@ -1585,6 +1585,84 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'おわる'**
   String get battleExit;
+
+  /// No description provided for @battleKind.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズの しゅるい'**
+  String get battleKind;
+
+  /// No description provided for @battleKindAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぜんぶ'**
+  String get battleKindAll;
+
+  /// No description provided for @battleKindTrueFalse.
+  ///
+  /// In ja, this message translates to:
+  /// **'○×'**
+  String get battleKindTrueFalse;
+
+  /// No description provided for @battleKindChoice.
+  ///
+  /// In ja, this message translates to:
+  /// **'えらぶ'**
+  String get battleKindChoice;
+
+  /// No description provided for @battleGenre.
+  ///
+  /// In ja, this message translates to:
+  /// **'ジャンル'**
+  String get battleGenre;
+
+  /// No description provided for @battleGenreAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぜんぶ'**
+  String get battleGenreAll;
+
+  /// No description provided for @battleTimeLimit.
+  ///
+  /// In ja, this message translates to:
+  /// **'せいげんじかん'**
+  String get battleTimeLimit;
+
+  /// No description provided for @battleTimeOff.
+  ///
+  /// In ja, this message translates to:
+  /// **'なし'**
+  String get battleTimeOff;
+
+  /// No description provided for @battleSeconds.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}びょう'**
+  String battleSeconds(int n);
+
+  /// No description provided for @battleSecondsLeft.
+  ///
+  /// In ja, this message translates to:
+  /// **'のこり {n}びょう'**
+  String battleSecondsLeft(int n);
+
+  /// No description provided for @battleTimeHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'はやく こたえるほど、おまけの てんが ふえるよ（おなじ せいかいすうの ときに くらべる）。'**
+  String get battleTimeHint;
+
+  /// No description provided for @battleCorrectIs.
+  ///
+  /// In ja, this message translates to:
+  /// **'せいかいは「{answer}」'**
+  String battleCorrectIs(String answer);
+
+  /// No description provided for @battlePoints.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}てん'**
+  String battlePoints(int n);
 }
 
 class _AppLocalizationsDelegate

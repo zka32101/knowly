@@ -142,6 +142,45 @@ void main() {
     });
   });
 
+  group('選択式クイズ', () {
+    final choice = (jsonDecode(File('assets/trivia/quiz_choice.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List;
+    final byId = {for (final t in items) t.id: t};
+
+    test('実在する Kids/Junior 向けの雑学に紐づき、id が重複しない', () {
+      expect(choice, isNotEmpty);
+      expect(choice.map((c) => c['id']).toSet().length, choice.length);
+      for (final c in choice) {
+        final t = byId[c['factId']];
+        expect(t, isNotNull, reason: '${c['id']}');
+        expect(t!.minAgeBand.index, lessThanOrEqualTo(AgeBand.junior.index), reason: t.id);
+      }
+    });
+
+    test('日英が揃い、選択肢は2〜4個で重複なし・正解の番号が有効', () {
+      for (final c in choice) {
+        for (final lang in ['ja', 'en']) {
+          final m = c[lang] as Map<String, dynamic>;
+          final opts = (m['options'] as List).cast<String>();
+          expect(opts.length, inInclusiveRange(2, 4), reason: '${c['id']}');
+          expect(opts.toSet().length, opts.length, reason: '${c['id']}/$lang');
+          expect(m['answer'] as int, inInclusiveRange(0, opts.length - 1), reason: '${c['id']}');
+          expect((m['question'] as String).trim(), isNotEmpty);
+        }
+        expect(c['ja']['answer'], c['en']['answer'], reason: '${c['id']}');
+        expect((c['ja']['options'] as List).length, (c['en']['options'] as List).length);
+        expect(_kanji.hasMatch(c['ja']['question'] as String), isFalse, reason: '${c['id']}');
+        for (final o in c['ja']['options'] as List) {
+          expect(_kanji.hasMatch(o as String), isFalse, reason: '${c['id']}: $o');
+        }
+      }
+    });
+
+    test('正解の位置が偏っていない（全部同じ番号ではない）', () {
+      expect(choice.map((c) => c['ja']['answer']).toSet().length, greaterThan(2));
+    });
+  });
+
   group('Kids/Junior に出してはいけない話題', () {
     // 性・暴力・戦争・死・宗教・賭け事・薬物などを思わせることば（日本語は部分一致、英語は単語一致）。
     const jaWords = [
@@ -169,6 +208,13 @@ void main() {
       for (final q in quiz) {
         for (final lang in ['ja', 'en']) {
           out.add('quiz ${q['factId']}/$lang: ${q[lang]['statement']}');
+        }
+      }
+      final choice = (jsonDecode(File('assets/trivia/quiz_choice.json').readAsStringSync())
+              as Map<String, dynamic>)['items'] as List;
+      for (final c in choice) {
+        for (final lang in ['ja', 'en']) {
+          out.add('choice ${c['id']}/$lang: ${c[lang]['question']} ${(c[lang]['options'] as List).join(' ')}');
         }
       }
       return out;

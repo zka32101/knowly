@@ -24,3 +24,36 @@ class QuizItem {
   ({String statement, bool answer})? forLanguage(String lang) =>
       statements[lang] ?? statements['en'];
 }
+
+/// 選択式クイズ（4択、2択の比べっこ）。1つの雑学に複数あってもよい。
+class ChoiceQuiz {
+  const ChoiceQuiz({required this.id, required this.factId, required this.texts});
+
+  final String id;
+  final String factId;
+
+  /// 言語 → 問題・選択肢・正解の番号。
+  final Map<String, ({String question, List<String> options, int answer})> texts;
+
+  factory ChoiceQuiz.fromJson(Map<String, dynamic> json) {
+    final texts = <String, ({String question, List<String> options, int answer})>{};
+    for (final lang in ['ja', 'en']) {
+      final m = json[lang] as Map<String, dynamic>?;
+      if (m != null) {
+        texts[lang] = (
+          question: m['question'] as String,
+          options: List<String>.from(m['options'] as List),
+          answer: m['answer'] as int,
+        );
+      }
+    }
+    return ChoiceQuiz(
+      id: json['id'] as String,
+      factId: json['factId'] as String,
+      texts: texts,
+    );
+  }
+
+  ({String question, List<String> options, int answer})? forLanguage(String lang) =>
+      texts[lang] ?? texts['en'];
+}

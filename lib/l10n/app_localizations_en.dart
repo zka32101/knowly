@@ -822,4 +822,52 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get battleExit => 'Exit';
+
+  @override
+  String get battleKind => 'Quiz type';
+
+  @override
+  String get battleKindAll => 'All';
+
+  @override
+  String get battleKindTrueFalse => 'True / false';
+
+  @override
+  String get battleKindChoice => 'Multiple choice';
+
+  @override
+  String get battleGenre => 'Genre';
+
+  @override
+  String get battleGenreAll => 'All';
+
+  @override
+  String get battleTimeLimit => 'Time limit';
+
+  @override
+  String get battleTimeOff => 'None';
+
+  @override
+  String battleSeconds(int n) {
+    return '$n sec';
+  }
+
+  @override
+  String battleSecondsLeft(int n) {
+    return '$n sec left';
+  }
+
+  @override
+  String get battleTimeHint =>
+      'Faster answers earn bonus points (used to break ties).';
+
+  @override
+  String battleCorrectIs(String answer) {
+    return 'The answer: $answer';
+  }
+
+  @override
+  String battlePoints(int n) {
+    return '$n pts';
+  }
 }

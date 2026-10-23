@@ -1,0 +1,761 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "factId": "octopus_blue_blood",
+   "ja": {
+    "question": "タコの ちは なにいろ？",
+    "options": [
+     "あか",
+     "あお",
+     "みどり",
+     "きいろ"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "What color is an octopus's blood?",
+    "options": [
+     "Red",
+     "Blue",
+     "Green",
+     "Yellow"
+    ],
+    "answer": 1
+   },
+   "id": "octopus_blue_blood_0"
+  },
+  {
+   "factId": "honey_never_spoils",
+   "ja": {
+    "question": "くさりにくい たべものは どれ？",
+    "options": [
+     "はちみつ",
+     "ぎゅうにゅう",
+     "たまご",
+     "さしみ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which food hardly ever goes bad?",
+    "options": [
+     "Honey",
+     "Milk",
+     "Eggs",
+     "Sashimi"
+    ],
+    "answer": 0
+   },
+   "id": "honey_never_spoils_1"
+  },
+  {
+   "factId": "venus_day_longer",
+   "ja": {
+    "question": "1にちが 1ねんより ながい わくせいは？",
+    "options": [
+     "ちきゅう",
+     "きんせい",
+     "かせい",
+     "もくせい"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "On which planet is one day longer than one year?",
+    "options": [
+     "Earth",
+     "Venus",
+     "Mars",
+     "Jupiter"
+    ],
+    "answer": 1
+   },
+   "id": "venus_day_longer_2"
+  },
+  {
+   "factId": "baby_bones",
+   "ja": {
+    "question": "おとなの ほねは ぜんぶで なんぼん？",
+    "options": [
+     "106ぽん",
+     "206ぽん",
+     "306ぽん",
+     "406ぽん"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "How many bones does an adult have?",
+    "options": [
+     "106",
+     "206",
+     "306",
+     "406"
+    ],
+    "answer": 1
+   },
+   "id": "baby_bones_3"
+  },
+  {
+   "factId": "baby_bones",
+   "ja": {
+    "question": "あかちゃんと おとな、ほねが おおいのは？",
+    "options": [
+     "あかちゃん",
+     "おとな"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Who has more bones: a baby or an adult?",
+    "options": [
+     "A baby",
+     "An adult"
+    ],
+    "answer": 0
+   },
+   "id": "baby_bones_4"
+  },
+  {
+   "factId": "giraffe_seven_vertebrae",
+   "ja": {
+    "question": "キリンの くびの ほねは なんこ？",
+    "options": [
+     "3こ",
+     "7こ",
+     "14こ",
+     "30こ"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "How many neck bones does a giraffe have?",
+    "options": [
+     "3",
+     "7",
+     "14",
+     "30"
+    ],
+    "answer": 1
+   },
+   "id": "giraffe_seven_vertebrae_5"
+  },
+  {
+   "factId": "sea_otters_hold_hands",
+   "ja": {
+    "question": "ラッコが ねるとき、ながされないように することは？",
+    "options": [
+     "てを つなぐ",
+     "いわに のぼる",
+     "うみに もぐる",
+     "すに かくれる"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What do sea otters do while sleeping so they don't drift apart?",
+    "options": [
+     "Hold hands",
+     "Climb a rock",
+     "Dive down",
+     "Hide in a nest"
+    ],
+    "answer": 0
+   },
+   "id": "sea_otters_hold_hands_6"
+  },
+  {
+   "factId": "no_sound_in_space",
+   "ja": {
+    "question": "うちゅうでは なにが つたわらない？",
+    "options": [
+     "おと",
+     "ひかり",
+     "でんぱ",
+     "ねつ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What cannot travel through outer space?",
+    "options": [
+     "Sound",
+     "Light",
+     "Radio waves",
+     "Heat from the Sun"
+    ],
+    "answer": 0
+   },
+   "id": "no_sound_in_space_7"
+  },
+  {
+   "factId": "ice_floats",
+   "ja": {
+    "question": "こおりが みずに うくのは なぜ？",
+    "options": [
+     "みずより かるいから",
+     "つめたいから",
+     "しろいから",
+     "かたいから"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Why does ice float on water?",
+    "options": [
+     "It is lighter than water",
+     "It is cold",
+     "It is white",
+     "It is hard"
+    ],
+    "answer": 0
+   },
+   "id": "ice_floats_8"
+  },
+  {
+   "factId": "moon_moving_away",
+   "ja": {
+    "question": "つきは ちきゅうから どうなってる？",
+    "options": [
+     "すこしずつ とおざかる",
+     "すこしずつ ちかづく",
+     "ずっと かわらない",
+     "ぐるぐる はなれる"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What is the Moon slowly doing relative to Earth?",
+    "options": [
+     "Moving away",
+     "Moving closer",
+     "Staying the same",
+     "Spinning off"
+    ],
+    "answer": 0
+   },
+   "id": "moon_moving_away_9"
+  },
+  {
+   "factId": "sunlight_8_minutes",
+   "ja": {
+    "question": "たいようの ひかりが ちきゅうに とどく じかんは？",
+    "options": [
+     "8びょう",
+     "8ふん",
+     "8じかん",
+     "8にち"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "How long does sunlight take to reach Earth?",
+    "options": [
+     "8 seconds",
+     "8 minutes",
+     "8 hours",
+     "8 days"
+    ],
+    "answer": 1
+   },
+   "id": "sunlight_8_minutes_10"
+  },
+  {
+   "factId": "heart_100k",
+   "ja": {
+    "question": "しんぞうは 1にちに なんかい うごく？",
+    "options": [
+     "100かい",
+     "1000かい",
+     "1まんかい",
+     "10まんかい"
+    ],
+    "answer": 3
+   },
+   "en": {
+    "question": "About how many times does the heart beat in a day?",
+    "options": [
+     "100",
+     "1,000",
+     "10,000",
+     "100,000"
+    ],
+    "answer": 3
+   },
+   "id": "heart_100k_11"
+  },
+  {
+   "factId": "antarctica_desert",
+   "ja": {
+    "question": "せかいで いちばん おおきい さばくは？",
+    "options": [
+     "サハラさばく",
+     "ゴビさばく",
+     "なんきょくたいりく",
+     "アラビアさばく"
+    ],
+    "answer": 2
+   },
+   "en": {
+    "question": "What is the largest desert in the world?",
+    "options": [
+     "Sahara",
+     "Gobi",
+     "Antarctica",
+     "Arabian"
+    ],
+    "answer": 2
+   },
+   "id": "antarctica_desert_12"
+  },
+  {
+   "factId": "japan_islands",
+   "ja": {
+    "question": "にほんの しまの かずは？",
+    "options": [
+     "100こ ぐらい",
+     "1000こ ぐらい",
+     "1まん4000こ ぐらい",
+     "10まん ぐらい"
+    ],
+    "answer": 2
+   },
+   "en": {
+    "question": "About how many islands does Japan have?",
+    "options": [
+     "About 100",
+     "About 1,000",
+     "About 14,000",
+     "About 100,000"
+    ],
+    "answer": 2
+   },
+   "id": "japan_islands_13"
+  },
+  {
+   "factId": "spider_not_insect",
+   "ja": {
+    "question": "むしの なかま(こんちゅう)じゃ ないのは？",
+    "options": [
+     "クモ",
+     "アリ",
+     "チョウ",
+     "ハチ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which of these is NOT an insect?",
+    "options": [
+     "Spider",
+     "Ant",
+     "Butterfly",
+     "Bee"
+    ],
+    "answer": 0
+   },
+   "id": "spider_not_insect_14"
+  },
+  {
+   "factId": "mosquito_female_bites",
+   "ja": {
+    "question": "ひとの ちを すう か は？",
+    "options": [
+     "オス",
+     "メス",
+     "りょうほう",
+     "こども"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "Which mosquitoes bite people to drink blood?",
+    "options": [
+     "Males",
+     "Females",
+     "Both",
+     "Only babies"
+    ],
+    "answer": 1
+   },
+   "id": "mosquito_female_bites_15"
+  },
+  {
+   "factId": "beetle_quarter",
+   "ja": {
+    "question": "どうぶつの なかまで いちばん しゅるいが おおいのは？",
+    "options": [
+     "ほにゅうるい",
+     "さかな",
+     "かぶとむしの なかま",
+     "とり"
+    ],
+    "answer": 2
+   },
+   "en": {
+    "question": "Which animal group has the most kinds?",
+    "options": [
+     "Mammals",
+     "Fish",
+     "Beetles",
+     "Birds"
+    ],
+    "answer": 2
+   },
+   "id": "beetle_quarter_16"
+  },
+  {
+   "factId": "shinkansen_1964",
+   "ja": {
+    "question": "しんかんせんが はしりはじめた とし は？",
+    "options": [
+     "1924ねん",
+     "1964ねん",
+     "1984ねん",
+     "2004ねん"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "In which year did the Shinkansen start running?",
+    "options": [
+     "1924",
+     "1964",
+     "1984",
+     "2004"
+    ],
+    "answer": 1
+   },
+   "id": "shinkansen_1964_17"
+  },
+  {
+   "factId": "wright_first_flight",
+   "ja": {
+    "question": "ライトきょうだいの はじめての ひこうは なんびょう？",
+    "options": [
+     "12びょう",
+     "12ふん",
+     "12じかん",
+     "1びょう"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "How long was the Wright brothers' first flight?",
+    "options": [
+     "12 seconds",
+     "12 minutes",
+     "12 hours",
+     "1 second"
+    ],
+    "answer": 0
+   },
+   "id": "wright_first_flight_18"
+  },
+  {
+   "factId": "iss_sunrises",
+   "ja": {
+    "question": "こくさいうちゅうステーションが ちきゅうを 1しゅうする じかんは？",
+    "options": [
+     "90ぷん",
+     "9ふん",
+     "9じかん",
+     "90にち"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "How long does the ISS take to orbit Earth once?",
+    "options": [
+     "90 minutes",
+     "9 minutes",
+     "9 hours",
+     "90 days"
+    ],
+    "answer": 0
+   },
+   "id": "iss_sunrises_19"
+  },
+  {
+   "factId": "watermelon_92_water",
+   "ja": {
+    "question": "スイカの うち、みずは どれくらい？",
+    "options": [
+     "12%",
+     "42%",
+     "72%",
+     "92%"
+    ],
+    "answer": 3
+   },
+   "en": {
+    "question": "How much of a watermelon is water?",
+    "options": [
+     "12%",
+     "42%",
+     "72%",
+     "92%"
+    ],
+    "answer": 3
+   },
+   "id": "watermelon_92_water_20"
+  },
+  {
+   "factId": "peanut_not_nut",
+   "ja": {
+    "question": "らっかせいは なんの なかま？",
+    "options": [
+     "ナッツ",
+     "まめ",
+     "いも",
+     "くだもの"
+    ],
+    "answer": 1
+   },
+   "en": {
+    "question": "What plant family does a peanut belong to?",
+    "options": [
+     "Nuts",
+     "Beans (legumes)",
+     "Potatoes",
+     "Fruits"
+    ],
+    "answer": 1
+   },
+   "id": "peanut_not_nut_21"
+  },
+  {
+   "factId": "apple_floats",
+   "ja": {
+    "question": "りんごが みずに うかぶのは なぜ？",
+    "options": [
+     "くうきが はいっているから",
+     "かるい いろだから",
+     "あまいから",
+     "ちいさいから"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Why do apples float in water?",
+    "options": [
+     "They contain air",
+     "Their color is light",
+     "They are sweet",
+     "They are small"
+    ],
+    "answer": 0
+   },
+   "id": "apple_floats_22"
+  },
+  {
+   "factId": "cicada_17_years",
+   "ja": {
+    "question": "17ねんごとに いっせいに でてくる セミが いる。なんねんごと？",
+    "options": [
+     "3ねん",
+     "7ねん",
+     "17ねん",
+     "50ねん"
+    ],
+    "answer": 2
+   },
+   "en": {
+    "question": "Some cicadas all come out together every how many years?",
+    "options": [
+     "3 years",
+     "7 years",
+     "17 years",
+     "50 years"
+    ],
+    "answer": 2
+   },
+   "id": "cicada_17_years_23"
+  },
+  {
+   "factId": "bee_waggle_dance",
+   "ja": {
+    "question": "ミツバチが はなの ばしょを おしえる ダンスの かたちは？",
+    "options": [
+     "8の じ",
+     "まる",
+     "しかく",
+     "ジグザグ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What shape is the dance bees use to show where flowers are?",
+    "options": [
+     "Figure eight",
+     "Circle",
+     "Square",
+     "Zigzag"
+    ],
+    "answer": 0
+   },
+   "id": "bee_waggle_dance_24"
+  },
+  {
+   "factId": "cats_no_sweet",
+   "ja": {
+    "question": "ネコが かんじない あじは？",
+    "options": [
+     "あまい あじ",
+     "しょっぱい あじ",
+     "すっぱい あじ",
+     "にがい あじ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which taste can cats NOT sense?",
+    "options": [
+     "Sweet",
+     "Salty",
+     "Sour",
+     "Bitter"
+    ],
+    "answer": 0
+   },
+   "id": "cats_no_sweet_25"
+  },
+  {
+   "factId": "eiffel_grows_summer",
+   "ja": {
+    "question": "エッフェルとうは なつに どうなる？",
+    "options": [
+     "すこし たかくなる",
+     "すこし ひくくなる",
+     "かわらない",
+     "まがってしまう"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What happens to the Eiffel Tower in summer?",
+    "options": [
+     "It grows a little taller",
+     "It gets a little shorter",
+     "Nothing",
+     "It bends"
+    ],
+    "answer": 0
+   },
+   "id": "eiffel_grows_summer_26"
+  },
+  {
+   "factId": "saturn_would_float",
+   "ja": {
+    "question": "おおきな おふろに いれたら うく わくせいは？",
+    "options": [
+     "どせい",
+     "ちきゅう",
+     "かせい",
+     "すいせい"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which planet would float in a giant bathtub?",
+    "options": [
+     "Saturn",
+     "Earth",
+     "Mars",
+     "Mercury"
+    ],
+    "answer": 0
+   },
+   "id": "saturn_would_float_27"
+  },
+  {
+   "factId": "crows_recognize_faces",
+   "ja": {
+    "question": "ひとの かおを おぼえる ことで ゆうめいな とりは？",
+    "options": [
+     "カラス",
+     "ペンギン",
+     "フクロウ",
+     "ダチョウ"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which bird is famous for remembering human faces?",
+    "options": [
+     "Crow",
+     "Penguin",
+     "Owl",
+     "Ostrich"
+    ],
+    "answer": 0
+   },
+   "id": "crows_recognize_faces_28"
+  },
+  {
+   "factId": "wombat_cube_poop",
+   "ja": {
+    "question": "ウォンバットの うんちの かたちは？",
+    "options": [
+     "さいころの しかく",
+     "まる",
+     "ほそなが",
+     "ほし"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "What shape is a wombat's poop?",
+    "options": [
+     "Cube",
+     "Round",
+     "Long and thin",
+     "Star"
+    ],
+    "answer": 0
+   },
+   "id": "wombat_cube_poop_29"
+  },
+  {
+   "factId": "sharks_older_than_trees",
+   "ja": {
+    "question": "サメと き(じゅもく)、さきに うまれたのは？",
+    "options": [
+     "サメの なかま",
+     "き"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which came first: sharks or trees?",
+    "options": [
+     "Sharks",
+     "Trees"
+    ],
+    "answer": 0
+   },
+   "id": "sharks_older_than_trees_30"
+  },
+  {
+   "factId": "dragonfly_before_dinosaurs",
+   "ja": {
+    "question": "トンボの なかまと きょうりゅう、さきに いたのは？",
+    "options": [
+     "トンボの なかま",
+     "きょうりゅう"
+    ],
+    "answer": 0
+   },
+   "en": {
+    "question": "Which came first: dragonfly relatives or dinosaurs?",
+    "options": [
+     "Dragonfly relatives",
+     "Dinosaurs"
+    ],
+    "answer": 0
+   },
+   "id": "dragonfly_before_dinosaurs_31"
+  }
+ ]
+}
