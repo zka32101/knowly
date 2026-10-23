@@ -2257,6 +2257,42 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'せつめいが みつかりません。'**
   String get wordNotFound;
+
+  /// No description provided for @wordsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばずかん'**
+  String get wordsTitle;
+
+  /// No description provided for @wordsFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} ことば'**
+  String wordsFound(int n, int total);
+
+  /// No description provided for @wordOfDay.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうの ことば'**
+  String get wordOfDay;
+
+  /// No description provided for @wordQuizTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばクイズ'**
+  String get wordQuizTitle;
+
+  /// No description provided for @wordQuizQuestion.
+  ///
+  /// In ja, this message translates to:
+  /// **'「{term}」の いみは？'**
+  String wordQuizQuestion(String term);
+
+  /// No description provided for @wordsHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばの せつめいを みると、ここに ふえていくよ。'**
+  String get wordsHint;
 }
 
 class _AppLocalizationsDelegate

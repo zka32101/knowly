@@ -133,6 +133,7 @@ class PlayHub extends ConsumerWidget {
     final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
     final due = ref.watch(reviewQuestionsProvider).length;
     final today = ref.watch(nowProvider);
+    final wordsOn = ref.watch(wordsEnabledProvider);
     final doneToday =
         ref.watch(settingsProvider.select((s) => s.dailyResults)).containsKey(dayKey(today));
     return _Hub(
@@ -158,6 +159,12 @@ class PlayHub extends ConsumerWidget {
             subtitle: l.hubDailySub,
             badge: doneToday ? '✓' : null,
             route: '/daily'),
+        if (wordsOn)
+          HubTile(
+              key: const Key('open_wordquiz'),
+              emoji: '💡',
+              title: l.wordQuizTitle,
+              route: '/wordquiz'),
         if (due > 0)
           HubTile(
               key: const Key('open_review'),
@@ -199,6 +206,9 @@ class CollectHub extends ConsumerWidget {
     final earned = defs.where((b) => isEarned(b, stats)).length;
     final stage = mascotStageFor(ref.watch(mascotPointsProvider));
     final capsule = ref.watch(settingsProvider.select((s) => s.capsule));
+    final wordsOn = ref.watch(wordsEnabledProvider);
+    final wordsFound = ref.watch(settingsProvider.select((s) => s.words)).length;
+    final wordsTotal = ref.watch(glossaryListProvider).length;
     final openedToday = capsule != null && capsule.startsWith('${dayKey(ref.watch(nowProvider))}:');
     return _Hub(
       title: l.tabCollect,
@@ -223,6 +233,13 @@ class CollectHub extends ConsumerWidget {
             subtitle: openedToday ? l.capsuleDone : l.capsuleOpen,
             badge: openedToday ? null : '!',
             route: '/capsule'),
+        if (wordsOn)
+          HubTile(
+              key: const Key('open_words'),
+              emoji: '📚',
+              title: l.wordsTitle,
+              subtitle: '$wordsFound / $wordsTotal',
+              route: '/words'),
         HubTile(
             key: const Key('open_badges'),
             emoji: '🏅',

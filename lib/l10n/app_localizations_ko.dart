@@ -1177,4 +1177,26 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get wordNotFound => '설명을 찾지 못했어요.';
+
+  @override
+  String get wordsTitle => '낱말 도감';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '낱말 $total개 중 $n개';
+  }
+
+  @override
+  String get wordOfDay => '오늘의 낱말';
+
+  @override
+  String get wordQuizTitle => '낱말 퀴즈';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '\'$term\'의 뜻은?';
+  }
+
+  @override
+  String get wordsHint => '설명을 본 낱말이 여기에 쌓여요.';
 }

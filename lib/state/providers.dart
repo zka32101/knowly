@@ -9,6 +9,7 @@ import '../logic/search.dart';
 import '../logic/timing.dart';
 import '../models/age_band.dart';
 import '../models/calendar_event.dart';
+import '../models/glossary.dart';
 import '../models/myth.dart';
 import '../models/project.dart';
 import '../models/trivia.dart';
@@ -329,4 +330,22 @@ final mascotPointsProvider = Provider<int>((ref) {
     seen: s.seen.length,
     learned: s.knowledge.values.where((k) => k == Knowledge.learned).length,
   );
+});
+
+/// ことば機能（ことばずかん・ことばクイズ）を使える年代・言語か。
+/// 用語の説明は、Teen/Adult と、Junior の英語だけ（Kids と日本語の子ども向けは対象外）。
+final wordsEnabledProvider = Provider<bool>((ref) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null || band == AgeBand.kids) return false;
+  if (band == AgeBand.junior && ref.watch(contentLanguageProvider) == 'ja') return false;
+  return true;
+});
+
+/// いまの本文の言語の用語（説明のあるものだけ）。
+final glossaryListProvider = Provider<List<(GlossaryEntry, GlossaryText)>>((ref) {
+  final lang = ref.watch(contentLanguageProvider);
+  return [
+    for (final e in ref.watch(triviaRepositoryProvider).glossary)
+      if (e.forLanguage(lang) case final t?) (e, t),
+  ];
 });

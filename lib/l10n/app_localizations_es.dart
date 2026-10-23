@@ -1206,4 +1206,26 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get wordNotFound => 'No se encontró la explicación.';
+
+  @override
+  String get wordsTitle => 'Libro de palabras';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '$n de $total palabras';
+  }
+
+  @override
+  String get wordOfDay => 'Palabra del día';
+
+  @override
+  String get wordQuizTitle => 'Quiz de palabras';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '¿Qué significa «$term»?';
+  }
+
+  @override
+  String get wordsHint => 'Las palabras que consultes se añaden aquí.';
 }

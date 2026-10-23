@@ -680,5 +680,11 @@
   "wordDetail": "In detail",
   "wordFacts": "Facts that use this word",
   "wordHint": "Tap an underlined word to see what it means.",
-  "wordNotFound": "No explanation found."
+  "wordNotFound": "No explanation found.",
+  "wordsTitle": "Word book",
+  "wordsFound": "{n} of {total} words",
+  "wordOfDay": "Word of the day",
+  "wordQuizTitle": "Word quiz",
+  "wordQuizQuestion": "What does \"{term}\" mean?",
+  "wordsHint": "Words you look up are added here."
 }

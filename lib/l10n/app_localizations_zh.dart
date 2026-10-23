@@ -1174,4 +1174,26 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get wordNotFound => '没有找到解释。';
+
+  @override
+  String get wordsTitle => '词语图鉴';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '已掌握 $n / $total 个词';
+  }
+
+  @override
+  String get wordOfDay => '今日词语';
+
+  @override
+  String get wordQuizTitle => '词语测验';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '“$term”是什么意思？';
+  }
+
+  @override
+  String get wordsHint => '查看过解释的词语会加到这里。';
 }

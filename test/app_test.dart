@@ -2870,4 +2870,73 @@ void main() {
       expect(find.text('せつめいが みつかりません。'), findsOneWidget);
     });
   });
+
+  group('ことばずかん・ことばクイズ', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('ことばの説明を見ると、ことばずかんに載る。まだのことばは「？？？」', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_words'));
+      final total = containerOf(tester).read(glossaryListProvider).length;
+      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '0 / $total ことば');
+      expect(find.byKey(const Key('word_of_day')), findsOneWidget);
+      // 今日のことばを開くと、見たことになる
+      await tester.tap(find.byKey(const Key('word_of_day')));
+      await tester.pumpAndSettle();
+      await _back(tester);
+      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '1 / $total ことば');
+      expect(containerOf(tester).read(settingsProvider).words, hasLength(1));
+    });
+
+    testWidgets('見たことばは、名前と説明つきで並ぶ', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'words': ['hemocyanin']});
+      await _open(tester, const Key('open_words'));
+      await _scrollTo(tester, const Key('words_item_hemocyanin'));
+      expect(find.text('ヘモシアニン'), findsWidgets);
+    });
+
+    testWidgets('ことばクイズ: 4択で最後まで遊べ、結果が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_wordquiz'));
+      for (var i = 0; i < 10; i++) {
+        await tester.scrollUntilVisible(find.byKey(const Key('battle_opt_0')), 200,
+            scrollable: find
+                .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+                .first);
+        await tester.tap(find.byKey(const Key('battle_opt_0')));
+        await tester.pumpAndSettle();
+        await tester.scrollUntilVisible(find.byKey(const Key('battle_next')), 200,
+            scrollable: find
+                .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+                .first);
+        await tester.tap(find.byKey(const Key('battle_next')));
+        await tester.pumpAndSettle();
+      }
+      expect(find.byKey(const Key('wordquiz_final')), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).quizAnswered, 10);
+    });
+
+    testWidgets('Kids と日本語の Junior には、ことば機能の入口がない。Teen と英語の Junior にはある', (tester) async {
+      Future<(bool, bool)> entries() async {
+        await _tab(tester, 'tab_collect');
+        final words = find.byKey(const Key('open_words')).evaluate().isNotEmpty;
+        await _tab(tester, 'tab_play');
+        final quiz = find.byKey(const Key('open_wordquiz')).evaluate().isNotEmpty;
+        return (words, quiz);
+      }
+
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(await entries(), (false, false));
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      expect(await entries(), (false, false));
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'junior'}, deviceLanguage: 'en', deviceRegion: 'US');
+      expect(await entries(), (true, true));
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'teen'});
+      expect(await entries(), (true, true));
+    });
+  });
 }

@@ -18,6 +18,7 @@ import 'screens/hubs.dart';
 import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
 import 'screens/word_screen.dart';
+import 'screens/words_screen.dart';
 import 'screens/swipe_quiz_screen.dart';
 import 'screens/zukan_screen.dart';
 import 'widgets/celebration_layer.dart';
@@ -102,6 +103,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/word/:id',
         builder: (_, state) => WordScreen(entryId: state.pathParameters['id']!),
       ),
+      GoRoute(path: '/words', builder: (_, _) => const WordsScreen()),
+      GoRoute(path: '/wordquiz', builder: (_, _) => const WordQuizScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

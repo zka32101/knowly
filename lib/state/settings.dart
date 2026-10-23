@@ -67,6 +67,7 @@ class AppSettings {
     this.celebratedStage,
     this.celebratedBadges,
     this.capsule,
+    this.words = const {},
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -120,6 +121,9 @@ class AppSettings {
   /// 今日のカプセル（"yyyy-MM-dd:雑学のid"）。1日1回。
   final String? capsule;
 
+  /// 説明を見たことのある用語の id（ことばずかん用）。
+  final Set<String> words;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -156,6 +160,7 @@ class AppSettings {
     int? celebratedStage,
     Set<String>? celebratedBadges,
     String? capsule,
+    Set<String>? words,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -184,6 +189,7 @@ class AppSettings {
         celebratedStage: celebratedStage ?? this.celebratedStage,
         celebratedBadges: celebratedBadges ?? this.celebratedBadges,
         capsule: capsule ?? this.capsule,
+        words: words ?? this.words,
       );
 }
 
@@ -242,6 +248,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       quizCorrect: p.getInt('quizCorrect') ?? 0,
       seen: (p.getStringList('seen') ?? const []).toSet(),
       capsule: p.getString('capsule'),
+      words: (p.getStringList('words') ?? const []).toSet(),
       celebratedStage: p.getInt('celebratedStage'),
       celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
@@ -405,6 +412,14 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+  }
+
+  /// 用語の説明を見たことを記録する（ことばずかん用）。
+  void markWordSeen(String id) {
+    if (state.words.contains(id)) return;
+    final words = {...state.words, id};
+    state = state.copyWith(words: words);
+    _prefs.setStringList('words', words.toList());
   }
 
   /// 今日のカプセルで出た雑学を記録する（見た雑学にもなる）。

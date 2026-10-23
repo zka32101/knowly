@@ -358,5 +358,11 @@
   "wordDetail": "Con más detalle",
   "wordFacts": "Datos que usan esta palabra",
   "wordHint": "Toca una palabra subrayada para ver qué significa.",
-  "wordNotFound": "No se encontró la explicación."
+  "wordNotFound": "No se encontró la explicación.",
+  "wordsTitle": "Libro de palabras",
+  "wordsFound": "{n} de {total} palabras",
+  "wordOfDay": "Palabra del día",
+  "wordQuizTitle": "Quiz de palabras",
+  "wordQuizQuestion": "¿Qué significa «{term}»?",
+  "wordsHint": "Las palabras que consultes se añaden aquí."
 }

@@ -1177,4 +1177,26 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get wordNotFound => 'せつめいが みつかりません。';
+
+  @override
+  String get wordsTitle => 'ことばずかん';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '$n / $total ことば';
+  }
+
+  @override
+  String get wordOfDay => 'きょうの ことば';
+
+  @override
+  String get wordQuizTitle => 'ことばクイズ';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '「$term」の いみは？';
+  }
+
+  @override
+  String get wordsHint => 'ことばの せつめいを みると、ここに ふえていくよ。';
 }

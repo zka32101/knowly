@@ -680,5 +680,28 @@
   "wordDetail": "くわしく",
   "wordFacts": "この ことばが でてくる ざつがく",
   "wordHint": "線のついた ことばを タップすると、いみが わかるよ。",
-  "wordNotFound": "せつめいが みつかりません。"
+  "wordNotFound": "せつめいが みつかりません。",
+  "wordsTitle": "ことばずかん",
+  "wordsFound": "{n} / {total} ことば",
+  "@wordsFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "wordOfDay": "きょうの ことば",
+  "wordQuizTitle": "ことばクイズ",
+  "wordQuizQuestion": "「{term}」の いみは？",
+  "@wordQuizQuestion": {
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "wordsHint": "ことばの せつめいを みると、ここに ふえていくよ。"
 }

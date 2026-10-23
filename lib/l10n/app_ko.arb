@@ -358,5 +358,11 @@
   "wordDetail": "자세히",
   "wordFacts": "이 낱말이 나오는 상식",
   "wordHint": "밑줄 친 낱말을 누르면 뜻을 알 수 있어요.",
-  "wordNotFound": "설명을 찾지 못했어요."
+  "wordNotFound": "설명을 찾지 못했어요.",
+  "wordsTitle": "낱말 도감",
+  "wordsFound": "낱말 {total}개 중 {n}개",
+  "wordOfDay": "오늘의 낱말",
+  "wordQuizTitle": "낱말 퀴즈",
+  "wordQuizQuestion": "'{term}'의 뜻은?",
+  "wordsHint": "설명을 본 낱말이 여기에 쌓여요."
 }

@@ -41,6 +41,9 @@ class WordScreen extends ConsumerWidget {
     if (entry == null || text == null) {
       return Scaffold(appBar: AppBar(), body: Center(child: Text(l.wordNotFound)));
     }
+    // 見たことばは、ことばずかんに載る。
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => ref.read(settingsProvider.notifier).markWordSeen(entryId));
     final facts = ref.watch(wordFactsProvider(entryId));
     final resolve = ref.watch(levelResolverProvider);
     // 子ども（Junior）にはやさしい説明だけ。Teen/Adult にはくわしい説明も。
