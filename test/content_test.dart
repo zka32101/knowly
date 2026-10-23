@@ -260,4 +260,74 @@ void main() {
       }
     });
   });
+
+  group('ほんと？うそ？（うわさ検証）', () {
+    final doc = jsonDecode(File('assets/trivia/myths.json').readAsStringSync())
+        as Map<String, dynamic>;
+    final myths = (doc['items'] as List).cast<Map<String, dynamic>>();
+    final factIds = {for (final t in items) t.id};
+
+    test('十分な数があり、IDが一意で、「本当」と「勘違い」の両方がある', () {
+      expect(myths.length, greaterThanOrEqualTo(15));
+      expect(myths.map((m) => m['id']).toSet().length, myths.length);
+      final answers = myths.map((m) => m['answer'] as bool).toSet();
+      expect(answers, {true, false});
+    });
+
+    test('つなぐ雑学は実在する', () {
+      for (final m in myths) {
+        if (m['factId'] != null) expect(factIds, contains(m['factId']), reason: '${m['id']}');
+      }
+    });
+
+    test('日英・子ども向け/一般向けの文章が揃っていて、空でない', () {
+      for (final m in myths) {
+        final tr = m['translations'] as Map<String, dynamic>;
+        for (final lang in ['ja', 'en']) {
+          for (final variant in ['child', 'default']) {
+            final t = tr[lang][variant] as Map<String, dynamic>;
+            expect((t['statement'] as String).trim(), isNotEmpty, reason: '${m['id']}/$lang/$variant');
+            expect((t['explanation'] as String).trim(), isNotEmpty, reason: '${m['id']}/$lang/$variant');
+          }
+        }
+      }
+    });
+
+    test('子ども向けの日本語は、ひらがな・カタカナだけ（漢字なし）', () {
+      for (final m in myths) {
+        final c = m['translations']['ja']['child'] as Map<String, dynamic>;
+        for (final k in ['statement', 'explanation']) {
+          expect(_kanji.hasMatch(c[k] as String), isFalse, reason: '${m['id']}: ${c[k]}');
+        }
+      }
+    });
+
+    test('子ども向けの文章に、不適切なことばがない', () {
+      const jaWords = ['殺', '死', '戦争', '兵器', '爆弾', '銃', '宗教', '性的', 'セックス', '酒', 'ビール', '賭', '麻薬', '暴力', 'テロ', 'せんそう', 'しゅうきょう', 'ころす', 'しぬ'];
+      final en = RegExp(
+        r'\b(kill|killed|death|dead|die|died|war|weapon|gun|bomb|sex|sexual|drug|drugs|alcohol|beer|wine|religion|god|church|gambling|suicide|violence|terror|abuse|crime|murder)\b',
+        caseSensitive: false,
+      );
+      for (final m in myths) {
+        final tr = m['translations'] as Map<String, dynamic>;
+        for (final text in [
+          for (final k in ['statement', 'explanation']) tr['ja']['child'][k] as String,
+          for (final k in ['statement', 'explanation']) tr['en']['child'][k] as String,
+        ]) {
+          for (final w in jaWords) {
+            expect(text.contains(w), isFalse, reason: '${m['id']}: $text');
+          }
+          expect(en.hasMatch(text), isFalse, reason: '${m['id']}: $text');
+        }
+      }
+    });
+
+    test('Kids に出る問題には、話題のタグがない', () {
+      for (final m in myths) {
+        if (m['minAgeBand'] == 'kids') {
+          expect(m['contentFlags'], isEmpty, reason: '${m['id']}');
+        }
+      }
+    });
+  });
 }

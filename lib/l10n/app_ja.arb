@@ -211,5 +211,41 @@
         "type": "int"
       }
     }
+  },
+  "mythsTitle": "ほんと？うそ？",
+  "mythAnswerIs": "こたえは「{verdict}」！",
+  "mythRead": "くわしく よむ",
+  "mythProgress": "{current} / {total}",
+  "mythResult": "{total}もんちゅう {correct}もん せいかい！",
+  "mythAgain": "もういちど",
+  "mythNone": "いま あそべる もんだいが ありません",
+  "mythNext": "つぎへ",
+  "mythFinish": "けっかを みる",
+  "@mythAnswerIs": {
+    "placeholders": {
+      "verdict": {
+        "type": "String"
+      }
+    }
+  },
+  "@mythProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@mythResult": {
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
   }
 }

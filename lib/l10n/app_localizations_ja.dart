@@ -474,4 +474,37 @@ class AppLocalizationsJa extends AppLocalizations {
   String whyCheer(int count) {
     return '「なぜ？」を$count回つづけたよ！すごい！';
   }
+
+  @override
+  String get mythsTitle => 'ほんと？うそ？';
+
+  @override
+  String mythAnswerIs(String verdict) {
+    return 'こたえは「$verdict」！';
+  }
+
+  @override
+  String get mythRead => 'くわしく よむ';
+
+  @override
+  String mythProgress(int current, int total) {
+    return '$current / $total';
+  }
+
+  @override
+  String mythResult(int correct, int total) {
+    return '$totalもんちゅう $correctもん せいかい！';
+  }
+
+  @override
+  String get mythAgain => 'もういちど';
+
+  @override
+  String get mythNone => 'いま あそべる もんだいが ありません';
+
+  @override
+  String get mythNext => 'つぎへ';
+
+  @override
+  String get mythFinish => 'けっかを みる';
 }

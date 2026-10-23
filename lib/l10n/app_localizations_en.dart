@@ -484,4 +484,37 @@ class AppLocalizationsEn extends AppLocalizations {
   String whyCheer(int count) {
     return 'You kept asking \"why?\" $count times! Great!';
   }
+
+  @override
+  String get mythsTitle => 'True or false?';
+
+  @override
+  String mythAnswerIs(String verdict) {
+    return 'The answer: $verdict';
+  }
+
+  @override
+  String get mythRead => 'Read more';
+
+  @override
+  String mythProgress(int current, int total) {
+    return '$current / $total';
+  }
+
+  @override
+  String mythResult(int correct, int total) {
+    return '$correct of $total correct!';
+  }
+
+  @override
+  String get mythAgain => 'Play again';
+
+  @override
+  String get mythNone => 'No questions to play right now';
+
+  @override
+  String get mythNext => 'Next';
+
+  @override
+  String get mythFinish => 'See results';
 }

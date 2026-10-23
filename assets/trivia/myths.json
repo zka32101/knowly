@@ -1,0 +1,987 @@
+{
+ "schemaVersion": 1,
+ "contentVersion": "2026.10.23",
+ "updatedAt": "2026-10-23",
+ "items": [
+  {
+   "id": "chameleon_camouflage",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "カメレオンは まわりの いろに あわせて かくれる。",
+      "explanation": "うそ！ いろが かわるのは、きもちや たいおん、なかまへの あいずが おもな りゆうだよ。"
+     },
+     "default": {
+      "statement": "カメレオンは周囲の色に合わせて体の色を変え、身を隠す。",
+      "explanation": "俗説です。色が変わる主な理由は、気分・体温・仲間への合図で、背景に合わせるためだけではありません。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "A chameleon changes color to match what is around it.",
+      "explanation": "False! It changes color because of its mood, its body heat, and to talk to other chameleons."
+     },
+     "default": {
+      "statement": "Chameleons change color mainly to blend into their surroundings.",
+      "explanation": "A common myth. Color changes are mostly linked to mood, temperature and signalling to other chameleons, not just camouflage."
+     }
+    }
+   }
+  },
+  {
+   "id": "goldfish_memory",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "きんぎょは 3びょうで ぜんぶ わすれる。",
+      "explanation": "うそ！ きんぎょは えさの じかんや ばしょを、なんかげつも おぼえて いられるよ。"
+     },
+     "default": {
+      "statement": "金魚の記憶は3秒しか続かない。",
+      "explanation": "俗説です。実験では、金魚が餌の時間や場所を数週間から数か月も覚えていることが示されています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "A goldfish forgets everything after 3 seconds.",
+      "explanation": "False! Goldfish can remember feeding times and places for weeks or even months."
+     },
+     "default": {
+      "statement": "Goldfish have a memory of only three seconds.",
+      "explanation": "A myth. Experiments show goldfish can remember feeding times and locations for weeks to months."
+     }
+    }
+   }
+  },
+  {
+   "id": "camel_hump_water",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ラクダの こぶには みずが はいっている。",
+      "explanation": "うそ！ こぶの なかみは しぼうだよ。しぼうは ごはんの かわりに なるんだ。"
+     },
+     "default": {
+      "statement": "ラクダのこぶには水が貯えられている。",
+      "explanation": "俗説です。こぶの中身は脂肪で、食べ物が少ないときのエネルギー源になります。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "A camel's hump is full of water.",
+      "explanation": "False! The hump is full of fat. Fat gives the camel energy when food is hard to find."
+     },
+     "default": {
+      "statement": "Camels store water in their humps.",
+      "explanation": "A myth. The hump stores fat, which the camel can use as an energy reserve when food is scarce."
+     }
+    }
+   }
+  },
+  {
+   "id": "brain_ten_percent",
+   "category": "body",
+   "minAgeBand": "junior",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ひとは のうの 10パーセントしか つかっていない。",
+      "explanation": "うそ！ のうは いちにちじゅう、ほとんど ぜんぶの ばしょを つかって いるよ。"
+     },
+     "default": {
+      "statement": "人間は脳の10%しか使っていない。",
+      "explanation": "俗説です。脳画像の研究では、脳のほぼ全域が1日のうちに活動しており、使われない部分はほとんどありません。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "People only use 10 percent of their brain.",
+      "explanation": "False! Your brain uses almost every part of itself during a normal day."
+     },
+     "default": {
+      "statement": "Humans use only 10% of their brains.",
+      "explanation": "A myth. Imaging studies show activity across nearly all brain regions over a day; there is no large unused portion."
+     }
+    }
+   }
+  },
+  {
+   "id": "lightning_twice",
+   "category": "science",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "かみなりは おなじ ところに にどは おちない。",
+      "explanation": "うそ！ たかい たてものには、なんども おちる ことが あるよ。"
+     },
+     "default": {
+      "statement": "雷は同じ場所に二度落ちない。",
+      "explanation": "俗説です。高い建物や塔には、1年に何度も落ちることがあります。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Lightning never strikes the same place twice.",
+      "explanation": "False! Tall buildings can be struck many times."
+     },
+     "default": {
+      "statement": "Lightning never strikes the same place twice.",
+      "explanation": "A myth. Tall structures are often struck repeatedly, sometimes several times in a single year."
+     }
+    }
+   }
+  },
+  {
+   "id": "ostrich_sand",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ダチョウは あぶないと あたまを すなに うめる。",
+      "explanation": "うそ！ ダチョウは あぶないと、はしって にげるよ。たまごを うめた ばしょを みる ときに、あたまを さげて いるだけなんだ。"
+     },
+     "default": {
+      "statement": "ダチョウは危険を感じると頭を砂に埋める。",
+      "explanation": "俗説です。危険なときは走って逃げます。地面の巣の卵を整えるときに頭を下げる姿が、誤解されたと考えられています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "An ostrich hides its head in the sand when it is scared.",
+      "explanation": "False! It runs away. It only lowers its head to turn its eggs in the nest."
+     },
+     "default": {
+      "statement": "Ostriches bury their heads in the sand when threatened.",
+      "explanation": "A myth. They run or lie low instead; the idea likely comes from ostriches lowering their heads to tend nests dug in the ground."
+     }
+    }
+   }
+  },
+  {
+   "id": "great_wall_space",
+   "category": "geography",
+   "minAgeBand": "junior",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ばんりの ちょうじょうは うちゅうから はっきり みえる。",
+      "explanation": "うそ！ ほそくて ちいさく、まわりと おなじ いろなので、うちゅうからは ほとんど みえないよ。"
+     },
+     "default": {
+      "statement": "万里の長城は宇宙から肉眼ではっきり見える。",
+      "explanation": "俗説です。幅が数メートルと細く、周囲と色も似ているため、宇宙飛行士も肉眼ではほとんど見分けられないと報告しています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "You can clearly see the Great Wall of China from space.",
+      "explanation": "False! It is narrow and about the same color as the land, so astronauts can hardly see it."
+     },
+     "default": {
+      "statement": "The Great Wall of China is clearly visible to the naked eye from space.",
+      "explanation": "A myth. It is only a few meters wide and similar in color to its surroundings; astronauts report it is very hard to pick out unaided."
+     }
+    }
+   }
+  },
+  {
+   "id": "gum_seven_years",
+   "category": "body",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ガムを のみこむと 7ねん おなかに のこる。",
+      "explanation": "うそ！ ガムは ふつう、すうじつで うんちと いっしょに でて いくよ。"
+     },
+     "default": {
+      "statement": "ガムを飲み込むと、7年間おなかに残る。",
+      "explanation": "俗説です。ガムは消化されませんが、通常は数日のうちに便と一緒に排出されます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "If you swallow gum, it stays in your tummy for seven years.",
+      "explanation": "False! Gum usually passes out of your body within a few days."
+     },
+     "default": {
+      "statement": "Swallowed chewing gum stays in your stomach for seven years.",
+      "explanation": "A myth. Gum is not digested but normally passes through the digestive system and is excreted within days."
+     }
+    }
+   }
+  },
+  {
+   "id": "bulls_red",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "うしは あかい ものを みると こうふんする。",
+      "explanation": "うそ！ うしは あかを みわけにくいんだ。ひらひら うごく ものに はんのうするよ。"
+     },
+     "default": {
+      "statement": "牛は赤い色を見ると興奮する。",
+      "explanation": "俗説です。牛は赤を見分けにくく、反応するのは色ではなく布などの動きだと考えられています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Cows get excited when they see red.",
+      "explanation": "False! Cows cannot tell red well. They react to things that wave and move."
+     },
+     "default": {
+      "statement": "Bulls become enraged at the color red.",
+      "explanation": "A myth. Cattle are poor at distinguishing red; they react to movement rather than color."
+     }
+    }
+   }
+  },
+  {
+   "id": "sun_yellow",
+   "category": "space",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "たいようの ほんとうの いろは きいろ。",
+      "explanation": "うそ！ たいようは ほんとうは しろに ちかいよ。そらの くうきを とおると きいろく みえるんだ。"
+     },
+     "default": {
+      "statement": "太陽の本当の色は黄色。",
+      "explanation": "俗説です。宇宙から見た太陽はほぼ白色で、地球の大気を通ると青い光が散らばるため、黄色っぽく見えます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "The Sun is really yellow.",
+      "explanation": "False! The Sun is almost white. It looks yellow after its light goes through our air."
+     },
+     "default": {
+      "statement": "The Sun is yellow.",
+      "explanation": "A myth. The Sun is essentially white; Earth's atmosphere scatters blue light, making it look yellowish from the ground."
+     }
+    }
+   }
+  },
+  {
+   "id": "winter_sun_far",
+   "category": "science",
+   "minAgeBand": "junior",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ふゆが さむいのは、ちきゅうが たいように とおく なるから。",
+      "explanation": "うそ！ ふゆは ちきゅうが かたむいて、ひかりが よわく あたるからだよ。"
+     },
+     "default": {
+      "statement": "冬が寒いのは、地球が太陽から遠くなるから。",
+      "explanation": "俗説です。原因は地軸の傾きで、冬は太陽の光が斜めに当たり、昼も短くなります。北半球では、冬の方が太陽に近い時期にあたります。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Winter is cold because the Earth is farther from the Sun.",
+      "explanation": "False! Earth is tilted, so in winter the sunlight hits us at a slant and is weaker."
+     },
+     "default": {
+      "statement": "Winters are cold because Earth is farthest from the Sun.",
+      "explanation": "A myth. The cause is Earth's axial tilt: in winter sunlight arrives at a lower angle and days are shorter. In the Northern Hemisphere, Earth is actually closest to the Sun in early January."
+     }
+    }
+   }
+  },
+  {
+   "id": "tongue_map",
+   "category": "body",
+   "minAgeBand": "junior",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "したの ばしょごとに かんじる あじが きまっている。",
+      "explanation": "うそ！ したの どこでも、あまい・しょっぱい・すっぱい・にがいを かんじられるよ。"
+     },
+     "default": {
+      "statement": "舌には、甘味・塩味などを感じる場所が決まっている。",
+      "explanation": "俗説です。「味覚地図」は誤解で、舌のどの部分でも基本の味をすべて感じ取れます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Each part of the tongue tastes only one flavor.",
+      "explanation": "False! Every part of your tongue can taste sweet, salty, sour and bitter."
+     },
+     "default": {
+      "statement": "Different regions of the tongue detect different tastes.",
+      "explanation": "A myth. The \"tongue map\" is a misreading of old research; all basic tastes can be detected across the tongue."
+     }
+    }
+   }
+  },
+  {
+   "id": "bats_blind",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "コウモリは めが みえない。",
+      "explanation": "うそ！ コウモリも めで みえるよ。くらい ところでは、こえの はんしゃも つかうんだ。"
+     },
+     "default": {
+      "statement": "コウモリは目が見えない。",
+      "explanation": "俗説です。目は見えます。暗い場所では、超音波の反響も使って飛びます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Bats are blind.",
+      "explanation": "False! Bats can see. In the dark they also use echoes of their own sounds."
+     },
+     "default": {
+      "statement": "Bats are blind.",
+      "explanation": "A myth. All bats can see; many also use echolocation to navigate and hunt in the dark."
+     }
+    }
+   }
+  },
+  {
+   "id": "snake_slimy",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "へびの からだは ぬるぬる している。",
+      "explanation": "うそ！ へびの ひふは かわいていて、うろこで おおわれているよ。"
+     },
+     "default": {
+      "statement": "ヘビの体はぬるぬるしている。",
+      "explanation": "俗説です。ヘビの皮膚は乾いていて、うろこで覆われています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "A snake's body is slimy.",
+      "explanation": "False! A snake's skin is dry and covered in scales."
+     },
+     "default": {
+      "statement": "Snakes are slimy.",
+      "explanation": "A myth. Snake skin is dry and scaly, not slimy."
+     }
+    }
+   }
+  },
+  {
+   "id": "frog_warts",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "カエルを さわると いぼが できる。",
+      "explanation": "うそ！ いぼは ウイルスで できるよ。カエルは かんけい ないんだ。さわったら てを あらおうね。"
+     },
+     "default": {
+      "statement": "カエルを触るとイボができる。",
+      "explanation": "俗説です。イボの原因はウイルスで、カエルは関係ありません。ただし、触ったあとは手を洗いましょう。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Touching a frog gives you warts.",
+      "explanation": "False! Warts come from a virus, not from frogs. But do wash your hands after touching one."
+     },
+     "default": {
+      "statement": "Touching frogs or toads causes warts.",
+      "explanation": "A myth. Warts are caused by a virus, not by amphibians. Washing your hands after handling animals is still a good habit."
+     }
+    }
+   }
+  },
+  {
+   "id": "elephant_mouse",
+   "category": "animals",
+   "minAgeBand": "kids",
+   "answer": false,
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "ゾウは ネズミを こわがる。",
+      "explanation": "うそ！ ゾウが ネズミを こわがる ところは、ほとんど みられて いないよ。"
+     },
+     "default": {
+      "statement": "ゾウはネズミを怖がる。",
+      "explanation": "俗説です。ゾウがネズミを特別に怖がることを示す確かな証拠はなく、実験でもはっきりした反応は見られていません。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Elephants are afraid of mice.",
+      "explanation": "False! There is no good evidence that elephants are scared of mice."
+     },
+     "default": {
+      "statement": "Elephants are terrified of mice.",
+      "explanation": "A myth. There is no solid evidence for it, and tests have not shown a clear fear response."
+     }
+    }
+   }
+  },
+  {
+   "id": "honey_forever",
+   "category": "science",
+   "minAgeBand": "kids",
+   "answer": true,
+   "factId": "honey_never_spoils",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "はちみつは ほとんど くさらない。",
+      "explanation": "ほんと！ みずが すくなくて あまいので、ばいきんが ふえにくいんだ。"
+     },
+     "default": {
+      "statement": "ハチミツは、ほとんど腐らない。",
+      "explanation": "本当です。水分が少なく糖分が多いため、微生物が増えにくく、密閉すれば何年ももちます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Honey almost never goes bad.",
+      "explanation": "True! It has little water and lots of sugar, so germs can hardly grow."
+     },
+     "default": {
+      "statement": "Honey almost never spoils.",
+      "explanation": "True. Low moisture and high sugar make it hard for microbes to grow, so sealed honey can last for years."
+     }
+    }
+   }
+  },
+  {
+   "id": "sharks_older",
+   "category": "nature",
+   "minAgeBand": "kids",
+   "answer": true,
+   "factId": "sharks_older_than_trees",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "サメは きより ふるい いきもの。",
+      "explanation": "ほんと！ サメの なかまは、きが うまれる まえから うみに いたんだよ。"
+     },
+     "default": {
+      "statement": "サメは木より古い生き物。",
+      "explanation": "本当です。サメの仲間は約4億年以上前に現れ、森を作る樹木が現れる前から存在していました。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Sharks are older than trees.",
+      "explanation": "True! Sharks were in the sea before there were trees."
+     },
+     "default": {
+      "statement": "Sharks are older than trees.",
+      "explanation": "True. Sharks appeared more than 400 million years ago, before forest-forming trees evolved."
+     }
+    }
+   }
+  },
+  {
+   "id": "space_no_sound",
+   "category": "space",
+   "minAgeBand": "kids",
+   "answer": true,
+   "factId": "no_sound_in_space",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "うちゅうでは おとが つたわらない。",
+      "explanation": "ほんと！ おとは くうきが ふるえて つたわるけど、うちゅうには くうきが ないんだ。"
+     },
+     "default": {
+      "statement": "宇宙では音が伝わらない。",
+      "explanation": "本当です。音は空気などの振動で伝わりますが、宇宙はほぼ真空で、伝えるものがありません。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "Sound cannot travel in space.",
+      "explanation": "True! Sound travels by shaking air, and space has no air."
+     },
+     "default": {
+      "statement": "Sound cannot travel through space.",
+      "explanation": "True. Sound needs a medium such as air, and space is nearly a vacuum."
+     }
+    }
+   }
+  },
+  {
+   "id": "rainbow_circle",
+   "category": "science",
+   "minAgeBand": "kids",
+   "answer": true,
+   "factId": "rainbow_full_circle",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "にじは ほんとうは まるい かたち。",
+      "explanation": "ほんと！ じめんが じゃまを して、はんぶんしか みえない ことが おおいんだ。"
+     },
+     "default": {
+      "statement": "虹は本来、円形をしている。",
+      "explanation": "本当です。地平線が下半分を隠すため弧に見えるだけで、高い場所からは円形の虹が見えることもあります。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "statement": "A rainbow is really a circle.",
+      "explanation": "True! The ground hides the bottom half, so we usually see only an arch."
+     },
+     "default": {
+      "statement": "A rainbow is actually a full circle.",
+      "explanation": "True. The horizon usually hides the lower half; from high places you can sometimes see the whole circle."
+     }
+    }
+   }
+  }
+ ]
+}

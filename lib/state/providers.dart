@@ -7,6 +7,7 @@ import '../logic/interests.dart';
 import '../logic/search.dart';
 import '../logic/timing.dart';
 import '../models/age_band.dart';
+import '../models/myth.dart';
 import '../models/trivia.dart';
 import '../services/entitlement.dart';
 import 'settings.dart';
@@ -221,4 +222,23 @@ final whyStepProvider = Provider.family<WhyStep?, String>((ref, factId) {
   if (!ref.watch(allEligibleProvider).any((t) => t.id == target.id)) return null;
   final question = link.question(band, ref.watch(contentLanguageProvider));
   return question == null ? null : WhyStep(target: target, question: question);
+});
+
+/// 「ほんと？うそ？」の問題。この年代・言語・国で遊べるものを、日替わりの順に並べる（毎日違う順番）。
+final mythDeckProvider = Provider<List<Myth>>((ref) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null) return const [];
+  final region = ref.watch(regionProvider);
+  final deck = ref.watch(triviaRepositoryProvider).eligibleMyths(
+        band,
+        ref.watch(contentLanguageProvider),
+        region: region.code,
+        anyRegion: region.any,
+      );
+  final seed = fnv1a('myth-${dayNumber(ref.watch(nowProvider))}');
+  deck.sort((a, b) {
+    final c = mix32(fnv1a(a.id) ^ seed).compareTo(mix32(fnv1a(b.id) ^ seed));
+    return c != 0 ? c : a.id.compareTo(b.id);
+  });
+  return deck;
 });

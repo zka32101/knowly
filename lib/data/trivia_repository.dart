@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../models/age_band.dart';
+import '../models/myth.dart';
 import '../models/quiz.dart';
 import '../models/trivia.dart';
 import '../models/why_link.dart';
@@ -30,16 +31,19 @@ class TriviaRepository {
     this.items, {
     List<QuizItem> quizzes = const [],
     List<WhyLink> whyLinks = const [],
+    this.myths = const [],
   })  : _quizzes = {for (final q in quizzes) q.factId: q},
         _whyLinks = {for (final w in whyLinks) w.from: w};
 
   final List<Trivia> items;
+  final List<Myth> myths;
   final Map<String, QuizItem> _quizzes;
   final Map<String, WhyLink> _whyLinks;
 
   static const assetPath = 'assets/trivia/trivia.json';
   static const quizAssetPath = 'assets/trivia/quiz.json';
   static const whyAssetPath = 'assets/trivia/why_chains.json';
+  static const mythAssetPath = 'assets/trivia/myths.json';
 
   static Future<TriviaRepository> load({AssetBundle? bundle}) async {
     final b = bundle ?? rootBundle;
@@ -56,8 +60,26 @@ class TriviaRepository {
     final whyLinks = (whyDecoded['links'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
         .toList();
-    return TriviaRepository(list, quizzes: quizzes, whyLinks: whyLinks);
+    final mythDecoded = jsonDecode(await b.loadString(mythAssetPath)) as Map<String, dynamic>;
+    final myths = (mythDecoded['items'] as List)
+        .map((e) => Myth.fromJson(e as Map<String, dynamic>))
+        .toList();
+    return TriviaRepository(list, quizzes: quizzes, whyLinks: whyLinks, myths: myths);
   }
+
+  /// この年代・言語・国で遊べる「ほんと？うそ？」。
+  List<Myth> eligibleMyths(
+    AgeBand band,
+    String lang, {
+    bool allowDraft = kAllowDraftContent,
+    String? region,
+    bool anyRegion = true,
+  }) =>
+      myths
+          .where((m) =>
+              m.allowedInRegion(region, anyRegion: anyRegion) &&
+              m.textFor(band, lang, allowDraft: allowDraft) != null)
+          .toList();
 
   /// この雑学から「なぜ？」でつながる次の輪。なければ null。
   WhyLink? whyFrom(String factId) => _whyLinks[factId];

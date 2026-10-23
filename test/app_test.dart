@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/models/age_band.dart';
+import 'package:knowly/models/myth.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/models/why_link.dart';
@@ -65,6 +66,10 @@ TriviaRepository _repo() {
         .toList(),
     whyLinks: (why['links'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    myths: ((jsonDecode(File('assets/trivia/myths.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => Myth.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1043,6 +1048,112 @@ void main() {
       await tester.tap(find.byKey(const Key('kids_next')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('why_cheer')), findsNothing);
+    });
+  });
+
+  group('ほんと？うそ？', () {
+    Future<void> openMyths(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_myths')));
+      await tester.pumpAndSettle();
+    }
+
+    int total(WidgetTester tester) {
+      final t = tester.widget<Text>(find.byKey(const Key('myth_progress'))).data!;
+      return int.parse(t.split('/').last.trim());
+    }
+
+    testWidgets('全年代にホームから入口がある', (tester) async {
+      for (final band in ['kids', 'junior', 'teen', 'adult']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        expect(find.byKey(const Key('open_myths')), findsOneWidget, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('問題数は年代で変わる（Kids は難しいものを除く）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await openMyths(tester);
+      expect(total(tester), 16);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openMyths(tester);
+      expect(total(tester), 20);
+    });
+
+    testWidgets('答えると判定・解説が出て、つぎへ進める。最後に結果が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await openMyths(tester);
+      final n = total(tester);
+      for (var i = 0; i < n; i++) {
+        expect(find.byKey(const Key('myth_statement')), findsOneWidget);
+        expect(find.byKey(const Key('myth_verdict')), findsNothing);
+        await tester.tap(find.byKey(const Key('myth_false'))); // ずっと「うそ」と答える
+        await tester.pumpAndSettle();
+        expect(find.byKey(const Key('myth_verdict')), findsOneWidget);
+        expect(find.byKey(const Key('myth_explanation')), findsOneWidget);
+        await tester.tap(find.byKey(const Key('myth_next')));
+        await tester.pumpAndSettle();
+      }
+      expect(find.byKey(const Key('myth_result')), findsOneWidget);
+      // Kids 向け16問のうち「本当」は4問 → 「うそ」と答え続けると12問正解
+      expect(find.text('16もんちゅう 12もん せいかい！'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('myth_again')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('myth_statement')), findsOneWidget);
+    });
+
+    testWidgets('Kids の文章はひらがなで、Adult は一般向けの表記', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await openMyths(tester);
+      final kids = tester.widget<WrapText>(find.byKey(const Key('myth_statement')));
+      expect(RegExp(r'[\u4E00-\u9FFF]').hasMatch(kids.text), isFalse);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openMyths(tester);
+      final adult = tester.widget<WrapText>(find.byKey(const Key('myth_statement')));
+      expect(adult.wordWrap, isFalse);
+    });
+
+    testWidgets('問題の順番は日によって変わる', (tester) async {
+      final firsts = <String>{};
+      for (var d = 1; d <= 6; d++) {
+        await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, d, 9));
+        final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+        firsts.add(container.read(mythDeckProvider).first.id);
+        await tester.pumpWidget(const SizedBox());
+      }
+      expect(firsts.length, greaterThan(1));
+    });
+
+    testWidgets('雑学とつながる問題には「くわしく よむ」が出て、雑学を開ける', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'regionMode': 'all'});
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      final deck = container.read(mythDeckProvider);
+      await openMyths(tester);
+      // 雑学とつながる問題が出るまで進める
+      var i = 0;
+      while (deck[i].factId == null) {
+        await tester.tap(find.byKey(const Key('myth_true')));
+        await tester.pumpAndSettle();
+        await tester.tap(find.byKey(const Key('myth_next')));
+        await tester.pumpAndSettle();
+        i++;
+      }
+      await tester.tap(find.byKey(const Key('myth_true')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('myth_read')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('myth_read')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('英語の端末では英語の文章', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
+      await openMyths(tester);
+      final text = tester.widget<WrapText>(find.byKey(const Key('myth_statement'))).text;
+      expect(RegExp(r'[A-Za-z]').hasMatch(text), isTrue);
+      expect(RegExp(r'[ぁ-んァ-ヶ]').hasMatch(text), isFalse);
     });
   });
 }

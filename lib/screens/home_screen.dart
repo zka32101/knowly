@@ -29,6 +29,12 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l.appName),
         actions: [
+          IconButton(
+            key: const Key('open_myths'),
+            tooltip: l.mythsTitle,
+            icon: const Icon(Icons.fact_check_outlined),
+            onPressed: () => context.push('/myths'),
+          ),
           if (band != AgeBand.kids)
             IconButton(
               key: const Key('open_library'),

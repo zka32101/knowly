@@ -145,4 +145,40 @@ void main() {
       expect(translations.keys, containsAll(['ja', 'en']), reason: i['id'] as String);
     }
   });
+
+  group('うわさ検証（myths.json）のメタデータ', () {
+    final m = (jsonDecode(File('assets/trivia/myths.json').readAsStringSync())
+        as Map<String, dynamic>)['items'] as List;
+    final myths = m.cast<Map<String, dynamic>>();
+
+    test('必須項目と値の範囲', () {
+      for (final i in myths) {
+        final id = i['id'] as String;
+        expect(id, matches(RegExp(r'^[a-z0-9_]+$')), reason: id);
+        expect(['active', 'hidden', 'retired'], contains(i['status']), reason: id);
+        expect(['kids', 'junior', 'teen', 'adult'], contains(i['minAgeBand']), reason: id);
+        expect(i['answer'], isA<bool>(), reason: id);
+        for (final f in i['contentFlags'] as List) {
+          expect(validContentFlags, contains(f), reason: id);
+        }
+      }
+    });
+
+    test('reviewed / published にするには、出典・検証・レビューの記録が必要', () {
+      for (final i in myths) {
+        final id = i['id'] as String;
+        final v = i['verification'] as Map<String, dynamic>;
+        final translations = (i['translations'] as Map<String, dynamic>).cast<String, Map<String, dynamic>>();
+        for (final e in translations.entries) {
+          expect(['draft', 'reviewed', 'published'], contains(e.value['reviewStatus']), reason: '$id/${e.key}');
+          if (e.value['reviewStatus'] != 'draft') {
+            expect(v['status'], 'verified', reason: id);
+            expect((i['sources'] as List), isNotEmpty, reason: '$id: 出典');
+            expect(e.value['reviewedBy'], isNotNull, reason: '$id/${e.key}');
+            expect(e.value['reviewedAt'], matches(isoDate), reason: '$id/${e.key}');
+          }
+        }
+      }
+    });
+  });
 }

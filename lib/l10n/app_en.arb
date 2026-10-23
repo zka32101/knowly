@@ -211,5 +211,41 @@
         "type": "int"
       }
     }
+  },
+  "mythsTitle": "True or false?",
+  "mythAnswerIs": "The answer: {verdict}",
+  "mythRead": "Read more",
+  "mythProgress": "{current} / {total}",
+  "mythResult": "{correct} of {total} correct!",
+  "mythAgain": "Play again",
+  "mythNone": "No questions to play right now",
+  "mythNext": "Next",
+  "mythFinish": "See results",
+  "@mythAnswerIs": {
+    "placeholders": {
+      "verdict": {
+        "type": "String"
+      }
+    }
+  },
+  "@mythProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@mythResult": {
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
   }
 }

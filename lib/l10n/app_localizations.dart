@@ -997,6 +997,60 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'「なぜ？」を{count}回つづけたよ！すごい！'**
   String whyCheer(int count);
+
+  /// No description provided for @mythsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほんと？うそ？'**
+  String get mythsTitle;
+
+  /// No description provided for @mythAnswerIs.
+  ///
+  /// In ja, this message translates to:
+  /// **'こたえは「{verdict}」！'**
+  String mythAnswerIs(String verdict);
+
+  /// No description provided for @mythRead.
+  ///
+  /// In ja, this message translates to:
+  /// **'くわしく よむ'**
+  String get mythRead;
+
+  /// No description provided for @mythProgress.
+  ///
+  /// In ja, this message translates to:
+  /// **'{current} / {total}'**
+  String mythProgress(int current, int total);
+
+  /// No description provided for @mythResult.
+  ///
+  /// In ja, this message translates to:
+  /// **'{total}もんちゅう {correct}もん せいかい！'**
+  String mythResult(int correct, int total);
+
+  /// No description provided for @mythAgain.
+  ///
+  /// In ja, this message translates to:
+  /// **'もういちど'**
+  String get mythAgain;
+
+  /// No description provided for @mythNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま あそべる もんだいが ありません'**
+  String get mythNone;
+
+  /// No description provided for @mythNext.
+  ///
+  /// In ja, this message translates to:
+  /// **'つぎへ'**
+  String get mythNext;
+
+  /// No description provided for @mythFinish.
+  ///
+  /// In ja, this message translates to:
+  /// **'けっかを みる'**
+  String get mythFinish;
 }
 
 class _AppLocalizationsDelegate
