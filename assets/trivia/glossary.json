@@ -572,6 +572,14 @@
         ],
         "simple": "いまから 4おくねんぐらい まえの、さかなが さかえた じだいです。",
         "detail": "約4億1900万〜3億5900万年前の地質時代で、「魚の時代」と呼ばれます。陸上に森が現れ始めた時期でもあります。"
+      },
+      "en": {
+        "term": "Devonian period",
+        "match": [
+          "Devonian"
+        ],
+        "simple": "A time about 400 million years ago when fish flourished.",
+        "detail": "A geological period from about 419 to 359 million years ago, called the Age of Fishes. Forests also began to appear on land."
       }
     },
     {
@@ -625,7 +633,7 @@
           "頸椎"
         ],
         "simple": "くびに ある ほねです。",
-        "detail": ""
+        "detail": "首にある骨で、7つあります。ほとんどの哺乳類は、キリンでもネズミでも7つです。"
       },
       "en": {
         "term": "cervical vertebrae",
@@ -633,7 +641,7 @@
           "cervical vertebrae"
         ],
         "simple": "The bones of the neck.",
-        "detail": ""
+        "detail": "The bones of the neck. Almost all mammals, from giraffes to mice, have seven."
       },
       "zh": {
         "term": "颈椎",
@@ -886,6 +894,14 @@
         ],
         "simple": "ものが あたたまると、すこし おおきく なる ことです。",
         "detail": "温度が上がると物体の体積や長さが増える現象です。鉄道のレールの継ぎ目にすき間があるのはこのためです。"
+      },
+      "en": {
+        "term": "thermal expansion",
+        "match": [
+          "thermal expansion"
+        ],
+        "simple": "When something warms up, it gets a little bigger.",
+        "detail": "The increase in an object's volume or length as its temperature rises. This is why railway tracks have small gaps at the joints."
       }
     },
     {
@@ -1156,6 +1172,14 @@
         ],
         "simple": "ひとの みみには きこえない、とても ひくい おとです。",
         "detail": "周波数が約20Hz未満で、人には聞き取れない低い音です。ゾウやクジラが仲間との交信に使うと考えられています。"
+      },
+      "en": {
+        "term": "infrasound",
+        "match": [
+          "infrasound"
+        ],
+        "simple": "A very low sound that people cannot hear.",
+        "detail": "Sound below about 20 Hz, too low for humans to hear. Elephants and whales are thought to use it to communicate."
       }
     },
     {
@@ -1167,6 +1191,14 @@
         ],
         "simple": "ひとの みみで きける おとの はんいです。",
         "detail": "人が聞き取れる周波数の範囲で、おおよそ20Hz〜20,000Hzです。年齢とともに高い音から聞こえにくくなります。"
+      },
+      "en": {
+        "term": "audible range",
+        "match": [
+          "audible range"
+        ],
+        "simple": "The range of sounds a person can hear.",
+        "detail": "The range of frequencies humans can hear, roughly 20 Hz to 20,000 Hz. High sounds become harder to hear with age."
       }
     },
     {
@@ -1700,6 +1732,15 @@
         ],
         "simple": "ひこうきや ロケットが ちきゅうの まわりを まわりつづけられる、はやさです。",
         "detail": "地表すれすれの円軌道を保つために必要な速度で、約7.9km/sです。人工衛星はおおむねこの速度で周回します。"
+      },
+      "en": {
+        "term": "first cosmic velocity",
+        "match": [
+          "first cosmic velocity",
+          "orbital velocity"
+        ],
+        "simple": "The speed that lets a rocket keep circling the Earth.",
+        "detail": "The speed needed to hold a circular orbit just above the surface, about 7.9 km/s. Satellites orbit at roughly this speed."
       }
     },
     {
