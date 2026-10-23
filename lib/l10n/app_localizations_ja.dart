@@ -630,4 +630,41 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get projectsIntro => '雑学から、おうちでできる実験・観察へ。';
+
+  @override
+  String get premiumActive => 'プレミアムをご利用中です';
+
+  @override
+  String get premiumMonthly => '月額プラン';
+
+  @override
+  String get premiumAnnual => '年額プラン';
+
+  @override
+  String get premiumTrial => '無料トライアルあり';
+
+  @override
+  String get premiumBuy => 'このプランで始める';
+
+  @override
+  String get premiumRestore => '購入を復元';
+
+  @override
+  String get premiumLegal =>
+      'お支払いはお使いのストアのアカウントに請求されます。プランは自動で更新され、解約はストアの設定からいつでもできます。無料トライアルがあるプランは、期間が終わると自動で課金が始まります。';
+
+  @override
+  String get premiumPurchased => 'ご購入ありがとうございます！';
+
+  @override
+  String get premiumCancelled => '購入をやめました';
+
+  @override
+  String get premiumFailed => '購入できませんでした。しばらくしてからもう一度お試しください';
+
+  @override
+  String get premiumRestored => '購入を復元しました';
+
+  @override
+  String get premiumNothingToRestore => '復元できる購入が見つかりませんでした';
 }

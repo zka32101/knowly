@@ -1279,6 +1279,78 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'雑学から、おうちでできる実験・観察へ。'**
   String get projectsIntro;
+
+  /// No description provided for @premiumActive.
+  ///
+  /// In ja, this message translates to:
+  /// **'プレミアムをご利用中です'**
+  String get premiumActive;
+
+  /// No description provided for @premiumMonthly.
+  ///
+  /// In ja, this message translates to:
+  /// **'月額プラン'**
+  String get premiumMonthly;
+
+  /// No description provided for @premiumAnnual.
+  ///
+  /// In ja, this message translates to:
+  /// **'年額プラン'**
+  String get premiumAnnual;
+
+  /// No description provided for @premiumTrial.
+  ///
+  /// In ja, this message translates to:
+  /// **'無料トライアルあり'**
+  String get premiumTrial;
+
+  /// No description provided for @premiumBuy.
+  ///
+  /// In ja, this message translates to:
+  /// **'このプランで始める'**
+  String get premiumBuy;
+
+  /// No description provided for @premiumRestore.
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を復元'**
+  String get premiumRestore;
+
+  /// No description provided for @premiumLegal.
+  ///
+  /// In ja, this message translates to:
+  /// **'お支払いはお使いのストアのアカウントに請求されます。プランは自動で更新され、解約はストアの設定からいつでもできます。無料トライアルがあるプランは、期間が終わると自動で課金が始まります。'**
+  String get premiumLegal;
+
+  /// No description provided for @premiumPurchased.
+  ///
+  /// In ja, this message translates to:
+  /// **'ご購入ありがとうございます！'**
+  String get premiumPurchased;
+
+  /// No description provided for @premiumCancelled.
+  ///
+  /// In ja, this message translates to:
+  /// **'購入をやめました'**
+  String get premiumCancelled;
+
+  /// No description provided for @premiumFailed.
+  ///
+  /// In ja, this message translates to:
+  /// **'購入できませんでした。しばらくしてからもう一度お試しください'**
+  String get premiumFailed;
+
+  /// No description provided for @premiumRestored.
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を復元しました'**
+  String get premiumRestored;
+
+  /// No description provided for @premiumNothingToRestore.
+  ///
+  /// In ja, this message translates to:
+  /// **'復元できる購入が見つかりませんでした'**
+  String get premiumNothingToRestore;
 }
 
 class _AppLocalizationsDelegate

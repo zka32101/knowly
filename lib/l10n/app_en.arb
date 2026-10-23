@@ -307,5 +307,17 @@
         "type": "int"
       }
     }
-  }
+  },
+  "premiumActive": "You have Premium",
+  "premiumMonthly": "Monthly",
+  "premiumAnnual": "Annual",
+  "premiumTrial": "Free trial available",
+  "premiumBuy": "Start this plan",
+  "premiumRestore": "Restore purchases",
+  "premiumLegal": "Payment is charged to your store account. Plans renew automatically and you can cancel any time in your store settings. Plans with a free trial start charging automatically when the trial ends.",
+  "premiumPurchased": "Thank you for your purchase!",
+  "premiumCancelled": "Purchase cancelled",
+  "premiumFailed": "The purchase could not be completed. Please try again later.",
+  "premiumRestored": "Purchases restored",
+  "premiumNothingToRestore": "No purchases to restore were found"
 }

@@ -307,5 +307,17 @@
         "type": "int"
       }
     }
-  }
+  },
+  "premiumActive": "プレミアムをご利用中です",
+  "premiumMonthly": "月額プラン",
+  "premiumAnnual": "年額プラン",
+  "premiumTrial": "無料トライアルあり",
+  "premiumBuy": "このプランで始める",
+  "premiumRestore": "購入を復元",
+  "premiumLegal": "お支払いはお使いのストアのアカウントに請求されます。プランは自動で更新され、解約はストアの設定からいつでもできます。無料トライアルがあるプランは、期間が終わると自動で課金が始まります。",
+  "premiumPurchased": "ご購入ありがとうございます！",
+  "premiumCancelled": "購入をやめました",
+  "premiumFailed": "購入できませんでした。しばらくしてからもう一度お試しください",
+  "premiumRestored": "購入を復元しました",
+  "premiumNothingToRestore": "復元できる購入が見つかりませんでした"
 }

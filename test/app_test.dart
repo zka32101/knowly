@@ -14,6 +14,7 @@ import 'package:knowly/models/project.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/models/why_link.dart';
+import 'package:knowly/services/entitlement.dart';
 import 'package:knowly/services/notifications.dart';
 import 'package:knowly/widgets/ja_wrap_text.dart';
 import 'package:knowly/services/tts.dart';
@@ -120,6 +121,52 @@ TriviaRepository _repo() {
   );
 }
 
+class FakePurchases implements EntitlementService {
+  FakePurchases({
+    this.premium = false,
+    this.offerList = const [
+      PurchaseOffer(id: 'monthly', period: PurchasePeriod.monthly, priceString: '¥300'),
+      PurchaseOffer(
+          id: 'annual', period: PurchasePeriod.annual, priceString: '¥1,800', hasFreeTrial: true),
+    ],
+    this.outcome = PurchaseOutcome.success,
+    this.restoreResult = true,
+  });
+
+  bool premium;
+  final List<PurchaseOffer> offerList;
+  PurchaseOutcome outcome;
+  bool restoreResult;
+  int isPremiumCalls = 0;
+  int offersCalls = 0;
+  final purchased = <String>[];
+
+  @override
+  Future<bool> isPremium() async {
+    isPremiumCalls++;
+    return premium;
+  }
+
+  @override
+  Future<List<PurchaseOffer>> offers() async {
+    offersCalls++;
+    return offerList;
+  }
+
+  @override
+  Future<PurchaseOutcome> purchase(PurchaseOffer offer) async {
+    purchased.add(offer.id);
+    if (outcome == PurchaseOutcome.success) premium = true;
+    return outcome;
+  }
+
+  @override
+  Future<bool> restore() async {
+    if (restoreResult) premium = true;
+    return restoreResult;
+  }
+}
+
 FakeNotifications? _lastNotifications;
 
 Future<FakeTts> _pump(
@@ -129,6 +176,7 @@ Future<FakeTts> _pump(
   FakeNotifications? notifications,
   String? deviceRegion = 'JP',
   DateTime? now,
+  EntitlementService? entitlement,
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
   SharedPreferences.setMockInitialValues(prefs);
@@ -141,6 +189,7 @@ Future<FakeTts> _pump(
       deviceLanguageProvider.overrideWithValue(deviceLanguage),
       nowProvider.overrideWithValue(now ?? DateTime(2026, 10, 23)),
       deviceRegionProvider.overrideWithValue(deviceRegion),
+      if (entitlement != null) entitlementServiceProvider.overrideWithValue(entitlement),
       ttsProvider.overrideWithValue(tts),
       notificationServiceProvider.overrideWithValue(notif),
     ],
@@ -1541,6 +1590,133 @@ void main() {
       await tester.pumpAndSettle();
       expect(tester.widget<Text>(find.byKey(const Key('project_title'))).data,
           'Why does ice float on water?');
+    });
+  });
+
+  group('プレミアムの購入', () {
+    Future<void> openPremium(WidgetTester tester) async {
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(routerProvider).push('/premium');
+      await tester.pumpAndSettle();
+    }
+
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('購入の設定がないときは「準備中」で、無料プランのまま', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openPremium(tester);
+      expect(find.byKey(const Key('premium_unavailable')), findsOneWidget);
+      expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
+    });
+
+    testWidgets('ストアが返す価格をそのまま表示し、トライアルがあれば示す', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: FakePurchases());
+      await openPremium(tester);
+      expect(tester.widget<Text>(find.byKey(const Key('price_monthly'))).data, '¥300');
+      expect(tester.widget<Text>(find.byKey(const Key('price_annual'))).data, '¥1,800');
+      expect(find.text('無料トライアルあり'), findsOneWidget); // 年額だけ
+      expect(find.byKey(const Key('premium_unavailable')), findsNothing);
+    });
+
+    testWidgets('購入に成功すると、プレミアムになる（過去30日・鍵が外れる）', (tester) async {
+      final fake = FakePurchases();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
+      final c = containerOf(tester);
+      expect(c.read(feedDaysProvider), 7);
+      expect(c.read(unlockedIdsProvider), isNotNull); // 無料は一部だけ
+      await openPremium(tester);
+      await tester.tap(find.byKey(const Key('buy_annual')));
+      await tester.pumpAndSettle();
+      expect(fake.purchased, ['annual']);
+      expect(find.text('ご購入ありがとうございます！'), findsOneWidget);
+      expect(find.byKey(const Key('premium_active')), findsOneWidget);
+      expect(c.read(isPremiumNowProvider), isTrue);
+      expect(c.read(feedDaysProvider), 30);
+      expect(c.read(unlockedIdsProvider), isNull); // すべて開ける
+    });
+
+    testWidgets('キャンセルしたら、プレミアムにならない', (tester) async {
+      final fake = FakePurchases(outcome: PurchaseOutcome.cancelled);
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
+      await openPremium(tester);
+      await tester.tap(find.byKey(const Key('buy_monthly')));
+      await tester.pumpAndSettle();
+      expect(find.text('購入をやめました'), findsOneWidget);
+      expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
+    });
+
+    testWidgets('購入に失敗したら案内が出て、プレミアムにならない', (tester) async {
+      final fake = FakePurchases(outcome: PurchaseOutcome.failed);
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
+      await openPremium(tester);
+      await tester.tap(find.byKey(const Key('buy_monthly')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('購入できませんでした'), findsOneWidget);
+      expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
+    });
+
+    testWidgets('購入の復元: できたらプレミアム、なければ案内', (tester) async {
+      final fake = FakePurchases(restoreResult: false);
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
+      await openPremium(tester);
+      await _scrollTo(tester, const Key('premium_restore'));
+      await tester.tap(find.byKey(const Key('premium_restore')));
+      await tester.pumpAndSettle();
+      expect(find.text('復元できる購入が見つかりませんでした'), findsOneWidget);
+      expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
+      fake.restoreResult = true;
+      ScaffoldMessenger.of(tester.element(find.byKey(const Key('premium_restore'))))
+          .clearSnackBars();
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('premium_restore'));
+      await tester.tap(find.byKey(const Key('premium_restore')));
+      await tester.pumpAndSettle();
+      expect(find.text('購入を復元しました'), findsOneWidget);
+      expect(containerOf(tester).read(isPremiumNowProvider), isTrue);
+    });
+
+    testWidgets('すでにプレミアムなら、案内が出て購入ボタンは出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: FakePurchases(premium: true));
+      await openPremium(tester);
+      expect(find.byKey(const Key('premium_active')), findsOneWidget);
+      expect(find.byKey(const Key('buy_monthly')), findsNothing);
+    });
+
+    testWidgets('Kids/Junior では、購入の SDK を一度も呼ばない（通信を発生させない）', (tester) async {
+      for (final band in ['kids', 'junior']) {
+        final fake = FakePurchases(premium: true);
+        await _pump(tester, prefs: {'ageBand': band}, entitlement: fake);
+        expect(containerOf(tester).read(isPremiumNowProvider), isFalse, reason: band);
+        expect(fake.isPremiumCalls, 0, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('Teen/Adult では、起動時にプレミアムの状態を確認する', (tester) async {
+      final fake = FakePurchases(premium: true);
+      await _pump(tester, prefs: {'ageBand': 'teen'}, entitlement: fake);
+      expect(fake.isPremiumCalls, greaterThan(0));
+      expect(containerOf(tester).read(isPremiumNowProvider), isTrue);
+    });
+
+    testWidgets('プレミアムなら、ライブラリに鍵が出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: FakePurchases(premium: true));
+      await tester.tap(find.byKey(const Key('open_library')));
+      await tester.pumpAndSettle();
+      expect(find.byIcon(Icons.lock_outline), findsNothing);
+    });
+
+    testWidgets('英語の端末では、英語の案内', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'},
+          deviceLanguage: 'en',
+          deviceRegion: 'US',
+          entitlement: FakePurchases());
+      await openPremium(tester);
+      expect(find.text('Monthly'), findsOneWidget);
+      await _scrollTo(tester, const Key('premium_restore'));
+      expect(find.text('Restore purchases'), findsOneWidget);
     });
   });
 }

@@ -642,4 +642,42 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get projectsIntro =>
       'From a fact to an experiment you can do at home.';
+
+  @override
+  String get premiumActive => 'You have Premium';
+
+  @override
+  String get premiumMonthly => 'Monthly';
+
+  @override
+  String get premiumAnnual => 'Annual';
+
+  @override
+  String get premiumTrial => 'Free trial available';
+
+  @override
+  String get premiumBuy => 'Start this plan';
+
+  @override
+  String get premiumRestore => 'Restore purchases';
+
+  @override
+  String get premiumLegal =>
+      'Payment is charged to your store account. Plans renew automatically and you can cancel any time in your store settings. Plans with a free trial start charging automatically when the trial ends.';
+
+  @override
+  String get premiumPurchased => 'Thank you for your purchase!';
+
+  @override
+  String get premiumCancelled => 'Purchase cancelled';
+
+  @override
+  String get premiumFailed =>
+      'The purchase could not be completed. Please try again later.';
+
+  @override
+  String get premiumRestored => 'Purchases restored';
+
+  @override
+  String get premiumNothingToRestore => 'No purchases to restore were found';
 }
