@@ -2077,6 +2077,36 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'スーパーレア'**
   String get capsuleRarity3;
+
+  /// No description provided for @swipeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプ ほんと？うそ？'**
+  String get swipeTitle;
+
+  /// No description provided for @swipeChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプ'**
+  String get swipeChip;
+
+  /// No description provided for @swipeHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'→ ほんと　　← うそ'**
+  String get swipeHint;
+
+  /// No description provided for @swipeCombo.
+  ///
+  /// In ja, this message translates to:
+  /// **'🔥 {n} れんぞく！'**
+  String swipeCombo(int n);
+
+  /// No description provided for @swipeBestCombo.
+  ///
+  /// In ja, this message translates to:
+  /// **'いちばん れんぞく：{n}'**
+  String swipeBestCombo(int n);
 }
 
 class _AppLocalizationsDelegate

@@ -466,5 +466,12 @@
   "capsuleEmpty": "No facts available.",
   "capsuleRarity1": "Common",
   "capsuleRarity2": "Rare",
-  "capsuleRarity3": "Super rare"
+  "capsuleRarity3": "Super rare",
+  "swipeTitle": "Swipe: true or false?",
+  "swipeChip": "Swipe",
+  "swipeHint": "→ true     ← false",
+  "swipeCombo": "🔥 {n} in a row!",
+  "@swipeCombo": {"placeholders": {"n": {"type": "int"}}},
+  "swipeBestCombo": "Best streak: {n}",
+  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}}
 }

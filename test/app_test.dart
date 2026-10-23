@@ -10,6 +10,7 @@ import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/home_widget_service.dart';
 import 'package:knowly/services/listen_background.dart';
+import 'package:knowly/screens/quiz_battle_screen.dart';
 import 'package:knowly/services/share.dart';
 import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
@@ -2543,6 +2544,83 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('detail_title')), findsNothing);
       expect(find.byKey(const Key('zukan_progress')), findsOneWidget);
+    });
+  });
+
+  group('スワイプ ほんと？うそ？', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    /// いま出ているカードの正解（○ なら true）。
+    bool correctNow(WidgetTester tester) {
+      final statement = tester.widget<WrapText>(find.byKey(const Key('swipe_statement'))).text;
+      return containerOf(tester)
+          .read(battlePoolProvider)
+          .firstWhere((q) => q.isTrueFalse && q.statement == statement)
+          .correct ==
+          0;
+    }
+
+    Future<void> openSwipe(WidgetTester tester) async {
+      await _scrollTo(tester, const Key('open_swipe'));
+      await tester.tap(find.byKey(const Key('open_swipe')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('全部正解すると、れんぞくが伸びて、10問で結果が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      for (var i = 0; i < 10; i++) {
+        final ok = correctNow(tester);
+        await tester.tap(find.byKey(Key(ok ? 'swipe_true' : 'swipe_false')));
+        await tester.pumpAndSettle();
+        if (i == 1) expect(find.byKey(const Key('swipe_combo')), findsOneWidget);
+      }
+      expect(find.byKey(const Key('swipe_final')), findsOneWidget);
+      expect(find.text('いちばん れんぞく：10'), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).quizCorrect, 10);
+      await tester.tap(find.byKey(const Key('swipe_again')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_card')), findsOneWidget);
+    });
+
+    testWidgets('カードを右にスワイプすると「ほんと」、左だと「うそ」', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      final first = correctNow(tester);
+      await tester.fling(find.byKey(const Key('swipe_card')), const Offset(600, 0), 1500);
+      await tester.pumpAndSettle();
+      expect(find.byKey(Key(first ? 'swipe_result_ok' : 'swipe_result_ng')), findsOneWidget);
+      final second = correctNow(tester);
+      await tester.fling(find.byKey(const Key('swipe_card')), const Offset(-600, 0), 1500);
+      await tester.pumpAndSettle();
+      // 左 = うそ(false)。正解が ✕ なら成功
+      expect(find.byKey(Key(!second ? 'swipe_result_ok' : 'swipe_result_ng')), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).quizAnswered, 2);
+    });
+
+    testWidgets('間違えると、れんぞくが0に戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      for (var i = 0; i < 2; i++) {
+        final ok = correctNow(tester);
+        await tester.tap(find.byKey(Key(ok ? 'swipe_true' : 'swipe_false')));
+        await tester.pumpAndSettle();
+      }
+      expect(find.byKey(const Key('swipe_combo')), findsOneWidget);
+      final ok = correctNow(tester);
+      await tester.tap(find.byKey(Key(ok ? 'swipe_false' : 'swipe_true'))); // わざと間違える
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_combo')), findsNothing);
+      expect(find.byKey(const Key('swipe_result_ng')), findsOneWidget);
+    });
+
+    testWidgets('Kids にも入口があり、あそべる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _scrollTo(tester, const Key('open_swipe'));
+      await tester.tap(find.byKey(const Key('open_swipe')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_card')), findsOneWidget);
     });
   });
 }

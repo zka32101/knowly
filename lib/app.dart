@@ -15,6 +15,7 @@ import 'screens/badges_screen.dart';
 import 'screens/mascot_screen.dart';
 import 'screens/capsule_screen.dart';
 import 'screens/premium_screen.dart';
+import 'screens/swipe_quiz_screen.dart';
 import 'screens/zukan_screen.dart';
 import 'widgets/celebration_layer.dart';
 import 'screens/report_screen.dart';
@@ -73,6 +74,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/mascot', builder: (_, _) => const MascotScreen()),
       GoRoute(path: '/zukan', builder: (_, _) => const ZukanScreen()),
       GoRoute(path: '/capsule', builder: (_, _) => const CapsuleScreen()),
+      GoRoute(path: '/swipe', builder: (_, _) => const SwipeQuizScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

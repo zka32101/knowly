@@ -1086,4 +1086,23 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get capsuleRarity3 => 'スーパーレア';
+
+  @override
+  String get swipeTitle => 'スワイプ ほんと？うそ？';
+
+  @override
+  String get swipeChip => 'スワイプ';
+
+  @override
+  String get swipeHint => '→ ほんと　　← うそ';
+
+  @override
+  String swipeCombo(int n) {
+    return '🔥 $n れんぞく！';
+  }
+
+  @override
+  String swipeBestCombo(int n) {
+    return 'いちばん れんぞく：$n';
+  }
 }

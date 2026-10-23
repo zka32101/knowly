@@ -1104,4 +1104,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get capsuleRarity3 => 'Super rare';
+
+  @override
+  String get swipeTitle => 'Swipe: true or false?';
+
+  @override
+  String get swipeChip => 'Swipe';
+
+  @override
+  String get swipeHint => '→ true     ← false';
+
+  @override
+  String swipeCombo(int n) {
+    return '🔥 $n in a row!';
+  }
+
+  @override
+  String swipeBestCombo(int n) {
+    return 'Best streak: $n';
+  }
 }

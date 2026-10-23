@@ -466,5 +466,12 @@
   "capsuleEmpty": "でてくる ざつがくが ありません。",
   "capsuleRarity1": "ふつう",
   "capsuleRarity2": "レア",
-  "capsuleRarity3": "スーパーレア"
+  "capsuleRarity3": "スーパーレア",
+  "swipeTitle": "スワイプ ほんと？うそ？",
+  "swipeChip": "スワイプ",
+  "swipeHint": "→ ほんと　　← うそ",
+  "swipeCombo": "🔥 {n} れんぞく！",
+  "@swipeCombo": {"placeholders": {"n": {"type": "int"}}},
+  "swipeBestCombo": "いちばん れんぞく：{n}",
+  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}}
 }
