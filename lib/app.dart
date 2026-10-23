@@ -12,7 +12,14 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
+import 'screens/mascot_screen.dart';
+import 'screens/capsule_screen.dart';
+import 'screens/hubs.dart';
+import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
+import 'screens/swipe_quiz_screen.dart';
+import 'screens/zukan_screen.dart';
+import 'widgets/celebration_layer.dart';
 import 'screens/report_screen.dart';
 import 'screens/solo_quiz_screens.dart';
 import 'screens/quiz_battle_screen.dart';
@@ -23,6 +30,7 @@ import 'screens/settings_screen.dart';
 import 'screens/today_screen.dart';
 import 'state/notification_sync.dart';
 import 'state/settings.dart';
+import 'theme.dart';
 import 'state/widget_sync.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -39,7 +47,26 @@ final routerProvider = Provider<GoRouter>((ref) {
       return null;
     },
     routes: [
-      GoRoute(path: '/', builder: (_, _) => const HomeScreen()),
+      StatefulShellRoute.indexedStack(
+        builder: (_, _, shell) => MainShell(shell: shell),
+        branches: [
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/', builder: (_, _) => const HomeScreen()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/play', builder: (_, _) => const PlayHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/collect', builder: (_, _) => const CollectHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/explore', builder: (_, _) => const ExploreHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/me', builder: (_, _) => const SettingsScreen()),
+          ]),
+        ],
+      ),
       GoRoute(path: '/onboarding', builder: (_, _) => const OnboardingScreen()),
       GoRoute(
         path: '/detail/:id',
@@ -66,6 +93,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/daily', builder: (_, _) => const DailyChallengeScreen()),
       GoRoute(path: '/badges', builder: (_, _) => const BadgesScreen()),
       GoRoute(path: '/report', builder: (_, _) => const ReportScreen()),
+      GoRoute(path: '/mascot', builder: (_, _) => const MascotScreen()),
+      GoRoute(path: '/zukan', builder: (_, _) => const ZukanScreen()),
+      GoRoute(path: '/capsule', builder: (_, _) => const CapsuleScreen()),
+      GoRoute(path: '/swipe', builder: (_, _) => const SwipeQuizScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );
@@ -84,13 +115,17 @@ class KnowlyApp extends ConsumerWidget {
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
       builder: (context, child) {
         final factor = band?.textScaleFactor ?? 1.0;
-        if (factor == 1.0) return child!;
-        final media = MediaQuery.of(context);
-        final system = media.textScaler.scale(14) / 14;
-        return MediaQuery(
-          data: media.copyWith(textScaler: TextScaler.linear(system * factor)),
-          child: child!,
-        );
+        var app = child!;
+        if (factor != 1.0) {
+          final media = MediaQuery.of(context);
+          final system = media.textScaler.scale(14) / 14;
+          app = MediaQuery(
+            data: media.copyWith(textScaler: TextScaler.linear(system * factor)),
+            child: app,
+          );
+        }
+        // 相棒の成長・バッジのお祝いを、アプリ全体の上に重ねる。
+        return Stack(fit: StackFit.expand, children: [app, const CelebrationLayer()]);
       },
       onGenerateTitle: (context) => AppLocalizations.of(context).appName,
       routerConfig: ref.watch(routerProvider),
@@ -102,15 +137,8 @@ class KnowlyApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF2E7D6B),
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData(
-        colorSchemeSeed: const Color(0xFF2E7D6B),
-        brightness: Brightness.dark,
-        useMaterial3: true,
-      ),
+      theme: buildTheme(Brightness.light),
+      darkTheme: buildTheme(Brightness.dark),
     );
   }
 }

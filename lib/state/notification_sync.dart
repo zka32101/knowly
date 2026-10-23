@@ -8,7 +8,7 @@ import '../services/notifications.dart';
 import 'providers.dart';
 import 'settings.dart';
 
-const _appNames = {'ja': '雑学コレ！', 'en': 'Knowly'};
+const _appNames = {'ja': 'ノウリー', 'en': 'Knowly'};
 const _channelNames = {'ja': '毎日の雑学', 'en': 'Daily fact'};
 
 /// 設定（通知のオン/オフ・時刻・年代・言語・絞り込み）が変わるたびに、予定通知を作り直す。

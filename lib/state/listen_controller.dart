@@ -179,7 +179,7 @@ final listenBackgroundSyncProvider = Provider.autoDispose<void>((ref) {
   final controller = ref.read(listenControllerProvider.notifier);
   final resolve = ref.watch(levelResolverProvider);
   final lang = ref.watch(contentLanguageProvider);
-  const appNames = {'ja': '雑学コレ！', 'en': 'Knowly'};
+  const appNames = {'ja': 'ノウリー', 'en': 'Knowly'};
 
   background.bind(
     onPlay: controller.play,

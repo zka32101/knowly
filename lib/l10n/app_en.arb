@@ -328,10 +328,22 @@
   "privacyPointChildren": "Kids and Junior modes use no network connection and no purchase SDK.",
   "privacyPointTeenAdult": "Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app.",
   "privacyContact": "Contact: {email}",
-  "@privacyContact": {"placeholders": {"email": {"type": "String"}}},
+  "@privacyContact": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
   "privacyLicenses": "Open-source licenses",
   "privacyVersion": "Version {version}",
-  "@privacyVersion": {"placeholders": {"version": {"type": "String"}}},
+  "@privacyVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
   "privacyDeleteButton": "Delete data on this device",
   "privacyDeleteTitle": "Delete your data?",
   "privacyDeleteBody": "All settings, saved facts, records and scheduled notifications will be erased and the app returns to the first screen. This cannot be undone. Premium you purchased is kept (restore it from the store).",
@@ -344,28 +356,82 @@
   "battlePlayers": "How many players?",
   "battleSolo": "Solo",
   "battlePlayerCount": "{n} players",
-  "@battlePlayerCount": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePlayerCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battlePlayerDefault": "Player {n}",
-  "@battlePlayerDefault": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePlayerDefault": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleRounds": "How many questions?",
   "battleRoundCount": "{n} questions",
-  "@battleRoundCount": {"placeholders": {"n": {"type": "int"}}},
+  "@battleRoundCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleHandHint": "Pass the device around and take turns.",
   "battleStart": "Start",
   "battleNoQuestions": "No quiz questions are available.",
   "battleRoundOf": "Question {n} of {total}",
-  "@battleRoundOf": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@battleRoundOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "battleTurnOf": "{name}'s turn",
-  "@battleTurnOf": {"placeholders": {"name": {"type": "String"}}},
+  "@battleTurnOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "battleSeeResult": "See results",
   "battleFinished": "All done!",
   "battleSoloScore": "{score} of {total} correct!",
-  "@battleSoloScore": {"placeholders": {"score": {"type": "int"}, "total": {"type": "int"}}},
+  "@battleSoloScore": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "battleDraw": "It's a tie!",
   "battleWinner": "{name} wins!",
-  "@battleWinner": {"placeholders": {"name": {"type": "String"}}},
+  "@battleWinner": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "battleRank": "#{n}",
-  "@battleRank": {"placeholders": {"n": {"type": "int"}}},
+  "@battleRank": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleAgain": "Play again",
   "battleChangeSettings": "Change settings",
   "battleExit": "Exit",
@@ -378,40 +444,115 @@
   "battleTimeLimit": "Time limit",
   "battleTimeOff": "None",
   "battleSeconds": "{n} sec",
-  "@battleSeconds": {"placeholders": {"n": {"type": "int"}}},
+  "@battleSeconds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleSecondsLeft": "{n} sec left",
-  "@battleSecondsLeft": {"placeholders": {"n": {"type": "int"}}},
+  "@battleSecondsLeft": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleTimeHint": "Faster answers earn bonus points (used to break ties).",
   "battleCorrectIs": "The answer: {answer}",
-  "@battleCorrectIs": {"placeholders": {"answer": {"type": "String"}}},
+  "@battleCorrectIs": {
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
   "battlePoints": "{n} pts",
-  "@battlePoints": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePoints": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "reviewTitle": "Review",
   "reviewNone": "Nothing to review today. Facts you mark \"I learned something\" will show up from tomorrow.",
   "reviewDoneNote": "Come back tomorrow to review more.",
   "reviewChip": "Review",
   "reviewChipCount": "Review {n}",
-  "@reviewChipCount": {"placeholders": {"n": {"type": "int"}}},
+  "@reviewChipCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "dailyTitle": "Daily challenge",
   "dailyChip": "Challenge",
   "dailyStreak": "{n}-day challenge streak",
-  "@dailyStreak": {"placeholders": {"n": {"type": "int"}}},
+  "@dailyStreak": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "dailyComeBack": "Come back tomorrow for a new one!",
   "dailyShare": "Share result",
   "badgesTitle": "Badges",
   "badgesChip": "Badges",
   "badgesCount": "{n} of {total} earned",
-  "@badgesCount": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@badgesCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "badgeStreak": "{n}-day streak",
-  "@badgeStreak": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeStreak": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeReadDays": "Read on {n} days",
-  "@badgeReadDays": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeReadDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeLearned": "Learned {n} facts",
-  "@badgeLearned": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeLearned": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeQuiz": "{n} quiz answers right",
-  "@badgeQuiz": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeQuiz": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeDaily": "{n} daily challenges",
-  "@badgeDaily": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeDaily": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgePerfect": "Perfect daily challenge",
   "reportTitle": "Learning report",
   "reportNote": "This report is built only from records stored on this device. Nothing is sent anywhere.",
@@ -423,5 +564,115 @@
   "reportFavorite": "Favorite genres",
   "reportEmpty": "No records yet.",
   "reportRecent": "Recently learned",
-  "reportOpen": "Learning report (for parents)"
+  "reportOpen": "Learning report (for parents)",
+  "mascotTitle": "Buddy",
+  "mascotNext": "{n} more to become \"{name}\"",
+  "@mascotNext": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mascotMax": "Fully grown!",
+  "mascotHint": "Open a fact: +1. Mark \"I learned something\": +2. Your buddy grows as you go.",
+  "mascotPoints": "{n} points",
+  "@mascotPoints": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mascotLocked": "???",
+  "mascotName_egg": "Egg",
+  "mascotSay_egg": "…waiting for a fun fact.",
+  "mascotName_chick": "Chick",
+  "mascotSay_chick": "Peep! Facts are fun!",
+  "mascotName_chicklet": "Little Owlet",
+  "mascotSay_chicklet": "So fluffy! Tell me more.",
+  "mascotName_owl": "Owl",
+  "mascotSay_owl": "Hoo! I'm getting wise.",
+  "mascotName_professor": "Professor Owl",
+  "mascotSay_professor": "Hmm, I see. You're a true scholar.",
+  "mascotName_king": "Owl King",
+  "mascotSay_king": "Hoo-hoo! The king of trivia!",
+  "celebrateStage": "Your buddy became {name}!",
+  "@celebrateStage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "celebrateBadge": "New badge!",
+  "flipHint": "Tap to flip",
+  "flipDetail": "Read more",
+  "zukanTitle": "Fact collection",
+  "zukanChip": "Collection",
+  "zukanFound": "{n} of {total} found",
+  "@zukanFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "zukanAll": "All",
+  "zukanHint": "Every fact you see fills in your collection.",
+  "zukanLocked": "?",
+  "capsuleTitle": "Fact capsule",
+  "capsuleChip": "Capsule",
+  "capsuleOpen": "Open it!",
+  "capsuleHint": "One mystery fact pops out each day.",
+  "capsuleDone": "Come back tomorrow!",
+  "capsuleNew": "New!",
+  "capsuleToZukan": "See collection",
+  "capsuleEmpty": "No facts available.",
+  "capsuleRarity1": "Common",
+  "capsuleRarity2": "Rare",
+  "capsuleRarity3": "Super rare",
+  "swipeTitle": "Swipe: true or false?",
+  "swipeChip": "Swipe",
+  "swipeHint": "→ true     ← false",
+  "swipeCombo": "🔥 {n} in a row!",
+  "@swipeCombo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "swipeBestCombo": "Best streak: {n}",
+  "@swipeBestCombo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "tabHome": "Home",
+  "tabPlay": "Play",
+  "tabCollect": "Collect",
+  "tabExplore": "Explore",
+  "tabSettings": "Settings",
+  "hubPlayIntro": "Enjoy trivia through quizzes and games.",
+  "hubCollectIntro": "The more facts you see, the more your buddy grows and your collection fills.",
+  "hubExploreIntro": "Search for facts, or dig deeper.",
+  "hubQuizSub": "1-4 players",
+  "hubSwipeSub": "True or false",
+  "hubDailySub": "3 questions a day",
+  "hubReviewSub": "Don't forget",
+  "hubMythsSub": "Common misconceptions",
+  "hubLibrarySub": "Search & genres",
+  "hubListenSub": "Plays with the screen off",
+  "languageZh": "简体中文",
+  "languageKo": "한국어",
+  "languageEs": "Español"
 }

@@ -978,4 +978,204 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reportOpen => 'Learning report (for parents)';
+
+  @override
+  String get mascotTitle => 'Buddy';
+
+  @override
+  String mascotNext(int n, String name) {
+    return '$n more to become \"$name\"';
+  }
+
+  @override
+  String get mascotMax => 'Fully grown!';
+
+  @override
+  String get mascotHint =>
+      'Open a fact: +1. Mark \"I learned something\": +2. Your buddy grows as you go.';
+
+  @override
+  String mascotPoints(int n) {
+    return '$n points';
+  }
+
+  @override
+  String get mascotLocked => '???';
+
+  @override
+  String get mascotName_egg => 'Egg';
+
+  @override
+  String get mascotSay_egg => '…waiting for a fun fact.';
+
+  @override
+  String get mascotName_chick => 'Chick';
+
+  @override
+  String get mascotSay_chick => 'Peep! Facts are fun!';
+
+  @override
+  String get mascotName_chicklet => 'Little Owlet';
+
+  @override
+  String get mascotSay_chicklet => 'So fluffy! Tell me more.';
+
+  @override
+  String get mascotName_owl => 'Owl';
+
+  @override
+  String get mascotSay_owl => 'Hoo! I\'m getting wise.';
+
+  @override
+  String get mascotName_professor => 'Professor Owl';
+
+  @override
+  String get mascotSay_professor => 'Hmm, I see. You\'re a true scholar.';
+
+  @override
+  String get mascotName_king => 'Owl King';
+
+  @override
+  String get mascotSay_king => 'Hoo-hoo! The king of trivia!';
+
+  @override
+  String celebrateStage(String name) {
+    return 'Your buddy became $name!';
+  }
+
+  @override
+  String get celebrateBadge => 'New badge!';
+
+  @override
+  String get flipHint => 'Tap to flip';
+
+  @override
+  String get flipDetail => 'Read more';
+
+  @override
+  String get zukanTitle => 'Fact collection';
+
+  @override
+  String get zukanChip => 'Collection';
+
+  @override
+  String zukanFound(int n, int total) {
+    return '$n of $total found';
+  }
+
+  @override
+  String get zukanAll => 'All';
+
+  @override
+  String get zukanHint => 'Every fact you see fills in your collection.';
+
+  @override
+  String get zukanLocked => '?';
+
+  @override
+  String get capsuleTitle => 'Fact capsule';
+
+  @override
+  String get capsuleChip => 'Capsule';
+
+  @override
+  String get capsuleOpen => 'Open it!';
+
+  @override
+  String get capsuleHint => 'One mystery fact pops out each day.';
+
+  @override
+  String get capsuleDone => 'Come back tomorrow!';
+
+  @override
+  String get capsuleNew => 'New!';
+
+  @override
+  String get capsuleToZukan => 'See collection';
+
+  @override
+  String get capsuleEmpty => 'No facts available.';
+
+  @override
+  String get capsuleRarity1 => 'Common';
+
+  @override
+  String get capsuleRarity2 => 'Rare';
+
+  @override
+  String get capsuleRarity3 => 'Super rare';
+
+  @override
+  String get swipeTitle => 'Swipe: true or false?';
+
+  @override
+  String get swipeChip => 'Swipe';
+
+  @override
+  String get swipeHint => '→ true     ← false';
+
+  @override
+  String swipeCombo(int n) {
+    return '🔥 $n in a row!';
+  }
+
+  @override
+  String swipeBestCombo(int n) {
+    return 'Best streak: $n';
+  }
+
+  @override
+  String get tabHome => 'Home';
+
+  @override
+  String get tabPlay => 'Play';
+
+  @override
+  String get tabCollect => 'Collect';
+
+  @override
+  String get tabExplore => 'Explore';
+
+  @override
+  String get tabSettings => 'Settings';
+
+  @override
+  String get hubPlayIntro => 'Enjoy trivia through quizzes and games.';
+
+  @override
+  String get hubCollectIntro =>
+      'The more facts you see, the more your buddy grows and your collection fills.';
+
+  @override
+  String get hubExploreIntro => 'Search for facts, or dig deeper.';
+
+  @override
+  String get hubQuizSub => '1-4 players';
+
+  @override
+  String get hubSwipeSub => 'True or false';
+
+  @override
+  String get hubDailySub => '3 questions a day';
+
+  @override
+  String get hubReviewSub => 'Don\'t forget';
+
+  @override
+  String get hubMythsSub => 'Common misconceptions';
+
+  @override
+  String get hubLibrarySub => 'Search & genres';
+
+  @override
+  String get hubListenSub => 'Plays with the screen off';
+
+  @override
+  String get languageZh => '简体中文';
+
+  @override
+  String get languageKo => '한국어';
+
+  @override
+  String get languageEs => 'Español';
 }

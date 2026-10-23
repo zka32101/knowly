@@ -6,7 +6,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
 import 'app_localizations_ja.dart';
+import 'app_localizations_ko.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -95,13 +98,16 @@ abstract class AppLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
+    Locale('es'),
     Locale('ja'),
+    Locale('ko'),
+    Locale('zh'),
   ];
 
   /// No description provided for @appName.
   ///
   /// In ja, this message translates to:
-  /// **'雑学コレ！'**
+  /// **'ノウリー'**
   String get appName;
 
   /// No description provided for @languageTitle.
@@ -1843,6 +1849,378 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'がくしゅうの ようす（おうちの ひとへ）'**
   String get reportOpen;
+
+  /// No description provided for @mascotTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'あいぼう'**
+  String get mascotTitle;
+
+  /// No description provided for @mascotNext.
+  ///
+  /// In ja, this message translates to:
+  /// **'あと {n} で「{name}」に なるよ'**
+  String mascotNext(int n, String name);
+
+  /// No description provided for @mascotMax.
+  ///
+  /// In ja, this message translates to:
+  /// **'いちばん おおきく なったよ！'**
+  String get mascotMax;
+
+  /// No description provided for @mascotHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを ひらくと +1、「しらなかった」を おぼえると +2 で そだつよ。'**
+  String get mascotHint;
+
+  /// No description provided for @mascotPoints.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} ポイント'**
+  String mascotPoints(int n);
+
+  /// No description provided for @mascotLocked.
+  ///
+  /// In ja, this message translates to:
+  /// **'？？？'**
+  String get mascotLocked;
+
+  /// No description provided for @mascotName_egg.
+  ///
+  /// In ja, this message translates to:
+  /// **'たまご'**
+  String get mascotName_egg;
+
+  /// No description provided for @mascotSay_egg.
+  ///
+  /// In ja, this message translates to:
+  /// **'…ざつがく、まってるよ。'**
+  String get mascotSay_egg;
+
+  /// No description provided for @mascotName_chick.
+  ///
+  /// In ja, this message translates to:
+  /// **'ひよこ'**
+  String get mascotName_chick;
+
+  /// No description provided for @mascotSay_chick.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぴよっ！ ざつがく おもしろいね！'**
+  String get mascotSay_chick;
+
+  /// No description provided for @mascotName_chicklet.
+  ///
+  /// In ja, this message translates to:
+  /// **'ちびふくろう'**
+  String get mascotName_chicklet;
+
+  /// No description provided for @mascotSay_chicklet.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふわふわ！ もっと しりたいな。'**
+  String get mascotSay_chicklet;
+
+  /// No description provided for @mascotName_owl.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふくろう'**
+  String get mascotName_owl;
+
+  /// No description provided for @mascotSay_owl.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほー！ ものしりに なってきたよ。'**
+  String get mascotSay_owl;
+
+  /// No description provided for @mascotName_professor.
+  ///
+  /// In ja, this message translates to:
+  /// **'はかせふくろう'**
+  String get mascotName_professor;
+
+  /// No description provided for @mascotSay_professor.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふむふむ、なるほど。きみは はかせだね。'**
+  String get mascotSay_professor;
+
+  /// No description provided for @mascotName_king.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふくろうおう'**
+  String get mascotName_king;
+
+  /// No description provided for @mascotSay_king.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほっほー！ ざつがくの おうさまだ！'**
+  String get mascotSay_king;
+
+  /// No description provided for @celebrateStage.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}に なったよ！'**
+  String celebrateStage(String name);
+
+  /// No description provided for @celebrateBadge.
+  ///
+  /// In ja, this message translates to:
+  /// **'バッジを ゲット！'**
+  String get celebrateBadge;
+
+  /// No description provided for @flipHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップして めくろう'**
+  String get flipHint;
+
+  /// No description provided for @flipDetail.
+  ///
+  /// In ja, this message translates to:
+  /// **'くわしく みる'**
+  String get flipDetail;
+
+  /// No description provided for @zukanTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくずかん'**
+  String get zukanTitle;
+
+  /// No description provided for @zukanChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'ずかん'**
+  String get zukanChip;
+
+  /// No description provided for @zukanFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} みつけた'**
+  String zukanFound(int n, int total);
+
+  /// No description provided for @zukanAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぜんぶ'**
+  String get zukanAll;
+
+  /// No description provided for @zukanHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを みると、ずかんが うまっていくよ。'**
+  String get zukanHint;
+
+  /// No description provided for @zukanLocked.
+  ///
+  /// In ja, this message translates to:
+  /// **'？'**
+  String get zukanLocked;
+
+  /// No description provided for @capsuleTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくカプセル'**
+  String get capsuleTitle;
+
+  /// No description provided for @capsuleChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'カプセル'**
+  String get capsuleChip;
+
+  /// No description provided for @capsuleOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'あけてみよう！'**
+  String get capsuleOpen;
+
+  /// No description provided for @capsuleHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'1にち 1かい、ふしぎな ざつがくが でてくるよ。'**
+  String get capsuleHint;
+
+  /// No description provided for @capsuleDone.
+  ///
+  /// In ja, this message translates to:
+  /// **'また あした あけよう！'**
+  String get capsuleDone;
+
+  /// No description provided for @capsuleNew.
+  ///
+  /// In ja, this message translates to:
+  /// **'はじめて！'**
+  String get capsuleNew;
+
+  /// No description provided for @capsuleToZukan.
+  ///
+  /// In ja, this message translates to:
+  /// **'ずかんを みる'**
+  String get capsuleToZukan;
+
+  /// No description provided for @capsuleEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'でてくる ざつがくが ありません。'**
+  String get capsuleEmpty;
+
+  /// No description provided for @capsuleRarity1.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふつう'**
+  String get capsuleRarity1;
+
+  /// No description provided for @capsuleRarity2.
+  ///
+  /// In ja, this message translates to:
+  /// **'レア'**
+  String get capsuleRarity2;
+
+  /// No description provided for @capsuleRarity3.
+  ///
+  /// In ja, this message translates to:
+  /// **'スーパーレア'**
+  String get capsuleRarity3;
+
+  /// No description provided for @swipeTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプ ほんと？うそ？'**
+  String get swipeTitle;
+
+  /// No description provided for @swipeChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプ'**
+  String get swipeChip;
+
+  /// No description provided for @swipeHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'→ ほんと　　← うそ'**
+  String get swipeHint;
+
+  /// No description provided for @swipeCombo.
+  ///
+  /// In ja, this message translates to:
+  /// **'🔥 {n} れんぞく！'**
+  String swipeCombo(int n);
+
+  /// No description provided for @swipeBestCombo.
+  ///
+  /// In ja, this message translates to:
+  /// **'いちばん れんぞく：{n}'**
+  String swipeBestCombo(int n);
+
+  /// No description provided for @tabHome.
+  ///
+  /// In ja, this message translates to:
+  /// **'ホーム'**
+  String get tabHome;
+
+  /// No description provided for @tabPlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'あそぶ'**
+  String get tabPlay;
+
+  /// No description provided for @tabCollect.
+  ///
+  /// In ja, this message translates to:
+  /// **'あつめる'**
+  String get tabCollect;
+
+  /// No description provided for @tabExplore.
+  ///
+  /// In ja, this message translates to:
+  /// **'さがす'**
+  String get tabExplore;
+
+  /// No description provided for @tabSettings.
+  ///
+  /// In ja, this message translates to:
+  /// **'せってい'**
+  String get tabSettings;
+
+  /// No description provided for @hubPlayIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズやゲームで、ざつがくを たのしもう。'**
+  String get hubPlayIntro;
+
+  /// No description provided for @hubCollectIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。'**
+  String get hubCollectIntro;
+
+  /// No description provided for @hubExploreIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを さがしたり、ひろげたりしよう。'**
+  String get hubExploreIntro;
+
+  /// No description provided for @hubQuizSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'1〜4人で対戦'**
+  String get hubQuizSub;
+
+  /// No description provided for @hubSwipeSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほんと？うそ？'**
+  String get hubSwipeSub;
+
+  /// No description provided for @hubDailySub.
+  ///
+  /// In ja, this message translates to:
+  /// **'まいにち3もん'**
+  String get hubDailySub;
+
+  /// No description provided for @hubReviewSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'わすれないように'**
+  String get hubReviewSub;
+
+  /// No description provided for @hubMythsSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'よくある かんちがい'**
+  String get hubMythsSub;
+
+  /// No description provided for @hubLibrarySub.
+  ///
+  /// In ja, this message translates to:
+  /// **'けんさく・ジャンル'**
+  String get hubLibrarySub;
+
+  /// No description provided for @hubListenSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'画面を消しても聞ける'**
+  String get hubListenSub;
+
+  /// No description provided for @languageZh.
+  ///
+  /// In ja, this message translates to:
+  /// **'简体中文'**
+  String get languageZh;
+
+  /// No description provided for @languageKo.
+  ///
+  /// In ja, this message translates to:
+  /// **'한국어'**
+  String get languageKo;
+
+  /// No description provided for @languageEs.
+  ///
+  /// In ja, this message translates to:
+  /// **'Español'**
+  String get languageEs;
 }
 
 class _AppLocalizationsDelegate
@@ -1856,7 +2234,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['en', 'ja'].contains(locale.languageCode);
+      <String>['en', 'es', 'ja', 'ko', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -1867,8 +2245,14 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   switch (locale.languageCode) {
     case 'en':
       return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
     case 'ja':
       return AppLocalizationsJa();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

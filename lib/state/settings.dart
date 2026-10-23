@@ -10,11 +10,18 @@ import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
 
-const supportedLanguageCodes = ['ja', 'en'];
+/// 画面の言語。
+const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
+
+/// 雑学の本文がある言語。ほかの言語の画面では、本文は英語で出す。
+const contentLanguageCodes = ['ja', 'en'];
 
 /// 端末の言語から対応言語を選ぶ。対応外は英語。
 String resolveLanguage(String? code) =>
     supportedLanguageCodes.contains(code) ? code! : 'en';
+
+/// 雑学の本文の言語（日本語または英語）。本文のない言語は英語にする。
+String resolveContentLanguage(String? code) => code == 'ja' ? 'ja' : 'en';
 
 /// 関心事のキーワードの上限（個数・1つあたりの文字数）。
 const maxInterestKeywords = 10;
@@ -56,6 +63,10 @@ class AppSettings {
     this.quizAnswered = 0,
     this.quizCorrect = 0,
     this.dailyResults = const {},
+    this.seen = const {},
+    this.celebratedStage,
+    this.celebratedBadges,
+    this.capsule,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -99,6 +110,16 @@ class AppSettings {
   /// 今日のチャレンジの結果（日付 → 正誤の並び。例 "101"）。
   final Map<String, String> dailyResults;
 
+  /// 開いたことのある雑学の id（相棒の成長に使う）。端末内にだけ保存する。
+  final Set<String> seen;
+
+  /// お祝いを出し終えた相棒の段階（番号）と、バッジの id。null は「まだ基準を決めていない」。
+  final int? celebratedStage;
+  final Set<String>? celebratedBadges;
+
+  /// 今日のカプセル（"yyyy-MM-dd:雑学のid"）。1日1回。
+  final String? capsule;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -131,6 +152,10 @@ class AppSettings {
     int? quizAnswered,
     int? quizCorrect,
     Map<String, String>? dailyResults,
+    Set<String>? seen,
+    int? celebratedStage,
+    Set<String>? celebratedBadges,
+    String? capsule,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -155,6 +180,10 @@ class AppSettings {
         quizAnswered: quizAnswered ?? this.quizAnswered,
         quizCorrect: quizCorrect ?? this.quizCorrect,
         dailyResults: dailyResults ?? this.dailyResults,
+        seen: seen ?? this.seen,
+        celebratedStage: celebratedStage ?? this.celebratedStage,
+        celebratedBadges: celebratedBadges ?? this.celebratedBadges,
+        capsule: capsule ?? this.capsule,
       );
 }
 
@@ -211,6 +240,10 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       },
       quizAnswered: p.getInt('quizAnswered') ?? 0,
       quizCorrect: p.getInt('quizCorrect') ?? 0,
+      seen: (p.getStringList('seen') ?? const []).toSet(),
+      capsule: p.getString('capsule'),
+      celebratedStage: p.getInt('celebratedStage'),
+      celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
         for (final raw in (p.getStringList('dailyResults') ?? const []))
           if (raw.split(':') case [final day, final r]) day: r,
@@ -366,6 +399,35 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     _saveReviews(reviews);
   }
 
+  /// 雑学を開いたことを記録する（相棒の成長用）。初めて開いたときだけ状態が変わる。
+  void markSeen(String id) {
+    if (state.seen.contains(id)) return;
+    final seen = {...state.seen, id};
+    state = state.copyWith(seen: seen);
+    _prefs.setStringList('seen', seen.toList());
+  }
+
+  /// 今日のカプセルで出た雑学を記録する（見た雑学にもなる）。
+  void recordCapsule(DateTime today, String id) {
+    final value = '${dayKey(today)}:$id';
+    state = state.copyWith(capsule: value);
+    _prefs.setString('capsule', value);
+    markSeen(id);
+  }
+
+  /// 相棒の段階のお祝いを出し終えた（または、最初の基準にした）ことを記録する。
+  void ackStage(int index) {
+    state = state.copyWith(celebratedStage: index);
+    _prefs.setInt('celebratedStage', index);
+  }
+
+  /// バッジのお祝いを出し終えた（または、最初の基準にした）ことを記録する。
+  void ackBadges(Iterable<String> ids) {
+    final set = {...?state.celebratedBadges, ...ids};
+    state = state.copyWith(celebratedBadges: set);
+    _prefs.setStringList('celebratedBadges', set.toList());
+  }
+
   /// 1人用クイズの回答を通算に加える。
   void recordQuizAnswer({required bool correct}) {
     final answered = state.quizAnswered + 1;
@@ -433,5 +495,5 @@ final deviceRegionProvider =
 final uiLanguageProvider = Provider<String>((ref) =>
     resolveLanguage(ref.watch(settingsProvider).uiLanguage ?? ref.watch(deviceLanguageProvider)));
 
-final contentLanguageProvider = Provider<String>((ref) =>
-    resolveLanguage(ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));
+final contentLanguageProvider = Provider<String>((ref) => resolveContentLanguage(
+    ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));

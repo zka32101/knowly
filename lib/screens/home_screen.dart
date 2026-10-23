@@ -10,7 +10,9 @@ import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/flip_card.dart';
 import '../widgets/ja_wrap_text.dart';
+import '../widgets/mascot_card.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
@@ -28,47 +30,26 @@ class HomeScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l.appName),
-        actions: [
-          // Kids は画面の上に「今日は何の日」「ほんと？うそ？」を置く（一覧がないため）。
-          // それ以外は、ホームの「クイックリンク」にまとめる。
-          if (band == AgeBand.kids) ...[
-            IconButton(
-              key: const Key('open_today'),
-              tooltip: l.todayHome,
-              icon: const Icon(Icons.event_outlined),
-              onPressed: () => context.push('/today'),
-            ),
-            IconButton(
-              key: const Key('open_myths'),
-              tooltip: l.mythsTitle,
-              icon: const Icon(Icons.fact_check_outlined),
-              onPressed: () => context.push('/myths'),
-            ),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('🦉', style: TextStyle(fontSize: 24)),
+            const SizedBox(width: 8),
+            Text(l.appName),
           ],
-          if (band != AgeBand.kids)
+        ),
+        actions: [
+          // Kids は下のタブに設定がない。保護者ゲートの先に置く。
+          if (band == AgeBand.kids)
             IconButton(
-              key: const Key('open_library'),
-              tooltip: l.libraryOpen,
-              icon: const Icon(Icons.search),
-              onPressed: () => context.push('/library'),
+              key: const Key('open_settings'),
+              tooltip: l.settingsTitle,
+              icon: const Icon(Icons.settings_outlined),
+              onPressed: () async {
+                if (!await showParentalGate(context)) return;
+                if (context.mounted) context.push('/settings');
+              },
             ),
-          if (!band.isChild || band == AgeBand.junior)
-            IconButton(
-              tooltip: l.savedTitle,
-              icon: const Icon(Icons.bookmark_border),
-              onPressed: () => context.push('/saved'),
-            ),
-          IconButton(
-            key: const Key('open_settings'),
-            tooltip: l.settingsTitle,
-            icon: const Icon(Icons.settings_outlined),
-            onPressed: () async {
-              // Kids は設定の前に保護者ゲートを通す（子どもが迷い込まないように）。
-              if (band == AgeBand.kids && !await showParentalGate(context)) return;
-              if (context.mounted) context.push('/settings');
-            },
-          ),
         ],
       ),
       body: SafeArea(
@@ -117,6 +98,9 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
     final why = ref.watch(whyStepProvider(item.id));
     if (level == null) return Center(child: Text(l.emptyFeed));
     final lang = ref.watch(contentLanguageProvider);
+    // 見た雑学として記録する（相棒の成長用）。
+    WidgetsBinding.instance.addPostFrameCallback(
+        (_) => ref.read(settingsProvider.notifier).markSeen(item.id));
 
     return Padding(
       padding: const EdgeInsets.all(24),
@@ -126,6 +110,9 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  const MascotCard(),
+                  const _ReviewBanner(),
+                  const SizedBox(height: 16),
                   TriviaIllustration(id: item.illustration, size: 120),
                   const SizedBox(height: 16),
                   WrapText(level.title,
@@ -141,51 +128,6 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                       wordWrap: lang == 'ja',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headlineSmall),
-                  const SizedBox(height: 24),
-                  OutlinedButton.icon(
-                    key: const Key('open_quiz'),
-                    style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
-                    icon: const Icon(Icons.sports_esports_outlined, size: 32),
-                    label: Text(l.battleTitle, style: const TextStyle(fontSize: 20)),
-                    onPressed: () => context.push('/quiz'),
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: OutlinedButton.icon(
-                          key: const Key('open_daily'),
-                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
-                          icon: const Icon(Icons.flag_outlined),
-                          label: Text(l.dailyChip, style: const TextStyle(fontSize: 16)),
-                          onPressed: () => context.push('/daily'),
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      if (ref.watch(reviewQuestionsProvider).isNotEmpty) ...[
-                        Expanded(
-                          child: OutlinedButton.icon(
-                            key: const Key('open_review'),
-                            style:
-                                OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
-                            icon: const Icon(Icons.replay_outlined),
-                            label: Text(l.reviewChip, style: const TextStyle(fontSize: 16)),
-                            onPressed: () => context.push('/review'),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                      ],
-                      Expanded(
-                        child: OutlinedButton.icon(
-                          key: const Key('open_badges'),
-                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
-                          icon: const Icon(Icons.emoji_events_outlined),
-                          label: Text(l.badgesChip, style: const TextStyle(fontSize: 16)),
-                          onPressed: () => context.push('/badges'),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
             ),
@@ -304,7 +246,8 @@ class _FeedHome extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        const _QuickLinks(),
+        const MascotCard(),
+        const _ReviewBanner(),
         if (streak != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
@@ -359,10 +302,9 @@ class _FeedHome extends ConsumerWidget {
         else ...[
           Text(l.today, style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 8),
-          _TriviaCard(
+          FlipTodayCard(
             item: feed.first,
             level: resolve(feed.first)!,
-            big: true,
             wordWrap: wordWrap,
           ),
           const SizedBox(height: 16),
@@ -396,14 +338,12 @@ class _TriviaCard extends StatelessWidget {
   const _TriviaCard({
     required this.item,
     required this.level,
-    this.big = false,
     this.wordWrap = false,
     this.badge,
   });
 
   final Trivia item;
   final TriviaLevel level;
-  final bool big;
   final bool wordWrap;
 
   /// 「夏にぴったり」「今日は記念日」など、おすすめの理由。あればカテゴリーの代わりに出す。
@@ -419,7 +359,7 @@ class _TriviaCard extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              TriviaIllustration(id: item.illustration, size: big ? 56 : 40),
+              TriviaIllustration(id: item.illustration, size: 40),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
@@ -434,9 +374,7 @@ class _TriviaCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     WrapText(level.title,
                         wordWrap: wordWrap,
-                        style: big
-                            ? Theme.of(context).textTheme.titleLarge
-                            : Theme.of(context).textTheme.titleMedium),
+                        style: Theme.of(context).textTheme.titleMedium),
                   ],
                 ),
               ),
@@ -652,43 +590,23 @@ class _TodayBanner extends ConsumerWidget {
   }
 }
 
-/// クイックリンク: 今日は何の日 / ほんと？うそ？ / ながら聞き（Teen・Adult）/ 自由研究ネタ帳。
-class _QuickLinks extends ConsumerWidget {
-  const _QuickLinks();
+/// 今日のおさらいがあるときだけ出す、ホームのお知らせ。
+class _ReviewBanner extends ConsumerWidget {
+  const _ReviewBanner();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
-    final hasProjects = ref.watch(projectsProvider).isNotEmpty;
-    final reviewDue = ref.watch(reviewQuestionsProvider).length;
-
-    Widget chip(Key key, IconData icon, String label, String route) => ActionChip(
-          key: key,
-          avatar: Icon(icon, size: 18),
-          label: Text(label),
-          onPressed: () => context.push(route),
-        );
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Wrap(
-        spacing: 8,
-        runSpacing: 4,
-        children: [
-          chip(const Key('open_today'), Icons.event_outlined, l.todayHome, '/today'),
-          chip(const Key('open_quiz'), Icons.sports_esports_outlined, l.battleTitle, '/quiz'),
-          chip(const Key('open_daily'), Icons.flag_outlined, l.dailyChip, '/daily'),
-          if (reviewDue > 0)
-            chip(const Key('open_review'), Icons.replay_outlined, l.reviewChipCount(reviewDue),
-                '/review'),
-          chip(const Key('open_badges'), Icons.emoji_events_outlined, l.badgesChip, '/badges'),
-          chip(const Key('open_myths'), Icons.fact_check_outlined, l.mythsTitle, '/myths'),
-          if (band.isTeenOrAdult)
-            chip(const Key('open_listen'), Icons.headphones_outlined, l.listenOpen, '/listen'),
-          if (hasProjects)
-            chip(const Key('open_projects'), Icons.science_outlined, l.projectsTitle, '/projects'),
-        ],
+    final due = ref.watch(reviewQuestionsProvider).length;
+    if (due == 0) return const SizedBox.shrink();
+    return Card(
+      child: ListTile(
+        key: const Key('review_banner'),
+        leading: const Text('🔁', style: TextStyle(fontSize: 28)),
+        title: Text(l.reviewChipCount(due)),
+        subtitle: Text(l.hubReviewSub),
+        trailing: const Icon(Icons.arrow_forward),
+        onTap: () => context.push('/review'),
       ),
     );
   }

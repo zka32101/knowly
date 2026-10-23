@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get appName => '雑学コレ！';
+  String get appName => 'ノウリー';
 
   @override
   String get languageTitle => '言語 / Language';
@@ -961,4 +961,202 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get reportOpen => 'がくしゅうの ようす（おうちの ひとへ）';
+
+  @override
+  String get mascotTitle => 'あいぼう';
+
+  @override
+  String mascotNext(int n, String name) {
+    return 'あと $n で「$name」に なるよ';
+  }
+
+  @override
+  String get mascotMax => 'いちばん おおきく なったよ！';
+
+  @override
+  String get mascotHint => 'ざつがくを ひらくと +1、「しらなかった」を おぼえると +2 で そだつよ。';
+
+  @override
+  String mascotPoints(int n) {
+    return '$n ポイント';
+  }
+
+  @override
+  String get mascotLocked => '？？？';
+
+  @override
+  String get mascotName_egg => 'たまご';
+
+  @override
+  String get mascotSay_egg => '…ざつがく、まってるよ。';
+
+  @override
+  String get mascotName_chick => 'ひよこ';
+
+  @override
+  String get mascotSay_chick => 'ぴよっ！ ざつがく おもしろいね！';
+
+  @override
+  String get mascotName_chicklet => 'ちびふくろう';
+
+  @override
+  String get mascotSay_chicklet => 'ふわふわ！ もっと しりたいな。';
+
+  @override
+  String get mascotName_owl => 'ふくろう';
+
+  @override
+  String get mascotSay_owl => 'ほー！ ものしりに なってきたよ。';
+
+  @override
+  String get mascotName_professor => 'はかせふくろう';
+
+  @override
+  String get mascotSay_professor => 'ふむふむ、なるほど。きみは はかせだね。';
+
+  @override
+  String get mascotName_king => 'ふくろうおう';
+
+  @override
+  String get mascotSay_king => 'ほっほー！ ざつがくの おうさまだ！';
+
+  @override
+  String celebrateStage(String name) {
+    return '$nameに なったよ！';
+  }
+
+  @override
+  String get celebrateBadge => 'バッジを ゲット！';
+
+  @override
+  String get flipHint => 'タップして めくろう';
+
+  @override
+  String get flipDetail => 'くわしく みる';
+
+  @override
+  String get zukanTitle => 'ざつがくずかん';
+
+  @override
+  String get zukanChip => 'ずかん';
+
+  @override
+  String zukanFound(int n, int total) {
+    return '$n / $total みつけた';
+  }
+
+  @override
+  String get zukanAll => 'ぜんぶ';
+
+  @override
+  String get zukanHint => 'ざつがくを みると、ずかんが うまっていくよ。';
+
+  @override
+  String get zukanLocked => '？';
+
+  @override
+  String get capsuleTitle => 'ざつがくカプセル';
+
+  @override
+  String get capsuleChip => 'カプセル';
+
+  @override
+  String get capsuleOpen => 'あけてみよう！';
+
+  @override
+  String get capsuleHint => '1にち 1かい、ふしぎな ざつがくが でてくるよ。';
+
+  @override
+  String get capsuleDone => 'また あした あけよう！';
+
+  @override
+  String get capsuleNew => 'はじめて！';
+
+  @override
+  String get capsuleToZukan => 'ずかんを みる';
+
+  @override
+  String get capsuleEmpty => 'でてくる ざつがくが ありません。';
+
+  @override
+  String get capsuleRarity1 => 'ふつう';
+
+  @override
+  String get capsuleRarity2 => 'レア';
+
+  @override
+  String get capsuleRarity3 => 'スーパーレア';
+
+  @override
+  String get swipeTitle => 'スワイプ ほんと？うそ？';
+
+  @override
+  String get swipeChip => 'スワイプ';
+
+  @override
+  String get swipeHint => '→ ほんと　　← うそ';
+
+  @override
+  String swipeCombo(int n) {
+    return '🔥 $n れんぞく！';
+  }
+
+  @override
+  String swipeBestCombo(int n) {
+    return 'いちばん れんぞく：$n';
+  }
+
+  @override
+  String get tabHome => 'ホーム';
+
+  @override
+  String get tabPlay => 'あそぶ';
+
+  @override
+  String get tabCollect => 'あつめる';
+
+  @override
+  String get tabExplore => 'さがす';
+
+  @override
+  String get tabSettings => 'せってい';
+
+  @override
+  String get hubPlayIntro => 'クイズやゲームで、ざつがくを たのしもう。';
+
+  @override
+  String get hubCollectIntro => 'ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。';
+
+  @override
+  String get hubExploreIntro => 'ざつがくを さがしたり、ひろげたりしよう。';
+
+  @override
+  String get hubQuizSub => '1〜4人で対戦';
+
+  @override
+  String get hubSwipeSub => 'ほんと？うそ？';
+
+  @override
+  String get hubDailySub => 'まいにち3もん';
+
+  @override
+  String get hubReviewSub => 'わすれないように';
+
+  @override
+  String get hubMythsSub => 'よくある かんちがい';
+
+  @override
+  String get hubLibrarySub => 'けんさく・ジャンル';
+
+  @override
+  String get hubListenSub => '画面を消しても聞ける';
+
+  @override
+  String get languageZh => '简体中文';
+
+  @override
+  String get languageKo => '한국어';
+
+  @override
+  String get languageEs => 'Español';
 }

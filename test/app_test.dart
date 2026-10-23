@@ -10,6 +10,8 @@ import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/home_widget_service.dart';
 import 'package:knowly/services/listen_background.dart';
+import 'package:knowly/screens/quiz_battle_screen.dart';
+import 'package:knowly/l10n/regions.dart';
 import 'package:knowly/services/share.dart';
 import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
@@ -288,6 +290,33 @@ Future<void> _pickYear(WidgetTester tester, int year) async {
   await tester.scrollUntilVisible(find.text('$year'), 100,
       scrollable: find.byType(Scrollable).last);
   await tester.tap(find.text('$year').last);
+  await tester.pumpAndSettle();
+}
+
+/// 下のタブをたどって、キーのボタンを見つけて押す（ホーム → あそぶ → あつめる → さがす の順に探す）。
+Future<void> _open(WidgetTester tester, Key key) async {
+  if (find.byKey(key).evaluate().isEmpty) {
+    for (final t in const ['tab_home', 'tab_play', 'tab_collect', 'tab_explore']) {
+      final tab = find.byKey(Key(t));
+      if (tab.evaluate().isEmpty) continue;
+      await tester.tap(tab);
+      await tester.pumpAndSettle();
+      if (find.byKey(key).evaluate().isNotEmpty) break;
+    }
+  }
+  final vertical =
+      find.byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical);
+  if (find.byKey(key).evaluate().isNotEmpty && vertical.evaluate().isNotEmpty) {
+    await tester.ensureVisible(find.byKey(key));
+    await tester.pumpAndSettle();
+  }
+  await tester.tap(find.byKey(key));
+  await tester.pumpAndSettle();
+}
+
+/// 下のタブを切り替える。
+Future<void> _tab(WidgetTester tester, String key) async {
+  await tester.tap(find.byKey(Key(key)));
   await tester.pumpAndSettle();
 }
 
@@ -601,7 +630,7 @@ void main() {
       expect(n.lastScheduled!.first.fireAt.hour, 7);
       // 通知の本文は、その日の雑学のタイトル。タイトルは空でない
       expect(n.lastScheduled!.first.body, isNotEmpty);
-      expect(n.lastScheduled!.first.title, '雑学コレ！');
+      expect(n.lastScheduled!.first.title, 'ノウリー');
       final sp = await SharedPreferences.getInstance();
       expect(sp.getBool('notifyEnabled'), isTrue);
     });
@@ -735,7 +764,7 @@ void main() {
 
   group('ライブラリ（検索・フィルター）', () {
     Future<void> openLibrary(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_library')));
+      await _open(tester, const Key('open_library'));
       await tester.pumpAndSettle();
     }
 
@@ -855,6 +884,7 @@ void main() {
   group('関心事', () {
     testWidgets('未登録のホームには登録を促すカードが出る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _scrollTo(tester, const Key('interests_empty'));
       expect(find.byKey(const Key('interests_empty')), findsOneWidget);
       expect(find.byKey(const Key('interests_section')), findsNothing);
     });
@@ -864,6 +894,7 @@ void main() {
         'ageBand': 'adult',
         'interestCategories': ['bugs', 'vehicles'],
       });
+      await _scrollTo(tester, const Key('interests_section'));
       expect(find.byKey(const Key('interests_section')), findsOneWidget);
       expect(find.text('あなたの関心'), findsOneWidget);
       final section = find.byKey(const Key('interests_section'));
@@ -879,6 +910,7 @@ void main() {
         'ageBand': 'adult',
         'interestKeywords': ['ラッコ'],
       });
+      await _scrollTo(tester, const Key('interests_section'));
       final section = find.byKey(const Key('interests_section'));
       expect(section, findsOneWidget);
       expect(find.descendant(of: section, matching: find.textContaining('ラッコ')), findsWidgets);
@@ -946,6 +978,7 @@ void main() {
       final sp = await SharedPreferences.getInstance();
       expect(sp.getStringList('interestCategories'), ['bugs']);
       expect(sp.getStringList('categories'), isNull);
+      await _scrollTo(tester, const Key('interests_section'));
       expect(find.byKey(const Key('interests_section')), findsOneWidget);
     });
 
@@ -975,8 +1008,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await tester.tap(find.byKey(const Key('open_settings')));
       await tester.pumpAndSettle();
-      await _scrollTo(tester, const Key('open_interests'));
-      await tester.tap(find.byKey(const Key('open_interests')));
+      await _open(tester, const Key('open_interests'));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('keyword_field')), findsOneWidget);
     });
@@ -984,7 +1016,7 @@ void main() {
 
   group('国タグ（国限定の雑学）', () {
     Future<int> libraryCount(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_library')));
+      await _open(tester, const Key('open_library'));
       await tester.pumpAndSettle();
       return int.parse(tester
           .widget<Text>(find.byKey(const Key('results_count')))
@@ -1045,6 +1077,7 @@ void main() {
     testWidgets('夏の昼は「夏にぴったり」の雑学が出る（北半球）', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'north'}, now: DateTime(2026, 7, 15, 13));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.byKey(const Key('timing_section')), findsOneWidget);
       expect(find.text('いまのおすすめ'), findsOneWidget);
       expect(find.text('夏にぴったり'), findsOneWidget);
@@ -1053,6 +1086,7 @@ void main() {
     testWidgets('南半球では7月は冬。「冬にぴったり」が出て、夏のおすすめは出ない', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'south'}, now: DateTime(2026, 7, 15, 13));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.text('冬にぴったり'), findsOneWidget);
       expect(find.text('夏にぴったり'), findsNothing);
     });
@@ -1066,6 +1100,7 @@ void main() {
     testWidgets('夜は「夜にぴったり」の雑学が出る', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'off'}, now: DateTime(2026, 7, 15, 22));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.text('夜にぴったり'), findsOneWidget);
     });
 
@@ -1234,7 +1269,7 @@ void main() {
 
   group('ほんと？うそ？', () {
     Future<void> openMyths(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_myths')));
+      await _open(tester, const Key('open_myths'));
       await tester.pumpAndSettle();
     }
 
@@ -1246,6 +1281,7 @@ void main() {
     testWidgets('全年代にホームから入口がある', (tester) async {
       for (final band in ['kids', 'junior', 'teen', 'adult']) {
         await _pump(tester, prefs: {'ageBand': band});
+        await _tab(tester, 'tab_play');
         expect(find.byKey(const Key('open_myths')), findsOneWidget, reason: band);
         await tester.pumpWidget(const SizedBox());
       }
@@ -1340,7 +1376,7 @@ void main() {
 
   group('今日は何の日', () {
     Future<void> openToday(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_today')));
+      await _open(tester, const Key('open_today'));
       await tester.pumpAndSettle();
     }
 
@@ -1508,11 +1544,13 @@ void main() {
     testWidgets('入口は Teen/Adult だけ', (tester) async {
       for (final band in ['kids', 'junior']) {
         await _pump(tester, prefs: {'ageBand': band});
+        if (band == 'junior') await _tab(tester, 'tab_explore');
         expect(find.byKey(const Key('open_listen')), findsNothing, reason: band);
         await tester.pumpWidget(const SizedBox());
       }
       for (final band in ['teen', 'adult']) {
         await _pump(tester, prefs: {'ageBand': band});
+        await _tab(tester, 'tab_explore');
         expect(find.byKey(const Key('open_listen')), findsOneWidget, reason: band);
         await tester.pumpWidget(const SizedBox());
       }
@@ -1521,7 +1559,7 @@ void main() {
     testWidgets('再生すると今日の雑学から読み、終わったら次へ進む', (tester) async {
       final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
       tts.autoComplete = false;
-      await tester.tap(find.byKey(const Key('open_listen')));
+      await _open(tester, const Key('open_listen'));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('listen_progress')), findsOneWidget);
       final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
@@ -1551,7 +1589,7 @@ void main() {
     testWidgets('速さを変えられる', (tester) async {
       final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
       tts.autoComplete = false;
-      await tester.tap(find.byKey(const Key('open_listen')));
+      await _open(tester, const Key('open_listen'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('はやい'));
       await tester.pump();
@@ -1562,7 +1600,7 @@ void main() {
 
     testWidgets('一覧をタップすると、その雑学へ移動する', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
-      await tester.tap(find.byKey(const Key('open_listen')));
+      await _open(tester, const Key('open_listen'));
       await tester.pumpAndSettle();
       await _scrollTo(tester, const Key('listen_item_2'));
       await tester.tap(find.byKey(const Key('listen_item_2')));
@@ -1575,7 +1613,7 @@ void main() {
     testWidgets('画面を閉じると読み上げが止まる', (tester) async {
       final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
       tts.autoComplete = false;
-      await tester.tap(find.byKey(const Key('open_listen')));
+      await _open(tester, const Key('open_listen'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('listen_toggle')));
       await tester.pump();
@@ -1587,7 +1625,7 @@ void main() {
 
   group('自由研究ネタ帳', () {
     Future<void> openProjects(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_projects')));
+      await _open(tester, const Key('open_projects'));
       await tester.pumpAndSettle();
     }
 
@@ -1597,6 +1635,7 @@ void main() {
       await tester.pumpWidget(const SizedBox());
       for (final band in ['junior', 'teen', 'adult']) {
         await _pump(tester, prefs: {'ageBand': band});
+        await _tab(tester, 'tab_explore');
         expect(find.byKey(const Key('open_projects')), findsOneWidget, reason: band);
         await tester.pumpWidget(const SizedBox());
       }
@@ -1787,7 +1826,7 @@ void main() {
 
     testWidgets('プレミアムなら、ライブラリに鍵が出ない', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: FakePurchases(premium: true));
-      await tester.tap(find.byKey(const Key('open_library')));
+      await _open(tester, const Key('open_library'));
       await tester.pumpAndSettle();
       expect(find.byIcon(Icons.lock_outline), findsNothing);
     });
@@ -1916,7 +1955,7 @@ void main() {
     }
 
     Future<void> openQuiz(WidgetTester tester) async {
-      await tester.tap(find.byKey(const Key('open_quiz')));
+      await _open(tester, const Key('open_quiz'));
       await tester.pumpAndSettle();
     }
 
@@ -1967,8 +2006,7 @@ void main() {
       }
       // 全員同じ答え → 4人とも同じ結果
       expect(find.byKey(const Key('battle_result_3')), findsOneWidget);
-      await tester.tap(find.byKey(const Key('battle_next')));
-      await tester.pumpAndSettle();
+      await tapSetup(tester, const Key('battle_next'));
       await playAll(tester, 4, 4);
       expect(find.byKey(const Key('battle_rank_0')), findsOneWidget);
       expect(find.byKey(const Key('battle_rank_3')), findsOneWidget);
@@ -2018,8 +2056,7 @@ void main() {
 
     testWidgets('Kids でも遊べる（通信なし・ひらがな）', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'kids'});
-      await _scrollTo(tester, const Key('open_quiz'));
-      await tester.tap(find.byKey(const Key('open_quiz')));
+      await _open(tester, const Key('open_quiz'));
       await tester.pumpAndSettle();
       expect(find.text('なんにんで あそぶ？'), findsOneWidget);
     });
@@ -2076,8 +2113,9 @@ void main() {
 
     testWidgets('復習: 期限が来た雑学が出て、正解すると予定が先へ進む', (tester) async {
       await _pump(tester, prefs: learnedPrefs);
-      expect(find.byKey(const Key('open_review')), findsOneWidget);
-      await tester.tap(find.byKey(const Key('open_review')));
+      expect(find.byKey(const Key('review_banner')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('review_banner')));
+      await tester.pumpAndSettle();
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('battle_true')), findsOneWidget); // タコは○×のみ
       await tester.tap(find.byKey(const Key('battle_true'))); // 正解は ○
@@ -2093,7 +2131,7 @@ void main() {
 
     testWidgets('復習: 間違えると明日に戻る', (tester) async {
       await _pump(tester, prefs: learnedPrefs);
-      await tester.tap(find.byKey(const Key('open_review')));
+      await _open(tester, const Key('open_review'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('battle_false')));
       await tester.pumpAndSettle();
@@ -2108,13 +2146,13 @@ void main() {
         'knowledge': ['octopus_blue_blood:learned'],
         'reviews': ['octopus_blue_blood:0:2026-10-24'],
       });
-      expect(find.byKey(const Key('open_review')), findsNothing);
+      expect(find.byKey(const Key('review_banner')), findsNothing);
     });
 
     testWidgets('今日のチャレンジ: 3問やると記録され、もう一度開くと結果になる。Adult は共有できる', (tester) async {
       final share = FakeShare();
       await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
-      await tester.tap(find.byKey(const Key('open_daily')));
+      await _open(tester, const Key('open_daily'));
       await tester.pumpAndSettle();
       for (var i = 0; i < 3; i++) {
         await answerRound(tester);
@@ -2129,7 +2167,7 @@ void main() {
       // もう一度開いても、続きから遊べず結果だけ
       await tester.tap(find.byKey(const Key('daily_exit')));
       await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const Key('open_daily')));
+      await _open(tester, const Key('open_daily'));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('daily_marks')), findsOneWidget);
       expect(find.byKey(const Key('battle_statement')), findsNothing);
@@ -2140,7 +2178,7 @@ void main() {
         'ageBand': 'junior',
         'dailyResults': ['2026-10-23:101'],
       });
-      await tester.tap(find.byKey(const Key('open_daily')));
+      await _open(tester, const Key('open_daily'));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('daily_marks')), findsOneWidget);
       expect(find.text('✅❌✅'), findsOneWidget);
@@ -2154,7 +2192,7 @@ void main() {
         'quizCorrect': 10,
         'quizAnswered': 12,
       });
-      await tapV(tester, const Key('open_badges'));
+      await _open(tester, const Key('open_badges'));
       expect(find.byKey(const Key('badge_streak_3')), findsOneWidget);
       expect(find.text('3にち れんぞく'), findsOneWidget);
       final count = find.byKey(const Key('badges_count'));
@@ -2163,7 +2201,7 @@ void main() {
 
     testWidgets('バッジ: Kids には連続日数のバッジがない', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'kids'});
-      await tapV(tester, const Key('open_badges'));
+      await _open(tester, const Key('open_badges'));
       expect(find.byKey(const Key('badge_streak_3')), findsNothing);
       expect(find.byKey(const Key('badge_quizCorrect_10')), findsOneWidget);
     });
@@ -2196,7 +2234,7 @@ void main() {
 
     testWidgets('ひとりクイズの正解数が通算に加わる（対戦の複数人では加わらない）', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
-      await tester.tap(find.byKey(const Key('open_quiz')));
+      await _open(tester, const Key('open_quiz'));
       await tester.pumpAndSettle();
       await tapV(tester, const Key('battle_kind_tf'));
       await tapV(tester, const Key('battle_start'));
@@ -2213,7 +2251,7 @@ void main() {
       expect(c.days, hasLength(7));
       expect(c.days.containsKey('2026-10-23'), isTrue);
       expect(c.days['2026-10-23']!.title, isNotEmpty);
-      expect(c.appName, '雑学コレ！');
+      expect(c.appName, 'ノウリー');
       expect(_lastWidget!.clears, 0);
     });
 
@@ -2232,8 +2270,7 @@ void main() {
       final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
       tts.autoComplete = false;
       final bg = _lastBackground!;
-      await _scrollTo(tester, const Key('open_listen'));
-      await tester.tap(find.byKey(const Key('open_listen')));
+      await _open(tester, const Key('open_listen'));
       await tester.pumpAndSettle();
       expect(bg.onPause, isNotNull);
       expect(bg.updates, isEmpty); // 再生するまでは通知を出さない
@@ -2246,6 +2283,514 @@ void main() {
       expect(bg.updates.last.playing, isFalse);
       await _back(tester);
       expect(bg.stops, greaterThan(0));
+    });
+  });
+
+  group('相棒（成長するキャラ）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('はじめは たまご。雑学を開くと +1、「知らなかった」で +2 になる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('mascot_card')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
+      expect(find.text('🥚'), findsOneWidget);
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+      await _reveal(tester, const Key('learned_it'));
+      await tester.tap(find.byKey(const Key('learned_it')));
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(mascotPointsProvider), 3); // 開いた1 + 知れた2
+    });
+
+    testWidgets('同じ雑学を何度開いても、1点だけ', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': ['octopus_blue_blood'],
+      });
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+      containerOf(tester).read(settingsProvider.notifier).markSeen('octopus_blue_blood');
+      expect(containerOf(tester).read(mascotPointsProvider), 1);
+    });
+
+    testWidgets('ポイントが増えると見た目が変わり、一覧に「？？？」が残る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 16; i++) 'fact_$i'],
+      });
+      expect(find.text('🐥'), findsOneWidget); // 16点 → ちびふくろう
+      await tester.tap(find.byKey(const Key('mascot_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_current')), findsOneWidget);
+      expect(find.text('ちびふくろう'), findsWidgets);
+      expect(find.text('？？？'), findsWidgets); // まだなっていない姿
+    });
+
+    testWidgets('Kids にも出て、見た雑学が記録される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byKey(const Key('mascot_card')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), greaterThan(0));
+    });
+
+    testWidgets('データを削除すると たまご に戻る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 16; i++) 'fact_$i'],
+      });
+      await containerOf(tester).read(settingsProvider.notifier).resetAll();
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
+    });
+  });
+
+  group('お祝いと相棒の表情', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('初回は基準を決めるだけで、既存の記録はお祝いしない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 20; i++) 'fact_$i'], // すでに ちびふくろう
+        'quizCorrect': 12,
+      });
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.celebratedStage, 2);
+      expect(s.celebratedBadges, contains('quizCorrect_10'));
+    });
+
+    testWidgets('段階が上がると、お祝いが出て、消えたら記録される', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 4; i++) 'fact_$i'],
+        'celebratedStage': 0,
+        'celebratedBadges': <String>[],
+      });
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      containerOf(tester).read(settingsProvider.notifier).markSeen('fact_new'); // 5点 → ひよこ
+      await tester.pump();
+      await tester.pump();
+      expect(find.byKey(const Key('celebration')), findsOneWidget);
+      expect(find.text('ひよこに なったよ！'), findsOneWidget);
+      await tester.pumpAndSettle(); // 3秒で自動で消える
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).celebratedStage, 1);
+    });
+
+    testWidgets('バッジを取ると、お祝いが出る（タップで閉じられる）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'quizCorrect': 9,
+        'celebratedStage': 0,
+        'celebratedBadges': <String>[],
+      });
+      containerOf(tester).read(settingsProvider.notifier).recordQuizAnswer(correct: true);
+      await tester.pump();
+      await tester.pump();
+      expect(find.text('バッジを ゲット！'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('celebration')));
+      await tester.pump();
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).celebratedBadges,
+          contains('quizCorrect_10'));
+    });
+
+    testWidgets('クイズの発表で、正解なら喜び、不正解ならしょんぼりする', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_quiz'));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('battle_kind_tf')), 200,
+          scrollable: find
+              .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+              .first);
+      await tester.tap(find.byKey(const Key('battle_kind_tf')));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('battle_start')), 200,
+          scrollable: find
+              .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+              .first);
+      await tester.tap(find.byKey(const Key('battle_start')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('battle_true')));
+      await tester.pump();
+      final ok = find.byKey(const Key('mascot_face_happy')).evaluate().isNotEmpty;
+      final bad = find.byKey(const Key('mascot_face_sad')).evaluate().isNotEmpty;
+      expect(ok != bad, isTrue); // どちらか一方
+    });
+
+    testWidgets('相棒をさわると、よろこぶ', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('mascot_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('mascot_tap')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_happy')), findsOneWidget);
+    });
+
+    testWidgets('ながら聞き: 読み上げ中は口ぱく、止めると落ち着く', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      await _open(tester, const Key('open_listen'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_speaking')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+    });
+  });
+
+  group('めくりカード（今日の雑学）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('おもては「ほんと？うそ？」、タップでめくると答えと本文が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('flip_front')), findsOneWidget);
+      expect(find.byKey(const Key('flip_back')), findsNothing);
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_front')), findsNothing);
+      expect(find.byKey(const Key('flip_back')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), 1); // めくると見たことになる
+      await tester.tap(find.byKey(const Key('flip_card'))); // もう一度でおもてに戻る
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_front')), findsOneWidget);
+    });
+
+    testWidgets('クイズがある雑学では、裏に ○ か ✕ が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final today = containerOf(tester).read(feedProvider).first;
+      final hasQuiz = containerOf(tester).read(triviaRepositoryProvider).quizFor(today.id) != null;
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_answer')).evaluate().isNotEmpty, hasQuiz);
+    });
+
+    testWidgets('「くわしく」と右の矢印から、詳細へ進める', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('flip_open_detail')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+      await _back(tester);
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('flip_detail_button')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+  });
+
+  group('ずかん・カプセル', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('カプセル: あけるとカードが出て、見た雑学になり、今日はもう一度あけられない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_capsule'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('capsule_open')));
+      await tester.pump(const Duration(milliseconds: 300));
+      expect(find.byKey(const Key('capsule_opening')), findsOneWidget); // 開く演出
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_card')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_rarity')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_new')), findsOneWidget); // はじめて
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.capsule, startsWith('2026-10-23:'));
+      expect(s.seen, hasLength(1));
+      expect(find.byKey(const Key('capsule_open')), findsNothing);
+      expect(find.byKey(const Key('capsule_done')), findsOneWidget);
+    });
+
+    testWidgets('カプセル: 今日あけ済みなら、同じカードが出る。日付が変われば、またあけられる', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'capsule': '2026-10-23:octopus_blue_blood',
+        'seen': ['octopus_blue_blood'],
+      });
+      await _open(tester, const Key('open_capsule'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_card')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_open')), findsNothing);
+    });
+
+    testWidgets('カプセル: 翌日は、またあけられる', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'capsule': '2026-10-22:octopus_blue_blood'});
+      await _open(tester, const Key('open_capsule'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_open')), findsOneWidget);
+    });
+
+    testWidgets('カプセル: Kids でも あけられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _open(tester, const Key('open_capsule'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_open')), findsOneWidget);
+    });
+
+    testWidgets('ずかん: 見た雑学のマスが埋まり、まだのマスは押せない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': ['octopus_blue_blood', 'giraffe_seven_vertebrae'],
+      });
+      await _open(tester, const Key('open_zukan'));
+      await tester.pumpAndSettle();
+      final total = containerOf(tester).read(allEligibleProvider).length;
+      expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
+          '2 / $total みつけた');
+      // どうぶつだけに絞ると、そのジャンルの数
+      await tester.tap(find.byKey(const Key('zukan_cat_animals')));
+      await tester.pumpAndSettle();
+      final animals = containerOf(tester)
+          .read(allEligibleProvider)
+          .where((t) => t.category == 'animals')
+          .length;
+      expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
+          '2 / $animals みつけた');
+      // 見つけたマスを押すと詳細へ
+      await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('ずかん: まだのマスを押しても何も起きない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await _open(tester, const Key('open_zukan'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('zukan_cell_honey_never_spoils')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsNothing);
+      expect(find.byKey(const Key('zukan_progress')), findsOneWidget);
+    });
+  });
+
+  group('スワイプ ほんと？うそ？', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    /// いま出ているカードの正解（○ なら true）。
+    bool correctNow(WidgetTester tester) {
+      final statement = tester.widget<WrapText>(find.byKey(const Key('swipe_statement'))).text;
+      return containerOf(tester)
+          .read(battlePoolProvider)
+          .firstWhere((q) => q.isTrueFalse && q.statement == statement)
+          .correct ==
+          0;
+    }
+
+    Future<void> openSwipe(WidgetTester tester) async {
+      await _open(tester, const Key('open_swipe'));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('全部正解すると、れんぞくが伸びて、10問で結果が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      for (var i = 0; i < 10; i++) {
+        final ok = correctNow(tester);
+        await tester.tap(find.byKey(Key(ok ? 'swipe_true' : 'swipe_false')));
+        await tester.pumpAndSettle();
+        if (i == 1) expect(find.byKey(const Key('swipe_combo')), findsOneWidget);
+      }
+      expect(find.byKey(const Key('swipe_final')), findsOneWidget);
+      expect(find.text('いちばん れんぞく：10'), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).quizCorrect, 10);
+      await tester.tap(find.byKey(const Key('swipe_again')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_card')), findsOneWidget);
+    });
+
+    testWidgets('カードを右にスワイプすると「ほんと」、左だと「うそ」', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      final first = correctNow(tester);
+      await tester.fling(find.byKey(const Key('swipe_card')), const Offset(600, 0), 1500);
+      await tester.pumpAndSettle();
+      expect(find.byKey(Key(first ? 'swipe_result_ok' : 'swipe_result_ng')), findsOneWidget);
+      final second = correctNow(tester);
+      await tester.fling(find.byKey(const Key('swipe_card')), const Offset(-600, 0), 1500);
+      await tester.pumpAndSettle();
+      // 左 = うそ(false)。正解が ✕ なら成功
+      expect(find.byKey(Key(!second ? 'swipe_result_ok' : 'swipe_result_ng')), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).quizAnswered, 2);
+    });
+
+    testWidgets('間違えると、れんぞくが0に戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openSwipe(tester);
+      for (var i = 0; i < 2; i++) {
+        final ok = correctNow(tester);
+        await tester.tap(find.byKey(Key(ok ? 'swipe_true' : 'swipe_false')));
+        await tester.pumpAndSettle();
+      }
+      expect(find.byKey(const Key('swipe_combo')), findsOneWidget);
+      final ok = correctNow(tester);
+      await tester.tap(find.byKey(Key(ok ? 'swipe_false' : 'swipe_true'))); // わざと間違える
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_combo')), findsNothing);
+      expect(find.byKey(const Key('swipe_result_ng')), findsOneWidget);
+    });
+
+    testWidgets('Kids にも入口があり、あそべる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _open(tester, const Key('open_swipe'));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('swipe_card')), findsOneWidget);
+    });
+  });
+
+  group('メニュー（下のタブ）', () {
+    testWidgets('Adult/Teen/Junior は5つのタブ', (tester) async {
+      for (final band in ['junior', 'teen', 'adult']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        for (final k in ['tab_home', 'tab_play', 'tab_collect', 'tab_explore', 'open_settings']) {
+          expect(find.byKey(Key(k)), findsOneWidget, reason: '$band $k');
+        }
+        expect(find.byType(NavigationDestination), findsNWidgets(5), reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('Kids は3つのタブで、設定は保護者ゲートの先', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byType(NavigationDestination), findsNWidgets(3));
+      expect(find.byKey(const Key('tab_explore')), findsNothing);
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('privacy_tile')), findsNothing); // ゲートで止まる
+      await _solveGate(tester);
+      expect(find.byType(NavigationBar), findsNothing); // 設定は全画面
+    });
+
+    testWidgets('タブを切り替えると、それぞれのハブが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _tab(tester, 'tab_play');
+      for (final k in ['open_quiz', 'open_swipe', 'open_daily', 'open_myths']) {
+        expect(find.byKey(Key(k)), findsOneWidget, reason: k);
+      }
+      await _tab(tester, 'tab_collect');
+      for (final k in ['open_mascot', 'open_zukan', 'open_capsule', 'open_badges']) {
+        expect(find.byKey(Key(k)), findsOneWidget, reason: k);
+      }
+      await _tab(tester, 'tab_explore');
+      for (final k in ['open_library', 'open_saved', 'open_interests', 'open_today', 'open_listen']) {
+        expect(find.byKey(Key(k)), findsOneWidget, reason: k);
+      }
+      await _tab(tester, 'open_settings');
+      expect(find.byKey(const Key('privacy_tile')), findsNothing); // 先頭付近。下にある
+      await _tab(tester, 'tab_home');
+      expect(find.byKey(const Key('flip_card')), findsOneWidget);
+    });
+
+    testWidgets('ホームにボタンの羅列はなく、おさらいがあるときだけお知らせが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      for (final k in ['open_quiz', 'open_swipe', 'open_zukan', 'open_badges']) {
+        expect(find.byKey(Key(k)), findsNothing, reason: k);
+      }
+      expect(find.byKey(const Key('review_banner')), findsNothing);
+    });
+
+    testWidgets('あそぶ: Kids には「今日は何の日」もあり、さがす系はない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _tab(tester, 'tab_play');
+      expect(find.byKey(const Key('open_today')), findsOneWidget);
+      expect(find.byKey(const Key('open_quiz')), findsOneWidget);
+      expect(find.byKey(const Key('open_library')), findsNothing);
+    });
+
+    testWidgets('ハブのカードから遊びの画面へ進み、戻るとタブに戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_swipe'));
+      expect(find.byKey(const Key('swipe_card')), findsOneWidget);
+      expect(find.byType(NavigationBar), findsNothing); // 遊びの画面は全画面
+      await _back(tester);
+      expect(find.byKey(const Key('open_swipe')), findsOneWidget); // あそぶタブに戻る
+      expect(find.byType(NavigationBar), findsOneWidget);
+    });
+
+    testWidgets('おさらいがあるとき、ホームのお知らせとあそぶのカードに件数が出る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'knowledge': ['octopus_blue_blood:learned'],
+        'reviews': ['octopus_blue_blood:0:2026-10-22'],
+      });
+      expect(find.byKey(const Key('review_banner')), findsOneWidget);
+      await _tab(tester, 'tab_play');
+      expect(find.byKey(const Key('open_review')), findsOneWidget);
+    });
+  });
+
+  group('多言語（日本語・英語・中国語・韓国語・スペイン語）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('中国語・韓国語・スペイン語の端末では、画面がその言語になり、本文は英語', (tester) async {
+      const tabs = {
+        'zh': ['首页', '玩', '收集', '探索', '设置'],
+        'ko': ['홈', '놀기', '모으기', '찾기', '설정'],
+        'es': ['Inicio', 'Jugar', 'Colección', 'Explorar', 'Ajustes'],
+      };
+      for (final e in tabs.entries) {
+        await _pump(tester,
+            prefs: {'ageBand': 'adult'}, deviceLanguage: e.key, deviceRegion: null);
+        for (final label in e.value) {
+          expect(find.text(label), findsWidgets, reason: '${e.key} $label');
+        }
+        expect(containerOf(tester).read(uiLanguageProvider), e.key);
+        expect(containerOf(tester).read(contentLanguageProvider), 'en', reason: e.key);
+        // 本文は英語のまま（めくりカードのおもてが英語の文）
+        final prompt = tester.widget<WrapText>(find.byKey(const Key('flip_prompt'))).text;
+        expect(RegExp(r'[぀-ヿ一-鿿]').hasMatch(prompt), isFalse, reason: '${e.key}: $prompt');
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('日本語の端末は、画面も本文も日本語（ノウリー）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.text('ノウリー'), findsWidgets);
+      expect(containerOf(tester).read(contentLanguageProvider), 'ja');
+    });
+
+    testWidgets('設定で画面の言語を変えられる。本文のない言語にすると、本文は英語になる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _tab(tester, 'open_settings');
+      await tester.tap(find.byKey(const Key('ui_language_dropdown')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('한국어').last);
+      await tester.pumpAndSettle();
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.uiLanguage, 'ko');
+      expect(s.contentLanguage, isNull);
+      expect(containerOf(tester).read(uiLanguageProvider), 'ko');
+      expect(containerOf(tester).read(contentLanguageProvider), 'en');
+      expect(find.text('설정'), findsWidgets);
+    });
+
+    testWidgets('最初の画面の言語選択には、5つの言語が並ぶ', (tester) async {
+      await _pump(tester);
+      for (final name in ['日本語', 'English', '简体中文', '한국어', 'Español']) {
+        expect(find.text(name), findsOneWidget, reason: name);
+      }
+      await tester.tap(find.text('한국어'));
+      await tester.pumpAndSettle();
+      expect(find.text('다음'), findsOneWidget); // 画面が韓国語に
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.uiLanguage, 'ko');
+      expect(s.contentLanguage, isNull);
+    });
+
+    testWidgets('国の名前も、画面の言語で出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'uiLanguage': 'es'});
+      expect(regionName('JP', 'es'), 'Japón');
+      expect(regionName('KR', 'zh'), '韩国');
+      expect(regionName('US', 'ko'), '미국');
+      expect(regionName('XX', 'es'), 'XX');
     });
   });
 }

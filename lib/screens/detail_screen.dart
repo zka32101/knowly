@@ -40,6 +40,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
     super.initState();
     // 読んだ日を記録（Teen/Adult のストリーク用。Kids/Junior は記録しない）。
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(settingsProvider.notifier).markSeen(widget.triviaId);
       final band = ref.read(settingsProvider).ageBand;
       if (band != null && band.isTeenOrAdult) {
         ref.read(settingsProvider.notifier).markRead(ref.read(nowProvider));

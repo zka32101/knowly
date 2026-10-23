@@ -44,13 +44,17 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               groupValue: settings.uiLanguage,
               onChanged: (v) {
                 notifier.setUiLanguage(v);
-                notifier.setContentLanguage(v);
+                // 雑学の本文は日本語・英語だけ。ほかの言語の画面では、本文は英語（自動）にする。
+                notifier.setContentLanguage(contentLanguageCodes.contains(v) ? v : null);
               },
               child: Column(
                 children: [
                   RadioListTile<String?>(value: null, title: Text(l.languageSystem)),
                   RadioListTile<String?>(value: 'ja', title: Text(l.languageJa)),
                   RadioListTile<String?>(value: 'en', title: Text(l.languageEn)),
+                  RadioListTile<String?>(value: 'zh', title: Text(l.languageZh)),
+                  RadioListTile<String?>(value: 'ko', title: Text(l.languageKo)),
+                  RadioListTile<String?>(value: 'es', title: Text(l.languageEs)),
                 ],
               ),
             ),

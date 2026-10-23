@@ -109,9 +109,38 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     final notifier = ref.read(settingsProvider.notifier);
     final band = settings.ageBand ?? AgeBand.adult;
 
-    Widget languageTile(String title, String? value, void Function(String?) onChanged) =>
-        ListTile(
-          title: Text(title),
+    String languageName(String code) => switch (code) {
+          'ja' => l.languageJa,
+          'en' => l.languageEn,
+          'zh' => l.languageZh,
+          'ko' => l.languageKo,
+          _ => l.languageEs,
+        };
+
+    // 画面の言語: 5言語＋端末に合わせる。雑学の本文は日本語・英語だけ。
+    final uiLanguageTile = ListTile(
+      key: const Key('ui_language_tile'),
+      title: Text(l.settingsUiLanguage),
+      trailing: DropdownButton<String?>(
+        key: const Key('ui_language_dropdown'),
+        value: settings.uiLanguage,
+        onChanged: (v) {
+          notifier.setUiLanguage(v);
+          if (v != null && !contentLanguageCodes.contains(v)) {
+            // 本文のない言語に切り替えたら、本文は英語（自動）にする。
+            notifier.setContentLanguage(null);
+          }
+        },
+        items: [
+          DropdownMenuItem(value: null, child: Text(l.languageSystem)),
+          for (final c in supportedLanguageCodes)
+            DropdownMenuItem(value: c, child: Text(languageName(c))),
+        ],
+      ),
+    );
+
+    Widget contentLanguageTile() => ListTile(
+          title: Text(l.settingsContentLanguage),
           subtitle: SegmentedButton<String?>(
             showSelectedIcon: false,
             segments: [
@@ -119,8 +148,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ButtonSegment(value: 'ja', label: Text(l.languageJa)),
               ButtonSegment(value: 'en', label: Text(l.languageEn)),
             ],
-            selected: {value},
-            onSelectionChanged: (s) => onChanged(s.first),
+            selected: {settings.contentLanguage},
+            onSelectionChanged: (s) => notifier.setContentLanguage(s.first),
           ),
         );
 
@@ -128,9 +157,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       appBar: AppBar(title: Text(l.settingsTitle)),
       body: ListView(
         children: [
-          languageTile(l.settingsUiLanguage, settings.uiLanguage, notifier.setUiLanguage),
-          languageTile(l.settingsContentLanguage, settings.contentLanguage,
-              notifier.setContentLanguage),
+          uiLanguageTile,
+          contentLanguageTile(),
           ListTile(
             title: Text(l.settingsRegion),
             subtitle: Column(

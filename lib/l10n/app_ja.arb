@@ -1,6 +1,6 @@
 {
   "@@locale": "ja",
-  "appName": "雑学コレ！",
+  "appName": "ノウリー",
   "languageTitle": "言語 / Language",
   "languageSystem": "端末の言語",
   "languageJa": "日本語",
@@ -328,10 +328,22 @@
   "privacyPointChildren": "Kids / Junior では、ネットワーク通信も課金のしくみも使いません。",
   "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。",
   "privacyContact": "お問い合わせ: {email}",
-  "@privacyContact": {"placeholders": {"email": {"type": "String"}}},
+  "@privacyContact": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
   "privacyLicenses": "オープンソースライセンス",
   "privacyVersion": "バージョン {version}",
-  "@privacyVersion": {"placeholders": {"version": {"type": "String"}}},
+  "@privacyVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
   "privacyDeleteButton": "この端末のデータを削除",
   "privacyDeleteTitle": "データを削除しますか？",
   "privacyDeleteBody": "設定・保存した雑学・記録・通知の予約がすべて消え、最初の画面に戻ります。元に戻せません。購入済みのプレミアムは消えません（ストアで復元できます）。",
@@ -344,28 +356,82 @@
   "battlePlayers": "なんにんで あそぶ？",
   "battleSolo": "ひとり",
   "battlePlayerCount": "{n}にん",
-  "@battlePlayerCount": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePlayerCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battlePlayerDefault": "プレイヤー{n}",
-  "@battlePlayerDefault": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePlayerDefault": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleRounds": "なんもん？",
   "battleRoundCount": "{n}もん",
-  "@battleRoundCount": {"placeholders": {"n": {"type": "int"}}},
+  "@battleRoundCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleHandHint": "1つの たんまつを じゅんばんに まわして あそぼう。",
   "battleStart": "はじめる",
   "battleNoQuestions": "だせる クイズが ありません。",
   "battleRoundOf": "{n} / {total} もんめ",
-  "@battleRoundOf": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@battleRoundOf": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "battleTurnOf": "{name}の ばん",
-  "@battleTurnOf": {"placeholders": {"name": {"type": "String"}}},
+  "@battleTurnOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "battleSeeResult": "けっかを みる",
   "battleFinished": "おしまい！",
   "battleSoloScore": "{score} / {total} もん せいかい！",
-  "@battleSoloScore": {"placeholders": {"score": {"type": "int"}, "total": {"type": "int"}}},
+  "@battleSoloScore": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "battleDraw": "ひきわけ！",
   "battleWinner": "{name}の かち！",
-  "@battleWinner": {"placeholders": {"name": {"type": "String"}}},
+  "@battleWinner": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "battleRank": "{n}い",
-  "@battleRank": {"placeholders": {"n": {"type": "int"}}},
+  "@battleRank": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleAgain": "もういちど",
   "battleChangeSettings": "せっていを かえる",
   "battleExit": "おわる",
@@ -378,40 +444,115 @@
   "battleTimeLimit": "せいげんじかん",
   "battleTimeOff": "なし",
   "battleSeconds": "{n}びょう",
-  "@battleSeconds": {"placeholders": {"n": {"type": "int"}}},
+  "@battleSeconds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleSecondsLeft": "のこり {n}びょう",
-  "@battleSecondsLeft": {"placeholders": {"n": {"type": "int"}}},
+  "@battleSecondsLeft": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "battleTimeHint": "はやく こたえるほど、おまけの てんが ふえるよ（おなじ せいかいすうの ときに くらべる）。",
   "battleCorrectIs": "せいかいは「{answer}」",
-  "@battleCorrectIs": {"placeholders": {"answer": {"type": "String"}}},
+  "@battleCorrectIs": {
+    "placeholders": {
+      "answer": {
+        "type": "String"
+      }
+    }
+  },
   "battlePoints": "{n}てん",
-  "@battlePoints": {"placeholders": {"n": {"type": "int"}}},
+  "@battlePoints": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "reviewTitle": "おさらい",
   "reviewNone": "きょうの おさらいは ありません。「しらなかった」を おした ざつがくが、あしたから でてくるよ。",
   "reviewDoneNote": "また あした おさらいしよう。",
   "reviewChip": "おさらい",
   "reviewChipCount": "おさらい {n}",
-  "@reviewChipCount": {"placeholders": {"n": {"type": "int"}}},
+  "@reviewChipCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "dailyTitle": "きょうの チャレンジ",
   "dailyChip": "チャレンジ",
   "dailyStreak": "{n}にち つづけて あそんだよ",
-  "@dailyStreak": {"placeholders": {"n": {"type": "int"}}},
+  "@dailyStreak": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "dailyComeBack": "また あした ちょうせんしよう！",
   "dailyShare": "けっかを シェア",
   "badgesTitle": "バッジ",
   "badgesChip": "バッジ",
   "badgesCount": "{n} / {total} こ ゲット！",
-  "@badgesCount": {"placeholders": {"n": {"type": "int"}, "total": {"type": "int"}}},
+  "@badgesCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "badgeStreak": "{n}にち れんぞく",
-  "@badgeStreak": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeStreak": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeReadDays": "{n}にち よんだ",
-  "@badgeReadDays": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeReadDays": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeLearned": "{n}こ しれた",
-  "@badgeLearned": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeLearned": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeQuiz": "クイズ {n}もん せいかい",
-  "@badgeQuiz": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeQuiz": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgeDaily": "チャレンジ {n}にち",
-  "@badgeDaily": {"placeholders": {"n": {"type": "int"}}},
+  "@badgeDaily": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
   "badgePerfect": "チャレンジ ぜんもん せいかい",
   "reportTitle": "がくしゅうの ようす",
   "reportNote": "この ようすは、この たんまつの なかだけに ある きろくから つくっています。そとには おくりません。",
@@ -423,5 +564,115 @@
   "reportFavorite": "よく みた ジャンル",
   "reportEmpty": "まだ きろくが ありません。",
   "reportRecent": "さいきん しれたこと",
-  "reportOpen": "がくしゅうの ようす（おうちの ひとへ）"
+  "reportOpen": "がくしゅうの ようす（おうちの ひとへ）",
+  "mascotTitle": "あいぼう",
+  "mascotNext": "あと {n} で「{name}」に なるよ",
+  "@mascotNext": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mascotMax": "いちばん おおきく なったよ！",
+  "mascotHint": "ざつがくを ひらくと +1、「しらなかった」を おぼえると +2 で そだつよ。",
+  "mascotPoints": "{n} ポイント",
+  "@mascotPoints": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mascotLocked": "？？？",
+  "mascotName_egg": "たまご",
+  "mascotSay_egg": "…ざつがく、まってるよ。",
+  "mascotName_chick": "ひよこ",
+  "mascotSay_chick": "ぴよっ！ ざつがく おもしろいね！",
+  "mascotName_chicklet": "ちびふくろう",
+  "mascotSay_chicklet": "ふわふわ！ もっと しりたいな。",
+  "mascotName_owl": "ふくろう",
+  "mascotSay_owl": "ほー！ ものしりに なってきたよ。",
+  "mascotName_professor": "はかせふくろう",
+  "mascotSay_professor": "ふむふむ、なるほど。きみは はかせだね。",
+  "mascotName_king": "ふくろうおう",
+  "mascotSay_king": "ほっほー！ ざつがくの おうさまだ！",
+  "celebrateStage": "{name}に なったよ！",
+  "@celebrateStage": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "celebrateBadge": "バッジを ゲット！",
+  "flipHint": "タップして めくろう",
+  "flipDetail": "くわしく みる",
+  "zukanTitle": "ざつがくずかん",
+  "zukanChip": "ずかん",
+  "zukanFound": "{n} / {total} みつけた",
+  "@zukanFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "zukanAll": "ぜんぶ",
+  "zukanHint": "ざつがくを みると、ずかんが うまっていくよ。",
+  "zukanLocked": "？",
+  "capsuleTitle": "ざつがくカプセル",
+  "capsuleChip": "カプセル",
+  "capsuleOpen": "あけてみよう！",
+  "capsuleHint": "1にち 1かい、ふしぎな ざつがくが でてくるよ。",
+  "capsuleDone": "また あした あけよう！",
+  "capsuleNew": "はじめて！",
+  "capsuleToZukan": "ずかんを みる",
+  "capsuleEmpty": "でてくる ざつがくが ありません。",
+  "capsuleRarity1": "ふつう",
+  "capsuleRarity2": "レア",
+  "capsuleRarity3": "スーパーレア",
+  "swipeTitle": "スワイプ ほんと？うそ？",
+  "swipeChip": "スワイプ",
+  "swipeHint": "→ ほんと　　← うそ",
+  "swipeCombo": "🔥 {n} れんぞく！",
+  "@swipeCombo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "swipeBestCombo": "いちばん れんぞく：{n}",
+  "@swipeBestCombo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "tabHome": "ホーム",
+  "tabPlay": "あそぶ",
+  "tabCollect": "あつめる",
+  "tabExplore": "さがす",
+  "tabSettings": "せってい",
+  "hubPlayIntro": "クイズやゲームで、ざつがくを たのしもう。",
+  "hubCollectIntro": "ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。",
+  "hubExploreIntro": "ざつがくを さがしたり、ひろげたりしよう。",
+  "hubQuizSub": "1〜4人で対戦",
+  "hubSwipeSub": "ほんと？うそ？",
+  "hubDailySub": "まいにち3もん",
+  "hubReviewSub": "わすれないように",
+  "hubMythsSub": "よくある かんちがい",
+  "hubLibrarySub": "けんさく・ジャンル",
+  "hubListenSub": "画面を消しても聞ける",
+  "languageZh": "简体中文",
+  "languageKo": "한국어",
+  "languageEs": "Español"
 }

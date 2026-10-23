@@ -5,7 +5,9 @@ import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
 import '../state/listen_controller.dart';
 import '../state/providers.dart';
+import '../logic/mascot.dart';
 import '../widgets/illustration.dart';
+import '../widgets/mascot_card.dart';
 
 /// ながら聞き: 雑学を順番に連続で読み上げる（Teen/Adult）。画面を開いたまま使う。
 class ListenScreen extends ConsumerWidget {
@@ -44,7 +46,20 @@ class ListenScreen extends ConsumerWidget {
               child: ListView(
                 padding: const EdgeInsets.all(20),
                 children: [
-                  Center(child: TriviaIllustration(id: current.illustration, size: 96)),
+                  Center(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TriviaIllustration(id: current.illustration, size: 96),
+                        const SizedBox(width: 16),
+                        MascotFace(
+                          stage: mascotStageFor(ref.watch(mascotPointsProvider)),
+                          size: 48,
+                          mood: state.playing ? MascotMood.speaking : MascotMood.idle,
+                        ),
+                      ],
+                    ),
+                  ),
                   const SizedBox(height: 12),
                   Center(
                     child: Text(
