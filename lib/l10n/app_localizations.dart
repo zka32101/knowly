@@ -1459,6 +1459,132 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'出典'**
   String get sourcesSection;
+
+  /// No description provided for @battleTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズたいせん'**
+  String get battleTitle;
+
+  /// No description provided for @battlePlayers.
+  ///
+  /// In ja, this message translates to:
+  /// **'なんにんで あそぶ？'**
+  String get battlePlayers;
+
+  /// No description provided for @battleSolo.
+  ///
+  /// In ja, this message translates to:
+  /// **'ひとり'**
+  String get battleSolo;
+
+  /// No description provided for @battlePlayerCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}にん'**
+  String battlePlayerCount(int n);
+
+  /// No description provided for @battlePlayerDefault.
+  ///
+  /// In ja, this message translates to:
+  /// **'プレイヤー{n}'**
+  String battlePlayerDefault(int n);
+
+  /// No description provided for @battleRounds.
+  ///
+  /// In ja, this message translates to:
+  /// **'なんもん？'**
+  String get battleRounds;
+
+  /// No description provided for @battleRoundCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}もん'**
+  String battleRoundCount(int n);
+
+  /// No description provided for @battleHandHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'1つの たんまつを じゅんばんに まわして あそぼう。'**
+  String get battleHandHint;
+
+  /// No description provided for @battleStart.
+  ///
+  /// In ja, this message translates to:
+  /// **'はじめる'**
+  String get battleStart;
+
+  /// No description provided for @battleNoQuestions.
+  ///
+  /// In ja, this message translates to:
+  /// **'だせる クイズが ありません。'**
+  String get battleNoQuestions;
+
+  /// No description provided for @battleRoundOf.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} もんめ'**
+  String battleRoundOf(int n, int total);
+
+  /// No description provided for @battleTurnOf.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}の ばん'**
+  String battleTurnOf(String name);
+
+  /// No description provided for @battleSeeResult.
+  ///
+  /// In ja, this message translates to:
+  /// **'けっかを みる'**
+  String get battleSeeResult;
+
+  /// No description provided for @battleFinished.
+  ///
+  /// In ja, this message translates to:
+  /// **'おしまい！'**
+  String get battleFinished;
+
+  /// No description provided for @battleSoloScore.
+  ///
+  /// In ja, this message translates to:
+  /// **'{score} / {total} もん せいかい！'**
+  String battleSoloScore(int score, int total);
+
+  /// No description provided for @battleDraw.
+  ///
+  /// In ja, this message translates to:
+  /// **'ひきわけ！'**
+  String get battleDraw;
+
+  /// No description provided for @battleWinner.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}の かち！'**
+  String battleWinner(String name);
+
+  /// No description provided for @battleRank.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}い'**
+  String battleRank(int n);
+
+  /// No description provided for @battleAgain.
+  ///
+  /// In ja, this message translates to:
+  /// **'もういちど'**
+  String get battleAgain;
+
+  /// No description provided for @battleChangeSettings.
+  ///
+  /// In ja, this message translates to:
+  /// **'せっていを かえる'**
+  String get battleChangeSettings;
+
+  /// No description provided for @battleExit.
+  ///
+  /// In ja, this message translates to:
+  /// **'おわる'**
+  String get battleExit;
 }
 
 class _AppLocalizationsDelegate

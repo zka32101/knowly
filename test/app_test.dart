@@ -1838,4 +1838,71 @@ void main() {
       expect(find.byKey(const Key('share_card')), findsNothing);
     });
   });
+
+  group('クイズ対戦', () {
+    Future<void> openQuiz(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_quiz')));
+      await tester.pumpAndSettle();
+    }
+
+    // 画面の問題文から正解を知る必要はない。固定の答え（○）で最後まで進める。
+    Future<void> playAll(WidgetTester tester, int players, int rounds) async {
+      for (var r = 0; r < rounds; r++) {
+        for (var p = 0; p < players; p++) {
+          await tester.tap(find.byKey(const Key('battle_true')));
+          await tester.pumpAndSettle();
+        }
+        await tester.tap(find.byKey(const Key('battle_next')));
+        await tester.pumpAndSettle();
+      }
+    }
+
+    testWidgets('1人: 5問やって、結果が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openQuiz(tester);
+      await tester.tap(find.byKey(const Key('battle_start')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('battle_turn')), findsNothing); // 1人は順番表示なし
+      await playAll(tester, 1, 5);
+      expect(find.byKey(const Key('battle_final')), findsOneWidget);
+      expect(find.textContaining('もん せいかい'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('battle_again')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('battle_statement')), findsOneWidget);
+    });
+
+    testWidgets('4人: 順番に答え、名前も変えられて、順位が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openQuiz(tester);
+      await tester.tap(find.byKey(const Key('battle_players_4')));
+      await tester.pumpAndSettle();
+      await tester.enterText(find.byKey(const Key('battle_name_1')), 'ハナ');
+      await tester.tap(find.byKey(const Key('battle_start')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('プレイヤー1 の ばん'), findsNothing);
+      expect(find.textContaining('プレイヤー1'), findsWidgets);
+      await tester.tap(find.byKey(const Key('battle_true')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('ハナ'), findsWidgets); // 2人目の番
+      for (var i = 0; i < 3; i++) {
+        await tester.tap(find.byKey(const Key('battle_true')));
+        await tester.pumpAndSettle();
+      }
+      // 全員同じ答え → 4人とも同じ結果
+      expect(find.byKey(const Key('battle_result_3')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('battle_next')));
+      await tester.pumpAndSettle();
+      await playAll(tester, 4, 4);
+      expect(find.byKey(const Key('battle_rank_0')), findsOneWidget);
+      expect(find.byKey(const Key('battle_rank_3')), findsOneWidget);
+      expect(find.text('ひきわけ！'), findsOneWidget); // 全員同じ答えなので同点
+    });
+
+    testWidgets('Kids でも遊べる（通信なし・ひらがな）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await tester.tap(find.byKey(const Key('open_quiz')));
+      await tester.pumpAndSettle();
+      expect(find.text('なんにんで あそぶ？'), findsOneWidget);
+    });
+  });
 }

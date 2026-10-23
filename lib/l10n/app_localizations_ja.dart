@@ -727,4 +727,83 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get sourcesSection => '出典';
+
+  @override
+  String get battleTitle => 'クイズたいせん';
+
+  @override
+  String get battlePlayers => 'なんにんで あそぶ？';
+
+  @override
+  String get battleSolo => 'ひとり';
+
+  @override
+  String battlePlayerCount(int n) {
+    return '$nにん';
+  }
+
+  @override
+  String battlePlayerDefault(int n) {
+    return 'プレイヤー$n';
+  }
+
+  @override
+  String get battleRounds => 'なんもん？';
+
+  @override
+  String battleRoundCount(int n) {
+    return '$nもん';
+  }
+
+  @override
+  String get battleHandHint => '1つの たんまつを じゅんばんに まわして あそぼう。';
+
+  @override
+  String get battleStart => 'はじめる';
+
+  @override
+  String get battleNoQuestions => 'だせる クイズが ありません。';
+
+  @override
+  String battleRoundOf(int n, int total) {
+    return '$n / $total もんめ';
+  }
+
+  @override
+  String battleTurnOf(String name) {
+    return '$nameの ばん';
+  }
+
+  @override
+  String get battleSeeResult => 'けっかを みる';
+
+  @override
+  String get battleFinished => 'おしまい！';
+
+  @override
+  String battleSoloScore(int score, int total) {
+    return '$score / $total もん せいかい！';
+  }
+
+  @override
+  String get battleDraw => 'ひきわけ！';
+
+  @override
+  String battleWinner(String name) {
+    return '$nameの かち！';
+  }
+
+  @override
+  String battleRank(int n) {
+    return '$nい';
+  }
+
+  @override
+  String get battleAgain => 'もういちど';
+
+  @override
+  String get battleChangeSettings => 'せっていを かえる';
+
+  @override
+  String get battleExit => 'おわる';
 }

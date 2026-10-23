@@ -195,6 +195,14 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             ),
             const SizedBox(height: 12),
           ],
+          OutlinedButton.icon(
+            key: const Key('open_quiz'),
+            style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+            icon: const Icon(Icons.sports_esports_outlined, size: 32),
+            label: Text(l.battleTitle, style: const TextStyle(fontSize: 20)),
+            onPressed: () => context.push('/quiz'),
+          ),
+          const SizedBox(height: 12),
           Row(
             children: [
               Expanded(
@@ -630,6 +638,7 @@ class _QuickLinks extends ConsumerWidget {
         runSpacing: 4,
         children: [
           chip(const Key('open_today'), Icons.event_outlined, l.todayHome, '/today'),
+          chip(const Key('open_quiz'), Icons.sports_esports_outlined, l.battleTitle, '/quiz'),
           chip(const Key('open_myths'), Icons.fact_check_outlined, l.mythsTitle, '/myths'),
           if (band.isTeenOrAdult)
             chip(const Key('open_listen'), Icons.headphones_outlined, l.listenOpen, '/listen'),

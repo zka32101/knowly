@@ -743,4 +743,83 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sourcesSection => 'Sources';
+
+  @override
+  String get battleTitle => 'Quiz battle';
+
+  @override
+  String get battlePlayers => 'How many players?';
+
+  @override
+  String get battleSolo => 'Solo';
+
+  @override
+  String battlePlayerCount(int n) {
+    return '$n players';
+  }
+
+  @override
+  String battlePlayerDefault(int n) {
+    return 'Player $n';
+  }
+
+  @override
+  String get battleRounds => 'How many questions?';
+
+  @override
+  String battleRoundCount(int n) {
+    return '$n questions';
+  }
+
+  @override
+  String get battleHandHint => 'Pass the device around and take turns.';
+
+  @override
+  String get battleStart => 'Start';
+
+  @override
+  String get battleNoQuestions => 'No quiz questions are available.';
+
+  @override
+  String battleRoundOf(int n, int total) {
+    return 'Question $n of $total';
+  }
+
+  @override
+  String battleTurnOf(String name) {
+    return '$name\'s turn';
+  }
+
+  @override
+  String get battleSeeResult => 'See results';
+
+  @override
+  String get battleFinished => 'All done!';
+
+  @override
+  String battleSoloScore(int score, int total) {
+    return '$score of $total correct!';
+  }
+
+  @override
+  String get battleDraw => 'It\'s a tie!';
+
+  @override
+  String battleWinner(String name) {
+    return '$name wins!';
+  }
+
+  @override
+  String battleRank(int n) {
+    return '#$n';
+  }
+
+  @override
+  String get battleAgain => 'Play again';
+
+  @override
+  String get battleChangeSettings => 'Change settings';
+
+  @override
+  String get battleExit => 'Exit';
 }
