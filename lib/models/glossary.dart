@@ -34,7 +34,7 @@ class GlossaryEntry {
 
   factory GlossaryEntry.fromJson(Map<String, dynamic> json) {
     final texts = <String, GlossaryText>{};
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final m = json[lang] as Map<String, dynamic>?;
       if (m != null) texts[lang] = GlossaryText.fromJson(m);
     }

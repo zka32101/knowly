@@ -82,7 +82,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
     ];
 
     // 二言語: もう一つの言語の本文（Kids 以外）。
-    final otherLang = lang == 'ja' ? 'en' : 'ja';
+    final otherLang = lang == 'en' ? 'ja' : 'en';
     final otherTranslation = item.translations[otherLang];
     final otherLevel = (ownBand != AgeBand.kids &&
             otherTranslation != null &&

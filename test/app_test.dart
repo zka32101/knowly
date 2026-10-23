@@ -2745,7 +2745,7 @@ void main() {
     ProviderContainer containerOf(WidgetTester tester) =>
         ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
 
-    testWidgets('中国語・韓国語・スペイン語の端末では、画面がその言語になり、本文は英語', (tester) async {
+    testWidgets('中国語・韓国語・スペイン語の端末では、画面も本文もその言語になる', (tester) async {
       const tabs = {
         'zh': ['首页', '玩', '收集', '探索', '设置'],
         'ko': ['홈', '놀기', '모으기', '찾기', '설정'],
@@ -2758,10 +2758,10 @@ void main() {
           expect(find.text(label), findsWidgets, reason: '${e.key} $label');
         }
         expect(containerOf(tester).read(uiLanguageProvider), e.key);
-        expect(containerOf(tester).read(contentLanguageProvider), 'en', reason: e.key);
-        // 本文は英語のまま（めくりカードのおもてが英語の文）
+        expect(containerOf(tester).read(contentLanguageProvider), e.key);
+        // 本文に日本語（かな）は出ない
         final prompt = tester.widget<WrapText>(find.byKey(const Key('flip_prompt'))).text;
-        expect(RegExp(r'[぀-ヿ一-鿿]').hasMatch(prompt), isFalse, reason: '${e.key}: $prompt');
+        expect(RegExp(r'[぀-ヿ]').hasMatch(prompt), isFalse, reason: '${e.key}: $prompt');
         await tester.pumpWidget(const SizedBox());
       }
     });
@@ -2772,7 +2772,7 @@ void main() {
       expect(containerOf(tester).read(contentLanguageProvider), 'ja');
     });
 
-    testWidgets('設定で画面の言語を変えられる。本文のない言語にすると、本文は英語になる', (tester) async {
+    testWidgets('設定で画面の言語を変えられる。本文も同じ言語になる', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await _tab(tester, 'open_settings');
       await tester.tap(find.byKey(const Key('ui_language_dropdown')));
@@ -2783,7 +2783,7 @@ void main() {
       expect(s.uiLanguage, 'ko');
       expect(s.contentLanguage, isNull);
       expect(containerOf(tester).read(uiLanguageProvider), 'ko');
-      expect(containerOf(tester).read(contentLanguageProvider), 'en');
+      expect(containerOf(tester).read(contentLanguageProvider), 'ko');
       expect(find.text('설정'), findsWidgets);
     });
 
@@ -2797,7 +2797,7 @@ void main() {
       expect(find.text('다음'), findsOneWidget); // 画面が韓国語に
       final s = containerOf(tester).read(settingsProvider);
       expect(s.uiLanguage, 'ko');
-      expect(s.contentLanguage, isNull);
+      expect(s.contentLanguage, 'ko');
     });
 
     testWidgets('国の名前も、画面の言語で出る', (tester) async {

@@ -120,7 +120,7 @@ final searchIndexProvider = Provider<Map<String, SearchEntry>>((ref) {
   for (final t in ref.watch(triviaRepositoryProvider).items) {
     final titles = StringBuffer('${t.category} ${t.keywords.join(' ')}');
     final bodies = StringBuffer();
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final level = t.levelFor(band, lang, allowDraft: kAllowDraftContent);
       if (level == null) continue;
       titles.write(' ${level.title}');

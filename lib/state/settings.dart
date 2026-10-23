@@ -17,14 +17,15 @@ import 'providers.dart' show nowProvider, stampRecorderProvider;
 const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
 
 /// 雑学の本文がある言語。ほかの言語の画面では、本文は英語で出す。
-const contentLanguageCodes = ['ja', 'en'];
+const contentLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
 
 /// 端末の言語から対応言語を選ぶ。対応外は英語。
 String resolveLanguage(String? code) =>
     supportedLanguageCodes.contains(code) ? code! : 'en';
 
-/// 雑学の本文の言語（日本語または英語）。本文のない言語は英語にする。
-String resolveContentLanguage(String? code) => code == 'ja' ? 'ja' : 'en';
+/// 雑学の本文の言語。本文のない言語は英語にする（個々の雑学に訳がなければ、そこだけ英語）。
+String resolveContentLanguage(String? code) =>
+    contentLanguageCodes.contains(code) ? code! : 'en';
 
 /// 関心事のキーワードの上限（個数・1つあたりの文字数）。
 const maxInterestKeywords = 10;
