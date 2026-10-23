@@ -10,6 +10,7 @@ import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/flip_card.dart';
 import '../widgets/ja_wrap_text.dart';
 import '../widgets/mascot_card.dart';
 import '../widgets/parental_gate.dart';
@@ -366,10 +367,9 @@ class _FeedHome extends ConsumerWidget {
         else ...[
           Text(l.today, style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 8),
-          _TriviaCard(
+          FlipTodayCard(
             item: feed.first,
             level: resolve(feed.first)!,
-            big: true,
             wordWrap: wordWrap,
           ),
           const SizedBox(height: 16),
@@ -403,14 +403,12 @@ class _TriviaCard extends StatelessWidget {
   const _TriviaCard({
     required this.item,
     required this.level,
-    this.big = false,
     this.wordWrap = false,
     this.badge,
   });
 
   final Trivia item;
   final TriviaLevel level;
-  final bool big;
   final bool wordWrap;
 
   /// 「夏にぴったり」「今日は記念日」など、おすすめの理由。あればカテゴリーの代わりに出す。
@@ -426,7 +424,7 @@ class _TriviaCard extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              TriviaIllustration(id: item.illustration, size: big ? 56 : 40),
+              TriviaIllustration(id: item.illustration, size: 40),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
@@ -441,9 +439,7 @@ class _TriviaCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     WrapText(level.title,
                         wordWrap: wordWrap,
-                        style: big
-                            ? Theme.of(context).textTheme.titleLarge
-                            : Theme.of(context).textTheme.titleMedium),
+                        style: Theme.of(context).textTheme.titleMedium),
                   ],
                 ),
               ),

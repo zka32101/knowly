@@ -1027,4 +1027,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get celebrateBadge => 'バッジを ゲット！';
+
+  @override
+  String get flipHint => 'タップして めくろう';
+
+  @override
+  String get flipDetail => 'くわしく みる';
 }

@@ -1049,6 +1049,7 @@ void main() {
     testWidgets('夏の昼は「夏にぴったり」の雑学が出る（北半球）', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'north'}, now: DateTime(2026, 7, 15, 13));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.byKey(const Key('timing_section')), findsOneWidget);
       expect(find.text('いまのおすすめ'), findsOneWidget);
       expect(find.text('夏にぴったり'), findsOneWidget);
@@ -1057,6 +1058,7 @@ void main() {
     testWidgets('南半球では7月は冬。「冬にぴったり」が出て、夏のおすすめは出ない', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'south'}, now: DateTime(2026, 7, 15, 13));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.text('冬にぴったり'), findsOneWidget);
       expect(find.text('夏にぴったり'), findsNothing);
     });
@@ -1070,6 +1072,7 @@ void main() {
     testWidgets('夜は「夜にぴったり」の雑学が出る', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'seasonMode': 'off'}, now: DateTime(2026, 7, 15, 22));
+      await _scrollTo(tester, const Key('timing_section'));
       expect(find.text('夜にぴったり'), findsOneWidget);
     });
 
@@ -2407,6 +2410,48 @@ void main() {
       await tester.tap(find.byKey(const Key('listen_toggle')));
       await tester.pump();
       expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+    });
+  });
+
+  group('めくりカード（今日の雑学）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('おもては「ほんと？うそ？」、タップでめくると答えと本文が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('flip_front')), findsOneWidget);
+      expect(find.byKey(const Key('flip_back')), findsNothing);
+      expect(containerOf(tester).read(mascotPointsProvider), 0);
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_front')), findsNothing);
+      expect(find.byKey(const Key('flip_back')), findsOneWidget);
+      expect(containerOf(tester).read(mascotPointsProvider), 1); // めくると見たことになる
+      await tester.tap(find.byKey(const Key('flip_card'))); // もう一度でおもてに戻る
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_front')), findsOneWidget);
+    });
+
+    testWidgets('クイズがある雑学では、裏に ○ か ✕ が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final today = containerOf(tester).read(feedProvider).first;
+      final hasQuiz = containerOf(tester).read(triviaRepositoryProvider).quizFor(today.id) != null;
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('flip_answer')).evaluate().isNotEmpty, hasQuiz);
+    });
+
+    testWidgets('「くわしく」と右の矢印から、詳細へ進める', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('flip_open_detail')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+      await _back(tester);
+      await tester.tap(find.byKey(const Key('flip_card')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('flip_detail_button')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });
   });
 }

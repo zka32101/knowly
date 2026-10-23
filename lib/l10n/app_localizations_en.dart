@@ -1045,4 +1045,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get celebrateBadge => 'New badge!';
+
+  @override
+  String get flipHint => 'Tap to flip';
+
+  @override
+  String get flipDetail => 'Read more';
 }

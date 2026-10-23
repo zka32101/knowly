@@ -1963,6 +1963,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'バッジを ゲット！'**
   String get celebrateBadge;
+
+  /// No description provided for @flipHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップして めくろう'**
+  String get flipHint;
+
+  /// No description provided for @flipDetail.
+  ///
+  /// In ja, this message translates to:
+  /// **'くわしく みる'**
+  String get flipDetail;
 }
 
 class _AppLocalizationsDelegate

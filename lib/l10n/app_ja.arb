@@ -446,5 +446,7 @@
   "mascotSay_king": "ほっほー！ ざつがくの おうさまだ！",
   "celebrateStage": "{name}に なったよ！",
   "@celebrateStage": {"placeholders": {"name": {"type": "String"}}},
-  "celebrateBadge": "バッジを ゲット！"
+  "celebrateBadge": "バッジを ゲット！",
+  "flipHint": "タップして めくろう",
+  "flipDetail": "くわしく みる"
 }

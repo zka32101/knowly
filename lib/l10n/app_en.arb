@@ -446,5 +446,7 @@
   "mascotSay_king": "Hoo-hoo! The king of trivia!",
   "celebrateStage": "Your buddy became {name}!",
   "@celebrateStage": {"placeholders": {"name": {"type": "String"}}},
-  "celebrateBadge": "New badge!"
+  "celebrateBadge": "New badge!",
+  "flipHint": "Tap to flip",
+  "flipDetail": "Read more"
 }
