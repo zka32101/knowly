@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../data/trivia_repository.dart';
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../logic/readings.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
 import '../services/tts.dart';
@@ -52,6 +54,8 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
 
     TriviaLevel? levelFor(AgeBand band, String language) =>
         item?.levelFor(band, language, allowDraft: kAllowDraftContent);
+    TriviaLevel? levelFor2(Trivia t, AgeBand band, String language) =>
+        t.levelFor(band, language, allowDraft: kAllowDraftContent);
 
     final level = levelFor(shownBand, lang);
     if (item == null || level == null) {
@@ -81,6 +85,17 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
 
     final quiz = ownBand.isChild ? repo.quizFor(item.id) : null;
 
+    // 関連する雑学（この年代・言語・国で表示できるものだけ）。
+    final region = ref.watch(regionProvider);
+    final related = [
+      for (final id in item.related)
+        if (repo.byId(id) case final r?)
+          if (r.allowedInRegion(region.code, anyRegion: region.any) &&
+              levelFor2(r, ownBand, lang) != null)
+            r,
+    ];
+    TriviaLevel? relatedLevel(Trivia r) => levelFor2(r, ownBand, lang);
+
     String ratingLabel(Rating r) => switch (r) {
           Rating.heh => l.ratingHeh,
           Rating.useful => l.ratingUseful,
@@ -102,7 +117,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
             tooltip: l.kidsListen,
             onPressed: () => ref
                 .read(ttsProvider)
-                .speak('${level.title}。${level.body}', language: lang),
+                .speak(stripReadings('${level.title}。${level.body}'), language: lang),
           ),
         ],
       ),
@@ -241,6 +256,22 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                   ),
               ],
             ),
+            if (related.isNotEmpty) ...[
+              const SizedBox(height: 24),
+              Text(l.relatedSection, style: theme.textTheme.titleSmall),
+              const SizedBox(height: 8),
+              for (final r in related)
+                if (levelFor(shownBand, lang) != null && relatedLevel(r) != null)
+                  Card(
+                    key: Key('related_${r.id}'),
+                    child: ListTile(
+                      leading: TriviaIllustration(id: r.illustration, size: 28),
+                      title: Text(relatedLevel(r)!.title),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () => context.push('/detail/${r.id}'),
+                    ),
+                  ),
+            ],
           ],
         ),
       ),

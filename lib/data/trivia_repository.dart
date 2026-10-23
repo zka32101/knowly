@@ -57,15 +57,18 @@ class TriviaRepository {
     return null;
   }
 
-  /// この年代・言語で配信できる雑学。
+  /// この年代・言語・国で配信できる雑学。非公開（hidden/retired）のものは出さない。
   List<Trivia> eligible(
     AgeBand band,
     String locale, {
     FeedFilter filter = const FeedFilter(),
     bool allowDraft = kAllowDraftContent,
+    String? region,
+    bool anyRegion = true,
   }) =>
       items
           .where((t) =>
+              t.allowedInRegion(region, anyRegion: anyRegion) &&
               t.levelFor(band, locale, allowDraft: allowDraft) != null &&
               filter.matches(t))
           .toList();

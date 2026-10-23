@@ -1,9 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 
 import '../data/trivia_repository.dart';
 import '../logic/daily_pick.dart';
 import '../logic/interests.dart';
 import '../logic/search.dart';
+import '../logic/timing.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
 import '../services/entitlement.dart';
@@ -18,6 +20,55 @@ final nowProvider = Provider<DateTime>((ref) => DateTime.now());
 final isPremiumNowProvider =
     Provider<bool>((ref) => ref.watch(isPremiumProvider).valueOrNull ?? false);
 
+/// 端末のタイムゾーン名（Asia/Tokyo など）。取れなければ null。
+final timezoneIdProvider = FutureProvider<String?>((ref) async {
+  try {
+    return (await FlutterTimezone.getLocalTimezone()).identifier;
+  } catch (_) {
+    return null;
+  }
+});
+
+/// 国限定の雑学の判定に使う国。`any` が true のときは、国の制限を使わない（すべての国）。
+final regionProvider = Provider<({String? code, bool any})>((ref) {
+  final mode = ref.watch(settingsProvider.select((s) => s.regionMode));
+  if (mode == 'all') return (code: null, any: true);
+  if (mode != 'auto') return (code: mode, any: false);
+  final device = ref.watch(deviceRegionProvider);
+  if (device != null && device.isNotEmpty) return (code: device.toUpperCase(), any: false);
+  // 端末に地域がないときは、日本語の端末を日本とみなす。
+  return (code: ref.watch(deviceLanguageProvider) == 'ja' ? 'JP' : null, any: false);
+});
+
+/// 南半球の主な国。国を選んだときの半球の推定に使う。
+const _southernRegions = {'AU', 'NZ', 'BR', 'AR', 'CL', 'ZA', 'PE', 'UY', 'PY', 'BO'};
+
+/// 季節に使う半球。null は「季節を使わない」。
+final hemisphereProvider = Provider<Hemisphere?>((ref) {
+  final settings = ref.watch(settingsProvider);
+  switch (settings.seasonMode) {
+    case 'off':
+      return null;
+    case 'north':
+      return Hemisphere.north;
+    case 'south':
+      return Hemisphere.south;
+  }
+  if (_southernRegions.contains(settings.regionMode)) return Hemisphere.south;
+  return hemisphereFromTimezone(ref.watch(timezoneIdProvider).valueOrNull);
+});
+
+/// 「今日の雑学」を選ぶ関数。季節外れを避け、記念日の当日はその雑学にする。
+/// フィード・通知・鍵の判定のすべてで同じものを使う（同じ日に同じ雑学になるように）。
+final dayPickerProvider = Provider<DayPicker>((ref) {
+  final hemisphere = ref.watch(hemisphereProvider);
+  return (pool, day) => pickTodayFact(
+        pool,
+        day,
+        season: hemisphere == null ? null : seasonFor(day, hemisphere),
+      );
+});
+
 final feedFilterProvider = Provider<FeedFilter>((ref) {
   final s = ref.watch(settingsProvider);
   return FeedFilter(categories: s.categories, scenes: s.scenes);
@@ -31,10 +82,13 @@ final poolProvider = Provider<List<Trivia>>((ref) {
   final filter = band == AgeBand.kids
       ? FeedFilter(categories: ref.watch(settingsProvider.select((s) => s.interestCategories)))
       : ref.watch(feedFilterProvider);
+  final region = ref.watch(regionProvider);
   return ref.watch(triviaRepositoryProvider).eligible(
         band,
         ref.watch(contentLanguageProvider),
         filter: filter,
+        region: region.code,
+        anyRegion: region.any,
       );
 });
 
@@ -42,9 +96,13 @@ final poolProvider = Provider<List<Trivia>>((ref) {
 final allEligibleProvider = Provider<List<Trivia>>((ref) {
   final band = ref.watch(settingsProvider.select((s) => s.ageBand));
   if (band == null) return const [];
-  return ref
-      .watch(triviaRepositoryProvider)
-      .eligible(band, ref.watch(contentLanguageProvider));
+  final region = ref.watch(regionProvider);
+  return ref.watch(triviaRepositoryProvider).eligible(
+        band,
+        ref.watch(contentLanguageProvider),
+        region: region.code,
+        anyRegion: region.any,
+      );
 });
 
 /// 検索用の索引。タイトル・本文を日本語と英語の両方連結して、そろえた文字で持つ（どちらの言語でも探せる）。
@@ -54,7 +112,7 @@ final searchIndexProvider = Provider<Map<String, SearchEntry>>((ref) {
   if (band == null) return const {};
   final out = <String, SearchEntry>{};
   for (final t in ref.watch(triviaRepositoryProvider).items) {
-    final titles = StringBuffer(t.category);
+    final titles = StringBuffer('${t.category} ${t.keywords.join(' ')}');
     final bodies = StringBuffer();
     for (final lang in ['ja', 'en']) {
       final level = t.levelFor(band, lang, allowDraft: kAllowDraftContent);
@@ -70,18 +128,38 @@ final searchIndexProvider = Provider<Map<String, SearchEntry>>((ref) {
   return out;
 });
 
-/// 「あなたの関心」に出す雑学。無料は2件、プレミアムは5件。今日の雑学とは重複させない。
+/// 「いまのおすすめ」。季節・時間帯・記念日・週末に合う雑学を、理由つきで出す。無料は1件、プレミアムは3件。
+/// Kids には出さない（1枚ずつ見る画面のため）。今日の雑学とは重複させない。
+final timingPicksProvider = Provider<List<TimingPick>>((ref) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null || band == AgeBand.kids) return const [];
+  final hemisphere = ref.watch(hemisphereProvider);
+  final now = ref.watch(nowProvider);
+  final today = ref.watch(feedProvider).firstOrNull;
+  return pickTiming(
+    pool: ref.watch(allEligibleProvider),
+    ctx: TimingContext(
+      now: now,
+      season: hemisphere == null ? null : seasonFor(now, hemisphere),
+    ),
+    exclude: {if (today != null) today.id},
+    count: ref.watch(isPremiumNowProvider) ? 3 : 1,
+  );
+});
+
+/// 「あなたの関心」に出す雑学。無料は2件、プレミアムは5件。今日の雑学・いまのおすすめとは重複させない。
 final interestPicksProvider = Provider<List<Trivia>>((ref) {
   final settings = ref.watch(settingsProvider);
   final band = settings.ageBand;
   if (band == null || band == AgeBand.kids) return const [];
   final today = ref.watch(feedProvider).firstOrNull;
+  final timing = ref.watch(timingPicksProvider);
   return pickInterests(
     pool: ref.watch(allEligibleProvider),
     interests: settings.interests,
     index: ref.watch(searchIndexProvider),
     day: ref.watch(nowProvider),
-    exclude: {if (today != null) today.id},
+    exclude: {if (today != null) today.id, for (final p in timing) p.fact.id},
     count: ref.watch(isPremiumNowProvider) ? 5 : 2,
   );
 });
@@ -93,8 +171,11 @@ final unlockedIdsProvider = Provider<Set<String>?>((ref) {
   if (band == null || band.isChild || ref.watch(isPremiumNowProvider)) return null;
   final pool = ref.watch(allEligibleProvider);
   return {
-    for (final t in feedFor(pool, ref.watch(nowProvider), freeFeedDays)) t.id,
+    for (final t in feedFor(pool, ref.watch(nowProvider), freeFeedDays,
+        picker: ref.watch(dayPickerProvider)))
+      t.id,
     for (final t in ref.watch(interestPicksProvider)) t.id,
+    for (final p in ref.watch(timingPicksProvider)) p.fact.id,
     ...ref.watch(settingsProvider.select((s) => s.saved)),
   };
 });
@@ -111,6 +192,7 @@ final feedProvider = Provider<List<Trivia>>((ref) => feedFor(
       ref.watch(poolProvider),
       ref.watch(nowProvider),
       ref.watch(feedDaysProvider),
+      picker: ref.watch(dayPickerProvider),
     ));
 
 /// 画面に出す本文（年代・言語に合わせたもの）。

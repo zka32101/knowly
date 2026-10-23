@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../l10n/regions.dart';
 import '../models/age_band.dart';
 import '../services/cross_promo_bootstrap.dart';
 import '../services/notifications.dart';
@@ -130,6 +131,57 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           languageTile(l.settingsUiLanguage, settings.uiLanguage, notifier.setUiLanguage),
           languageTile(l.settingsContentLanguage, settings.contentLanguage,
               notifier.setContentLanguage),
+          ListTile(
+            title: Text(l.settingsRegion),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                DropdownButton<String>(
+                  key: const Key('region_dropdown'),
+                  isExpanded: true,
+                  value: regionNames.containsKey(settings.regionMode) ||
+                          settings.regionMode == 'auto' ||
+                          settings.regionMode == 'all'
+                      ? settings.regionMode
+                      : 'auto',
+                  items: [
+                    DropdownMenuItem(value: 'auto', child: Text(l.regionAuto)),
+                    DropdownMenuItem(value: 'all', child: Text(l.regionAll)),
+                    for (final code in regionNames.keys)
+                      DropdownMenuItem(
+                          value: code,
+                          child: Text(regionName(code, ref.watch(uiLanguageProvider)))),
+                  ],
+                  onChanged: (v) {
+                    if (v != null) notifier.setRegionMode(v);
+                  },
+                ),
+                Text(l.regionNote, style: Theme.of(context).textTheme.bodySmall),
+              ],
+            ),
+          ),
+          ListTile(
+            title: Text(l.settingsSeason),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SegmentedButton<String>(
+                  key: const Key('season_mode'),
+                  showSelectedIcon: false,
+                  segments: [
+                    ButtonSegment(value: 'auto', label: Text(l.seasonAuto)),
+                    ButtonSegment(value: 'north', label: Text(l.seasonNorth)),
+                    ButtonSegment(value: 'south', label: Text(l.seasonSouth)),
+                    ButtonSegment(value: 'off', label: Text(l.seasonOff)),
+                  ],
+                  selected: {settings.seasonMode},
+                  onSelectionChanged: (s) => notifier.setSeasonMode(s.first),
+                ),
+                const SizedBox(height: 4),
+                Text(l.seasonNote, style: Theme.of(context).textTheme.bodySmall),
+              ],
+            ),
+          ),
           // 通知は Kids にはない。Junior は保護者が設定する。
           if (band != AgeBand.kids) ...[
             SwitchListTile(

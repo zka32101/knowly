@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/models/age_band.dart';
+import 'package:knowly/models/content_flags.dart';
 import 'package:knowly/models/trivia.dart';
 
 /// 漢字（CJK統合漢字）を含むか。
@@ -62,15 +63,32 @@ void main() {
     }
   });
 
-  test('Kids/Junior の日本語はひらがな中心（漢字を含まない）', () {
+  test('Kids の日本語はひらがなのみ（漢字を含まない）', () {
     for (final t in items) {
-      for (final b in [AgeBand.kids, AgeBand.junior]) {
-        final l = t.translations['ja']!.levels[b];
-        if (l == null) continue;
-        expect(_kanji.hasMatch(l.title), isFalse, reason: '${t.id}/${b.name} title');
-        expect(_kanji.hasMatch(l.body), isFalse, reason: '${t.id}/${b.name} body');
+      final l = t.translations['ja']!.levels[AgeBand.kids];
+      if (l == null) continue;
+      expect(_kanji.hasMatch(l.title), isFalse, reason: '${t.id} title');
+      expect(_kanji.hasMatch(l.body), isFalse, reason: '${t.id} body');
+    }
+  });
+
+  test('Junior の日本語は、漢字のあとに必ず「（よみ）」を添える（漢字（かんじ）の形）', () {
+    final note = RegExp(r'[\u4E00-\u9FFF々]+（[ぁ-んー]+）');
+    var withKanji = 0;
+    for (final t in items) {
+      final l = t.translations['ja']!.levels[AgeBand.junior];
+      if (l == null) continue;
+      for (final text in [l.title, l.body]) {
+        // 読みつきの漢字を除いたあとに漢字が残らないこと
+        expect(_kanji.hasMatch(text.replaceAll(note, '')), isFalse,
+            reason: '${t.id}: $text');
+        // 読みだけが孤立していないこと（かっこは必ず漢字の直後）
+        expect(RegExp(r'(?<![\u4E00-\u9FFF々])（[ぁ-んー]+）').hasMatch(text), isFalse,
+            reason: '${t.id}: $text');
+        if (_kanji.hasMatch(text)) withKanji++;
       }
     }
+    expect(withKanji, greaterThan(50)); // 漢字を使っている（ひらがなだけではない）
   });
 
   test('Kids の文章は短い', () {
@@ -121,6 +139,70 @@ void main() {
     test('○と×が両方ある', () {
       final answers = quiz.map((q) => q['ja']['answer'] as bool).toSet();
       expect(answers, {true, false});
+    });
+  });
+
+  group('Kids/Junior に出してはいけない話題', () {
+    // 性・暴力・戦争・死・宗教・賭け事・薬物などを思わせることば（日本語は部分一致、英語は単語一致）。
+    const jaWords = [
+      '殺', '死', '戦争', '戦い', '兵器', '爆弾', '銃', '宗教', '神様', '神話', 'キリスト', 'イスラム',
+      '仏教', '性的', 'セックス', 'エロ', '酒', 'ビール', 'タバコ', 'たばこ', '賭', 'ギャンブル',
+      '麻薬', '自殺', '暴力', 'テロ', '虐待', '犯罪', '事故', 'せんそう', 'しゅうきょう', 'ころす',
+      'しぬ', 'ばくだん', 'じさつ', 'ぼうりょく',
+    ];
+    final enWords = RegExp(
+      r'\b(kill|killed|killing|death|dead|die|died|war|weapon|weapons|gun|guns|bomb|sex|sexual|drug|drugs|alcohol|beer|wine|cigarette|religion|religious|god|gods|church|gambling|suicide|violence|violent|terror|terrorist|abuse|crime|murder)\b',
+      caseSensitive: false,
+    );
+
+    List<String> childTexts() {
+      final out = <String>[];
+      for (final t in items) {
+        for (final lang in ['ja', 'en']) {
+          for (final b in [AgeBand.kids, AgeBand.junior]) {
+            final l = t.translations[lang]!.levels[b];
+            if (l != null) out.addAll(['${t.id}/$lang/${b.name}: ${l.title}', '${t.id}/$lang/${b.name}: ${l.body}']);
+          }
+        }
+      }
+      final quiz = (_loadQuiz()['items'] as List).cast<Map<String, dynamic>>();
+      for (final q in quiz) {
+        for (final lang in ['ja', 'en']) {
+          out.add('quiz ${q['factId']}/$lang: ${q[lang]['statement']}');
+        }
+      }
+      return out;
+    }
+
+    test('Kids/Junior の文章とクイズに、不適切なことばがない', () {
+      for (final text in childTexts()) {
+        for (final w in jaWords) {
+          expect(text.contains(w), isFalse, reason: '「$w」を含む: $text');
+        }
+        expect(enWords.hasMatch(text), isFalse, reason: text);
+      }
+    });
+
+    test('Kids/Junior に出る雑学は、話題のタグがなく、感度も none', () {
+      for (final t in items) {
+        final visibleToChildren = t.minAgeBand.index <= AgeBand.junior.index;
+        if (!visibleToChildren) continue;
+        expect(t.contentFlags, isEmpty, reason: t.id);
+        expect(t.sensitivity, 'none', reason: t.id);
+        expect(t.allowedFor(AgeBand.kids), isTrue, reason: t.id);
+      }
+    });
+
+    test('話題のタグつきの雑学は、Kids/Junior に出ない（タグがあれば止まる）', () {
+      for (final flag in validContentFlags) {
+        final t = Trivia(
+          id: 'x', category: 'c', scenes: const [], minAgeBand: AgeBand.kids,
+          sensitivity: 'none', regions: const [], illustration: '',
+          translations: const {}, contentFlags: {flag},
+        );
+        expect(t.allowedFor(AgeBand.kids), isFalse, reason: flag);
+        expect(t.allowedFor(AgeBand.junior), isFalse, reason: flag);
+      }
     });
   });
 }

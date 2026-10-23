@@ -853,6 +853,138 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'関心事'**
   String get settingsInterests;
+
+  /// No description provided for @timingSection.
+  ///
+  /// In ja, this message translates to:
+  /// **'いまのおすすめ'**
+  String get timingSection;
+
+  /// No description provided for @reasonDate.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日は記念日'**
+  String get reasonDate;
+
+  /// No description provided for @reasonSeason.
+  ///
+  /// In ja, this message translates to:
+  /// **'{season}にぴったり'**
+  String reasonSeason(String season);
+
+  /// No description provided for @reasonNight.
+  ///
+  /// In ja, this message translates to:
+  /// **'夜にぴったり'**
+  String get reasonNight;
+
+  /// No description provided for @reasonMorning.
+  ///
+  /// In ja, this message translates to:
+  /// **'朝にぴったり'**
+  String get reasonMorning;
+
+  /// No description provided for @reasonEvening.
+  ///
+  /// In ja, this message translates to:
+  /// **'夕方にぴったり'**
+  String get reasonEvening;
+
+  /// No description provided for @reasonWeekend.
+  ///
+  /// In ja, this message translates to:
+  /// **'週末に家族で'**
+  String get reasonWeekend;
+
+  /// No description provided for @seasonSpring.
+  ///
+  /// In ja, this message translates to:
+  /// **'春'**
+  String get seasonSpring;
+
+  /// No description provided for @seasonSummer.
+  ///
+  /// In ja, this message translates to:
+  /// **'夏'**
+  String get seasonSummer;
+
+  /// No description provided for @seasonAutumn.
+  ///
+  /// In ja, this message translates to:
+  /// **'秋'**
+  String get seasonAutumn;
+
+  /// No description provided for @seasonWinter.
+  ///
+  /// In ja, this message translates to:
+  /// **'冬'**
+  String get seasonWinter;
+
+  /// No description provided for @settingsRegion.
+  ///
+  /// In ja, this message translates to:
+  /// **'国・地域'**
+  String get settingsRegion;
+
+  /// No description provided for @regionAuto.
+  ///
+  /// In ja, this message translates to:
+  /// **'自動（端末の設定）'**
+  String get regionAuto;
+
+  /// No description provided for @regionAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'すべての国'**
+  String get regionAll;
+
+  /// No description provided for @regionNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'国ごとの話題（日本の新幹線など）を、選んだ国でだけ出します。'**
+  String get regionNote;
+
+  /// No description provided for @settingsSeason.
+  ///
+  /// In ja, this message translates to:
+  /// **'季節のおすすめ'**
+  String get settingsSeason;
+
+  /// No description provided for @seasonAuto.
+  ///
+  /// In ja, this message translates to:
+  /// **'自動'**
+  String get seasonAuto;
+
+  /// No description provided for @seasonNorth.
+  ///
+  /// In ja, this message translates to:
+  /// **'北半球'**
+  String get seasonNorth;
+
+  /// No description provided for @seasonSouth.
+  ///
+  /// In ja, this message translates to:
+  /// **'南半球'**
+  String get seasonSouth;
+
+  /// No description provided for @seasonOff.
+  ///
+  /// In ja, this message translates to:
+  /// **'オフ'**
+  String get seasonOff;
+
+  /// No description provided for @seasonNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'端末のタイムゾーンから推定します（位置情報は使いません）。'**
+  String get seasonNote;
+
+  /// No description provided for @relatedSection.
+  ///
+  /// In ja, this message translates to:
+  /// **'関連する雑学'**
+  String get relatedSection;
 }
 
 class _AppLocalizationsDelegate

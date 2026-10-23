@@ -14,6 +14,7 @@ import '../widgets/ja_wrap_text.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
+import '../logic/timing.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -256,6 +257,7 @@ class _FeedHome extends ConsumerWidget {
             wordWrap: wordWrap,
           ),
           const SizedBox(height: 16),
+          const _TimingSection(),
           const _InterestSection(),
           if (feed.length > 1) ...[
             const SizedBox(height: 16),
@@ -287,12 +289,16 @@ class _TriviaCard extends StatelessWidget {
     required this.level,
     this.big = false,
     this.wordWrap = false,
+    this.badge,
   });
 
   final Trivia item;
   final TriviaLevel level;
   final bool big;
   final bool wordWrap;
+
+  /// 「夏にぴったり」「今日は記念日」など、おすすめの理由。あればカテゴリーの代わりに出す。
+  final String? badge;
 
   @override
   Widget build(BuildContext context) {
@@ -310,8 +316,12 @@ class _TriviaCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(categoryLabel(l, item.category),
-                        style: Theme.of(context).textTheme.labelSmall),
+                    Text(badge ?? categoryLabel(l, item.category),
+                        key: badge == null ? null : const Key('reason_badge'),
+                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                            color: badge == null
+                                ? null
+                                : Theme.of(context).colorScheme.primary)),
                     const SizedBox(height: 4),
                     WrapText(level.title,
                         wordWrap: wordWrap,
@@ -452,6 +462,57 @@ class _InterestSection extends ConsumerWidget {
           for (final t in picks)
             if (resolve(t) case final level?)
               _TriviaCard(item: t, level: level, wordWrap: wordWrap),
+      ],
+    );
+  }
+}
+
+String seasonLabel(AppLocalizations l, Season s) => switch (s) {
+      Season.spring => l.seasonSpring,
+      Season.summer => l.seasonSummer,
+      Season.autumn => l.seasonAutumn,
+      Season.winter => l.seasonWinter,
+    };
+
+String reasonLabel(AppLocalizations l, TimingReason r, Season? season) => switch (r) {
+      TimingReason.date => l.reasonDate,
+      TimingReason.season => l.reasonSeason(season == null ? '' : seasonLabel(l, season)),
+      TimingReason.night => l.reasonNight,
+      TimingReason.morning => l.reasonMorning,
+      TimingReason.evening => l.reasonEvening,
+      TimingReason.weekend => l.reasonWeekend,
+    };
+
+/// 「いまのおすすめ」: 季節・時間帯・記念日・週末に合う雑学を、理由つきで出す。
+class _TimingSection extends ConsumerWidget {
+  const _TimingSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final picks = ref.watch(timingPicksProvider);
+    if (picks.isEmpty) return const SizedBox.shrink();
+    final resolve = ref.watch(levelResolverProvider);
+    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
+    final wordWrap = band.isChild && ref.watch(contentLanguageProvider) == 'ja';
+    final hemisphere = ref.watch(hemisphereProvider);
+    final season = hemisphere == null ? null : seasonFor(ref.watch(nowProvider), hemisphere);
+
+    return Column(
+      key: const Key('timing_section'),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(l.timingSection, style: Theme.of(context).textTheme.titleSmall),
+        const SizedBox(height: 8),
+        for (final p in picks)
+          if (resolve(p.fact) case final level?)
+            _TriviaCard(
+              item: p.fact,
+              level: level,
+              wordWrap: wordWrap,
+              badge: reasonLabel(l, p.reason, season),
+            ),
+        const SizedBox(height: 8),
       ],
     );
   }

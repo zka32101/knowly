@@ -1,4 +1,5 @@
 import 'age_band.dart';
+import 'content_flags.dart';
 
 /// 年代別の本文。
 class TriviaLevel {
@@ -29,6 +30,14 @@ class Trivia {
     required this.regions,
     required this.illustration,
     required this.translations,
+    this.seasons = const {},
+    this.dates = const [],
+    this.timeOfDay = const {},
+    this.status = 'active',
+    this.excludeRegions = const [],
+    this.keywords = const [],
+    this.related = const [],
+    this.contentFlags = const {},
   });
 
   final String id;
@@ -41,6 +50,32 @@ class Trivia {
   final List<String> regions;
   final String illustration;
   final Map<String, TriviaTranslation> translations;
+
+  /// 季節（spring/summer/autumn/winter。北半球の季節で記述）。空なら一年中。
+  final Set<String> seasons;
+
+  /// 記念日（MM-DD）。その前後の日に「記念日のおすすめ」に出る。
+  final List<String> dates;
+
+  /// 時間帯（morning/day/evening/night）。空ならいつでも。
+  final Set<String> timeOfDay;
+
+  /// 公開状態。active のみ表示する。hidden（一時的に非表示）・retired（削除済み）は配信しない
+  /// （誤りが見つかったときなど、アプリの更新を待たずに止められるようにするため）。
+  final String status;
+
+  /// `regions` は「表示してよい国」（空なら世界中）。`excludeRegions` は「表示しない国」。
+  /// 国コードは ISO 3166-1 の2文字（JP、US など）。
+  final List<String> excludeRegions;
+
+  /// 検索用の別名（読み・漢字・英語・類義語）。タイトルと同じ重みで検索に使う。
+  final List<String> keywords;
+
+  /// 関連する雑学のID（詳細画面の「関連する雑学」）。
+  final List<String> related;
+
+  /// 話題の種類のタグ（[validContentFlags]）。年代ごとに配信を止める話題の判定に使う。
+  final Set<String> contentFlags;
 
   factory Trivia.fromJson(Map<String, dynamic> json) {
     final translations = <String, TriviaTranslation>{};
@@ -70,12 +105,34 @@ class Trivia {
       regions: List<String>.from(json['regions'] as List? ?? const []),
       illustration: json['illustration'] as String? ?? '',
       translations: translations,
+      seasons: Set<String>.from(json['seasons'] as List? ?? const []),
+      dates: List<String>.from(json['dates'] as List? ?? const []),
+      timeOfDay: Set<String>.from(json['timeOfDay'] as List? ?? const []),
+      status: json['status'] as String? ?? 'active',
+      excludeRegions: List<String>.from(json['excludeRegions'] as List? ?? const []),
+      keywords: List<String>.from(json['keywords'] as List? ?? const []),
+      related: List<String>.from(json['related'] as List? ?? const []),
+      contentFlags: Set<String>.from(json['contentFlags'] as List? ?? const []),
     );
+  }
+
+  /// この国で表示してよいか。国が分からない（null）ときは、国限定の雑学は出さない。
+  /// 全世界の表示を選んだとき（[anyRegion] が true）は、国の制限を無視する。
+  bool allowedInRegion(String? region, {bool anyRegion = false}) {
+    if (status != 'active') return false;
+    if (anyRegion) return true;
+    final r = region?.toUpperCase();
+    if (r != null && excludeRegions.contains(r)) return false;
+    if (regions.isEmpty) return true;
+    return r != null && regions.contains(r);
   }
 
   /// 年代に対して配信してよい内容か（感度・最小年代）。
   bool allowedFor(AgeBand band) {
     if (band.index < minAgeBand.index) return false;
+    // 話題のタグ: その年代で止める話題を含むものは出さない。
+    final blocked = blockedFlagsFor(band);
+    if (contentFlags.any(blocked.contains)) return false;
     switch (sensitivity) {
       case 'none':
         return true;

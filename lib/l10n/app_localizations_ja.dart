@@ -398,4 +398,72 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingsInterests => '関心事';
+
+  @override
+  String get timingSection => 'いまのおすすめ';
+
+  @override
+  String get reasonDate => '今日は記念日';
+
+  @override
+  String reasonSeason(String season) {
+    return '$seasonにぴったり';
+  }
+
+  @override
+  String get reasonNight => '夜にぴったり';
+
+  @override
+  String get reasonMorning => '朝にぴったり';
+
+  @override
+  String get reasonEvening => '夕方にぴったり';
+
+  @override
+  String get reasonWeekend => '週末に家族で';
+
+  @override
+  String get seasonSpring => '春';
+
+  @override
+  String get seasonSummer => '夏';
+
+  @override
+  String get seasonAutumn => '秋';
+
+  @override
+  String get seasonWinter => '冬';
+
+  @override
+  String get settingsRegion => '国・地域';
+
+  @override
+  String get regionAuto => '自動（端末の設定）';
+
+  @override
+  String get regionAll => 'すべての国';
+
+  @override
+  String get regionNote => '国ごとの話題（日本の新幹線など）を、選んだ国でだけ出します。';
+
+  @override
+  String get settingsSeason => '季節のおすすめ';
+
+  @override
+  String get seasonAuto => '自動';
+
+  @override
+  String get seasonNorth => '北半球';
+
+  @override
+  String get seasonSouth => '南半球';
+
+  @override
+  String get seasonOff => 'オフ';
+
+  @override
+  String get seasonNote => '端末のタイムゾーンから推定します（位置情報は使いません）。';
+
+  @override
+  String get relatedSection => '関連する雑学';
 }

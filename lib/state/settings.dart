@@ -49,6 +49,8 @@ class AppSettings {
     this.interestCategories = const {},
     this.interestScenes = const {},
     this.interestKeywords = const [],
+    this.regionMode = 'auto',
+    this.seasonMode = 'auto',
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -74,6 +76,13 @@ class AppSettings {
   final Set<String> interestCategories;
   final Set<String> interestScenes;
   final List<String> interestKeywords;
+
+  /// 国・地域の設定。auto = 端末の地域、all = すべての国、それ以外は国コード（JP など）。
+  /// 国限定の雑学（`regions` タグつき）は、この設定の国でだけ出す。
+  final String regionMode;
+
+  /// 季節の設定。auto = タイムゾーンから北半球・南半球を推定、north / south = 固定、off = 季節を使わない。
+  final String seasonMode;
 
   Interests get interests => Interests(
         categories: interestCategories,
@@ -101,6 +110,8 @@ class AppSettings {
     Set<String>? interestCategories,
     Set<String>? interestScenes,
     List<String>? interestKeywords,
+    String? regionMode,
+    String? seasonMode,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -119,6 +130,8 @@ class AppSettings {
         interestCategories: interestCategories ?? this.interestCategories,
         interestScenes: interestScenes ?? this.interestScenes,
         interestKeywords: interestKeywords ?? this.interestKeywords,
+        regionMode: regionMode ?? this.regionMode,
+        seasonMode: seasonMode ?? this.seasonMode,
       );
 }
 
@@ -161,6 +174,8 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       interestCategories: (p.getStringList('interestCategories') ?? const []).toSet(),
       interestScenes: (p.getStringList('interestScenes') ?? const []).toSet(),
       interestKeywords: p.getStringList('interestKeywords') ?? const [],
+      regionMode: p.getString('regionMode') ?? 'auto',
+      seasonMode: p.getString('seasonMode') ?? 'auto',
     );
   }
 
@@ -175,6 +190,16 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     _prefs.setString('ageBand', band.name);
     _prefs.setStringList('scenes', state.scenes.toList());
     _prefs.setBool('notifyEnabled', state.notifyEnabled);
+  }
+
+  void setRegionMode(String mode) {
+    state = state.copyWith(regionMode: mode);
+    _prefs.setString('regionMode', mode);
+  }
+
+  void setSeasonMode(String mode) {
+    state = state.copyWith(seasonMode: mode);
+    _prefs.setString('seasonMode', mode);
   }
 
   void toggleInterestCategory(String category) {
@@ -316,6 +341,10 @@ final settingsProvider = StateNotifierProvider<SettingsNotifier, AppSettings>(
 /// 端末の言語。テストで差し替える。
 final deviceLanguageProvider =
     Provider<String>((ref) => PlatformDispatcher.instance.locale.languageCode);
+
+/// 端末の地域（ja_JP の JP）。分からないときは null。
+final deviceRegionProvider =
+    Provider<String?>((ref) => PlatformDispatcher.instance.locale.countryCode);
 
 final uiLanguageProvider = Provider<String>((ref) =>
     resolveLanguage(ref.watch(settingsProvider).uiLanguage ?? ref.watch(deviceLanguageProvider)));

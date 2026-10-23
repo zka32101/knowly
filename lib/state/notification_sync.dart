@@ -26,6 +26,7 @@ final notificationSyncProvider = Provider<void>((ref) {
   final lang = ref.watch(contentLanguageProvider);
   final resolve = ref.watch(levelResolverProvider);
   final now = ref.watch(nowProvider);
+  final picker = ref.watch(dayPickerProvider);
 
   // Kids には通知を出さない。
   if (band == null || band == AgeBand.kids || !enabled) {
@@ -34,7 +35,7 @@ final notificationSyncProvider = Provider<void>((ref) {
   }
 
   final items = <NotificationItem>[];
-  for (final p in planNotifications(pool: pool, now: now, hour: hour, minute: minute)) {
+  for (final p in planNotifications(pool: pool, now: now, hour: hour, minute: minute, picker: picker)) {
     final level = resolve(p.fact);
     if (level == null) continue;
     items.add(NotificationItem(

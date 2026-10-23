@@ -70,6 +70,8 @@ Future<FakeTts> _pump(
   Map<String, Object> prefs = const {},
   String deviceLanguage = 'ja',
   FakeNotifications? notifications,
+  String? deviceRegion = 'JP',
+  DateTime? now,
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
   SharedPreferences.setMockInitialValues(prefs);
@@ -80,7 +82,8 @@ Future<FakeTts> _pump(
       sharedPreferencesProvider.overrideWithValue(sp),
       triviaRepositoryProvider.overrideWithValue(_repo()),
       deviceLanguageProvider.overrideWithValue(deviceLanguage),
-      nowProvider.overrideWithValue(DateTime(2026, 10, 23)),
+      nowProvider.overrideWithValue(now ?? DateTime(2026, 10, 23)),
+      deviceRegionProvider.overrideWithValue(deviceRegion),
       ttsProvider.overrideWithValue(tts),
       notificationServiceProvider.overrideWithValue(notif),
     ],
@@ -106,6 +109,14 @@ Future<void> _reveal(WidgetTester tester, Key key) async {
 
 Future<void> _back(WidgetTester tester) async {
   await tester.tap(find.byType(BackButton));
+  await tester.pumpAndSettle();
+}
+
+/// 設定画面など縦に長い画面で、遅延生成される項目が見える位置までスクロールする。
+Future<void> _scrollTo(WidgetTester tester, Key key) async {
+  await tester.scrollUntilVisible(find.byKey(key), 200,
+      scrollable: find.byType(Scrollable).last);
+  await tester.ensureVisible(find.byKey(key));
   await tester.pumpAndSettle();
 }
 
@@ -334,6 +345,7 @@ void main() {
       await _back(tester);
       await tester.tap(find.byKey(const Key('open_settings')));
       await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('stats_tile'));
       expect(find.textContaining('100%'), findsOneWidget);
     });
 
@@ -771,9 +783,175 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await tester.tap(find.byKey(const Key('open_settings')));
       await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('open_interests'));
       await tester.tap(find.byKey(const Key('open_interests')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('keyword_field')), findsOneWidget);
+    });
+  });
+
+  group('国タグ（国限定の雑学）', () {
+    Future<int> libraryCount(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_library')));
+      await tester.pumpAndSettle();
+      return int.parse(tester
+          .widget<Text>(find.byKey(const Key('results_count')))
+          .data!
+          .replaceAll(RegExp(r'[^0-9]'), ''));
+    }
+
+    testWidgets('日本では、日本限定の雑学（4件）も出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'JP');
+      expect(await libraryCount(tester), 60);
+    });
+
+    testWidgets('アメリカでは、日本限定の雑学が出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'US');
+      expect(await libraryCount(tester), 56);
+      await tester.enterText(find.byKey(const Key('search_field')), '新幹線');
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('result_shinkansen_1964')), findsNothing);
+    });
+
+    testWidgets('「すべての国」を選ぶと、日本限定の雑学も出る', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'regionMode': 'all'}, deviceRegion: 'US');
+      expect(await libraryCount(tester), 60);
+    });
+
+    testWidgets('国を選ぶ設定は、端末の国より優先される', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'regionMode': 'JP'}, deviceRegion: 'US');
+      expect(await libraryCount(tester), 60);
+    });
+
+    testWidgets('端末に国がなくても、日本語の端末は日本として扱う', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: null);
+      expect(await libraryCount(tester), 60);
+    });
+
+    testWidgets('英語の端末で国が不明なら、国限定の雑学は出ない', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceRegion: null, deviceLanguage: 'en');
+      expect(await libraryCount(tester), 56);
+    });
+
+    testWidgets('設定で国を変えられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'US');
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('region_dropdown')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('すべての国').last);
+      await tester.pumpAndSettle();
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getString('regionMode'), 'all');
+    });
+  });
+
+  group('季節・記念日・時間帯のおすすめ', () {
+    testWidgets('夏の昼は「夏にぴったり」の雑学が出る（北半球）', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'seasonMode': 'north'}, now: DateTime(2026, 7, 15, 13));
+      expect(find.byKey(const Key('timing_section')), findsOneWidget);
+      expect(find.text('いまのおすすめ'), findsOneWidget);
+      expect(find.text('夏にぴったり'), findsOneWidget);
+    });
+
+    testWidgets('南半球では7月は冬。「冬にぴったり」が出て、夏のおすすめは出ない', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'seasonMode': 'south'}, now: DateTime(2026, 7, 15, 13));
+      expect(find.text('冬にぴったり'), findsOneWidget);
+      expect(find.text('夏にぴったり'), findsNothing);
+    });
+
+    testWidgets('季節をオフにすると、季節の理由は出ない', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'seasonMode': 'off'}, now: DateTime(2026, 7, 15, 13));
+      expect(find.textContaining('にぴったり'), findsNothing);
+    });
+
+    testWidgets('夜は「夜にぴったり」の雑学が出る', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'seasonMode': 'off'}, now: DateTime(2026, 7, 15, 22));
+      expect(find.text('夜にぴったり'), findsOneWidget);
+    });
+
+    testWidgets('新幹線の開業日（10/1）は、日本では今日の雑学が新幹線になる', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, 1, 9), deviceRegion: 'JP');
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      expect(container.read(feedProvider).first.id, 'shinkansen_1964');
+    });
+
+    testWidgets('同じ日でも、アメリカでは新幹線の雑学は今日の雑学にならない', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, 1, 9), deviceRegion: 'US');
+      final container = ProviderScope.containerOf(tester.element(find.byKey(const Key('open_settings'))));
+      expect(container.read(feedProvider).map((t) => t.id), isNot(contains('shinkansen_1964')));
+    });
+
+    testWidgets('今日の雑学と通知の雑学は同じ（季節考慮でも一致）', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'notifyEnabled': true, 'seasonMode': 'north'},
+          now: DateTime(2026, 7, 15, 6));
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      final today = container.read(feedProvider).first;
+      final scheduled = _lastNotifications!.lastScheduled!;
+      expect(scheduled.first.body, isNotEmpty);
+      final level = container.read(levelResolverProvider)(today)!;
+      expect(scheduled.first.body, level.title);
+    });
+
+    testWidgets('Kids には「いまのおすすめ」の欄が出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'}, now: DateTime(2026, 7, 15, 13));
+      expect(find.byKey(const Key('timing_section')), findsNothing);
+    });
+
+    testWidgets('設定で季節の設定を変えられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('season_mode'));
+      await tester.tap(find.text('南半球'));
+      await tester.pumpAndSettle();
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getString('seasonMode'), 'south');
+    });
+  });
+
+  group('Junior のふりがな表記と読み上げ', () {
+    testWidgets('Junior の詳細は「漢字（かんじ）」の形で表示される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      final title = tester.widget<WrapText>(find.byKey(const Key('detail_title'))).text;
+      expect(RegExp(r'[\u4E00-\u9FFF]+（[ぁ-んー]+）').hasMatch(title) || !RegExp(r'[\u4E00-\u9FFF]').hasMatch(title), isTrue);
+    });
+
+    testWidgets('読み上げは読み（かっこの中）を除いて渡す', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'junior'});
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('detail_listen')));
+      await tester.pump();
+      expect(tts.spoken, hasLength(1));
+      expect(tts.spoken.first.contains('（'), isFalse);
+    });
+  });
+
+  group('関連する雑学', () {
+    testWidgets('詳細に関連する雑学が出て、開ける', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'regionMode': 'all'});
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      final first = container.read(feedProvider).first;
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, Key('related_${first.related.first}'));
+      expect(find.text('関連する雑学'), findsOneWidget);
+      await tester.tap(find.byKey(Key('related_${first.related.first}')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });
   });
 }

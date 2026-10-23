@@ -37,13 +37,17 @@ Trivia? pickForDay(List<Trivia> pool, DateTime day, {String salt = 'knowly'}) {
   return order[dayNumber(day) % order.length];
 }
 
+/// その日の雑学を選ぶ関数。既定は [pickForDay]。季節・記念日を考慮するものに差し替えられる。
+typedef DayPicker = Trivia? Function(List<Trivia> pool, DateTime day);
+
 /// 今日から過去 [days] 日ぶんのフィード（新しい順、重複は除く）。
-List<Trivia> feedFor(List<Trivia> pool, DateTime today, int days) {
+List<Trivia> feedFor(List<Trivia> pool, DateTime today, int days, {DayPicker? picker}) {
+  final pick = picker ?? pickForDay;
   final seen = <String>{};
   final out = <Trivia>[];
   for (var i = 0; i < days; i++) {
     final day = DateTime(today.year, today.month, today.day - i);
-    final item = pickForDay(pool, day);
+    final item = pick(pool, day);
     if (item != null && seen.add(item.id)) out.add(item);
   }
   return out;

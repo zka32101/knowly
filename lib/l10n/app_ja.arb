@@ -173,5 +173,34 @@
     }
   },
   "interestsNote": "関心事は端末の中にだけ保存され、外には送られません。",
-  "settingsInterests": "関心事"
+  "settingsInterests": "関心事",
+  "timingSection": "いまのおすすめ",
+  "reasonDate": "今日は記念日",
+  "reasonSeason": "{season}にぴったり",
+  "@reasonSeason": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonNight": "夜にぴったり",
+  "reasonMorning": "朝にぴったり",
+  "reasonEvening": "夕方にぴったり",
+  "reasonWeekend": "週末に家族で",
+  "seasonSpring": "春",
+  "seasonSummer": "夏",
+  "seasonAutumn": "秋",
+  "seasonWinter": "冬",
+  "settingsRegion": "国・地域",
+  "regionAuto": "自動（端末の設定）",
+  "regionAll": "すべての国",
+  "regionNote": "国ごとの話題（日本の新幹線など）を、選んだ国でだけ出します。",
+  "settingsSeason": "季節のおすすめ",
+  "seasonAuto": "自動",
+  "seasonNorth": "北半球",
+  "seasonSouth": "南半球",
+  "seasonOff": "オフ",
+  "seasonNote": "端末のタイムゾーンから推定します（位置情報は使いません）。",
+  "relatedSection": "関連する雑学"
 }

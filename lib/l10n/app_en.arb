@@ -173,5 +173,34 @@
     }
   },
   "interestsNote": "Your interests stay on this device and are never sent anywhere.",
-  "settingsInterests": "Interests"
+  "settingsInterests": "Interests",
+  "timingSection": "Right now",
+  "reasonDate": "On this day",
+  "reasonSeason": "Perfect for {season}",
+  "@reasonSeason": {
+    "placeholders": {
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "reasonNight": "Good for tonight",
+  "reasonMorning": "Good for the morning",
+  "reasonEvening": "Good for the evening",
+  "reasonWeekend": "For the weekend",
+  "seasonSpring": "spring",
+  "seasonSummer": "summer",
+  "seasonAutumn": "autumn",
+  "seasonWinter": "winter",
+  "settingsRegion": "Country / region",
+  "regionAuto": "Auto (device setting)",
+  "regionAll": "All countries",
+  "regionNote": "Country-specific facts are shown only for the selected country.",
+  "settingsSeason": "Seasonal picks",
+  "seasonAuto": "Auto",
+  "seasonNorth": "North",
+  "seasonSouth": "South",
+  "seasonOff": "Off",
+  "seasonNote": "Estimated from your time zone (no location is used).",
+  "relatedSection": "Related facts"
 }

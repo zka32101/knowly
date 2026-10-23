@@ -1,5 +1,7 @@
 {
- "version": 1,
+ "schemaVersion": 2,
+ "contentVersion": "2026.10.23",
+ "updatedAt": "2026-10-23",
  "items": [
   {
    "id": "octopus_blue_blood",
@@ -22,8 +24,8 @@
        "body": "タコのちは あおいろだよ。しんぞうは 3つも あるんだって。"
       },
       "junior": {
-       "title": "タコのちは あおい",
-       "body": "タコの ちは あおいろで、しんぞうは 3つ あります。からだに さんそを はこぶ ものが ちがうからです。"
+       "title": "タコの血（ち）は青（あお）い",
+       "body": "タコの血（ち）は青（あお）い色（いろ）で、心臓（しんぞう）は3つあります。体（からだ）に酸素（さんそ）を運（はこ）ぶものが、人間（にんげん）とちがうからです。"
       },
       "teen": {
        "title": "タコの血は青く、心臓は3つある",
@@ -33,7 +35,9 @@
        "title": "タコの血が青いのは銅のせい",
        "body": "タコの血液は酸素を運ぶのにヘモシアニン(銅を含むたんぱく質)を使うため、酸素と結びつくと青くなります。鰓心臓2つと体心臓1つ、計3つの心臓を持ちます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -54,9 +58,39 @@
        "title": "Octopus blood is blue because of copper",
        "body": "Octopuses carry oxygen with hemocyanin, a copper-containing protein, which turns blue when oxygenated. They have two branchial hearts serving the gills and one systemic heart."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "たこ",
+    "蛸",
+    "octopus",
+    "血液",
+    "心臓"
+   ],
+   "related": [
+    "sea_otters_hold_hands",
+    "giraffe_seven_vertebrae"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "honey_never_spoils",
@@ -79,8 +113,8 @@
        "body": "はちみつは とても ながいあいだ たべられるよ。"
       },
       "junior": {
-       "title": "はちみつは なかなか くさらない",
-       "body": "はちみつは みずが すくなくて あまいので、ばいきんが ふえにくく、とても ながく もちます。"
+       "title": "はちみつはなかなかくさらない",
+       "body": "はちみつは水（みず）が少（すく）なくて甘（あま）いので、ばい菌（きん）が増（ふ）えにくく、とても長（なが）くもちます。"
       },
       "teen": {
        "title": "はちみつはほとんど腐らない",
@@ -90,7 +124,9 @@
        "title": "はちみつが腐りにくい理由",
        "body": "蜂蜜は水分が約17〜18%と低く、糖濃度が高いため浸透圧で微生物が生育しにくく、さらに酸性(pH約3.5〜4.5)で、蜂の酵素が作る過酸化水素も働きます。古代エジプトの墳墓で見つかった蜂蜜が数千年後も食べられる状態だったという報告があります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -111,9 +147,38 @@
        "title": "Why honey resists spoiling",
        "body": "Honey is about 17-18% water with a very high sugar concentration, so osmotic pressure inhibits microbes. It is also acidic (pH roughly 3.5-4.5), and hydrogen peroxide produced by bee enzymes helps. Honey found in ancient Egyptian tombs was reported to remain edible after millennia."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "はちみつ",
+    "蜂蜜",
+    "honey",
+    "みつ"
+   ],
+   "related": [
+    "watermelon_92_water",
+    "cacao_money"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "banana_is_berry",
@@ -136,8 +201,8 @@
        "body": "バナナは しょくぶつの ぶんるいでは「ベリー」の なかまなんだよ。"
       },
       "junior": {
-       "title": "バナナは ベリーの なかま",
-       "body": "しょくぶつがくでは、バナナは ベリーの なかまです。でも いちごは ベリーではないんだよ。"
+       "title": "バナナはベリーの仲間（なかま）",
+       "body": "植物学（しょくぶつがく）では、バナナはベリーの仲間（なかま）です。でも、いちごはベリーではないんだよ。"
       },
       "teen": {
        "title": "バナナはベリーで、いちごはベリーではない",
@@ -147,7 +212,9 @@
        "title": "植物学上、バナナは液果でイチゴは違う",
        "body": "植物学の「液果(berry)」は、1つの花の子房全体が肉質に育ち、種を含む果実です。バナナはこれに該当しますが、イチゴは花托が肥大した偽果で、表面の粒が本来の果実(痩果)です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -168,9 +235,42 @@
        "title": "Botanically, bananas are berries; strawberries are not",
        "body": "A botanical berry develops from one flower's ovary into a fleshy fruit containing seeds. Bananas qualify. A strawberry is an accessory fruit: the flesh is the enlarged receptacle, and the true fruits are the achenes on its surface."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ばなな",
+    "いちご",
+    "苺",
+    "strawberry",
+    "banana",
+    "べりー",
+    "berry"
+   ],
+   "related": [
+    "honey_never_spoils",
+    "watermelon_92_water",
+    "strawberry_200_seeds"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "venus_day_longer",
@@ -192,8 +292,8 @@
        "body": "きんせいは ゆっくり まわるので、いちにちが とても ながいよ。"
       },
       "junior": {
-       "title": "きんせいの 1にちは 1ねんより ながい",
-       "body": "きんせいは とても ゆっくり じぶんで まわります。だから 1にちが、たいように まわる 1ねんより ながいのです。"
+       "title": "金星（きんせい）の1日（にち）は1年（ねん）より長（なが）い",
+       "body": "金星（きんせい）はとてもゆっくり自分（じぶん）で回（まわ）ります。だから1日（にち）が、太陽（たいよう）のまわりを回（まわ）る1年（ねん）より長（なが）いのです。"
       },
       "teen": {
        "title": "金星の1日は1年より長い",
@@ -203,7 +303,9 @@
        "title": "金星では自転周期が公転周期を上回る",
        "body": "金星の自転周期は約243地球日(しかも他の惑星と逆向き)で、公転周期は約225地球日です。このため恒星日は1金星年より長くなります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -224,9 +326,41 @@
        "title": "Venus rotates more slowly than it orbits",
        "body": "Venus has a sidereal rotation period of about 243 Earth days, in the retrograde direction, and an orbital period of about 225 Earth days, so a sidereal day exceeds a Venusian year."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "きんせい",
+    "金星",
+    "venus",
+    "わくせい",
+    "惑星"
+   ],
+   "related": [
+    "moon_moving_away",
+    "sunlight_8_minutes"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "sharks_older_than_trees",
@@ -248,8 +382,8 @@
        "body": "サメは きが うまれるより まえから うみに いたんだよ。"
       },
       "junior": {
-       "title": "サメは きより ふるい",
-       "body": "サメの なかまは、4おくねんいじょう まえから います。きの なかまが ふえるより まえです。"
+       "title": "サメは木（き）より古（ふる）い",
+       "body": "サメの仲間（なかま）は、4億年（おくねん）以上（いじょう）前（まえ）からいます。木（き）の仲間（なかま）が増（ふ）えるより前（まえ）です。"
       },
       "teen": {
        "title": "サメは木より古い生き物",
@@ -259,7 +393,9 @@
        "title": "サメの系統は樹木より古い",
        "body": "軟骨魚類は約4億年以上前のデボン紀以前に出現しており、森を作る本格的な樹木(アーケオプテリスなど)が現れた約3億8千万〜3億6千万年前より古い系統です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -280,9 +416,36 @@
        "title": "The shark lineage predates trees",
        "body": "Cartilaginous fishes appeared more than 400 million years ago, earlier than forest-forming trees such as Archaeopteris, which date to roughly 380-360 million years ago."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "さめ",
+    "鮫",
+    "shark",
+    "樹木",
+    "きょうりゅう"
+   ],
+   "related": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "baby_bones",
@@ -305,8 +468,8 @@
        "body": "あかちゃんは おとなより ほねが おおいんだよ。"
       },
       "junior": {
-       "title": "あかちゃんの ほねは おおい",
-       "body": "あかちゃんの ほねは 300こくらい。おおきくなると くっついて、おとなは 206こに なります。"
+       "title": "赤（あか）ちゃんの骨（ほね）は多（おお）い",
+       "body": "赤（あか）ちゃんの骨（ほね）は300こくらい。大（おお）きくなるとくっついて、大人（おとな）は206こになります。"
       },
       "teen": {
        "title": "赤ちゃんの骨は約300本、大人は206本",
@@ -316,7 +479,9 @@
        "title": "乳児の骨は約300、成人は206",
        "body": "新生児の骨格は約300個の骨・骨化中心で構成され、成長に伴い癒合して、成人では206個になります。頭蓋骨や仙骨などで癒合が顕著です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -337,9 +502,40 @@
        "title": "Infants have around 300 bones; adults have 206",
        "body": "A newborn skeleton consists of roughly 300 bones and ossification centers that fuse during growth, notably in the skull and sacrum, leaving 206 bones in adults."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "あかちゃん",
+    "赤ちゃん",
+    "ほね",
+    "骨",
+    "baby",
+    "bones"
+   ],
+   "related": [
+    "heart_100k",
+    "human_dna_same"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "giraffe_seven_vertebrae",
@@ -362,8 +558,8 @@
        "body": "キリンの くびの ほねは ななつ。にんげんと おなじ かずだよ。"
       },
       "junior": {
-       "title": "キリンの くびの ほねは 7こ",
-       "body": "キリンの くびは とても ながいけれど、ほねの かずは 7こ。にんげんと おなじです。ひとつひとつが とても おおきいのです。"
+       "title": "キリンの首（くび）の骨（ほね）は7こ",
+       "body": "キリンの首（くび）はとても長（なが）いけれど、骨（ほね）の数（かず）は7こ。人間（にんげん）と同（おな）じです。ひとつひとつがとても大（おお）きいのです。"
       },
       "teen": {
        "title": "キリンの首の骨は人間と同じ7個",
@@ -373,7 +569,9 @@
        "title": "キリンの頸椎は7個",
        "body": "哺乳類の頸椎はほぼ例外なく7個で、キリンも同数です。長い首は個々の頸椎が非常に長く(約25cm前後)なることで実現しています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -394,9 +592,41 @@
        "title": "Giraffes have seven cervical vertebrae",
        "body": "Nearly all mammals have seven cervical vertebrae, giraffes included. Their long necks result from extremely elongated individual vertebrae, each roughly 25 cm long."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "きりん",
+    "麒麟",
+    "giraffe",
+    "くび",
+    "首"
+   ],
+   "related": [
+    "dolphin_half_sleep",
+    "elephant_ground_sounds",
+    "baby_bones",
+    "heart_100k"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "lightning_hotter_than_sun",
@@ -418,8 +648,8 @@
        "body": "かみなりは たいようの ひょうめんより あついんだって。"
       },
       "junior": {
-       "title": "かみなりは たいようより あつい",
-       "body": "かみなりの ひかりの みちは 3まんどくらい。たいようの ひょうめんは 5500どくらいです。"
+       "title": "かみなりは太陽（たいよう）より熱（あつ）い",
+       "body": "かみなりの光（ひかり）の道（みち）は3万度（まんど）くらい。太陽（たいよう）の表面（ひょうめん）は5500度（ど）くらいです。"
       },
       "teen": {
        "title": "雷の温度は太陽の表面より高い",
@@ -429,7 +659,9 @@
        "title": "雷放電の温度は太陽表面の約5倍",
        "body": "落雷の放電路は一瞬で約30,000℃に達するとされ、太陽の光球の温度(約5,500℃)の5倍以上です。この急激な加熱で空気が膨張し、雷鳴が生じます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -450,9 +682,41 @@
        "title": "A lightning channel is several times hotter than the Sun's surface",
        "body": "A lightning discharge channel is estimated to reach about 30,000 °C, more than five times the roughly 5,500 °C of the solar photosphere. The sudden heating expands the air explosively, producing thunder."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "かみなり",
+    "雷",
+    "らい",
+    "lightning",
+    "たいよう"
+   ],
+   "related": [
+    "eiffel_grows_summer",
+    "rainbow_full_circle"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "sea_otters_hold_hands",
@@ -475,8 +739,8 @@
        "body": "ラッコは ねるとき、なかまと てを つなぐことが あるよ。"
       },
       "junior": {
-       "title": "ラッコは てを つないで ねる",
-       "body": "ラッコは うみで ねるとき、ながされないように なかまと てを つなぐことが あります。"
+       "title": "ラッコは手（て）をつないで寝（ね）る",
+       "body": "ラッコは海（うみ）で寝（ね）るとき、流（なが）されないように仲間（なかま）と手（て）をつなぐことがあります。"
       },
       "teen": {
        "title": "ラッコは手をつないで眠ることがある",
@@ -486,7 +750,9 @@
        "title": "ラッコの手つなぎ行動",
        "body": "ラッコは海上で休む際、群れが離れないよう互いの手を握ることが知られています。ケルプに体を巻き付けて係留する行動も観察されています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -507,9 +773,41 @@
        "title": "Sea otters hold paws while resting",
        "body": "Resting sea otters are known to hold each other's paws to keep the group together on the water. They have also been observed wrapping themselves in kelp as an anchor."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "らっこ",
+    "獺",
+    "otter",
+    "sea otter",
+    "てつなぎ"
+   ],
+   "related": [
+    "giraffe_seven_vertebrae",
+    "dolphin_half_sleep"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "no_sound_in_space",
@@ -532,8 +830,8 @@
        "body": "うちゅうでは おとが きこえないんだよ。"
       },
       "junior": {
-       "title": "うちゅうでは おとが つたわらない",
-       "body": "おとは くうきが ふるえて つたわります。うちゅうには くうきが ないので、おとは きこえません。"
+       "title": "宇宙（うちゅう）では音（おと）が伝（つた）わらない",
+       "body": "音（おと）は空気（くうき）がふるえて伝（つた）わります。宇宙（うちゅう）には空気（くうき）がないので、音（おと）は聞（き）こえません。"
       },
       "teen": {
        "title": "宇宙では音が伝わらない",
@@ -543,7 +841,9 @@
        "title": "真空中では音波が伝播しない",
        "body": "音波は媒質の振動として伝わるため、ほぼ真空の宇宙空間では伝播しません。宇宙飛行士の会話は電波(無線)で行われ、船内では空気があるため通常どおり音が聞こえます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -564,9 +864,44 @@
        "title": "Sound waves cannot propagate in a vacuum",
        "body": "Sound waves need a medium to propagate, and space is nearly a vacuum, so they cannot travel through it. Astronauts communicate by radio, and inside a spacecraft the air carries sound normally."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "うちゅう",
+    "宇宙",
+    "おと",
+    "音",
+    "space",
+    "sound",
+    "しんくう",
+    "真空"
+   ],
+   "related": [
+    "orbital_speed",
+    "iss_sunrises"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "ice_floats",
@@ -589,8 +924,8 @@
        "body": "こおりは みずより かるいから、プカプカ うくよ。"
       },
       "junior": {
-       "title": "こおりが みずに うくのは なぜ？",
-       "body": "みずは こおると ふくらんで かるくなります。だから こおりは みずに うきます。"
+       "title": "氷（こおり）が水（みず）にうくのはなぜ？",
+       "body": "水（みず）はこおるとふくらんで軽（かる）くなります。だから氷（こおり）は水（みず）にうきます。"
       },
       "teen": {
        "title": "氷が水に浮く理由",
@@ -600,7 +935,9 @@
        "title": "氷の密度が水より小さい理由",
        "body": "水は凍結時に水素結合によって隙間の多い結晶構造をとり、体積が約9%増えるため氷の密度(約0.92g/cm³)は水より小さくなります。多くの物質は固体のほうが高密度で、水は例外的です。湖が上から凍り、底の生き物が生き延びられる一因でもあります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -621,9 +958,43 @@
        "title": "Why ice is less dense than water",
        "body": "Freezing locks water into an open hydrogen-bonded crystal structure that expands about 9%, giving ice a density of about 0.92 g/cm³. Most substances are denser as solids, so water is an exception, and it helps explain why lakes freeze from the top down and aquatic life survives below."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "winter"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "こおり",
+    "氷",
+    "ice",
+    "みず",
+    "水",
+    "うく",
+    "浮く"
+   ],
+   "related": [
+    "apple_floats",
+    "steel_ship_floats"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "chimborazo_farthest",
@@ -648,7 +1019,9 @@
        "title": "地球の中心から最も遠い山頂はチンボラソ山",
        "body": "地球は自転による遠心力で赤道付近が膨らんでいるため、赤道に近いチンボラソ山(エクアドル)の山頂は、地球の中心から約6,384kmと、海抜でははるかに高いエベレストより遠くなります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -661,9 +1034,40 @@
        "title": "Chimborazo's summit is farther from Earth's center than Everest's",
        "body": "Earth's equatorial bulge puts Chimborazo's summit (about 6,384 km from the center) farther out than Everest's, even though Everest is far higher above sea level."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "やま",
+    "山",
+    "えべれすと",
+    "everest",
+    "ちんぼらそ",
+    "mountain"
+   ],
+   "related": [
+    "japan_islands",
+    "antarctica_desert"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "wombat_cube_poop",
@@ -686,8 +1090,8 @@
        "body": "ウォンバットの うんちは しかくいんだよ。"
       },
       "junior": {
-       "title": "ウォンバットの うんちは しかく",
-       "body": "ウォンバットの うんちは さいころみたいに しかくい かたちを しています。"
+       "title": "ウォンバットのうんちは四角（しかく）",
+       "body": "ウォンバットのうんちは、さいころみたいに四角（しかく）い形（かたち）をしています。"
       },
       "teen": {
        "title": "ウォンバットのふんは四角い",
@@ -697,7 +1101,9 @@
        "title": "ウォンバットの立方体状の糞",
        "body": "ウォンバットの糞は立方体に近い形をしています。研究では、腸の壁の弾性の差によって成形されるとされ、転がりにくいため縄張りの目印として都合がよいと考えられています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -718,9 +1124,39 @@
        "title": "Wombats produce cubic droppings",
        "body": "Wombat feces are nearly cubic. Research suggests the shape is molded by differences in the elasticity of the intestinal wall, and it is thought to suit territory marking because cubes resist rolling."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "うぉんばっと",
+    "wombat",
+    "うんち",
+    "ふん",
+    "糞"
+   ],
+   "related": [
+    "flamingo_flamboyance",
+    "crows_recognize_faces"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "human_dna_same",
@@ -745,7 +1181,9 @@
        "title": "ヒトのDNAは個人間で約99.9%一致する",
        "body": "血縁のない2人のヒトの間でも、DNAの塩基配列は約99.9%が共通しています。残りの約0.1%の違いが、体質や見た目などの個人差の元の一部になっています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -758,9 +1196,40 @@
        "title": "Two humans differ in only about 0.1% of their DNA",
        "body": "Any two unrelated people share roughly 99.9% of their DNA sequence. The remaining differences, including single-letter variants, account for much of human variation."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "でぃーえぬえー",
+    "dna",
+    "いでんし",
+    "遺伝子",
+    "ひと",
+    "人"
+   ],
+   "related": [
+    "giraffe_seven_vertebrae",
+    "baby_bones"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "flamingo_flamboyance",
@@ -782,8 +1251,8 @@
        "body": "フラミンゴの むれは「フランボヤンス」と よぶんだよ。"
       },
       "junior": {
-       "title": "フラミンゴの むれの なまえ",
-       "body": "フラミンゴの むれの ことを、えいごで「フランボヤンス」と いいます。「はなやか」という いみです。"
+       "title": "フラミンゴの群（む）れの名前（なまえ）",
+       "body": "フラミンゴの群（む）れのことを、英語（えいご）で「フランボヤンス」といいます。「はなやか」という意味（いみ）です。"
       },
       "teen": {
        "title": "フラミンゴの群れは「フランボヤンス」",
@@ -793,7 +1262,9 @@
        "title": "フラミンゴの集合名詞は flamboyance",
        "body": "英語でフラミンゴの群れは「flamboyance」と呼ばれます。「華やかさ」を意味する語で、動物の集団を表す集合名詞の面白い例として知られます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -814,9 +1285,40 @@
        "title": "The collective noun for flamingos is \"flamboyance\"",
        "body": "A group of flamingos is called a \"flamboyance\" in English, a word meaning showiness, and a charming example of the many collective nouns used for animals."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ふらみんご",
+    "flamingo",
+    "とり",
+    "鳥",
+    "むれ",
+    "群れ"
+   ],
+   "related": [
+    "crows_recognize_faces",
+    "cats_no_sweet"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "moon_moving_away",
@@ -838,8 +1340,8 @@
        "body": "おつきさまは すこしずつ ちきゅうから はなれているよ。"
       },
       "junior": {
-       "title": "おつきさまは とおざかっている",
-       "body": "おつきさまは 1ねんに 4センチくらい、すこしずつ ちきゅうから とおざかっています。"
+       "title": "お月（つき）さまは遠（とお）ざかっている",
+       "body": "お月（つき）さまは1年（ねん）に4センチくらい、すこしずつ地球（ちきゅう）から遠（とお）ざかっています。"
       },
       "teen": {
        "title": "月は毎年少しずつ地球から離れている",
@@ -849,7 +1351,9 @@
        "title": "月は年に約3.8cmずつ遠ざかっている",
        "body": "月は潮汐相互作用により、年に約3.8cmの割合で地球から遠ざかっています。アポロ計画などで月面に置かれた反射鏡へレーザーを当て、往復時間を測る観測で確認されています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -870,9 +1374,43 @@
        "title": "The Moon recedes about 3.8 cm per year",
        "body": "Tidal interaction pushes the Moon away from Earth at roughly 3.8 cm a year, confirmed by lunar laser ranging, which times laser pulses reflected from retroreflectors placed on the surface."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "autumn"
+   ],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "つき",
+    "月",
+    "moon",
+    "おつきさま",
+    "とおざかる"
+   ],
+   "related": [
+    "sunlight_8_minutes",
+    "saturn_would_float"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "butterfly_taste_feet",
@@ -895,8 +1433,8 @@
        "body": "ちょうちょは あしで あじを かんじるんだよ。"
       },
       "junior": {
-       "title": "ちょうちょの あしは した",
-       "body": "ちょうちょは あしの さきで あじを かんじます。はっぱに とまって、たべものか たしかめます。"
+       "title": "ちょうちょの足（あし）は舌（した）",
+       "body": "ちょうちょは足（あし）の先（さき）で味（あじ）を感（かん）じます。はっぱにとまって、食（た）べものかたしかめます。"
       },
       "teen": {
        "title": "チョウは足で味を感じる",
@@ -906,7 +1444,9 @@
        "title": "チョウは脚の感覚毛で味を感じる",
        "body": "チョウの前脚の先端などには味覚受容器を持つ感覚毛があり、葉に触れるだけで植物の化学物質を検知します。メスはこれで産卵に適した食草を見分けます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -927,9 +1467,43 @@
        "title": "Butterflies taste through sensors on their legs",
        "body": "Butterflies have chemoreceptive sensilla on their legs, particularly the front pair, that detect plant chemicals on contact. Females use them to identify suitable host plants for egg-laying."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "spring"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ちょう",
+    "蝶",
+    "ちょうちょ",
+    "butterfly",
+    "あし",
+    "あじ",
+    "味"
+   ],
+   "related": [
+    "ant_strong",
+    "dragonfly_before_dinosaurs"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "cats_no_sweet",
@@ -952,8 +1526,8 @@
        "body": "ねこは あまい あじを かんじないんだって。"
       },
       "junior": {
-       "title": "ねこは あまさを かんじない",
-       "body": "ねこは した では あまい あじが わかりません。おにくの あじは とくいです。"
+       "title": "ねこは甘（あま）さを感（かん）じない",
+       "body": "ねこは舌（した）では甘（あま）い味（あじ）がわかりません。お肉（にく）の味（あじ）はとくいです。"
       },
       "teen": {
        "title": "ネコは甘みを感じない",
@@ -963,7 +1537,9 @@
        "title": "ネコは甘味受容体を持たない",
        "body": "ネコは甘味受容体を構成する遺伝子(Tas1r2)が機能しない偽遺伝子となっており、甘味を感知できません。肉食に特化した進化の結果と考えられています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -984,9 +1560,39 @@
        "title": "Cats lack a functional sweet taste receptor",
        "body": "The gene Tas1r2, part of the sweet taste receptor, is a nonfunctional pseudogene in cats, so they cannot detect sweetness, likely an evolutionary consequence of strict carnivory."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ねこ",
+    "猫",
+    "cat",
+    "あまい",
+    "甘い"
+   ],
+   "related": [
+    "octopus_blue_blood",
+    "sea_otters_hold_hands"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "sunlight_8_minutes",
@@ -1009,8 +1615,8 @@
        "body": "たいようの ひかりは ちきゅうまで すこし じかんが かかるよ。"
       },
       "junior": {
-       "title": "たいようの ひかりは 8ふんで とどく",
-       "body": "いま みている たいようの ひかりは、8ふんくらい まえに たいようを でた ひかりです。"
+       "title": "太陽（たいよう）の光（ひかり）は8分（ふん）で届（とど）く",
+       "body": "今（いま）見（み）ている太陽（たいよう）の光（ひかり）は、8分（ふん）くらい前（まえ）に太陽（たいよう）を出（で）た光（ひかり）です。"
       },
       "teen": {
        "title": "太陽の光が地球に届くまで約8分",
@@ -1020,7 +1626,9 @@
        "title": "太陽光の到達時間は約8分20秒",
        "body": "太陽と地球の平均距離は約1億5千万kmで、光が届くまでに約8分20秒かかります。私たちが見ているのは約8分前の太陽の姿です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1041,9 +1649,41 @@
        "title": "Sunlight takes about 8 minutes 20 seconds to reach Earth",
        "body": "At an average distance of about 150 million km, light from the Sun takes roughly 8 minutes and 20 seconds to arrive, so we always see the Sun as it was about eight minutes earlier."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "morning"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "たいよう",
+    "太陽",
+    "sun",
+    "ひかり",
+    "光"
+   ],
+   "related": [
+    "saturn_would_float",
+    "no_sound_in_space"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "saturn_would_float",
@@ -1066,8 +1706,8 @@
        "body": "どせいは とても かるいので、おおきな みずの なかなら うくんだって。"
       },
       "junior": {
-       "title": "どせいは みずに うかぶ",
-       "body": "どせいは おおきいけれど かるい ほしです。もし おおきな プールが あれば、みずに うかびます。"
+       "title": "土星（どせい）は水（みず）にうかぶ",
+       "body": "土星（どせい）は大（おお）きいけれど軽（かる）い星（ほし）です。もし大（おお）きなプールがあれば、水（みず）にうかびます。"
       },
       "teen": {
        "title": "土星は水に浮かぶほど軽い",
@@ -1077,7 +1717,9 @@
        "title": "土星の平均密度は水より小さい",
        "body": "土星の平均密度は約0.69g/cm³で水(1.0g/cm³)より小さく、主に水素とヘリウムからなるためです。仮に十分大きな水槽があれば浮かびますが、そのようなものは存在しません。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1098,9 +1740,43 @@
        "title": "Saturn's average density is lower than water's",
        "body": "Saturn's mean density is about 0.69 g/cm³, below water's 1.0 g/cm³, because it is made mostly of hydrogen and helium. It would float in a sufficiently large bath, which of course does not exist."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "どせい",
+    "土星",
+    "saturn",
+    "わくせい",
+    "惑星"
+   ],
+   "related": [
+    "no_sound_in_space",
+    "orbital_speed",
+    "ice_floats",
+    "apple_floats"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "eiffel_grows_summer",
@@ -1123,8 +1799,8 @@
        "body": "エッフェルとうは あついと すこし たかく なるよ。"
       },
       "junior": {
-       "title": "エッフェルとうは なつに のびる",
-       "body": "てつは あつくなると のびます。だから エッフェルとうは、なつは ふゆより すこしだけ たかく なります。"
+       "title": "エッフェルとうは夏（なつ）にのびる",
+       "body": "鉄（てつ）は熱（あつ）くなるとのびます。だからエッフェルとうは、夏（なつ）は冬（ふゆ）よりすこしだけ高（たか）くなります。"
       },
       "teen": {
        "title": "エッフェル塔は夏に少し高くなる",
@@ -1134,7 +1810,9 @@
        "title": "エッフェル塔の高さは季節で変わる",
        "body": "エッフェル塔は錬鉄製で、熱膨張により気温が高い夏には冬に比べて最大約15cm高くなると言われます。日当たりで塔の片側が膨張するため、頂部がわずかに傾くこともあります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1155,9 +1833,44 @@
        "title": "The Eiffel Tower's height varies with temperature",
        "body": "The tower is made of wrought iron, which expands as it warms, so it can be up to about 15 cm taller in summer than in winter. Uneven sun exposure can also make its top lean slightly."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "えっふぇるとう",
+    "エッフェル塔",
+    "eiffel",
+    "とう",
+    "塔",
+    "ふらんす",
+    "ぱり",
+    "paris"
+   ],
+   "related": [
+    "rainbow_full_circle",
+    "lightning_hotter_than_sun"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "heart_100k",
@@ -1180,8 +1893,8 @@
        "body": "しんぞうは まいにち 10まんかいも ドキドキ うごいているよ。"
       },
       "junior": {
-       "title": "しんぞうは 1にちに 10まんかい",
-       "body": "しんぞうは やすまずに うごいて、1にちに 10まんかいくらい ドキドキと うちます。"
+       "title": "心臓（しんぞう）は1日（にち）に10万回（まんかい）",
+       "body": "心臓（しんぞう）は休（やす）まずに動（うご）いて、1日（にち）に10万回（まんかい）くらいドキドキと打（う）ちます。"
       },
       "teen": {
        "title": "心臓は1日に約10万回動く",
@@ -1191,7 +1904,9 @@
        "title": "心臓は1日に約10万回拍動する",
        "body": "成人の安静時の心拍数は毎分約60〜80回で、1日では約10万回、1年では約3,600万回に達します。一生では約25〜30億回拍動する計算になります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1212,9 +1927,39 @@
        "title": "The heart beats about 100,000 times daily",
        "body": "At a resting rate of about 60-80 beats per minute, an adult heart beats roughly 100,000 times a day and about 36 million times a year, working out to around 2.5-3 billion beats over a lifetime."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "しんぞう",
+    "心臓",
+    "heart",
+    "どうき",
+    "脈"
+   ],
+   "related": [
+    "human_dna_same",
+    "giraffe_seven_vertebrae"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "bamboo_fast",
@@ -1237,8 +1982,8 @@
        "body": "たけは 1にちで 1メートルくらい のびることも あるよ。"
       },
       "junior": {
-       "title": "たけは とても はやく のびる",
-       "body": "たけは しゅるいに よっては 1にちで 1メートルちかく のびます。せかいで いちばん はやい しょくぶつの なかまです。"
+       "title": "竹（たけ）はとても速（はや）くのびる",
+       "body": "竹（たけ）は種類（しゅるい）によっては1日（にち）で1メートル近（ちか）くのびます。世界（せかい）でいちばん速（はや）い植物（しょくぶつ）の仲間（なかま）です。"
       },
       "teen": {
        "title": "竹は1日に約1メートル伸びることも",
@@ -1248,7 +1993,9 @@
        "title": "竹は最速級の成長を示す植物",
        "body": "一部の竹は、1日に約90cm以上伸びることが観測されており、世界で最も成長が速い植物の一つとされます。地下茎で養分を蓄え、タケノコが短期間で一気に伸びます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1269,9 +2016,38 @@
        "title": "Bamboo is among the fastest-growing plants",
        "body": "Some bamboo species have been recorded growing 90 cm or more in a day. Stored energy in the underground rhizome lets new shoots elongate rapidly within a short period."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "spring"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "たけ",
+    "竹",
+    "bamboo",
+    "たけのこ",
+    "筍"
+   ],
+   "related": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "crows_recognize_faces",
@@ -1293,8 +2069,8 @@
        "body": "カラスは ひとの かおを おぼえられるんだって。"
       },
       "junior": {
-       "title": "カラスは ひとの かおを おぼえる",
-       "body": "カラスは あたまが よくて、いじわるを された ひとの かおを おぼえて いることが あります。"
+       "title": "カラスは人（ひと）の顔（かお）をおぼえる",
+       "body": "カラスは頭（あたま）がよくて、いじわるをされた人（ひと）の顔（かお）をおぼえていることがあります。"
       },
       "teen": {
        "title": "カラスは人間の顔を見分けて覚える",
@@ -1304,7 +2080,9 @@
        "title": "カラスはヒトの顔を識別・記憶する",
        "body": "アメリカの研究では、アメリカガラスが、自分を捕獲した人物が着けていたマスクの顔を数年にわたり記憶し、他の個体もその人物を警戒するようになることが示されました。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1325,9 +2103,39 @@
        "title": "Crows identify and remember human faces",
        "body": "Studies of American crows found they remembered the face of a mask-wearing person who had trapped them for years, and other crows that had never been trapped learned to scold that person too."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "からす",
+    "烏",
+    "crow",
+    "かお",
+    "顔"
+   ],
+   "related": [
+    "cats_no_sweet",
+    "octopus_blue_blood"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "rainbow_full_circle",
@@ -1350,8 +2158,8 @@
        "body": "にじは ほんとうは まるい かたちなんだよ。"
       },
       "junior": {
-       "title": "にじは ほんとうは まあるい",
-       "body": "にじは じめんが じゃまを するので はんぶんしか みえません。たかい ところからは まるく みえることが あります。"
+       "title": "にじは本当（ほんとう）はまあるい",
+       "body": "にじは地面（じめん）がじゃまをするので半分（はんぶん）しか見（み）えません。高（たか）いところからは丸（まる）く見（み）えることがあります。"
       },
       "teen": {
        "title": "虹は本当は円形",
@@ -1361,7 +2169,9 @@
        "title": "虹は本来は完全な円",
        "body": "虹は太陽と観測者を結ぶ軸のまわりに広がる円錐状の光の分布で、本来は円形です。地平線が下側を遮るため弧に見えるだけで、航空機や高い山からは円形の虹が観測されることがあります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1382,9 +2192,40 @@
        "title": "A rainbow is a complete circle",
        "body": "A rainbow is a cone of light distributed around the line from the Sun through the observer, so it is inherently circular. The horizon usually hides the lower part, but complete circular rainbows can be seen from aircraft or high vantage points."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "にじ",
+    "虹",
+    "rainbow"
+   ],
+   "related": [
+    "lightning_hotter_than_sun",
+    "eiffel_grows_summer"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "elephant_ground_sounds",
@@ -1407,8 +2248,8 @@
        "body": "ぞうは ひくい おとを だして、とおくの なかまと おはなしするよ。"
       },
       "junior": {
-       "title": "ぞうは ひくい こえで はなす",
-       "body": "ぞうは ひとに きこえない ひくい こえを だして、とおくに いる なかまに つたえます。"
+       "title": "象（ぞう）は低（ひく）い声（こえ）で話（はな）す",
+       "body": "象（ぞう）は人（ひと）に聞（き）こえない低（ひく）い声（こえ）を出（だ）して、遠（とお）くにいる仲間（なかま）に伝（つた）えます。"
       },
       "teen": {
        "title": "ゾウは人に聞こえない低い声で話す",
@@ -1418,7 +2259,9 @@
        "title": "ゾウは低周波音で長距離コミュニケーションする",
        "body": "ゾウは人の可聴域より低い周波数(インフラサウンド)の音を発し、数キロ離れた仲間とも交信できると考えられています。音は空気だけでなく地面も伝わり、足や鼻先で受け取っている可能性が研究されています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1439,9 +2282,39 @@
        "title": "Elephants communicate over long distances with infrasound",
        "body": "Elephants produce sounds below the range of human hearing, which are thought to carry for several kilometers. The sound also travels through the ground, and research suggests they may sense it through their feet."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ぞう",
+    "象",
+    "elephant",
+    "こえ",
+    "声"
+   ],
+   "related": [
+    "koala_fingerprints",
+    "wombat_cube_poop"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "dolphin_half_sleep",
@@ -1464,8 +2337,8 @@
        "body": "イルカは あたまの はんぶんずつ ねむるんだよ。"
       },
       "junior": {
-       "title": "イルカは のうを はんぶんずつ ねかせる",
-       "body": "イルカは うみで およぎながら、のうの かたほうずつ ねむります。なので ずっと いきが できます。"
+       "title": "イルカは脳（のう）を半分（はんぶん）ずつねむらせる",
+       "body": "イルカは海（うみ）で泳（およ）ぎながら、脳（のう）の片方（かたほう）ずつねむります。なのでずっと息（いき）ができます。"
       },
       "teen": {
        "title": "イルカは脳を半分ずつ眠らせる",
@@ -1475,7 +2348,9 @@
        "title": "イルカの半球睡眠",
        "body": "イルカは息を意識的にしなければならないため、脳の片半球ずつ睡眠をとる「単半球徐波睡眠」を行います。起きている側の脳で呼吸や警戒、泳ぎを維持します。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1496,9 +2371,43 @@
        "title": "Dolphins show unihemispheric sleep",
        "body": "Because breathing is voluntary, dolphins practice unihemispheric slow-wave sleep, resting one brain hemisphere at a time while the awake side maintains swimming, respiration and vigilance."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "いるか",
+    "海豚",
+    "dolphin",
+    "ねむる",
+    "睡眠",
+    "sleep"
+   ],
+   "related": [
+    "elephant_ground_sounds",
+    "koala_fingerprints",
+    "sea_otters_hold_hands"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "antarctica_desert",
@@ -1521,8 +2430,8 @@
        "body": "せかいで いちばん おおきい さばくは、こおりの みなみきょくなんだよ。"
       },
       "junior": {
-       "title": "みなみきょくは さばく",
-       "body": "さばくは あめや ゆきが とても すくない ところ。だから、みなみきょくは せかいで いちばん おおきい さばくです。"
+       "title": "南極（なんきょく）はさばく",
+       "body": "さばくは雨（あめ）や雪（ゆき）がとても少（すく）ないところ。だから、南極（なんきょく）は世界（せかい）でいちばん大（おお）きいさばくです。"
       },
       "teen": {
        "title": "世界最大の砂漠は南極",
@@ -1532,7 +2441,9 @@
        "title": "世界最大の砂漠は南極大陸",
        "body": "砂漠の定義は年間降水量(降雪を水に換算)が約250mm未満の地域です。南極大陸は内陸部でさらに少なく、面積約1,400万km²で、サハラ砂漠(約900万km²)を上回る世界最大の砂漠とされます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1553,9 +2464,40 @@
        "title": "Antarctica is the world's largest desert",
        "body": "Deserts are defined by low annual precipitation, under about 250 mm of water equivalent. Inland Antarctica receives far less, and at roughly 14 million km² the continent exceeds the Sahara (about 9 million km²) as the largest desert."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "なんきょく",
+    "南極",
+    "antarctica",
+    "さばく",
+    "砂漠",
+    "desert"
+   ],
+   "related": [
+    "chimborazo_farthest",
+    "japan_islands"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "koala_fingerprints",
@@ -1578,8 +2520,8 @@
        "body": "コアラの ゆびにも、にんげんみたいな もようが あるよ。"
       },
       "junior": {
-       "title": "コアラの ゆびもよう",
-       "body": "コアラの ゆびさきには、にんげんと そっくりな もようが あります。"
+       "title": "コアラの指（ゆび）もよう",
+       "body": "コアラの指先（ゆびさき）には、人間（にんげん）にそっくりなもようがあります。"
       },
       "teen": {
        "title": "コアラにも人間そっくりの指紋がある",
@@ -1589,7 +2531,9 @@
        "title": "コアラの指紋はヒトと見分けにくいほど似ている",
        "body": "コアラの指紋は、顕微鏡で見てもヒトのものと区別しにくいほどよく似ています。霊長類とは系統が離れており、収斂進化の例とされます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1610,9 +2554,39 @@
        "title": "Koala fingerprints resemble human fingerprints",
        "body": "Koala fingerprints are so similar to human ones that they can be hard to tell apart even under a microscope. Koalas are only distantly related to primates, which makes this a classic case of convergent evolution."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "こあら",
+    "koala",
+    "ゆびもよう",
+    "指紋",
+    "fingerprint"
+   ],
+   "related": [
+    "wombat_cube_poop",
+    "flamingo_flamboyance"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "japan_islands",
@@ -1623,7 +2597,9 @@
    ],
    "minAgeBand": "kids",
    "sensitivity": "none",
-   "regions": [],
+   "regions": [
+    "JP"
+   ],
    "illustration": "japan",
    "translations": {
     "ja": {
@@ -1634,8 +2610,8 @@
        "body": "にほんには、1まん4せんいじょうの しまが あるんだよ。"
       },
       "junior": {
-       "title": "にほんには しまが たくさん ある",
-       "body": "にほんは しまの くにです。ほんしゅうや きゅうしゅうの ほかに、1まん4せんいじょうの しまが あります。"
+       "title": "日本（にほん）には島（しま）がたくさんある",
+       "body": "日本（にほん）は島（しま）の国（くに）です。本州（ほんしゅう）や九州（きゅうしゅう）のほかに、1万（まん）4千（せん）以上（いじょう）の島（しま）があります。"
       },
       "teen": {
        "title": "日本には1万4千以上の島がある",
@@ -1645,7 +2621,9 @@
        "title": "日本の島の数は14,125",
        "body": "国土地理院は2023年、海岸線の長さが100m以上の島を数え直し、日本の島の数を14,125と発表しました。それ以前は6,852とされていましたが、数え方を変えて大幅に増えました。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1666,9 +2644,41 @@
        "title": "Japan has 14,125 islands by the 2023 count",
        "body": "In 2023, the Geospatial Information Authority of Japan recounted islands with a coastline of at least 100 m and announced a total of 14,125, up from the 6,852 reported earlier, mainly because the counting method changed."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "にほん",
+    "日本",
+    "japan",
+    "しま",
+    "島",
+    "island"
+   ],
+   "related": [
+    "antarctica_desert",
+    "chimborazo_farthest"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "changing",
+   "reviewDueAt": "2027-04-23",
+   "contentFlags": []
   },
   {
    "id": "ant_strong",
@@ -1691,8 +2701,8 @@
        "body": "アリは じぶんの おもさの 10ばいいじょうを はこべるよ。"
       },
       "junior": {
-       "title": "アリは すごい ちからもち",
-       "body": "アリは じぶんの からだの おもさの 10ばいから 50ばいも あるものを はこびます。"
+       "title": "アリはすごい力（ちから）もち",
+       "body": "アリは自分（じぶん）の体（からだ）の重（おも）さの10倍（ばい）から50倍（ばい）もあるものを運（はこ）びます。"
       },
       "teen": {
        "title": "アリは体重の10〜50倍を運べる",
@@ -1702,7 +2712,9 @@
        "title": "アリの怪力はスケール効果で説明できる",
        "body": "アリは自分の体重の10〜50倍の荷物を運びます。体が小さいほど体重(体積に比例)に対して筋肉の断面積が相対的に大きくなるため、同じ筋力でも体重比の力が強く見えます。これは体長のスケール効果で、人間が同じ比率で運べるわけではありません。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1723,9 +2735,39 @@
        "title": "Ant strength reflects scaling effects",
        "body": "Ants carry loads of 10-50 times their body weight. Because weight scales with volume while muscle strength scales with cross-sectional area, smaller animals are relatively stronger. This does not mean a human could do the same at that ratio."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "あり",
+    "蟻",
+    "ant",
+    "ちから",
+    "力"
+   ],
+   "related": [
+    "dragonfly_before_dinosaurs",
+    "firefly_cold_light"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "dragonfly_before_dinosaurs",
@@ -1748,8 +2790,8 @@
        "body": "トンボの ごせんぞさまは、きょうりゅうより まえから いたよ。"
       },
       "junior": {
-       "title": "トンボの なかまは とても ふるい",
-       "body": "トンボに にた むしは、3おくねんくらい まえから います。きょうりゅうが でてくる まえです。"
+       "title": "トンボの仲間（なかま）はとても古（ふる）い",
+       "body": "トンボに似（に）た虫（むし）は、3億年（おくねん）くらい前（まえ）からいます。きょうりゅうが出（で）てくる前（まえ）です。"
       },
       "teen": {
        "title": "トンボの仲間は恐竜より古い",
@@ -1759,7 +2801,9 @@
        "title": "トンボ類の祖先は恐竜より古い",
        "body": "トンボ類に近縁なグループは石炭紀の約3億年前に出現し、翅を広げると70cmほどになる巨大な種もいました。恐竜の出現(約2億3千万年前)よりも古い系統です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1780,9 +2824,41 @@
        "title": "The dragonfly lineage predates dinosaurs",
        "body": "Relatives of dragonflies appeared in the Carboniferous about 300 million years ago, including giant species with wingspans of around 70 cm. This predates the appearance of dinosaurs roughly 230 million years ago."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "autumn"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "とんぼ",
+    "蜻蛉",
+    "dragonfly",
+    "きょうりゅう",
+    "恐竜"
+   ],
+   "related": [
+    "firefly_cold_light",
+    "bee_waggle_dance"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "firefly_cold_light",
@@ -1805,8 +2881,8 @@
        "body": "ホタルの ひかりは ほとんど あつくないんだよ。"
       },
       "junior": {
-       "title": "ホタルの ひかりは つめたい",
-       "body": "ホタルは おなかで ひかりを つくります。でも ほとんど ねつが でないので、さわっても あつくありません。"
+       "title": "ホタルの光（ひかり）は冷（つめ）たい",
+       "body": "ホタルはおなかで光（ひかり）をつくります。でもほとんど熱（ねつ）が出（で）ないので、さわっても熱（あつ）くありません。"
       },
       "teen": {
        "title": "ホタルの光はほとんど熱を出さない",
@@ -1816,7 +2892,9 @@
        "title": "ホタルの生物発光は熱損失が非常に小さい",
        "body": "ホタルの発光は、ルシフェリンという物質が酵素(ルシフェラーゼ)の働きで酸素と反応して起こる生物発光です。エネルギーのほとんどが光になり、熱としてはほとんど失われません。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1837,9 +2915,43 @@
        "title": "Firefly bioluminescence loses very little energy as heat",
        "body": "Firefly light is bioluminescence: the molecule luciferin reacts with oxygen under the enzyme luciferase. Nearly all the energy is emitted as light, with very little lost as heat."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [
+    "night"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ほたる",
+    "蛍",
+    "firefly",
+    "ひかり",
+    "光"
+   ],
+   "related": [
+    "bee_waggle_dance",
+    "cicada_17_years"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "bee_waggle_dance",
@@ -1862,8 +2974,8 @@
        "body": "ミツバチは ダンスで おはなの ばしょを おしえるよ。"
       },
       "junior": {
-       "title": "ミツバチは ダンスで おしえる",
-       "body": "ミツバチは おはなを みつけると、なかまの まえで ダンスを します。ダンスで おはなが どこに あるか つたえます。"
+       "title": "ミツバチはダンスで教（おし）える",
+       "body": "ミツバチはおはなを見（み）つけると、仲間（なかま）の前（まえ）でダンスをします。ダンスでおはながどこにあるか伝（つた）えます。"
       },
       "teen": {
        "title": "ミツバチはダンスで花の場所を教える",
@@ -1873,7 +2985,9 @@
        "title": "ミツバチの8の字ダンス",
        "body": "ミツバチの採餌バチは、巣の中で尻振りダンス(waggle dance)を踊ります。直線部分の向きが太陽に対する方角を、長さが餌場までの距離を表し、仲間はそれを読み取って飛んでいきます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1894,9 +3008,41 @@
        "title": "The honeybee waggle dance encodes direction and distance",
        "body": "A forager performs a waggle dance in the hive. The angle of the straight run relative to vertical encodes the direction of the food relative to the Sun, and its duration encodes the distance, which nestmates decode to find the source."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "spring"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "みつばち",
+    "蜜蜂",
+    "bee",
+    "だんす",
+    "honeybee"
+   ],
+   "related": [
+    "cicada_17_years",
+    "mosquito_female_bites"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "cicada_17_years",
@@ -1918,8 +3064,8 @@
        "body": "セミの なかには、つちの なかで 17ねんも すごす ものが いるよ。"
       },
       "junior": {
-       "title": "セミは なんねんも つちの なか",
-       "body": "セミの ようちゅうは、ながい あいだ つちの なかで くらします。アメリカには、13ねんや 17ねんも つちの なかに いる セミが います。"
+       "title": "セミは何年（なんねん）も土（つち）の中（なか）",
+       "body": "セミの幼虫（ようちゅう）は、長（なが）い間（あいだ）土（つち）の中（なか）でくらします。アメリカには、13年（ねん）や17年（ねん）も土（つち）の中（なか）にいるセミがいます。"
       },
       "teen": {
        "title": "17年間地中で暮らすセミがいる",
@@ -1929,7 +3075,9 @@
        "title": "周期ゼミは13年または17年周期で一斉に羽化する",
        "body": "北アメリカの周期ゼミ(マジシカダ属)は、13年または17年かけて地中で成長し、同じ年に数百万匹規模で一斉に羽化します。周期が素数であることは、天敵や他の周期の個体群と発生時期が重なりにくくするためだという説があります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -1950,9 +3098,40 @@
        "title": "Periodical cicadas emerge in 13- or 17-year cycles",
        "body": "North American periodical cicadas (Magicicada) develop underground for 13 or 17 years, then emerge in synchrony in the millions. One hypothesis is that prime-numbered cycles make it less likely to coincide with predator cycles or other broods."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "せみ",
+    "蝉",
+    "cicada",
+    "17ねん"
+   ],
+   "related": [
+    "mosquito_female_bites",
+    "spider_not_insect"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "mosquito_female_bites",
@@ -1975,8 +3154,8 @@
        "body": "ひとを さす かは、めすだけなんだよ。"
       },
       "junior": {
-       "title": "さすのは めすの かだけ",
-       "body": "ひとの ちを すうのは、めすの かだけです。おすの かは はなの みつを のんで くらします。"
+       "title": "さすのはめすのかだけ",
+       "body": "人（ひと）の血（ち）をすうのは、めすのかだけです。おすのかは花（はな）のみつをのんでくらします。"
       },
       "teen": {
        "title": "人を刺す蚊はメスだけ",
@@ -1986,7 +3165,9 @@
        "title": "吸血するのはメスの蚊のみ",
        "body": "吸血するのは産卵のためにタンパク質を必要とするメスだけで、オスは花の蜜などの糖分を摂ります。メスも普段は蜜を吸い、吸血は卵を作るときに限られます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2007,9 +3188,41 @@
        "title": "Only female mosquitoes feed on blood",
        "body": "Only females take blood meals, since they need protein to develop eggs. Males feed on sugars such as nectar, and females also feed on nectar for energy, taking blood only for reproduction."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "か",
+    "蚊",
+    "mosquito",
+    "ちをすう",
+    "吸血"
+   ],
+   "related": [
+    "spider_not_insect",
+    "beetle_quarter"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "spider_not_insect",
@@ -2032,8 +3245,8 @@
        "body": "クモの あしは 8ほん。むしの あしは 6ぽんだよ。"
       },
       "junior": {
-       "title": "クモは こんちゅうでは ない",
-       "body": "こんちゅうの あしは 6ぽんで、からだは 3つに わかれます。クモは あしが 8ほんなので、こんちゅうでは ありません。"
+       "title": "クモは昆虫（こんちゅう）ではない",
+       "body": "昆虫（こんちゅう）の足（あし）は6本（ほん）で、体（からだ）は3つにわかれます。クモは足（あし）が8本（ほん）なので、昆虫（こんちゅう）ではありません。"
       },
       "teen": {
        "title": "クモは昆虫ではない",
@@ -2043,7 +3256,9 @@
        "title": "クモ類は昆虫と別の分類群",
        "body": "昆虫は六脚類で、頭・胸・腹の3部に分かれ脚は6本、触角と翅(多くの種)を持ちます。クモは鋏角類のクモ綱で、頭胸部と腹部の2部に分かれ、脚は8本、触角と翅はありません。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2064,9 +3279,40 @@
        "title": "Spiders are arachnids, not insects",
        "body": "Insects (hexapods) have three body regions, six legs, antennae and often wings. Spiders are arachnids, with two body regions, eight legs, and no antennae or wings."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "くも",
+    "蜘蛛",
+    "spider",
+    "こんちゅう",
+    "昆虫",
+    "insect"
+   ],
+   "related": [
+    "beetle_quarter",
+    "dung_beetle_milky_way"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "beetle_quarter",
@@ -2088,8 +3334,8 @@
        "body": "コウチュウの なかまは、いきものの なかで いちばん たくさん いるよ。"
       },
       "junior": {
-       "title": "コウチュウは すごく たくさん",
-       "body": "カブトムシや テントウムシは コウチュウの なかま。コウチュウは しゅるいが とても おおく、いきものの 4ぶんの 1くらいも います。"
+       "title": "コウチュウはすごくたくさん",
+       "body": "カブトムシやテントウムシはコウチュウの仲間（なかま）。コウチュウは種類（しゅるい）がとても多（おお）く、生（い）きものの4分（ぶん）の1くらいもいます。"
       },
       "teen": {
        "title": "昆虫の中で最も種類が多いのはコウチュウ",
@@ -2099,7 +3345,9 @@
        "title": "甲虫は既知の動物種の約4分の1を占める",
        "body": "甲虫目は約40万種が記載されており、既知の動物種の約4分の1を占めるとされる、最も種数の多い目です。「神は甲虫をこよなく愛している」という言葉でも知られます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2120,9 +3368,40 @@
        "title": "Beetles make up roughly a quarter of known animal species",
        "body": "Coleoptera has around 400,000 described species, about a quarter of all known animal species, making it the most species-rich order. It inspired the quip that God has an inordinate fondness for beetles."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "こうちゅう",
+    "甲虫",
+    "かぶとむし",
+    "かぶと虫",
+    "beetle",
+    "てんとうむし"
+   ],
+   "related": [
+    "dung_beetle_milky_way",
+    "silkworm_thread"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "dung_beetle_milky_way",
@@ -2144,8 +3423,8 @@
        "body": "フンコロガシは よぞらの ほしを みて あるくんだって。"
       },
       "junior": {
-       "title": "フンコロガシは ほしを めじるしに",
-       "body": "フンコロガシは ころがした だんごを まっすぐ はこぶ ために、よぞらの あまのがわを めじるしに することが わかりました。"
+       "title": "フンコロガシは星（ほし）を目印（めじるし）に",
+       "body": "フンコロガシはころがしただんごをまっすぐ運（はこ）ぶために、夜空（よぞら）の天（あま）の川（がわ）を目印（めじるし）にすることがわかりました。"
       },
       "teen": {
        "title": "フンコロガシは天の川を目印にする",
@@ -2155,7 +3434,9 @@
        "title": "糞虫は天の川を使って方角を保つ",
        "body": "2013年の研究で、アフリカの糞虫が月のない夜に、天の川の光の帯を手がかりに糞玉を直線で運ぶことが示されました。星空を方位の指標に使う昆虫として初めて報告されたものです。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2176,9 +3457,41 @@
        "title": "Dung beetles use the Milky Way for orientation",
        "body": "A 2013 study showed that African dung beetles keep their dung balls on a straight course on moonless nights by using the Milky Way's band of light, the first insect reported to use the starry sky for orientation."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ふんころがし",
+    "糞転がし",
+    "ふんちゅう",
+    "糞虫",
+    "あまのがわ",
+    "天の川",
+    "milky way"
+   ],
+   "related": [
+    "silkworm_thread",
+    "butterfly_taste_feet"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "silkworm_thread",
@@ -2201,8 +3514,8 @@
        "body": "カイコの まゆは、1ぽんの ながい いとで できているよ。"
       },
       "junior": {
-       "title": "まゆは 1ぽんの いと",
-       "body": "カイコが つくる まゆは、1ぽんの ながい いとで できています。ほどくと 1000メートルいじょうに なります。"
+       "title": "まゆは1本（ぽん）の糸（いと）",
+       "body": "カイコがつくるまゆは、1本（ぽん）の長（なが）い糸（いと）でできています。ほどくと1000メートル以上（いじょう）になります。"
       },
       "teen": {
        "title": "カイコのまゆは1本の糸でできている",
@@ -2212,7 +3525,9 @@
        "title": "繭は1本の連続した糸",
        "body": "カイコの繭は、1本の連続した繭糸(フィブロイン2本をセリシンで包んだもの)でできています。一つの繭からは約1,000〜1,500メートルの糸が得られ、生糸の原料になります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2233,9 +3548,44 @@
        "title": "A silkworm cocoon is one continuous filament",
        "body": "A cocoon consists of a single continuous filament, two fibroin strands glued with sericin. Roughly 1,000-1,500 meters of thread can be reeled from one cocoon, which is the raw material of silk."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "かいこ",
+    "蚕",
+    "silkworm",
+    "まゆ",
+    "繭",
+    "いと",
+    "糸",
+    "きぬ",
+    "絹",
+    "silk"
+   ],
+   "related": [
+    "butterfly_taste_feet",
+    "ant_strong"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "shinkansen_1964",
@@ -2260,8 +3610,8 @@
        "body": "しんかんせんは 1964ねんに はしりはじめたよ。"
       },
       "junior": {
-       "title": "しんかんせんは 1964ねんから",
-       "body": "せかいで はじめての こうそくの でんしゃ、しんかんせんは 1964ねんに はしりはじめました。さいしょは じそく 210キロでした。"
+       "title": "新幹線（しんかんせん）は1964年（ねん）から",
+       "body": "世界（せかい）ではじめての高速（こうそく）の電車（でんしゃ）、新幹線（しんかんせん）は1964年（ねん）に走（はし）りはじめました。さいしょは時速（じそく）210キロでした。"
       },
       "teen": {
        "title": "東海道新幹線は1964年開業、最初は時速210km",
@@ -2271,7 +3621,9 @@
        "title": "東海道新幹線は1964年開業の世界初の高速鉄道",
        "body": "東海道新幹線は東京オリンピック直前の1964年10月に、東京〜新大阪間で開業しました。最高速度は当初時速210kmで、営業運転で時速200kmを超える世界初の高速鉄道とされます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2292,9 +3644,43 @@
        "title": "The Shinkansen opened in 1964 as the world's first high-speed rail",
        "body": "The Tokaido Shinkansen opened between Tokyo and Shin-Osaka in October 1964, days before the Tokyo Olympics. Its initial top speed of 210 km/h made it the first railway in the world to operate regularly above 200 km/h."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [
+    "10-01"
+   ],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "しんかんせん",
+    "新幹線",
+    "shinkansen",
+    "でんしゃ",
+    "電車",
+    "train",
+    "1964"
+   ],
+   "related": [
+    "maglev_603",
+    "tokyo_first_subway"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "airliner_cruise",
@@ -2317,8 +3703,8 @@
        "body": "ひこうきは とても たかい そらを とぶよ。とても さむいんだ。"
       },
       "junior": {
-       "title": "ひこうきは 1まんメートルを とぶ",
-       "body": "ひこうきは ふつう、1まんメートルくらいの たかさを とびます。そとは マイナス50どくらいで、とても さむいです。"
+       "title": "飛行機（ひこうき）は1万（まん）メートルを飛（と）ぶ",
+       "body": "飛行機（ひこうき）はふつう、1万（まん）メートルくらいの高（たか）さを飛（と）びます。外（そと）はマイナス50度（ど）くらいで、とても寒（さむ）いです。"
       },
       "teen": {
        "title": "旅客機は高度約1万メートルを飛ぶ",
@@ -2328,7 +3714,9 @@
        "title": "旅客機の巡航高度は約10,000m",
        "body": "旅客機は燃費のよい高度約9,000〜12,000mを巡航し、外気温はマイナス50℃前後になります。外の空気は薄く、機内は与圧して概ね標高2,000〜2,400m程度の気圧に保たれています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2349,9 +3737,40 @@
        "title": "Airliners cruise at roughly 10,000 m",
        "body": "Airliners cruise at an efficient altitude of about 9,000-12,000 m, where outside temperatures are around -50 °C. The air is thin, so the cabin is pressurized to roughly the equivalent of 2,000-2,400 m above sea level."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ひこうき",
+    "飛行機",
+    "airplane",
+    "plane",
+    "こうど",
+    "高度"
+   ],
+   "related": [
+    "wright_first_flight",
+    "plane_window_hole"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "wright_first_flight",
@@ -2373,8 +3792,8 @@
        "body": "さいしょの ひこうきは、たった 12びょう とんだだけ。"
       },
       "junior": {
-       "title": "さいしょの ひこうきは 12びょう",
-       "body": "1903ねん、ライトきょうだいの ひこうきが はじめて ひとを のせて とびました。とんだ じかんは 12びょうで、ながさは 37メートルくらいでした。"
+       "title": "さいしょの飛行機（ひこうき）は12秒（びょう）",
+       "body": "1903年（ねん）、ライト兄弟（きょうだい）の飛行機（ひこうき）がはじめて人（ひと）をのせて飛（と）びました。飛（と）んだ時間（じかん）は12秒（びょう）で、長（なが）さは37メートルくらいでした。"
       },
       "teen": {
        "title": "人類初の動力飛行は12秒",
@@ -2384,7 +3803,9 @@
        "title": "ライト兄弟の初飛行は12秒・約37m",
        "body": "1903年12月17日、ライト兄弟のフライヤー号が米国ノースカロライナ州キティホークで人類初の動力飛行に成功しました。1回目の飛行は12秒・約37メートルで、その日の最長飛行は59秒でした。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2405,9 +3826,41 @@
        "title": "The Wright brothers' first flight lasted 12 seconds",
        "body": "On December 17, 1903, the Wright Flyer made the first powered, controlled flight at Kitty Hawk, North Carolina. The first flight lasted 12 seconds and covered about 37 m; the longest of that day's four flights was 59 seconds."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [
+    "12-17"
+   ],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "らいとけいてい",
+    "ライト兄弟",
+    "wright",
+    "はつひこう",
+    "初飛行"
+   ],
+   "related": [
+    "plane_window_hole",
+    "steel_ship_floats"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "tokyo_first_subway",
@@ -2432,8 +3885,8 @@
        "body": "にほんの ちかてつは、アジアで いちばん さいしょに できたよ。"
       },
       "junior": {
-       "title": "アジアで さいしょの ちかてつ",
-       "body": "1927ねん、とうきょうの うえのと あさくさの あいだに、アジアで はじめての ちかてつが できました。"
+       "title": "アジアでさいしょの地下鉄（ちかてつ）",
+       "body": "1927年（ねん）、東京（とうきょう）の上野（うえの）と浅草（あさくさ）の間（あいだ）に、アジアではじめての地下鉄（ちかてつ）ができました。"
       },
       "teen": {
        "title": "東京にアジア初の地下鉄ができたのは1927年",
@@ -2443,7 +3896,9 @@
        "title": "東京地下鉄道はアジア初の地下鉄(1927年)",
        "body": "1927年12月30日、東京地下鉄道が上野〜浅草間(約2.2km)を開業し、アジア初の地下鉄となりました。現在の東京メトロ銀座線の一部にあたります。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2464,9 +3919,43 @@
        "title": "Asia's first subway opened in Tokyo in 1927",
        "body": "Tokyo Underground Railway opened between Ueno and Asakusa (about 2.2 km) on December 30, 1927, as Asia's first subway. It is now part of the Tokyo Metro Ginza Line."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [
+    "12-30"
+   ],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ちかてつ",
+    "地下鉄",
+    "subway",
+    "ぎんざせん",
+    "銀座線",
+    "とうきょう",
+    "東京"
+   ],
+   "related": [
+    "airliner_cruise",
+    "wright_first_flight"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "steel_ship_floats",
@@ -2489,8 +3978,8 @@
        "body": "てつは おもいのに、ふねは うかぶよ。"
       },
       "junior": {
-       "title": "てつの ふねが うく わけ",
-       "body": "ふねは ひろくて、なかが くうきで いっぱいです。だから おなじ おおきさの みずより かるく なって、うかびます。"
+       "title": "鉄（てつ）の船（ふね）がうくわけ",
+       "body": "船（ふね）は広（ひろ）くて、中（なか）が空気（くうき）でいっぱいです。だから同（おな）じ大（おお）きさの水（みず）より軽（かる）くなって、うかびます。"
       },
       "teen": {
        "title": "鉄の船が浮かぶ理由",
@@ -2500,7 +3989,9 @@
        "title": "鉄の船が浮くのはアルキメデスの原理",
        "body": "船は鉄でできていても、中が空洞で全体の平均密度が水より小さくなるため浮きます。押しのけた水の重さと同じ大きさの浮力が働くというアルキメデスの原理で説明されます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2521,9 +4012,44 @@
        "title": "Steel ships float because of Archimedes' principle",
        "body": "Even though steel is dense, a ship's hull encloses air, so its average density is below water's. The buoyant force equals the weight of the water displaced, per Archimedes' principle."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ふね",
+    "船",
+    "ship",
+    "てつ",
+    "鉄",
+    "ふりょく",
+    "浮力",
+    "archimedes"
+   ],
+   "related": [
+    "orbital_speed",
+    "iss_sunrises",
+    "saturn_would_float",
+    "ice_floats"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "orbital_speed",
@@ -2545,8 +4071,8 @@
        "body": "ロケットは うちゅうに いくとき、ものすごい はやさで とぶよ。"
       },
       "junior": {
-       "title": "ロケットの はやさ",
-       "body": "ちきゅうの まわりを まわる ためには、1びょうで 8キロメートルも すすむ はやさが いります。"
+       "title": "ロケットの速（はや）さ",
+       "body": "地球（ちきゅう）のまわりを回（まわ）るためには、1秒（びょう）で8キロメートルも進（すす）む速（はや）さがいります。"
       },
       "teen": {
        "title": "地球を回るには秒速約8kmが必要",
@@ -2556,7 +4082,9 @@
        "title": "第一宇宙速度は約7.9km/s",
        "body": "地表付近の円軌道を維持するための速度(第一宇宙速度)は約7.9km/s(時速約2万8千km)です。ロケットは主に上昇よりも、この水平方向の速度を得るために大量の燃料を使います。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2577,9 +4105,42 @@
        "title": "Orbital velocity is about 7.9 km/s",
        "body": "Staying in a low circular orbit takes about 7.9 km/s (around 28,000 km/h). Rockets spend most of their fuel gaining this sideways speed rather than simply going up."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ろけっと",
+    "rocket",
+    "うちゅう",
+    "宇宙",
+    "そくど",
+    "速度",
+    "だいいちうちゅうそくど"
+   ],
+   "related": [
+    "iss_sunrises",
+    "venus_day_longer",
+    "shipping_80_percent"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "maglev_603",
@@ -2603,8 +4164,8 @@
        "body": "リニアは ちょっと うきながら、すごく はやく はしるよ。"
       },
       "junior": {
-       "title": "リニアは うきながら はしる",
-       "body": "リニアモーターカーは、じしゃくの ちからで すこし うきあがって はしります。じそく 603キロも でたことが あります。"
+       "title": "リニアはうきながら走（はし）る",
+       "body": "リニアモーターカーは、磁石（じしゃく）の力（ちから）ですこしうきあがって走（はし）ります。時速（じそく）603キロも出（で）たことがあります。"
       },
       "teen": {
        "title": "リニアは時速603kmを記録した",
@@ -2614,7 +4175,9 @@
        "title": "山梨リニア実験線で有人走行の世界記録603km/h",
        "body": "超電導リニア(L0系)は、超電導磁石による磁気浮上と推進で走行します。2015年4月に山梨実験線で、鉄道の有人走行として世界最高速度の時速603kmを記録しました。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2635,9 +4198,44 @@
        "title": "The SCMaglev set a 603 km/h manned record",
        "body": "Japan's superconducting maglev (the L0 Series) levitates and is propelled magnetically. In April 2015 it set the world speed record for a manned rail vehicle, 603 km/h, on the Yamanashi test line."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [
+    "04-21"
+   ],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "りにあ",
+    "リニア",
+    "maglev",
+    "じしゃく",
+    "磁石",
+    "やまなし",
+    "山梨"
+   ],
+   "related": [
+    "tokyo_first_subway",
+    "airliner_cruise"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "changing",
+   "reviewDueAt": "2027-04-23",
+   "contentFlags": []
   },
   {
    "id": "plane_window_hole",
@@ -2660,8 +4258,8 @@
        "body": "ひこうきの まどには ちいさな あなが あいているよ。"
       },
       "junior": {
-       "title": "ひこうきの まどの ちいさな あな",
-       "body": "ひこうきの まどには ちいさな あなが あります。まどが こわれにくく なるように しているんだよ。"
+       "title": "飛行機（ひこうき）の窓（まど）の小（ちい）さなあな",
+       "body": "飛行機（ひこうき）の窓（まど）には小（ちい）さなあながあります。窓（まど）がこわれにくくなるようにしているんだよ。"
       },
       "teen": {
        "title": "飛行機の窓には小さな穴がある",
@@ -2671,7 +4269,9 @@
        "title": "旅客機の窓のブリーザーホール",
        "body": "旅客機の窓は多くが2〜3枚重ねで、内側以外の窓の1枚に小さな穴(ブリーザーホール)があります。機内外の気圧差を外側の窓に集中させて構造を守り、窓間の結露・曇りを防ぎます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2692,9 +4292,41 @@
        "title": "The breather hole in an airliner window",
        "body": "Airliner windows are typically multi-layered, and one pane has a small breather hole. It makes the outer pane carry the pressure difference between the cabin and outside, protecting the structure, and it lets moisture escape to prevent fogging."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ひこうき",
+    "飛行機",
+    "まど",
+    "窓",
+    "window",
+    "あな",
+    "穴"
+   ],
+   "related": [
+    "steel_ship_floats",
+    "orbital_speed"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "iss_sunrises",
@@ -2717,8 +4349,8 @@
        "body": "うちゅうステーションでは、1にちに なんども ひが のぼるよ。"
       },
       "junior": {
-       "title": "うちゅうでは 1にちに 16かい ひのでが ある",
-       "body": "こくさいうちゅうステーションは、ちきゅうを 1しゅう するのに 90ぷんくらい。だから 1にちに 16かいも ひのでが みられます。"
+       "title": "宇宙（うちゅう）では1日（にち）に16回（かい）日（ひ）の出（で）がある",
+       "body": "国際（こくさい）宇宙（うちゅう）ステーションは、地球（ちきゅう）を1周（しゅう）するのに90分（ふん）くらい。だから1日（にち）に16回（かい）も日（ひ）の出（で）が見（み）られます。"
       },
       "teen": {
        "title": "宇宙ステーションでは1日に約16回、日の出がある",
@@ -2728,7 +4360,9 @@
        "title": "ISSは約90分で地球を1周する",
        "body": "ISSは高度約400kmを時速約2万8千kmで飛び、約90分で地球を1周します。1日に約16周するので、宇宙飛行士は約16回の日の出と日の入りを経験します。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2749,9 +4383,46 @@
        "title": "The ISS orbits Earth about every 90 minutes",
        "body": "The ISS orbits at about 400 km altitude and about 28,000 km/h, circling the Earth roughly every 90 minutes. That is about 16 orbits a day, so astronauts experience about 16 sunrises and sunsets."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "morning"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "こくさいうちゅうすてーしょん",
+    "iss",
+    "うちゅうすてーしょん",
+    "宇宙ステーション",
+    "space station",
+    "ひので",
+    "日の出"
+   ],
+   "related": [
+    "venus_day_longer",
+    "moon_moving_away",
+    "shipping_80_percent",
+    "shinkansen_1964"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "changing",
+   "reviewDueAt": "2027-04-23",
+   "contentFlags": []
   },
   {
    "id": "shipping_80_percent",
@@ -2774,8 +4445,8 @@
        "body": "せかいの にもつの たくさんは、ふねで はこばれているよ。"
       },
       "junior": {
-       "title": "にもつの 8わりは ふね",
-       "body": "せかいじゅうで はこばれる にもつの 8わりくらいは、ふねで はこばれています。"
+       "title": "荷物（にもつ）の8割（わり）は船（ふね）",
+       "body": "世界（せかい）じゅうで運（はこ）ばれる荷物（にもつ）の8割（わり）くらいは、船（ふね）で運（はこ）ばれています。"
       },
       "teen": {
        "title": "世界の貿易の約8割は船で運ばれる",
@@ -2785,7 +4456,9 @@
        "title": "世界貿易量の約80%は海上輸送",
        "body": "国連貿易開発会議(UNCTAD)などによると、世界の貿易量(重量ベース)の約80%は海上輸送で運ばれています。大量の貨物を安い費用で運べるためで、コンテナ船が重要な役割を担っています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2806,9 +4479,42 @@
        "title": "About 80% of world trade volume moves by sea",
        "body": "According to UNCTAD and others, roughly 80% of global trade by volume is carried by sea. Ships move enormous cargoes at low cost per unit, with container ships playing a central role."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ぼうえき",
+    "貿易",
+    "ふね",
+    "船",
+    "shipping",
+    "こんてな",
+    "container"
+   ],
+   "related": [
+    "shinkansen_1964",
+    "maglev_603"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "changing",
+   "reviewDueAt": "2027-04-23",
+   "contentFlags": []
   },
   {
    "id": "watermelon_92_water",
@@ -2831,8 +4537,8 @@
        "body": "すいかは ほとんど みずで できているよ。"
       },
       "junior": {
-       "title": "すいかの 92パーセントは みず",
-       "body": "すいかは、おもさの 92パーセントくらいが みずです。だから のどが かわいた ときに ぴったりです。"
+       "title": "すいかの92パーセントは水（みず）",
+       "body": "すいかは、重（おも）さの92パーセントくらいが水（みず）です。だからのどがかわいたときにぴったりです。"
       },
       "teen": {
        "title": "スイカの約92%は水分",
@@ -2842,7 +4548,9 @@
        "title": "スイカの水分含有量は約92%",
        "body": "スイカの可食部は水分が約90〜92%を占めます。カリウムや、赤い果肉の色素であるリコピン、シトルリンを含むことでも知られます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2863,9 +4571,41 @@
        "title": "Watermelon is roughly 90-92% water",
        "body": "The edible part of a watermelon is about 90-92% water. It is also known for containing potassium, the red pigment lycopene, and citrulline."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "すいか",
+    "西瓜",
+    "watermelon",
+    "なつ",
+    "夏"
+   ],
+   "related": [
+    "cacao_money",
+    "rice_half_world"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "cacao_money",
@@ -2887,8 +4627,8 @@
        "body": "むかしの ひとは、カカオの みを おかねに つかったよ。"
       },
       "junior": {
-       "title": "カカオの みは おかねだった",
-       "body": "むかしの アステカの ひとたちは、チョコレートの もとの カカオの みを、おかねの ように つかっていました。"
+       "title": "カカオの実（み）はお金（かね）だった",
+       "body": "昔（むかし）のアステカの人（ひと）たちは、チョコレートのもとのカカオの実（み）を、お金（かね）のように使（つか）っていました。"
       },
       "teen": {
        "title": "昔はカカオ豆がお金として使われた",
@@ -2898,7 +4638,9 @@
        "title": "カカオ豆は貨幣として流通した",
        "body": "アステカ帝国などの中央アメリカでは、カカオ豆が貨幣代わりに使われ、税として納められることもありました。飲み物としても高貴な人に重んじられ、これが現在のチョコレートの起源になりました。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2919,9 +4661,47 @@
        "title": "Cacao beans served as currency",
        "body": "In Central America, including the Aztec Empire, cacao beans circulated as currency and could be paid as tribute. Cacao was also prized as a drink, the origin of today's chocolate."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "winter"
+   ],
+   "dates": [
+    "02-14"
+   ],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "かかお",
+    "cacao",
+    "ちょこれーと",
+    "チョコレート",
+    "chocolate",
+    "おかね",
+    "お金",
+    "money",
+    "ばれんたいん"
+   ],
+   "related": [
+    "rice_half_world",
+    "carrot_colors"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "rice_half_world",
@@ -2944,8 +4724,8 @@
        "body": "おこめは せかいの たくさんの ひとの ごはんだよ。"
       },
       "junior": {
-       "title": "せかいの はんぶんの ひとが おこめ",
-       "body": "おこめは、せかいの ひとの はんぶんくらいが、まいにち たべる だいじな ごはんです。"
+       "title": "世界（せかい）の半分（はんぶん）の人（ひと）がお米（こめ）",
+       "body": "お米（こめ）は、世界（せかい）の人（ひと）の半分（はんぶん）くらいが、まいにち食（た）べる大事（だいじ）なごはんです。"
       },
       "teen": {
        "title": "世界の約半分の人が米を主食にする",
@@ -2955,7 +4735,9 @@
        "title": "世界人口の約半数がイネを主食とする",
        "body": "イネは、世界人口の約半数にとっての主食作物とされ、特にアジアで多く生産・消費されます。栽培品種は数万にのぼるとされ、国際稲研究所には十万点以上の遺伝資源が保存されています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -2976,9 +4758,45 @@
        "title": "Rice is a staple for roughly half the world's population",
        "body": "Rice is the staple crop for around half of the world's population, with production and consumption concentrated in Asia. Tens of thousands of varieties exist, and the International Rice Research Institute conserves more than 100,000 accessions."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [
+    "morning"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "こめ",
+    "米",
+    "おこめ",
+    "rice",
+    "ごはん",
+    "ご飯",
+    "しゅしょく",
+    "主食"
+   ],
+   "related": [
+    "carrot_colors",
+    "peanut_not_nut"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "changing",
+   "reviewDueAt": "2027-04-23",
+   "contentFlags": []
   },
   {
    "id": "carrot_colors",
@@ -3001,8 +4819,8 @@
        "body": "むかしの にんじんは、むらさきや きいろが おおかったよ。"
       },
       "junior": {
-       "title": "むかしの にんじんの いろ",
-       "body": "むかしは、むらさきや きいろの にんじんが おおかったそうです。いまの オレンジいろは、あとから ひろまりました。"
+       "title": "昔（むかし）のにんじんの色（いろ）",
+       "body": "昔（むかし）は、むらさきや黄色（きいろ）のにんじんが多（おお）かったそうです。今（いま）のオレンジ色（いろ）は、あとから広（ひろ）まりました。"
       },
       "teen": {
        "title": "昔のニンジンは紫や黄色が多かった",
@@ -3012,7 +4830,9 @@
        "title": "オレンジ色のニンジンは後に広まった",
        "body": "栽培化された初期のニンジンは紫や黄色が中心で、オレンジ色のニンジンはその後の品種改良で広まったとされます。βカロテンを多く含み、体内でビタミンAに変わるのがオレンジ色の理由です。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3033,9 +4853,40 @@
        "title": "Orange carrots spread through later breeding",
        "body": "Early domesticated carrots were mostly purple and yellow, and orange types spread later through selective breeding. Orange comes from beta-carotene, which the body converts to vitamin A."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "winter"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "にんじん",
+    "人参",
+    "carrot",
+    "おれんじ"
+   ],
+   "related": [
+    "peanut_not_nut",
+    "pineapple_two_years"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "peanut_not_nut",
@@ -3058,8 +4909,8 @@
        "body": "ピーナッツは ナッツじゃなくて、まめの なかまだよ。"
       },
       "junior": {
-       "title": "ピーナッツは つちの なかで できる",
-       "body": "ピーナッツは、まめの なかまです。はなが さいたあと、えだが のびて、つちの なかで みを つくります。"
+       "title": "ピーナッツは土（つち）の中（なか）でできる",
+       "body": "ピーナッツは、豆（まめ）の仲間（なかま）です。花（はな）がさいたあと、枝（えだ）がのびて、土（つち）の中（なか）で実（み）をつくります。"
       },
       "teen": {
        "title": "ピーナッツは木の実ではなくマメの仲間",
@@ -3069,7 +4920,9 @@
        "title": "落花生はナッツではなくマメ科",
        "body": "落花生はマメ科の植物で、木の実(ナッツ)ではありません。受粉後に子房柄が地中に伸びて莢を作る「地下結実」が特徴で、名前の「落花生」は花が落ちて地中で実ることに由来します。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3090,9 +4943,40 @@
        "title": "Peanuts are legumes that fruit underground",
        "body": "The peanut is a legume, not a tree nut. After pollination, the stalk-like gynophore pushes into the soil, where the pod develops, a habit called geocarpy. The Japanese name rakkasei, 'flower falls, fruit grows,' reflects this."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ぴーなっつ",
+    "落花生",
+    "らっかせい",
+    "peanut",
+    "まめ",
+    "豆"
+   ],
+   "related": [
+    "pineapple_two_years",
+    "apple_floats"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "pineapple_two_years",
@@ -3115,8 +4999,8 @@
        "body": "パイナップルは みが なるまで 2ねんも かかるよ。"
       },
       "junior": {
-       "title": "パイナップルは 2ねんかかる",
-       "body": "パイナップルは、うえてから みが できるまで、2ねんくらい かかります。"
+       "title": "パイナップルは2年（ねん）かかる",
+       "body": "パイナップルは、うえてから実（み）ができるまで、2年（ねん）くらいかかります。"
       },
       "teen": {
        "title": "パイナップルは実るまで約2年かかる",
@@ -3126,7 +5010,9 @@
        "title": "パイナップルは結実まで約18〜24か月",
        "body": "パイナップルは、苗を植えてから収穫まで条件によりますが約18〜24か月かかります。1株には基本的に1個の果実がなり、収穫後は株元から出る芽(吸芽)で増やします。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3147,9 +5033,38 @@
        "title": "Pineapples take about 18-24 months to fruit",
        "body": "From planting to harvest, a pineapple generally takes around 18-24 months depending on conditions. Each plant normally bears a single fruit, and growers propagate it afterward from suckers growing at the base."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "summer"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ぱいなっぷる",
+    "pineapple"
+   ],
+   "related": [
+    "apple_floats",
+    "wasabi_nose"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "apple_floats",
@@ -3172,8 +5087,8 @@
        "body": "りんごは みずに うかぶよ。なかに くうきが あるんだ。"
       },
       "junior": {
-       "title": "りんごは なぜ うく？",
-       "body": "りんごの 4ぶんの 1くらいは くうきです。だから みずに うかびます。"
+       "title": "りんごはなぜうく？",
+       "body": "りんごの4分（ぶん）の1くらいは空気（くうき）です。だから水（みず）にうかびます。"
       },
       "teen": {
        "title": "リンゴが水に浮くのは約4分の1が空気だから",
@@ -3183,7 +5098,9 @@
        "title": "リンゴの体積の約25%は空気",
        "body": "リンゴの果肉には細胞の隙間が多く、体積の約4分の1を空気が占めるため、全体の密度が水より小さく、水に浮かびます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3204,9 +5121,43 @@
        "title": "About a quarter of an apple's volume is air",
        "body": "Apple flesh has many air-filled gaps between its cells, making up about 25% of its volume. This lowers its overall density below that of water, so apples float."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "autumn"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "りんご",
+    "林檎",
+    "apple",
+    "みず",
+    "くうき"
+   ],
+   "related": [
+    "wasabi_nose",
+    "popcorn_pop",
+    "steel_ship_floats",
+    "saturn_would_float"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "wasabi_nose",
@@ -3229,8 +5180,8 @@
        "body": "わさびの からさは、はなに つーんと くるよ。"
       },
       "junior": {
-       "title": "わさびは はなに くる",
-       "body": "わさびの からさの もとは、くうきの ように ふわっと ひろがります。だから したより はなが つーんと します。"
+       "title": "わさびは鼻（はな）にくる",
+       "body": "わさびのからさのもとは、空気（くうき）のようにふわっとひろがります。だから舌（した）より鼻（はな）がつーんとします。"
       },
       "teen": {
        "title": "わさびの辛さは鼻に抜ける",
@@ -3240,7 +5191,9 @@
        "title": "わさびの辛味成分は揮発性",
        "body": "わさびの辛味成分はアリルイソチオシアネートで、すりおろすと酵素の働きで生成され、揮発しやすいため鼻腔に抜けます。唐辛子のカプサイシンのような舌に残る辛さとは性質が異なり、持続時間も短めです。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3261,9 +5214,39 @@
        "title": "Wasabi's pungency is volatile",
        "body": "Wasabi's pungent compound is allyl isothiocyanate, produced by enzymes when it is grated. It is volatile and passes into the nasal cavity, unlike chili's capsaicin, which lingers on the tongue, and its effect fades faster."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "わさび",
+    "山葵",
+    "wasabi",
+    "からい",
+    "辛い"
+   ],
+   "related": [
+    "popcorn_pop",
+    "strawberry_200_seeds"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "popcorn_pop",
@@ -3286,8 +5269,8 @@
        "body": "ポップコーンは なかの みずが あつくて はじけるよ。"
       },
       "junior": {
-       "title": "ポップコーンが はじける わけ",
-       "body": "とうもろこしの つぶの なかの みずが あつくなって ゆげになります。その ちからで、ぱんっと はじけます。"
+       "title": "ポップコーンがはじけるわけ",
+       "body": "とうもろこしのつぶの中（なか）の水（みず）が熱（あつ）くなってゆげになります。その力（ちから）で、ぱんっとはじけます。"
       },
       "teen": {
        "title": "ポップコーンが弾ける仕組み",
@@ -3297,7 +5280,9 @@
        "title": "ポップコーンは水蒸気圧で爆裂する",
        "body": "爆裂種の粒は硬い外皮の内側に水分(約14%)を含み、約180℃に熱せられると水蒸気の圧力が高まり、外皮が破れて内部のデンプンが一気に膨張・糊化して弾けます。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3318,9 +5303,38 @@
        "title": "Popcorn pops from steam pressure",
        "body": "A popcorn kernel holds about 14% moisture inside a tough hull. At roughly 180 °C the steam pressure ruptures the hull, and the starch inside expands and gelatinizes explosively into the fluffy shape."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "ぽっぷこーん",
+    "popcorn",
+    "とうもろこし",
+    "corn"
+   ],
+   "related": [
+    "strawberry_200_seeds",
+    "banana_is_berry"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   },
   {
    "id": "strawberry_200_seeds",
@@ -3343,8 +5357,8 @@
        "body": "いちごの つぶつぶが ほんとうの みなんだよ。"
       },
       "junior": {
-       "title": "いちごの つぶつぶは み",
-       "body": "いちごの おもての つぶつぶは、1つ1つが ほんとうの みです。ぜんぶで 200こくらい あります。"
+       "title": "いちごのつぶつぶは実（み）",
+       "body": "いちごの表（おもて）のつぶつぶは、1つ1つが本当（ほんとう）の実（み）です。ぜんぶで200こくらいあります。"
       },
       "teen": {
        "title": "イチゴの表面のつぶつぶが本当の果実",
@@ -3354,7 +5368,9 @@
        "title": "イチゴの本当の果実は表面の粒(痩果)",
        "body": "イチゴの可食部は花托が肥大した偽果で、表面の粒(痩果)が植物学上の果実です。1つのイチゴには約200個の痩果が付き、その中に1つずつ種が入っています。"
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     },
     "en": {
      "reviewStatus": "draft",
@@ -3375,9 +5391,42 @@
        "title": "Strawberry achenes are the true fruits",
        "body": "The edible part of a strawberry is an accessory fruit formed from the enlarged receptacle, and the surface dots (achenes) are the botanical fruits. A single strawberry carries about 200 achenes, each containing a seed."
       }
-     }
+     },
+     "reviewedBy": null,
+     "reviewedAt": null
     }
-   }
+   },
+   "seasons": [
+    "spring"
+   ],
+   "dates": [],
+   "timeOfDay": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "excludeRegions": [],
+   "keywords": [
+    "いちご",
+    "苺",
+    "strawberry",
+    "つぶつぶ",
+    "たね",
+    "種"
+   ],
+   "related": [
+    "banana_is_berry",
+    "honey_never_spoils"
+   ],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "volatility": "stable",
+   "contentFlags": []
   }
  ]
 }

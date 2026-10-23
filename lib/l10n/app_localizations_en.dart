@@ -406,4 +406,74 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsInterests => 'Interests';
+
+  @override
+  String get timingSection => 'Right now';
+
+  @override
+  String get reasonDate => 'On this day';
+
+  @override
+  String reasonSeason(String season) {
+    return 'Perfect for $season';
+  }
+
+  @override
+  String get reasonNight => 'Good for tonight';
+
+  @override
+  String get reasonMorning => 'Good for the morning';
+
+  @override
+  String get reasonEvening => 'Good for the evening';
+
+  @override
+  String get reasonWeekend => 'For the weekend';
+
+  @override
+  String get seasonSpring => 'spring';
+
+  @override
+  String get seasonSummer => 'summer';
+
+  @override
+  String get seasonAutumn => 'autumn';
+
+  @override
+  String get seasonWinter => 'winter';
+
+  @override
+  String get settingsRegion => 'Country / region';
+
+  @override
+  String get regionAuto => 'Auto (device setting)';
+
+  @override
+  String get regionAll => 'All countries';
+
+  @override
+  String get regionNote =>
+      'Country-specific facts are shown only for the selected country.';
+
+  @override
+  String get settingsSeason => 'Seasonal picks';
+
+  @override
+  String get seasonAuto => 'Auto';
+
+  @override
+  String get seasonNorth => 'North';
+
+  @override
+  String get seasonSouth => 'South';
+
+  @override
+  String get seasonOff => 'Off';
+
+  @override
+  String get seasonNote =>
+      'Estimated from your time zone (no location is used).';
+
+  @override
+  String get relatedSection => 'Related facts';
 }
