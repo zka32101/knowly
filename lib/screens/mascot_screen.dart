@@ -7,11 +7,18 @@ import '../state/providers.dart';
 import '../widgets/mascot_card.dart';
 
 /// 相棒の成長の一覧。まだなっていない姿は「？？？」で見せる。
-class MascotScreen extends ConsumerWidget {
+class MascotScreen extends ConsumerStatefulWidget {
   const MascotScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<MascotScreen> createState() => _MascotScreenState();
+}
+
+class _MascotScreenState extends ConsumerState<MascotScreen> {
+  var _mood = MascotMood.idle;
+
+  @override
+  Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final points = ref.watch(mascotPointsProvider);
@@ -22,7 +29,15 @@ class MascotScreen extends ConsumerWidget {
         child: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            Center(child: MascotFace(stage: stage, size: 96)),
+            Center(
+              child: GestureDetector(
+                key: const Key('mascot_tap'),
+                // さわると よろこぶ（もう一度さわると、また はねる）
+                onTap: () => setState(() => _mood =
+                    _mood == MascotMood.happy ? MascotMood.idle : MascotMood.happy),
+                child: MascotFace(stage: stage, size: 96, mood: _mood),
+              ),
+            ),
             const SizedBox(height: 8),
             Text(mascotName(l, stage.id),
                 key: const Key('mascot_current'),

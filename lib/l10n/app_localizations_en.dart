@@ -1037,4 +1037,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mascotSay_king => 'Hoo-hoo! The king of trivia!';
+
+  @override
+  String celebrateStage(String name) {
+    return 'Your buddy became $name!';
+  }
+
+  @override
+  String get celebrateBadge => 'New badge!';
 }

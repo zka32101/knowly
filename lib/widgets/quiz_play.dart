@@ -7,7 +7,10 @@ import '../l10n/app_localizations.dart';
 import '../logic/quiz_game.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
+import '../logic/mascot.dart';
+import '../state/providers.dart';
 import 'ja_wrap_text.dart';
+import 'mascot_card.dart';
 
 const quizAvatars = ['🐶', '🐱', '🐰', '🐻'];
 const quizColors = [Colors.orange, Colors.pink, Colors.teal, Colors.indigo];
@@ -177,7 +180,18 @@ class _QuizPlayState extends ConsumerState<QuizPlay> {
             textAlign: TextAlign.center,
             style: theme.textTheme.headlineMedium,
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
+          Center(
+            child: MascotFace(
+              stage: mascotStageFor(ref.watch(mascotPointsProvider)),
+              size: 48,
+              mood: [for (var p = 0; p < game.playerCount; p++) game.isCorrect(p)]
+                      .any((c) => c == true)
+                  ? MascotMood.happy
+                  : MascotMood.sad,
+            ),
+          ),
+          const SizedBox(height: 4),
           for (var p = 0; p < game.playerCount; p++)
             ListTile(
               key: Key('battle_result_$p'),

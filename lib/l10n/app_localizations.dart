@@ -1951,6 +1951,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'ほっほー！ ざつがくの おうさまだ！'**
   String get mascotSay_king;
+
+  /// No description provided for @celebrateStage.
+  ///
+  /// In ja, this message translates to:
+  /// **'{name}に なったよ！'**
+  String celebrateStage(String name);
+
+  /// No description provided for @celebrateBadge.
+  ///
+  /// In ja, this message translates to:
+  /// **'バッジを ゲット！'**
+  String get celebrateBadge;
 }
 
 class _AppLocalizationsDelegate

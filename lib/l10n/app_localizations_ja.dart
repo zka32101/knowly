@@ -1019,4 +1019,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mascotSay_king => 'ほっほー！ ざつがくの おうさまだ！';
+
+  @override
+  String celebrateStage(String name) {
+    return '$nameに なったよ！';
+  }
+
+  @override
+  String get celebrateBadge => 'バッジを ゲット！';
 }

@@ -1971,8 +1971,7 @@ void main() {
       }
       // 全員同じ答え → 4人とも同じ結果
       expect(find.byKey(const Key('battle_result_3')), findsOneWidget);
-      await tester.tap(find.byKey(const Key('battle_next')));
-      await tester.pumpAndSettle();
+      await tapSetup(tester, const Key('battle_next'));
       await playAll(tester, 4, 4);
       expect(find.byKey(const Key('battle_rank_0')), findsOneWidget);
       expect(find.byKey(const Key('battle_rank_3')), findsOneWidget);
@@ -2307,6 +2306,107 @@ void main() {
       });
       await containerOf(tester).read(settingsProvider.notifier).resetAll();
       expect(containerOf(tester).read(mascotPointsProvider), 0);
+    });
+  });
+
+  group('お祝いと相棒の表情', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('初回は基準を決めるだけで、既存の記録はお祝いしない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 20; i++) 'fact_$i'], // すでに ちびふくろう
+        'quizCorrect': 12,
+      });
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.celebratedStage, 2);
+      expect(s.celebratedBadges, contains('quizCorrect_10'));
+    });
+
+    testWidgets('段階が上がると、お祝いが出て、消えたら記録される', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': [for (var i = 0; i < 4; i++) 'fact_$i'],
+        'celebratedStage': 0,
+        'celebratedBadges': <String>[],
+      });
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      containerOf(tester).read(settingsProvider.notifier).markSeen('fact_new'); // 5点 → ひよこ
+      await tester.pump();
+      await tester.pump();
+      expect(find.byKey(const Key('celebration')), findsOneWidget);
+      expect(find.text('ひよこに なったよ！'), findsOneWidget);
+      await tester.pumpAndSettle(); // 3秒で自動で消える
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).celebratedStage, 1);
+    });
+
+    testWidgets('バッジを取ると、お祝いが出る（タップで閉じられる）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'quizCorrect': 9,
+        'celebratedStage': 0,
+        'celebratedBadges': <String>[],
+      });
+      containerOf(tester).read(settingsProvider.notifier).recordQuizAnswer(correct: true);
+      await tester.pump();
+      await tester.pump();
+      expect(find.text('バッジを ゲット！'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('celebration')));
+      await tester.pump();
+      expect(find.byKey(const Key('celebration')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).celebratedBadges,
+          contains('quizCorrect_10'));
+    });
+
+    testWidgets('クイズの発表で、正解なら喜び、不正解ならしょんぼりする', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_quiz')));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('battle_kind_tf')), 200,
+          scrollable: find
+              .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+              .first);
+      await tester.tap(find.byKey(const Key('battle_kind_tf')));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('battle_start')), 200,
+          scrollable: find
+              .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+              .first);
+      await tester.tap(find.byKey(const Key('battle_start')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('battle_true')));
+      await tester.pump();
+      final ok = find.byKey(const Key('mascot_face_happy')).evaluate().isNotEmpty;
+      final bad = find.byKey(const Key('mascot_face_sad')).evaluate().isNotEmpty;
+      expect(ok != bad, isTrue); // どちらか一方
+    });
+
+    testWidgets('相棒をさわると、よろこぶ', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('mascot_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('mascot_tap')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_happy')), findsOneWidget);
+    });
+
+    testWidgets('ながら聞き: 読み上げ中は口ぱく、止めると落ち着く', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      await _scrollTo(tester, const Key('open_listen'));
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_speaking')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);
     });
   });
 }

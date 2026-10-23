@@ -57,6 +57,8 @@ class AppSettings {
     this.quizCorrect = 0,
     this.dailyResults = const {},
     this.seen = const {},
+    this.celebratedStage,
+    this.celebratedBadges,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -103,6 +105,10 @@ class AppSettings {
   /// 開いたことのある雑学の id（相棒の成長に使う）。端末内にだけ保存する。
   final Set<String> seen;
 
+  /// お祝いを出し終えた相棒の段階（番号）と、バッジの id。null は「まだ基準を決めていない」。
+  final int? celebratedStage;
+  final Set<String>? celebratedBadges;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -136,6 +142,8 @@ class AppSettings {
     int? quizCorrect,
     Map<String, String>? dailyResults,
     Set<String>? seen,
+    int? celebratedStage,
+    Set<String>? celebratedBadges,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -161,6 +169,8 @@ class AppSettings {
         quizCorrect: quizCorrect ?? this.quizCorrect,
         dailyResults: dailyResults ?? this.dailyResults,
         seen: seen ?? this.seen,
+        celebratedStage: celebratedStage ?? this.celebratedStage,
+        celebratedBadges: celebratedBadges ?? this.celebratedBadges,
       );
 }
 
@@ -218,6 +228,8 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       quizAnswered: p.getInt('quizAnswered') ?? 0,
       quizCorrect: p.getInt('quizCorrect') ?? 0,
       seen: (p.getStringList('seen') ?? const []).toSet(),
+      celebratedStage: p.getInt('celebratedStage'),
+      celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
         for (final raw in (p.getStringList('dailyResults') ?? const []))
           if (raw.split(':') case [final day, final r]) day: r,
@@ -379,6 +391,19 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+  }
+
+  /// 相棒の段階のお祝いを出し終えた（または、最初の基準にした）ことを記録する。
+  void ackStage(int index) {
+    state = state.copyWith(celebratedStage: index);
+    _prefs.setInt('celebratedStage', index);
+  }
+
+  /// バッジのお祝いを出し終えた（または、最初の基準にした）ことを記録する。
+  void ackBadges(Iterable<String> ids) {
+    final set = {...?state.celebratedBadges, ...ids};
+    state = state.copyWith(celebratedBadges: set);
+    _prefs.setStringList('celebratedBadges', set.toList());
   }
 
   /// 1人用クイズの回答を通算に加える。

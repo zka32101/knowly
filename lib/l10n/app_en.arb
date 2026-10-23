@@ -443,5 +443,8 @@
   "mascotName_professor": "Professor Owl",
   "mascotSay_professor": "Hmm, I see. You're a true scholar.",
   "mascotName_king": "Owl King",
-  "mascotSay_king": "Hoo-hoo! The king of trivia!"
+  "mascotSay_king": "Hoo-hoo! The king of trivia!",
+  "celebrateStage": "Your buddy became {name}!",
+  "@celebrateStage": {"placeholders": {"name": {"type": "String"}}},
+  "celebrateBadge": "New badge!"
 }

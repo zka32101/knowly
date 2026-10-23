@@ -443,5 +443,8 @@
   "mascotName_professor": "はかせふくろう",
   "mascotSay_professor": "ふむふむ、なるほど。きみは はかせだね。",
   "mascotName_king": "ふくろうおう",
-  "mascotSay_king": "ほっほー！ ざつがくの おうさまだ！"
+  "mascotSay_king": "ほっほー！ ざつがくの おうさまだ！",
+  "celebrateStage": "{name}に なったよ！",
+  "@celebrateStage": {"placeholders": {"name": {"type": "String"}}},
+  "celebrateBadge": "バッジを ゲット！"
 }

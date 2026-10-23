@@ -14,6 +14,7 @@ import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
 import 'screens/mascot_screen.dart';
 import 'screens/premium_screen.dart';
+import 'widgets/celebration_layer.dart';
 import 'screens/report_screen.dart';
 import 'screens/solo_quiz_screens.dart';
 import 'screens/quiz_battle_screen.dart';
@@ -86,13 +87,17 @@ class KnowlyApp extends ConsumerWidget {
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
       builder: (context, child) {
         final factor = band?.textScaleFactor ?? 1.0;
-        if (factor == 1.0) return child!;
-        final media = MediaQuery.of(context);
-        final system = media.textScaler.scale(14) / 14;
-        return MediaQuery(
-          data: media.copyWith(textScaler: TextScaler.linear(system * factor)),
-          child: child!,
-        );
+        var app = child!;
+        if (factor != 1.0) {
+          final media = MediaQuery.of(context);
+          final system = media.textScaler.scale(14) / 14;
+          app = MediaQuery(
+            data: media.copyWith(textScaler: TextScaler.linear(system * factor)),
+            child: app,
+          );
+        }
+        // 相棒の成長・バッジのお祝いを、アプリ全体の上に重ねる。
+        return Stack(fit: StackFit.expand, children: [app, const CelebrationLayer()]);
       },
       onGenerateTitle: (context) => AppLocalizations.of(context).appName,
       routerConfig: ref.watch(routerProvider),
