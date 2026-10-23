@@ -1222,4 +1222,45 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get voiceQuizSub => 'よみあげて こたえる';
+
+  @override
+  String get leagueTitle => 'かぞくリーグ';
+
+  @override
+  String get leagueNote =>
+      'この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。';
+
+  @override
+  String get leagueThisWeek => 'こんしゅうの じゅんい';
+
+  @override
+  String leagueLastWinner(String name) {
+    return 'せんしゅうの ゆうしょう：$name';
+  }
+
+  @override
+  String get leagueEmpty => 'まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$nしあい・$winsしょう';
+  }
+
+  @override
+  String get leaguePlay => 'たいせんする';
+
+  @override
+  String get leagueClear => 'こんしゅうの きろくを けす';
+
+  @override
+  String get leagueClearTitle => 'こんしゅうの きろくを けしますか？';
+
+  @override
+  String get leagueClearBody => 'こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。';
+
+  @override
+  String get leagueRecord => 'かぞくリーグに きろくする';
+
+  @override
+  String get leagueSub => '1しゅうかんの しょうぶ';
 }

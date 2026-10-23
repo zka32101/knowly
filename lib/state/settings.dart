@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../logic/interests.dart';
+import '../logic/league.dart';
 import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
@@ -68,6 +69,7 @@ class AppSettings {
     this.celebratedBadges,
     this.capsule,
     this.words = const {},
+    this.league = const LeagueData(),
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -124,6 +126,9 @@ class AppSettings {
   /// 説明を見たことのある用語の id（ことばずかん用）。
   final Set<String> words;
 
+  /// 家族リーグ（この端末で遊んだ対戦の、週ごとの得点）。
+  final LeagueData league;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -161,6 +166,7 @@ class AppSettings {
     Set<String>? celebratedBadges,
     String? capsule,
     Set<String>? words,
+    LeagueData? league,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -190,6 +196,7 @@ class AppSettings {
         celebratedBadges: celebratedBadges ?? this.celebratedBadges,
         capsule: capsule ?? this.capsule,
         words: words ?? this.words,
+        league: league ?? this.league,
       );
 }
 
@@ -202,6 +209,43 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
   Future<void> resetAll() async {
     await _prefs.clear();
     state = _read(_prefs);
+  }
+
+  static LeagueData _readLeague(SharedPreferences p) {
+    final scores = <String, LeagueEntry>{};
+    for (final raw in p.getStringList('leagueScores') ?? const <String>[]) {
+      final f = raw.split('|');
+      if (f.length != 4) continue;
+      final pts = int.tryParse(f[1]);
+      final games = int.tryParse(f[2]);
+      final wins = int.tryParse(f[3]);
+      if (pts == null || games == null || wins == null) continue;
+      scores[f[0]] = LeagueEntry(points: pts, games: games, wins: wins);
+    }
+    return LeagueData(
+      week: p.getString('leagueWeek'),
+      scores: scores,
+      lastWinner: p.getString('leagueLastWinner'),
+      lastPoints: p.getInt('leagueLastPoints') ?? 0,
+    );
+  }
+
+  void _saveLeague(LeagueData d) {
+    if (d.week != null) {
+      _prefs.setString('leagueWeek', d.week!);
+    } else {
+      _prefs.remove('leagueWeek');
+    }
+    _prefs.setStringList('leagueScores', [
+      for (final e in d.scores.entries)
+        '${e.key.replaceAll('|', ' ')}|${e.value.points}|${e.value.games}|${e.value.wins}',
+    ]);
+    if (d.lastWinner != null) {
+      _prefs.setString('leagueLastWinner', d.lastWinner!);
+    } else {
+      _prefs.remove('leagueLastWinner');
+    }
+    _prefs.setInt('leagueLastPoints', d.lastPoints);
   }
 
   static AppSettings _read(SharedPreferences p) {
@@ -249,6 +293,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       seen: (p.getStringList('seen') ?? const []).toSet(),
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
+      league: _readLeague(p),
       celebratedStage: p.getInt('celebratedStage'),
       celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
@@ -412,6 +457,26 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+  }
+
+  /// 対戦（2人以上）の結果を、家族リーグに加える。
+  void recordLeagueGame(DateTime today,
+      {required List<String> names, required List<int> scores, required List<int> winners}) {
+    final next = addGame(state.league, today,
+        names: [for (final n in names) n.replaceAll('|', ' ')],
+        scores: scores,
+        winners: winners);
+    state = state.copyWith(league: next);
+    _saveLeague(next);
+  }
+
+  /// 今週のリーグの記録を消す（先週の優勝者は残す）。
+  void clearLeagueWeek(DateTime today) {
+    final base = rollWeek(state.league, today);
+    final next = LeagueData(
+        week: base.week, lastWinner: base.lastWinner, lastPoints: base.lastPoints);
+    state = state.copyWith(league: next);
+    _saveLeague(next);
   }
 
   /// 用語の説明を見たことを記録する（ことばずかん用）。

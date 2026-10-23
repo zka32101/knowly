@@ -693,5 +693,17 @@
   "mapOpen": "See links",
   "voiceQuizTitle": "Listen quiz",
   "voiceReplay": "Listen again",
-  "voiceQuizSub": "Hear it, then answer"
+  "voiceQuizSub": "Hear it, then answer",
+  "leagueTitle": "Family league",
+  "leagueNote": "Scores from battles played on this device are tallied each week. Nothing is sent anywhere.",
+  "leagueThisWeek": "This week",
+  "leagueLastWinner": "Last week's champion: {name}",
+  "leagueEmpty": "No records yet. Play a battle with two or more players and it will show up here.",
+  "leagueGames": "{n} games, {wins} wins",
+  "leaguePlay": "Play a battle",
+  "leagueClear": "Clear this week's records",
+  "leagueClearTitle": "Clear this week's records?",
+  "leagueClearBody": "This week's scores will be erased. Last week's champion stays.",
+  "leagueRecord": "Record in the family league",
+  "leagueSub": "A week-long contest"
 }

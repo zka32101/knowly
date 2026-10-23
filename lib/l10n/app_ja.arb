@@ -717,5 +717,34 @@
   "mapOpen": "つながりを みる",
   "voiceQuizTitle": "みみで クイズ",
   "voiceReplay": "もういちど きく",
-  "voiceQuizSub": "よみあげて こたえる"
+  "voiceQuizSub": "よみあげて こたえる",
+  "leagueTitle": "かぞくリーグ",
+  "leagueNote": "この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。",
+  "leagueThisWeek": "こんしゅうの じゅんい",
+  "leagueLastWinner": "せんしゅうの ゆうしょう：{name}",
+  "@leagueLastWinner": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "leagueEmpty": "まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。",
+  "leagueGames": "{n}しあい・{wins}しょう",
+  "@leagueGames": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "wins": {
+        "type": "int"
+      }
+    }
+  },
+  "leaguePlay": "たいせんする",
+  "leagueClear": "こんしゅうの きろくを けす",
+  "leagueClearTitle": "こんしゅうの きろくを けしますか？",
+  "leagueClearBody": "こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。",
+  "leagueRecord": "かぞくリーグに きろくする",
+  "leagueSub": "1しゅうかんの しょうぶ"
 }

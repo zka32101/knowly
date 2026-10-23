@@ -371,5 +371,17 @@
   "mapOpen": "Ver conexiones",
   "voiceQuizTitle": "Quiz de escucha",
   "voiceReplay": "Escuchar otra vez",
-  "voiceQuizSub": "Escucha y responde"
+  "voiceQuizSub": "Escucha y responde",
+  "leagueTitle": "Liga familiar",
+  "leagueNote": "Se suman cada semana las puntuaciones de los duelos jugados en este dispositivo. No se envía nada a ninguna parte.",
+  "leagueThisWeek": "Esta semana",
+  "leagueLastWinner": "Campeón de la semana pasada: {name}",
+  "leagueEmpty": "Todavía no hay registros. Juega un duelo con dos o más jugadores y aparecerá aquí.",
+  "leagueGames": "{n} partidas, {wins} victorias",
+  "leaguePlay": "Jugar un duelo",
+  "leagueClear": "Borrar los registros de esta semana",
+  "leagueClearTitle": "¿Borrar los registros de esta semana?",
+  "leagueClearBody": "Se borrarán las puntuaciones de esta semana. El campeón de la semana pasada se mantiene.",
+  "leagueRecord": "Registrar en la liga familiar",
+  "leagueSub": "Un reto semanal"
 }

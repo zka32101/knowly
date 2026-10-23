@@ -1251,4 +1251,47 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get voiceQuizSub => 'Escucha y responde';
+
+  @override
+  String get leagueTitle => 'Liga familiar';
+
+  @override
+  String get leagueNote =>
+      'Se suman cada semana las puntuaciones de los duelos jugados en este dispositivo. No se envía nada a ninguna parte.';
+
+  @override
+  String get leagueThisWeek => 'Esta semana';
+
+  @override
+  String leagueLastWinner(String name) {
+    return 'Campeón de la semana pasada: $name';
+  }
+
+  @override
+  String get leagueEmpty =>
+      'Todavía no hay registros. Juega un duelo con dos o más jugadores y aparecerá aquí.';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n partidas, $wins victorias';
+  }
+
+  @override
+  String get leaguePlay => 'Jugar un duelo';
+
+  @override
+  String get leagueClear => 'Borrar los registros de esta semana';
+
+  @override
+  String get leagueClearTitle => '¿Borrar los registros de esta semana?';
+
+  @override
+  String get leagueClearBody =>
+      'Se borrarán las puntuaciones de esta semana. El campeón de la semana pasada se mantiene.';
+
+  @override
+  String get leagueRecord => 'Registrar en la liga familiar';
+
+  @override
+  String get leagueSub => 'Un reto semanal';
 }

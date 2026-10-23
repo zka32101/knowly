@@ -12,6 +12,7 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
+import 'screens/league_screen.dart';
 import 'screens/map_screen.dart';
 import 'screens/mascot_screen.dart';
 import 'screens/capsule_screen.dart';
@@ -112,6 +113,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (_, state) => MapScreen(startId: state.uri.queryParameters['id']),
       ),
       GoRoute(path: '/voicequiz', builder: (_, _) => const VoiceQuizScreen()),
+      GoRoute(path: '/league', builder: (_, _) => const LeagueScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

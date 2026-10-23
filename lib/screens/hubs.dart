@@ -147,6 +147,12 @@ class PlayHub extends ConsumerWidget {
             subtitle: l.hubQuizSub,
             route: '/quiz'),
         HubTile(
+            key: const Key('open_league'),
+            emoji: '🏆',
+            title: l.leagueTitle,
+            subtitle: l.leagueSub,
+            route: '/league'),
+        HubTile(
             key: const Key('open_swipe'),
             emoji: '👆',
             title: l.swipeChip,

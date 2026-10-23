@@ -1241,4 +1241,47 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get voiceQuizSub => 'Hear it, then answer';
+
+  @override
+  String get leagueTitle => 'Family league';
+
+  @override
+  String get leagueNote =>
+      'Scores from battles played on this device are tallied each week. Nothing is sent anywhere.';
+
+  @override
+  String get leagueThisWeek => 'This week';
+
+  @override
+  String leagueLastWinner(String name) {
+    return 'Last week\'s champion: $name';
+  }
+
+  @override
+  String get leagueEmpty =>
+      'No records yet. Play a battle with two or more players and it will show up here.';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n games, $wins wins';
+  }
+
+  @override
+  String get leaguePlay => 'Play a battle';
+
+  @override
+  String get leagueClear => 'Clear this week\'s records';
+
+  @override
+  String get leagueClearTitle => 'Clear this week\'s records?';
+
+  @override
+  String get leagueClearBody =>
+      'This week\'s scores will be erased. Last week\'s champion stays.';
+
+  @override
+  String get leagueRecord => 'Record in the family league';
+
+  @override
+  String get leagueSub => 'A week-long contest';
 }

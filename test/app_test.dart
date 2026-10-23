@@ -3083,4 +3083,104 @@ void main() {
       expect(tts.spoken.any((s) => s.contains('True, or false?') || s.contains('A。')), isTrue);
     });
   });
+
+  group('家族リーグ', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    Future<void> tapV(WidgetTester tester, Key key) async {
+      final vertical =
+          find.byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical);
+      if (find.byKey(key).evaluate().isEmpty) {
+        await tester.scrollUntilVisible(find.byKey(key), 200, scrollable: vertical.first);
+      }
+      await tester.ensureVisible(find.byKey(key));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(key));
+      await tester.pumpAndSettle();
+    }
+
+    /// ○× だけの対戦を、全員 ○ で、[rounds] 問遊ぶ。
+    Future<void> playBattle(WidgetTester tester, int players, {bool league = true}) async {
+      await _open(tester, const Key('open_quiz'));
+      await tapV(tester, Key('battle_players_$players'));
+      await tapV(tester, const Key('battle_kind_tf'));
+      if (!league) await tapV(tester, const Key('battle_league_switch'));
+      await tapV(tester, const Key('battle_start'));
+      for (var r = 0; r < 5; r++) {
+        for (var p = 0; p < players; p++) {
+          await tapV(tester, const Key('battle_true'));
+        }
+        await tapV(tester, const Key('battle_next'));
+      }
+    }
+
+    testWidgets('2人以上の対戦は、家族リーグに記録される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await playBattle(tester, 2);
+      final league = containerOf(tester).read(settingsProvider).league;
+      expect(league.week, '2026-10-19');
+      expect(league.scores.keys, containsAll(['プレイヤー1', 'プレイヤー2']));
+      expect(league.scores['プレイヤー1']!.games, 1);
+    });
+
+    testWidgets('1人あそびや、スイッチを切った対戦は記録しない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await playBattle(tester, 2, league: false);
+      expect(containerOf(tester).read(settingsProvider).league.scores, isEmpty);
+    });
+
+    testWidgets('リーグの画面: 今週の順位と、先週の優勝者', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'leagueWeek': '2026-10-19',
+        'leagueScores': ['ハナ|12|3|2', 'タロウ|7|3|1'],
+        'leagueLastWinner': 'ハナ',
+        'leagueLastPoints': 20,
+      });
+      await _open(tester, const Key('open_league'));
+      expect(find.byKey(const Key('league_last_winner')), findsOneWidget);
+      expect(find.byKey(const Key('league_row_ハナ')), findsOneWidget);
+      expect(find.byKey(const Key('league_row_タロウ')), findsOneWidget);
+      expect(find.text('🥇'), findsOneWidget);
+    });
+
+    testWidgets('週がかわると、前の週のランキングは先週の優勝者になる', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'leagueWeek': '2026-10-12', // 先週
+        'leagueScores': ['ハナ|12|3|2'],
+      });
+      await _open(tester, const Key('open_league'));
+      expect(find.byKey(const Key('league_last_winner')), findsOneWidget);
+      expect(find.byKey(const Key('league_empty')), findsOneWidget);
+    });
+
+    testWidgets('今週の記録を消せる（先週の優勝者は残る）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'leagueWeek': '2026-10-19',
+        'leagueScores': ['ハナ|12|3|2'],
+        'leagueLastWinner': 'タロウ',
+        'leagueLastPoints': 9,
+      });
+      await _open(tester, const Key('open_league'));
+      await tapV(tester, const Key('league_clear'));
+      await tester.tap(find.byKey(const Key('league_clear_confirm')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('league_empty')), findsOneWidget);
+      expect(find.byKey(const Key('league_last_winner')), findsOneWidget);
+      expect(containerOf(tester).read(settingsProvider).league.scores, isEmpty);
+    });
+
+    testWidgets('データを削除すると、リーグの記録も消える', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'leagueWeek': '2026-10-19',
+        'leagueScores': ['ハナ|12|3|2'],
+      });
+      await containerOf(tester).read(settingsProvider.notifier).resetAll();
+      expect(containerOf(tester).read(settingsProvider).league.scores, isEmpty);
+    });
+  });
 }

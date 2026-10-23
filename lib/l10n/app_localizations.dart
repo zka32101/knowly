@@ -2335,6 +2335,78 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'よみあげて こたえる'**
   String get voiceQuizSub;
+
+  /// No description provided for @leagueTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'かぞくリーグ'**
+  String get leagueTitle;
+
+  /// No description provided for @leagueNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。'**
+  String get leagueNote;
+
+  /// No description provided for @leagueThisWeek.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの じゅんい'**
+  String get leagueThisWeek;
+
+  /// No description provided for @leagueLastWinner.
+  ///
+  /// In ja, this message translates to:
+  /// **'せんしゅうの ゆうしょう：{name}'**
+  String leagueLastWinner(String name);
+
+  /// No description provided for @leagueEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。'**
+  String get leagueEmpty;
+
+  /// No description provided for @leagueGames.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}しあい・{wins}しょう'**
+  String leagueGames(int n, int wins);
+
+  /// No description provided for @leaguePlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'たいせんする'**
+  String get leaguePlay;
+
+  /// No description provided for @leagueClear.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの きろくを けす'**
+  String get leagueClear;
+
+  /// No description provided for @leagueClearTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの きろくを けしますか？'**
+  String get leagueClearTitle;
+
+  /// No description provided for @leagueClearBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。'**
+  String get leagueClearBody;
+
+  /// No description provided for @leagueRecord.
+  ///
+  /// In ja, this message translates to:
+  /// **'かぞくリーグに きろくする'**
+  String get leagueRecord;
+
+  /// No description provided for @leagueSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'1しゅうかんの しょうぶ'**
+  String get leagueSub;
 }
 
 class _AppLocalizationsDelegate

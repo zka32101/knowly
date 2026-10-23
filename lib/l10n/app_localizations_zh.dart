@@ -1219,4 +1219,44 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get voiceQuizSub => '听题作答';
+
+  @override
+  String get leagueTitle => '家庭联赛';
+
+  @override
+  String get leagueNote => '在这台设备上对战的得分按周统计，不会发送到任何地方。';
+
+  @override
+  String get leagueThisWeek => '本周排名';
+
+  @override
+  String leagueLastWinner(String name) {
+    return '上周冠军：$name';
+  }
+
+  @override
+  String get leagueEmpty => '还没有记录。两人以上对战后会显示在这里。';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n 场，$wins 胜';
+  }
+
+  @override
+  String get leaguePlay => '去对战';
+
+  @override
+  String get leagueClear => '清除本周记录';
+
+  @override
+  String get leagueClearTitle => '要清除本周记录吗？';
+
+  @override
+  String get leagueClearBody => '本周的得分将被清除，上周冠军会保留。';
+
+  @override
+  String get leagueRecord => '记录到家庭联赛';
+
+  @override
+  String get leagueSub => '为期一周的比拼';
 }

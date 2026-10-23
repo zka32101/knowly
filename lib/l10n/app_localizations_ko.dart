@@ -1222,4 +1222,44 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get voiceQuizSub => '듣고 답하기';
+
+  @override
+  String get leagueTitle => '가족 리그';
+
+  @override
+  String get leagueNote => '이 기기에서 한 대결의 점수를 한 주 단위로 모아요. 어디로도 전송되지 않아요.';
+
+  @override
+  String get leagueThisWeek => '이번 주 순위';
+
+  @override
+  String leagueLastWinner(String name) {
+    return '지난주 우승: $name';
+  }
+
+  @override
+  String get leagueEmpty => '아직 기록이 없어요. 2명 이상이 대결하면 여기에 나타나요.';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n경기 $wins승';
+  }
+
+  @override
+  String get leaguePlay => '대결하러 가기';
+
+  @override
+  String get leagueClear => '이번 주 기록 지우기';
+
+  @override
+  String get leagueClearTitle => '이번 주 기록을 지울까요?';
+
+  @override
+  String get leagueClearBody => '이번 주 점수가 지워져요. 지난주 우승자는 남아요.';
+
+  @override
+  String get leagueRecord => '가족 리그에 기록하기';
+
+  @override
+  String get leagueSub => '일주일 승부';
 }

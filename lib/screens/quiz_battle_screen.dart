@@ -67,6 +67,8 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
   final _nameControllers = List.generate(4, (_) => TextEditingController());
   QuizGame? _game;
   int _gameId = 0;
+  bool _toLeague = true;
+  bool _recorded = false;
 
   @override
   void dispose() {
@@ -95,6 +97,7 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
     final questions = pickQuestions(pool, _rounds, ref.read(quizRandomProvider));
     setState(() {
       _gameId++;
+      _recorded = false;
       _game = QuizGame(
         names: [for (var p = 0; p < _players; p++) _name(l, p)],
         questions: questions,
@@ -253,6 +256,14 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
               ),
           ],
         ),
+        if (_players >= 2)
+          SwitchListTile(
+            key: const Key('battle_league_switch'),
+            contentPadding: EdgeInsets.zero,
+            title: Text(l.leagueRecord),
+            value: _toLeague,
+            onChanged: (v) => setState(() => _toLeague = v),
+          ),
         const SizedBox(height: 8),
         if (_timeLimit != null) Text(l.battleTimeHint, style: theme.textTheme.bodySmall),
         if (band.isChild) Text(l.battleHandHint, style: theme.textTheme.bodySmall),
@@ -273,6 +284,18 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
 
   Widget _finished(AppLocalizations l, QuizGame game) {
     final theme = Theme.of(context);
+    // 2人以上の対戦は、家族リーグに記録する（1回だけ）。
+    if (!_game!.isSolo && _toLeague && !_recorded) {
+      _recorded = true;
+      final names = game.names;
+      final scores = game.scores;
+      final winners = game.winners;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ref.read(settingsProvider.notifier).recordLeagueGame(ref.read(nowProvider),
+            names: names, scores: scores, winners: winners);
+      });
+    }
     final scores = game.scores;
     final points = game.points;
     final total = game.questions.length;
