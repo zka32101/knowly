@@ -193,6 +193,30 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          key: const Key('open_capsule'),
+                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
+                          icon: const Icon(Icons.card_giftcard),
+                          label: Text(l.capsuleChip, style: const TextStyle(fontSize: 16)),
+                          onPressed: () => context.push('/capsule'),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          key: const Key('open_zukan'),
+                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
+                          icon: const Icon(Icons.menu_book_outlined),
+                          label: Text(l.zukanChip, style: const TextStyle(fontSize: 16)),
+                          onPressed: () => context.push('/zukan'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -685,6 +709,8 @@ class _QuickLinks extends ConsumerWidget {
           if (reviewDue > 0)
             chip(const Key('open_review'), Icons.replay_outlined, l.reviewChipCount(reviewDue),
                 '/review'),
+          chip(const Key('open_capsule'), Icons.card_giftcard, l.capsuleChip, '/capsule'),
+          chip(const Key('open_zukan'), Icons.menu_book_outlined, l.zukanChip, '/zukan'),
           chip(const Key('open_badges'), Icons.emoji_events_outlined, l.badgesChip, '/badges'),
           chip(const Key('open_myths'), Icons.fact_check_outlined, l.mythsTitle, '/myths'),
           if (band.isTeenOrAdult)

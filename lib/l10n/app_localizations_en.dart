@@ -1051,4 +1051,57 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get flipDetail => 'Read more';
+
+  @override
+  String get zukanTitle => 'Fact collection';
+
+  @override
+  String get zukanChip => 'Collection';
+
+  @override
+  String zukanFound(int n, int total) {
+    return '$n of $total found';
+  }
+
+  @override
+  String get zukanAll => 'All';
+
+  @override
+  String get zukanHint => 'Every fact you see fills in your collection.';
+
+  @override
+  String get zukanLocked => '?';
+
+  @override
+  String get capsuleTitle => 'Fact capsule';
+
+  @override
+  String get capsuleChip => 'Capsule';
+
+  @override
+  String get capsuleOpen => 'Open it!';
+
+  @override
+  String get capsuleHint => 'One mystery fact pops out each day.';
+
+  @override
+  String get capsuleDone => 'Come back tomorrow!';
+
+  @override
+  String get capsuleNew => 'New!';
+
+  @override
+  String get capsuleToZukan => 'See collection';
+
+  @override
+  String get capsuleEmpty => 'No facts available.';
+
+  @override
+  String get capsuleRarity1 => 'Common';
+
+  @override
+  String get capsuleRarity2 => 'Rare';
+
+  @override
+  String get capsuleRarity3 => 'Super rare';
 }

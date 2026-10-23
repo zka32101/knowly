@@ -2454,4 +2454,95 @@ void main() {
       expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });
   });
+
+  group('ずかん・カプセル', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('カプセル: あけるとカードが出て、見た雑学になり、今日はもう一度あけられない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _scrollTo(tester, const Key('open_capsule'));
+      await tester.tap(find.byKey(const Key('open_capsule')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('capsule_open')));
+      await tester.pump(const Duration(milliseconds: 300));
+      expect(find.byKey(const Key('capsule_opening')), findsOneWidget); // 開く演出
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_card')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_rarity')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_new')), findsOneWidget); // はじめて
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.capsule, startsWith('2026-10-23:'));
+      expect(s.seen, hasLength(1));
+      expect(find.byKey(const Key('capsule_open')), findsNothing);
+      expect(find.byKey(const Key('capsule_done')), findsOneWidget);
+    });
+
+    testWidgets('カプセル: 今日あけ済みなら、同じカードが出る。日付が変われば、またあけられる', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'capsule': '2026-10-23:octopus_blue_blood',
+        'seen': ['octopus_blue_blood'],
+      });
+      await _scrollTo(tester, const Key('open_capsule'));
+      await tester.tap(find.byKey(const Key('open_capsule')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_card')), findsOneWidget);
+      expect(find.byKey(const Key('capsule_open')), findsNothing);
+    });
+
+    testWidgets('カプセル: 翌日は、またあけられる', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'capsule': '2026-10-22:octopus_blue_blood'});
+      await _scrollTo(tester, const Key('open_capsule'));
+      await tester.tap(find.byKey(const Key('open_capsule')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_open')), findsOneWidget);
+    });
+
+    testWidgets('カプセル: Kids でも あけられる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _scrollTo(tester, const Key('open_capsule'));
+      await tester.tap(find.byKey(const Key('open_capsule')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('capsule_open')), findsOneWidget);
+    });
+
+    testWidgets('ずかん: 見た雑学のマスが埋まり、まだのマスは押せない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': ['octopus_blue_blood', 'giraffe_seven_vertebrae'],
+      });
+      await _scrollTo(tester, const Key('open_zukan'));
+      await tester.tap(find.byKey(const Key('open_zukan')));
+      await tester.pumpAndSettle();
+      final total = containerOf(tester).read(allEligibleProvider).length;
+      expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
+          '2 / $total みつけた');
+      // どうぶつだけに絞ると、そのジャンルの数
+      await tester.tap(find.byKey(const Key('zukan_cat_animals')));
+      await tester.pumpAndSettle();
+      final animals = containerOf(tester)
+          .read(allEligibleProvider)
+          .where((t) => t.category == 'animals')
+          .length;
+      expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
+          '2 / $animals みつけた');
+      // 見つけたマスを押すと詳細へ
+      await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('ずかん: まだのマスを押しても何も起きない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await _scrollTo(tester, const Key('open_zukan'));
+      await tester.tap(find.byKey(const Key('open_zukan')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('zukan_cell_honey_never_spoils')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsNothing);
+      expect(find.byKey(const Key('zukan_progress')), findsOneWidget);
+    });
+  });
 }

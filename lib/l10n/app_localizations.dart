@@ -1975,6 +1975,108 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'くわしく みる'**
   String get flipDetail;
+
+  /// No description provided for @zukanTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくずかん'**
+  String get zukanTitle;
+
+  /// No description provided for @zukanChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'ずかん'**
+  String get zukanChip;
+
+  /// No description provided for @zukanFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} みつけた'**
+  String zukanFound(int n, int total);
+
+  /// No description provided for @zukanAll.
+  ///
+  /// In ja, this message translates to:
+  /// **'ぜんぶ'**
+  String get zukanAll;
+
+  /// No description provided for @zukanHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを みると、ずかんが うまっていくよ。'**
+  String get zukanHint;
+
+  /// No description provided for @zukanLocked.
+  ///
+  /// In ja, this message translates to:
+  /// **'？'**
+  String get zukanLocked;
+
+  /// No description provided for @capsuleTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくカプセル'**
+  String get capsuleTitle;
+
+  /// No description provided for @capsuleChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'カプセル'**
+  String get capsuleChip;
+
+  /// No description provided for @capsuleOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'あけてみよう！'**
+  String get capsuleOpen;
+
+  /// No description provided for @capsuleHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'1にち 1かい、ふしぎな ざつがくが でてくるよ。'**
+  String get capsuleHint;
+
+  /// No description provided for @capsuleDone.
+  ///
+  /// In ja, this message translates to:
+  /// **'また あした あけよう！'**
+  String get capsuleDone;
+
+  /// No description provided for @capsuleNew.
+  ///
+  /// In ja, this message translates to:
+  /// **'はじめて！'**
+  String get capsuleNew;
+
+  /// No description provided for @capsuleToZukan.
+  ///
+  /// In ja, this message translates to:
+  /// **'ずかんを みる'**
+  String get capsuleToZukan;
+
+  /// No description provided for @capsuleEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'でてくる ざつがくが ありません。'**
+  String get capsuleEmpty;
+
+  /// No description provided for @capsuleRarity1.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふつう'**
+  String get capsuleRarity1;
+
+  /// No description provided for @capsuleRarity2.
+  ///
+  /// In ja, this message translates to:
+  /// **'レア'**
+  String get capsuleRarity2;
+
+  /// No description provided for @capsuleRarity3.
+  ///
+  /// In ja, this message translates to:
+  /// **'スーパーレア'**
+  String get capsuleRarity3;
 }
 
 class _AppLocalizationsDelegate

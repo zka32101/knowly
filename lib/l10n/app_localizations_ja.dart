@@ -1033,4 +1033,57 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get flipDetail => 'くわしく みる';
+
+  @override
+  String get zukanTitle => 'ざつがくずかん';
+
+  @override
+  String get zukanChip => 'ずかん';
+
+  @override
+  String zukanFound(int n, int total) {
+    return '$n / $total みつけた';
+  }
+
+  @override
+  String get zukanAll => 'ぜんぶ';
+
+  @override
+  String get zukanHint => 'ざつがくを みると、ずかんが うまっていくよ。';
+
+  @override
+  String get zukanLocked => '？';
+
+  @override
+  String get capsuleTitle => 'ざつがくカプセル';
+
+  @override
+  String get capsuleChip => 'カプセル';
+
+  @override
+  String get capsuleOpen => 'あけてみよう！';
+
+  @override
+  String get capsuleHint => '1にち 1かい、ふしぎな ざつがくが でてくるよ。';
+
+  @override
+  String get capsuleDone => 'また あした あけよう！';
+
+  @override
+  String get capsuleNew => 'はじめて！';
+
+  @override
+  String get capsuleToZukan => 'ずかんを みる';
+
+  @override
+  String get capsuleEmpty => 'でてくる ざつがくが ありません。';
+
+  @override
+  String get capsuleRarity1 => 'ふつう';
+
+  @override
+  String get capsuleRarity2 => 'レア';
+
+  @override
+  String get capsuleRarity3 => 'スーパーレア';
 }

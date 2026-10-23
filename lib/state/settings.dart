@@ -59,6 +59,7 @@ class AppSettings {
     this.seen = const {},
     this.celebratedStage,
     this.celebratedBadges,
+    this.capsule,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -109,6 +110,9 @@ class AppSettings {
   final int? celebratedStage;
   final Set<String>? celebratedBadges;
 
+  /// 今日のカプセル（"yyyy-MM-dd:雑学のid"）。1日1回。
+  final String? capsule;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -144,6 +148,7 @@ class AppSettings {
     Set<String>? seen,
     int? celebratedStage,
     Set<String>? celebratedBadges,
+    String? capsule,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -171,6 +176,7 @@ class AppSettings {
         seen: seen ?? this.seen,
         celebratedStage: celebratedStage ?? this.celebratedStage,
         celebratedBadges: celebratedBadges ?? this.celebratedBadges,
+        capsule: capsule ?? this.capsule,
       );
 }
 
@@ -228,6 +234,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       quizAnswered: p.getInt('quizAnswered') ?? 0,
       quizCorrect: p.getInt('quizCorrect') ?? 0,
       seen: (p.getStringList('seen') ?? const []).toSet(),
+      capsule: p.getString('capsule'),
       celebratedStage: p.getInt('celebratedStage'),
       celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
@@ -391,6 +398,14 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+  }
+
+  /// 今日のカプセルで出た雑学を記録する（見た雑学にもなる）。
+  void recordCapsule(DateTime today, String id) {
+    final value = '${dayKey(today)}:$id';
+    state = state.copyWith(capsule: value);
+    _prefs.setString('capsule', value);
+    markSeen(id);
   }
 
   /// 相棒の段階のお祝いを出し終えた（または、最初の基準にした）ことを記録する。
