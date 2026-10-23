@@ -122,7 +122,7 @@ void main() {
   test('ことばの途中は漢字にしない（おおきく・つくっています・おさらいまち）', () {
     final junior = AppLocalizationsJaJunior();
     expect(junior.mascotMax, '一番おおきくなったよ！');
-    expect(junior.reportNote, contains('つくっています'));
+    expect(junior.reportNote, contains('作っています'));
     expect(junior.reportReviewPending, 'おさらいまち');
   });
 
@@ -131,7 +131,7 @@ void main() {
     const grade1to3 = '今日明毎週先一二三四五六七八九十月火水木金土人子大小中上下前後右左年生学校見出入立休手目耳口足本気'
         '天雨花草犬虫石森林山川田町村名字文正早白青赤夕音玉王力円千百車糸竹思知話読書聞言答理科国語図画工数計算'
         '長高新古多少星近親友弟兄姉妹母父家内外同形夜朝昼春夏秋冬色絵点分回時間来行遊集問題次発世界動物乗食運写真'
-        '楽昔度強返取守駅勝始終使安全部当番葉';
+        '楽昔度強返取守駅勝始終使安全部当番葉族注意体作地送習秒';
     for (final ch in juniorKanji.split('')) {
       expect(grade1to3.contains(ch), isTrue, reason: '「$ch」は小学1〜3年の漢字ではない');
     }

@@ -766,7 +766,7 @@ void main() {
       await tester.tap(find.byKey(const Key('filter_button')));
       await tester.pumpAndSettle();
       expect(find.widgetWithText(FilterChip, '友だちと'), findsNothing);
-      expect(find.widgetWithText(FilterChip, 'むし'), findsOneWidget);
+      expect(find.widgetWithText(FilterChip, '虫'), findsOneWidget);
     });
   });
 
