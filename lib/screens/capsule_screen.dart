@@ -13,6 +13,8 @@ import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
 import '../widgets/ja_wrap_text.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 import 'quiz_battle_screen.dart';
 import 'zukan_screen.dart';
 
@@ -193,7 +195,29 @@ class _Revealed extends ConsumerWidget {
             ],
           ),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 12),
+        ShareButton(
+          buttonKey: const Key('capsule_share'),
+          text: '${rarityStars(rarity)} ${level.title}\n#${l.appName}',
+          card: ShareFrame(
+            appName: l.appName,
+            colors: rarity == Rarity.superRare
+                ? const [Color(0xFFFFF8E1), Color(0xFFFFE082)]
+                : const [Color(0xFFFFF4D6), Color(0xFFFFE0B2)],
+            border: color,
+            children: [
+              cardTitle('${rarityStars(rarity)}  ${rarityLabel(l, rarity)}'),
+              gap8,
+              bigEmoji(emojiForIllustration(item.illustration), size: 72),
+              gap8,
+              cardBody(categoryLabel(l, item.category), size: 13),
+              cardTitle(level.title),
+              gap8,
+              cardBody(level.body),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
         Text(l.capsuleDone, key: const Key('capsule_done')),
         TextButton(
           key: const Key('capsule_to_zukan'),

@@ -9,6 +9,8 @@ import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/ja_wrap_text.dart';
 import '../widgets/mascot_card.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 import 'quiz_battle_screen.dart';
 
 /// 1ゲームの問題数。
@@ -95,6 +97,19 @@ class _SwipeQuizScreenState extends ConsumerState<SwipeQuizScreen> {
               const SizedBox(height: 4),
               Text(l.swipeBestCombo(_bestCombo), style: theme.textTheme.titleMedium),
               const SizedBox(height: 24),
+              ShareButton(
+                buttonKey: const Key('swipe_share'),
+                text: '${l.appName} ${l.swipeTitle}\n${l.battleSoloScore(_correct, _cards.length)} ${l.swipeBestCombo(_bestCombo)}\n#${l.appName}',
+                card: ShareFrame(appName: l.appName, children: [
+                  bigEmoji(_correct * 2 >= _cards.length ? '🎉' : '💪'),
+                  gap8,
+                  cardBig('$_correct / ${_cards.length}'),
+                  gap8,
+                  cardTitle(l.swipeTitle),
+                  cardBody(l.swipeBestCombo(_bestCombo)),
+                ]),
+              ),
+              const SizedBox(height: 8),
               FilledButton(
                 key: const Key('swipe_again'),
                 onPressed: _restart,

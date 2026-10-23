@@ -8,6 +8,8 @@ import '../logic/mascot.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/mascot_card.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// 直近7日と、その前の7日のまとめ。
 class Recap {
@@ -56,19 +58,27 @@ class RecapScreen extends ConsumerWidget {
 
     Widget stat(String id, String emoji, String label, String value, int delta) => Card(
           key: Key('recap_$id'),
-          child: ListTile(
-            leading: Text(emoji, style: const TextStyle(fontSize: 28)),
-            title: Text(label),
-            trailing: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            child: Row(
               children: [
-                Text(value, style: theme.textTheme.titleLarge),
-                if (delta != 0)
-                  Text(delta > 0 ? '▲ $delta' : '▼ ${-delta}',
-                      key: Key('recap_${id}_delta'),
-                      style: theme.textTheme.bodySmall?.copyWith(
-                          color: delta > 0 ? Colors.green.shade700 : theme.colorScheme.outline)),
+                Text(emoji, style: const TextStyle(fontSize: 28)),
+                const SizedBox(width: 16),
+                Expanded(child: Text(label, style: theme.textTheme.bodyLarge)),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(value, style: theme.textTheme.titleLarge),
+                    if (delta != 0)
+                      Text(delta > 0 ? '▲ $delta' : '▼ ${-delta}',
+                          key: Key('recap_${id}_delta'),
+                          style: theme.textTheme.bodySmall?.copyWith(
+                              color: delta > 0
+                                  ? Colors.green.shade700
+                                  : theme.colorScheme.outline)),
+                  ],
+                ),
               ],
             ),
           ),
@@ -79,7 +89,28 @@ class RecapScreen extends ConsumerWidget {
         .fold<int>(1, (a, b) => b > a ? b : a);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.recapTitle)),
+      appBar: AppBar(
+        title: Text(l.recapTitle),
+        actions: [
+          ShareButton(
+            buttonKey: const Key('recap_share'),
+            compact: true,
+            text: '${l.appName} ${l.recapTitle}\n${l.recapSeen} ${w.seen} / ${l.recapLearned} ${w.learned}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji(stage.emoji),
+              gap8,
+              cardTitle(l.recapTitle),
+              gap12,
+              cardRow(l.recapSeen, '${w.seen}'),
+              cardRow(l.recapLearned, '${w.learned}'),
+              cardRow(l.recapQuiz, w.answered == 0 ? '-' : '${w.correct} / ${w.answered}'),
+              cardRow(l.recapActiveDays, '${recap.activeDays} / 7'),
+              gap8,
+              cardBody(message),
+            ]),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),

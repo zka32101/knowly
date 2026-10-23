@@ -8,11 +8,11 @@ import '../logic/daily_pick.dart';
 import '../logic/quiz_game.dart';
 import '../logic/review.dart';
 import '../logic/streak.dart';
-import '../models/age_band.dart';
-import '../services/share.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/quiz_play.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 import 'quiz_battle_screen.dart';
 
 /// 今日の復習に出す問題（期限が来た「知らなかった」雑学のうち、クイズがあるもの。1雑学に1問）。
@@ -158,7 +158,6 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen> {
     Widget summary(String result) {
       final correct = result.split('').where((c) => c == '1').length;
       final streak = dailyStreak(settings.dailyResults.keys, today);
-      final band = settings.ageBand ?? AgeBand.adult;
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(24),
@@ -176,14 +175,19 @@ class _DailyChallengeScreenState extends ConsumerState<DailyChallengeScreen> {
               const SizedBox(height: 4),
               Text(l.dailyComeBack),
               const SizedBox(height: 24),
-              if (band.isTeenOrAdult)
-                OutlinedButton.icon(
-                  key: const Key('daily_share'),
-                  icon: const Icon(Icons.ios_share),
-                  label: Text(l.dailyShare),
-                  onPressed: () => ref.read(shareServiceProvider).shareText(
-                      '${l.appName} ${l.dailyTitle} ${dayKey(today)}\n${_marks(result)} $correct/${result.length}'),
-                ),
+              ShareButton(
+                buttonKey: const Key('daily_share'),
+                text: '${l.appName} ${l.dailyTitle} ${dayKey(today)}\n${_marks(result)} $correct/${result.length}\n#${l.appName}',
+                card: ShareFrame(appName: l.appName, children: [
+                  bigEmoji(_marks(result), size: 44),
+                  gap8,
+                  cardBig('$correct / ${result.length}'),
+                  gap8,
+                  cardTitle(l.dailyTitle),
+                  cardBody(dayKey(today)),
+                  cardBody(l.dailyStreak(streak)),
+                ]),
+              ),
               TextButton(
                 key: const Key('daily_exit'),
                 onPressed: () => context.pop(),

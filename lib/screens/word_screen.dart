@@ -10,6 +10,8 @@ import '../models/trivia.dart';
 import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// この用語が出てくる、いま表示できる雑学（この年代・言語・国のもの）。
 final wordFactsProvider = Provider.family<List<Trivia>, String>((ref, id) {
@@ -53,6 +55,18 @@ class WordScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l.wordTitle),
         actions: [
+          ShareButton(
+            buttonKey: const Key('word_share'),
+            compact: true,
+            text: '${text.term} - ${text.simple}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji('📚'),
+              gap8,
+              cardTitle(text.term),
+              gap12,
+              cardBody(text.simple, size: 16),
+            ]),
+          ),
           IconButton(
             key: const Key('word_listen'),
             icon: const Icon(Icons.volume_up),

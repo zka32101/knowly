@@ -19,6 +19,9 @@ const _emoji = {
   'strawberry': '🍓',
 };
 
+/// 絵の id から、仮の絵文字を返す（共有画像など、ウィジェット以外で使う）。
+String emojiForIllustration(String id) => _emoji[id] ?? '💡';
+
 class TriviaIllustration extends StatelessWidget {
   const TriviaIllustration({super.key, required this.id, this.size = 48});
 

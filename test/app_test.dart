@@ -2171,7 +2171,14 @@ void main() {
       expect(containerOf(tester).read(settingsProvider).quizAnswered, 3);
       await tester.tap(find.byKey(const Key('daily_share')));
       await tester.pumpAndSettle();
-      expect(share.sharedText, contains('2026-10-23'));
+      await tester.runAsync(() async {
+        await tester.tap(find.byKey(const Key('share_confirm')));
+        await Future<void>.delayed(const Duration(milliseconds: 500));
+      });
+      await tester.pumpAndSettle();
+      expect(share.text, contains('2026-10-23'));
+      expect(share.text, contains('#ノウリー'));
+      expect(share.png, isNotNull);
       // もう一度開いても、続きから遊べず結果だけ
       await tester.tap(find.byKey(const Key('daily_exit')));
       await tester.pumpAndSettle();
@@ -3362,6 +3369,153 @@ void main() {
       });
       expect(find.byKey(const Key('celebration')), findsNothing);
       expect(containerOf(tester).read(settingsProvider).celebratedOutfits, {'2026-autumn'});
+    });
+  });
+
+  group('SNS共有の拡充', () {
+    Future<void> tapV(WidgetTester tester, Key key) async {
+      final vertical =
+          find.byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical);
+      if (find.byKey(key).evaluate().isEmpty && vertical.evaluate().isNotEmpty) {
+        await tester.scrollUntilVisible(find.byKey(key), 200, scrollable: vertical.first);
+      }
+      await tester.ensureVisible(find.byKey(key));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(key));
+      await tester.pumpAndSettle();
+    }
+
+    /// 共有ボタン → プレビュー → 共有。共有サービスに渡った画像と文を確認できる。
+    Future<void> shareVia(WidgetTester tester, Key button, FakeShare share, {String? inText}) async {
+      await tapV(tester, button);
+      expect(find.byKey(const Key('share_confirm')), findsOneWidget);
+      await tester.runAsync(() async {
+        await tester.tap(find.byKey(const Key('share_confirm')));
+        await Future<void>.delayed(const Duration(milliseconds: 500));
+      });
+      await tester.pumpAndSettle();
+      expect(share.png, isNotNull);
+      expect(share.png!.sublist(0, 4), [0x89, 0x50, 0x4E, 0x47]); // PNG
+      expect(share.text, contains('#ノウリー'));
+      if (inText != null) expect(share.text, contains(inText));
+      expect(find.byKey(const Key('share_confirm')), findsNothing); // 閉じる
+    }
+
+    testWidgets('クイズ対戦（ひとり）の結果を共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await _open(tester, const Key('open_quiz'));
+      await tapV(tester, const Key('battle_kind_tf'));
+      await tapV(tester, const Key('battle_start'));
+      for (var r = 0; r < 5; r++) {
+        await tapV(tester, const Key('battle_true'));
+        await tapV(tester, const Key('battle_next'));
+      }
+      await shareVia(tester, const Key('battle_share'), share, inText: 'ノウリー');
+    });
+
+    testWidgets('クイズ対戦（複数人）は、ランキングつきで共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await _open(tester, const Key('open_quiz'));
+      await tapV(tester, const Key('battle_players_2'));
+      await tapV(tester, const Key('battle_kind_tf'));
+      await tapV(tester, const Key('battle_start'));
+      for (var r = 0; r < 5; r++) {
+        await tapV(tester, const Key('battle_true'));
+        await tapV(tester, const Key('battle_true'));
+        await tapV(tester, const Key('battle_next'));
+      }
+      await shareVia(tester, const Key('battle_share'), share);
+    });
+
+    testWidgets('スワイプの結果を共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await _open(tester, const Key('open_swipe'));
+      for (var i = 0; i < 10; i++) {
+        await tester.tap(find.byKey(const Key('swipe_true')));
+        await tester.pumpAndSettle();
+      }
+      await shareVia(tester, const Key('swipe_share'), share);
+    });
+
+    testWidgets('カプセルのカードを、レア度つきで共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await _open(tester, const Key('open_capsule'));
+      await tapV(tester, const Key('capsule_open'));
+      await tester.pumpAndSettle();
+      await shareVia(tester, const Key('capsule_share'), share, inText: '★');
+    });
+
+    testWidgets('ふりかえり・ずかん・バッジ・相棒・ことば・リーグも共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'seen': ['octopus_blue_blood'],
+        'words': ['hemocyanin'],
+        'activity': ['2026-10-23:3:1:5:4'],
+        'leagueWeek': '2026-10-19',
+        'leagueScores': ['ハナ|12|3|2', 'タロウ|7|3|1'],
+      }, share: share);
+      for (final (open, key) in [
+        ('open_recap', 'recap_share'),
+        ('open_zukan', 'zukan_share'),
+        ('open_badges', 'badges_share'),
+        ('open_mascot', 'mascot_share'),
+        ('open_league', 'league_share'),
+      ]) {
+        await _open(tester, Key(open));
+        share.png = null;
+        await shareVia(tester, Key(key), share);
+        await _back(tester);
+      }
+    });
+
+    testWidgets('ことばの説明も共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult', 'words': ['hemocyanin']}, share: share);
+      await _open(tester, const Key('open_words'));
+      await tester.tap(find.byKey(const Key('word_of_day')));
+      await tester.pumpAndSettle();
+      await shareVia(tester, const Key('word_share'), share);
+    });
+
+    testWidgets('Kids と Junior には、どの共有ボタンも出ない', (tester) async {
+      for (final band in ['kids', 'junior']) {
+        await _pump(tester, prefs: {
+          'ageBand': band,
+          'activity': ['2026-10-23:3:1:5:4'],
+          'dailyResults': ['2026-10-23:101'],
+        });
+        for (final open in [
+          'open_recap',
+          'open_zukan',
+          'open_badges',
+          'open_mascot',
+          'open_league',
+          'open_daily',
+          'open_capsule',
+        ]) {
+          await _open(tester, Key(open));
+          expect(find.byKey(const Key('share_button')), findsNothing, reason: '$band $open');
+          expect(find.byKey(const Key('daily_share')), findsNothing, reason: '$band $open');
+          await _back(tester);
+        }
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('Teen/Adult でも、プレビューの「やめる」では共有されない', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult', 'activity': ['2026-10-23:3:1:5:4']}, share: share);
+      await _open(tester, const Key('open_recap'));
+      await tester.tap(find.byKey(const Key('recap_share')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('share_cancel')));
+      await tester.pumpAndSettle();
+      expect(share.png, isNull);
     });
   });
 }

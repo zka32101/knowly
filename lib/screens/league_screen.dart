@@ -6,6 +6,8 @@ import '../l10n/app_localizations.dart';
 import '../logic/league.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// 家族リーグ: 今週の得点ランキングと、先週の優勝者。この端末の中だけで集計する。
 class LeagueScreen extends ConsumerWidget {
@@ -25,7 +27,26 @@ class LeagueScreen extends ConsumerWidget {
       });
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.leagueTitle)),
+      appBar: AppBar(
+        title: Text(l.leagueTitle),
+        actions: [
+          if (rows.isNotEmpty)
+            ShareButton(
+              buttonKey: const Key('league_share'),
+              compact: true,
+              text: '${l.appName} ${l.leagueTitle}\n${rows.first.key} ${l.battlePoints(rows.first.value.points)}\n#${l.appName}',
+              card: ShareFrame(appName: l.appName, children: [
+                bigEmoji('🏆'),
+                gap8,
+                cardTitle(l.leagueThisWeek),
+                gap12,
+                for (var i = 0; i < rows.length && i < 4; i++)
+                  cardRow('${i == 0 ? '🥇' : (i == 1 ? '🥈' : (i == 2 ? '🥉' : '${i + 1}'))}  ${rows[i].key}',
+                      l.battlePoints(rows[i].value.points)),
+              ]),
+            ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),

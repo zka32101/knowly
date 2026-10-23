@@ -9,6 +9,8 @@ import '../models/trivia.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// レア度の色（ふつう＝灰、レア＝青、スーパーレア＝金）。
 Color rarityColor(Rarity r) => switch (r) {
@@ -47,7 +49,34 @@ class _ZukanScreenState extends ConsumerState<ZukanScreen> {
     final found = shown.where((t) => seen.contains(t.id)).length;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.zukanTitle)),
+      appBar: AppBar(
+        title: Text(l.zukanTitle),
+        actions: [
+          ShareButton(
+            buttonKey: const Key('zukan_share'),
+            compact: true,
+            text: '${l.appName} ${l.zukanTitle} ${l.zukanFound(found, shown.length)}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji('📖'),
+              gap8,
+              cardTitle(l.zukanTitle),
+              gap8,
+              cardBig('$found / ${shown.length}'),
+              gap8,
+              // 見つけた雑学の絵を、ならべる（最大24個）
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 6,
+                runSpacing: 6,
+                children: [
+                  for (final t in shown.where((t) => seen.contains(t.id)).take(24))
+                    Text(emojiForIllustration(t.illustration), style: const TextStyle(fontSize: 26)),
+                ],
+              ),
+            ]),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),

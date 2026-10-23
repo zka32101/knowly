@@ -5,6 +5,8 @@ import '../l10n/app_localizations.dart';
 import '../logic/mascot.dart';
 import '../state/providers.dart';
 import '../widgets/mascot_card.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// 相棒の成長の一覧。まだなっていない姿は「？？？」で見せる。
 class MascotScreen extends ConsumerStatefulWidget {
@@ -24,7 +26,25 @@ class _MascotScreenState extends ConsumerState<MascotScreen> {
     final points = ref.watch(mascotPointsProvider);
     final stage = mascotStageFor(points);
     return Scaffold(
-      appBar: AppBar(title: Text(l.mascotTitle)),
+      appBar: AppBar(
+        title: Text(l.mascotTitle),
+        actions: [
+          ShareButton(
+            buttonKey: const Key('mascot_share'),
+            compact: true,
+            text: '${mascotName(l, stage.id)} ${l.mascotPoints(points)}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji(stage.emoji, size: 80),
+              gap8,
+              cardTitle(mascotName(l, stage.id)),
+              gap8,
+              cardBody(mascotSay(l, stage.id), size: 16),
+              gap8,
+              cardBody(l.mascotPoints(points)),
+            ]),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(20),

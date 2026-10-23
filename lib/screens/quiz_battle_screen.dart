@@ -12,6 +12,8 @@ import '../models/age_band.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/quiz_play.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// 出題の乱数。テストでは固定する。
 final quizRandomProvider = Provider<Random>((ref) => Random());
@@ -334,7 +336,27 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
               trailing: Text('${scores[p]} / $total', style: theme.textTheme.titleMedium),
             ),
         ],
-        const SizedBox(height: 24),
+        const SizedBox(height: 16),
+        ShareButton(
+          buttonKey: const Key('battle_share'),
+          text: '${l.appName} ${l.battleTitle}\n${game.isSolo ? l.battleSoloScore(scores[0], total) : (tied ? l.battleDraw : l.battleWinner(game.names[game.winners.first]))}\n#${l.appName}',
+          card: ShareFrame(appName: l.appName, children: [
+            bigEmoji(game.isSolo ? '🎯' : (tied ? '🤝' : '🏆')),
+            gap8,
+            cardTitle(game.isSolo
+                ? l.battleSoloScore(scores[0], total)
+                : (tied ? l.battleDraw : l.battleWinner(game.names[game.winners.first]))),
+            gap12,
+            if (!game.isSolo)
+              for (final p in order)
+                cardRow('${l.battleRank(ranks[p])}  ${quizAvatars[p]} ${game.names[p]}',
+                    '${scores[p]} / $total'),
+            if (game.isSolo && game.timed) cardBody(l.battlePoints(points[0])),
+            gap8,
+            cardBody(l.battleTitle),
+          ]),
+        ),
+        const SizedBox(height: 8),
         FilledButton(
           key: const Key('battle_again'),
           onPressed: () => _start(l),
