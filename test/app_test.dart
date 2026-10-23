@@ -790,7 +790,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openLibrary(tester);
       final all = count(tester);
-      expect(all, 60);
+      expect(all, 72);
 
       await tester.enterText(find.byKey(const Key('search_field')), 'ラッコ');
       await tester.pumpAndSettle();
@@ -818,7 +818,7 @@ void main() {
       expect(find.textContaining('見つかりませんでした'), findsOneWidget);
       await tester.tap(find.byKey(const Key('search_clear')));
       await tester.pumpAndSettle();
-      expect(count(tester), 60);
+      expect(count(tester), 72);
     });
 
     testWidgets('ジャンルで絞り込める', (tester) async {
@@ -830,7 +830,7 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('閉じる'));
       await tester.pumpAndSettle();
-      expect(count(tester), 10);
+      expect(count(tester), 12);
       expect(find.text('絞り込み（1）'), findsOneWidget);
     });
 
@@ -857,7 +857,7 @@ void main() {
       expect(count(tester), 1);
       await pick('status_learned');
       await pick('status_unrated');
-      expect(count(tester), 58); // 60件のうち評価済み2件を除く
+      expect(count(tester), 70); // 72件のうち評価済み2件を除く
     });
 
     testWidgets('無料の Adult は、無料の範囲外の雑学に鍵がつき、タップでプレミアム案内', (tester) async {
@@ -1034,12 +1034,12 @@ void main() {
 
     testWidgets('日本では、日本限定の雑学（4件）も出る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'JP');
-      expect(await libraryCount(tester), 60);
+      expect(await libraryCount(tester), 72);
     });
 
     testWidgets('アメリカでは、日本限定の雑学が出ない', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'US');
-      expect(await libraryCount(tester), 56);
+      expect(await libraryCount(tester), 68);
       await tester.enterText(find.byKey(const Key('search_field')), '新幹線');
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('result_shinkansen_1964')), findsNothing);
@@ -1048,24 +1048,24 @@ void main() {
     testWidgets('「すべての国」を選ぶと、日本限定の雑学も出る', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'regionMode': 'all'}, deviceRegion: 'US');
-      expect(await libraryCount(tester), 60);
+      expect(await libraryCount(tester), 72);
     });
 
     testWidgets('国を選ぶ設定は、端末の国より優先される', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult', 'regionMode': 'JP'}, deviceRegion: 'US');
-      expect(await libraryCount(tester), 60);
+      expect(await libraryCount(tester), 72);
     });
 
     testWidgets('端末に国がなくても、日本語の端末は日本として扱う', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: null);
-      expect(await libraryCount(tester), 60);
+      expect(await libraryCount(tester), 72);
     });
 
     testWidgets('英語の端末で国が不明なら、国限定の雑学は出ない', (tester) async {
       await _pump(tester,
           prefs: {'ageBand': 'adult'}, deviceRegion: null, deviceLanguage: 'en');
-      expect(await libraryCount(tester), 56);
+      expect(await libraryCount(tester), 68);
     });
 
     testWidgets('設定で国を変えられる', (tester) async {

@@ -17,6 +17,9 @@ const _emoji = {
   'container': '📦', 'watermelon': '🍉', 'cacao': '🍫', 'rice': '🍚', 'carrot': '🥕',
   'peanut': '🥜', 'pineapple': '🍍', 'apple': '🍎', 'wasabi': '🌿', 'popcorn': '🍿',
   'strawberry': '🍓',
+  'penguin': '🐧', 'owl': '🦉', 'camel': '🐫', 'sloth': '🦥', 'salmon': '🐟',
+  'squirrel': '🐿️', 'bat': '🦇', 'ladybug': '🐞', 'cricket': '🦗', 'bicycle': '🚲',
+  'airplane': '✈️',
 };
 
 /// 絵の id から、仮の絵文字を返す（共有画像など、ウィジェット以外で使う）。
