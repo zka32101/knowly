@@ -12,6 +12,7 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
+import 'screens/privacy_screen.dart';
 import 'screens/projects_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
@@ -54,6 +55,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),
       GoRoute(path: '/saved', builder: (_, _) => const SavedScreen()),
       GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),
+      GoRoute(path: '/privacy', builder: (_, _) => const PrivacyScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

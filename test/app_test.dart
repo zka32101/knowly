@@ -1719,4 +1719,55 @@ void main() {
       expect(find.text('Restore purchases'), findsOneWidget);
     });
   });
+
+  group('プライバシーとデータ削除', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    Future<void> openPrivacy(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('privacy_tile'));
+      await tester.tap(find.byKey(const Key('privacy_tile')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('Adult: 説明が出て、削除すると初期状態（オンボーディング）に戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'saved': ['x']});
+      await openPrivacy(tester);
+      expect(find.text('広告も、利用状況の分析（アナリティクス）もありません。'), findsOneWidget);
+      await _scrollTo(tester, const Key('privacy_delete'));
+      await tester.tap(find.byKey(const Key('privacy_delete')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('privacy_delete_cancel')));
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(settingsProvider).ageBand, AgeBand.adult);
+
+      await tester.tap(find.byKey(const Key('privacy_delete')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('privacy_delete_confirm')));
+      await tester.pumpAndSettle();
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.ageBand, isNull);
+      expect(s.saved, isEmpty);
+      expect(_lastNotifications!.cancels, greaterThan(0));
+      expect(find.byKey(const Key('privacy_delete')), findsNothing);
+    });
+
+    testWidgets('Kids: 保護者ゲートを通らないと削除できない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await _solveGate(tester);
+      await _scrollTo(tester, const Key('privacy_tile'));
+      await tester.tap(find.byKey(const Key('privacy_tile')));
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('privacy_delete'));
+      await tester.tap(find.byKey(const Key('privacy_delete')));
+      await tester.pumpAndSettle();
+      await _solveGate(tester, wrong: true);
+      expect(find.byKey(const Key('privacy_delete_confirm')), findsNothing);
+      expect(containerOf(tester).read(settingsProvider).ageBand, AgeBand.kids);
+    });
+  });
 }

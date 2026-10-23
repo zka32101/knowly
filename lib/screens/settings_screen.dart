@@ -232,6 +232,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 title: l.settingsOtherApps,
               ),
             ),
+          ListTile(
+            key: const Key('privacy_tile'),
+            title: Text(l.privacyTitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => context.push('/privacy'),
+          ),
           if (band.isChild)
             Padding(
               padding: const EdgeInsets.all(16),

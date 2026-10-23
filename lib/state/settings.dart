@@ -140,6 +140,12 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
 
   final SharedPreferences _prefs;
 
+  /// 端末に保存した設定・保存・記録をすべて消して、初期状態に戻す。
+  Future<void> resetAll() async {
+    await _prefs.clear();
+    state = _read(_prefs);
+  }
+
   static AppSettings _read(SharedPreferences p) {
     final ratings = <String, Set<Rating>>{};
     final raw = p.getString('ratings');

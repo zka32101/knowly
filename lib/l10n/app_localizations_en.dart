@@ -680,4 +680,61 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get premiumNothingToRestore => 'No purchases to restore were found';
+
+  @override
+  String get privacyTitle => 'Privacy & about';
+
+  @override
+  String get privacyDataHeading => 'How your data is handled';
+
+  @override
+  String get privacyPointLocal =>
+      'Your settings, saved facts and records stay on this device only.';
+
+  @override
+  String get privacyPointBirthYear =>
+      'Your birth year is used only to pick an age mode and is never stored.';
+
+  @override
+  String get privacyPointNoAds => 'There are no ads and no usage analytics.';
+
+  @override
+  String get privacyPointChildren =>
+      'Kids and Junior modes use no network connection and no purchase SDK.';
+
+  @override
+  String get privacyPointTeenAdult =>
+      'Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app.';
+
+  @override
+  String privacyContact(String email) {
+    return 'Contact: $email';
+  }
+
+  @override
+  String get privacyLicenses => 'Open-source licenses';
+
+  @override
+  String privacyVersion(String version) {
+    return 'Version $version';
+  }
+
+  @override
+  String get privacyDeleteButton => 'Delete data on this device';
+
+  @override
+  String get privacyDeleteTitle => 'Delete your data?';
+
+  @override
+  String get privacyDeleteBody =>
+      'All settings, saved facts, records and scheduled notifications will be erased and the app returns to the first screen. This cannot be undone. Premium you purchased is kept (restore it from the store).';
+
+  @override
+  String get privacyDeleteConfirm => 'Delete';
+
+  @override
+  String get privacyDeleteCancel => 'Cancel';
+
+  @override
+  String get privacyDeleted => 'Data deleted';
 }

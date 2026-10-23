@@ -667,4 +667,58 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get premiumNothingToRestore => '復元できる購入が見つかりませんでした';
+
+  @override
+  String get privacyTitle => 'プライバシーとアプリについて';
+
+  @override
+  String get privacyDataHeading => 'データの扱い';
+
+  @override
+  String get privacyPointLocal => '設定・保存した雑学・記録は、この端末の中だけに保存されます。';
+
+  @override
+  String get privacyPointBirthYear => '生まれた年は年代の判定にだけ使い、保存しません。';
+
+  @override
+  String get privacyPointNoAds => '広告も、利用状況の分析（アナリティクス）もありません。';
+
+  @override
+  String get privacyPointChildren => 'Kids / Junior では、ネットワーク通信も課金のしくみも使いません。';
+
+  @override
+  String get privacyPointTeenAdult =>
+      'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。';
+
+  @override
+  String privacyContact(String email) {
+    return 'お問い合わせ: $email';
+  }
+
+  @override
+  String get privacyLicenses => 'オープンソースライセンス';
+
+  @override
+  String privacyVersion(String version) {
+    return 'バージョン $version';
+  }
+
+  @override
+  String get privacyDeleteButton => 'この端末のデータを削除';
+
+  @override
+  String get privacyDeleteTitle => 'データを削除しますか？';
+
+  @override
+  String get privacyDeleteBody =>
+      '設定・保存した雑学・記録・通知の予約がすべて消え、最初の画面に戻ります。元に戻せません。購入済みのプレミアムは消えません（ストアで復元できます）。';
+
+  @override
+  String get privacyDeleteConfirm => '削除する';
+
+  @override
+  String get privacyDeleteCancel => 'やめる';
+
+  @override
+  String get privacyDeleted => 'データを削除しました';
 }

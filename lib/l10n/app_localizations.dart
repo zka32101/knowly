@@ -1351,6 +1351,102 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'復元できる購入が見つかりませんでした'**
   String get premiumNothingToRestore;
+
+  /// No description provided for @privacyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'プライバシーとアプリについて'**
+  String get privacyTitle;
+
+  /// No description provided for @privacyDataHeading.
+  ///
+  /// In ja, this message translates to:
+  /// **'データの扱い'**
+  String get privacyDataHeading;
+
+  /// No description provided for @privacyPointLocal.
+  ///
+  /// In ja, this message translates to:
+  /// **'設定・保存した雑学・記録は、この端末の中だけに保存されます。'**
+  String get privacyPointLocal;
+
+  /// No description provided for @privacyPointBirthYear.
+  ///
+  /// In ja, this message translates to:
+  /// **'生まれた年は年代の判定にだけ使い、保存しません。'**
+  String get privacyPointBirthYear;
+
+  /// No description provided for @privacyPointNoAds.
+  ///
+  /// In ja, this message translates to:
+  /// **'広告も、利用状況の分析（アナリティクス）もありません。'**
+  String get privacyPointNoAds;
+
+  /// No description provided for @privacyPointChildren.
+  ///
+  /// In ja, this message translates to:
+  /// **'Kids / Junior では、ネットワーク通信も課金のしくみも使いません。'**
+  String get privacyPointChildren;
+
+  /// No description provided for @privacyPointTeenAdult.
+  ///
+  /// In ja, this message translates to:
+  /// **'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。'**
+  String get privacyPointTeenAdult;
+
+  /// No description provided for @privacyContact.
+  ///
+  /// In ja, this message translates to:
+  /// **'お問い合わせ: {email}'**
+  String privacyContact(String email);
+
+  /// No description provided for @privacyLicenses.
+  ///
+  /// In ja, this message translates to:
+  /// **'オープンソースライセンス'**
+  String get privacyLicenses;
+
+  /// No description provided for @privacyVersion.
+  ///
+  /// In ja, this message translates to:
+  /// **'バージョン {version}'**
+  String privacyVersion(String version);
+
+  /// No description provided for @privacyDeleteButton.
+  ///
+  /// In ja, this message translates to:
+  /// **'この端末のデータを削除'**
+  String get privacyDeleteButton;
+
+  /// No description provided for @privacyDeleteTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'データを削除しますか？'**
+  String get privacyDeleteTitle;
+
+  /// No description provided for @privacyDeleteBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'設定・保存した雑学・記録・通知の予約がすべて消え、最初の画面に戻ります。元に戻せません。購入済みのプレミアムは消えません（ストアで復元できます）。'**
+  String get privacyDeleteBody;
+
+  /// No description provided for @privacyDeleteConfirm.
+  ///
+  /// In ja, this message translates to:
+  /// **'削除する'**
+  String get privacyDeleteConfirm;
+
+  /// No description provided for @privacyDeleteCancel.
+  ///
+  /// In ja, this message translates to:
+  /// **'やめる'**
+  String get privacyDeleteCancel;
+
+  /// No description provided for @privacyDeleted.
+  ///
+  /// In ja, this message translates to:
+  /// **'データを削除しました'**
+  String get privacyDeleted;
 }
 
 class _AppLocalizationsDelegate
