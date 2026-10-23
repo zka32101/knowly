@@ -739,7 +739,7 @@ void main() {
       expect(find.byType(FilterChip), findsNothing); // ホームにチップは並べない
       await tester.tap(find.byKey(const Key('filter_button')));
       await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.tap(find.widgetWithText(FilterChip, '昆虫'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('閉じる'));
       await tester.pumpAndSettle();
@@ -748,9 +748,9 @@ void main() {
       final sp = await SharedPreferences.getInstance();
       expect(sp.getStringList('categories'), ['bugs']);
       // 表示されたカードのカテゴリー表示は「むし」だけ
-      expect(find.text('どうぶつ'), findsNothing);
-      expect(find.text('たべもの'), findsNothing);
-      expect(find.text('むし'), findsWidgets);
+      expect(find.text('動物'), findsNothing);
+      expect(find.text('食べ物'), findsNothing);
+      expect(find.text('昆虫'), findsWidgets);
     });
 
     testWidgets('リセットで絞り込みが解除される', (tester) async {
@@ -826,7 +826,7 @@ void main() {
       await openLibrary(tester);
       await tester.tap(find.byKey(const Key('library_filter_button')));
       await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.tap(find.widgetWithText(FilterChip, '昆虫'));
       await tester.pumpAndSettle();
       await tester.tap(find.text('閉じる'));
       await tester.pumpAndSettle();
@@ -909,7 +909,7 @@ void main() {
       final cards = find.descendant(of: section, matching: find.byIcon(Icons.chevron_right));
       expect(cards.evaluate().length, 2);
       // 出ているのは登録したジャンルのものだけ
-      final labels = find.descendant(of: section, matching: find.textContaining(RegExp('^(むし|のりもの)\$')));
+      final labels = find.descendant(of: section, matching: find.textContaining(RegExp('^(昆虫|乗り物)\$')));
       expect(labels.evaluate().length, 2);
     });
 
@@ -979,7 +979,7 @@ void main() {
       await _pickYear(tester, 1990);
       await tester.tap(find.byKey(const Key('onboarding_next')));
       await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.tap(find.widgetWithText(FilterChip, '昆虫'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('onboarding_next')));
       await tester.pumpAndSettle();
@@ -1986,7 +1986,7 @@ void main() {
       expect(find.byKey(const Key('battle_turn')), findsNothing); // 1人は順番表示なし
       await playAll(tester, 1, 5);
       expect(find.byKey(const Key('battle_final')), findsOneWidget);
-      expect(find.textContaining('もん せいかい'), findsOneWidget);
+      expect(find.textContaining('問正解'), findsOneWidget);
       await tester.tap(find.byKey(const Key('battle_again')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('battle_statement')), findsOneWidget);
@@ -2018,7 +2018,7 @@ void main() {
       await playAll(tester, 4, 4);
       expect(find.byKey(const Key('battle_rank_0')), findsOneWidget);
       expect(find.byKey(const Key('battle_rank_3')), findsOneWidget);
-      expect(find.text('ひきわけ！'), findsOneWidget); // 全員同じ答えなので同点
+      expect(find.text('引き分け'), findsOneWidget); // 全員同じ答えなので同点
     });
 
     testWidgets('選択式だけ: 4択の問題が出て、選んで進める', (tester) async {
@@ -2209,9 +2209,9 @@ void main() {
       });
       await _open(tester, const Key('open_badges'));
       expect(find.byKey(const Key('badge_streak_3')), findsOneWidget);
-      expect(find.text('3にち れんぞく'), findsOneWidget);
+      expect(find.text('3日連続'), findsOneWidget);
       final count = find.byKey(const Key('badges_count'));
-      expect(tester.widget<Text>(count).data, contains('2 /')); // 3日連続 + クイズ10問
+      expect(tester.widget<Text>(count).data, contains('個中2個')); // 3日連続 + クイズ10問
     });
 
     testWidgets('バッジ: Kids には連続日数のバッジがない', (tester) async {
@@ -2338,7 +2338,7 @@ void main() {
       await tester.tap(find.byKey(const Key('mascot_card')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('mascot_current')), findsOneWidget);
-      expect(find.text('ちびふくろう'), findsWidgets);
+      expect(find.text('ちびフクロウ'), findsWidgets);
       expect(find.text('？？？'), findsWidgets); // まだなっていない姿
     });
 
@@ -2386,7 +2386,7 @@ void main() {
       await tester.pump();
       await tester.pump();
       expect(find.byKey(const Key('celebration')), findsOneWidget);
-      expect(find.text('ひよこに なったよ！'), findsOneWidget);
+      expect(find.text('ひよこに成長しました'), findsOneWidget);
       await tester.pumpAndSettle(); // 3秒で自動で消える
       expect(find.byKey(const Key('celebration')), findsNothing);
       expect(containerOf(tester).read(settingsProvider).celebratedStage, 1);
@@ -2402,7 +2402,7 @@ void main() {
       containerOf(tester).read(settingsProvider.notifier).recordQuizAnswer(correct: true);
       await tester.pump();
       await tester.pump();
-      expect(find.text('バッジを ゲット！'), findsOneWidget);
+      expect(find.text('バッジを獲得'), findsOneWidget);
       await tester.tap(find.byKey(const Key('celebration')));
       await tester.pump();
       expect(find.byKey(const Key('celebration')), findsNothing);
@@ -2558,7 +2558,7 @@ void main() {
       await tester.pumpAndSettle();
       final total = containerOf(tester).read(allEligibleProvider).length;
       expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
-          '2 / $total みつけた');
+          '2 / $total 発見');
       // どうぶつだけに絞ると、そのジャンルの数
       await tester.tap(find.byKey(const Key('zukan_cat_animals')));
       await tester.pumpAndSettle();
@@ -2567,7 +2567,7 @@ void main() {
           .where((t) => t.category == 'animals')
           .length;
       expect(tester.widget<Text>(find.byKey(const Key('zukan_progress'))).data,
-          '2 / $animals みつけた');
+          '2 / $animals 発見');
       // 見つけたマスを押すと詳細へ
       await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
       await tester.pumpAndSettle();
@@ -2614,7 +2614,7 @@ void main() {
         if (i == 1) expect(find.byKey(const Key('swipe_combo')), findsOneWidget);
       }
       expect(find.byKey(const Key('swipe_final')), findsOneWidget);
-      expect(find.text('いちばん れんぞく：10'), findsOneWidget);
+      expect(find.text('最高連続：10'), findsOneWidget);
       expect(containerOf(tester).read(settingsProvider).quizCorrect, 10);
       await tester.tap(find.byKey(const Key('swipe_again')));
       await tester.pumpAndSettle();
@@ -2875,7 +2875,7 @@ void main() {
       final router = containerOf(tester).read(routerProvider);
       router.push('/word/not_a_word');
       await tester.pumpAndSettle();
-      expect(find.text('せつめいが みつかりません。'), findsOneWidget);
+      expect(find.text('解説が見つかりません。'), findsOneWidget);
     });
   });
 
@@ -2887,13 +2887,13 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await _open(tester, const Key('open_words'));
       final total = containerOf(tester).read(glossaryListProvider).length;
-      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '0 / $total ことば');
+      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '0 / $total 語');
       expect(find.byKey(const Key('word_of_day')), findsOneWidget);
       // 今日のことばを開くと、見たことになる
       await tester.tap(find.byKey(const Key('word_of_day')));
       await tester.pumpAndSettle();
       await _back(tester);
-      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '1 / $total ことば');
+      expect(tester.widget<Text>(find.byKey(const Key('words_progress'))).data, '1 / $total 語');
       expect(containerOf(tester).read(settingsProvider).words, hasLength(1));
     });
 
@@ -3232,7 +3232,7 @@ void main() {
     testWidgets('何もしていない週は「おやすみ」のメッセージ', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await _open(tester, const Key('open_recap'));
-      expect(find.text('こんしゅうは おやすみだったね。また ひとつ、よんでみよう！'), findsOneWidget);
+      expect(find.text('今週はお休みでしたね。ひとつ読んで再開しましょう。'), findsOneWidget);
     });
 
     testWidgets('日曜日だけ、ホームにふりかえりのお知らせが出る', (tester) async {
@@ -3356,7 +3356,7 @@ void main() {
       n.markSeen(autumn[2]);
       await tester.pump();
       await tester.pump();
-      expect(find.text('きせつの ようふくを ゲット！'), findsOneWidget);
+      expect(find.text('季節の衣装を獲得'), findsOneWidget);
       await tester.pumpAndSettle();
       expect(containerOf(tester).read(settingsProvider).celebratedOutfits, contains('2026-autumn'));
     });
@@ -3516,6 +3516,69 @@ void main() {
       await tester.tap(find.byKey(const Key('share_cancel')));
       await tester.pumpAndSettle();
       expect(share.png, isNull);
+    });
+  });
+
+  group('モードで変わる表記（日本語）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('Kids はひらがな、Junior はスペースなしのひらがな、Adult は漢字まじり', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.text('あそぶ'), findsWidgets);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      expect(find.text('あそぶ'), findsWidgets);
+      await _tab(tester, 'tab_play');
+      expect(find.text('クイズたいせん'), findsOneWidget);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.text('遊ぶ'), findsWidgets);
+      await _tab(tester, 'tab_play');
+      expect(find.text('クイズ対戦'), findsOneWidget);
+    });
+
+    testWidgets('Junior の文言は、日本語の間にスペースがない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await _tab(tester, 'tab_collect');
+      expect(find.text('ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。'), findsNothing);
+      expect(find.text('ざつがくをみるほど、あいぼうがそだってコレクションがふえるよ。'), findsOneWidget);
+    });
+
+    testWidgets('モードを変えると、表記がその場で入れ替わる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _tab(tester, 'tab_play');
+      expect(find.text('クイズ対戦'), findsOneWidget);
+      containerOf(tester).read(settingsProvider.notifier).setAgeBand(AgeBand.kids);
+      await tester.pumpAndSettle();
+      await _tab(tester, 'tab_play');
+      expect(find.text('クイズ対戦'), findsNothing);
+      expect(find.text('クイズたいせん'), findsOneWidget);
+      containerOf(tester).read(settingsProvider.notifier).setAgeBand(AgeBand.teen);
+      await tester.pumpAndSettle();
+      await _tab(tester, 'tab_play');
+      expect(find.text('クイズ対戦'), findsOneWidget);
+    });
+
+    testWidgets('Teen も大人と同じ、漢字まじりの表記', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'teen'});
+      await _tab(tester, 'tab_collect');
+      expect(find.text('図鑑'), findsOneWidget);
+    });
+
+    testWidgets('英語・中国語などは、モードで表記を変えない', (tester) async {
+      for (final band in ['kids', 'adult']) {
+        await _pump(tester, prefs: {'ageBand': band}, deviceLanguage: 'en', deviceRegion: 'US');
+        await _tab(tester, 'tab_play');
+        expect(find.text('Quiz battle'), findsOneWidget, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('最初の画面（年代を選ぶ前）は、ふつうの漢字まじりの表記', (tester) async {
+      await _pump(tester);
+      expect(find.text('言語 / Language'), findsOneWidget);
+      expect(find.text('次へ'), findsOneWidget); // continueButton の Adult 表記
     });
   });
 }
