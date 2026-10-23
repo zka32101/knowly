@@ -1051,6 +1051,48 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'けっかを みる'**
   String get mythFinish;
+
+  /// No description provided for @todayTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日は何の日'**
+  String get todayTitle;
+
+  /// No description provided for @todayNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうは とくべつな ひでは ありません'**
+  String get todayNone;
+
+  /// No description provided for @todayUpcoming.
+  ///
+  /// In ja, this message translates to:
+  /// **'もうすぐ'**
+  String get todayUpcoming;
+
+  /// No description provided for @todayBanner.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日は「{title}」'**
+  String todayBanner(String title);
+
+  /// No description provided for @todayCountry.
+  ///
+  /// In ja, this message translates to:
+  /// **'この国の行事'**
+  String get todayCountry;
+
+  /// No description provided for @todayHome.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日は何の日'**
+  String get todayHome;
+
+  /// No description provided for @dateMonthDay.
+  ///
+  /// In ja, this message translates to:
+  /// **'{date}'**
+  String dateMonthDay(DateTime date);
 }
 
 class _AppLocalizationsDelegate

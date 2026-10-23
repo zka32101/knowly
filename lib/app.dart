@@ -13,6 +13,7 @@ import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
+import 'screens/today_screen.dart';
 import 'state/notification_sync.dart';
 import 'state/settings.dart';
 
@@ -39,6 +40,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           chain: int.tryParse(state.uri.queryParameters['chain'] ?? '') ?? 0,
         ),
       ),
+      GoRoute(path: '/today', builder: (_, _) => const TodayScreen()),
       GoRoute(path: '/myths', builder: (_, _) => const MythScreen()),
       GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
       GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),

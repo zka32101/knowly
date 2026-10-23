@@ -517,4 +517,32 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mythFinish => 'See results';
+
+  @override
+  String get todayTitle => 'On this day';
+
+  @override
+  String get todayNone => 'No special day today';
+
+  @override
+  String get todayUpcoming => 'Coming up';
+
+  @override
+  String todayBanner(String title) {
+    return 'Today: $title';
+  }
+
+  @override
+  String get todayCountry => 'Local event';
+
+  @override
+  String get todayHome => 'On this day';
+
+  @override
+  String dateMonthDay(DateTime date) {
+    final intl.DateFormat dateDateFormat = intl.DateFormat.MMMd(localeName);
+    final String dateString = dateDateFormat.format(date);
+
+    return '$dateString';
+  }
 }

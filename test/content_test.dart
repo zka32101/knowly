@@ -330,4 +330,62 @@ void main() {
       }
     });
   });
+
+  group('今日は何の日（calendar.json）', () {
+    final doc = jsonDecode(File('assets/trivia/calendar.json').readAsStringSync())
+        as Map<String, dynamic>;
+    final events = (doc['items'] as List).cast<Map<String, dynamic>>();
+    final factIds = {for (final t in items) t.id};
+
+    test('IDが一意で、日付が正しく、つなぐ雑学が実在する', () {
+      expect(events.length, greaterThanOrEqualTo(15));
+      expect(events.map((e) => e['id']).toSet().length, events.length);
+      for (final e in events) {
+        final p = (e['date'] as String).split('-');
+        final m = int.parse(p[0]);
+        final d = int.parse(p[1]);
+        expect(DateTime.utc(2024, m, d).month, m, reason: '${e['id']}: ${e['date']}');
+        if (e['factId'] != null) expect(factIds, contains(e['factId']), reason: '${e['id']}');
+      }
+    });
+
+    test('同じ日付・同じ国の記念日が重ならない（1日に1つ）', () {
+      final seen = <String>{};
+      for (final e in events) {
+        final regions = ((e['regions'] as List).isEmpty ? ['*'] : (e['regions'] as List).cast<String>());
+        for (final r in regions) {
+          expect(seen.add('${e['date']}/$r'), isTrue, reason: '${e['date']}/$r');
+        }
+      }
+    });
+
+    test('国の行事は国タグ（regions）がつき、国際デーは国タグなし', () {
+      final jp = events.where((e) => (e['regions'] as List).contains('JP'));
+      expect(jp.map((e) => e['id']), containsAll(['hinamatsuri', 'tanabata', 'kodomo_no_hi']));
+      final intl = events.where((e) => (e['regions'] as List).isEmpty);
+      expect(intl.map((e) => e['id']), containsAll(['earth_day', 'pi_day', 'new_year']));
+    });
+
+    test('子ども向けの日本語はひらがな中心（漢字なし）、不適切なことばなし', () {
+      const bad = ['殺', '死', '戦争', '宗教', '性的', '酒', '賭', '兵器', 'せんそう', 'しゅうきょう'];
+      for (final e in events) {
+        final c = e['translations']['ja']['child'] as Map<String, dynamic>;
+        for (final k in ['title', 'body']) {
+          final text = c[k] as String;
+          expect(_kanji.hasMatch(text), isFalse, reason: '${e['id']}: $text');
+          for (final w in bad) {
+            expect(text.contains(w), isFalse, reason: '${e['id']}: $text');
+          }
+        }
+        expect((e['translations']['en']['child']['body'] as String).trim(), isNotEmpty);
+        expect((e['translations']['en']['default']['body'] as String).trim(), isNotEmpty);
+      }
+    });
+
+    test('Kids に出る記念日には、話題のタグがない', () {
+      for (final e in events) {
+        if (e['minAgeBand'] == 'kids') expect(e['contentFlags'], isEmpty, reason: '${e['id']}');
+      }
+    });
+  });
 }

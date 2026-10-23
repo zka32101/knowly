@@ -181,4 +181,40 @@ void main() {
       }
     });
   });
+
+  group('今日は何の日（calendar.json）のメタデータ', () {
+    final ev = ((jsonDecode(File('assets/trivia/calendar.json').readAsStringSync())
+        as Map<String, dynamic>)['items'] as List).cast<Map<String, dynamic>>();
+
+    test('必須項目・国タグの形式', () {
+      final code = RegExp(r'^[A-Z]{2}$');
+      for (final e in ev) {
+        final id = e['id'] as String;
+        expect(['active', 'hidden', 'retired'], contains(e['status']), reason: id);
+        expect(['kids', 'junior', 'teen', 'adult'], contains(e['minAgeBand']), reason: id);
+        for (final r in [...(e['regions'] as List), ...(e['excludeRegions'] as List)]) {
+          expect(r, matches(code), reason: id);
+        }
+        for (final f in e['contentFlags'] as List) {
+          expect(validContentFlags, contains(f), reason: id);
+        }
+      }
+    });
+
+    test('reviewed / published にするには、出典・検証・レビューの記録が必要', () {
+      for (final e in ev) {
+        final id = e['id'] as String;
+        final v = e['verification'] as Map<String, dynamic>;
+        final tr = (e['translations'] as Map<String, dynamic>).cast<String, Map<String, dynamic>>();
+        for (final entry in tr.entries) {
+          expect(['draft', 'reviewed', 'published'], contains(entry.value['reviewStatus']), reason: id);
+          if (entry.value['reviewStatus'] != 'draft') {
+            expect(v['status'], 'verified', reason: id);
+            expect(e['sources'] as List, isNotEmpty, reason: '$id: 出典');
+            expect(entry.value['reviewedBy'], isNotNull, reason: '$id/${entry.key}');
+          }
+        }
+      }
+    });
+  });
 }

@@ -7,6 +7,7 @@ import '../logic/interests.dart';
 import '../logic/search.dart';
 import '../logic/timing.dart';
 import '../models/age_band.dart';
+import '../models/calendar_event.dart';
 import '../models/myth.dart';
 import '../models/trivia.dart';
 import '../services/entitlement.dart';
@@ -241,4 +242,59 @@ final mythDeckProvider = Provider<List<Myth>>((ref) {
     return c != 0 ? c : a.id.compareTo(b.id);
   });
   return deck;
+});
+
+DateTime dateOnly(DateTime d) => DateTime(d.year, d.month, d.day);
+
+/// その日の記念日。カレンダーの記念日と、記念日つきの雑学（`dates` の当日）をまとめる。
+/// 同じ雑学につながるカレンダーの記念日があれば、雑学の側は重ねて出さない。
+final dayEventsProvider = Provider.family<List<DayEvent>, DateTime>((ref, day) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null) return const [];
+  final lang = ref.watch(contentLanguageProvider);
+  final region = ref.watch(regionProvider);
+  final repo = ref.watch(triviaRepositoryProvider);
+  final out = <DayEvent>[];
+  final linkedFacts = <String>{};
+  for (final e in repo.eligibleEvents(band, lang, region: region.code, anyRegion: region.any)) {
+    if (!e.occursOn(day)) continue;
+    final text = e.textFor(band, lang, allowDraft: kAllowDraftContent)!;
+    out.add(DayEvent(
+      id: e.id,
+      date: day,
+      title: text.title,
+      body: text.body,
+      factId: e.factId,
+      isCountrySpecific: e.regions.isNotEmpty,
+    ));
+    if (e.factId != null) linkedFacts.add(e.factId!);
+  }
+  for (final t in ref.watch(allEligibleProvider)) {
+    if (linkedFacts.contains(t.id)) continue;
+    if (dateOffset(t.dates, day, window: 0) != 0) continue;
+    final level = t.levelFor(band, lang, allowDraft: kAllowDraftContent);
+    if (level == null) continue;
+    out.add(DayEvent(
+      id: 'fact:${t.id}',
+      date: day,
+      title: level.title,
+      body: level.body,
+      factId: t.id,
+      isCountrySpecific: t.regions.isNotEmpty,
+    ));
+  }
+  return out;
+});
+
+/// 今日の記念日。
+final todayEventsProvider =
+    Provider<List<DayEvent>>((ref) => ref.watch(dayEventsProvider(dateOnly(ref.watch(nowProvider)))));
+
+/// これから14日以内の記念日（今日は含まない）。日付の近い順。
+final upcomingEventsProvider = Provider<List<DayEvent>>((ref) {
+  final today = dateOnly(ref.watch(nowProvider));
+  return [
+    for (var i = 1; i <= 14; i++)
+      ...ref.watch(dayEventsProvider(DateTime(today.year, today.month, today.day + i))),
+  ];
 });

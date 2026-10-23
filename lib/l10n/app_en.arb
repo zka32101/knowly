@@ -247,5 +247,27 @@
         "type": "int"
       }
     }
+  },
+  "todayTitle": "On this day",
+  "todayNone": "No special day today",
+  "todayUpcoming": "Coming up",
+  "todayBanner": "Today: {title}",
+  "todayCountry": "Local event",
+  "todayHome": "On this day",
+  "@todayBanner": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "dateMonthDay": "{date}",
+  "@dateMonthDay": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "MMMd"
+      }
+    }
   }
 }

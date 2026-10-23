@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/models/age_band.dart';
+import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
@@ -70,6 +71,10 @@ TriviaRepository _repo() {
     myths: ((jsonDecode(File('assets/trivia/myths.json').readAsStringSync())
             as Map<String, dynamic>)['items'] as List)
         .map((e) => Myth.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    events: ((jsonDecode(File('assets/trivia/calendar.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => CalendarEvent.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1154,6 +1159,91 @@ void main() {
       final text = tester.widget<WrapText>(find.byKey(const Key('myth_statement'))).text;
       expect(RegExp(r'[A-Za-z]').hasMatch(text), isTrue);
       expect(RegExp(r'[ぁ-んァ-ヶ]').hasMatch(text), isFalse);
+    });
+  });
+
+  group('今日は何の日', () {
+    Future<void> openToday(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_today')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('記念日の日は、ホームにバナーが出て、画面に記念日が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 4, 22, 9));
+      expect(find.byKey(const Key('today_banner')), findsOneWidget);
+      expect(find.text('今日は「アースデー(地球の日)」'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('today_banner')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('event_earth_day')), findsOneWidget);
+      expect(find.text('4月22日'), findsOneWidget);
+    });
+
+    testWidgets('記念日でない日は、バナーが出ず、画面に案内が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, 23, 9));
+      expect(find.byKey(const Key('today_banner')), findsNothing);
+      await openToday(tester);
+      expect(find.byKey(const Key('today_none')), findsOneWidget);
+    });
+
+    testWidgets('これから2週間の記念日が、日付つきで出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 4, 20, 9));
+      await openToday(tester);
+      // 4/22 アースデー（2日後）・4/23 世界本の日（3日後）
+      expect(find.byKey(const Key('event_earth_day')), findsOneWidget);
+      expect(find.byKey(const Key('event_book_day')), findsOneWidget);
+      expect(find.byKey(const Key('event_date_earth_day')), findsOneWidget);
+    });
+
+    testWidgets('日本の行事は日本でだけ出る（アメリカでは出ない）', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, now: DateTime(2026, 7, 7, 9), deviceRegion: 'JP');
+      expect(find.text('今日は「七夕」'), findsOneWidget);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, now: DateTime(2026, 7, 7, 9), deviceRegion: 'US');
+      expect(find.byKey(const Key('today_banner')), findsNothing);
+    });
+
+    testWidgets('「すべての国」を選ぶと、国限定の行事も出る', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'regionMode': 'all'},
+          now: DateTime(2026, 7, 7, 9),
+          deviceRegion: 'US');
+      expect(find.byKey(const Key('today_banner')), findsOneWidget);
+    });
+
+    testWidgets('記念日つきの雑学（新幹線 10/1）も、今日は何の日に出て、雑学を開ける', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, 1, 9));
+      await openToday(tester);
+      expect(find.byKey(const Key('event_fact:shinkansen_1964')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('event_read_fact:shinkansen_1964')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+
+    testWidgets('同じ雑学につながる記念日は、重ねて出さない（バレンタインとカカオ）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 2, 14, 9));
+      await openToday(tester);
+      expect(find.byKey(const Key('event_valentine')), findsOneWidget);
+      expect(find.byKey(const Key('event_fact:cacao_money')), findsNothing);
+    });
+
+    testWidgets('Kids の入口からも見られて、文章はひらがな', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'}, now: DateTime(2026, 4, 22, 9));
+      expect(find.byKey(const Key('today_banner')), findsNothing); // Kids のホームにバナーはない
+      await openToday(tester);
+      expect(find.text('アースデイ'), findsOneWidget);
+    });
+
+    testWidgets('英語の端末では、日付も記念日も英語', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'},
+          now: DateTime(2026, 4, 22, 9),
+          deviceLanguage: 'en',
+          deviceRegion: 'US');
+      await openToday(tester);
+      expect(find.text('Apr 22'), findsOneWidget);
+      expect(find.text('Earth Day'), findsOneWidget);
     });
   });
 }

@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../models/age_band.dart';
+import '../models/calendar_event.dart';
 import '../models/myth.dart';
 import '../models/quiz.dart';
 import '../models/trivia.dart';
@@ -32,11 +33,13 @@ class TriviaRepository {
     List<QuizItem> quizzes = const [],
     List<WhyLink> whyLinks = const [],
     this.myths = const [],
+    this.events = const [],
   })  : _quizzes = {for (final q in quizzes) q.factId: q},
         _whyLinks = {for (final w in whyLinks) w.from: w};
 
   final List<Trivia> items;
   final List<Myth> myths;
+  final List<CalendarEvent> events;
   final Map<String, QuizItem> _quizzes;
   final Map<String, WhyLink> _whyLinks;
 
@@ -44,6 +47,7 @@ class TriviaRepository {
   static const quizAssetPath = 'assets/trivia/quiz.json';
   static const whyAssetPath = 'assets/trivia/why_chains.json';
   static const mythAssetPath = 'assets/trivia/myths.json';
+  static const calendarAssetPath = 'assets/trivia/calendar.json';
 
   static Future<TriviaRepository> load({AssetBundle? bundle}) async {
     final b = bundle ?? rootBundle;
@@ -64,7 +68,12 @@ class TriviaRepository {
     final myths = (mythDecoded['items'] as List)
         .map((e) => Myth.fromJson(e as Map<String, dynamic>))
         .toList();
-    return TriviaRepository(list, quizzes: quizzes, whyLinks: whyLinks, myths: myths);
+    final calDecoded = jsonDecode(await b.loadString(calendarAssetPath)) as Map<String, dynamic>;
+    final events = (calDecoded['items'] as List)
+        .map((e) => CalendarEvent.fromJson(e as Map<String, dynamic>))
+        .toList();
+    return TriviaRepository(list,
+        quizzes: quizzes, whyLinks: whyLinks, myths: myths, events: events);
   }
 
   /// この年代・言語・国で遊べる「ほんと？うそ？」。
@@ -79,6 +88,20 @@ class TriviaRepository {
           .where((m) =>
               m.allowedInRegion(region, anyRegion: anyRegion) &&
               m.textFor(band, lang, allowDraft: allowDraft) != null)
+          .toList();
+
+  /// この年代・言語・国で表示できる記念日。
+  List<CalendarEvent> eligibleEvents(
+    AgeBand band,
+    String lang, {
+    bool allowDraft = kAllowDraftContent,
+    String? region,
+    bool anyRegion = true,
+  }) =>
+      events
+          .where((e) =>
+              e.allowedInRegion(region, anyRegion: anyRegion) &&
+              e.textFor(band, lang, allowDraft: allowDraft) != null)
           .toList();
 
   /// この雑学から「なぜ？」でつながる次の輪。なければ null。

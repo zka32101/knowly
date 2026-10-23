@@ -507,4 +507,32 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mythFinish => 'けっかを みる';
+
+  @override
+  String get todayTitle => '今日は何の日';
+
+  @override
+  String get todayNone => 'きょうは とくべつな ひでは ありません';
+
+  @override
+  String get todayUpcoming => 'もうすぐ';
+
+  @override
+  String todayBanner(String title) {
+    return '今日は「$title」';
+  }
+
+  @override
+  String get todayCountry => 'この国の行事';
+
+  @override
+  String get todayHome => '今日は何の日';
+
+  @override
+  String dateMonthDay(DateTime date) {
+    final intl.DateFormat dateDateFormat = intl.DateFormat.MMMd(localeName);
+    final String dateString = dateDateFormat.format(date);
+
+    return '$dateString';
+  }
 }

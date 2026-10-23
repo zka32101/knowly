@@ -1,0 +1,1081 @@
+{
+ "schemaVersion": 1,
+ "contentVersion": "2026.10.23",
+ "updatedAt": "2026-10-23",
+ "items": [
+  {
+   "id": "new_year",
+   "date": "01-01",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "あけまして おめでとう",
+      "body": "きょうは 1がつ1にち。あたらしい としの はじまりだよ。"
+     },
+     "default": {
+      "title": "新年のはじまり",
+      "body": "1月1日は、世界の多くで使われているカレンダー(グレゴリオ暦)の、年の最初の日です。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "A new year begins",
+      "body": "Today is January 1. A new year starts on the calendar!"
+     },
+     "default": {
+      "title": "New Year's Day",
+      "body": "January 1 is the first day of the year in the calendar used by most of the world, the Gregorian calendar."
+     }
+    }
+   }
+  },
+  {
+   "id": "valentine",
+   "date": "02-14",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "cacao_money",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "バレンタインデー",
+      "body": "だいすきな ひとに「ありがとう」を つたえる ひ。チョコレートの もとの カカオは、むかし おかねの ように つかわれたよ。"
+     },
+     "default": {
+      "title": "バレンタインデー",
+      "body": "大切な人に気持ちを伝える日として、世界の多くの国で親しまれています。チョコレートの原料のカカオ豆は、昔、お金のように使われていました。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Valentine's Day",
+      "body": "A day to tell people you care about them. Cacao beans, which chocolate comes from, were once used like money!"
+     },
+     "default": {
+      "title": "Valentine's Day",
+      "body": "In many countries it is a day to show affection. Cacao beans, the source of chocolate, once circulated as currency."
+     }
+    }
+   }
+  },
+  {
+   "id": "pi_day",
+   "date": "03-14",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "えんしゅうりつの ひ",
+      "body": "3.14 は、まるい えんの ふしぎな かず。3がつ14にちは「えんしゅうりつの ひ」だよ。"
+     },
+     "default": {
+      "title": "円周率の日",
+      "body": "円周率は、円の周の長さを直径で割った数で、約3.14159…と続きます。3.14にちなんで3月14日が「円周率の日」とされています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Pi Day",
+      "body": "Pi is a magic number for circles: 3.14. March 14 is Pi Day!"
+     },
+     "default": {
+      "title": "Pi Day",
+      "body": "Pi is the ratio of a circle's circumference to its diameter, about 3.14159... March 14 (3/14) is celebrated as Pi Day."
+     }
+    }
+   }
+  },
+  {
+   "id": "water_day",
+   "date": "03-22",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "せかい みずの ひ",
+      "body": "みずは いきものに とって たいせつ。みずを だいじに つかう ことを かんがえる ひだよ。"
+     },
+     "default": {
+      "title": "世界水の日",
+      "body": "国連が定めた、水の大切さや水資源の守り方を考える日です(3月22日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "World Water Day",
+      "body": "Water is important for every living thing. Let us think about using it wisely."
+     },
+     "default": {
+      "title": "World Water Day",
+      "body": "Designated by the United Nations (March 22) to raise awareness of fresh water and its careful use."
+     }
+    }
+   }
+  },
+  {
+   "id": "space_flight_day",
+   "date": "04-12",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "orbital_speed",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "にんげんが はじめて うちゅうへ",
+      "body": "1961ねんの きょう、ガガーリンさんが にんげんで はじめて うちゅうへ いったよ。"
+     },
+     "default": {
+      "title": "人類が初めて宇宙へ行った日",
+      "body": "1961年4月12日、ユーリイ・ガガーリンが人類で初めて宇宙飛行をしました。国連は4月12日を「宇宙飛行の国際デー」としています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "First person in space",
+      "body": "On this day in 1961, Yuri Gagarin became the first person to travel into space."
+     },
+     "default": {
+      "title": "First human spaceflight",
+      "body": "On April 12, 1961, Yuri Gagarin became the first person to fly in space. The UN marks the date as the International Day of Human Space Flight."
+     }
+    }
+   }
+  },
+  {
+   "id": "earth_day",
+   "date": "04-22",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "アースデイ",
+      "body": "ちきゅうの しぜんを まもる ことを かんがえる ひ。ごみを へらす ことも たいせつだよ。"
+     },
+     "default": {
+      "title": "アースデー(地球の日)",
+      "body": "地球環境について考え、行動する日として、1970年から世界各地で行われています(4月22日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Earth Day",
+      "body": "A day to think about taking care of nature. Making less trash helps too!"
+     },
+     "default": {
+      "title": "Earth Day",
+      "body": "Observed worldwide on April 22 since 1970 as a day to think and act for the environment."
+     }
+    }
+   }
+  },
+  {
+   "id": "book_day",
+   "date": "04-23",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "せかい ほんの ひ",
+      "body": "ほんを よむ たのしさを みんなで かんがえる ひ。きょうは すきな ほんを ひらいて みよう。"
+     },
+     "default": {
+      "title": "世界本の日",
+      "body": "ユネスコが定めた、読書や出版、著作権の大切さを広める日です(4月23日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "World Book Day",
+      "body": "A day to enjoy reading. Why not open a favorite book today?"
+     },
+     "default": {
+      "title": "World Book and Copyright Day",
+      "body": "Established by UNESCO (April 23) to promote reading, publishing and copyright."
+     }
+    }
+   }
+  },
+  {
+   "id": "biodiversity_day",
+   "date": "05-22",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "いきものの ひ",
+      "body": "いろいろな いきものが いることは、とても だいじ。みんなで まもる ことを かんがえる ひ。"
+     },
+     "default": {
+      "title": "国際生物多様性の日",
+      "body": "国連が定めた、地球上の多様な生き物とそのつながりを守る大切さを考える日です(5月22日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Biodiversity Day",
+      "body": "Having many kinds of living things is important. A day to think about protecting them."
+     },
+     "default": {
+      "title": "International Day for Biological Diversity",
+      "body": "Designated by the United Nations (May 22) to increase understanding and action on protecting the variety of life."
+     }
+    }
+   }
+  },
+  {
+   "id": "environment_day",
+   "date": "06-05",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "かんきょうの ひ",
+      "body": "ちきゅうの かんきょうを まもる ために、わたしたちに できる ことを かんがえる ひ。"
+     },
+     "default": {
+      "title": "世界環境デー",
+      "body": "国連が定めた、環境保全の意識を高める日です(6月5日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "World Environment Day",
+      "body": "A day to think about what we can do to protect our planet."
+     },
+     "default": {
+      "title": "World Environment Day",
+      "body": "Observed on June 5 under the United Nations to raise awareness and action for the environment."
+     }
+    }
+   }
+  },
+  {
+   "id": "apollo_11",
+   "date": "07-20",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "moon_moving_away",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "つきに おりた ひ",
+      "body": "1969ねん7がつ20にち、アポロ11ごうが はじめて にんげんを つきに おろしたよ。"
+     },
+     "default": {
+      "title": "人類が初めて月に降り立った日",
+      "body": "1969年7月20日(世界時)、アポロ11号の宇宙飛行士が初めて月面に降り立ちました。日本の時間では7月21日でした。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "First steps on the Moon",
+      "body": "On July 20, 1969, Apollo 11 astronauts became the first people to walk on the Moon."
+     },
+     "default": {
+      "title": "Apollo 11 Moon landing",
+      "body": "On July 20, 1969 (UTC), Apollo 11 astronauts first walked on the Moon. In Japan it was already July 21."
+     }
+    }
+   }
+  },
+  {
+   "id": "animal_day",
+   "date": "10-04",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "elephant_ground_sounds",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "どうぶつの ひ",
+      "body": "どうぶつの ことを しって、たいせつに することを かんがえる ひだよ。"
+     },
+     "default": {
+      "title": "世界動物の日",
+      "body": "動物の福祉と保護への関心を高める日として、10月4日に世界各地で行われています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "World Animal Day",
+      "body": "A day to learn about animals and think about caring for them."
+     },
+     "default": {
+      "title": "World Animal Day",
+      "body": "Observed on October 4 worldwide to raise awareness of animal welfare and protection."
+     }
+    }
+   }
+  },
+  {
+   "id": "post_day",
+   "date": "10-09",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "せかい ゆうびんの ひ",
+      "body": "てがみや にもつを とどけて くれる ひとに ありがとうを おもう ひ。"
+     },
+     "default": {
+      "title": "世界郵便デー",
+      "body": "1874年に万国郵便連合が設立された10月9日にちなみ、郵便の役割を考える日です。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "World Post Day",
+      "body": "A day to say thanks to the people who deliver letters and parcels."
+     },
+     "default": {
+      "title": "World Post Day",
+      "body": "October 9 marks the founding of the Universal Postal Union in 1874, and highlights the role of postal services."
+     }
+    }
+   }
+  },
+  {
+   "id": "childrens_day_un",
+   "date": "11-20",
+   "regions": [],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "せかい こどもの ひ",
+      "body": "せかいじゅうの こどもたちの しあわせを かんがえる ひ。"
+     },
+     "default": {
+      "title": "世界こどもの日",
+      "body": "国連が定めた、世界中の子どもたちの幸せと権利について考える日です(11月20日)。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Universal Children's Day",
+      "body": "A day to think about the happiness of children all over the world."
+     },
+     "default": {
+      "title": "Universal Children's Day",
+      "body": "Established by the United Nations (November 20) to promote the welfare and rights of children worldwide."
+     }
+    }
+   }
+  },
+  {
+   "id": "neko_day",
+   "date": "02-22",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "cats_no_sweet",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "ねこの ひ",
+      "body": "2がつ22にちは「にゃん にゃん にゃん」で ねこの ひ。ねこは あまい あじが わからない ふしぎな どうぶつだよ。"
+     },
+     "default": {
+      "title": "猫の日",
+      "body": "2月22日は、鳴き声の「ニャン・ニャン・ニャン」にちなんだ猫の日です。ネコは甘味を感じない動物としても知られます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Cat Day (Japan)",
+      "body": "February 22 is Cat Day in Japan, from the cat sound \"nyan nyan nyan\"."
+     },
+     "default": {
+      "title": "Cat Day (Japan)",
+      "body": "February 22 is Cat Day in Japan, a pun on the Japanese cat sound \"nyan nyan nyan\" (2-2-2)."
+     }
+    }
+   }
+  },
+  {
+   "id": "hinamatsuri",
+   "date": "03-03",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "ひなまつり",
+      "body": "おんなのこの せいちょうを いわう おまつり。おひなさまを かざるよ。"
+     },
+     "default": {
+      "title": "ひな祭り",
+      "body": "3月3日は、女の子の健やかな成長を願って、ひな人形を飾る日本の行事です。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Hinamatsuri (Japan)",
+      "body": "A Japanese festival wishing girls a healthy life. People display Hina dolls."
+     },
+     "default": {
+      "title": "Hinamatsuri (Doll Festival)",
+      "body": "On March 3, Japanese families display Hina dolls to wish girls good health and growth."
+     }
+    }
+   }
+  },
+  {
+   "id": "kodomo_no_hi",
+   "date": "05-05",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "こどもの ひ",
+      "body": "こどもの せいちょうを よろこび、おかあさんに ありがとうを いう ひ。"
+     },
+     "default": {
+      "title": "こどもの日",
+      "body": "5月5日は、子どもの人格を重んじ、幸福をはかるとともに、母に感謝する日本の国民の祝日です。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Children's Day (Japan)",
+      "body": "A Japanese holiday to celebrate children and thank mothers."
+     },
+     "default": {
+      "title": "Children's Day (Japan)",
+      "body": "May 5 is a national holiday in Japan that respects children's personalities and wishes for their happiness, and gives thanks to mothers."
+     }
+    }
+   }
+  },
+  {
+   "id": "mushi_day",
+   "date": "06-04",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "beetle_quarter",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "むしの ひ",
+      "body": "6がつ4にちは「む(6)し(4)」で むしの ひ。むしは いきものの なかで いちばん たくさん いるよ。"
+     },
+     "default": {
+      "title": "虫の日",
+      "body": "6月4日は、語呂合わせで「虫の日」とされています。昆虫は、動物の中で最も種類が多いグループです。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Bug Day (Japan)",
+      "body": "June 4 is Bug Day in Japan because 6-4 sounds like \"mushi\", the Japanese word for bug."
+     },
+     "default": {
+      "title": "Bug Day (Japan)",
+      "body": "June 4 is Bug Day in Japan, a pun: 6 and 4 read \"mu-shi\", meaning insect."
+     }
+    }
+   }
+  },
+  {
+   "id": "tanabata",
+   "date": "07-07",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "たなばた",
+      "body": "ささに ねがいごとを かいた たんざくを かざる ひ。おりひめと ひこぼしの おはなしが あるよ。"
+     },
+     "default": {
+      "title": "七夕",
+      "body": "7月7日は、笹に願い事を書いた短冊を飾る日です。織姫と彦星の伝説にちなんでいます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Tanabata (Japan)",
+      "body": "People hang wishes on bamboo branches. It is linked to the story of two stars, Orihime and Hikoboshi."
+     },
+     "default": {
+      "title": "Tanabata (Star Festival)",
+      "body": "On July 7, people in Japan hang wish papers on bamboo, linked to the legend of the stars Orihime and Hikoboshi."
+     }
+    }
+   }
+  },
+  {
+   "id": "hachimitsu_day",
+   "date": "08-03",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "honey_never_spoils",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "はちみつの ひ",
+      "body": "8がつ3にちは「は(8)ち み(3)つ」で はちみつの ひ。はちみつは ほとんど くさらないよ。"
+     },
+     "default": {
+      "title": "はちみつの日",
+      "body": "8月3日は「ハ(8)チミツ(3)」の語呂合わせで、はちみつの日とされています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Honey Day (Japan)",
+      "body": "August 3 is Honey Day in Japan because 8-3 sounds like \"ha-chi-mi-tsu\"."
+     },
+     "default": {
+      "title": "Honey Day (Japan)",
+      "body": "August 3 is Honey Day in Japan, from the wordplay 8-3 = \"hachimitsu\", honey."
+     }
+    }
+   }
+  },
+  {
+   "id": "banana_day",
+   "date": "08-07",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": "banana_is_berry",
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "バナナの ひ",
+      "body": "8がつ7にちは「ば(8)な な(7)」で バナナの ひ。バナナは ベリーの なかまなんだよ。"
+     },
+     "default": {
+      "title": "バナナの日",
+      "body": "8月7日は「バ(8)ナナ(7)」の語呂合わせで、バナナの日とされています。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Banana Day (Japan)",
+      "body": "August 7 is Banana Day in Japan because 8-7 sounds like \"ba-na-na\"."
+     },
+     "default": {
+      "title": "Banana Day (Japan)",
+      "body": "August 7 is Banana Day in Japan, from the wordplay 8-7 = \"ba-na-na\"."
+     }
+    }
+   }
+  },
+  {
+   "id": "culture_day",
+   "date": "11-03",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "ぶんかの ひ",
+      "body": "ふるくから つたわる ぶんかを たいせつに する ひ。"
+     },
+     "default": {
+      "title": "文化の日",
+      "body": "11月3日は、自由と平和を愛し、文化をすすめる日として定められた日本の国民の祝日です。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Culture Day (Japan)",
+      "body": "A Japanese holiday to value culture."
+     },
+     "default": {
+      "title": "Culture Day (Japan)",
+      "body": "November 3 is a national holiday in Japan that promotes culture and the love of freedom and peace."
+     }
+    }
+   }
+  },
+  {
+   "id": "omisoka",
+   "date": "12-31",
+   "regions": [
+    "JP"
+   ],
+   "excludeRegions": [],
+   "minAgeBand": "kids",
+   "factId": null,
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "おおみそか",
+      "body": "1ねんの さいごの ひ。ことしを ふりかえって、あたらしい としを むかえる じゅんびを するよ。"
+     },
+     "default": {
+      "title": "大みそか",
+      "body": "12月31日は、一年の最後の日です。日本では、年越しそばを食べるなどして新年を迎えます。"
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "child": {
+      "title": "Omisoka (Japan)",
+      "body": "The last day of the year. People look back and get ready for the new year."
+     },
+     "default": {
+      "title": "Omisoka (New Year's Eve, Japan)",
+      "body": "December 31 is the last day of the year. In Japan, many people eat toshikoshi soba noodles to welcome the new year."
+     }
+    }
+   }
+  }
+ ]
+}

@@ -247,5 +247,27 @@
         "type": "int"
       }
     }
+  },
+  "todayTitle": "今日は何の日",
+  "todayNone": "きょうは とくべつな ひでは ありません",
+  "todayUpcoming": "もうすぐ",
+  "todayBanner": "今日は「{title}」",
+  "todayCountry": "この国の行事",
+  "todayHome": "今日は何の日",
+  "@todayBanner": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "dateMonthDay": "{date}",
+  "@dateMonthDay": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "MMMd"
+      }
+    }
   }
 }

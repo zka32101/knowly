@@ -30,6 +30,12 @@ class HomeScreen extends ConsumerWidget {
         title: Text(l.appName),
         actions: [
           IconButton(
+            key: const Key('open_today'),
+            tooltip: l.todayHome,
+            icon: const Icon(Icons.event_outlined),
+            onPressed: () => context.push('/today'),
+          ),
+          IconButton(
             key: const Key('open_myths'),
             tooltip: l.mythsTitle,
             icon: const Icon(Icons.fact_check_outlined),
@@ -293,6 +299,7 @@ class _FeedHome extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 12),
+        const _TodayBanner(),
         if (feed.isEmpty)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 48),
@@ -565,6 +572,31 @@ class _TimingSection extends ConsumerWidget {
             ),
         const SizedBox(height: 8),
       ],
+    );
+  }
+}
+
+/// 今日が記念日のとき、一覧の先頭に「今日は「〇〇」」を出す。タップで「今日は何の日」へ。
+class _TodayBanner extends ConsumerWidget {
+  const _TodayBanner();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final events = ref.watch(todayEventsProvider);
+    if (events.isEmpty) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    final more = events.length - 1;
+    return Card(
+      key: const Key('today_banner'),
+      color: theme.colorScheme.tertiaryContainer,
+      child: ListTile(
+        leading: const Icon(Icons.event),
+        title: Text(l.todayBanner(events.first.title)),
+        subtitle: more > 0 ? Text('+$more') : null,
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => context.push('/today'),
+      ),
     );
   }
 }
