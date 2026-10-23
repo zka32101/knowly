@@ -1149,5 +1149,14 @@ class AppLocalizationsJa extends AppLocalizations {
   String get hubLibrarySub => 'けんさく・ジャンル';
 
   @override
-  String get hubListenSub => 'ながら聞き';
+  String get hubListenSub => '画面を消しても聞ける';
+
+  @override
+  String get languageZh => '简体中文';
+
+  @override
+  String get languageKo => '한국어';
+
+  @override
+  String get languageEs => 'Español';
 }

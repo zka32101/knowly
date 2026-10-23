@@ -10,11 +10,18 @@ import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
 
-const supportedLanguageCodes = ['ja', 'en'];
+/// 画面の言語。
+const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
+
+/// 雑学の本文がある言語。ほかの言語の画面では、本文は英語で出す。
+const contentLanguageCodes = ['ja', 'en'];
 
 /// 端末の言語から対応言語を選ぶ。対応外は英語。
 String resolveLanguage(String? code) =>
     supportedLanguageCodes.contains(code) ? code! : 'en';
+
+/// 雑学の本文の言語（日本語または英語）。本文のない言語は英語にする。
+String resolveContentLanguage(String? code) => code == 'ja' ? 'ja' : 'en';
 
 /// 関心事のキーワードの上限（個数・1つあたりの文字数）。
 const maxInterestKeywords = 10;
@@ -488,5 +495,5 @@ final deviceRegionProvider =
 final uiLanguageProvider = Provider<String>((ref) =>
     resolveLanguage(ref.watch(settingsProvider).uiLanguage ?? ref.watch(deviceLanguageProvider)));
 
-final contentLanguageProvider = Provider<String>((ref) =>
-    resolveLanguage(ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));
+final contentLanguageProvider = Provider<String>((ref) => resolveContentLanguage(
+    ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));

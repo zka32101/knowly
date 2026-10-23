@@ -1168,5 +1168,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get hubLibrarySub => 'Search & genres';
 
   @override
-  String get hubListenSub => 'Hands-free';
+  String get hubListenSub => 'Plays with the screen off';
+
+  @override
+  String get languageZh => '简体中文';
+
+  @override
+  String get languageKo => '한국어';
+
+  @override
+  String get languageEs => 'Español';
 }

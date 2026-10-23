@@ -11,6 +11,7 @@ import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/home_widget_service.dart';
 import 'package:knowly/services/listen_background.dart';
 import 'package:knowly/screens/quiz_battle_screen.dart';
+import 'package:knowly/l10n/regions.dart';
 import 'package:knowly/services/share.dart';
 import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
@@ -2722,6 +2723,74 @@ void main() {
       expect(find.byKey(const Key('review_banner')), findsOneWidget);
       await _tab(tester, 'tab_play');
       expect(find.byKey(const Key('open_review')), findsOneWidget);
+    });
+  });
+
+  group('多言語（日本語・英語・中国語・韓国語・スペイン語）', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('中国語・韓国語・スペイン語の端末では、画面がその言語になり、本文は英語', (tester) async {
+      const tabs = {
+        'zh': ['首页', '玩', '收集', '探索', '设置'],
+        'ko': ['홈', '놀기', '모으기', '찾기', '설정'],
+        'es': ['Inicio', 'Jugar', 'Colección', 'Explorar', 'Ajustes'],
+      };
+      for (final e in tabs.entries) {
+        await _pump(tester,
+            prefs: {'ageBand': 'adult'}, deviceLanguage: e.key, deviceRegion: null);
+        for (final label in e.value) {
+          expect(find.text(label), findsWidgets, reason: '${e.key} $label');
+        }
+        expect(containerOf(tester).read(uiLanguageProvider), e.key);
+        expect(containerOf(tester).read(contentLanguageProvider), 'en', reason: e.key);
+        // 本文は英語のまま（めくりカードのおもてが英語の文）
+        final prompt = tester.widget<WrapText>(find.byKey(const Key('flip_prompt'))).text;
+        expect(RegExp(r'[぀-ヿ一-鿿]').hasMatch(prompt), isFalse, reason: '${e.key}: $prompt');
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('日本語の端末は、画面も本文も日本語（ノウリー）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.text('ノウリー'), findsWidgets);
+      expect(containerOf(tester).read(contentLanguageProvider), 'ja');
+    });
+
+    testWidgets('設定で画面の言語を変えられる。本文のない言語にすると、本文は英語になる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _tab(tester, 'open_settings');
+      await tester.tap(find.byKey(const Key('ui_language_dropdown')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('한국어').last);
+      await tester.pumpAndSettle();
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.uiLanguage, 'ko');
+      expect(s.contentLanguage, isNull);
+      expect(containerOf(tester).read(uiLanguageProvider), 'ko');
+      expect(containerOf(tester).read(contentLanguageProvider), 'en');
+      expect(find.text('설정'), findsWidgets);
+    });
+
+    testWidgets('最初の画面の言語選択には、5つの言語が並ぶ', (tester) async {
+      await _pump(tester);
+      for (final name in ['日本語', 'English', '简体中文', '한국어', 'Español']) {
+        expect(find.text(name), findsOneWidget, reason: name);
+      }
+      await tester.tap(find.text('한국어'));
+      await tester.pumpAndSettle();
+      expect(find.text('다음'), findsOneWidget); // 画面が韓国語に
+      final s = containerOf(tester).read(settingsProvider);
+      expect(s.uiLanguage, 'ko');
+      expect(s.contentLanguage, isNull);
+    });
+
+    testWidgets('国の名前も、画面の言語で出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'uiLanguage': 'es'});
+      expect(regionName('JP', 'es'), 'Japón');
+      expect(regionName('KR', 'zh'), '韩国');
+      expect(regionName('US', 'ko'), '미국');
+      expect(regionName('XX', 'es'), 'XX');
     });
   });
 }
