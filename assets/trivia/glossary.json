@@ -572,14 +572,6 @@
         ],
         "simple": "いまから 4おくねんぐらい まえの、さかなが さかえた じだいです。",
         "detail": "約4億1900万〜3億5900万年前の地質時代で、「魚の時代」と呼ばれます。陸上に森が現れ始めた時期でもあります。"
-      },
-      "en": {
-        "term": "Devonian period",
-        "match": [
-          "Devonian"
-        ],
-        "simple": "A time about 400 million years ago when fish flourished.",
-        "detail": "A geological period from about 419 to 359 million years ago, called the Age of Fishes. Forests also began to appear on land."
       }
     },
     {
@@ -649,15 +641,16 @@
           "颈椎"
         ],
         "simple": "脖子里的骨头。",
-        "detail": "颈部的椎骨。几乎所有哺乳动物都有七块颈椎。"
+        "detail": "脖子里的骨头。从长颈鹿到老鼠，几乎所有哺乳动物都有七块。"
       },
       "ko": {
-        "term": "경추",
+        "term": "목뼈",
         "match": [
+          "목뼈",
           "경추"
         ],
         "simple": "목을 이루는 뼈예요.",
-        "detail": "목을 이루는 척추뼈입니다."
+        "detail": "목을 이루는 뼈입니다. 기린부터 생쥐까지 거의 모든 포유류가 일곱 개를 가지고 있습니다."
       },
       "es": {
         "term": "vértebras cervicales",
@@ -665,7 +658,7 @@
           "vértebras cervicales"
         ],
         "simple": "Los huesos del cuello.",
-        "detail": "Las vértebras de la región del cuello, entre el cráneo y el tórax."
+        "detail": "Los huesos del cuello. Casi todos los mamíferos, desde las jirafas hasta los ratones, tienen siete."
       }
     },
     {
@@ -894,14 +887,6 @@
         ],
         "simple": "ものが あたたまると、すこし おおきく なる ことです。",
         "detail": "温度が上がると物体の体積や長さが増える現象です。鉄道のレールの継ぎ目にすき間があるのはこのためです。"
-      },
-      "en": {
-        "term": "thermal expansion",
-        "match": [
-          "thermal expansion"
-        ],
-        "simple": "When something warms up, it gets a little bigger.",
-        "detail": "The increase in an object's volume or length as its temperature rises. This is why railway tracks have small gaps at the joints."
       }
     },
     {
@@ -1180,6 +1165,24 @@
         ],
         "simple": "A very low sound that people cannot hear.",
         "detail": "Sound below about 20 Hz, too low for humans to hear. Elephants and whales are thought to use it to communicate."
+      },
+      "ko": {
+        "term": "초저주파음",
+        "match": [
+          "초저주파음",
+          "초저주파",
+          "인프라사운드"
+        ],
+        "simple": "사람 귀에는 들리지 않는 아주 낮은 소리예요.",
+        "detail": "약 20Hz 이하의 소리로, 너무 낮아서 사람은 들을 수 없습니다. 코끼리와 고래가 서로 소통하는 데 사용하는 것으로 여겨집니다."
+      },
+      "es": {
+        "term": "infrasonido",
+        "match": [
+          "infrasonido"
+        ],
+        "simple": "Un sonido muy grave que las personas no pueden oír.",
+        "detail": "Sonido por debajo de unos 20 Hz, demasiado grave para el oído humano. Se cree que los elefantes y las ballenas lo usan para comunicarse."
       }
     },
     {
@@ -1192,13 +1195,15 @@
         "simple": "ひとの みみで きける おとの はんいです。",
         "detail": "人が聞き取れる周波数の範囲で、おおよそ20Hz〜20,000Hzです。年齢とともに高い音から聞こえにくくなります。"
       },
-      "en": {
-        "term": "audible range",
+      "ko": {
+        "term": "가청 범위",
         "match": [
-          "audible range"
+          "가청 범위",
+          "가청 주파수",
+          "가청역"
         ],
-        "simple": "The range of sounds a person can hear.",
-        "detail": "The range of frequencies humans can hear, roughly 20 Hz to 20,000 Hz. High sounds become harder to hear with age."
+        "simple": "사람이 들을 수 있는 소리의 범위예요.",
+        "detail": "사람이 들을 수 있는 주파수의 범위로, 대략 20Hz에서 20,000Hz입니다. 나이가 들수록 높은 소리는 듣기 어려워집니다."
       }
     },
     {
@@ -1733,14 +1738,24 @@
         "simple": "ひこうきや ロケットが ちきゅうの まわりを まわりつづけられる、はやさです。",
         "detail": "地表すれすれの円軌道を保つために必要な速度で、約7.9km/sです。人工衛星はおおむねこの速度で周回します。"
       },
-      "en": {
-        "term": "first cosmic velocity",
+      "ko": {
+        "term": "제1우주 속도",
         "match": [
-          "first cosmic velocity",
-          "orbital velocity"
+          "제1우주 속도",
+          "제1우주속도",
+          "궤도 속도"
         ],
-        "simple": "The speed that lets a rocket keep circling the Earth.",
-        "detail": "The speed needed to hold a circular orbit just above the surface, about 7.9 km/s. Satellites orbit at roughly this speed."
+        "simple": "로켓이 지구 둘레를 계속 돌 수 있게 하는 속도예요.",
+        "detail": "지표면 바로 위에서 원 궤도를 유지하는 데 필요한 속도로, 약 7.9km/s입니다. 인공위성은 대략 이 속도로 궤도를 돕니다."
+      },
+      "es": {
+        "term": "primera velocidad cósmica",
+        "match": [
+          "primera velocidad cósmica",
+          "velocidad orbital"
+        ],
+        "simple": "La velocidad que permite a un cohete seguir dando vueltas alrededor de la Tierra.",
+        "detail": "Velocidad necesaria para mantener una órbita circular justo por encima de la superficie, de unos 7,9 km/s. Los satélites orbitan a una velocidad cercana a esta."
       }
     },
     {
