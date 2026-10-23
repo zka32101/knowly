@@ -104,25 +104,25 @@ void main() {
 
   test('Junior の表記: ひらがなのまま、ことばの間のスペースだけ取る', () {
     final junior = AppLocalizationsJaJunior();
-    expect(junior.battlePlayers, 'なんにんで遊ぶ？');
+    expect(junior.battlePlayers, 'なんにんで遊（あそ）ぶ？');
     expect(junior.battleTurnOf('ハナ'), 'ハナのばん');
     expect(junior.battleSoloScore(3, 5), '3 / 5 もんせいかい！');
     // 数字や英字の前後のスペースは残す
     expect(junior.mascotNext(5, 'ひよこ'), 'あと 5 で「ひよこ」になるよ');
-    expect(junior.zukanFound(2, 60), '2 / 60 見つけた');
+    expect(junior.zukanFound(2, 60), '2 / 60 見（み）つけた');
     // 小学生が読める、やさしい漢字になる
-    expect(junior.tabPlay, '遊ぶ');
-    expect(junior.dailyTitle, '今日のチャレンジ');
-    expect(junior.quizNext, '次へ');
-    expect(junior.battleWinner('ハナ'), 'ハナの勝ち！');
-    expect(junior.dailyStreak(3), '3日つづけて遊んだよ');
-    expect(junior.leagueNote, contains('1週間ごとに'));
+    expect(junior.tabPlay, '遊（あそ）ぶ');
+    expect(junior.dailyTitle, '今日（きょう）のチャレンジ');
+    expect(junior.quizNext, '次（つぎ）へ');
+    expect(junior.battleWinner('ハナ'), 'ハナの勝（か）ち！');
+    expect(junior.dailyStreak(3), '3日（にち）つづけて遊（あそ）んだよ');
+    expect(junior.leagueNote, contains('1週間（しゅうかん）ごとに'));
   });
 
   test('ことばの途中は漢字にしない（おおきく・つくっています・おさらいまち）', () {
     final junior = AppLocalizationsJaJunior();
-    expect(junior.mascotMax, '一番おおきくなったよ！');
-    expect(junior.reportNote, contains('作っています'));
+    expect(junior.mascotMax, '一番（いちばん）おおきくなったよ！');
+    expect(junior.reportNote, contains('作（つく）っています'));
     expect(junior.reportReviewPending, 'おさらいまち');
   });
 

@@ -766,7 +766,7 @@ void main() {
       await tester.tap(find.byKey(const Key('filter_button')));
       await tester.pumpAndSettle();
       expect(find.widgetWithText(FilterChip, '友だちと'), findsNothing);
-      expect(find.widgetWithText(FilterChip, '虫'), findsOneWidget);
+      expect(find.widgetWithText(FilterChip, '虫（むし）'), findsOneWidget);
     });
   });
 
@@ -1654,7 +1654,7 @@ void main() {
       await openProjects(tester);
       expect(find.byKey(const Key('project_ice_float')), findsOneWidget);
       await _scrollTo(tester, const Key('project_string_phone'));
-      expect(find.textContaining('大人といっしょに'), findsWidgets);
+      expect(find.textContaining('大人（おとな）といっしょに'), findsWidgets);
       await _scrollTo(tester, const Key('project_sun_shadow'));
       expect(find.byKey(const Key('project_sun_shadow')), findsOneWidget);
     });
@@ -3528,7 +3528,7 @@ void main() {
       expect(find.text('あそぶ'), findsWidgets);
       await tester.pumpWidget(const SizedBox());
       await _pump(tester, prefs: {'ageBand': 'junior'});
-      expect(find.text('遊ぶ'), findsWidgets); // 小学生が読める漢字
+      expect(find.text('遊（あそ）ぶ'), findsWidgets); // 小学生が読める漢字
       await _tab(tester, 'tab_play');
       expect(find.text('クイズたいせん'), findsOneWidget);
       await tester.pumpWidget(const SizedBox());
@@ -3542,7 +3542,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'junior'});
       await _tab(tester, 'tab_collect');
       expect(find.text('ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。'), findsNothing);
-      expect(find.text('ざつがくを見るほど、あいぼうがそだってコレクションがふえるよ。'), findsOneWidget);
+      expect(find.text('ざつがくを見（み）るほど、あいぼうがそだってコレクションがふえるよ。'), findsOneWidget);
     });
 
     testWidgets('モードを変えると、表記がその場で入れ替わる', (tester) async {

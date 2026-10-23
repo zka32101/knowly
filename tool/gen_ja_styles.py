@@ -56,6 +56,28 @@ JUNIOR_WORDS = [
     ('つぎ', '次'), ('まえ', '前'), ('いま', '今'), ('かち', '勝ち'),
 ]
 JUNIOR_AFTER_DIGIT = [('にちかん', '日間'), ('しゅうかん', '週間'), ('にち', '日'), ('もん', '問'), ('かい', '回'), ('ふん', '分'), ('にん', '人'), ('てん', '点'), ('しょう', '勝'), ('びょう', '秒')]
+
+
+def with_reading(kana, kj):
+    """「漢字」に、すぐあとに「（よみ）」を付ける。送りがな・前後のかなは、そのまま残す。"""
+    if not kanji.search(kj):
+        return kj
+    pre = 0
+    while pre < min(len(kana), len(kj)) and kana[pre] == kj[pre]:
+        pre += 1
+    suf = 0
+    while suf < min(len(kana), len(kj)) - pre and kana[-1 - suf] == kj[-1 - suf]:
+        suf += 1
+    core = kj[pre:len(kj) - suf]
+    reading = kana[pre:len(kana) - suf]
+    if not core or not reading or not re.fullmatch(r'[぀-ゟー]+', reading):
+        return kj
+    return kj[:pre] + core + '（' + reading + '）' + kj[len(kj) - suf:]
+
+
+JUNIOR_READ_OVERRIDE = {'いっしゅうかん': '1週間（しゅうかん）'}
+_pairs = [(a, JUNIOR_READ_OVERRIDE.get(a, with_reading(a, b))) for a, b in JUNIOR_WORDS]
+JUNIOR_WORDS_RUBY = _pairs
 junior_kanji = ''.join(sorted(set(ch for _, v in JUNIOR_WORDS + JUNIOR_AFTER_DIGIT for ch in v if kanji.match(ch))))
 
 missing = [k for k in cands if k not in adult]
@@ -115,7 +137,7 @@ import 'app_localizations_ja.dart';
 
 /// 日本語どうしの間にあるスペースを取る（数字やアルファベットの前後のスペースは残す）。
 final _jaSpace = RegExp(
-    r'(?<=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー])[ \\u3000]+(?=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー])');
+    r'(?<=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー（）])[ \\u3000]+(?=[\\u3040-\\u30ff\\u4e00-\\u9fff！？。、「」…ー（）])');
 /// ことばの前が「ひらがな」でなく、後ろが助詞・記号・終わりのとき、1つのことばとみなす
 /// （「おおきく」の中の「きく」や、「います」の中の「いま」を、漢字にしないため）。
 const _wordAfter = r'(?=[はがをにへでとのもやかよねなご、。！？…「」\\s]|$|[0-9A-Za-z])';
@@ -153,8 +175,8 @@ const _juniorAfterDigit = <(String, String)>[
 const juniorKanji = '@@KANJI@@';
 
 """
-header = header.replace('@@WORDS@@', ''.join(f"  ('{a}', '{b}'),\n" for a, b in JUNIOR_WORDS))
-header = header.replace('@@DIGITS@@', ''.join(f"  ('{a}', '{b}'),\n" for a, b in JUNIOR_AFTER_DIGIT))
+header = header.replace('@@WORDS@@', ''.join(f"  ('{a}', '{b}'),\n" for a, b in JUNIOR_WORDS_RUBY))
+header = header.replace('@@DIGITS@@', ''.join(f"  ('{a}', '{with_reading(a, b)}'),\n" for a, b in JUNIOR_AFTER_DIGIT))
 header = header.replace('@@KANJI@@', junior_kanji)
 out = (header
        + "class AppLocalizationsJaJunior extends AppLocalizationsJa {\n  AppLocalizationsJaJunior([super.locale]);\n\n"
