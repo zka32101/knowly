@@ -90,7 +90,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "octopus",
+     "ja": "たこ",
+     "kanji": "蛸"
+    },
+    {
+     "en": "blood",
+     "ja": "ち",
+     "kanji": "血"
+    },
+    {
+     "en": "heart",
+     "ja": "しんぞう",
+     "kanji": "心臓"
+    }
+   ]
   },
   {
    "id": "honey_never_spoils",
@@ -178,7 +195,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "honey",
+     "ja": "はちみつ",
+     "kanji": "蜂蜜"
+    },
+    {
+     "en": "spoil",
+     "ja": "くさる",
+     "kanji": "腐る"
+    },
+    {
+     "en": "sugar",
+     "ja": "さとう",
+     "kanji": "砂糖"
+    }
+   ]
   },
   {
    "id": "banana_is_berry",
@@ -270,7 +304,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "banana",
+     "ja": "バナナ",
+     "kanji": ""
+    },
+    {
+     "en": "berry",
+     "ja": "ベリー",
+     "kanji": ""
+    },
+    {
+     "en": "seed",
+     "ja": "たね",
+     "kanji": "種"
+    }
+   ]
   },
   {
    "id": "venus_day_longer",
@@ -360,7 +411,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "Venus",
+     "ja": "きんせい",
+     "kanji": "金星"
+    },
+    {
+     "en": "planet",
+     "ja": "わくせい",
+     "kanji": "惑星"
+    },
+    {
+     "en": "year",
+     "ja": "とし",
+     "kanji": "年"
+    }
+   ]
   },
   {
    "id": "sharks_older_than_trees",
@@ -445,7 +513,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "shark",
+     "ja": "さめ",
+     "kanji": "鮫"
+    },
+    {
+     "en": "tree",
+     "ja": "き",
+     "kanji": "木"
+    },
+    {
+     "en": "ocean",
+     "ja": "うみ",
+     "kanji": "海"
+    }
+   ]
   },
   {
    "id": "baby_bones",
@@ -535,7 +620,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "baby",
+     "ja": "あかちゃん",
+     "kanji": "赤ちゃん"
+    },
+    {
+     "en": "bone",
+     "ja": "ほね",
+     "kanji": "骨"
+    },
+    {
+     "en": "adult",
+     "ja": "おとな",
+     "kanji": "大人"
+    }
+   ]
   },
   {
    "id": "giraffe_seven_vertebrae",
@@ -626,7 +728,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "giraffe",
+     "ja": "きりん",
+     "kanji": "麒麟"
+    },
+    {
+     "en": "neck",
+     "ja": "くび",
+     "kanji": "首"
+    },
+    {
+     "en": "seven",
+     "ja": "なな",
+     "kanji": "七"
+    }
+   ]
   },
   {
    "id": "lightning_hotter_than_sun",
@@ -716,7 +835,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "lightning",
+     "ja": "かみなり",
+     "kanji": "雷"
+    },
+    {
+     "en": "hot",
+     "ja": "あつい",
+     "kanji": "熱い"
+    },
+    {
+     "en": "sun",
+     "ja": "たいよう",
+     "kanji": "太陽"
+    }
+   ]
   },
   {
    "id": "sea_otters_hold_hands",
@@ -807,7 +943,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "sea otter",
+     "ja": "ラッコ",
+     "kanji": ""
+    },
+    {
+     "en": "hold hands",
+     "ja": "てをつなぐ",
+     "kanji": "手をつなぐ"
+    },
+    {
+     "en": "sleep",
+     "ja": "ねむる",
+     "kanji": "眠る"
+    }
+   ]
   },
   {
    "id": "no_sound_in_space",
@@ -901,7 +1054,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "space",
+     "ja": "うちゅう",
+     "kanji": "宇宙"
+    },
+    {
+     "en": "sound",
+     "ja": "おと",
+     "kanji": "音"
+    },
+    {
+     "en": "air",
+     "ja": "くうき",
+     "kanji": "空気"
+    }
+   ]
   },
   {
    "id": "ice_floats",
@@ -994,7 +1164,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "ice",
+     "ja": "こおり",
+     "kanji": "氷"
+    },
+    {
+     "en": "float",
+     "ja": "うく",
+     "kanji": "浮く"
+    },
+    {
+     "en": "water",
+     "ja": "みず",
+     "kanji": "水"
+    }
+   ]
   },
   {
    "id": "chimborazo_farthest",
@@ -1067,7 +1254,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "mountain",
+     "ja": "やま",
+     "kanji": "山"
+    },
+    {
+     "en": "center",
+     "ja": "ちゅうしん",
+     "kanji": "中心"
+    },
+    {
+     "en": "Earth",
+     "ja": "ちきゅう",
+     "kanji": "地球"
+    }
+   ]
   },
   {
    "id": "wombat_cube_poop",
@@ -1156,7 +1360,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "wombat",
+     "ja": "ウォンバット",
+     "kanji": ""
+    },
+    {
+     "en": "cube",
+     "ja": "りっぽうたい",
+     "kanji": "立方体"
+    },
+    {
+     "en": "territory",
+     "ja": "なわばり",
+     "kanji": "縄張り"
+    }
+   ]
   },
   {
    "id": "human_dna_same",
@@ -1229,7 +1450,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "DNA",
+     "ja": "ディーエヌエー",
+     "kanji": ""
+    },
+    {
+     "en": "gene",
+     "ja": "いでんし",
+     "kanji": "遺伝子"
+    },
+    {
+     "en": "human",
+     "ja": "ひと",
+     "kanji": "人"
+    }
+   ]
   },
   {
    "id": "flamingo_flamboyance",
@@ -1318,7 +1556,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "flamingo",
+     "ja": "フラミンゴ",
+     "kanji": ""
+    },
+    {
+     "en": "flock",
+     "ja": "むれ",
+     "kanji": "群れ"
+    },
+    {
+     "en": "colorful",
+     "ja": "カラフル",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "moon_moving_away",
@@ -1410,7 +1665,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "Moon",
+     "ja": "つき",
+     "kanji": "月"
+    },
+    {
+     "en": "away",
+     "ja": "はなれる",
+     "kanji": "離れる"
+    },
+    {
+     "en": "year",
+     "ja": "ねん",
+     "kanji": "年"
+    }
+   ]
   },
   {
    "id": "butterfly_taste_feet",
@@ -1503,7 +1775,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "butterfly",
+     "ja": "ちょう",
+     "kanji": "蝶"
+    },
+    {
+     "en": "taste",
+     "ja": "あじ",
+     "kanji": "味"
+    },
+    {
+     "en": "foot",
+     "ja": "あし",
+     "kanji": "足"
+    }
+   ]
   },
   {
    "id": "cats_no_sweet",
@@ -1592,7 +1881,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "cat",
+     "ja": "ねこ",
+     "kanji": "猫"
+    },
+    {
+     "en": "sweet",
+     "ja": "あまい",
+     "kanji": "甘い"
+    },
+    {
+     "en": "tongue",
+     "ja": "した",
+     "kanji": "舌"
+    }
+   ]
   },
   {
    "id": "sunlight_8_minutes",
@@ -1683,7 +1989,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "sunlight",
+     "ja": "たいようのひかり",
+     "kanji": "太陽の光"
+    },
+    {
+     "en": "minute",
+     "ja": "ふん",
+     "kanji": "分"
+    },
+    {
+     "en": "Earth",
+     "ja": "ちきゅう",
+     "kanji": "地球"
+    }
+   ]
   },
   {
    "id": "saturn_would_float",
@@ -1776,7 +2099,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "Saturn",
+     "ja": "どせい",
+     "kanji": "土星"
+    },
+    {
+     "en": "float",
+     "ja": "うく",
+     "kanji": "浮く"
+    },
+    {
+     "en": "gas",
+     "ja": "ガス",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "eiffel_grows_summer",
@@ -1870,7 +2210,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "tower",
+     "ja": "とう",
+     "kanji": "塔"
+    },
+    {
+     "en": "iron",
+     "ja": "てつ",
+     "kanji": "鉄"
+    },
+    {
+     "en": "summer",
+     "ja": "なつ",
+     "kanji": "夏"
+    }
+   ]
   },
   {
    "id": "heart_100k",
@@ -1959,7 +2316,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "heart",
+     "ja": "しんぞう",
+     "kanji": "心臓"
+    },
+    {
+     "en": "beat",
+     "ja": "はくどう",
+     "kanji": "拍動"
+    },
+    {
+     "en": "day",
+     "ja": "いちにち",
+     "kanji": "一日"
+    }
+   ]
   },
   {
    "id": "bamboo_fast",
@@ -2047,7 +2421,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "bamboo",
+     "ja": "たけ",
+     "kanji": "竹"
+    },
+    {
+     "en": "grow",
+     "ja": "そだつ",
+     "kanji": "育つ"
+    },
+    {
+     "en": "fast",
+     "ja": "はやい",
+     "kanji": "速い"
+    }
+   ]
   },
   {
    "id": "crows_recognize_faces",
@@ -2135,7 +2526,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "crow",
+     "ja": "からす",
+     "kanji": "烏"
+    },
+    {
+     "en": "face",
+     "ja": "かお",
+     "kanji": "顔"
+    },
+    {
+     "en": "remember",
+     "ja": "おぼえる",
+     "kanji": "覚える"
+    }
+   ]
   },
   {
    "id": "rainbow_full_circle",
@@ -2225,7 +2633,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "rainbow",
+     "ja": "にじ",
+     "kanji": "虹"
+    },
+    {
+     "en": "circle",
+     "ja": "えん",
+     "kanji": "円"
+    },
+    {
+     "en": "rain",
+     "ja": "あめ",
+     "kanji": "雨"
+    }
+   ]
   },
   {
    "id": "elephant_ground_sounds",
@@ -2314,7 +2739,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "elephant",
+     "ja": "ぞう",
+     "kanji": "象"
+    },
+    {
+     "en": "voice",
+     "ja": "こえ",
+     "kanji": "声"
+    },
+    {
+     "en": "ground",
+     "ja": "じめん",
+     "kanji": "地面"
+    }
+   ]
   },
   {
    "id": "dolphin_half_sleep",
@@ -2407,7 +2849,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "dolphin",
+     "ja": "いるか",
+     "kanji": "海豚"
+    },
+    {
+     "en": "brain",
+     "ja": "のう",
+     "kanji": "脳"
+    },
+    {
+     "en": "half",
+     "ja": "はんぶん",
+     "kanji": "半分"
+    }
+   ]
   },
   {
    "id": "antarctica_desert",
@@ -2497,7 +2956,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "Antarctica",
+     "ja": "なんきょく",
+     "kanji": "南極"
+    },
+    {
+     "en": "desert",
+     "ja": "さばく",
+     "kanji": "砂漠"
+    },
+    {
+     "en": "snow",
+     "ja": "ゆき",
+     "kanji": "雪"
+    }
+   ]
   },
   {
    "id": "koala_fingerprints",
@@ -2586,7 +3062,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "koala",
+     "ja": "コアラ",
+     "kanji": ""
+    },
+    {
+     "en": "fingerprint",
+     "ja": "しもん",
+     "kanji": "指紋"
+    },
+    {
+     "en": "finger",
+     "ja": "ゆび",
+     "kanji": "指"
+    }
+   ]
   },
   {
    "id": "japan_islands",
@@ -2678,7 +3171,24 @@
    },
    "volatility": "changing",
    "reviewDueAt": "2027-04-23",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "island",
+     "ja": "しま",
+     "kanji": "島"
+    },
+    {
+     "en": "Japan",
+     "ja": "にほん",
+     "kanji": "日本"
+    },
+    {
+     "en": "country",
+     "ja": "くに",
+     "kanji": "国"
+    }
+   ]
   },
   {
    "id": "ant_strong",
@@ -2767,7 +3277,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "ant",
+     "ja": "あり",
+     "kanji": "蟻"
+    },
+    {
+     "en": "strong",
+     "ja": "つよい",
+     "kanji": "強い"
+    },
+    {
+     "en": "carry",
+     "ja": "はこぶ",
+     "kanji": "運ぶ"
+    }
+   ]
   },
   {
    "id": "dragonfly_before_dinosaurs",
@@ -2858,7 +3385,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "dragonfly",
+     "ja": "とんぼ",
+     "kanji": "蜻蛉"
+    },
+    {
+     "en": "dinosaur",
+     "ja": "きょうりゅう",
+     "kanji": "恐竜"
+    },
+    {
+     "en": "wing",
+     "ja": "はね",
+     "kanji": "翅"
+    }
+   ]
   },
   {
    "id": "firefly_cold_light",
@@ -2951,7 +3495,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "firefly",
+     "ja": "ほたる",
+     "kanji": "蛍"
+    },
+    {
+     "en": "light",
+     "ja": "ひかり",
+     "kanji": "光"
+    },
+    {
+     "en": "cold",
+     "ja": "つめたい",
+     "kanji": "冷たい"
+    }
+   ]
   },
   {
    "id": "bee_waggle_dance",
@@ -3042,7 +3603,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "bee",
+     "ja": "みつばち",
+     "kanji": "蜜蜂"
+    },
+    {
+     "en": "dance",
+     "ja": "おどり",
+     "kanji": "踊り"
+    },
+    {
+     "en": "flower",
+     "ja": "はな",
+     "kanji": "花"
+    }
+   ]
   },
   {
    "id": "cicada_17_years",
@@ -3131,7 +3709,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "cicada",
+     "ja": "せみ",
+     "kanji": "蝉"
+    },
+    {
+     "en": "underground",
+     "ja": "ちか",
+     "kanji": "地下"
+    },
+    {
+     "en": "year",
+     "ja": "ねん",
+     "kanji": "年"
+    }
+   ]
   },
   {
    "id": "mosquito_female_bites",
@@ -3222,7 +3817,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "mosquito",
+     "ja": "か",
+     "kanji": "蚊"
+    },
+    {
+     "en": "bite",
+     "ja": "かむ",
+     "kanji": "噛む"
+    },
+    {
+     "en": "blood",
+     "ja": "ち",
+     "kanji": "血"
+    }
+   ]
   },
   {
    "id": "spider_not_insect",
@@ -3312,7 +3924,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "spider",
+     "ja": "くも",
+     "kanji": "蜘蛛"
+    },
+    {
+     "en": "leg",
+     "ja": "あし",
+     "kanji": "足"
+    },
+    {
+     "en": "insect",
+     "ja": "こんちゅう",
+     "kanji": "昆虫"
+    }
+   ]
   },
   {
    "id": "beetle_quarter",
@@ -3401,7 +4030,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "beetle",
+     "ja": "こうちゅう",
+     "kanji": "甲虫"
+    },
+    {
+     "en": "ladybug",
+     "ja": "てんとうむし",
+     "kanji": "天道虫"
+    },
+    {
+     "en": "species",
+     "ja": "しゅるい",
+     "kanji": "種類"
+    }
+   ]
   },
   {
    "id": "dung_beetle_milky_way",
@@ -3491,7 +4137,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "dung beetle",
+     "ja": "ふんころがし",
+     "kanji": "糞転がし"
+    },
+    {
+     "en": "Milky Way",
+     "ja": "あまのがわ",
+     "kanji": "天の川"
+    },
+    {
+     "en": "night sky",
+     "ja": "よぞら",
+     "kanji": "夜空"
+    }
+   ]
   },
   {
    "id": "silkworm_thread",
@@ -3585,7 +4248,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "silkworm",
+     "ja": "かいこ",
+     "kanji": "蚕"
+    },
+    {
+     "en": "cocoon",
+     "ja": "まゆ",
+     "kanji": "繭"
+    },
+    {
+     "en": "thread",
+     "ja": "いと",
+     "kanji": "糸"
+    }
+   ]
   },
   {
    "id": "shinkansen_1964",
@@ -3680,7 +4360,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "bullet train",
+     "ja": "しんかんせん",
+     "kanji": "新幹線"
+    },
+    {
+     "en": "speed",
+     "ja": "そくど",
+     "kanji": "速度"
+    },
+    {
+     "en": "open",
+     "ja": "かいぎょう",
+     "kanji": "開業"
+    }
+   ]
   },
   {
    "id": "airliner_cruise",
@@ -3770,7 +4467,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "airplane",
+     "ja": "ひこうき",
+     "kanji": "飛行機"
+    },
+    {
+     "en": "altitude",
+     "ja": "こうど",
+     "kanji": "高度"
+    },
+    {
+     "en": "cold",
+     "ja": "さむい",
+     "kanji": "寒い"
+    }
+   ]
   },
   {
    "id": "wright_first_flight",
@@ -3860,7 +4574,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "airplane",
+     "ja": "ひこうき",
+     "kanji": "飛行機"
+    },
+    {
+     "en": "brothers",
+     "ja": "きょうだい",
+     "kanji": "兄弟"
+    },
+    {
+     "en": "flight",
+     "ja": "ひこう",
+     "kanji": "飛行"
+    }
+   ]
   },
   {
    "id": "tokyo_first_subway",
@@ -3955,7 +4686,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "subway",
+     "ja": "ちかてつ",
+     "kanji": "地下鉄"
+    },
+    {
+     "en": "first",
+     "ja": "さいしょ",
+     "kanji": "最初"
+    },
+    {
+     "en": "Asia",
+     "ja": "アジア",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "steel_ship_floats",
@@ -4049,7 +4797,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "ship",
+     "ja": "ふね",
+     "kanji": "船"
+    },
+    {
+     "en": "steel",
+     "ja": "こうてつ",
+     "kanji": "鋼鉄"
+    },
+    {
+     "en": "float",
+     "ja": "うく",
+     "kanji": "浮く"
+    }
+   ]
   },
   {
    "id": "orbital_speed",
@@ -4140,7 +4905,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "rocket",
+     "ja": "ロケット",
+     "kanji": ""
+    },
+    {
+     "en": "orbit",
+     "ja": "きどう",
+     "kanji": "軌道"
+    },
+    {
+     "en": "speed",
+     "ja": "はやさ",
+     "kanji": "速さ"
+    }
+   ]
   },
   {
    "id": "maglev_603",
@@ -4235,7 +5017,24 @@
    },
    "volatility": "changing",
    "reviewDueAt": "2027-04-23",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "maglev",
+     "ja": "リニア",
+     "kanji": ""
+    },
+    {
+     "en": "magnet",
+     "ja": "じしゃく",
+     "kanji": "磁石"
+    },
+    {
+     "en": "record",
+     "ja": "きろく",
+     "kanji": "記録"
+    }
+   ]
   },
   {
    "id": "plane_window_hole",
@@ -4326,7 +5125,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "window",
+     "ja": "まど",
+     "kanji": "窓"
+    },
+    {
+     "en": "hole",
+     "ja": "あな",
+     "kanji": "穴"
+    },
+    {
+     "en": "pressure",
+     "ja": "きあつ",
+     "kanji": "気圧"
+    }
+   ]
   },
   {
    "id": "iss_sunrises",
@@ -4422,7 +5238,24 @@
    },
    "volatility": "changing",
    "reviewDueAt": "2027-04-23",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "space station",
+     "ja": "うちゅうステーション",
+     "kanji": "宇宙ステーション"
+    },
+    {
+     "en": "sunrise",
+     "ja": "ひので",
+     "kanji": "日の出"
+    },
+    {
+     "en": "orbit",
+     "ja": "しゅうかい",
+     "kanji": "周回"
+    }
+   ]
   },
   {
    "id": "shipping_80_percent",
@@ -4514,7 +5347,24 @@
    },
    "volatility": "changing",
    "reviewDueAt": "2027-04-23",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "trade",
+     "ja": "ぼうえき",
+     "kanji": "貿易"
+    },
+    {
+     "en": "cargo",
+     "ja": "にもつ",
+     "kanji": "荷物"
+    },
+    {
+     "en": "container",
+     "ja": "コンテナ",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "watermelon_92_water",
@@ -4605,7 +5455,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "watermelon",
+     "ja": "すいか",
+     "kanji": "西瓜"
+    },
+    {
+     "en": "water",
+     "ja": "みず",
+     "kanji": "水"
+    },
+    {
+     "en": "summer",
+     "ja": "なつ",
+     "kanji": "夏"
+    }
+   ]
   },
   {
    "id": "cacao_money",
@@ -4701,7 +5568,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "cacao",
+     "ja": "カカオ",
+     "kanji": ""
+    },
+    {
+     "en": "chocolate",
+     "ja": "チョコレート",
+     "kanji": ""
+    },
+    {
+     "en": "money",
+     "ja": "おかね",
+     "kanji": "お金"
+    }
+   ]
   },
   {
    "id": "rice_half_world",
@@ -4796,7 +5680,24 @@
    },
    "volatility": "changing",
    "reviewDueAt": "2027-04-23",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "rice",
+     "ja": "こめ",
+     "kanji": "米"
+    },
+    {
+     "en": "staple food",
+     "ja": "しゅしょく",
+     "kanji": "主食"
+    },
+    {
+     "en": "Asia",
+     "ja": "アジア",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "carrot_colors",
@@ -4886,7 +5787,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "carrot",
+     "ja": "にんじん",
+     "kanji": "人参"
+    },
+    {
+     "en": "orange",
+     "ja": "オレンジ",
+     "kanji": ""
+    },
+    {
+     "en": "purple",
+     "ja": "むらさき",
+     "kanji": "紫"
+    }
+   ]
   },
   {
    "id": "peanut_not_nut",
@@ -4976,7 +5894,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "peanut",
+     "ja": "ピーナッツ",
+     "kanji": ""
+    },
+    {
+     "en": "bean",
+     "ja": "まめ",
+     "kanji": "豆"
+    },
+    {
+     "en": "underground",
+     "ja": "ちか",
+     "kanji": "地下"
+    }
+   ]
   },
   {
    "id": "pineapple_two_years",
@@ -5064,7 +5999,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "pineapple",
+     "ja": "パイナップル",
+     "kanji": ""
+    },
+    {
+     "en": "fruit",
+     "ja": "くだもの",
+     "kanji": "果物"
+    },
+    {
+     "en": "grow",
+     "ja": "そだつ",
+     "kanji": "育つ"
+    }
+   ]
   },
   {
    "id": "apple_floats",
@@ -5157,7 +6109,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "apple",
+     "ja": "りんご",
+     "kanji": "林檎"
+    },
+    {
+     "en": "air",
+     "ja": "くうき",
+     "kanji": "空気"
+    },
+    {
+     "en": "float",
+     "ja": "うく",
+     "kanji": "浮く"
+    }
+   ]
   },
   {
    "id": "wasabi_nose",
@@ -5246,7 +6215,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "wasabi",
+     "ja": "わさび",
+     "kanji": "山葵"
+    },
+    {
+     "en": "spicy",
+     "ja": "からい",
+     "kanji": "辛い"
+    },
+    {
+     "en": "nose",
+     "ja": "はな",
+     "kanji": "鼻"
+    }
+   ]
   },
   {
    "id": "popcorn_pop",
@@ -5334,7 +6320,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "popcorn",
+     "ja": "ポップコーン",
+     "kanji": ""
+    },
+    {
+     "en": "steam",
+     "ja": "じょうき",
+     "kanji": "蒸気"
+    },
+    {
+     "en": "corn",
+     "ja": "とうもろこし",
+     "kanji": ""
+    }
+   ]
   },
   {
    "id": "strawberry_200_seeds",
@@ -5426,7 +6429,24 @@
     "note": null
    },
    "volatility": "stable",
-   "contentFlags": []
+   "contentFlags": [],
+   "vocab": [
+    {
+     "en": "strawberry",
+     "ja": "いちご",
+     "kanji": "苺"
+    },
+    {
+     "en": "seed",
+     "ja": "たね",
+     "kanji": "種"
+    },
+    {
+     "en": "fruit",
+     "ja": "くだもの",
+     "kanji": "果物"
+    }
+   ]
   }
  ]
 }

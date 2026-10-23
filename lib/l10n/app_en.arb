@@ -269,5 +269,10 @@
         "format": "MMMd"
       }
     }
-  }
+  },
+  "listenInEnglish": "Listen in English",
+  "listenInJapanese": "Listen in Japanese",
+  "vocabEnglishTitle": "English words",
+  "vocabJapaneseTitle": "Japanese words",
+  "vocabTapToHear": "Tap a word to hear it"
 }

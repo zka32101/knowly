@@ -1093,6 +1093,36 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{date}'**
   String dateMonthDay(DateTime date);
+
+  /// No description provided for @listenInEnglish.
+  ///
+  /// In ja, this message translates to:
+  /// **'英語で聞く'**
+  String get listenInEnglish;
+
+  /// No description provided for @listenInJapanese.
+  ///
+  /// In ja, this message translates to:
+  /// **'日本語で聞く'**
+  String get listenInJapanese;
+
+  /// No description provided for @vocabEnglishTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'英語のことば'**
+  String get vocabEnglishTitle;
+
+  /// No description provided for @vocabJapaneseTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'日本語のことば'**
+  String get vocabJapaneseTitle;
+
+  /// No description provided for @vocabTapToHear.
+  ///
+  /// In ja, this message translates to:
+  /// **'タップで発音を聞けます'**
+  String get vocabTapToHear;
 }
 
 class _AppLocalizationsDelegate

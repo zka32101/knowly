@@ -388,4 +388,49 @@ void main() {
       }
     });
   });
+
+  group('雑学で英語（vocab）', () {
+    final raw = (jsonDecode(File('assets/trivia/trivia.json').readAsStringSync())
+        as Map<String, dynamic>)['items'] as List;
+    final facts = raw.cast<Map<String, dynamic>>();
+    final kana = RegExp(r'^[ぁ-んァ-ヶー ]+$');
+    final english = RegExp(r'^[A-Za-z ]+$');
+
+    test('すべての雑学に、2〜4語の対訳がある', () {
+      for (final f in facts) {
+        final v = (f['vocab'] as List).cast<Map<String, dynamic>>();
+        expect(v.length, inInclusiveRange(2, 4), reason: f['id'] as String);
+        expect(v.map((e) => (e['en'] as String).toLowerCase()).toSet().length, v.length,
+            reason: '${f['id']}: 重複');
+      }
+    });
+
+    test('英語は英字、日本語はかなだけ（漢字は kanji に分ける）', () {
+      for (final f in facts) {
+        for (final e in (f['vocab'] as List).cast<Map<String, dynamic>>()) {
+          final id = '${f['id']}: ${e['en']}';
+          expect(e['en'], matches(english), reason: id);
+          expect(e['ja'], matches(kana), reason: id);
+          expect(_kanji.hasMatch(e['ja'] as String), isFalse, reason: id);
+          final kanji = e['kanji'] as String;
+          if (kanji.isNotEmpty) expect(_kanji.hasMatch(kanji), isTrue, reason: id);
+        }
+      }
+    });
+
+    test('Kids/Junior に出る雑学のことばに、不適切なことばがない', () {
+      const bad = ['殺', '死', '戦争', '宗教', '性', '酒', '賭', '銃', '兵器', 'せんそう', 'しゅうきょう'];
+      final en = RegExp(r'\b(kill|death|dead|die|war|weapon|gun|bomb|sex|sexual|drug|alcohol|beer|religion|god|gambling|violence|crime)\b', caseSensitive: false);
+      for (final f in facts) {
+        if (f['minAgeBand'] == 'teen' || f['minAgeBand'] == 'adult') continue;
+        for (final e in (f['vocab'] as List).cast<Map<String, dynamic>>()) {
+          for (final w in bad) {
+            expect((e['ja'] as String).contains(w) || (e['kanji'] as String).contains(w), isFalse,
+                reason: '${f['id']}: $w');
+          }
+          expect(en.hasMatch(e['en'] as String), isFalse, reason: '${f['id']}: ${e['en']}');
+        }
+      }
+    });
+  });
 }

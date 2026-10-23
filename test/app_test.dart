@@ -21,8 +21,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class FakeTts implements TtsService {
   final spoken = <String>[];
+  final languages = <String>[];
+  final rates = <double?>[];
   @override
-  Future<void> speak(String text, {required String language}) async => spoken.add(text);
+  Future<void> speak(String text, {required String language, double? rate}) async {
+    spoken.add(text);
+    languages.add(language);
+    rates.add(rate);
+  }
   @override
   Future<void> stop() async {}
 }
@@ -1244,6 +1250,84 @@ void main() {
       await openToday(tester);
       expect(find.text('Apr 22'), findsOneWidget);
       expect(find.text('Earth Day'), findsOneWidget);
+    });
+  });
+
+  group('雑学で英語', () {
+    Future<void> openById(WidgetTester tester, String id) async {
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(routerProvider).push('/detail/$id');
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('日本語の画面では「英語のことば」が出て、Adult は漢字も添える', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('vocab_section'));
+      expect(tester.widget<Text>(find.byKey(const Key('vocab_title'), skipOffstage: false)).data,
+          '英語のことば');
+      expect(find.text('octopus'), findsOneWidget);
+      expect(find.text('たこ（蛸）'), findsOneWidget);
+    });
+
+    testWidgets('Junior はかなだけ（漢字を添えない）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('vocab_section'));
+      expect(find.text('たこ'), findsOneWidget);
+      expect(find.text('たこ（蛸）'), findsNothing);
+    });
+
+    testWidgets('ことばをタップすると、英語をゆっくり発音する', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('vocab_octopus'));
+      await tester.tap(find.byKey(const Key('vocab_octopus')));
+      await tester.pump();
+      expect(tts.spoken.last, 'octopus');
+      expect(tts.languages.last, 'en');
+      expect(tts.rates.last, lessThan(0.4));
+    });
+
+    testWidgets('「英語で聞く」で、雑学の英語版を英語で読み上げる', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('listen_other'));
+      expect(find.text('英語で聞く'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_other')));
+      await tester.pump();
+      expect(tts.languages.last, 'en');
+      expect(RegExp(r'[A-Za-z]').hasMatch(tts.spoken.last), isTrue);
+      expect(RegExp(r'[ぁ-んァ-ヶ一-龥]').hasMatch(tts.spoken.last), isFalse);
+    });
+
+    testWidgets('英語の画面では、日本語のことばを学べる（日本語で聞く）', (tester) async {
+      final tts = await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('vocab_octopus'));
+      expect(tester.widget<Text>(find.byKey(const Key('vocab_title'), skipOffstage: false)).data,
+          'Japanese words');
+      expect(find.text('たこ（蛸）'), findsOneWidget); // 主役は日本語
+      await tester.tap(find.byKey(const Key('vocab_octopus')));
+      await tester.pump();
+      expect(tts.spoken.last, 'たこ');
+      expect(tts.languages.last, 'ja');
+      await _scrollTo(tester, const Key('listen_other'));
+      expect(find.text('Listen in Japanese'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('listen_other')));
+      await tester.pump();
+      expect(tts.languages.last, 'ja');
+    });
+
+    testWidgets('読み上げでは、Junior の読み（かっこ）を外す', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'junior'}, deviceLanguage: 'en', deviceRegion: 'US');
+      // 英語の画面の Junior が、日本語版を聞く → 日本語版は漢字（よみ）表記
+      await openById(tester, 'octopus_blue_blood');
+      await _scrollTo(tester, const Key('listen_other'));
+      await tester.tap(find.byKey(const Key('listen_other')));
+      await tester.pump();
+      expect(tts.spoken.last.contains('（'), isFalse);
     });
   });
 }

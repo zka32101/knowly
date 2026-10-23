@@ -535,4 +535,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
     return '$dateString';
   }
+
+  @override
+  String get listenInEnglish => '英語で聞く';
+
+  @override
+  String get listenInJapanese => '日本語で聞く';
+
+  @override
+  String get vocabEnglishTitle => '英語のことば';
+
+  @override
+  String get vocabJapaneseTitle => '日本語のことば';
+
+  @override
+  String get vocabTapToHear => 'タップで発音を聞けます';
 }

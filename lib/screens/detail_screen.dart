@@ -218,6 +218,48 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                     style: theme.textTheme.bodyMedium?.copyWith(height: 1.6)),
               ],
             ],
+            // 雑学で英語: ことばの対訳と、もう一つの言語での読み上げ（Kids を除く）。
+            if (ownBand != AgeBand.kids && (item.vocab.isNotEmpty || otherLevel != null)) ...[
+              const SizedBox(height: 16),
+              if (otherLevel != null)
+                OutlinedButton.icon(
+                  key: const Key('listen_other'),
+                  icon: const Icon(Icons.record_voice_over_outlined),
+                  label: Text(otherLang == 'en' ? l.listenInEnglish : l.listenInJapanese),
+                  onPressed: () => ref.read(ttsProvider).speak(
+                        stripReadings('${otherLevel.title}。${otherLevel.body}'),
+                        language: otherLang,
+                        rate: 0.35,
+                      ),
+                ),
+              if (item.vocab.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text(lang == 'ja' ? l.vocabEnglishTitle : l.vocabJapaneseTitle,
+                    key: const Key('vocab_title'), style: theme.textTheme.titleSmall),
+                Text(l.vocabTapToHear, style: theme.textTheme.bodySmall),
+                const SizedBox(height: 4),
+                Card(
+                  key: const Key('vocab_section'),
+                  child: Column(
+                    children: [
+                      for (final v in item.vocab)
+                        ListTile(
+                          key: Key('vocab_${v.en}'),
+                          dense: true,
+                          title: Text(lang == 'ja' ? v.en : _jaWord(v, ownBand)),
+                          subtitle: Text(lang == 'ja' ? _jaWord(v, ownBand) : v.en),
+                          trailing: const Icon(Icons.volume_up_outlined),
+                          onTap: () => ref.read(ttsProvider).speak(
+                                lang == 'ja' ? v.en : v.ja,
+                                language: lang == 'ja' ? 'en' : 'ja',
+                                rate: 0.35,
+                              ),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ],
             const SizedBox(height: 24),
             Wrap(
               spacing: 8,
@@ -321,3 +363,8 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
     );
   }
 }
+
+/// 日本語のことばの表示。Teen/Adult は漢字も添える（「たこ（蛸）」）。Junior は、かなだけ。
+String _jaWord(VocabEntry v, AgeBand band) =>
+    band.isTeenOrAdult && v.kanji.isNotEmpty ? '${v.ja}（${v.kanji}）' : v.ja;
+

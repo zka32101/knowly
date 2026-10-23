@@ -8,6 +8,21 @@ class TriviaLevel {
   final String body;
 }
 
+/// 雑学に出てくることばの対訳（英語 ↔ 日本語）。日本語は、ひらがな・カタカナの読み（[ja]）と、
+/// あれば漢字の表記（[kanji]）を持つ。Teen/Adult には漢字も添え、Kids/Junior はかなだけを出す。
+class VocabEntry {
+  const VocabEntry({required this.en, required this.ja, this.kanji = ''});
+  final String en;
+  final String ja;
+  final String kanji;
+
+  factory VocabEntry.fromJson(Map<String, dynamic> json) => VocabEntry(
+        en: json['en'] as String,
+        ja: json['ja'] as String,
+        kanji: json['kanji'] as String? ?? '',
+      );
+}
+
 /// 言語ごとの翻訳。`reviewStatus` が published / reviewed のものだけを配信する。
 class TriviaTranslation {
   const TriviaTranslation({required this.reviewStatus, required this.levels});
@@ -38,6 +53,7 @@ class Trivia {
     this.keywords = const [],
     this.related = const [],
     this.contentFlags = const {},
+    this.vocab = const [],
   });
 
   final String id;
@@ -77,6 +93,9 @@ class Trivia {
   /// 話題の種類のタグ（[validContentFlags]）。年代ごとに配信を止める話題の判定に使う。
   final Set<String> contentFlags;
 
+  /// 「雑学で英語」: この雑学に出てくることばの対訳。
+  final List<VocabEntry> vocab;
+
   factory Trivia.fromJson(Map<String, dynamic> json) {
     final translations = <String, TriviaTranslation>{};
     (json['translations'] as Map<String, dynamic>).forEach((locale, value) {
@@ -113,6 +132,10 @@ class Trivia {
       keywords: List<String>.from(json['keywords'] as List? ?? const []),
       related: List<String>.from(json['related'] as List? ?? const []),
       contentFlags: Set<String>.from(json['contentFlags'] as List? ?? const []),
+      vocab: [
+        for (final v in json['vocab'] as List? ?? const [])
+          VocabEntry.fromJson(v as Map<String, dynamic>),
+      ],
     );
   }
 
