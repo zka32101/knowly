@@ -1663,6 +1663,186 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'{n}てん'**
   String battlePoints(int n);
+
+  /// No description provided for @reviewTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'おさらい'**
+  String get reviewTitle;
+
+  /// No description provided for @reviewNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうの おさらいは ありません。「しらなかった」を おした ざつがくが、あしたから でてくるよ。'**
+  String get reviewNone;
+
+  /// No description provided for @reviewDoneNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'また あした おさらいしよう。'**
+  String get reviewDoneNote;
+
+  /// No description provided for @reviewChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'おさらい'**
+  String get reviewChip;
+
+  /// No description provided for @reviewChipCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'おさらい {n}'**
+  String reviewChipCount(int n);
+
+  /// No description provided for @dailyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうの チャレンジ'**
+  String get dailyTitle;
+
+  /// No description provided for @dailyChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'チャレンジ'**
+  String get dailyChip;
+
+  /// No description provided for @dailyStreak.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}にち つづけて あそんだよ'**
+  String dailyStreak(int n);
+
+  /// No description provided for @dailyComeBack.
+  ///
+  /// In ja, this message translates to:
+  /// **'また あした ちょうせんしよう！'**
+  String get dailyComeBack;
+
+  /// No description provided for @dailyShare.
+  ///
+  /// In ja, this message translates to:
+  /// **'けっかを シェア'**
+  String get dailyShare;
+
+  /// No description provided for @badgesTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'バッジ'**
+  String get badgesTitle;
+
+  /// No description provided for @badgesChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'バッジ'**
+  String get badgesChip;
+
+  /// No description provided for @badgesCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} こ ゲット！'**
+  String badgesCount(int n, int total);
+
+  /// No description provided for @badgeStreak.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}にち れんぞく'**
+  String badgeStreak(int n);
+
+  /// No description provided for @badgeReadDays.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}にち よんだ'**
+  String badgeReadDays(int n);
+
+  /// No description provided for @badgeLearned.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}こ しれた'**
+  String badgeLearned(int n);
+
+  /// No description provided for @badgeQuiz.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズ {n}もん せいかい'**
+  String badgeQuiz(int n);
+
+  /// No description provided for @badgeDaily.
+  ///
+  /// In ja, this message translates to:
+  /// **'チャレンジ {n}にち'**
+  String badgeDaily(int n);
+
+  /// No description provided for @badgePerfect.
+  ///
+  /// In ja, this message translates to:
+  /// **'チャレンジ ぜんもん せいかい'**
+  String get badgePerfect;
+
+  /// No description provided for @reportTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'がくしゅうの ようす'**
+  String get reportTitle;
+
+  /// No description provided for @reportNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この ようすは、この たんまつの なかだけに ある きろくから つくっています。そとには おくりません。'**
+  String get reportNote;
+
+  /// No description provided for @reportLearned.
+  ///
+  /// In ja, this message translates to:
+  /// **'「しらなかった」と おぼえた ざつがく'**
+  String get reportLearned;
+
+  /// No description provided for @reportKnew.
+  ///
+  /// In ja, this message translates to:
+  /// **'「しってた」ざつがく'**
+  String get reportKnew;
+
+  /// No description provided for @reportQuiz.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズの せいかい'**
+  String get reportQuiz;
+
+  /// No description provided for @reportNoQuiz.
+  ///
+  /// In ja, this message translates to:
+  /// **'まだ なし'**
+  String get reportNoQuiz;
+
+  /// No description provided for @reportReviewPending.
+  ///
+  /// In ja, this message translates to:
+  /// **'おさらい まち'**
+  String get reportReviewPending;
+
+  /// No description provided for @reportFavorite.
+  ///
+  /// In ja, this message translates to:
+  /// **'よく みた ジャンル'**
+  String get reportFavorite;
+
+  /// No description provided for @reportEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'まだ きろくが ありません。'**
+  String get reportEmpty;
+
+  /// No description provided for @reportRecent.
+  ///
+  /// In ja, this message translates to:
+  /// **'さいきん しれたこと'**
+  String get reportRecent;
+
+  /// No description provided for @reportOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'がくしゅうの ようす（おうちの ひとへ）'**
+  String get reportOpen;
 }
 
 class _AppLocalizationsDelegate

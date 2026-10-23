@@ -870,4 +870,112 @@ class AppLocalizationsEn extends AppLocalizations {
   String battlePoints(int n) {
     return '$n pts';
   }
+
+  @override
+  String get reviewTitle => 'Review';
+
+  @override
+  String get reviewNone =>
+      'Nothing to review today. Facts you mark \"I learned something\" will show up from tomorrow.';
+
+  @override
+  String get reviewDoneNote => 'Come back tomorrow to review more.';
+
+  @override
+  String get reviewChip => 'Review';
+
+  @override
+  String reviewChipCount(int n) {
+    return 'Review $n';
+  }
+
+  @override
+  String get dailyTitle => 'Daily challenge';
+
+  @override
+  String get dailyChip => 'Challenge';
+
+  @override
+  String dailyStreak(int n) {
+    return '$n-day challenge streak';
+  }
+
+  @override
+  String get dailyComeBack => 'Come back tomorrow for a new one!';
+
+  @override
+  String get dailyShare => 'Share result';
+
+  @override
+  String get badgesTitle => 'Badges';
+
+  @override
+  String get badgesChip => 'Badges';
+
+  @override
+  String badgesCount(int n, int total) {
+    return '$n of $total earned';
+  }
+
+  @override
+  String badgeStreak(int n) {
+    return '$n-day streak';
+  }
+
+  @override
+  String badgeReadDays(int n) {
+    return 'Read on $n days';
+  }
+
+  @override
+  String badgeLearned(int n) {
+    return 'Learned $n facts';
+  }
+
+  @override
+  String badgeQuiz(int n) {
+    return '$n quiz answers right';
+  }
+
+  @override
+  String badgeDaily(int n) {
+    return '$n daily challenges';
+  }
+
+  @override
+  String get badgePerfect => 'Perfect daily challenge';
+
+  @override
+  String get reportTitle => 'Learning report';
+
+  @override
+  String get reportNote =>
+      'This report is built only from records stored on this device. Nothing is sent anywhere.';
+
+  @override
+  String get reportLearned => 'Facts marked \"learned something\"';
+
+  @override
+  String get reportKnew => 'Facts marked \"I knew it\"';
+
+  @override
+  String get reportQuiz => 'Quiz answers right';
+
+  @override
+  String get reportNoQuiz => 'None yet';
+
+  @override
+  String get reportReviewPending => 'Waiting for review';
+
+  @override
+  String get reportFavorite => 'Favorite genres';
+
+  @override
+  String get reportEmpty => 'No records yet.';
+
+  @override
+  String get reportRecent => 'Recently learned';
+
+  @override
+  String get reportOpen => 'Learning report (for parents)';
 }

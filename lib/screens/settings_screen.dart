@@ -232,6 +232,17 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 title: l.settingsOtherApps,
               ),
             ),
+          if (band.isChild)
+            ListTile(
+              key: const Key('report_tile'),
+              title: Text(l.reportOpen),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () async {
+                // Kids は設定に入る時点でゲートを通っている。Junior はここで通す。
+                if (band == AgeBand.junior && !await showParentalGate(context)) return;
+                if (context.mounted) context.push('/report');
+              },
+            ),
           ListTile(
             key: const Key('privacy_tile'),
             title: Text(l.privacyTitle),

@@ -11,7 +11,10 @@ import 'screens/library_screen.dart';
 import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
+import 'screens/badges_screen.dart';
 import 'screens/premium_screen.dart';
+import 'screens/report_screen.dart';
+import 'screens/solo_quiz_screens.dart';
 import 'screens/quiz_battle_screen.dart';
 import 'screens/privacy_screen.dart';
 import 'screens/projects_screen.dart';
@@ -58,6 +61,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),
       GoRoute(path: '/privacy', builder: (_, _) => const PrivacyScreen()),
       GoRoute(path: '/quiz', builder: (_, _) => const QuizBattleScreen()),
+      GoRoute(path: '/review', builder: (_, _) => const ReviewScreen()),
+      GoRoute(path: '/daily', builder: (_, _) => const DailyChallengeScreen()),
+      GoRoute(path: '/badges', builder: (_, _) => const BadgesScreen()),
+      GoRoute(path: '/report', builder: (_, _) => const ReportScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../logic/interests.dart';
+import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
@@ -51,6 +52,10 @@ class AppSettings {
     this.interestKeywords = const [],
     this.regionMode = 'auto',
     this.seasonMode = 'auto',
+    this.reviews = const {},
+    this.quizAnswered = 0,
+    this.quizCorrect = 0,
+    this.dailyResults = const {},
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -84,6 +89,16 @@ class AppSettings {
   /// 季節の設定。auto = タイムゾーンから北半球・南半球を推定、north / south = 固定、off = 季節を使わない。
   final String seasonMode;
 
+  /// 「知らなかった」雑学の復習の予定（id → 箱と期限）。端末内にだけ保存する。
+  final Map<String, ReviewEntry> reviews;
+
+  /// 1人用クイズ（ひとり・復習・今日のチャレンジ）の通算の回答数・正解数。
+  final int quizAnswered;
+  final int quizCorrect;
+
+  /// 今日のチャレンジの結果（日付 → 正誤の並び。例 "101"）。
+  final Map<String, String> dailyResults;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -112,6 +127,10 @@ class AppSettings {
     List<String>? interestKeywords,
     String? regionMode,
     String? seasonMode,
+    Map<String, ReviewEntry>? reviews,
+    int? quizAnswered,
+    int? quizCorrect,
+    Map<String, String>? dailyResults,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -132,6 +151,10 @@ class AppSettings {
         interestKeywords: interestKeywords ?? this.interestKeywords,
         regionMode: regionMode ?? this.regionMode,
         seasonMode: seasonMode ?? this.seasonMode,
+        reviews: reviews ?? this.reviews,
+        quizAnswered: quizAnswered ?? this.quizAnswered,
+        quizCorrect: quizCorrect ?? this.quizCorrect,
+        dailyResults: dailyResults ?? this.dailyResults,
       );
 }
 
@@ -182,6 +205,16 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       interestKeywords: p.getStringList('interestKeywords') ?? const [],
       regionMode: p.getString('regionMode') ?? 'auto',
       seasonMode: p.getString('seasonMode') ?? 'auto',
+      reviews: {
+        for (final raw in (p.getStringList('reviews') ?? const []))
+          if (ReviewEntry.decode(raw) case (final id, final e)?) id: e,
+      },
+      quizAnswered: p.getInt('quizAnswered') ?? 0,
+      quizCorrect: p.getInt('quizCorrect') ?? 0,
+      dailyResults: {
+        for (final raw in (p.getStringList('dailyResults') ?? const []))
+          if (raw.split(':') case [final day, final r]) day: r,
+      },
     );
   }
 
@@ -303,12 +336,57 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     return true;
   }
 
-  void setKnowledge(String id, Knowledge value) {
+  /// 「知ってた／知らなかった」。「知らなかった」は、明日からの復習の予定に入る。
+  void setKnowledge(String id, Knowledge value, {DateTime? today}) {
     final map = {...state.knowledge};
     map[id] == value ? map.remove(id) : map[id] = value;
-    state = state.copyWith(knowledge: map);
+    final reviews = {...state.reviews};
+    if (map[id] == Knowledge.learned) {
+      reviews.putIfAbsent(id, () => firstReview(today ?? DateTime.now()));
+    } else {
+      reviews.remove(id);
+    }
+    state = state.copyWith(knowledge: map, reviews: reviews);
     _prefs.setStringList(
         'knowledge', [for (final e in map.entries) '${e.key}:${e.value.name}']);
+    _saveReviews(reviews);
+  }
+
+  void _saveReviews(Map<String, ReviewEntry> reviews) => _prefs.setStringList(
+      'reviews', [for (final e in reviews.entries) e.value.encode(e.key)]);
+
+  /// 復習の結果を記録する（予定を進める／戻す）。
+  void recordReview(String id, {required bool correct, required DateTime today}) {
+    final entry = state.reviews[id];
+    if (entry == null) return;
+    final reviews = {...state.reviews};
+    final next = afterReview(entry, correct: correct, today: today);
+    next == null ? reviews.remove(id) : reviews[id] = next;
+    state = state.copyWith(reviews: reviews);
+    _saveReviews(reviews);
+  }
+
+  /// 1人用クイズの回答を通算に加える。
+  void recordQuizAnswer({required bool correct}) {
+    final answered = state.quizAnswered + 1;
+    final right = state.quizCorrect + (correct ? 1 : 0);
+    state = state.copyWith(quizAnswered: answered, quizCorrect: right);
+    _prefs.setInt('quizAnswered', answered);
+    _prefs.setInt('quizCorrect', right);
+  }
+
+  /// 今日のチャレンジの結果（正誤を "101" のように並べた文字列）を記録する。
+  void recordDaily(DateTime today, String result) {
+    final key = dayKey(today);
+    if (state.dailyResults.containsKey(key)) return;
+    final map = {...state.dailyResults, key: result};
+    // 保存は直近400日だけ。
+    final keys = map.keys.toList()..sort();
+    for (final k in keys.take(keys.length > 400 ? keys.length - 400 : 0)) {
+      map.remove(k);
+    }
+    state = state.copyWith(dailyResults: map);
+    _prefs.setStringList('dailyResults', [for (final e in map.entries) '${e.key}:${e.value}']);
   }
 
   /// 今日、雑学を読んだことを記録する（Teen/Adult のストリーク用）。

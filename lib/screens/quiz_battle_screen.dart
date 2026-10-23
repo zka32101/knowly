@@ -115,6 +115,11 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
             : QuizPlay(
                 key: ValueKey(_gameId),
                 game: game,
+                onReveal: (g) {
+                  if (g.isSolo) {
+                    ref.read(settingsProvider.notifier).recordQuizAnswer(correct: g.isCorrect(0)!);
+                  }
+                },
                 finishedBuilder: (context, g) => _finished(l, g),
               ),
       ),

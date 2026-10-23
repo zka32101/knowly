@@ -71,6 +71,9 @@ class FakeTts implements TtsService {
 class FakeShare implements ShareService {
   Uint8List? png;
   String? text;
+  String? sharedText;
+  @override
+  Future<void> shareText(String text) async => sharedText = text;
   @override
   Future<void> shareImage(Uint8List png, {required String text}) async {
     this.png = png;
@@ -862,6 +865,7 @@ void main() {
         'ageBand': 'adult',
         'interestKeywords': [for (var i = 0; i < 10; i++) 'ことば$i'],
       });
+      await _scrollTo(tester, const Key('interests_edit'));
       await tester.tap(find.byKey(const Key('interests_edit')));
       await tester.pumpAndSettle();
       await tester.enterText(find.byKey(const Key('keyword_field')), 'あと1つ');
@@ -1961,9 +1965,191 @@ void main() {
 
     testWidgets('Kids でも遊べる（通信なし・ひらがな）', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _scrollTo(tester, const Key('open_quiz'));
       await tester.tap(find.byKey(const Key('open_quiz')));
       await tester.pumpAndSettle();
       expect(find.text('なんにんで あそぶ？'), findsOneWidget);
+    });
+  });
+
+  group('復習・今日のチャレンジ・バッジ・保護者向け', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    Future<void> tapV(WidgetTester tester, Key key) async {
+      if (find.byKey(key).evaluate().isEmpty) {
+        await tester.scrollUntilVisible(find.byKey(key), 200,
+            scrollable: find
+                .byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical)
+                .first);
+      }
+      await tester.ensureVisible(find.byKey(key));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(key));
+      await tester.pumpAndSettle();
+    }
+
+    /// 出ている問題の形（○× / 選択式）に合わせて、とにかく答えて進める。
+    Future<void> answerRound(WidgetTester tester) async {
+      if (find.byKey(const Key('battle_true')).evaluate().isNotEmpty) {
+        await tester.tap(find.byKey(const Key('battle_true')));
+        await tester.pumpAndSettle();
+      } else {
+        await tapV(tester, const Key('battle_opt_0'));
+      }
+      await tapV(tester, const Key('battle_next'));
+    }
+
+    const learnedPrefs = <String, Object>{
+      'ageBand': 'adult',
+      'knowledge': ['octopus_blue_blood:learned'],
+      'reviews': ['octopus_blue_blood:0:2026-10-22'],
+    };
+
+    testWidgets('「知らなかった」を押すと、復習の予定に入る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('learned_it'));
+      await tester.tap(find.byKey(const Key('learned_it')));
+      await tester.pumpAndSettle();
+      final reviews = containerOf(tester).read(settingsProvider).reviews;
+      expect(reviews, hasLength(1));
+      expect(reviews.values.first.due, '2026-10-24');
+      await tester.tap(find.byKey(const Key('knew_it'))); // 「知ってた」にすると予定は消える
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(settingsProvider).reviews, isEmpty);
+    });
+
+    testWidgets('復習: 期限が来た雑学が出て、正解すると予定が先へ進む', (tester) async {
+      await _pump(tester, prefs: learnedPrefs);
+      expect(find.byKey(const Key('open_review')), findsOneWidget);
+      await tester.tap(find.byKey(const Key('open_review')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('battle_true')), findsOneWidget); // タコは○×のみ
+      await tester.tap(find.byKey(const Key('battle_true'))); // 正解は ○
+      await tester.pumpAndSettle();
+      final e = containerOf(tester).read(settingsProvider).reviews['octopus_blue_blood']!;
+      expect(e.box, 1);
+      expect(e.due, '2026-10-26');
+      expect(containerOf(tester).read(settingsProvider).quizCorrect, 1);
+      await tester.tap(find.byKey(const Key('battle_next')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('review_done')), findsOneWidget);
+    });
+
+    testWidgets('復習: 間違えると明日に戻る', (tester) async {
+      await _pump(tester, prefs: learnedPrefs);
+      await tester.tap(find.byKey(const Key('open_review')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('battle_false')));
+      await tester.pumpAndSettle();
+      final e = containerOf(tester).read(settingsProvider).reviews['octopus_blue_blood']!;
+      expect(e.box, 0);
+      expect(e.due, '2026-10-24');
+    });
+
+    testWidgets('期限が来ていなければ、復習の入口は出ない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'knowledge': ['octopus_blue_blood:learned'],
+        'reviews': ['octopus_blue_blood:0:2026-10-24'],
+      });
+      expect(find.byKey(const Key('open_review')), findsNothing);
+    });
+
+    testWidgets('今日のチャレンジ: 3問やると記録され、もう一度開くと結果になる。Adult は共有できる', (tester) async {
+      final share = FakeShare();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, share: share);
+      await tester.tap(find.byKey(const Key('open_daily')));
+      await tester.pumpAndSettle();
+      for (var i = 0; i < 3; i++) {
+        await answerRound(tester);
+      }
+      expect(find.byKey(const Key('daily_marks')), findsOneWidget);
+      final results = containerOf(tester).read(settingsProvider).dailyResults;
+      expect(results['2026-10-23'], hasLength(3));
+      expect(containerOf(tester).read(settingsProvider).quizAnswered, 3);
+      await tester.tap(find.byKey(const Key('daily_share')));
+      await tester.pumpAndSettle();
+      expect(share.sharedText, contains('2026-10-23'));
+      // もう一度開いても、続きから遊べず結果だけ
+      await tester.tap(find.byKey(const Key('daily_exit')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('open_daily')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('daily_marks')), findsOneWidget);
+      expect(find.byKey(const Key('battle_statement')), findsNothing);
+    });
+
+    testWidgets('今日のチャレンジ: Junior は共有ボタンが出ない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'junior',
+        'dailyResults': ['2026-10-23:101'],
+      });
+      await tester.tap(find.byKey(const Key('open_daily')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('daily_marks')), findsOneWidget);
+      expect(find.text('✅❌✅'), findsOneWidget);
+      expect(find.byKey(const Key('daily_share')), findsNothing);
+    });
+
+    testWidgets('バッジ: 条件を満たしたものが手に入る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'readDays': ['2026-10-21', '2026-10-22', '2026-10-23'],
+        'quizCorrect': 10,
+        'quizAnswered': 12,
+      });
+      await tapV(tester, const Key('open_badges'));
+      expect(find.byKey(const Key('badge_streak_3')), findsOneWidget);
+      expect(find.text('3にち れんぞく'), findsOneWidget);
+      final count = find.byKey(const Key('badges_count'));
+      expect(tester.widget<Text>(count).data, contains('2 /')); // 3日連続 + クイズ10問
+    });
+
+    testWidgets('バッジ: Kids には連続日数のバッジがない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await tapV(tester, const Key('open_badges'));
+      expect(find.byKey(const Key('badge_streak_3')), findsNothing);
+      expect(find.byKey(const Key('badge_quizCorrect_10')), findsOneWidget);
+    });
+
+    testWidgets('保護者向け: 子どもの設定に「学習のようす」があり、記録から作られる', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'junior',
+        'knowledge': ['octopus_blue_blood:learned', 'honey_never_spoils:knew'],
+        'quizCorrect': 3,
+        'quizAnswered': 4,
+      });
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await tapV(tester, const Key('report_tile'));
+      await _solveGate(tester);
+      expect(find.text('3 / 4 (75%)'), findsOneWidget);
+      expect(tester.widget<Text>(find.descendant(
+              of: find.byKey(const Key('report_learned')), matching: find.text('1'))).data,
+          '1');
+      expect(find.byKey(const Key('report_cat_animals')), findsOneWidget);
+    });
+
+    testWidgets('Adult の設定には、保護者向けの項目は出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('privacy_tile'));
+      expect(find.byKey(const Key('report_tile')), findsNothing);
+    });
+
+    testWidgets('ひとりクイズの正解数が通算に加わる（対戦の複数人では加わらない）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_quiz')));
+      await tester.pumpAndSettle();
+      await tapV(tester, const Key('battle_kind_tf'));
+      await tapV(tester, const Key('battle_start'));
+      await tester.tap(find.byKey(const Key('battle_true')));
+      await tester.pumpAndSettle();
+      expect(containerOf(tester).read(settingsProvider).quizAnswered, 1);
     });
   });
 }

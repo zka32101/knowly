@@ -854,4 +854,111 @@ class AppLocalizationsJa extends AppLocalizations {
   String battlePoints(int n) {
     return '$nてん';
   }
+
+  @override
+  String get reviewTitle => 'おさらい';
+
+  @override
+  String get reviewNone => 'きょうの おさらいは ありません。「しらなかった」を おした ざつがくが、あしたから でてくるよ。';
+
+  @override
+  String get reviewDoneNote => 'また あした おさらいしよう。';
+
+  @override
+  String get reviewChip => 'おさらい';
+
+  @override
+  String reviewChipCount(int n) {
+    return 'おさらい $n';
+  }
+
+  @override
+  String get dailyTitle => 'きょうの チャレンジ';
+
+  @override
+  String get dailyChip => 'チャレンジ';
+
+  @override
+  String dailyStreak(int n) {
+    return '$nにち つづけて あそんだよ';
+  }
+
+  @override
+  String get dailyComeBack => 'また あした ちょうせんしよう！';
+
+  @override
+  String get dailyShare => 'けっかを シェア';
+
+  @override
+  String get badgesTitle => 'バッジ';
+
+  @override
+  String get badgesChip => 'バッジ';
+
+  @override
+  String badgesCount(int n, int total) {
+    return '$n / $total こ ゲット！';
+  }
+
+  @override
+  String badgeStreak(int n) {
+    return '$nにち れんぞく';
+  }
+
+  @override
+  String badgeReadDays(int n) {
+    return '$nにち よんだ';
+  }
+
+  @override
+  String badgeLearned(int n) {
+    return '$nこ しれた';
+  }
+
+  @override
+  String badgeQuiz(int n) {
+    return 'クイズ $nもん せいかい';
+  }
+
+  @override
+  String badgeDaily(int n) {
+    return 'チャレンジ $nにち';
+  }
+
+  @override
+  String get badgePerfect => 'チャレンジ ぜんもん せいかい';
+
+  @override
+  String get reportTitle => 'がくしゅうの ようす';
+
+  @override
+  String get reportNote =>
+      'この ようすは、この たんまつの なかだけに ある きろくから つくっています。そとには おくりません。';
+
+  @override
+  String get reportLearned => '「しらなかった」と おぼえた ざつがく';
+
+  @override
+  String get reportKnew => '「しってた」ざつがく';
+
+  @override
+  String get reportQuiz => 'クイズの せいかい';
+
+  @override
+  String get reportNoQuiz => 'まだ なし';
+
+  @override
+  String get reportReviewPending => 'おさらい まち';
+
+  @override
+  String get reportFavorite => 'よく みた ジャンル';
+
+  @override
+  String get reportEmpty => 'まだ きろくが ありません。';
+
+  @override
+  String get reportRecent => 'さいきん しれたこと';
+
+  @override
+  String get reportOpen => 'がくしゅうの ようす（おうちの ひとへ）';
 }

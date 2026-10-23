@@ -14,6 +14,7 @@ import '../widgets/ja_wrap_text.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
+import 'solo_quiz_screens.dart';
 import '../models/why_link.dart';
 import '../logic/timing.dart';
 
@@ -140,6 +141,51 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                       wordWrap: lang == 'ja',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headlineSmall),
+                  const SizedBox(height: 24),
+                  OutlinedButton.icon(
+                    key: const Key('open_quiz'),
+                    style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+                    icon: const Icon(Icons.sports_esports_outlined, size: 32),
+                    label: Text(l.battleTitle, style: const TextStyle(fontSize: 20)),
+                    onPressed: () => context.push('/quiz'),
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          key: const Key('open_daily'),
+                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
+                          icon: const Icon(Icons.flag_outlined),
+                          label: Text(l.dailyChip, style: const TextStyle(fontSize: 16)),
+                          onPressed: () => context.push('/daily'),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      if (ref.watch(reviewQuestionsProvider).isNotEmpty) ...[
+                        Expanded(
+                          child: OutlinedButton.icon(
+                            key: const Key('open_review'),
+                            style:
+                                OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
+                            icon: const Icon(Icons.replay_outlined),
+                            label: Text(l.reviewChip, style: const TextStyle(fontSize: 16)),
+                            onPressed: () => context.push('/review'),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                      ],
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          key: const Key('open_badges'),
+                          style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(56)),
+                          icon: const Icon(Icons.emoji_events_outlined),
+                          label: Text(l.badgesChip, style: const TextStyle(fontSize: 16)),
+                          onPressed: () => context.push('/badges'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -195,14 +241,6 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             ),
             const SizedBox(height: 12),
           ],
-          OutlinedButton.icon(
-            key: const Key('open_quiz'),
-            style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
-            icon: const Icon(Icons.sports_esports_outlined, size: 32),
-            label: Text(l.battleTitle, style: const TextStyle(fontSize: 20)),
-            onPressed: () => context.push('/quiz'),
-          ),
-          const SizedBox(height: 12),
           Row(
             children: [
               Expanded(
@@ -623,6 +661,7 @@ class _QuickLinks extends ConsumerWidget {
     final l = AppLocalizations.of(context);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
     final hasProjects = ref.watch(projectsProvider).isNotEmpty;
+    final reviewDue = ref.watch(reviewQuestionsProvider).length;
 
     Widget chip(Key key, IconData icon, String label, String route) => ActionChip(
           key: key,
@@ -639,6 +678,11 @@ class _QuickLinks extends ConsumerWidget {
         children: [
           chip(const Key('open_today'), Icons.event_outlined, l.todayHome, '/today'),
           chip(const Key('open_quiz'), Icons.sports_esports_outlined, l.battleTitle, '/quiz'),
+          chip(const Key('open_daily'), Icons.flag_outlined, l.dailyChip, '/daily'),
+          if (reviewDue > 0)
+            chip(const Key('open_review'), Icons.replay_outlined, l.reviewChipCount(reviewDue),
+                '/review'),
+          chip(const Key('open_badges'), Icons.emoji_events_outlined, l.badgesChip, '/badges'),
           chip(const Key('open_myths'), Icons.fact_check_outlined, l.mythsTitle, '/myths'),
           if (band.isTeenOrAdult)
             chip(const Key('open_listen'), Icons.headphones_outlined, l.listenOpen, '/listen'),
