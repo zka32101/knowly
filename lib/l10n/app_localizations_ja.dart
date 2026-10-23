@@ -1263,4 +1263,37 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get leagueSub => '1しゅうかんの しょうぶ';
+
+  @override
+  String get recapTitle => '1しゅうかんの ふりかえり';
+
+  @override
+  String get recapNote => 'きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。';
+
+  @override
+  String get recapSeen => 'みた ざつがく';
+
+  @override
+  String get recapLearned => 'あたらしく しれた';
+
+  @override
+  String get recapQuiz => 'クイズの せいかい';
+
+  @override
+  String get recapActiveDays => 'あそんだ ひ';
+
+  @override
+  String get recapMsgNone => 'こんしゅうは おやすみだったね。また ひとつ、よんでみよう！';
+
+  @override
+  String get recapMsgSome => 'いい ちょうし！ すこしずつ ふえていくよ。';
+
+  @override
+  String get recapMsgGreat => 'すごい！ まいにちの ように あそんだね！';
+
+  @override
+  String get recapChip => 'ふりかえり';
+
+  @override
+  String get recapBanner => 'こんしゅうの ふりかえりが できたよ';
 }

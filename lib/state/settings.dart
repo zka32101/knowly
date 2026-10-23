@@ -4,12 +4,14 @@ import 'dart:ui';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../logic/activity.dart';
 import '../logic/interests.dart';
 import '../logic/league.dart';
 import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
+import 'providers.dart' show nowProvider;
 
 /// 画面の言語。
 const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
@@ -70,6 +72,7 @@ class AppSettings {
     this.capsule,
     this.words = const {},
     this.league = const LeagueData(),
+    this.activity = const {},
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -129,6 +132,9 @@ class AppSettings {
   /// 家族リーグ（この端末で遊んだ対戦の、週ごとの得点）。
   final LeagueData league;
 
+  /// 1日ごとの記録（週のふりかえり用。直近60日）。
+  final Map<String, DayActivity> activity;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -167,6 +173,7 @@ class AppSettings {
     String? capsule,
     Set<String>? words,
     LeagueData? league,
+    Map<String, DayActivity>? activity,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -197,13 +204,35 @@ class AppSettings {
         capsule: capsule ?? this.capsule,
         words: words ?? this.words,
         league: league ?? this.league,
+        activity: activity ?? this.activity,
       );
 }
 
 class SettingsNotifier extends StateNotifier<AppSettings> {
-  SettingsNotifier(this._prefs) : super(_read(_prefs));
+  SettingsNotifier(this._prefs, {DateTime Function()? now})
+      : _now = now ?? DateTime.now,
+        super(_read(_prefs));
 
   final SharedPreferences _prefs;
+
+  /// 「いま」。テストでは差し替える。
+  final DateTime Function() _now;
+
+  /// 今日の記録に [f] を加える（週のふりかえり用）。
+  void _bump(DayActivity Function(DayActivity) f) {
+    final today = _now();
+    final key = dayKey(today);
+    final map = {...state.activity};
+    map[key] = f(map[key] ?? const DayActivity());
+    final keys = map.keys.toList()..sort();
+    if (keys.length > activityKeepDays) {
+      for (final k in keys.take(keys.length - activityKeepDays)) {
+        map.remove(k);
+      }
+    }
+    state = state.copyWith(activity: map);
+    _prefs.setStringList('activity', [for (final e in map.entries) e.value.encode(e.key)]);
+  }
 
   /// 端末に保存した設定・保存・記録をすべて消して、初期状態に戻す。
   Future<void> resetAll() async {
@@ -294,6 +323,10 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
       league: _readLeague(p),
+      activity: {
+        for (final raw in (p.getStringList('activity') ?? const <String>[]))
+          if (DayActivity.decode(raw) case (final day, final a)?) day: a,
+      },
       celebratedStage: p.getInt('celebratedStage'),
       celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
@@ -431,7 +464,9 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     } else {
       reviews.remove(id);
     }
+    final becameLearned = map[id] == Knowledge.learned;
     state = state.copyWith(knowledge: map, reviews: reviews);
+    if (becameLearned) _bump((a) => a.copyWith(learned: a.learned + 1));
     _prefs.setStringList(
         'knowledge', [for (final e in map.entries) '${e.key}:${e.value.name}']);
     _saveReviews(reviews);
@@ -457,6 +492,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+    _bump((a) => a.copyWith(seen: a.seen + 1));
   }
 
   /// 対戦（2人以上）の結果を、家族リーグに加える。
@@ -515,6 +551,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(quizAnswered: answered, quizCorrect: right);
     _prefs.setInt('quizAnswered', answered);
     _prefs.setInt('quizCorrect', right);
+    _bump((a) => a.copyWith(answered: a.answered + 1, correct: a.correct + (correct ? 1 : 0)));
   }
 
   /// 今日のチャレンジの結果（正誤を "101" のように並べた文字列）を記録する。
@@ -561,7 +598,7 @@ final sharedPreferencesProvider =
     Provider<SharedPreferences>((ref) => throw UnimplementedError());
 
 final settingsProvider = StateNotifierProvider<SettingsNotifier, AppSettings>(
-  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider)),
+  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider), now: () => ref.read(nowProvider)),
 );
 
 /// 端末の言語。テストで差し替える。

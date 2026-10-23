@@ -1294,4 +1294,39 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get leagueSub => 'Un reto semanal';
+
+  @override
+  String get recapTitle => 'Resumen semanal';
+
+  @override
+  String get recapNote =>
+      'Los últimos 7 días, comparados con los 7 anteriores.';
+
+  @override
+  String get recapSeen => 'Datos vistos';
+
+  @override
+  String get recapLearned => 'Cosas nuevas aprendidas';
+
+  @override
+  String get recapQuiz => 'Respuestas de quiz correctas';
+
+  @override
+  String get recapActiveDays => 'Días activos';
+
+  @override
+  String get recapMsgNone =>
+      'Una semana tranquila. ¡Lee un dato para retomar el ritmo!';
+
+  @override
+  String get recapMsgSome => '¡Buen ritmo! Se va sumando poco a poco.';
+
+  @override
+  String get recapMsgGreat => '¡Increíble! ¡Casi todos los días!';
+
+  @override
+  String get recapChip => 'Resumen';
+
+  @override
+  String get recapBanner => 'Tu resumen semanal está listo';
 }

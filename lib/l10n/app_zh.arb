@@ -383,5 +383,16 @@
   "leagueClearTitle": "要清除本周记录吗？",
   "leagueClearBody": "本周的得分将被清除，上周冠军会保留。",
   "leagueRecord": "记录到家庭联赛",
-  "leagueSub": "为期一周的比拼"
+  "leagueSub": "为期一周的比拼",
+  "recapTitle": "本周回顾",
+  "recapNote": "最近 7 天，与之前 7 天的对比。",
+  "recapSeen": "看过的冷知识",
+  "recapLearned": "新学到的",
+  "recapQuiz": "答对的测验题",
+  "recapActiveDays": "活跃天数",
+  "recapMsgNone": "这周比较安静。再读一条，重新开始吧！",
+  "recapMsgSome": "节奏不错！一点一点就会积累起来。",
+  "recapMsgGreat": "太棒了！你几乎每天都来玩！",
+  "recapChip": "回顾",
+  "recapBanner": "本周回顾已生成"
 }

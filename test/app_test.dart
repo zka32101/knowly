@@ -3183,4 +3183,80 @@ void main() {
       expect(containerOf(tester).read(settingsProvider).league.scores, isEmpty);
     });
   });
+
+  group('週のふりかえり', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('雑学を開く・知れた・クイズに答える と、今日の記録が増える', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final n = containerOf(tester).read(settingsProvider.notifier);
+      n.markSeen('octopus_blue_blood');
+      n.markSeen('octopus_blue_blood'); // 同じ雑学は1回だけ
+      n.setKnowledge('octopus_blue_blood', Knowledge.learned);
+      n.recordQuizAnswer(correct: true);
+      n.recordQuizAnswer(correct: false);
+      final a = containerOf(tester).read(settingsProvider).activity['2026-10-23']!;
+      expect(a.seen, 1);
+      expect(a.learned, 1);
+      expect(a.answered, 2);
+      expect(a.correct, 1);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('activity'), ['2026-10-23:1:1:2:1']);
+    });
+
+    testWidgets('ふりかえりの画面に、7日の合計と、前の週との差が出る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'activity': [
+          '2026-10-23:5:2:10:7',
+          '2026-10-21:3:0:0:0',
+          '2026-10-14:2:0:4:2', // 前の週（7日前〜13日前）
+        ],
+      });
+      await _open(tester, const Key('open_recap'));
+      expect(find.text('8'), findsOneWidget); // 見た: 5+3
+      expect(find.text('7 / 10'), findsOneWidget);
+      expect(find.text('2 / 7'), findsOneWidget); // 活動した日
+      expect(find.text('▲ 6'), findsOneWidget); // 見た: 8 - 2
+      expect(find.byKey(const Key('recap_message')), findsOneWidget);
+    });
+
+    testWidgets('何もしていない週は「おやすみ」のメッセージ', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_recap'));
+      expect(find.text('こんしゅうは おやすみだったね。また ひとつ、よんでみよう！'), findsOneWidget);
+    });
+
+    testWidgets('日曜日だけ、ホームにふりかえりのお知らせが出る', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'activity': ['2026-10-23:1:0:0:0']},
+          now: DateTime(2026, 10, 25));
+      expect(find.byKey(const Key('recap_banner')), findsOneWidget);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester,
+          prefs: {'ageBand': 'adult', 'activity': ['2026-10-23:1:0:0:0']},
+          now: DateTime(2026, 10, 24)); // 土曜日
+      expect(find.byKey(const Key('recap_banner')), findsNothing);
+    });
+
+    testWidgets('日曜でも、何もしていなければお知らせは出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, now: DateTime(2026, 10, 25));
+      expect(find.byKey(const Key('recap_banner')), findsNothing);
+    });
+
+    testWidgets('古い記録は60日ぶんだけ残す', (tester) async {
+      String key(int back) {
+        final d = DateTime(2026, 10, 23).subtract(Duration(days: back));
+        return '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}:1:0:0:0';
+      }
+
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'activity': [for (var d = 1; d <= 70; d++) key(d)],
+      });
+      containerOf(tester).read(settingsProvider.notifier).markSeen('x');
+      expect(containerOf(tester).read(settingsProvider).activity.length, 60);
+    });
+  });
 }

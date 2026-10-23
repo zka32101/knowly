@@ -19,6 +19,7 @@ import 'screens/capsule_screen.dart';
 import 'screens/hubs.dart';
 import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
+import 'screens/recap_screen.dart';
 import 'screens/voice_quiz_screen.dart';
 import 'screens/word_screen.dart';
 import 'screens/words_screen.dart';
@@ -114,6 +115,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(path: '/voicequiz', builder: (_, _) => const VoiceQuizScreen()),
       GoRoute(path: '/league', builder: (_, _) => const LeagueScreen()),
+      GoRoute(path: '/recap', builder: (_, _) => const RecapScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

@@ -1262,4 +1262,37 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get leagueSub => '일주일 승부';
+
+  @override
+  String get recapTitle => '주간 돌아보기';
+
+  @override
+  String get recapNote => '최근 7일을 그 전 7일과 비교해요.';
+
+  @override
+  String get recapSeen => '본 상식';
+
+  @override
+  String get recapLearned => '새로 알게 된 것';
+
+  @override
+  String get recapQuiz => '퀴즈 정답';
+
+  @override
+  String get recapActiveDays => '활동한 날';
+
+  @override
+  String get recapMsgNone => '이번 주는 쉬었네요. 하나만 읽고 다시 시작해 봐요!';
+
+  @override
+  String get recapMsgSome => '좋은 페이스예요! 조금씩 쌓여 가요.';
+
+  @override
+  String get recapMsgGreat => '대단해요! 거의 매일 했어요!';
+
+  @override
+  String get recapChip => '돌아보기';
+
+  @override
+  String get recapBanner => '이번 주 돌아보기가 준비됐어요';
 }

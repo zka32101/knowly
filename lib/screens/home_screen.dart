@@ -16,6 +16,7 @@ import '../widgets/mascot_card.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
+import 'recap_screen.dart';
 import 'solo_quiz_screens.dart';
 import '../models/why_link.dart';
 import '../logic/timing.dart';
@@ -112,6 +113,7 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                 children: [
                   const MascotCard(),
                   const _ReviewBanner(),
+                  const _RecapBanner(),
                   const SizedBox(height: 16),
                   TriviaIllustration(id: item.illustration, size: 120),
                   const SizedBox(height: 16),
@@ -248,6 +250,7 @@ class _FeedHome extends ConsumerWidget {
       children: [
         const MascotCard(),
         const _ReviewBanner(),
+        const _RecapBanner(),
         if (streak != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
@@ -585,6 +588,29 @@ class _TodayBanner extends ConsumerWidget {
         subtitle: more > 0 ? Text('+$more') : null,
         trailing: const Icon(Icons.chevron_right),
         onTap: () => context.push('/today'),
+      ),
+    );
+  }
+}
+
+/// 日曜日だけ出す、週のふりかえりのお知らせ（その週に何かしていたとき）。
+class _RecapBanner extends ConsumerWidget {
+  const _RecapBanner();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final now = ref.watch(nowProvider);
+    if (now.weekday != DateTime.sunday) return const SizedBox.shrink();
+    final l = AppLocalizations.of(context);
+    final recap = ref.watch(recapProvider);
+    if (recap.activeDays == 0) return const SizedBox.shrink();
+    return Card(
+      child: ListTile(
+        key: const Key('recap_banner'),
+        leading: const Text('📊', style: TextStyle(fontSize: 28)),
+        title: Text(l.recapBanner),
+        trailing: const Icon(Icons.arrow_forward),
+        onTap: () => context.push('/recap'),
       ),
     );
   }

@@ -383,5 +383,16 @@
   "leagueClearTitle": "이번 주 기록을 지울까요?",
   "leagueClearBody": "이번 주 점수가 지워져요. 지난주 우승자는 남아요.",
   "leagueRecord": "가족 리그에 기록하기",
-  "leagueSub": "일주일 승부"
+  "leagueSub": "일주일 승부",
+  "recapTitle": "주간 돌아보기",
+  "recapNote": "최근 7일을 그 전 7일과 비교해요.",
+  "recapSeen": "본 상식",
+  "recapLearned": "새로 알게 된 것",
+  "recapQuiz": "퀴즈 정답",
+  "recapActiveDays": "활동한 날",
+  "recapMsgNone": "이번 주는 쉬었네요. 하나만 읽고 다시 시작해 봐요!",
+  "recapMsgSome": "좋은 페이스예요! 조금씩 쌓여 가요.",
+  "recapMsgGreat": "대단해요! 거의 매일 했어요!",
+  "recapChip": "돌아보기",
+  "recapBanner": "이번 주 돌아보기가 준비됐어요"
 }

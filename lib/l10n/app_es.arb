@@ -383,5 +383,16 @@
   "leagueClearTitle": "¿Borrar los registros de esta semana?",
   "leagueClearBody": "Se borrarán las puntuaciones de esta semana. El campeón de la semana pasada se mantiene.",
   "leagueRecord": "Registrar en la liga familiar",
-  "leagueSub": "Un reto semanal"
+  "leagueSub": "Un reto semanal",
+  "recapTitle": "Resumen semanal",
+  "recapNote": "Los últimos 7 días, comparados con los 7 anteriores.",
+  "recapSeen": "Datos vistos",
+  "recapLearned": "Cosas nuevas aprendidas",
+  "recapQuiz": "Respuestas de quiz correctas",
+  "recapActiveDays": "Días activos",
+  "recapMsgNone": "Una semana tranquila. ¡Lee un dato para retomar el ritmo!",
+  "recapMsgSome": "¡Buen ritmo! Se va sumando poco a poco.",
+  "recapMsgGreat": "¡Increíble! ¡Casi todos los días!",
+  "recapChip": "Resumen",
+  "recapBanner": "Tu resumen semanal está listo"
 }

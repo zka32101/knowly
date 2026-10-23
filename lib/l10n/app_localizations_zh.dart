@@ -1259,4 +1259,37 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get leagueSub => '为期一周的比拼';
+
+  @override
+  String get recapTitle => '本周回顾';
+
+  @override
+  String get recapNote => '最近 7 天，与之前 7 天的对比。';
+
+  @override
+  String get recapSeen => '看过的冷知识';
+
+  @override
+  String get recapLearned => '新学到的';
+
+  @override
+  String get recapQuiz => '答对的测验题';
+
+  @override
+  String get recapActiveDays => '活跃天数';
+
+  @override
+  String get recapMsgNone => '这周比较安静。再读一条，重新开始吧！';
+
+  @override
+  String get recapMsgSome => '节奏不错！一点一点就会积累起来。';
+
+  @override
+  String get recapMsgGreat => '太棒了！你几乎每天都来玩！';
+
+  @override
+  String get recapChip => '回顾';
+
+  @override
+  String get recapBanner => '本周回顾已生成';
 }

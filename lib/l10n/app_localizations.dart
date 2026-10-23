@@ -2407,6 +2407,72 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'1しゅうかんの しょうぶ'**
   String get leagueSub;
+
+  /// No description provided for @recapTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'1しゅうかんの ふりかえり'**
+  String get recapTitle;
+
+  /// No description provided for @recapNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。'**
+  String get recapNote;
+
+  /// No description provided for @recapSeen.
+  ///
+  /// In ja, this message translates to:
+  /// **'みた ざつがく'**
+  String get recapSeen;
+
+  /// No description provided for @recapLearned.
+  ///
+  /// In ja, this message translates to:
+  /// **'あたらしく しれた'**
+  String get recapLearned;
+
+  /// No description provided for @recapQuiz.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズの せいかい'**
+  String get recapQuiz;
+
+  /// No description provided for @recapActiveDays.
+  ///
+  /// In ja, this message translates to:
+  /// **'あそんだ ひ'**
+  String get recapActiveDays;
+
+  /// No description provided for @recapMsgNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうは おやすみだったね。また ひとつ、よんでみよう！'**
+  String get recapMsgNone;
+
+  /// No description provided for @recapMsgSome.
+  ///
+  /// In ja, this message translates to:
+  /// **'いい ちょうし！ すこしずつ ふえていくよ。'**
+  String get recapMsgSome;
+
+  /// No description provided for @recapMsgGreat.
+  ///
+  /// In ja, this message translates to:
+  /// **'すごい！ まいにちの ように あそんだね！'**
+  String get recapMsgGreat;
+
+  /// No description provided for @recapChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふりかえり'**
+  String get recapChip;
+
+  /// No description provided for @recapBanner.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの ふりかえりが できたよ'**
+  String get recapBanner;
 }
 
 class _AppLocalizationsDelegate

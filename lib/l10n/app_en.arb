@@ -705,5 +705,16 @@
   "leagueClearTitle": "Clear this week's records?",
   "leagueClearBody": "This week's scores will be erased. Last week's champion stays.",
   "leagueRecord": "Record in the family league",
-  "leagueSub": "A week-long contest"
+  "leagueSub": "A week-long contest",
+  "recapTitle": "Weekly recap",
+  "recapNote": "The last 7 days, compared with the 7 days before.",
+  "recapSeen": "Facts seen",
+  "recapLearned": "New things learned",
+  "recapQuiz": "Quiz answers right",
+  "recapActiveDays": "Active days",
+  "recapMsgNone": "A quiet week. Read one fact to get going again!",
+  "recapMsgSome": "Nice pace! It adds up bit by bit.",
+  "recapMsgGreat": "Amazing! You played almost every day!",
+  "recapChip": "Recap",
+  "recapBanner": "Your weekly recap is ready"
 }

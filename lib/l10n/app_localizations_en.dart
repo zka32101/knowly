@@ -1284,4 +1284,37 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get leagueSub => 'A week-long contest';
+
+  @override
+  String get recapTitle => 'Weekly recap';
+
+  @override
+  String get recapNote => 'The last 7 days, compared with the 7 days before.';
+
+  @override
+  String get recapSeen => 'Facts seen';
+
+  @override
+  String get recapLearned => 'New things learned';
+
+  @override
+  String get recapQuiz => 'Quiz answers right';
+
+  @override
+  String get recapActiveDays => 'Active days';
+
+  @override
+  String get recapMsgNone => 'A quiet week. Read one fact to get going again!';
+
+  @override
+  String get recapMsgSome => 'Nice pace! It adds up bit by bit.';
+
+  @override
+  String get recapMsgGreat => 'Amazing! You played almost every day!';
+
+  @override
+  String get recapChip => 'Recap';
+
+  @override
+  String get recapBanner => 'Your weekly recap is ready';
 }

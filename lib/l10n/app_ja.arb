@@ -746,5 +746,16 @@
   "leagueClearTitle": "こんしゅうの きろくを けしますか？",
   "leagueClearBody": "こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。",
   "leagueRecord": "かぞくリーグに きろくする",
-  "leagueSub": "1しゅうかんの しょうぶ"
+  "leagueSub": "1しゅうかんの しょうぶ",
+  "recapTitle": "1しゅうかんの ふりかえり",
+  "recapNote": "きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。",
+  "recapSeen": "みた ざつがく",
+  "recapLearned": "あたらしく しれた",
+  "recapQuiz": "クイズの せいかい",
+  "recapActiveDays": "あそんだ ひ",
+  "recapMsgNone": "こんしゅうは おやすみだったね。また ひとつ、よんでみよう！",
+  "recapMsgSome": "いい ちょうし！ すこしずつ ふえていくよ。",
+  "recapMsgGreat": "すごい！ まいにちの ように あそんだね！",
+  "recapChip": "ふりかえり",
+  "recapBanner": "こんしゅうの ふりかえりが できたよ"
 }
