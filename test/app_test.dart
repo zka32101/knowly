@@ -2993,4 +2993,94 @@ void main() {
       expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });
   });
+
+  group('みみでクイズ（音声）', () {
+    Future<void> tapVisible(WidgetTester tester, Key key) async {
+      final vertical =
+          find.byWidgetPredicate((w) => w is Scrollable && w.axis == Axis.vertical);
+      if (find.byKey(key).evaluate().isEmpty) {
+        await tester.scrollUntilVisible(find.byKey(key), 200, scrollable: vertical.first);
+      }
+      await tester.ensureVisible(find.byKey(key));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(key));
+      await tester.pumpAndSettle();
+    }
+
+    /// 出ている問題の形に合わせて、いちばん上の選択肢（○ か A）で答える。
+    Future<void> answerFirst(WidgetTester tester) async {
+      final tf = find.byKey(const Key('voice_true')).evaluate().isNotEmpty;
+      await tapVisible(tester, Key(tf ? 'voice_true' : 'voice_opt_0'));
+    }
+
+    testWidgets('開くと問題を読み上げる（本文と、答え方の案内）', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_voicequiz'));
+      final statement = tester.widget<Text>(find.byKey(const Key('voice_statement'))).data!;
+      expect(tts.spoken.any((s) => s.contains(statement)), isTrue);
+      // ○× なら「ほんと？ それとも うそ？」、選択式なら A。〜 と読む
+      expect(tts.spoken.any((s) => s.contains('それとも') || s.contains('A。')), isTrue);
+    });
+
+    testWidgets('答えると、結果と解説も読み上げる。通算の回答数にも加わる', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_voicequiz'));
+      final before = tts.spoken.length;
+      await answerFirst(tester);
+      final after = tts.spoken.sublist(before);
+      expect(after.any((s) => s.contains('せいかい') || s.contains('ざんねん')), isTrue);
+      expect(after.any((s) => s.contains('こたえは')), isTrue);
+      expect(find.byKey(const Key('voice_ok')).evaluate().length +
+          find.byKey(const Key('voice_ng')).evaluate().length, 1);
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      expect(container.read(settingsProvider).quizAnswered, 1);
+    });
+
+    testWidgets('「もういちどきく」で、同じ問題をまた読む', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_voicequiz'));
+      final statement = tester.widget<Text>(find.byKey(const Key('voice_statement'))).data!;
+      final before = tts.spoken.where((s) => s.contains(statement)).length;
+      await tester.tap(find.byKey(const Key('voice_replay')));
+      await tester.pumpAndSettle();
+      expect(tts.spoken.where((s) => s.contains(statement)).length, before + 1);
+    });
+
+    testWidgets('10問やると結果が出て、読み上げる。もう一度遊べる', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_voicequiz'));
+      for (var i = 0; i < 10; i++) {
+        await answerFirst(tester);
+        await tapVisible(tester, const Key('voice_next'));
+      }
+      expect(find.byKey(const Key('voice_final')), findsOneWidget);
+      expect(tts.spoken.any((s) => s.contains('おしまい')), isTrue);
+      await tester.tap(find.byKey(const Key('voice_again')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('voice_statement')), findsOneWidget);
+    });
+
+    testWidgets('画面を閉じると、読み上げを止める', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false; // 読み上げの途中で閉じる
+      await _open(tester, const Key('open_voicequiz'));
+      final stopsBefore = tts.stops;
+      await _back(tester);
+      expect(tts.stops, greaterThan(stopsBefore));
+    });
+
+    testWidgets('Kids でも遊べる（大きなボタン）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      await _open(tester, const Key('open_voicequiz'));
+      expect(find.byKey(const Key('voice_replay')), findsOneWidget);
+    });
+
+    testWidgets('英語の端末では、英語で読む', (tester) async {
+      final tts = await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
+      await _open(tester, const Key('open_voicequiz'));
+      expect(tts.languages.every((l) => l == 'en'), isTrue);
+      expect(tts.spoken.any((s) => s.contains('True, or false?') || s.contains('A。')), isTrue);
+    });
+  });
 }

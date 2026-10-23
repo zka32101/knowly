@@ -714,5 +714,8 @@
     }
   },
   "mapNoLinks": "つながる ざつがくは まだ ないよ",
-  "mapOpen": "つながりを みる"
+  "mapOpen": "つながりを みる",
+  "voiceQuizTitle": "みみで クイズ",
+  "voiceReplay": "もういちど きく",
+  "voiceQuizSub": "よみあげて こたえる"
 }

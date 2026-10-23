@@ -1213,4 +1213,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mapOpen => 'つながりを みる';
+
+  @override
+  String get voiceQuizTitle => 'みみで クイズ';
+
+  @override
+  String get voiceReplay => 'もういちど きく';
+
+  @override
+  String get voiceQuizSub => 'よみあげて こたえる';
 }

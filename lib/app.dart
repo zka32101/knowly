@@ -18,6 +18,7 @@ import 'screens/capsule_screen.dart';
 import 'screens/hubs.dart';
 import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
+import 'screens/voice_quiz_screen.dart';
 import 'screens/word_screen.dart';
 import 'screens/words_screen.dart';
 import 'screens/swipe_quiz_screen.dart';
@@ -110,6 +111,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/map',
         builder: (_, state) => MapScreen(startId: state.uri.queryParameters['id']),
       ),
+      GoRoute(path: '/voicequiz', builder: (_, _) => const VoiceQuizScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );

@@ -2317,6 +2317,24 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'つながりを みる'**
   String get mapOpen;
+
+  /// No description provided for @voiceQuizTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'みみで クイズ'**
+  String get voiceQuizTitle;
+
+  /// No description provided for @voiceReplay.
+  ///
+  /// In ja, this message translates to:
+  /// **'もういちど きく'**
+  String get voiceReplay;
+
+  /// No description provided for @voiceQuizSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'よみあげて こたえる'**
+  String get voiceQuizSub;
 }
 
 class _AppLocalizationsDelegate

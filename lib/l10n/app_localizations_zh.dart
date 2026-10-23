@@ -1210,4 +1210,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mapOpen => '查看关联';
+
+  @override
+  String get voiceQuizTitle => '听力测验';
+
+  @override
+  String get voiceReplay => '再听一遍';
+
+  @override
+  String get voiceQuizSub => '听题作答';
 }

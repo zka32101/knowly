@@ -368,5 +368,8 @@
   "mapTitle": "Mapa de conexiones",
   "mapLinkCount": "{n} datos conectados",
   "mapNoLinks": "Todavía no hay datos conectados",
-  "mapOpen": "Ver conexiones"
+  "mapOpen": "Ver conexiones",
+  "voiceQuizTitle": "Quiz de escucha",
+  "voiceReplay": "Escuchar otra vez",
+  "voiceQuizSub": "Escucha y responde"
 }

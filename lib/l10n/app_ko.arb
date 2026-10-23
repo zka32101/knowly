@@ -368,5 +368,8 @@
   "mapTitle": "연결 지도",
   "mapLinkCount": "연결된 상식 {n}개",
   "mapNoLinks": "아직 연결된 상식이 없어요",
-  "mapOpen": "연결 보기"
+  "mapOpen": "연결 보기",
+  "voiceQuizTitle": "귀로 하는 퀴즈",
+  "voiceReplay": "다시 듣기",
+  "voiceQuizSub": "듣고 답하기"
 }

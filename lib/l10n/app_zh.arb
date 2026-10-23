@@ -368,5 +368,8 @@
   "mapTitle": "关联图",
   "mapLinkCount": "相关冷知识 {n} 条",
   "mapNoLinks": "暂时没有相关冷知识",
-  "mapOpen": "查看关联"
+  "mapOpen": "查看关联",
+  "voiceQuizTitle": "听力测验",
+  "voiceReplay": "再听一遍",
+  "voiceQuizSub": "听题作答"
 }

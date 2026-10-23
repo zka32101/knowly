@@ -1242,4 +1242,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get mapOpen => 'Ver conexiones';
+
+  @override
+  String get voiceQuizTitle => 'Quiz de escucha';
+
+  @override
+  String get voiceReplay => 'Escuchar otra vez';
+
+  @override
+  String get voiceQuizSub => 'Escucha y responde';
 }

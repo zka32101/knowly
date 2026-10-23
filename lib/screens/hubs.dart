@@ -153,6 +153,12 @@ class PlayHub extends ConsumerWidget {
             subtitle: l.hubSwipeSub,
             route: '/swipe'),
         HubTile(
+            key: const Key('open_voicequiz'),
+            emoji: '👂',
+            title: l.voiceQuizTitle,
+            subtitle: l.voiceQuizSub,
+            route: '/voicequiz'),
+        HubTile(
             key: const Key('open_daily'),
             emoji: '🚩',
             title: l.dailyChip,

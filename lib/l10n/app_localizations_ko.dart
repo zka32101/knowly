@@ -1213,4 +1213,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mapOpen => '연결 보기';
+
+  @override
+  String get voiceQuizTitle => '귀로 하는 퀴즈';
+
+  @override
+  String get voiceReplay => '다시 듣기';
+
+  @override
+  String get voiceQuizSub => '듣고 답하기';
 }

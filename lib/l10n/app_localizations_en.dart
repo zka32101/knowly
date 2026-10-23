@@ -1232,4 +1232,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapOpen => 'See links';
+
+  @override
+  String get voiceQuizTitle => 'Listen quiz';
+
+  @override
+  String get voiceReplay => 'Listen again';
+
+  @override
+  String get voiceQuizSub => 'Hear it, then answer';
 }
