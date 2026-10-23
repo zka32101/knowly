@@ -159,6 +159,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             trailing: const Icon(Icons.chevron_right),
             onTap: _changeMode,
           ),
+          if (band != AgeBand.kids)
+            ListTile(
+              key: const Key('open_interests'),
+              title: Text(l.settingsInterests),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/interests'),
+            ),
           ListTile(
             title: Text(l.settingsPremium),
             trailing: const Icon(Icons.chevron_right),

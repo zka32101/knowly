@@ -6,6 +6,8 @@ import 'package:go_router/go_router.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/detail_screen.dart';
 import 'screens/home_screen.dart';
+import 'screens/interests_screen.dart';
+import 'screens/library_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
 import 'screens/saved_screen.dart';
@@ -33,6 +35,8 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/detail/:id',
         builder: (_, state) => DetailScreen(triviaId: state.pathParameters['id']!),
       ),
+      GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
+      GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),
       GoRoute(path: '/saved', builder: (_, _) => const SavedScreen()),
       GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),

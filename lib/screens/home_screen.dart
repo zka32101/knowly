@@ -27,6 +27,13 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l.appName),
         actions: [
+          if (band != AgeBand.kids)
+            IconButton(
+              key: const Key('open_library'),
+              tooltip: l.libraryOpen,
+              icon: const Icon(Icons.search),
+              onPressed: () => context.push('/library'),
+            ),
           if (!band.isChild || band == AgeBand.junior)
             IconButton(
               tooltip: l.savedTitle,
@@ -248,6 +255,8 @@ class _FeedHome extends ConsumerWidget {
             big: true,
             wordWrap: wordWrap,
           ),
+          const SizedBox(height: 16),
+          const _InterestSection(),
           if (feed.length > 1) ...[
             const SizedBox(height: 16),
             Text(l.past, style: Theme.of(context).textTheme.titleSmall),
@@ -376,6 +385,74 @@ class _FilterSheet extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// 「あなたの関心」: 登録した関心事に当てはまる雑学を、日替わりで出す。
+class _InterestSection extends ConsumerWidget {
+  const _InterestSection();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final settings = ref.watch(settingsProvider);
+    final picks = ref.watch(interestPicksProvider);
+    final resolve = ref.watch(levelResolverProvider);
+    final band = settings.ageBand ?? AgeBand.adult;
+    final wordWrap = band.isChild && ref.watch(contentLanguageProvider) == 'ja';
+    final theme = Theme.of(context);
+
+    Widget header({bool edit = true}) => Row(
+          children: [
+            Expanded(child: Text(l.interestsSection, style: theme.textTheme.titleSmall)),
+            if (edit)
+              TextButton(
+                key: const Key('interests_edit'),
+                onPressed: () => context.push('/interests'),
+                child: Text(l.interestsEdit),
+              ),
+          ],
+        );
+
+    if (settings.interests.isEmpty) {
+      return Card(
+        key: const Key('interests_empty'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              header(edit: false),
+              const SizedBox(height: 4),
+              Text(l.interestsEmptyTitle),
+              const SizedBox(height: 8),
+              FilledButton.tonal(
+                key: const Key('interests_register'),
+                onPressed: () => context.push('/interests'),
+                child: Text(l.interestsRegister),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return Column(
+      key: const Key('interests_section'),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        header(),
+        if (picks.isEmpty)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Text(l.interestsNoMatch),
+          )
+        else
+          for (final t in picks)
+            if (resolve(t) case final level?)
+              _TriviaCard(item: t, level: level, wordWrap: wordWrap),
+      ],
     );
   }
 }

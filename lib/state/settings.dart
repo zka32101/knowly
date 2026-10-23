@@ -4,6 +4,8 @@ import 'dart:ui';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../logic/interests.dart';
+import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
 
@@ -12,6 +14,10 @@ const supportedLanguageCodes = ['ja', 'en'];
 /// 端末の言語から対応言語を選ぶ。対応外は英語。
 String resolveLanguage(String? code) =>
     supportedLanguageCodes.contains(code) ? code! : 'en';
+
+/// 関心事のキーワードの上限（個数・1つあたりの文字数）。
+const maxInterestKeywords = 10;
+const maxInterestKeywordLength = 20;
 
 /// 無料プランで保存できる件数。
 const freeSaveLimit = 20;
@@ -40,6 +46,9 @@ class AppSettings {
     this.notifyEnabled = false,
     this.notifyHour = 7,
     this.notifyMinute = 0,
+    this.interestCategories = const {},
+    this.interestScenes = const {},
+    this.interestKeywords = const [],
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -60,6 +69,18 @@ class AppSettings {
   final int notifyHour;
   final int notifyMinute;
 
+  /// 登録した関心事（ホームの「あなたの関心」に使う）。端末内にだけ保存する。
+  /// `categories` / `scenes` は、一覧を一時的に絞り込む条件（関心事とは別）。
+  final Set<String> interestCategories;
+  final Set<String> interestScenes;
+  final List<String> interestKeywords;
+
+  Interests get interests => Interests(
+        categories: interestCategories,
+        scenes: interestScenes,
+        keywords: interestKeywords,
+      );
+
   bool get onboarded => ageBand != null;
 
   AppSettings copyWith({
@@ -77,6 +98,9 @@ class AppSettings {
     bool? notifyEnabled,
     int? notifyHour,
     int? notifyMinute,
+    Set<String>? interestCategories,
+    Set<String>? interestScenes,
+    List<String>? interestKeywords,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -92,6 +116,9 @@ class AppSettings {
         notifyEnabled: notifyEnabled ?? this.notifyEnabled,
         notifyHour: notifyHour ?? this.notifyHour,
         notifyMinute: notifyMinute ?? this.notifyMinute,
+        interestCategories: interestCategories ?? this.interestCategories,
+        interestScenes: interestScenes ?? this.interestScenes,
+        interestKeywords: interestKeywords ?? this.interestKeywords,
       );
 }
 
@@ -131,6 +158,9 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       notifyEnabled: p.getBool('notifyEnabled') ?? false,
       notifyHour: p.getInt('notifyHour') ?? 7,
       notifyMinute: p.getInt('notifyMinute') ?? 0,
+      interestCategories: (p.getStringList('interestCategories') ?? const []).toSet(),
+      interestScenes: (p.getStringList('interestScenes') ?? const []).toSet(),
+      interestKeywords: p.getStringList('interestKeywords') ?? const [],
     );
   }
 
@@ -145,6 +175,39 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     _prefs.setString('ageBand', band.name);
     _prefs.setStringList('scenes', state.scenes.toList());
     _prefs.setBool('notifyEnabled', state.notifyEnabled);
+  }
+
+  void toggleInterestCategory(String category) {
+    final next = {...state.interestCategories};
+    next.contains(category) ? next.remove(category) : next.add(category);
+    state = state.copyWith(interestCategories: next);
+    _prefs.setStringList('interestCategories', next.toList());
+  }
+
+  void toggleInterestScene(String scene) {
+    final next = {...state.interestScenes};
+    next.contains(scene) ? next.remove(scene) : next.add(scene);
+    state = state.copyWith(interestScenes: next);
+    _prefs.setStringList('interestScenes', next.toList());
+  }
+
+  /// キーワードを追加する。空・長すぎる・重複・上限超えは追加せず false を返す。
+  bool addInterestKeyword(String keyword) {
+    final k = keyword.trim();
+    if (k.isEmpty || k.length > maxInterestKeywordLength) return false;
+    if (state.interestKeywords.length >= maxInterestKeywords) return false;
+    final folded = foldText(k);
+    if (state.interestKeywords.any((e) => foldText(e) == folded)) return false;
+    final next = [...state.interestKeywords, k];
+    state = state.copyWith(interestKeywords: next);
+    _prefs.setStringList('interestKeywords', next);
+    return true;
+  }
+
+  void removeInterestKeyword(String keyword) {
+    final next = [...state.interestKeywords]..remove(keyword);
+    state = state.copyWith(interestKeywords: next);
+    _prefs.setStringList('interestKeywords', next);
   }
 
   void setNotifyEnabled(bool enabled) {

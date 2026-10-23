@@ -116,8 +116,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 for (final c in allCategories)
                   FilterChip(
                     label: Text(categoryLabel(l, c)),
-                    selected: settings.categories.contains(c),
-                    onSelected: (_) => notifier.toggleCategory(c),
+                    selected: settings.interestCategories.contains(c),
+                    onSelected: (_) => notifier.toggleInterestCategory(c),
                   ),
               ],
             ),
@@ -130,8 +130,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   for (final s in allScenes)
                     FilterChip(
                       label: Text(sceneLabel(l, s)),
-                      selected: settings.scenes.contains(s),
-                      onSelected: (_) => notifier.toggleScene(s),
+                      selected: settings.interestScenes.contains(s),
+                      onSelected: (_) => notifier.toggleInterestScene(s),
                     ),
                 ],
               ),

@@ -685,6 +685,174 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'絞り込み（{count}）'**
   String filterButtonActive(int count);
+
+  /// No description provided for @libraryTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'雑学ライブラリ'**
+  String get libraryTitle;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'雑学をさがす（日本語・English）'**
+  String get searchHint;
+
+  /// No description provided for @searchClear.
+  ///
+  /// In ja, this message translates to:
+  /// **'消す'**
+  String get searchClear;
+
+  /// No description provided for @resultsCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'{count}件'**
+  String resultsCount(int count);
+
+  /// No description provided for @noResults.
+  ///
+  /// In ja, this message translates to:
+  /// **'見つかりませんでした。ことばや絞り込みを変えてみてください'**
+  String get noResults;
+
+  /// No description provided for @filterStatus.
+  ///
+  /// In ja, this message translates to:
+  /// **'状態'**
+  String get filterStatus;
+
+  /// No description provided for @statusSaved.
+  ///
+  /// In ja, this message translates to:
+  /// **'保存済み'**
+  String get statusSaved;
+
+  /// No description provided for @statusKnew.
+  ///
+  /// In ja, this message translates to:
+  /// **'知ってた'**
+  String get statusKnew;
+
+  /// No description provided for @statusLearned.
+  ///
+  /// In ja, this message translates to:
+  /// **'知らなかった'**
+  String get statusLearned;
+
+  /// No description provided for @statusUnrated.
+  ///
+  /// In ja, this message translates to:
+  /// **'未評価'**
+  String get statusUnrated;
+
+  /// No description provided for @filterCategoryHeader.
+  ///
+  /// In ja, this message translates to:
+  /// **'ジャンル'**
+  String get filterCategoryHeader;
+
+  /// No description provided for @filterSceneHeader.
+  ///
+  /// In ja, this message translates to:
+  /// **'シーン'**
+  String get filterSceneHeader;
+
+  /// No description provided for @libraryLocked.
+  ///
+  /// In ja, this message translates to:
+  /// **'プレミアムで読めます'**
+  String get libraryLocked;
+
+  /// No description provided for @libraryOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'ライブラリ'**
+  String get libraryOpen;
+
+  /// No description provided for @interestsSection.
+  ///
+  /// In ja, this message translates to:
+  /// **'あなたの関心'**
+  String get interestsSection;
+
+  /// No description provided for @interestsEdit.
+  ///
+  /// In ja, this message translates to:
+  /// **'編集'**
+  String get interestsEdit;
+
+  /// No description provided for @interestsEmptyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心を登録すると、ここにおすすめを出します'**
+  String get interestsEmptyTitle;
+
+  /// No description provided for @interestsRegister.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心を登録'**
+  String get interestsRegister;
+
+  /// No description provided for @interestsNoMatch.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心に合う雑学は、いまはありません'**
+  String get interestsNoMatch;
+
+  /// No description provided for @interestsScreenTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心事'**
+  String get interestsScreenTitle;
+
+  /// No description provided for @interestsCategories.
+  ///
+  /// In ja, this message translates to:
+  /// **'ジャンル'**
+  String get interestsCategories;
+
+  /// No description provided for @interestsScenes.
+  ///
+  /// In ja, this message translates to:
+  /// **'シーン'**
+  String get interestsScenes;
+
+  /// No description provided for @interestsKeywords.
+  ///
+  /// In ja, this message translates to:
+  /// **'キーワード'**
+  String get interestsKeywords;
+
+  /// No description provided for @interestsKeywordHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'例: 宇宙、ラッコ、お金'**
+  String get interestsKeywordHint;
+
+  /// No description provided for @interestsAdd.
+  ///
+  /// In ja, this message translates to:
+  /// **'追加'**
+  String get interestsAdd;
+
+  /// No description provided for @interestsMax.
+  ///
+  /// In ja, this message translates to:
+  /// **'キーワードは{count}個までです'**
+  String interestsMax(int count);
+
+  /// No description provided for @interestsNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心事は端末の中にだけ保存され、外には送られません。'**
+  String get interestsNote;
+
+  /// No description provided for @settingsInterests.
+  ///
+  /// In ja, this message translates to:
+  /// **'関心事'**
+  String get settingsInterests;
 }
 
 class _AppLocalizationsDelegate

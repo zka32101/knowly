@@ -131,5 +131,47 @@
         "type": "int"
       }
     }
-  }
+  },
+  "libraryTitle": "Library",
+  "searchHint": "Search facts (Japanese / English)",
+  "searchClear": "Clear",
+  "resultsCount": "{count} facts",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noResults": "Nothing found. Try different words or filters",
+  "filterStatus": "Status",
+  "statusSaved": "Saved",
+  "statusKnew": "I knew it",
+  "statusLearned": "New to me",
+  "statusUnrated": "Not rated",
+  "filterCategoryHeader": "Genre",
+  "filterSceneHeader": "Scene",
+  "libraryLocked": "Premium to read",
+  "libraryOpen": "Library",
+  "interestsSection": "Your interests",
+  "interestsEdit": "Edit",
+  "interestsEmptyTitle": "Add your interests to see picks here",
+  "interestsRegister": "Add interests",
+  "interestsNoMatch": "No facts match your interests right now",
+  "interestsScreenTitle": "Interests",
+  "interestsCategories": "Genres",
+  "interestsScenes": "Scenes",
+  "interestsKeywords": "Keywords",
+  "interestsKeywordHint": "e.g. space, otter, money",
+  "interestsAdd": "Add",
+  "interestsMax": "Up to {count} keywords",
+  "@interestsMax": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "interestsNote": "Your interests stay on this device and are never sent anywhere.",
+  "settingsInterests": "Interests"
 }

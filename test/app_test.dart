@@ -530,4 +530,250 @@ void main() {
       expect(find.widgetWithText(FilterChip, 'むし'), findsOneWidget);
     });
   });
+
+  group('ライブラリ（検索・フィルター）', () {
+    Future<void> openLibrary(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_library')));
+      await tester.pumpAndSettle();
+    }
+
+    int count(WidgetTester tester) {
+      final text = tester.widget<Text>(find.byKey(const Key('results_count'))).data!;
+      return int.parse(text.replaceAll('件', ''));
+    }
+
+    testWidgets('Kids にはライブラリの入口がない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byKey(const Key('open_library')), findsNothing);
+    });
+
+    testWidgets('全件が出て、検索で絞れる（ひらがなでもカタカナでも）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      final all = count(tester);
+      expect(all, 60);
+
+      await tester.enterText(find.byKey(const Key('search_field')), 'ラッコ');
+      await tester.pumpAndSettle();
+      expect(count(tester), 1);
+
+      await tester.enterText(find.byKey(const Key('search_field')), 'らっこ');
+      await tester.pumpAndSettle();
+      expect(count(tester), 1);
+    });
+
+    testWidgets('英語のことばでも日本語の雑学が見つかる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      await tester.enterText(find.byKey(const Key('search_field')), 'otter');
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('result_sea_otters_hold_hands')), findsOneWidget);
+    });
+
+    testWidgets('一致しないと案内が出て、消すと全件に戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      await tester.enterText(find.byKey(const Key('search_field')), 'zzzzqqq');
+      await tester.pumpAndSettle();
+      expect(count(tester), 0);
+      expect(find.textContaining('見つかりませんでした'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('search_clear')));
+      await tester.pumpAndSettle();
+      expect(count(tester), 60);
+    });
+
+    testWidgets('ジャンルで絞り込める', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      await tester.tap(find.byKey(const Key('library_filter_button')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('閉じる'));
+      await tester.pumpAndSettle();
+      expect(count(tester), 10);
+      expect(find.text('絞り込み（1）'), findsOneWidget);
+    });
+
+    testWidgets('状態で絞り込める（保存済み・知らなかった・未評価）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'saved': ['ant_strong', 'honey_never_spoils'],
+        'knowledge': ['ant_strong:learned', 'rice_half_world:knew'],
+      });
+      await openLibrary(tester);
+      Future<void> pick(String key) async {
+        await tester.tap(find.byKey(const Key('library_filter_button')));
+        await tester.pumpAndSettle();
+        await tester.tap(find.byKey(Key(key)));
+        await tester.pumpAndSettle();
+        await tester.tap(find.text('閉じる'));
+        await tester.pumpAndSettle();
+      }
+
+      await pick('status_saved');
+      expect(count(tester), 2);
+      await pick('status_saved'); // 解除
+      await pick('status_learned');
+      expect(count(tester), 1);
+      await pick('status_learned');
+      await pick('status_unrated');
+      expect(count(tester), 58); // 60件のうち評価済み2件を除く
+    });
+
+    testWidgets('無料の Adult は、無料の範囲外の雑学に鍵がつき、タップでプレミアム案内', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      expect(find.byIcon(Icons.lock_outline), findsWidgets);
+      await tester.tap(find.byIcon(Icons.lock_outline).first);
+      await tester.pumpAndSettle();
+      expect(find.text('購入機能は準備中です'), findsOneWidget);
+    });
+
+    testWidgets('Junior はすべて開ける（鍵なし）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openLibrary(tester);
+      expect(find.byIcon(Icons.lock_outline), findsNothing);
+    });
+
+    testWidgets('保存した雑学は、無料でも鍵がつかない', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'saved': ['ant_strong'],
+      });
+      await openLibrary(tester);
+      await tester.enterText(find.byKey(const Key('search_field')), 'アリ');
+      await tester.pumpAndSettle();
+      final card = find.byKey(const Key('result_ant_strong'));
+      expect(card, findsOneWidget);
+      expect(find.descendant(of: card, matching: find.byIcon(Icons.lock_outline)), findsNothing);
+    });
+  });
+
+  group('関心事', () {
+    testWidgets('未登録のホームには登録を促すカードが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byKey(const Key('interests_empty')), findsOneWidget);
+      expect(find.byKey(const Key('interests_section')), findsNothing);
+    });
+
+    testWidgets('ジャンルを登録すると、ホームに「あなたの関心」が出る（無料は2件）', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'interestCategories': ['bugs', 'vehicles'],
+      });
+      expect(find.byKey(const Key('interests_section')), findsOneWidget);
+      expect(find.text('あなたの関心'), findsOneWidget);
+      final section = find.byKey(const Key('interests_section'));
+      final cards = find.descendant(of: section, matching: find.byIcon(Icons.chevron_right));
+      expect(cards.evaluate().length, 2);
+      // 出ているのは登録したジャンルのものだけ
+      final labels = find.descendant(of: section, matching: find.textContaining(RegExp('^(むし|のりもの)\$')));
+      expect(labels.evaluate().length, 2);
+    });
+
+    testWidgets('キーワードを登録すると、そのことばに合う雑学が出る', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'interestKeywords': ['ラッコ'],
+      });
+      final section = find.byKey(const Key('interests_section'));
+      expect(section, findsOneWidget);
+      expect(find.descendant(of: section, matching: find.textContaining('ラッコ')), findsWidgets);
+    });
+
+    testWidgets('関心の画面でジャンルとキーワードを登録・削除できる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('interests_register')));
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.byKey(const Key('interest_cat_space')));
+      await tester.pumpAndSettle();
+      await tester.enterText(find.byKey(const Key('keyword_field')), '宇宙');
+      await tester.tap(find.byKey(const Key('keyword_add')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('keyword_宇宙')), findsOneWidget);
+
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('interestCategories'), ['space']);
+      expect(sp.getStringList('interestKeywords'), ['宇宙']);
+
+      // 同じことばは重複して登録されない
+      await tester.enterText(find.byKey(const Key('keyword_field')), '宇宙');
+      await tester.tap(find.byKey(const Key('keyword_add')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('keyword_宇宙')), findsOneWidget);
+
+      // 削除
+      await tester.tap(find.descendant(
+          of: find.byKey(const Key('keyword_宇宙')), matching: find.byIcon(Icons.clear)));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('keyword_宇宙')), findsNothing);
+      expect(sp.getStringList('interestKeywords'), isEmpty);
+    });
+
+    testWidgets('キーワードは10個まで', (tester) async {
+      await _pump(tester, prefs: {
+        'ageBand': 'adult',
+        'interestKeywords': [for (var i = 0; i < 10; i++) 'ことば$i'],
+      });
+      await tester.tap(find.byKey(const Key('interests_edit')));
+      await tester.pumpAndSettle();
+      await tester.enterText(find.byKey(const Key('keyword_field')), 'あと1つ');
+      await tester.tap(find.byKey(const Key('keyword_add')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('10個まで'), findsOneWidget);
+      expect(find.byKey(const Key('keyword_あと1つ')), findsNothing);
+    });
+
+    testWidgets('オンボーディングで選んだジャンルは関心事になり、絞り込み（一覧）にはならない', (tester) async {
+      await _pump(tester);
+      await tester.tap(find.byKey(const Key('onboarding_next')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('birth_year_dropdown')));
+      await tester.pumpAndSettle();
+      await _pickYear(tester, 1990);
+      await tester.tap(find.byKey(const Key('onboarding_next')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('onboarding_next')));
+      await tester.pumpAndSettle();
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('interestCategories'), ['bugs']);
+      expect(sp.getStringList('categories'), isNull);
+      expect(find.byKey(const Key('interests_section')), findsOneWidget);
+    });
+
+    testWidgets('Kids は登録した「すきなもの」のジャンルだけが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids', 'interestCategories': ['vehicles']});
+      // 乗り物の雑学のタイトルだけが出る。読み上げ文で確認できないので、1枚送って全部乗り物か確かめる
+      final seen = <String>{};
+      for (var i = 0; i < 6; i++) {
+        seen.add(tester.widget<WrapText>(find.byKey(const Key('kids_title'))).text);
+        await tester.tap(find.byKey(const Key('kids_next')));
+        await tester.pumpAndSettle();
+      }
+      expect(seen.length, greaterThan(1));
+      // 乗り物のカテゴリーは10件、Kids 向けに全部ある
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      final pool = container.read(poolProvider);
+      expect(pool.map((t) => t.category).toSet(), {'vehicles'});
+    });
+
+    testWidgets('Kids には関心事の入口がない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byKey(const Key('interests_empty')), findsNothing);
+      expect(find.byKey(const Key('interests_section')), findsNothing);
+    });
+
+    testWidgets('設定から関心事の画面を開ける', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('open_interests')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('keyword_field')), findsOneWidget);
+    });
+  });
 }

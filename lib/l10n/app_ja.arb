@@ -131,5 +131,47 @@
         "type": "int"
       }
     }
-  }
+  },
+  "libraryTitle": "雑学ライブラリ",
+  "searchHint": "雑学をさがす（日本語・English）",
+  "searchClear": "消す",
+  "resultsCount": "{count}件",
+  "@resultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noResults": "見つかりませんでした。ことばや絞り込みを変えてみてください",
+  "filterStatus": "状態",
+  "statusSaved": "保存済み",
+  "statusKnew": "知ってた",
+  "statusLearned": "知らなかった",
+  "statusUnrated": "未評価",
+  "filterCategoryHeader": "ジャンル",
+  "filterSceneHeader": "シーン",
+  "libraryLocked": "プレミアムで読めます",
+  "libraryOpen": "ライブラリ",
+  "interestsSection": "あなたの関心",
+  "interestsEdit": "編集",
+  "interestsEmptyTitle": "関心を登録すると、ここにおすすめを出します",
+  "interestsRegister": "関心を登録",
+  "interestsNoMatch": "関心に合う雑学は、いまはありません",
+  "interestsScreenTitle": "関心事",
+  "interestsCategories": "ジャンル",
+  "interestsScenes": "シーン",
+  "interestsKeywords": "キーワード",
+  "interestsKeywordHint": "例: 宇宙、ラッコ、お金",
+  "interestsAdd": "追加",
+  "interestsMax": "キーワードは{count}個までです",
+  "@interestsMax": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "interestsNote": "関心事は端末の中にだけ保存され、外には送られません。",
+  "settingsInterests": "関心事"
 }

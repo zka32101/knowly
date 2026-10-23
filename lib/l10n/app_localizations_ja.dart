@@ -310,4 +310,92 @@ class AppLocalizationsJa extends AppLocalizations {
   String filterButtonActive(int count) {
     return '絞り込み（$count）';
   }
+
+  @override
+  String get libraryTitle => '雑学ライブラリ';
+
+  @override
+  String get searchHint => '雑学をさがす（日本語・English）';
+
+  @override
+  String get searchClear => '消す';
+
+  @override
+  String resultsCount(int count) {
+    return '$count件';
+  }
+
+  @override
+  String get noResults => '見つかりませんでした。ことばや絞り込みを変えてみてください';
+
+  @override
+  String get filterStatus => '状態';
+
+  @override
+  String get statusSaved => '保存済み';
+
+  @override
+  String get statusKnew => '知ってた';
+
+  @override
+  String get statusLearned => '知らなかった';
+
+  @override
+  String get statusUnrated => '未評価';
+
+  @override
+  String get filterCategoryHeader => 'ジャンル';
+
+  @override
+  String get filterSceneHeader => 'シーン';
+
+  @override
+  String get libraryLocked => 'プレミアムで読めます';
+
+  @override
+  String get libraryOpen => 'ライブラリ';
+
+  @override
+  String get interestsSection => 'あなたの関心';
+
+  @override
+  String get interestsEdit => '編集';
+
+  @override
+  String get interestsEmptyTitle => '関心を登録すると、ここにおすすめを出します';
+
+  @override
+  String get interestsRegister => '関心を登録';
+
+  @override
+  String get interestsNoMatch => '関心に合う雑学は、いまはありません';
+
+  @override
+  String get interestsScreenTitle => '関心事';
+
+  @override
+  String get interestsCategories => 'ジャンル';
+
+  @override
+  String get interestsScenes => 'シーン';
+
+  @override
+  String get interestsKeywords => 'キーワード';
+
+  @override
+  String get interestsKeywordHint => '例: 宇宙、ラッコ、お金';
+
+  @override
+  String get interestsAdd => '追加';
+
+  @override
+  String interestsMax(int count) {
+    return 'キーワードは$count個までです';
+  }
+
+  @override
+  String get interestsNote => '関心事は端末の中にだけ保存され、外には送られません。';
+
+  @override
+  String get settingsInterests => '関心事';
 }

@@ -317,4 +317,93 @@ class AppLocalizationsEn extends AppLocalizations {
   String filterButtonActive(int count) {
     return 'Filter ($count)';
   }
+
+  @override
+  String get libraryTitle => 'Library';
+
+  @override
+  String get searchHint => 'Search facts (Japanese / English)';
+
+  @override
+  String get searchClear => 'Clear';
+
+  @override
+  String resultsCount(int count) {
+    return '$count facts';
+  }
+
+  @override
+  String get noResults => 'Nothing found. Try different words or filters';
+
+  @override
+  String get filterStatus => 'Status';
+
+  @override
+  String get statusSaved => 'Saved';
+
+  @override
+  String get statusKnew => 'I knew it';
+
+  @override
+  String get statusLearned => 'New to me';
+
+  @override
+  String get statusUnrated => 'Not rated';
+
+  @override
+  String get filterCategoryHeader => 'Genre';
+
+  @override
+  String get filterSceneHeader => 'Scene';
+
+  @override
+  String get libraryLocked => 'Premium to read';
+
+  @override
+  String get libraryOpen => 'Library';
+
+  @override
+  String get interestsSection => 'Your interests';
+
+  @override
+  String get interestsEdit => 'Edit';
+
+  @override
+  String get interestsEmptyTitle => 'Add your interests to see picks here';
+
+  @override
+  String get interestsRegister => 'Add interests';
+
+  @override
+  String get interestsNoMatch => 'No facts match your interests right now';
+
+  @override
+  String get interestsScreenTitle => 'Interests';
+
+  @override
+  String get interestsCategories => 'Genres';
+
+  @override
+  String get interestsScenes => 'Scenes';
+
+  @override
+  String get interestsKeywords => 'Keywords';
+
+  @override
+  String get interestsKeywordHint => 'e.g. space, otter, money';
+
+  @override
+  String get interestsAdd => 'Add';
+
+  @override
+  String interestsMax(int count) {
+    return 'Up to $count keywords';
+  }
+
+  @override
+  String get interestsNote =>
+      'Your interests stay on this device and are never sent anywhere.';
+
+  @override
+  String get settingsInterests => 'Interests';
 }

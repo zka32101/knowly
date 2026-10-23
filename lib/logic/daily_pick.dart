@@ -10,6 +10,18 @@ int fnv1a(String input) {
   return hash;
 }
 
+/// 32bit のビット混ぜ（MurmurHash3 の fmix32）。FNV-1a の結果は、似た文字列どうしで大小の順序が
+/// 保たれやすいので、日替わりの並べ替えにはこれを通して順序を散らす。
+int mix32(int h) {
+  h &= 0xffffffff;
+  h ^= h >> 16;
+  h = (h * 0x85ebca6b) & 0xffffffff;
+  h ^= h >> 13;
+  h = (h * 0xc2b2ae35) & 0xffffffff;
+  h ^= h >> 16;
+  return h;
+}
+
 /// 現地日付の通し番号（タイムゾーンに依存せず、年月日だけで決まる）。
 int dayNumber(DateTime day) =>
     DateTime.utc(day.year, day.month, day.day).millisecondsSinceEpoch ~/ 86400000;
