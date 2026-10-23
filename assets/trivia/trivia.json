@@ -1,0 +1,1674 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "id": "octopus_blue_blood",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "octopus",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "タコのちはなにいろ？",
+       "body": "タコのちは あおいろだよ。しんぞうは 3つも あるんだって。"
+      },
+      "junior": {
+       "title": "タコのちは あおい",
+       "body": "タコの ちは あおいろで、しんぞうは 3つ あります。からだに さんそを はこぶ ものが ちがうからです。"
+      },
+      "teen": {
+       "title": "タコの血は青く、心臓は3つある",
+       "body": "タコの血は、銅を含むヘモシアニンという物質のせいで青く見えます。心臓は3つあり、2つはエラに、1つは全身に血を送ります。"
+      },
+      "adult": {
+       "title": "タコの血が青いのは銅のせい",
+       "body": "タコの血液は酸素を運ぶのにヘモシアニン(銅を含むたんぱく質)を使うため、酸素と結びつくと青くなります。鰓心臓2つと体心臓1つ、計3つの心臓を持ちます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "What color is an octopus's blood?",
+       "body": "An octopus has blue blood! And it has three hearts."
+      },
+      "junior": {
+       "title": "Octopus blood is blue",
+       "body": "An octopus has blue blood and three hearts. Its blood carries oxygen in a different way than ours does."
+      },
+      "teen": {
+       "title": "Octopuses have blue blood and three hearts",
+       "body": "Octopus blood uses hemocyanin, a copper-based molecule, to carry oxygen, which makes it look blue. Two hearts pump blood to the gills and one pumps it to the rest of the body."
+      },
+      "adult": {
+       "title": "Octopus blood is blue because of copper",
+       "body": "Octopuses carry oxygen with hemocyanin, a copper-containing protein, which turns blue when oxygenated. They have two branchial hearts serving the gills and one systemic heart."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "honey_never_spoils",
+   "category": "science",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "honey",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "はちみつは くさらない？",
+       "body": "はちみつは とても ながいあいだ たべられるよ。"
+      },
+      "junior": {
+       "title": "はちみつは なかなか くさらない",
+       "body": "はちみつは みずが すくなくて あまいので、ばいきんが ふえにくく、とても ながく もちます。"
+      },
+      "teen": {
+       "title": "はちみつはほとんど腐らない",
+       "body": "はちみつは水分が少なく糖分が多いため、細菌が増えにくく、密閉しておけば何年も傷みません。古代エジプトの遺跡から、食べられる状態に近い蜂蜜が見つかったという話もあります。"
+      },
+      "adult": {
+       "title": "はちみつが腐りにくい理由",
+       "body": "蜂蜜は水分が約17〜18%と低く、糖濃度が高いため浸透圧で微生物が生育しにくく、さらに酸性(pH約3.5〜4.5)で、蜂の酵素が作る過酸化水素も働きます。古代エジプトの墳墓で見つかった蜂蜜が数千年後も食べられる状態だったという報告があります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Does honey go bad?",
+       "body": "Honey can last a very, very long time!"
+      },
+      "junior": {
+       "title": "Honey almost never spoils",
+       "body": "Honey has little water and lots of sugar, so germs have a hard time growing in it. That is why it keeps for so long."
+      },
+      "teen": {
+       "title": "Honey barely spoils",
+       "body": "Honey has very little water and a lot of sugar, so bacteria struggle to grow in it. Sealed honey can last for years, and edible-looking honey has reportedly been found in ancient Egyptian tombs."
+      },
+      "adult": {
+       "title": "Why honey resists spoiling",
+       "body": "Honey is about 17-18% water with a very high sugar concentration, so osmotic pressure inhibits microbes. It is also acidic (pH roughly 3.5-4.5), and hydrogen peroxide produced by bee enzymes helps. Honey found in ancient Egyptian tombs was reported to remain edible after millennia."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "banana_is_berry",
+   "category": "nature",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "banana",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "バナナは なにのなかま？",
+       "body": "バナナは しょくぶつの ぶんるいでは「ベリー」の なかまなんだよ。"
+      },
+      "junior": {
+       "title": "バナナは ベリーの なかま",
+       "body": "しょくぶつがくでは、バナナは ベリーの なかまです。でも いちごは ベリーではないんだよ。"
+      },
+      "teen": {
+       "title": "バナナはベリーで、いちごはベリーではない",
+       "body": "植物学では、1つの花の子房がそのまま育った、種のある柔らかい果実を「液果(ベリー)」と呼びます。バナナはこれに当てはまりますが、いちごは当てはまりません。"
+      },
+      "adult": {
+       "title": "植物学上、バナナは液果でイチゴは違う",
+       "body": "植物学の「液果(berry)」は、1つの花の子房全体が肉質に育ち、種を含む果実です。バナナはこれに該当しますが、イチゴは花托が肥大した偽果で、表面の粒が本来の果実(痩果)です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "What is a banana?",
+       "body": "A banana is a kind of berry!"
+      },
+      "junior": {
+       "title": "A banana is a berry",
+       "body": "In science, a banana counts as a berry. But a strawberry does not!"
+      },
+      "teen": {
+       "title": "Bananas are berries, strawberries aren't",
+       "body": "Botanists define a berry as a soft fruit with seeds that grows from a single flower's ovary. Bananas fit that definition, but strawberries do not."
+      },
+      "adult": {
+       "title": "Botanically, bananas are berries; strawberries are not",
+       "body": "A botanical berry develops from one flower's ovary into a fleshy fruit containing seeds. Bananas qualify. A strawberry is an accessory fruit: the flesh is the enlarged receptacle, and the true fruits are the achenes on its surface."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "venus_day_longer",
+   "category": "space",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "venus",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "きんせいの いちにちは ながい",
+       "body": "きんせいは ゆっくり まわるので、いちにちが とても ながいよ。"
+      },
+      "junior": {
+       "title": "きんせいの 1にちは 1ねんより ながい",
+       "body": "きんせいは とても ゆっくり じぶんで まわります。だから 1にちが、たいように まわる 1ねんより ながいのです。"
+      },
+      "teen": {
+       "title": "金星の1日は1年より長い",
+       "body": "金星は自転がとても遅く、1回自転するのに地球の約243日かかります。太陽のまわりを1周する公転は約225日なので、1日のほうが1年より長くなります。"
+      },
+      "adult": {
+       "title": "金星では自転周期が公転周期を上回る",
+       "body": "金星の自転周期は約243地球日(しかも他の惑星と逆向き)で、公転周期は約225地球日です。このため恒星日は1金星年より長くなります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A day on Venus is very long",
+       "body": "Venus spins so slowly that one day lasts a very long time."
+      },
+      "junior": {
+       "title": "A day on Venus is longer than its year",
+       "body": "Venus turns very slowly. One turn takes longer than the time it needs to go around the Sun."
+      },
+      "teen": {
+       "title": "A day on Venus is longer than a year on Venus",
+       "body": "Venus takes about 243 Earth days to rotate once, but only about 225 Earth days to orbit the Sun. So its day is longer than its year."
+      },
+      "adult": {
+       "title": "Venus rotates more slowly than it orbits",
+       "body": "Venus has a sidereal rotation period of about 243 Earth days, in the retrograde direction, and an orbital period of about 225 Earth days, so a sidereal day exceeds a Venusian year."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "sharks_older_than_trees",
+   "category": "nature",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "shark",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "サメは きより むかしから いた",
+       "body": "サメは きが うまれるより まえから うみに いたんだよ。"
+      },
+      "junior": {
+       "title": "サメは きより ふるい",
+       "body": "サメの なかまは、4おくねんいじょう まえから います。きの なかまが ふえるより まえです。"
+      },
+      "teen": {
+       "title": "サメは木より古い生き物",
+       "body": "サメの仲間の祖先は約4億年以上前に現れました。最初の本格的な樹木が現れたのは約3億8千万年前ごろとされ、サメのほうが古い生き物です。"
+      },
+      "adult": {
+       "title": "サメの系統は樹木より古い",
+       "body": "軟骨魚類は約4億年以上前のデボン紀以前に出現しており、森を作る本格的な樹木(アーケオプテリスなど)が現れた約3億8千万〜3億6千万年前より古い系統です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Sharks are very old",
+       "body": "Sharks lived in the sea before there were trees!"
+      },
+      "junior": {
+       "title": "Sharks are older than trees",
+       "body": "Sharks have been around for over 400 million years. That is longer than trees have."
+      },
+      "teen": {
+       "title": "Sharks are older than trees",
+       "body": "The ancestors of sharks appeared more than 400 million years ago. The first true trees showed up around 380 million years ago, so sharks came first."
+      },
+      "adult": {
+       "title": "The shark lineage predates trees",
+       "body": "Cartilaginous fishes appeared more than 400 million years ago, earlier than forest-forming trees such as Archaeopteris, which date to roughly 380-360 million years ago."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "baby_bones",
+   "category": "body",
+   "scenes": [
+    "family",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "skeleton",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "あかちゃんの ほね",
+       "body": "あかちゃんは おとなより ほねが おおいんだよ。"
+      },
+      "junior": {
+       "title": "あかちゃんの ほねは おおい",
+       "body": "あかちゃんの ほねは 300こくらい。おおきくなると くっついて、おとなは 206こに なります。"
+      },
+      "teen": {
+       "title": "赤ちゃんの骨は約300本、大人は206本",
+       "body": "生まれたばかりの赤ちゃんには約300個の骨(軟骨を含む)があり、成長とともにつながって、大人では206個になります。"
+      },
+      "adult": {
+       "title": "乳児の骨は約300、成人は206",
+       "body": "新生児の骨格は約300個の骨・骨化中心で構成され、成長に伴い癒合して、成人では206個になります。頭蓋骨や仙骨などで癒合が顕著です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A baby has more bones",
+       "body": "Babies have more bones than grown-ups!"
+      },
+      "junior": {
+       "title": "Babies have more bones",
+       "body": "A baby has about 300 bones. As we grow, some join together, and adults end up with 206."
+      },
+      "teen": {
+       "title": "Babies have about 300 bones; adults have 206",
+       "body": "A newborn has around 300 bones and bits of cartilage. As the child grows, many of them fuse together, leaving 206 in an adult."
+      },
+      "adult": {
+       "title": "Infants have around 300 bones; adults have 206",
+       "body": "A newborn skeleton consists of roughly 300 bones and ossification centers that fuse during growth, notably in the skull and sacrum, leaving 206 bones in adults."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "giraffe_seven_vertebrae",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "giraffe",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "キリンの くびの ほね",
+       "body": "キリンの くびの ほねは ななつ。にんげんと おなじ かずだよ。"
+      },
+      "junior": {
+       "title": "キリンの くびの ほねは 7こ",
+       "body": "キリンの くびは とても ながいけれど、ほねの かずは 7こ。にんげんと おなじです。ひとつひとつが とても おおきいのです。"
+      },
+      "teen": {
+       "title": "キリンの首の骨は人間と同じ7個",
+       "body": "ほとんどの哺乳類の首の骨(頸椎)は7個で、キリンも同じです。首が長いのは、1つ1つの骨が約25センチほどにも大きく伸びているからです。"
+      },
+      "adult": {
+       "title": "キリンの頸椎は7個",
+       "body": "哺乳類の頸椎はほぼ例外なく7個で、キリンも同数です。長い首は個々の頸椎が非常に長く(約25cm前後)なることで実現しています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A giraffe's neck bones",
+       "body": "A giraffe has seven neck bones, just like you!"
+      },
+      "junior": {
+       "title": "A giraffe has seven neck bones",
+       "body": "A giraffe's neck is very long, but it has just seven bones, the same as a person. Each bone is really big."
+      },
+      "teen": {
+       "title": "Giraffes have the same number of neck bones as humans",
+       "body": "Almost all mammals have seven neck vertebrae, and giraffes are no different. Their necks are long because each vertebra is hugely stretched out."
+      },
+      "adult": {
+       "title": "Giraffes have seven cervical vertebrae",
+       "body": "Nearly all mammals have seven cervical vertebrae, giraffes included. Their long necks result from extremely elongated individual vertebrae, each roughly 25 cm long."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "lightning_hotter_than_sun",
+   "category": "science",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "lightning",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "かみなりは あつい",
+       "body": "かみなりは たいようの ひょうめんより あついんだって。"
+      },
+      "junior": {
+       "title": "かみなりは たいようより あつい",
+       "body": "かみなりの ひかりの みちは 3まんどくらい。たいようの ひょうめんは 5500どくらいです。"
+      },
+      "teen": {
+       "title": "雷の温度は太陽の表面より高い",
+       "body": "雷が通る道すじの空気は約3万℃にもなります。太陽の表面温度は約5,500℃なので、一瞬だけ雷のほうが高温になります。"
+      },
+      "adult": {
+       "title": "雷放電の温度は太陽表面の約5倍",
+       "body": "落雷の放電路は一瞬で約30,000℃に達するとされ、太陽の光球の温度(約5,500℃)の5倍以上です。この急激な加熱で空気が膨張し、雷鳴が生じます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Lightning is hot",
+       "body": "Lightning is hotter than the surface of the Sun!"
+      },
+      "junior": {
+       "title": "Lightning is hotter than the Sun's surface",
+       "body": "The air around a lightning bolt gets to about 30,000 degrees. The Sun's surface is about 5,500 degrees."
+      },
+      "teen": {
+       "title": "Lightning is hotter than the Sun's surface",
+       "body": "The air along a lightning bolt's path heats up to around 30,000 °C for a split second. The Sun's visible surface is only about 5,500 °C."
+      },
+      "adult": {
+       "title": "A lightning channel is several times hotter than the Sun's surface",
+       "body": "A lightning discharge channel is estimated to reach about 30,000 °C, more than five times the roughly 5,500 °C of the solar photosphere. The sudden heating expands the air explosively, producing thunder."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "sea_otters_hold_hands",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "family",
+    "kids"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "otter",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ラッコは てを つなぐ",
+       "body": "ラッコは ねるとき、なかまと てを つなぐことが あるよ。"
+      },
+      "junior": {
+       "title": "ラッコは てを つないで ねる",
+       "body": "ラッコは うみで ねるとき、ながされないように なかまと てを つなぐことが あります。"
+      },
+      "teen": {
+       "title": "ラッコは手をつないで眠ることがある",
+       "body": "ラッコは海に浮かんで眠るとき、流されて離れ離れにならないよう、仲間や家族と手をつなぐことがあります。昆布などに体を巻きつけて流されないようにすることもあります。"
+      },
+      "adult": {
+       "title": "ラッコの手つなぎ行動",
+       "body": "ラッコは海上で休む際、群れが離れないよう互いの手を握ることが知られています。ケルプに体を巻き付けて係留する行動も観察されています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Sea otters hold hands",
+       "body": "Sea otters sometimes hold hands when they sleep!"
+      },
+      "junior": {
+       "title": "Sea otters sleep holding hands",
+       "body": "When sea otters sleep in the water, they sometimes hold hands so they do not drift apart."
+      },
+      "teen": {
+       "title": "Sea otters sometimes hold hands while sleeping",
+       "body": "Sea otters rest floating on the sea, and they sometimes hold hands with their companions so they won't drift apart. They also wrap themselves in kelp to stay in place."
+      },
+      "adult": {
+       "title": "Sea otters hold paws while resting",
+       "body": "Resting sea otters are known to hold each other's paws to keep the group together on the water. They have also been observed wrapping themselves in kelp as an anchor."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "no_sound_in_space",
+   "category": "space",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "astronaut",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "うちゅうは しずか",
+       "body": "うちゅうでは おとが きこえないんだよ。"
+      },
+      "junior": {
+       "title": "うちゅうでは おとが つたわらない",
+       "body": "おとは くうきが ふるえて つたわります。うちゅうには くうきが ないので、おとは きこえません。"
+      },
+      "teen": {
+       "title": "宇宙では音が伝わらない",
+       "body": "音は空気などが振動することで伝わります。宇宙はほぼ真空で振動を伝えるものがないため、普通の音は伝わりません。宇宙飛行士は無線で会話します。"
+      },
+      "adult": {
+       "title": "真空中では音波が伝播しない",
+       "body": "音波は媒質の振動として伝わるため、ほぼ真空の宇宙空間では伝播しません。宇宙飛行士の会話は電波(無線)で行われ、船内では空気があるため通常どおり音が聞こえます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Space is quiet",
+       "body": "You cannot hear sounds in space!"
+      },
+      "junior": {
+       "title": "Sound can't travel in space",
+       "body": "Sound moves by shaking the air. There is no air in space, so no sound can be heard."
+      },
+      "teen": {
+       "title": "Sound cannot travel through space",
+       "body": "Sound travels by making a material like air vibrate. Space is almost a vacuum, so ordinary sound can't pass through it. Astronauts talk to each other by radio."
+      },
+      "adult": {
+       "title": "Sound waves cannot propagate in a vacuum",
+       "body": "Sound waves need a medium to propagate, and space is nearly a vacuum, so they cannot travel through it. Astronauts communicate by radio, and inside a spacecraft the air carries sound normally."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "ice_floats",
+   "category": "science",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "ice",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "こおりは みずに うく",
+       "body": "こおりは みずより かるいから、プカプカ うくよ。"
+      },
+      "junior": {
+       "title": "こおりが みずに うくのは なぜ？",
+       "body": "みずは こおると ふくらんで かるくなります。だから こおりは みずに うきます。"
+      },
+      "teen": {
+       "title": "氷が水に浮く理由",
+       "body": "水は凍ると体積が約9%増えて、密度が小さくなります。そのため氷は水に浮きます。多くの物質は固体のほうが重く、水は珍しい性質を持っています。"
+      },
+      "adult": {
+       "title": "氷の密度が水より小さい理由",
+       "body": "水は凍結時に水素結合によって隙間の多い結晶構造をとり、体積が約9%増えるため氷の密度(約0.92g/cm³)は水より小さくなります。多くの物質は固体のほうが高密度で、水は例外的です。湖が上から凍り、底の生き物が生き延びられる一因でもあります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Ice floats",
+       "body": "Ice is lighter than water, so it floats!"
+      },
+      "junior": {
+       "title": "Why does ice float?",
+       "body": "Water gets bigger when it freezes, so it gets lighter. That is why ice floats on water."
+      },
+      "teen": {
+       "title": "Why ice floats on water",
+       "body": "When water freezes, it expands by about 9% and becomes less dense. Most materials are heavier as solids, so water is unusual."
+      },
+      "adult": {
+       "title": "Why ice is less dense than water",
+       "body": "Freezing locks water into an open hydrogen-bonded crystal structure that expands about 9%, giving ice a density of about 0.92 g/cm³. Most substances are denser as solids, so water is an exception, and it helps explain why lakes freeze from the top down and aquatic life survives below."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "chimborazo_farthest",
+   "category": "geography",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "teen",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "mountain",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "teen": {
+       "title": "エベレストは地球の中心から最も遠い山ではない",
+       "body": "海抜が最も高いのはエベレストですが、地球の中心から最も遠い山頂は、赤道近くにあるエクアドルのチンボラソ山です。地球は赤道付近がふくらんだ形をしているためです。"
+      },
+      "adult": {
+       "title": "地球の中心から最も遠い山頂はチンボラソ山",
+       "body": "地球は自転による遠心力で赤道付近が膨らんでいるため、赤道に近いチンボラソ山(エクアドル)の山頂は、地球の中心から約6,384kmと、海抜でははるかに高いエベレストより遠くなります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "teen": {
+       "title": "Everest isn't the farthest peak from Earth's center",
+       "body": "Mount Everest is the highest above sea level, but Ecuador's Chimborazo is farther from the center of the Earth, because the planet bulges at the equator."
+      },
+      "adult": {
+       "title": "Chimborazo's summit is farther from Earth's center than Everest's",
+       "body": "Earth's equatorial bulge puts Chimborazo's summit (about 6,384 km from the center) farther out than Everest's, even though Everest is far higher above sea level."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "wombat_cube_poop",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "wombat",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ウォンバットの うんち",
+       "body": "ウォンバットの うんちは しかくいんだよ。"
+      },
+      "junior": {
+       "title": "ウォンバットの うんちは しかく",
+       "body": "ウォンバットの うんちは さいころみたいに しかくい かたちを しています。"
+      },
+      "teen": {
+       "title": "ウォンバットのふんは四角い",
+       "body": "オーストラリアにすむウォンバットのふんは、さいころのような立方体に近い形をしています。ふんで縄張りを示すとき、転がらないので都合がよいと考えられています。"
+      },
+      "adult": {
+       "title": "ウォンバットの立方体状の糞",
+       "body": "ウォンバットの糞は立方体に近い形をしています。研究では、腸の壁の弾性の差によって成形されるとされ、転がりにくいため縄張りの目印として都合がよいと考えられています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Wombat poop",
+       "body": "Wombat poop is shaped like little cubes!"
+      },
+      "junior": {
+       "title": "Wombats make cube-shaped poop",
+       "body": "A wombat's poop looks like tiny dice because it has square sides."
+      },
+      "teen": {
+       "title": "Wombat poop is cube-shaped",
+       "body": "Wombats from Australia produce droppings that are nearly cubic. Because cubes don't roll away, they are thought to work well for marking territory."
+      },
+      "adult": {
+       "title": "Wombats produce cubic droppings",
+       "body": "Wombat feces are nearly cubic. Research suggests the shape is molded by differences in the elasticity of the intestinal wall, and it is thought to suit territory marking because cubes resist rolling."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "human_dna_same",
+   "category": "body",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "teen",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "dna",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "teen": {
+       "title": "ほかの人とのDNAの違いは約0.1%",
+       "body": "あなたのDNAは、ほかの誰とも約99.9%同じです。わずかな違いが、人それぞれの違いを作っています。"
+      },
+      "adult": {
+       "title": "ヒトのDNAは個人間で約99.9%一致する",
+       "body": "血縁のない2人のヒトの間でも、DNAの塩基配列は約99.9%が共通しています。残りの約0.1%の違いが、体質や見た目などの個人差の元の一部になっています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "teen": {
+       "title": "Any two people share about 99.9% of their DNA",
+       "body": "Your DNA is almost exactly the same as anyone else's. The small differences make up the variation between people."
+      },
+      "adult": {
+       "title": "Two humans differ in only about 0.1% of their DNA",
+       "body": "Any two unrelated people share roughly 99.9% of their DNA sequence. The remaining differences, including single-letter variants, account for much of human variation."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "flamingo_flamboyance",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "flamingo",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "フラミンゴの むれ",
+       "body": "フラミンゴの むれは「フランボヤンス」と よぶんだよ。"
+      },
+      "junior": {
+       "title": "フラミンゴの むれの なまえ",
+       "body": "フラミンゴの むれの ことを、えいごで「フランボヤンス」と いいます。「はなやか」という いみです。"
+      },
+      "teen": {
+       "title": "フラミンゴの群れは「フランボヤンス」",
+       "body": "英語では、フラミンゴの群れを「flamboyance(フランボヤンス)」と呼びます。「華やか」という意味の言葉で、鮮やかな色の鳥にぴったりです。"
+      },
+      "adult": {
+       "title": "フラミンゴの集合名詞は flamboyance",
+       "body": "英語でフラミンゴの群れは「flamboyance」と呼ばれます。「華やかさ」を意味する語で、動物の集団を表す集合名詞の面白い例として知られます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A group of flamingos",
+       "body": "A group of flamingos is called a flamboyance!"
+      },
+      "junior": {
+       "title": "A flamboyance of flamingos",
+       "body": "A group of flamingos has a special name: a \"flamboyance\". It means very bright and showy."
+      },
+      "teen": {
+       "title": "A group of flamingos is a \"flamboyance\"",
+       "body": "In English, a flock of flamingos is called a flamboyance, a word that means showy and colorful, a perfect fit for such a bright bird."
+      },
+      "adult": {
+       "title": "The collective noun for flamingos is \"flamboyance\"",
+       "body": "A group of flamingos is called a \"flamboyance\" in English, a word meaning showiness, and a charming example of the many collective nouns used for animals."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "moon_moving_away",
+   "category": "space",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "moon",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "おつきさまは すこしずつ とおざかる",
+       "body": "おつきさまは すこしずつ ちきゅうから はなれているよ。"
+      },
+      "junior": {
+       "title": "おつきさまは とおざかっている",
+       "body": "おつきさまは 1ねんに 4センチくらい、すこしずつ ちきゅうから とおざかっています。"
+      },
+      "teen": {
+       "title": "月は毎年少しずつ地球から離れている",
+       "body": "月は1年に約3.8センチずつ、地球から遠ざかっています。これは、月に反射させたレーザー光の往復時間を測って分かりました。"
+      },
+      "adult": {
+       "title": "月は年に約3.8cmずつ遠ざかっている",
+       "body": "月は潮汐相互作用により、年に約3.8cmの割合で地球から遠ざかっています。アポロ計画などで月面に置かれた反射鏡へレーザーを当て、往復時間を測る観測で確認されています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The Moon is drifting away",
+       "body": "The Moon is moving a tiny bit farther from Earth."
+      },
+      "junior": {
+       "title": "The Moon is moving away from Earth",
+       "body": "Every year, the Moon gets about 4 centimeters farther away from us."
+      },
+      "teen": {
+       "title": "The Moon drifts away from Earth every year",
+       "body": "The Moon moves about 3.8 centimeters farther from Earth each year. Scientists measure it by bouncing lasers off mirrors left on the Moon."
+      },
+      "adult": {
+       "title": "The Moon recedes about 3.8 cm per year",
+       "body": "Tidal interaction pushes the Moon away from Earth at roughly 3.8 cm a year, confirmed by lunar laser ranging, which times laser pulses reflected from retroreflectors placed on the surface."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "butterfly_taste_feet",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "kids",
+    "family"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "butterfly",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ちょうちょは あしで あじを みる",
+       "body": "ちょうちょは あしで あじを かんじるんだよ。"
+      },
+      "junior": {
+       "title": "ちょうちょの あしは した",
+       "body": "ちょうちょは あしの さきで あじを かんじます。はっぱに とまって、たべものか たしかめます。"
+      },
+      "teen": {
+       "title": "チョウは足で味を感じる",
+       "body": "チョウの足の先には味を感じる器官があり、葉にとまっただけで、そこが食べ物や卵を産む場所に適しているか調べます。"
+      },
+      "adult": {
+       "title": "チョウは脚の感覚毛で味を感じる",
+       "body": "チョウの前脚の先端などには味覚受容器を持つ感覚毛があり、葉に触れるだけで植物の化学物質を検知します。メスはこれで産卵に適した食草を見分けます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Butterflies taste with their feet",
+       "body": "Butterflies can taste with their feet!"
+      },
+      "junior": {
+       "title": "Butterflies taste with their feet",
+       "body": "A butterfly lands on a leaf and tastes it with its feet to find out if it is good food."
+      },
+      "teen": {
+       "title": "Butterflies taste with their feet",
+       "body": "Butterflies have taste sensors on their feet, so just by landing on a leaf they can tell whether it's good to eat or a good place to lay eggs."
+      },
+      "adult": {
+       "title": "Butterflies taste through sensors on their legs",
+       "body": "Butterflies have chemoreceptive sensilla on their legs, particularly the front pair, that detect plant chemicals on contact. Females use them to identify suitable host plants for egg-laying."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "cats_no_sweet",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "cat",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ねこは あまいのが わからない",
+       "body": "ねこは あまい あじを かんじないんだって。"
+      },
+      "junior": {
+       "title": "ねこは あまさを かんじない",
+       "body": "ねこは した では あまい あじが わかりません。おにくの あじは とくいです。"
+      },
+      "teen": {
+       "title": "ネコは甘みを感じない",
+       "body": "ネコは舌で甘みを感じるための遺伝子がはたらかず、甘い味が分かりません。肉食動物なので、甘みを感じる必要がなかったと考えられています。"
+      },
+      "adult": {
+       "title": "ネコは甘味受容体を持たない",
+       "body": "ネコは甘味受容体を構成する遺伝子(Tas1r2)が機能しない偽遺伝子となっており、甘味を感知できません。肉食に特化した進化の結果と考えられています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Cats and sweet foods",
+       "body": "Cats cannot taste sweet things."
+      },
+      "junior": {
+       "title": "Cats can't taste sweetness",
+       "body": "A cat's tongue cannot sense sweet tastes. Cats are meat eaters, so they do not need to."
+      },
+      "teen": {
+       "title": "Cats can't taste sweetness",
+       "body": "A gene needed to sense sweetness doesn't work in cats, so they can't taste sugar. Since cats eat meat, they likely never needed to."
+      },
+      "adult": {
+       "title": "Cats lack a functional sweet taste receptor",
+       "body": "The gene Tas1r2, part of the sweet taste receptor, is a nonfunctional pseudogene in cats, so they cannot detect sweetness, likely an evolutionary consequence of strict carnivory."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "sunlight_8_minutes",
+   "category": "space",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "sun",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "たいようの ひかりは たびを する",
+       "body": "たいようの ひかりは ちきゅうまで すこし じかんが かかるよ。"
+      },
+      "junior": {
+       "title": "たいようの ひかりは 8ふんで とどく",
+       "body": "いま みている たいようの ひかりは、8ふんくらい まえに たいようを でた ひかりです。"
+      },
+      "teen": {
+       "title": "太陽の光が地球に届くまで約8分",
+       "body": "太陽の光が地球に届くまでには、約8分20秒かかります。いま見ている太陽は、約8分前の姿です。"
+      },
+      "adult": {
+       "title": "太陽光の到達時間は約8分20秒",
+       "body": "太陽と地球の平均距離は約1億5千万kmで、光が届くまでに約8分20秒かかります。私たちが見ているのは約8分前の太陽の姿です。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Sunlight takes a trip",
+       "body": "Sunlight needs a little time to reach Earth."
+      },
+      "junior": {
+       "title": "Sunlight takes about 8 minutes to reach us",
+       "body": "The sunlight you see right now left the Sun about 8 minutes ago."
+      },
+      "teen": {
+       "title": "Sunlight takes about 8 minutes to reach Earth",
+       "body": "It takes about 8 minutes and 20 seconds for sunlight to travel to Earth. The Sun you see is how it looked about 8 minutes ago."
+      },
+      "adult": {
+       "title": "Sunlight takes about 8 minutes 20 seconds to reach Earth",
+       "body": "At an average distance of about 150 million km, light from the Sun takes roughly 8 minutes and 20 seconds to arrive, so we always see the Sun as it was about eight minutes earlier."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "saturn_would_float",
+   "category": "space",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "saturn",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "どせいは みずに うく？",
+       "body": "どせいは とても かるいので、おおきな みずの なかなら うくんだって。"
+      },
+      "junior": {
+       "title": "どせいは みずに うかぶ",
+       "body": "どせいは おおきいけれど かるい ほしです。もし おおきな プールが あれば、みずに うかびます。"
+      },
+      "teen": {
+       "title": "土星は水に浮かぶほど軽い",
+       "body": "土星の平均密度は水より小さい(約0.7g/cm³)ので、もし十分に大きな水のプールがあれば、土星は水に浮かびます。主に軽い水素とヘリウムでできているためです。"
+      },
+      "adult": {
+       "title": "土星の平均密度は水より小さい",
+       "body": "土星の平均密度は約0.69g/cm³で水(1.0g/cm³)より小さく、主に水素とヘリウムからなるためです。仮に十分大きな水槽があれば浮かびますが、そのようなものは存在しません。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Would Saturn float?",
+       "body": "Saturn is so light that it would float in water, if there were a giant bathtub!"
+      },
+      "junior": {
+       "title": "Saturn would float in water",
+       "body": "Saturn is big but not heavy for its size. In a big enough pool of water, it would float."
+      },
+      "teen": {
+       "title": "Saturn is light enough to float in water",
+       "body": "Saturn's average density is lower than water's (about 0.7 g/cm³), so in a pool large enough to hold it, Saturn would float. It's mostly light hydrogen and helium."
+      },
+      "adult": {
+       "title": "Saturn's average density is lower than water's",
+       "body": "Saturn's mean density is about 0.69 g/cm³, below water's 1.0 g/cm³, because it is made mostly of hydrogen and helium. It would float in a sufficiently large bath, which of course does not exist."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "eiffel_grows_summer",
+   "category": "science",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "tower",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "エッフェルとうは なつに のびる",
+       "body": "エッフェルとうは あついと すこし たかく なるよ。"
+      },
+      "junior": {
+       "title": "エッフェルとうは なつに のびる",
+       "body": "てつは あつくなると のびます。だから エッフェルとうは、なつは ふゆより すこしだけ たかく なります。"
+      },
+      "teen": {
+       "title": "エッフェル塔は夏に少し高くなる",
+       "body": "鉄は温度が上がると膨張します。エッフェル塔は鉄でできているため、暑い夏には冬より最大で約15センチ高くなることがあります。"
+      },
+      "adult": {
+       "title": "エッフェル塔の高さは季節で変わる",
+       "body": "エッフェル塔は錬鉄製で、熱膨張により気温が高い夏には冬に比べて最大約15cm高くなると言われます。日当たりで塔の片側が膨張するため、頂部がわずかに傾くこともあります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The Eiffel Tower grows",
+       "body": "The Eiffel Tower gets a little taller when it is hot!"
+      },
+      "junior": {
+       "title": "The Eiffel Tower gets taller in summer",
+       "body": "Iron gets bigger when it warms up. So the tower is a tiny bit taller in summer than in winter."
+      },
+      "teen": {
+       "title": "The Eiffel Tower is taller in summer",
+       "body": "Iron expands when it heats up, so the Eiffel Tower can grow up to about 15 cm taller on a hot summer day than in winter."
+      },
+      "adult": {
+       "title": "The Eiffel Tower's height varies with temperature",
+       "body": "The tower is made of wrought iron, which expands as it warms, so it can be up to about 15 cm taller in summer than in winter. Uneven sun exposure can also make its top lean slightly."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "heart_100k",
+   "category": "body",
+   "scenes": [
+    "family",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "heart",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "しんぞうは はたらきもの",
+       "body": "しんぞうは まいにち 10まんかいも ドキドキ うごいているよ。"
+      },
+      "junior": {
+       "title": "しんぞうは 1にちに 10まんかい",
+       "body": "しんぞうは やすまずに うごいて、1にちに 10まんかいくらい ドキドキと うちます。"
+      },
+      "teen": {
+       "title": "心臓は1日に約10万回動く",
+       "body": "ヒトの心臓は、1日におよそ10万回拍動します。1年では約3,600万回、一生では何十億回にもなります。"
+      },
+      "adult": {
+       "title": "心臓は1日に約10万回拍動する",
+       "body": "成人の安静時の心拍数は毎分約60〜80回で、1日では約10万回、1年では約3,600万回に達します。一生では約25〜30億回拍動する計算になります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "A busy heart",
+       "body": "Your heart beats about 100,000 times every day!"
+      },
+      "junior": {
+       "title": "Your heart beats 100,000 times a day",
+       "body": "Your heart never takes a break. It goes thump-thump about 100,000 times each day."
+      },
+      "teen": {
+       "title": "The heart beats about 100,000 times a day",
+       "body": "A human heart beats roughly 100,000 times a day, around 36 million times a year, and billions of times in a lifetime."
+      },
+      "adult": {
+       "title": "The heart beats about 100,000 times daily",
+       "body": "At a resting rate of about 60-80 beats per minute, an adult heart beats roughly 100,000 times a day and about 36 million times a year, working out to around 2.5-3 billion beats over a lifetime."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "bamboo_fast",
+   "category": "nature",
+   "scenes": [
+    "friends",
+    "kids",
+    "family"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "bamboo",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "たけは ぐんぐん のびる",
+       "body": "たけは 1にちで 1メートルくらい のびることも あるよ。"
+      },
+      "junior": {
+       "title": "たけは とても はやく のびる",
+       "body": "たけは しゅるいに よっては 1にちで 1メートルちかく のびます。せかいで いちばん はやい しょくぶつの なかまです。"
+      },
+      "teen": {
+       "title": "竹は1日に約1メートル伸びることも",
+       "body": "竹の仲間には、1日に約1メートル近く伸びる種類があります。成長がとても速い植物として知られています。"
+      },
+      "adult": {
+       "title": "竹は最速級の成長を示す植物",
+       "body": "一部の竹は、1日に約90cm以上伸びることが観測されており、世界で最も成長が速い植物の一つとされます。地下茎で養分を蓄え、タケノコが短期間で一気に伸びます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Bamboo grows fast",
+       "body": "Bamboo can grow about one meter in a single day!"
+      },
+      "junior": {
+       "title": "Bamboo is a super-fast grower",
+       "body": "Some kinds of bamboo grow nearly a meter in one day. It is one of the fastest-growing plants."
+      },
+      "teen": {
+       "title": "Some bamboo grows nearly a meter a day",
+       "body": "Certain kinds of bamboo can shoot up almost a meter in a single day, which makes bamboo one of the fastest-growing plants on Earth."
+      },
+      "adult": {
+       "title": "Bamboo is among the fastest-growing plants",
+       "body": "Some bamboo species have been recorded growing 90 cm or more in a day. Stored energy in the underground rhizome lets new shoots elongate rapidly within a short period."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "crows_recognize_faces",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "crow",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "カラスは かおを おぼえる",
+       "body": "カラスは ひとの かおを おぼえられるんだって。"
+      },
+      "junior": {
+       "title": "カラスは ひとの かおを おぼえる",
+       "body": "カラスは あたまが よくて、いじわるを された ひとの かおを おぼえて いることが あります。"
+      },
+      "teen": {
+       "title": "カラスは人間の顔を見分けて覚える",
+       "body": "カラスは人の顔を見分け、自分を捕まえたり脅かしたりした人を覚えていることが、実験で示されています。仲間にその人の情報を伝えているようすも観察されました。"
+      },
+      "adult": {
+       "title": "カラスはヒトの顔を識別・記憶する",
+       "body": "アメリカの研究では、アメリカガラスが、自分を捕獲した人物が着けていたマスクの顔を数年にわたり記憶し、他の個体もその人物を警戒するようになることが示されました。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Crows remember faces",
+       "body": "Crows can remember people's faces!"
+      },
+      "junior": {
+       "title": "Crows can remember human faces",
+       "body": "Crows are very smart. They can remember a person who was unkind to them."
+      },
+      "teen": {
+       "title": "Crows recognize human faces",
+       "body": "Experiments show that crows can tell people apart and remember someone who trapped or scared them. Other crows even seem to learn who to avoid."
+      },
+      "adult": {
+       "title": "Crows identify and remember human faces",
+       "body": "Studies of American crows found they remembered the face of a mask-wearing person who had trapped them for years, and other crows that had never been trapped learned to scold that person too."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "rainbow_full_circle",
+   "category": "science",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "rainbow",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "にじは ほんとうは まるい",
+       "body": "にじは ほんとうは まるい かたちなんだよ。"
+      },
+      "junior": {
+       "title": "にじは ほんとうは まあるい",
+       "body": "にじは じめんが じゃまを するので はんぶんしか みえません。たかい ところからは まるく みえることが あります。"
+      },
+      "teen": {
+       "title": "虹は本当は円形",
+       "body": "虹は本来、円形をしています。地面が邪魔して下半分が見えないので半円に見えますが、飛行機の上などからは丸い虹が見えることがあります。"
+      },
+      "adult": {
+       "title": "虹は本来は完全な円",
+       "body": "虹は太陽と観測者を結ぶ軸のまわりに広がる円錐状の光の分布で、本来は円形です。地平線が下側を遮るため弧に見えるだけで、航空機や高い山からは円形の虹が観測されることがあります。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Rainbows are circles",
+       "body": "A rainbow is really a circle!"
+      },
+      "junior": {
+       "title": "A rainbow is really a circle",
+       "body": "The ground hides the bottom half, so we only see an arch. From high up, you can sometimes see a whole circle."
+      },
+      "teen": {
+       "title": "Rainbows are actually full circles",
+       "body": "A rainbow is really a full circle. We usually see only an arc because the ground blocks the lower half, but from an airplane you can sometimes see the entire circle."
+      },
+      "adult": {
+       "title": "A rainbow is a complete circle",
+       "body": "A rainbow is a cone of light distributed around the line from the Sun through the observer, so it is inherently circular. The horizon usually hides the lower part, but complete circular rainbows can be seen from aircraft or high vantage points."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "elephant_ground_sounds",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "elephant",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "ぞうは じめんで おはなし",
+       "body": "ぞうは ひくい おとを だして、とおくの なかまと おはなしするよ。"
+      },
+      "junior": {
+       "title": "ぞうは ひくい こえで はなす",
+       "body": "ぞうは ひとに きこえない ひくい こえを だして、とおくに いる なかまに つたえます。"
+      },
+      "teen": {
+       "title": "ゾウは人に聞こえない低い声で話す",
+       "body": "ゾウは人間には聞こえない低い音(インフラサウンド)を出して、遠くの仲間と連絡を取り合います。音は地面も伝わり、足で感じ取れると考えられています。"
+      },
+      "adult": {
+       "title": "ゾウは低周波音で長距離コミュニケーションする",
+       "body": "ゾウは人の可聴域より低い周波数(インフラサウンド)の音を発し、数キロ離れた仲間とも交信できると考えられています。音は空気だけでなく地面も伝わり、足や鼻先で受け取っている可能性が研究されています。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Elephants talk low",
+       "body": "Elephants talk with very deep sounds that people can't hear."
+      },
+      "junior": {
+       "title": "Elephants use very low sounds",
+       "body": "Elephants make deep sounds that people cannot hear to talk to friends far away."
+      },
+      "teen": {
+       "title": "Elephants talk in sounds humans can't hear",
+       "body": "Elephants make very low-pitched sounds called infrasound to keep in touch with others far away. The sound also travels through the ground, which they may feel through their feet."
+      },
+      "adult": {
+       "title": "Elephants communicate over long distances with infrasound",
+       "body": "Elephants produce sounds below the range of human hearing, which are thought to carry for several kilometers. The sound also travels through the ground, and research suggests they may sense it through their feet."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "dolphin_half_sleep",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "dolphin",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "イルカは はんぶん ねる",
+       "body": "イルカは あたまの はんぶんずつ ねむるんだよ。"
+      },
+      "junior": {
+       "title": "イルカは のうを はんぶんずつ ねかせる",
+       "body": "イルカは うみで およぎながら、のうの かたほうずつ ねむります。なので ずっと いきが できます。"
+      },
+      "teen": {
+       "title": "イルカは脳を半分ずつ眠らせる",
+       "body": "イルカは脳の左右を交代で眠らせる「半球睡眠」をします。片方が起きているので、泳ぎながら息つぎをしたり、周りを見張ったりできます。"
+      },
+      "adult": {
+       "title": "イルカの半球睡眠",
+       "body": "イルカは息を意識的にしなければならないため、脳の片半球ずつ睡眠をとる「単半球徐波睡眠」を行います。起きている側の脳で呼吸や警戒、泳ぎを維持します。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Dolphins half-sleep",
+       "body": "Dolphins sleep with half of their brain at a time!"
+      },
+      "junior": {
+       "title": "Dolphins sleep one half of the brain at a time",
+       "body": "Dolphins swim while they sleep, with one side of the brain resting at a time. That way they can still come up for air."
+      },
+      "teen": {
+       "title": "Dolphins sleep with half their brain",
+       "body": "Dolphins rest one half of their brain at a time while the other half stays awake, so they can keep swimming, breathing and watching for danger."
+      },
+      "adult": {
+       "title": "Dolphins show unihemispheric sleep",
+       "body": "Because breathing is voluntary, dolphins practice unihemispheric slow-wave sleep, resting one brain hemisphere at a time while the awake side maintains swimming, respiration and vigilance."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "antarctica_desert",
+   "category": "geography",
+   "scenes": [
+    "friends",
+    "family",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "antarctica",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "いちばん おおきい さばく",
+       "body": "せかいで いちばん おおきい さばくは、こおりの みなみきょくなんだよ。"
+      },
+      "junior": {
+       "title": "みなみきょくは さばく",
+       "body": "さばくは あめや ゆきが とても すくない ところ。だから、みなみきょくは せかいで いちばん おおきい さばくです。"
+      },
+      "teen": {
+       "title": "世界最大の砂漠は南極",
+       "body": "砂漠とは、雨や雪がとても少ない土地のことです。南極大陸は降水量が非常に少ないため、約1,400万平方キロメートルの世界最大の砂漠と言えます。"
+      },
+      "adult": {
+       "title": "世界最大の砂漠は南極大陸",
+       "body": "砂漠の定義は年間降水量(降雪を水に換算)が約250mm未満の地域です。南極大陸は内陸部でさらに少なく、面積約1,400万km²で、サハラ砂漠(約900万km²)を上回る世界最大の砂漠とされます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "The biggest desert",
+       "body": "The biggest desert in the world is icy Antarctica!"
+      },
+      "junior": {
+       "title": "Antarctica is a desert",
+       "body": "A desert is a place with very little rain or snow. Antarctica gets so little that it counts as the biggest desert in the world."
+      },
+      "teen": {
+       "title": "The world's largest desert is Antarctica",
+       "body": "A desert is a region with very little precipitation. Antarctica gets so little that it counts as a desert, and at about 14 million square kilometers it is the largest on Earth."
+      },
+      "adult": {
+       "title": "Antarctica is the world's largest desert",
+       "body": "Deserts are defined by low annual precipitation, under about 250 mm of water equivalent. Inland Antarctica receives far less, and at roughly 14 million km² the continent exceeds the Sahara (about 9 million km²) as the largest desert."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "koala_fingerprints",
+   "category": "animals",
+   "scenes": [
+    "friends",
+    "kids",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "koala",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "コアラにも ゆびもよう",
+       "body": "コアラの ゆびにも、にんげんみたいな もようが あるよ。"
+      },
+      "junior": {
+       "title": "コアラの ゆびもよう",
+       "body": "コアラの ゆびさきには、にんげんと そっくりな もようが あります。"
+      },
+      "teen": {
+       "title": "コアラにも人間そっくりの指紋がある",
+       "body": "コアラの指先には、人間とよく似た指紋があります。木をつかむのに役立ち、種類の違う動物なのによく似ているのは珍しいことです。"
+      },
+      "adult": {
+       "title": "コアラの指紋はヒトと見分けにくいほど似ている",
+       "body": "コアラの指紋は、顕微鏡で見てもヒトのものと区別しにくいほどよく似ています。霊長類とは系統が離れており、収斂進化の例とされます。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "Koalas have fingerprints",
+       "body": "Koalas have fingerprints just like people!"
+      },
+      "junior": {
+       "title": "Koalas have fingerprints",
+       "body": "A koala's fingertips have swirly patterns that look very much like yours."
+      },
+      "teen": {
+       "title": "Koalas have fingerprints like humans",
+       "body": "Koalas have fingerprints that look a lot like human ones. They help them grip branches, and it's unusual for such different animals to look so alike."
+      },
+      "adult": {
+       "title": "Koala fingerprints resemble human fingerprints",
+       "body": "Koala fingerprints are so similar to human ones that they can be hard to tell apart even under a microscope. Koalas are only distantly related to primates, which makes this a classic case of convergent evolution."
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "japan_islands",
+   "category": "geography",
+   "scenes": [
+    "friends",
+    "learning"
+   ],
+   "minAgeBand": "kids",
+   "sensitivity": "none",
+   "regions": [],
+   "illustration": "japan",
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "にほんの しまは いくつ？",
+       "body": "にほんには、1まん4せんいじょうの しまが あるんだよ。"
+      },
+      "junior": {
+       "title": "にほんには しまが たくさん ある",
+       "body": "にほんは しまの くにです。ほんしゅうや きゅうしゅうの ほかに、1まん4せんいじょうの しまが あります。"
+      },
+      "teen": {
+       "title": "日本には1万4千以上の島がある",
+       "body": "日本は島国で、本州・北海道・四国・九州のほかにも多くの島があります。国土地理院の2023年の発表では、島の数は14,125です。"
+      },
+      "adult": {
+       "title": "日本の島の数は14,125",
+       "body": "国土地理院は2023年、海岸線の長さが100m以上の島を数え直し、日本の島の数を14,125と発表しました。それ以前は6,852とされていましたが、数え方を変えて大幅に増えました。"
+      }
+     }
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "levels": {
+      "kids": {
+       "title": "How many islands in Japan?",
+       "body": "Japan has more than 14,000 islands!"
+      },
+      "junior": {
+       "title": "Japan has lots of islands",
+       "body": "Japan is a country of islands. Besides the big ones, it has more than 14,000 islands in all."
+      },
+      "teen": {
+       "title": "Japan has more than 14,000 islands",
+       "body": "Japan is an island nation. Besides Honshu, Hokkaido, Shikoku and Kyushu, there are many more. A 2023 count by the country's geographic survey put the number at 14,125."
+      },
+      "adult": {
+       "title": "Japan has 14,125 islands by the 2023 count",
+       "body": "In 2023, the Geospatial Information Authority of Japan recounted islands with a coastline of at least 100 m and announced a total of 14,125, up from the 6,852 reported earlier, mainly because the counting method changed."
+      }
+     }
+    }
+   }
+  }
+ ]
+}
