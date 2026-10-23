@@ -89,6 +89,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
 
     final quiz = ownBand.isChild ? repo.quizFor(item.id) : null;
     final why = ref.watch(whyStepProvider(item.id));
+    final project = ownBand == AgeBand.kids ? null : ref.watch(projectForFactProvider(item.id));
 
     // 関連する雑学（この年代・言語・国で表示できるものだけ）。
     final region = ref.watch(regionProvider);
@@ -326,6 +327,13 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                             .showSnackBar(SnackBar(content: Text(l.copied)));
                       }
                     },
+                  ),
+                if (project != null)
+                  FilledButton.tonalIcon(
+                    key: const Key('open_project_from_fact'),
+                    icon: const Icon(Icons.science_outlined),
+                    label: Text(l.projectFromFact),
+                    onPressed: () => context.push('/project/${project.id}'),
                   ),
                 if (quiz != null)
                   FilledButton.icon(

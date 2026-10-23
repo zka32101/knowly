@@ -589,4 +589,45 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get listenOpen => 'ながら聞き';
+
+  @override
+  String get projectsTitle => '自由研究ネタ帳';
+
+  @override
+  String projectMinutes(int minutes) {
+    return '$minutes分くらい';
+  }
+
+  @override
+  String get projectNeedsAdult => 'おとなといっしょに';
+
+  @override
+  String get projectDifficulty => 'むずかしさ';
+
+  @override
+  String get projectMaterials => 'ようい するもの';
+
+  @override
+  String get projectSteps => 'やりかた';
+
+  @override
+  String get projectObserve => 'かんさつ ポイント';
+
+  @override
+  String get projectSafety => 'あんぜんに ちゅうい';
+
+  @override
+  String get projectFromFact => '自由研究にしてみよう';
+
+  @override
+  String get projectsEmpty => 'いま表示できる自由研究がありません';
+
+  @override
+  String get projectsSummer => '夏休みにぴったり';
+
+  @override
+  String get quickLinks => 'もっと見る';
+
+  @override
+  String get projectsIntro => '雑学から、おうちでできる実験・観察へ。';
 }

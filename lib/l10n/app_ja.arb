@@ -287,5 +287,25 @@
   "listenFinished": "おしまい。もういちど聞くには再生を押してください",
   "listenNote": "画面を開いたまま使います（通勤・料理中など）。",
   "listenEmpty": "いま聞ける雑学がありません",
-  "listenOpen": "ながら聞き"
+  "listenOpen": "ながら聞き",
+  "projectsTitle": "自由研究ネタ帳",
+  "projectMinutes": "{minutes}分くらい",
+  "projectNeedsAdult": "おとなといっしょに",
+  "projectDifficulty": "むずかしさ",
+  "projectMaterials": "ようい するもの",
+  "projectSteps": "やりかた",
+  "projectObserve": "かんさつ ポイント",
+  "projectSafety": "あんぜんに ちゅうい",
+  "projectFromFact": "自由研究にしてみよう",
+  "projectsEmpty": "いま表示できる自由研究がありません",
+  "projectsSummer": "夏休みにぴったり",
+  "quickLinks": "もっと見る",
+  "projectsIntro": "雑学から、おうちでできる実験・観察へ。",
+  "@projectMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
 }

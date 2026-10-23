@@ -433,4 +433,100 @@ void main() {
       }
     });
   });
+
+  group('自由研究ネタ帳（projects.json）', () {
+    final doc = jsonDecode(File('assets/trivia/projects.json').readAsStringSync())
+        as Map<String, dynamic>;
+    final projects = (doc['items'] as List).cast<Map<String, dynamic>>();
+    final factIds = {for (final t in items) t.id};
+    final markup = RegExp(r'\{([^|{}]+)\|([^|{}]+)\}');
+
+    Map<String, dynamic> ja(Map<String, dynamic> p) => p['translations']['ja'] as Map<String, dynamic>;
+    Map<String, dynamic> en(Map<String, dynamic> p) => p['translations']['en'] as Map<String, dynamic>;
+    List<String> jaTexts(Map<String, dynamic> p) => [
+          ja(p)['title'] as String,
+          ja(p)['summary'] as String,
+          ja(p)['observe'] as String,
+          ja(p)['safety'] as String,
+          ...(ja(p)['materials'] as List).cast<String>(),
+          ...(ja(p)['steps'] as List).cast<String>(),
+        ];
+
+    test('十分な数があり、IDが一意で、つなぐ雑学が実在する', () {
+      expect(projects.length, greaterThanOrEqualTo(10));
+      expect(projects.map((p) => p['id']).toSet().length, projects.length);
+      for (final p in projects) {
+        expect(factIds, contains(p['factId']), reason: '${p['id']}');
+        expect(p['difficulty'], inInclusiveRange(1, 3), reason: '${p['id']}');
+        expect(p['minutes'] as int, greaterThan(0), reason: '${p['id']}');
+        expect(p['needsAdult'], isA<bool>(), reason: '${p['id']}');
+      }
+    });
+
+    test('材料・手順・観察・安全上の注意がそろっている（日英）', () {
+      for (final p in projects) {
+        for (final t in [ja(p), en(p)]) {
+          expect((t['materials'] as List).length, greaterThanOrEqualTo(2), reason: '${p['id']}');
+          expect((t['steps'] as List).length, greaterThanOrEqualTo(3), reason: '${p['id']}');
+          expect((t['observe'] as String).trim(), isNotEmpty, reason: '${p['id']}');
+          expect((t['safety'] as String).trim(), isNotEmpty, reason: '${p['id']}');
+        }
+      }
+    });
+
+    test('日本語は {漢字|よみ} の記法だけで漢字を書く（読みはひらがな）', () {
+      for (final p in projects) {
+        for (final x in jaTexts(p)) {
+          final rest = x.replaceAll(markup, '');
+          expect(_kanji.hasMatch(rest), isFalse, reason: '${p['id']}: $x');
+          expect(rest.contains('{') || rest.contains('}') || rest.contains('|'), isFalse,
+              reason: '${p['id']}: $x');
+          for (final m in markup.allMatches(x)) {
+            expect(RegExp(r'^[ぁ-んー]+$').hasMatch(m.group(2)!), isTrue,
+                reason: '${p['id']}: ${m.group(0)}');
+          }
+        }
+      }
+    });
+
+    test('Junior 向けに直すと、漢字はすべて読みつき', () {
+      final note = RegExp(r'[\u4E00-\u9FFF々]+（[ぁ-んー]+）');
+      for (final p in projects) {
+        for (final x in jaTexts(p)) {
+          final junior = x.replaceAllMapped(markup, (m) => '${m.group(1)}（${m.group(2)}）');
+          expect(_kanji.hasMatch(junior.replaceAll(note, '')), isFalse, reason: '${p['id']}: $junior');
+        }
+      }
+    });
+
+    test('刃物・熱・あなあけなどの危険なことばがあるテーマは、おとなといっしょ', () {
+      const danger = ['包丁', 'ほうちょう', '火', 'コンロ', '針', 'つまようじ', '熱湯', 'カッター', '風船', 'ふうせん', 'ナイフ', '切って', '切る'];
+      for (final p in projects) {
+        // 「方位磁針」「秒針」は、危険なものではないので除いて調べる。
+        final all = [...jaTexts(p).map((x) => x.replaceAllMapped(markup, (m) => m.group(1)!))]
+            .join()
+            .replaceAll('方位磁針', '')
+            .replaceAll('秒針', '');
+        if (danger.any(all.contains)) {
+          expect(p['needsAdult'], isTrue, reason: '${p['id']} は危険なことばを含む');
+        }
+      }
+    });
+
+    test('不適切なことばがない（日英）', () {
+      const bad = ['殺', '死', '戦争', '宗教', '性的', '酒', '賭', '爆発', '毒', '薬品'];
+      final enBad = RegExp(r'\b(kill|death|dead|war|weapon|gun|bomb|explode|explosion|poison|alcohol|fire|flame)\b', caseSensitive: false);
+      for (final p in projects) {
+        for (final x in jaTexts(p).map((x) => x.replaceAllMapped(markup, (m) => m.group(1)!))) {
+          for (final w in bad) {
+            expect(x.contains(w), isFalse, reason: '${p['id']}: $x');
+          }
+        }
+        for (final x in [en(p)['title'], en(p)['summary'], en(p)['observe'], en(p)['safety'],
+            ...(en(p)['materials'] as List), ...(en(p)['steps'] as List)]) {
+          expect(enBad.hasMatch(x as String), isFalse, reason: '${p['id']}: $x');
+        }
+      }
+    });
+  });
 }

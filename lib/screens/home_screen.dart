@@ -29,25 +29,22 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l.appName),
         actions: [
-          if (band.isTeenOrAdult)
+          // Kids は画面の上に「今日は何の日」「ほんと？うそ？」を置く（一覧がないため）。
+          // それ以外は、ホームの「クイックリンク」にまとめる。
+          if (band == AgeBand.kids) ...[
             IconButton(
-              key: const Key('open_listen'),
-              tooltip: l.listenOpen,
-              icon: const Icon(Icons.headphones_outlined),
-              onPressed: () => context.push('/listen'),
+              key: const Key('open_today'),
+              tooltip: l.todayHome,
+              icon: const Icon(Icons.event_outlined),
+              onPressed: () => context.push('/today'),
             ),
-          IconButton(
-            key: const Key('open_today'),
-            tooltip: l.todayHome,
-            icon: const Icon(Icons.event_outlined),
-            onPressed: () => context.push('/today'),
-          ),
-          IconButton(
-            key: const Key('open_myths'),
-            tooltip: l.mythsTitle,
-            icon: const Icon(Icons.fact_check_outlined),
-            onPressed: () => context.push('/myths'),
-          ),
+            IconButton(
+              key: const Key('open_myths'),
+              tooltip: l.mythsTitle,
+              icon: const Icon(Icons.fact_check_outlined),
+              onPressed: () => context.push('/myths'),
+            ),
+          ],
           if (band != AgeBand.kids)
             IconButton(
               key: const Key('open_library'),
@@ -261,6 +258,7 @@ class _FeedHome extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
+        const _QuickLinks(),
         if (streak != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
@@ -603,6 +601,41 @@ class _TodayBanner extends ConsumerWidget {
         subtitle: more > 0 ? Text('+$more') : null,
         trailing: const Icon(Icons.chevron_right),
         onTap: () => context.push('/today'),
+      ),
+    );
+  }
+}
+
+/// クイックリンク: 今日は何の日 / ほんと？うそ？ / ながら聞き（Teen・Adult）/ 自由研究ネタ帳。
+class _QuickLinks extends ConsumerWidget {
+  const _QuickLinks();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
+    final hasProjects = ref.watch(projectsProvider).isNotEmpty;
+
+    Widget chip(Key key, IconData icon, String label, String route) => ActionChip(
+          key: key,
+          avatar: Icon(icon, size: 18),
+          label: Text(label),
+          onPressed: () => context.push(route),
+        );
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Wrap(
+        spacing: 8,
+        runSpacing: 4,
+        children: [
+          chip(const Key('open_today'), Icons.event_outlined, l.todayHome, '/today'),
+          chip(const Key('open_myths'), Icons.fact_check_outlined, l.mythsTitle, '/myths'),
+          if (band.isTeenOrAdult)
+            chip(const Key('open_listen'), Icons.headphones_outlined, l.listenOpen, '/listen'),
+          if (hasProjects)
+            chip(const Key('open_projects'), Icons.science_outlined, l.projectsTitle, '/projects'),
+        ],
       ),
     );
   }

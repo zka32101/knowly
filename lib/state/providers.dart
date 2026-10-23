@@ -9,6 +9,7 @@ import '../logic/timing.dart';
 import '../models/age_band.dart';
 import '../models/calendar_event.dart';
 import '../models/myth.dart';
+import '../models/project.dart';
 import '../models/trivia.dart';
 import '../services/entitlement.dart';
 import 'settings.dart';
@@ -297,4 +298,25 @@ final upcomingEventsProvider = Provider<List<DayEvent>>((ref) {
     for (var i = 1; i <= 14; i++)
       ...ref.watch(dayEventsProvider(DateTime(today.year, today.month, today.day + i))),
   ];
+});
+
+/// 自由研究のテーマ。この年代・言語・国で表示できるもの。
+final projectsProvider = Provider<List<Project>>((ref) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null) return const [];
+  final region = ref.watch(regionProvider);
+  return ref.watch(triviaRepositoryProvider).eligibleProjects(
+        band,
+        ref.watch(contentLanguageProvider),
+        region: region.code,
+        anyRegion: region.any,
+      );
+});
+
+/// ある雑学につながる自由研究（なければ null）。
+final projectForFactProvider = Provider.family<Project?, String>((ref, factId) {
+  for (final p in ref.watch(projectsProvider)) {
+    if (p.factId == factId) return p;
+  }
+  return null;
 });

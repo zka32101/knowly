@@ -12,6 +12,7 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
+import 'screens/projects_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/today_screen.dart';
@@ -40,6 +41,11 @@ final routerProvider = Provider<GoRouter>((ref) {
           triviaId: state.pathParameters['id']!,
           chain: int.tryParse(state.uri.queryParameters['chain'] ?? '') ?? 0,
         ),
+      ),
+      GoRoute(path: '/projects', builder: (_, _) => const ProjectsScreen()),
+      GoRoute(
+        path: '/project/:id',
+        builder: (_, state) => ProjectDetailScreen(projectId: state.pathParameters['id']!),
       ),
       GoRoute(path: '/listen', builder: (_, _) => const ListenScreen()),
       GoRoute(path: '/today', builder: (_, _) => const TodayScreen()),

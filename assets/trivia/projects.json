@@ -1,0 +1,823 @@
+{
+ "schemaVersion": 1,
+ "contentVersion": "2026.10.23",
+ "updatedAt": "2026-10-23",
+ "items": [
+  {
+   "id": "ice_float",
+   "factId": "ice_floats",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 30,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "{氷|こおり}は{水|みず}にうくのはなぜ？",
+     "summary": "{氷|こおり}を{水|みず}にうかべて、とけたときの{水|みず}のたかさをしらべよう。",
+     "materials": [
+      "{透明|とうめい}なコップ",
+      "{水|みず}",
+      "{氷|こおり}",
+      "{油性|ゆせい}ペン",
+      "じょうぎ"
+     ],
+     "steps": [
+      "コップに{水|みず}を{入|い}れて、{水|みず}の{面|めん}のたかさにペンで{印|しるし}をつける。",
+      "{氷|こおり}をうかべて、{氷|こおり}のどのくらいが{水|みず}のうえに{出|で}ているかを{見|み}る。",
+      "{氷|こおり}がとけたら、{水|みず}の{面|めん}が{印|しるし}とくらべてどうなったかをしらべる。",
+      "{予想|よそう}とくらべて、わかったことをノートに{書|か}く。"
+     ],
+     "observe": "{氷|こおり}はどのくらい{水|みず}のうえに{出|で}ていた？ とけたあと、{水|みず}の{面|めん}のたかさはかわった？",
+     "safety": "ガラスのコップはわれやすいので、プラスチックのコップをつかうとあんしんです。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Why does ice float on water?",
+     "summary": "Float ice in water and watch the water level as it melts.",
+     "materials": [
+      "A clear cup",
+      "Water",
+      "Ice cubes",
+      "A marker",
+      "A ruler"
+     ],
+     "steps": [
+      "Fill the cup with water and mark the water level with the marker.",
+      "Add an ice cube and see how much of it sticks out above the water.",
+      "When the ice has melted, compare the water level with your mark.",
+      "Compare with your guess and write what you found."
+     ],
+     "observe": "How much of the ice stuck out of the water? Did the water level change after it melted?",
+     "safety": "Glass cups can break. A plastic cup is safer."
+    }
+   }
+  },
+  {
+   "id": "fruit_float",
+   "factId": "apple_floats",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 30,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "うくくだもの、しずむくだもの",
+     "summary": "いろいろなくだものを{水|みず}に{入|い}れて、うくかしずむかをしらべよう。",
+     "materials": [
+      "おおきなボウル",
+      "{水|みず}",
+      "りんご",
+      "みかん",
+      "ミニトマト",
+      "ぶどう",
+      "ノート"
+     ],
+     "steps": [
+      "ボウルに{水|みず}をたっぷり{入|い}れる。",
+      "くだものごとに、うくかしずむかを{先|さき}に{予想|よそう}してノートに{書|か}く。",
+      "ひとつずつ{水|みず}に{入|い}れて、けっかを{書|か}く。",
+      "{皮|かわ}をむくとけっかがかわるかも、ためしてみよう。"
+     ],
+     "observe": "{予想|よそう}はあたった？ うくくだものには、どんなとくちょうがある？",
+     "safety": "くだものは、{実験|じっけん}のあとによくあらってから{食|た}べよう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Fruits that float, fruits that sink",
+     "summary": "Test which fruits float in water.",
+     "materials": [
+      "A big bowl",
+      "Water",
+      "An apple",
+      "A mandarin orange",
+      "A cherry tomato",
+      "Grapes",
+      "A notebook"
+     ],
+     "steps": [
+      "Fill the bowl with water.",
+      "For each fruit, write down whether you think it will float or sink.",
+      "Put the fruits into the water one at a time and record what happens.",
+      "Try again after peeling and see if the result changes."
+     ],
+     "observe": "Were your guesses right? What do the floating fruits have in common?",
+     "safety": "Wash the fruit well before eating it."
+    }
+   }
+  },
+  {
+   "id": "foil_boat",
+   "factId": "steel_ship_floats",
+   "minAgeBand": "junior",
+   "difficulty": 2,
+   "minutes": 45,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "アルミホイルのふねをつくろう",
+     "summary": "かたちをかえて、いちばんたくさんのせられるふねをさがそう。",
+     "materials": [
+      "アルミホイル",
+      "{洗面器|せんめんき}や{大|おお}きなたらい",
+      "{水|みず}",
+      "{1円玉|いちえんだま}（おもり）",
+      "じょうぎ"
+     ],
+     "steps": [
+      "おなじ{大|おお}きさのアルミホイルを3まい{用意|ようい}する。",
+      "1まいはボールのようにまるめ、1まいは{四角|しかく}い{箱|はこ}のかたち、1まいはお{皿|さら}のかたちにする。",
+      "{水|みず}にうかべて、うくかどうかをたしかめる。",
+      "うくふねに{1円玉|いちえんだま}をそっとのせて、しずむまでに{何|なん}このせられたかをかぞえる。"
+     ],
+     "observe": "どのかたちがいちばんたくさんのせられた？ どうしてだと{思|おも}う？",
+     "safety": "{水|みず}をこぼしたらすぐにふこう。{1円玉|いちえんだま}は{口|くち}に{入|い}れないでね。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Build an aluminum foil boat",
+     "summary": "Change the shape and find the boat that holds the most.",
+     "materials": [
+      "Aluminum foil",
+      "A basin or tub",
+      "Water",
+      "1-yen coins (or small weights)",
+      "A ruler"
+     ],
+     "steps": [
+      "Prepare three pieces of foil of the same size.",
+      "Crumple one into a ball, fold one into a box, and shape one like a dish.",
+      "Place them on the water and check which float.",
+      "Gently add coins to each floating boat and count how many it holds before it sinks."
+     ],
+     "observe": "Which shape held the most coins? Why do you think so?",
+     "safety": "Wipe up spills right away. Keep coins out of your mouth."
+    }
+   }
+  },
+  {
+   "id": "make_rainbow",
+   "factId": "rainbow_full_circle",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 20,
+   "needsAdult": false,
+   "seasons": [
+    "summer"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "にじをつくってみよう",
+     "summary": "{晴|は}れた{日|ひ}に、みずのつぶでにじをつくろう。",
+     "materials": [
+      "{霧吹|きりふ}き",
+      "{水|みず}",
+      "{晴|は}れた{日|ひ}の{太陽|たいよう}"
+     ],
+     "steps": [
+      "{太陽|たいよう}をせなかにして{立|た}つ。",
+      "{霧吹|きりふ}きで、{前|まえ}のほうへ{細|こま}かい{水|みず}をふきかける。",
+      "{霧|きり}のなかににじが{見|み}えるまで、{立|た}つばしょをかえてみる。",
+      "にじのかたちや{色|いろ}のならびをスケッチする。"
+     ],
+     "observe": "にじの{色|いろ}はどんなじゅんばんでならんでいた？ にじのまんなかはどのほうこう？",
+     "safety": "{太陽|たいよう}をちょくせつ{見|み}てはいけません。ぜったいに{目|め}をいためます。{暑|あつ}いひは{水分|すいぶん}をとろう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Make a rainbow",
+     "summary": "Make a rainbow from tiny water drops on a sunny day.",
+     "materials": [
+      "A spray bottle",
+      "Water",
+      "A sunny day"
+     ],
+     "steps": [
+      "Stand with the Sun behind you.",
+      "Spray a fine mist of water in front of you.",
+      "Move around until a rainbow appears in the mist.",
+      "Sketch the shape and the order of the colors."
+     ],
+     "observe": "In what order were the colors? Where was the center of the rainbow?",
+     "safety": "Never look straight at the Sun; it can hurt your eyes. Drink water on hot days."
+    }
+   }
+  },
+  {
+   "id": "string_phone",
+   "factId": "no_sound_in_space",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 30,
+   "needsAdult": true,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "{糸電話|いとでんわ}で{音|おと}のふしぎ",
+     "summary": "{音|おと}は「ふるえ」でつたわることを、{糸電話|いとでんわ}でたしかめよう。",
+     "materials": [
+      "{紙|かみ}コップ2こ",
+      "{糸|いと}（3〜5メートル）",
+      "つまようじ",
+      "セロハンテープ"
+     ],
+     "steps": [
+      "おとなに、{紙|かみ}コップのそこにつまようじで{小|ちい}さなあなをあけてもらう。",
+      "{糸|いと}をあなにとおして、{中|なか}でむすび{目|め}をつくる。",
+      "ふたりでコップをもち、{糸|いと}をピンとはって、ひとりが{話|はな}し、ひとりが{聞|き}く。",
+      "{糸|いと}をゆるめたり、{指|ゆび}でつまんだりして、{聞|き}こえかたをくらべる。"
+     ],
+     "observe": "{糸|いと}をゆるめるとどうなった？ つまむと{音|おと}はどうなった？",
+     "safety": "あなあけは、かならずおとなにやってもらってください。つまようじはさきがとがっています。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "A string phone and the mystery of sound",
+     "summary": "Use a string phone to see that sound travels as vibrations.",
+     "materials": [
+      "Two paper cups",
+      "String (3-5 meters)",
+      "A toothpick",
+      "Tape"
+     ],
+     "steps": [
+      "Ask an adult to poke a small hole in the bottom of each cup with the toothpick.",
+      "Thread the string through the holes and tie a knot inside each cup.",
+      "Hold the cups with the string pulled tight; one person talks while the other listens.",
+      "Loosen the string or pinch it with your fingers and compare what you hear."
+     ],
+     "observe": "What happened when the string went loose? What happened when you pinched it?",
+     "safety": "Always have an adult make the holes. The toothpick is sharp."
+    }
+   }
+  },
+  {
+   "id": "ant_watch",
+   "factId": "ant_strong",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 40,
+   "needsAdult": true,
+   "seasons": [
+    "summer"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "アリのぎょうれつをかんさつ",
+     "summary": "さとうにあつまるアリのかずを、じかんごとにかぞえよう。",
+     "materials": [
+      "さとう（ひとつまみ）",
+      "{虫|むし}めがね",
+      "ノート",
+      "{時計|とけい}"
+     ],
+     "steps": [
+      "おとなといっしょに、{庭|にわ}やこうえんでアリがあるいているばしょをさがす。",
+      "{少|すこ}しはなれたところに、さとうをひとつまみおく。",
+      "{5分|ごふん}ごとに、さとうのまわりのアリのかずをかぞえてノートに{書|か}く。",
+      "かぞえたかずをぼうグラフにして、{気|き}づいたことを{書|か}く。"
+     ],
+     "observe": "アリはどんなふうに{仲間|なかま}にしらせている？ かずはじかんとともにどうかわった？",
+     "safety": "アリにはさわらない、すをこわさない。かまれることもあるので、おとなといっしょに。おわったらてをあらおう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Watch an ant line",
+     "summary": "Count the ants that gather around sugar over time.",
+     "materials": [
+      "A pinch of sugar",
+      "A magnifying glass",
+      "A notebook",
+      "A clock"
+     ],
+     "steps": [
+      "With an adult, find a place outdoors where ants are walking.",
+      "Put a pinch of sugar a little way from them.",
+      "Every 5 minutes, count the ants near the sugar and write it down.",
+      "Make a bar graph of your counts and write what you noticed."
+     ],
+     "observe": "How do ants tell their friends? How did the number change over time?",
+     "safety": "Do not touch the ants or damage their nest. Some bite, so go with an adult. Wash your hands afterwards."
+    }
+   }
+  },
+  {
+   "id": "static_spark",
+   "factId": "lightning_hotter_than_sun",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 20,
+   "needsAdult": true,
+   "seasons": [
+    "summer"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "せいでんきで「ちいさなかみなり」",
+     "summary": "ふうせんをこすって、ぱちっとするせいでんきをためしてみよう。",
+     "materials": [
+      "ふうせん",
+      "ウールのセーターやかみのけ",
+      "{金属|きんぞく}のドアノブ"
+     ],
+     "steps": [
+      "おとなにふうせんをふくらませてもらう。",
+      "ふうせんをウールやかみのけでなんどもこする。",
+      "かみのけにちかづけて、かみのけがひっぱられるようすを{見|み}る。",
+      "{金属|きんぞく}のドアノブにそっとちかづけて、ぱちっとなるか{試|ため}す。"
+     ],
+     "observe": "どんなときにぱちっとなりやすい？ {乾燥|かんそう}したふゆのほうがおきやすいのはなぜ？",
+     "safety": "ふうせんは、ちいさなこが{口|くち}に{入|い}れるとあぶないので、おとなといっしょに。われたかけらもすぐにかたづけよう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "A tiny lightning bolt from static electricity",
+     "summary": "Rub a balloon and try out static electricity.",
+     "materials": [
+      "A balloon",
+      "A wool sweater or your hair",
+      "A metal doorknob"
+     ],
+     "steps": [
+      "Ask an adult to inflate the balloon.",
+      "Rub the balloon on wool or your hair many times.",
+      "Hold it near your hair and watch it pull on your hair.",
+      "Bring it slowly near a metal doorknob and see if it snaps."
+     ],
+     "observe": "When does it snap most easily? Why is it easier in dry winter air?",
+     "safety": "Balloons are a choking risk for little children, so use them with an adult. Pick up broken pieces right away."
+    }
+   }
+  },
+  {
+   "id": "strawberry_count",
+   "factId": "strawberry_200_seeds",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 20,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "いちごのつぶつぶをかぞえよう",
+     "summary": "いちごのおもてのつぶつぶ（ほんとうの{実|み}）が{何|なん}こあるかしらべよう。",
+     "materials": [
+      "いちご3こ",
+      "ルーペ",
+      "{綿棒|めんぼう}",
+      "ノート"
+     ],
+     "steps": [
+      "{大|おお}きさのちがういちごを3こえらぶ。",
+      "{綿棒|めんぼう}でかるくさわりながら、つぶつぶを{数|かぞ}える。（かずえやすいように{4分|よんぶん}の1ずつ）",
+      "3このけっかをノートに{書|か}いてくらべる。",
+      "{大|おお}きさとつぶのかずのかんけいを{考|かんが}える。"
+     ],
+     "observe": "{大|おお}きいいちごほどつぶのかずは{多|おお}かった？ つぶつぶは、どうしてそとがわについているのだろう？",
+     "safety": "いちごアレルギーのひとはさわらないでね。おわったらよくてをあらい、いちごはあらってから{食|た}べよう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Count the dots on a strawberry",
+     "summary": "Find out how many true fruits (the dots) a strawberry has.",
+     "materials": [
+      "Three strawberries",
+      "A magnifying glass",
+      "A cotton swab",
+      "A notebook"
+     ],
+     "steps": [
+      "Choose three strawberries of different sizes.",
+      "Count the dots, touching them lightly with a cotton swab (count in quarters to make it easy).",
+      "Write the results for all three and compare them.",
+      "Think about how size and number of dots are related."
+     ],
+     "observe": "Did bigger strawberries have more dots? Why might the dots be on the outside?",
+     "safety": "Do not handle them if you are allergic to strawberries. Wash your hands, and wash the fruit before eating."
+    }
+   }
+  },
+  {
+   "id": "moon_diary",
+   "factId": "moon_moving_away",
+   "minAgeBand": "junior",
+   "difficulty": 2,
+   "minutes": 5,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "つきのかたちをまいにちきろく",
+     "summary": "{1か月|いっかげつ}、つきのかたちとみえるばしょをきろくしよう。",
+     "materials": [
+      "ノート",
+      "えんぴつ",
+      "{方位磁針|ほういじしん}（あれば）"
+     ],
+     "steps": [
+      "まいばん{同|おな}じじかんに、つきをさがす。",
+      "つきのかたちをスケッチして、{日|ひ}づけとじかん、みえるほうがくを{書|か}く。",
+      "{曇|くも}りやみえないひもそのままきろくする。",
+      "{1か月|いっかげつ}つづけて、かたちがかわるじゅんばんをならべてみる。"
+     ],
+     "observe": "つきのかたちはどんなじゅんばんでかわった？ みえるじかんやばしょはどうかわった？",
+     "safety": "よるにそとにでるときは、おとなといっしょに。{道|みち}や{車|くるま}にちゅういしよう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Keep a Moon diary",
+     "summary": "Record the shape and position of the Moon for a month.",
+     "materials": [
+      "A notebook",
+      "A pencil",
+      "A compass (if you have one)"
+     ],
+     "steps": [
+      "Look for the Moon at the same time each night.",
+      "Sketch its shape and write the date, time and the direction you see it.",
+      "Record cloudy or invisible nights as they are.",
+      "After a month, arrange the sketches in order of the changing shapes."
+     ],
+     "observe": "In what order did the shape change? How did the time and place you saw it change?",
+     "safety": "Go outside at night with an adult, and watch out for roads and cars."
+    }
+   }
+  },
+  {
+   "id": "pulse_check",
+   "factId": "heart_100k",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 15,
+   "needsAdult": false,
+   "seasons": [],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "{脈|みゃく}をはかってみよう",
+     "summary": "じっとしているときと、うんどうしたあとの{脈|みゃく}をくらべよう。",
+     "materials": [
+      "{時計|とけい}（{秒針|びょうしん}つき）",
+      "ノート"
+     ],
+     "steps": [
+      "いすにすわって{1分|いっぷん}やすみ、{手首|てくび}の{内側|うちがわ}に{指|ゆび}をあてて{脈|みゃく}をさがす。",
+      "{1分間|いっぷんかん}{脈|みゃく}をかぞえて、ノートに{書|か}く。",
+      "その{場|ば}で、かるくジャンプを20かいする。",
+      "すぐにまた{1分間|いっぷんかん}{脈|みゃく}をかぞえて、くらべる。"
+     ],
+     "observe": "うんどうのあと、{脈|みゃく}はどのくらいふえた？ もとにもどるまで、どれくらいかかった？",
+     "safety": "きぶんがわるくなったらすぐにやめて{休|やす}もう。むりはしないこと。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Take your pulse",
+     "summary": "Compare your pulse at rest and after exercise.",
+     "materials": [
+      "A clock with a second hand",
+      "A notebook"
+     ],
+     "steps": [
+      "Sit and rest for one minute, then find your pulse on the inside of your wrist.",
+      "Count your pulse for one minute and write it down.",
+      "Do 20 light jumps on the spot.",
+      "Count your pulse for one minute again and compare."
+     ],
+     "observe": "How much did your pulse go up after exercise? How long did it take to settle?",
+     "safety": "Stop and rest if you feel unwell. Do not push yourself."
+    }
+   }
+  },
+  {
+   "id": "watermelon_juice",
+   "factId": "watermelon_92_water",
+   "minAgeBand": "junior",
+   "difficulty": 2,
+   "minutes": 40,
+   "needsAdult": true,
+   "seasons": [
+    "summer"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "すいかのしるをしぼってはかろう",
+     "summary": "すいかをしぼってしるのりょうをはかり、{水分|すいぶん}のおおさをかんじよう。",
+     "materials": [
+      "すいか（おとなに{切|き}ってもらう）",
+      "ざる",
+      "ボウル",
+      "はかり",
+      "{計量|けいりょう}カップ"
+     ],
+     "steps": [
+      "おとなにすいかを{切|き}ってもらい、{実|み}のぶぶんだけを100グラムはかる。",
+      "{実|み}をざるにいれて、スプーンやてでつぶしながらしるをボウルにあつめる。",
+      "しるを{計量|けいりょう}カップでいれて、{量|りょう}をよむ。",
+      "100グラムにたいして、しるが{何|なん}パーセントだったかをけいさんする。"
+     ],
+     "observe": "すいかのほとんどは{水|みず}といわれるのに、しるはどうしてそのぜんぶにならないのだろう？",
+     "safety": "すいかを{切|き}るのはかならずおとなにやってもらおう。たねはのどにつまらせないようにね。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Squeeze and measure watermelon juice",
+     "summary": "Squeeze watermelon, measure the juice and feel how watery it is.",
+     "materials": [
+      "Watermelon (cut by an adult)",
+      "A strainer",
+      "A bowl",
+      "A kitchen scale",
+      "A measuring cup"
+     ],
+     "steps": [
+      "Have an adult cut the melon, then weigh 100 grams of just the red flesh.",
+      "Put the flesh in the strainer and mash it so the juice drips into the bowl.",
+      "Pour the juice into the measuring cup and read the amount.",
+      "Work out what percent of the 100 grams was juice."
+     ],
+     "observe": "Watermelon is said to be mostly water. Why is the juice not the whole amount?",
+     "safety": "Always have an adult cut the melon. Be careful that seeds do not get stuck in your throat."
+    }
+   }
+  },
+  {
+   "id": "sun_shadow",
+   "factId": "sunlight_8_minutes",
+   "minAgeBand": "junior",
+   "difficulty": 1,
+   "minutes": 15,
+   "needsAdult": false,
+   "seasons": [
+    "summer"
+   ],
+   "status": "active",
+   "version": 1,
+   "createdAt": "2026-10-23",
+   "updatedAt": "2026-10-23",
+   "regions": [],
+   "excludeRegions": [],
+   "contentFlags": [],
+   "sources": [],
+   "verification": {
+    "status": "unverified",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "note": null
+   },
+   "translations": {
+    "ja": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "かげのうごきで{太陽|たいよう}をしらべよう",
+     "summary": "あさ・ひる・ゆうがたに、{棒|ぼう}のかげのむきとながさをはかろう。",
+     "materials": [
+      "{棒|ぼう}（30センチくらい）",
+      "{大|おお}きな{紙|かみ}やじめん",
+      "チョーク",
+      "じょうぎ"
+     ],
+     "steps": [
+      "{日|ひ}あたりのよいところに{棒|ぼう}をまっすぐたてる。",
+      "あさ・ひる・ゆうがたの3かい、かげのさきにチョークでしるしをつける。",
+      "それぞれ、かげのながさをじょうぎではかる。",
+      "かげのむきとながさがどうかわったかをノートにまとめる。"
+     ],
+     "observe": "かげはどのほうこうにうごいた？ いちばんかげがみじかいのはいつだった？",
+     "safety": "{太陽|たいよう}をちょくせつ{見|み}ない。{暑|あつ}いひはぼうしをかぶり、{水分|すいぶん}をとろう。"
+    },
+    "en": {
+     "reviewStatus": "draft",
+     "reviewedBy": null,
+     "reviewedAt": null,
+     "title": "Study the Sun with shadows",
+     "summary": "Measure the direction and length of a stick shadow in the morning, noon and evening.",
+     "materials": [
+      "A stick (about 30 cm)",
+      "A big sheet of paper or the ground",
+      "Chalk",
+      "A ruler"
+     ],
+     "steps": [
+      "Stand the stick upright in a sunny spot.",
+      "Three times (morning, noon, evening), mark the tip of the shadow with chalk.",
+      "Measure the length of each shadow with the ruler.",
+      "Write down how the direction and length changed."
+     ],
+     "observe": "Which way did the shadow move? When was the shadow shortest?",
+     "safety": "Never look straight at the Sun. Wear a hat and drink water on hot days."
+    }
+   }
+  }
+ ]
+}

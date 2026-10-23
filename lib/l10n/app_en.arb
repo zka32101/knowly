@@ -287,5 +287,25 @@
   "listenFinished": "That's all. Press play to listen again",
   "listenNote": "Keep the app open while listening (commuting, cooking...).",
   "listenEmpty": "No facts to listen to right now",
-  "listenOpen": "Listen mode"
+  "listenOpen": "Listen mode",
+  "projectsTitle": "Science project ideas",
+  "projectMinutes": "About {minutes} min",
+  "projectNeedsAdult": "With an adult",
+  "projectDifficulty": "Difficulty",
+  "projectMaterials": "What you need",
+  "projectSteps": "Steps",
+  "projectObserve": "What to notice",
+  "projectSafety": "Safety",
+  "projectFromFact": "Try it as a project",
+  "projectsEmpty": "No projects to show right now",
+  "projectsSummer": "Great for summer break",
+  "quickLinks": "More",
+  "projectsIntro": "From a fact to an experiment you can do at home.",
+  "@projectMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
 }

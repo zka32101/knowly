@@ -600,4 +600,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listenOpen => 'Listen mode';
+
+  @override
+  String get projectsTitle => 'Science project ideas';
+
+  @override
+  String projectMinutes(int minutes) {
+    return 'About $minutes min';
+  }
+
+  @override
+  String get projectNeedsAdult => 'With an adult';
+
+  @override
+  String get projectDifficulty => 'Difficulty';
+
+  @override
+  String get projectMaterials => 'What you need';
+
+  @override
+  String get projectSteps => 'Steps';
+
+  @override
+  String get projectObserve => 'What to notice';
+
+  @override
+  String get projectSafety => 'Safety';
+
+  @override
+  String get projectFromFact => 'Try it as a project';
+
+  @override
+  String get projectsEmpty => 'No projects to show right now';
+
+  @override
+  String get projectsSummer => 'Great for summer break';
+
+  @override
+  String get quickLinks => 'More';
+
+  @override
+  String get projectsIntro =>
+      'From a fact to an experiment you can do at home.';
 }

@@ -1201,6 +1201,84 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'ながら聞き'**
   String get listenOpen;
+
+  /// No description provided for @projectsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'自由研究ネタ帳'**
+  String get projectsTitle;
+
+  /// No description provided for @projectMinutes.
+  ///
+  /// In ja, this message translates to:
+  /// **'{minutes}分くらい'**
+  String projectMinutes(int minutes);
+
+  /// No description provided for @projectNeedsAdult.
+  ///
+  /// In ja, this message translates to:
+  /// **'おとなといっしょに'**
+  String get projectNeedsAdult;
+
+  /// No description provided for @projectDifficulty.
+  ///
+  /// In ja, this message translates to:
+  /// **'むずかしさ'**
+  String get projectDifficulty;
+
+  /// No description provided for @projectMaterials.
+  ///
+  /// In ja, this message translates to:
+  /// **'ようい するもの'**
+  String get projectMaterials;
+
+  /// No description provided for @projectSteps.
+  ///
+  /// In ja, this message translates to:
+  /// **'やりかた'**
+  String get projectSteps;
+
+  /// No description provided for @projectObserve.
+  ///
+  /// In ja, this message translates to:
+  /// **'かんさつ ポイント'**
+  String get projectObserve;
+
+  /// No description provided for @projectSafety.
+  ///
+  /// In ja, this message translates to:
+  /// **'あんぜんに ちゅうい'**
+  String get projectSafety;
+
+  /// No description provided for @projectFromFact.
+  ///
+  /// In ja, this message translates to:
+  /// **'自由研究にしてみよう'**
+  String get projectFromFact;
+
+  /// No description provided for @projectsEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま表示できる自由研究がありません'**
+  String get projectsEmpty;
+
+  /// No description provided for @projectsSummer.
+  ///
+  /// In ja, this message translates to:
+  /// **'夏休みにぴったり'**
+  String get projectsSummer;
+
+  /// No description provided for @quickLinks.
+  ///
+  /// In ja, this message translates to:
+  /// **'もっと見る'**
+  String get quickLinks;
+
+  /// No description provided for @projectsIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'雑学から、おうちでできる実験・観察へ。'**
+  String get projectsIntro;
 }
 
 class _AppLocalizationsDelegate

@@ -217,4 +217,43 @@ void main() {
       }
     });
   });
+
+  group('自由研究ネタ帳（projects.json）のメタデータ', () {
+    final pr = ((jsonDecode(File('assets/trivia/projects.json').readAsStringSync())
+        as Map<String, dynamic>)['items'] as List).cast<Map<String, dynamic>>();
+
+    test('必須項目・国タグ・季節の値', () {
+      final code = RegExp(r'^[A-Z]{2}$');
+      for (final p in pr) {
+        final id = p['id'] as String;
+        expect(['active', 'hidden', 'retired'], contains(p['status']), reason: id);
+        expect(['kids', 'junior', 'teen', 'adult'], contains(p['minAgeBand']), reason: id);
+        for (final r in [...(p['regions'] as List), ...(p['excludeRegions'] as List)]) {
+          expect(r, matches(code), reason: id);
+        }
+        for (final s in p['seasons'] as List) {
+          expect(['spring', 'summer', 'autumn', 'winter'], contains(s), reason: id);
+        }
+        for (final f in p['contentFlags'] as List) {
+          expect(validContentFlags, contains(f), reason: id);
+        }
+      }
+    });
+
+    test('reviewed / published にするには、出典・検証・レビューの記録が必要', () {
+      for (final p in pr) {
+        final id = p['id'] as String;
+        final v = p['verification'] as Map<String, dynamic>;
+        final tr = (p['translations'] as Map<String, dynamic>).cast<String, Map<String, dynamic>>();
+        for (final e in tr.entries) {
+          expect(['draft', 'reviewed', 'published'], contains(e.value['reviewStatus']), reason: id);
+          if (e.value['reviewStatus'] != 'draft') {
+            expect(v['status'], 'verified', reason: id);
+            expect(p['sources'] as List, isNotEmpty, reason: '$id: 出典');
+            expect(e.value['reviewedBy'], isNotNull, reason: '$id/${e.key}');
+          }
+        }
+      }
+    });
+  });
 }

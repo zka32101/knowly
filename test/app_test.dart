@@ -10,6 +10,7 @@ import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
+import 'package:knowly/models/project.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/models/why_link.dart';
@@ -111,6 +112,10 @@ TriviaRepository _repo() {
     events: ((jsonDecode(File('assets/trivia/calendar.json').readAsStringSync())
             as Map<String, dynamic>)['items'] as List)
         .map((e) => CalendarEvent.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    projects: ((jsonDecode(File('assets/trivia/projects.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => Project.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -748,6 +753,7 @@ void main() {
 
     testWidgets('関心の画面でジャンルとキーワードを登録・削除できる', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _scrollTo(tester, const Key('interests_register'));
       await tester.tap(find.byKey(const Key('interests_register')));
       await tester.pumpAndSettle();
 
@@ -1442,6 +1448,99 @@ void main() {
       final before = tts.stops;
       await _back(tester);
       expect(tts.stops, greaterThan(before));
+    });
+  });
+
+  group('自由研究ネタ帳', () {
+    Future<void> openProjects(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_projects')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('入口は Junior/Teen/Adult のクイックリンク。Kids にはない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      expect(find.byKey(const Key('open_projects')), findsNothing);
+      await tester.pumpWidget(const SizedBox());
+      for (final band in ['junior', 'teen', 'adult']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        expect(find.byKey(const Key('open_projects')), findsOneWidget, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('テーマの一覧に12件が出て、むずかしさ・時間・おとなバッジが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openProjects(tester);
+      expect(find.byKey(const Key('project_ice_float')), findsOneWidget);
+      await _scrollTo(tester, const Key('project_string_phone'));
+      expect(find.textContaining('おとなといっしょに'), findsWidgets);
+      await _scrollTo(tester, const Key('project_sun_shadow'));
+      expect(find.byKey(const Key('project_sun_shadow')), findsOneWidget);
+    });
+
+    testWidgets('Junior は「漢字（よみ）」の形で表示される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openProjects(tester);
+      await tester.tap(find.byKey(const Key('project_ice_float')));
+      await tester.pumpAndSettle();
+      expect(tester.widget<Text>(find.byKey(const Key('project_title'))).data,
+          '氷（こおり）は水（みず）にうくのはなぜ？');
+    });
+
+    testWidgets('Adult は漢字だけ（読みの記法は出ない）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openProjects(tester);
+      await tester.tap(find.byKey(const Key('project_ice_float')));
+      await tester.pumpAndSettle();
+      expect(tester.widget<Text>(find.byKey(const Key('project_title'))).data, '氷は水にうくのはなぜ？');
+      await _scrollTo(tester, const Key('project_step_0'));
+      final step = tester.widget<Text>(find.byKey(const Key('project_step_0'))).data!;
+      expect(step.contains('{'), isFalse);
+      expect(step.contains('（'), isFalse);
+    });
+
+    testWidgets('安全上の注意が出る。おとなが必要なテーマにはバッジが出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openProjects(tester);
+      await _scrollTo(tester, const Key('project_string_phone'));
+      await tester.tap(find.byKey(const Key('project_string_phone')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('project_safety')), findsOneWidget);
+      expect(find.byKey(const Key('project_adult_badge')), findsOneWidget);
+    });
+
+    testWidgets('おとな不要のテーマにはバッジが出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openProjects(tester);
+      await tester.tap(find.byKey(const Key('project_ice_float')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('project_adult_badge')), findsNothing);
+    });
+
+    testWidgets('雑学の詳細から自由研究に進める（つながる雑学だけ）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(routerProvider).push('/detail/ice_floats');
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('open_project_from_fact'));
+      await tester.tap(find.byKey(const Key('open_project_from_fact')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('project_title')), findsOneWidget);
+      await _back(tester);
+      // 自由研究がない雑学（はちみつ）には出ない
+      container.read(routerProvider).push('/detail/honey_never_spoils');
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('open_project_from_fact')), findsNothing);
+    });
+
+    testWidgets('英語の端末では英語の文章', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
+      await openProjects(tester);
+      await tester.tap(find.byKey(const Key('project_ice_float')));
+      await tester.pumpAndSettle();
+      expect(tester.widget<Text>(find.byKey(const Key('project_title'))).data,
+          'Why does ice float on water?');
     });
   });
 }
