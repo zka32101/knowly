@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
+import 'package:knowly/services/home_widget_service.dart';
 import 'package:knowly/services/share.dart';
 import 'package:knowly/widgets/quiz_play.dart';
 import 'package:knowly/models/age_band.dart';
@@ -67,6 +68,22 @@ class FakeTts implements TtsService {
 
   int stops = 0;
 }
+
+class FakeHomeWidget implements HomeWidgetService {
+  WidgetContent? last;
+  int updates = 0;
+  int clears = 0;
+  @override
+  Future<void> update(WidgetContent content) async {
+    last = content;
+    updates++;
+  }
+
+  @override
+  Future<void> clear() async => clears++;
+}
+
+FakeHomeWidget? _lastWidget;
 
 class FakeShare implements ShareService {
   Uint8List? png;
@@ -207,6 +224,7 @@ Future<FakeTts> _pump(
   ShareService? share,
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
+  final homeWidget = _lastWidget = FakeHomeWidget();
   SharedPreferences.setMockInitialValues(prefs);
   final sp = await SharedPreferences.getInstance();
   final tts = FakeTts();
@@ -221,6 +239,7 @@ Future<FakeTts> _pump(
       if (entitlement != null) entitlementServiceProvider.overrideWithValue(entitlement),
       ttsProvider.overrideWithValue(tts),
       notificationServiceProvider.overrideWithValue(notif),
+      homeWidgetServiceProvider.overrideWithValue(homeWidget),
     ],
     child: const KnowlyApp(),
   ));
@@ -2150,6 +2169,27 @@ void main() {
       await tester.tap(find.byKey(const Key('battle_true')));
       await tester.pumpAndSettle();
       expect(containerOf(tester).read(settingsProvider).quizAnswered, 1);
+    });
+  });
+
+  group('ホーム画面ウィジェット', () {
+    testWidgets('Adult: 今日から7日ぶんの雑学を書き込む', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final c = _lastWidget!.last!;
+      expect(c.days, hasLength(7));
+      expect(c.days.containsKey('2026-10-23'), isTrue);
+      expect(c.days['2026-10-23']!.title, isNotEmpty);
+      expect(c.appName, '雑学コレ！');
+      expect(_lastWidget!.clears, 0);
+    });
+
+    testWidgets('Kids/Junior: 何も書き込まず、中身を消す', (tester) async {
+      for (final band in ['kids', 'junior']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        expect(_lastWidget!.updates, 0, reason: band);
+        expect(_lastWidget!.clears, greaterThan(0), reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
     });
   });
 }
