@@ -9,6 +9,7 @@ import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
+import 'package:knowly/models/why_link.dart';
 import 'package:knowly/services/notifications.dart';
 import 'package:knowly/widgets/ja_wrap_text.dart';
 import 'package:knowly/services/tts.dart';
@@ -53,12 +54,17 @@ TriviaRepository _repo() {
       as Map<String, dynamic>;
   final quiz = jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())
       as Map<String, dynamic>;
+  final why = jsonDecode(File('assets/trivia/why_chains.json').readAsStringSync())
+      as Map<String, dynamic>;
   return TriviaRepository(
     (raw['items'] as List)
         .map((e) => Trivia.fromJson(e as Map<String, dynamic>))
         .toList(),
     quizzes: (quiz['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    whyLinks: (why['links'] as List)
+        .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -952,6 +958,91 @@ void main() {
       await tester.tap(find.byKey(Key('related_${first.related.first}')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('detail_title')), findsOneWidget);
+    });
+  });
+
+  group('なぜ？チェーン', () {
+    Future<void> openDetail(WidgetTester tester, String id) async {
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(routerProvider).push('/detail/$id');
+      await tester.pumpAndSettle();
+    }
+
+    String titleOf(WidgetTester tester) =>
+        tester.widget<WrapText>(find.byKey(const Key('detail_title'))).text;
+
+    testWidgets('詳細に「なぜ？」が出て、押すと次の雑学に進む', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openDetail(tester, 'ice_floats');
+      final before = titleOf(tester);
+      await _scrollTo(tester, const Key('why_card'));
+      expect(find.byKey(const Key('why_card')), findsOneWidget);
+      expect(find.text('では、リンゴが水に浮くのはなぜ？'), findsOneWidget);
+      await tester.tap(find.byKey(const Key('why_card')));
+      await tester.pumpAndSettle();
+      expect(titleOf(tester), isNot(before));
+      expect(titleOf(tester), contains('リンゴ'));
+    });
+
+    testWidgets('3回つなげると、ほめことばが出る（2回では出ない）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openDetail(tester, 'ice_floats'); // chain 0
+      for (var i = 1; i <= 3; i++) {
+        await _scrollTo(tester, const Key('why_card'));
+        await tester.tap(find.byKey(const Key('why_card')));
+        await tester.pumpAndSettle();
+        expect(find.byKey(const Key('why_cheer')), i >= 3 ? findsOneWidget : findsNothing,
+            reason: '$i回目');
+      }
+      expect(find.text('「なぜ？」を3回つづけたよ！すごい！'), findsOneWidget);
+    });
+
+    testWidgets('つづきがない雑学には「なぜ？」が出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openDetail(tester, 'honey_never_spoils');
+      expect(find.byKey(const Key('why_card')), findsNothing);
+    });
+
+    testWidgets('Junior の質問は、ひらがな（漢字なし）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openDetail(tester, 'ice_floats');
+      await _scrollTo(tester, const Key('why_card'));
+      final q = tester.widget<WrapText>(find.byKey(const Key('why_question'))).text;
+      expect(q, 'じゃあ、りんごは どうして うくの？');
+    });
+
+    testWidgets('次の雑学が国限定で表示できないとき、「なぜ？」は出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'US');
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      expect(container.read(whyStepProvider('shinkansen_1964')), isNull);
+    });
+
+    testWidgets('英語の端末では、質問も英語', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, deviceLanguage: 'en', deviceRegion: 'US');
+      await openDetail(tester, 'ice_floats');
+      await _scrollTo(tester, const Key('why_card'));
+      expect(find.text('Then why does an apple float?'), findsOneWidget);
+    });
+
+    testWidgets('Kids: 「なぜ？」で次の雑学に進み、「つぎへ」で元の並びに戻る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      // 「なぜ？」のある雑学が出るまで送る
+      var tries = 0;
+      while (find.byKey(const Key('kids_why')).evaluate().isEmpty && tries < 30) {
+        await tester.tap(find.byKey(const Key('kids_next')));
+        await tester.pumpAndSettle();
+        tries++;
+      }
+      expect(find.byKey(const Key('kids_why')), findsOneWidget, reason: '$tries 回送っても出ない');
+      final before = tester.widget<WrapText>(find.byKey(const Key('kids_title'))).text;
+      await tester.tap(find.byKey(const Key('kids_why')));
+      await tester.pumpAndSettle();
+      final after = tester.widget<WrapText>(find.byKey(const Key('kids_title'))).text;
+      expect(after, isNot(before));
+      await tester.tap(find.byKey(const Key('kids_next')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('why_cheer')), findsNothing);
     });
   });
 }

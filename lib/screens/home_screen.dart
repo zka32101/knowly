@@ -14,6 +14,7 @@ import '../widgets/ja_wrap_text.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
+import '../models/why_link.dart';
 import '../logic/timing.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -70,6 +71,10 @@ class _KidsHome extends ConsumerStatefulWidget {
 
 class _KidsHomeState extends ConsumerState<_KidsHome> {
   int _index = 0;
+
+  /// 「なぜ？」で別の雑学に移っているとき、その雑学。「つぎへ」で元の並びに戻る。
+  Trivia? _override;
+  int _whyCount = 0;
   late final TtsService _tts;
 
   @override
@@ -90,8 +95,9 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
     final feed = ref.watch(feedProvider);
     final resolve = ref.watch(levelResolverProvider);
     if (feed.isEmpty) return Center(child: Text(l.emptyFeed));
-    final item = feed[_index % feed.length];
+    final item = _override ?? feed[_index % feed.length];
     final level = resolve(item);
+    final why = ref.watch(whyStepProvider(item.id));
     if (level == null) return Center(child: Text(l.emptyFeed));
     final lang = ref.watch(contentLanguageProvider);
 
@@ -123,6 +129,41 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
             ),
           ),
           const SizedBox(height: 16),
+          if (_whyCount >= whyChainCheerAt)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Text(l.whyCheer(_whyCount),
+                  key: const Key('why_cheer'),
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleMedium),
+            ),
+          if (why != null) ...[
+            OutlinedButton(
+              key: const Key('kids_why'),
+              style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+              onPressed: () {
+                ref.read(ttsProvider).stop();
+                setState(() {
+                  _override = why.target;
+                  _whyCount++;
+                });
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(l.whyButton,
+                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  const SizedBox(width: 12),
+                  Flexible(
+                    child: WrapText(why.question,
+                        wordWrap: lang == 'ja',
+                        style: const TextStyle(fontSize: 16)),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
+          ],
           if (ref.watch(triviaRepositoryProvider).quizFor(item.id) case final quiz?) ...[
             FilledButton.icon(
               key: const Key('quiz_button'),
@@ -160,7 +201,11 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                   label: Text(l.kidsNext, style: const TextStyle(fontSize: 20)),
                   onPressed: () {
                     ref.read(ttsProvider).stop();
-                    setState(() => _index++);
+                    setState(() {
+                      _index++;
+                      _override = null;
+                      _whyCount = 0;
+                    });
                   },
                 ),
               ),

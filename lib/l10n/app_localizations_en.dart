@@ -476,4 +476,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get relatedSection => 'Related facts';
+
+  @override
+  String get whyButton => 'Why?';
+
+  @override
+  String whyCheer(int count) {
+    return 'You kept asking \"why?\" $count times! Great!';
+  }
 }

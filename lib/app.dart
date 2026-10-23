@@ -33,7 +33,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/onboarding', builder: (_, _) => const OnboardingScreen()),
       GoRoute(
         path: '/detail/:id',
-        builder: (_, state) => DetailScreen(triviaId: state.pathParameters['id']!),
+        builder: (_, state) => DetailScreen(
+          triviaId: state.pathParameters['id']!,
+          chain: int.tryParse(state.uri.queryParameters['chain'] ?? '') ?? 0,
+        ),
       ),
       GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
       GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),

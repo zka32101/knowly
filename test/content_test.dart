@@ -205,4 +205,59 @@ void main() {
       }
     });
   });
+
+  group('なぜ？チェーン', () {
+    final doc = jsonDecode(File('assets/trivia/why_chains.json').readAsStringSync())
+        as Map<String, dynamic>;
+    final links = (doc['links'] as List).cast<Map<String, dynamic>>();
+    final byId = {for (final t in items) t.id: t};
+
+    test('つなぐ先の雑学が実在し、自分自身につながらず、1つの雑学から1本だけ', () {
+      expect(links, isNotEmpty);
+      final froms = <String>{};
+      for (final l in links) {
+        expect(byId, contains(l['from']), reason: '${l['from']}');
+        expect(byId, contains(l['to']), reason: '${l['to']}');
+        expect(l['from'], isNot(l['to']));
+        expect(froms.add(l['from'] as String), isTrue, reason: '重複: ${l['from']}');
+      }
+    });
+
+    test('輪がぐるぐる回らない（どこから始めても必ず終わる）', () {
+      final next = {for (final l in links) l['from'] as String: l['to'] as String};
+      for (final start in next.keys) {
+        final seen = <String>{start};
+        var cur = start;
+        while (next.containsKey(cur)) {
+          cur = next[cur]!;
+          expect(seen.add(cur), isTrue, reason: '$start からの輪が戻ってくる: $cur');
+        }
+      }
+    });
+
+    test('子ども向けの質問は、日本語はひらがなのみ・不適切なことばなし・英語も空でない', () {
+      for (final l in links) {
+        final ja = l['ja'] as Map<String, dynamic>;
+        final en = l['en'] as Map<String, dynamic>;
+        final child = ja['child'] as String;
+        expect(_kanji.hasMatch(child), isFalse, reason: child);
+        for (final text in [child, ja['default'] as String, en['child'] as String, en['default'] as String]) {
+          expect(text.trim(), isNotEmpty, reason: '${l['from']}');
+        }
+        for (final w in ['殺', '死', '戦争', '宗教', '性的', '酒', '賭', 'せんそう', 'しゅうきょう']) {
+          expect(child.contains(w), isFalse, reason: child);
+        }
+      }
+    });
+
+    test('Kids に出る雑学から、Kids に出せない雑学へはつながない', () {
+      for (final l in links) {
+        final from = byId[l['from']]!;
+        final to = byId[l['to']]!;
+        if (from.minAgeBand == AgeBand.kids) {
+          expect(to.minAgeBand, AgeBand.kids, reason: '${l['from']} → ${l['to']}');
+        }
+      }
+    });
+  });
 }

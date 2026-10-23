@@ -466,4 +466,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get relatedSection => '関連する雑学';
+
+  @override
+  String get whyButton => 'なぜ？';
+
+  @override
+  String whyCheer(int count) {
+    return '「なぜ？」を$count回つづけたよ！すごい！';
+  }
 }

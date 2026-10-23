@@ -201,3 +201,24 @@ final levelResolverProvider = Provider<TriviaLevel? Function(Trivia)>((ref) {
   final lang = ref.watch(contentLanguageProvider);
   return (t) => t.levelFor(band, lang, allowDraft: kAllowDraftContent);
 });
+
+/// 「なぜ？」チェーンの次の一歩（次の雑学と質問文）。
+class WhyStep {
+  const WhyStep({required this.target, required this.question});
+  final Trivia target;
+  final String question;
+}
+
+/// ある雑学から「なぜ？」でつながる次の一歩。次の雑学が、この年代・言語・国で表示できないときは null。
+final whyStepProvider = Provider.family<WhyStep?, String>((ref, factId) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null) return null;
+  final repo = ref.watch(triviaRepositoryProvider);
+  final link = repo.whyFrom(factId);
+  if (link == null) return null;
+  final target = repo.byId(link.to);
+  if (target == null) return null;
+  if (!ref.watch(allEligibleProvider).any((t) => t.id == target.id)) return null;
+  final question = link.question(band, ref.watch(contentLanguageProvider));
+  return question == null ? null : WhyStep(target: target, question: question);
+});

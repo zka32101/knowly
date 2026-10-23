@@ -985,6 +985,18 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'関連する雑学'**
   String get relatedSection;
+
+  /// No description provided for @whyButton.
+  ///
+  /// In ja, this message translates to:
+  /// **'なぜ？'**
+  String get whyButton;
+
+  /// No description provided for @whyCheer.
+  ///
+  /// In ja, this message translates to:
+  /// **'「なぜ？」を{count}回つづけたよ！すごい！'**
+  String whyCheer(int count);
 }
 
 class _AppLocalizationsDelegate

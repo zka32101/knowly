@@ -9,6 +9,7 @@ import '../l10n/labels.dart';
 import '../logic/readings.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
+import '../models/why_link.dart';
 import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
@@ -17,9 +18,12 @@ import '../widgets/ja_wrap_text.dart';
 import '../widgets/quiz_sheet.dart';
 
 class DetailScreen extends ConsumerStatefulWidget {
-  const DetailScreen({super.key, required this.triviaId});
+  const DetailScreen({super.key, required this.triviaId, this.chain = 0});
 
   final String triviaId;
+
+  /// 「なぜ？」を何回つなげてここに来たか。
+  final int chain;
 
   @override
   ConsumerState<DetailScreen> createState() => _DetailScreenState();
@@ -84,6 +88,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
         : null;
 
     final quiz = ownBand.isChild ? repo.quizFor(item.id) : null;
+    final why = ref.watch(whyStepProvider(item.id));
 
     // 関連する雑学（この年代・言語・国で表示できるものだけ）。
     final region = ref.watch(regionProvider);
@@ -125,6 +130,16 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
         child: ListView(
           padding: const EdgeInsets.all(20),
           children: [
+            if (widget.chain >= whyChainCheerAt)
+              Card(
+                key: const Key('why_cheer'),
+                color: theme.colorScheme.primaryContainer,
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Text(l.whyCheer(widget.chain),
+                      textAlign: TextAlign.center, style: theme.textTheme.titleMedium),
+                ),
+              ),
             Center(child: TriviaIllustration(id: item.illustration, size: 96)),
             const SizedBox(height: 16),
             Wrap(spacing: 8, children: [
@@ -159,6 +174,34 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
             WrapText(level.body,
                 wordWrap: lang == 'ja' && shownBand.isChild,
                 style: theme.textTheme.bodyLarge?.copyWith(height: 1.6)),
+            if (why != null) ...[
+              const SizedBox(height: 16),
+              Card(
+                key: const Key('why_card'),
+                color: theme.colorScheme.secondaryContainer,
+                child: InkWell(
+                  onTap: () => context.push('/detail/${why.target.id}?chain=${widget.chain + 1}'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Row(
+                      children: [
+                        Text(l.whyButton,
+                            style: theme.textTheme.headlineSmall
+                                ?.copyWith(fontWeight: FontWeight.bold)),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: WrapText(why.question,
+                              key: const Key('why_question'),
+                              wordWrap: lang == 'ja' && ownBand.isChild,
+                              style: theme.textTheme.bodyLarge),
+                        ),
+                        const Icon(Icons.arrow_forward),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
             if (otherLevel != null && otherLevel.title != level.title) ...[
               const SizedBox(height: 12),
               TextButton.icon(

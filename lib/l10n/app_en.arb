@@ -202,5 +202,14 @@
   "seasonSouth": "South",
   "seasonOff": "Off",
   "seasonNote": "Estimated from your time zone (no location is used).",
-  "relatedSection": "Related facts"
+  "relatedSection": "Related facts",
+  "whyButton": "Why?",
+  "whyCheer": "You kept asking \"why?\" {count} times! Great!",
+  "@whyCheer": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

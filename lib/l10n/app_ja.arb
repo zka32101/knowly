@@ -202,5 +202,14 @@
   "seasonSouth": "南半球",
   "seasonOff": "オフ",
   "seasonNote": "端末のタイムゾーンから推定します（位置情報は使いません）。",
-  "relatedSection": "関連する雑学"
+  "relatedSection": "関連する雑学",
+  "whyButton": "なぜ？",
+  "whyCheer": "「なぜ？」を{count}回つづけたよ！すごい！",
+  "@whyCheer": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

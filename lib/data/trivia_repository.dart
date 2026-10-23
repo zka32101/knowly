@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import '../models/age_band.dart';
 import '../models/quiz.dart';
 import '../models/trivia.dart';
+import '../models/why_link.dart';
 
 /// 未レビュー(draft)の翻訳を配信してよいか。
 /// デバッグビルドでは常に true。リリースビルドは既定で false（レビュー済みだけを配信）。
@@ -25,14 +26,20 @@ class FeedFilter {
 }
 
 class TriviaRepository {
-  TriviaRepository(this.items, {List<QuizItem> quizzes = const []})
-      : _quizzes = {for (final q in quizzes) q.factId: q};
+  TriviaRepository(
+    this.items, {
+    List<QuizItem> quizzes = const [],
+    List<WhyLink> whyLinks = const [],
+  })  : _quizzes = {for (final q in quizzes) q.factId: q},
+        _whyLinks = {for (final w in whyLinks) w.from: w};
 
   final List<Trivia> items;
   final Map<String, QuizItem> _quizzes;
+  final Map<String, WhyLink> _whyLinks;
 
   static const assetPath = 'assets/trivia/trivia.json';
   static const quizAssetPath = 'assets/trivia/quiz.json';
+  static const whyAssetPath = 'assets/trivia/why_chains.json';
 
   static Future<TriviaRepository> load({AssetBundle? bundle}) async {
     final b = bundle ?? rootBundle;
@@ -45,8 +52,15 @@ class TriviaRepository {
     final quizzes = (quizDecoded['items'] as List)
         .map((e) => QuizItem.fromJson(e as Map<String, dynamic>))
         .toList();
-    return TriviaRepository(list, quizzes: quizzes);
+    final whyDecoded = jsonDecode(await b.loadString(whyAssetPath)) as Map<String, dynamic>;
+    final whyLinks = (whyDecoded['links'] as List)
+        .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
+        .toList();
+    return TriviaRepository(list, quizzes: quizzes, whyLinks: whyLinks);
   }
+
+  /// この雑学から「なぜ？」でつながる次の輪。なければ null。
+  WhyLink? whyFrom(String factId) => _whyLinks[factId];
 
   QuizItem? quizFor(String factId) => _quizzes[factId];
 
