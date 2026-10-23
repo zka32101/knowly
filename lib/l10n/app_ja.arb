@@ -703,5 +703,16 @@
       }
     }
   },
-  "wordsHint": "ことばの せつめいを みると、ここに ふえていくよ。"
+  "wordsHint": "ことばの せつめいを みると、ここに ふえていくよ。",
+  "mapTitle": "つながりマップ",
+  "mapLinkCount": "つながる ざつがく {n}こ",
+  "@mapLinkCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mapNoLinks": "つながる ざつがくは まだ ないよ",
+  "mapOpen": "つながりを みる"
 }

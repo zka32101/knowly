@@ -2293,6 +2293,30 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'ことばの せつめいを みると、ここに ふえていくよ。'**
   String get wordsHint;
+
+  /// No description provided for @mapTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながりマップ'**
+  String get mapTitle;
+
+  /// No description provided for @mapLinkCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながる ざつがく {n}こ'**
+  String mapLinkCount(int n);
+
+  /// No description provided for @mapNoLinks.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながる ざつがくは まだ ないよ'**
+  String get mapNoLinks;
+
+  /// No description provided for @mapOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながりを みる'**
+  String get mapOpen;
 }
 
 class _AppLocalizationsDelegate

@@ -364,5 +364,9 @@
   "wordOfDay": "今日词语",
   "wordQuizTitle": "词语测验",
   "wordQuizQuestion": "“{term}”是什么意思？",
-  "wordsHint": "查看过解释的词语会加到这里。"
+  "wordsHint": "查看过解释的词语会加到这里。",
+  "mapTitle": "关联图",
+  "mapLinkCount": "相关冷知识 {n} 条",
+  "mapNoLinks": "暂时没有相关冷知识",
+  "mapOpen": "查看关联"
 }

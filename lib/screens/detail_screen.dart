@@ -385,7 +385,17 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
             ],
             if (related.isNotEmpty) ...[
               const SizedBox(height: 24),
-              Text(l.relatedSection, style: theme.textTheme.titleSmall),
+              Row(
+                children: [
+                  Expanded(child: Text(l.relatedSection, style: theme.textTheme.titleSmall)),
+                  TextButton.icon(
+                    key: const Key('open_map_from_detail'),
+                    icon: const Icon(Icons.hub_outlined),
+                    label: Text(l.mapOpen),
+                    onPressed: () => context.push('/map?id=${item.id}'),
+                  ),
+                ],
+              ),
               const SizedBox(height: 8),
               for (final r in related)
                 if (levelFor(shownBand, lang) != null && relatedLevel(r) != null)

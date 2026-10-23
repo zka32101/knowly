@@ -1228,4 +1228,18 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get wordsHint => 'Las palabras que consultes se añaden aquí.';
+
+  @override
+  String get mapTitle => 'Mapa de conexiones';
+
+  @override
+  String mapLinkCount(int n) {
+    return '$n datos conectados';
+  }
+
+  @override
+  String get mapNoLinks => 'Todavía no hay datos conectados';
+
+  @override
+  String get mapOpen => 'Ver conexiones';
 }

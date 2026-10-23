@@ -1196,4 +1196,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get wordsHint => '查看过解释的词语会加到这里。';
+
+  @override
+  String get mapTitle => '关联图';
+
+  @override
+  String mapLinkCount(int n) {
+    return '相关冷知识 $n 条';
+  }
+
+  @override
+  String get mapNoLinks => '暂时没有相关冷知识';
+
+  @override
+  String get mapOpen => '查看关联';
 }

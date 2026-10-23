@@ -1218,4 +1218,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get wordsHint => 'Words you look up are added here.';
+
+  @override
+  String get mapTitle => 'Link map';
+
+  @override
+  String mapLinkCount(int n) {
+    return '$n linked facts';
+  }
+
+  @override
+  String get mapNoLinks => 'No linked facts yet';
+
+  @override
+  String get mapOpen => 'See links';
 }

@@ -1199,4 +1199,18 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get wordsHint => 'ことばの せつめいを みると、ここに ふえていくよ。';
+
+  @override
+  String get mapTitle => 'つながりマップ';
+
+  @override
+  String mapLinkCount(int n) {
+    return 'つながる ざつがく $nこ';
+  }
+
+  @override
+  String get mapNoLinks => 'つながる ざつがくは まだ ないよ';
+
+  @override
+  String get mapOpen => 'つながりを みる';
 }

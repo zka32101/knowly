@@ -364,5 +364,9 @@
   "wordOfDay": "오늘의 낱말",
   "wordQuizTitle": "낱말 퀴즈",
   "wordQuizQuestion": "'{term}'의 뜻은?",
-  "wordsHint": "설명을 본 낱말이 여기에 쌓여요."
+  "wordsHint": "설명을 본 낱말이 여기에 쌓여요.",
+  "mapTitle": "연결 지도",
+  "mapLinkCount": "연결된 상식 {n}개",
+  "mapNoLinks": "아직 연결된 상식이 없어요",
+  "mapOpen": "연결 보기"
 }

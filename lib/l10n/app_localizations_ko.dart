@@ -1199,4 +1199,18 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get wordsHint => '설명을 본 낱말이 여기에 쌓여요.';
+
+  @override
+  String get mapTitle => '연결 지도';
+
+  @override
+  String mapLinkCount(int n) {
+    return '연결된 상식 $n개';
+  }
+
+  @override
+  String get mapNoLinks => '아직 연결된 상식이 없어요';
+
+  @override
+  String get mapOpen => '연결 보기';
 }

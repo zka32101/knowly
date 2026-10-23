@@ -686,5 +686,9 @@
   "wordOfDay": "Word of the day",
   "wordQuizTitle": "Word quiz",
   "wordQuizQuestion": "What does \"{term}\" mean?",
-  "wordsHint": "Words you look up are added here."
+  "wordsHint": "Words you look up are added here.",
+  "mapTitle": "Link map",
+  "mapLinkCount": "{n} linked facts",
+  "mapNoLinks": "No linked facts yet",
+  "mapOpen": "See links"
 }

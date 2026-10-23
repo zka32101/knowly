@@ -364,5 +364,9 @@
   "wordOfDay": "Palabra del día",
   "wordQuizTitle": "Quiz de palabras",
   "wordQuizQuestion": "¿Qué significa «{term}»?",
-  "wordsHint": "Las palabras que consultes se añaden aquí."
+  "wordsHint": "Las palabras que consultes se añaden aquí.",
+  "mapTitle": "Mapa de conexiones",
+  "mapLinkCount": "{n} datos conectados",
+  "mapNoLinks": "Todavía no hay datos conectados",
+  "mapOpen": "Ver conexiones"
 }

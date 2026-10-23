@@ -233,6 +233,11 @@ class CollectHub extends ConsumerWidget {
             subtitle: openedToday ? l.capsuleDone : l.capsuleOpen,
             badge: openedToday ? null : '!',
             route: '/capsule'),
+        HubTile(
+            key: const Key('open_map'),
+            emoji: '🕸️',
+            title: l.mapTitle,
+            route: '/map'),
         if (wordsOn)
           HubTile(
               key: const Key('open_words'),

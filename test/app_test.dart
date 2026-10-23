@@ -10,6 +10,7 @@ import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
 import 'package:knowly/services/home_widget_service.dart';
 import 'package:knowly/services/listen_background.dart';
+import 'package:knowly/screens/map_screen.dart';
 import 'package:knowly/screens/quiz_battle_screen.dart';
 import 'package:knowly/l10n/regions.dart';
 import 'package:knowly/services/share.dart';
@@ -2937,6 +2938,59 @@ void main() {
       await tester.pumpWidget(const SizedBox());
       await _pump(tester, prefs: {'ageBand': 'teen'});
       expect(await entries(), (true, true));
+    });
+  });
+
+  group('つながりマップ', () {
+    ProviderContainer containerOf(WidgetTester tester) =>
+        ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+
+    testWidgets('あつめるタブから開け、中心の雑学とつながる雑学が出る。タップで中心が移る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await _open(tester, const Key('open_map'));
+      expect(find.byKey(const Key('map_center_card')), findsOneWidget);
+      final links = containerOf(tester).read(knowledgeLinksProvider);
+      final nodes = find.byWidgetPredicate(
+          (w) => w.key is ValueKey<String> && (w.key as ValueKey<String>).value.startsWith('map_node_'));
+      expect(nodes.evaluate().length, greaterThan(1));
+      final before = tester.widget<Text>(find.byKey(const Key('map_center_title'))).data;
+      // どれかのノードをタップして、中心が移る（中心自身をタップしても変わらないので、順に試す）
+      final keys = nodes.evaluate().map((e) => e.widget.key!).toList();
+      String? after = before;
+      for (final k in keys) {
+        await tester.tap(find.byKey(k));
+        await tester.pumpAndSettle();
+        after = tester.widget<Text>(find.byKey(const Key('map_center_title'))).data;
+        if (after != before) break;
+      }
+      expect(after, isNot(before));
+      expect(links, isNotEmpty);
+    });
+
+    testWidgets('見ていない雑学は「？」、見た雑学は絵が出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_map'));
+      expect(find.text('？'), findsWidgets);
+    });
+
+    testWidgets('詳細の「つながりを見る」から、その雑学を中心に開く', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'seen': ['octopus_blue_blood']});
+      await _open(tester, const Key('open_zukan'));
+      await tester.tap(find.byKey(const Key('zukan_cell_octopus_blue_blood')));
+      await tester.pumpAndSettle();
+      await _reveal(tester, const Key('open_map_from_detail'));
+      await tester.tap(find.byKey(const Key('open_map_from_detail')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('map_node_octopus_blue_blood')), findsOneWidget);
+      expect(find.text('タコの血が青いのは銅のせい'), findsOneWidget);
+    });
+
+    testWidgets('中心のカードから詳細へ進める', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _open(tester, const Key('open_map'));
+      await tester.tap(find.byKey(const Key('map_center_card')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });
   });
 }
