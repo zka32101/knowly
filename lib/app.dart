@@ -45,7 +45,19 @@ class KnowlyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = ref.watch(uiLanguageProvider);
+    final band = ref.watch(settingsProvider.select((s) => s.ageBand));
     return MaterialApp.router(
+      // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
+      builder: (context, child) {
+        final factor = band?.textScaleFactor ?? 1.0;
+        if (factor == 1.0) return child!;
+        final media = MediaQuery.of(context);
+        final system = media.textScaler.scale(14) / 14;
+        return MediaQuery(
+          data: media.copyWith(textScaler: TextScaler.linear(system * factor)),
+          child: child!,
+        );
+      },
       onGenerateTitle: (context) => AppLocalizations.of(context).appName,
       routerConfig: ref.watch(routerProvider),
       locale: Locale(lang),

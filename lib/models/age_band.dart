@@ -11,6 +11,13 @@ enum AgeBand {
   /// 利用シーンフィルター・シェア・出典表示・他アプリ紹介を出す年代。
   bool get isTeenOrAdult => index >= teen.index;
 
+  /// 子どもモードの文字の拡大率（Kids は 1.3 倍、Junior は 1.15 倍）。
+  double get textScaleFactor => switch (this) {
+        kids => 1.3,
+        junior => 1.15,
+        _ => 1.0,
+      };
+
   /// 他アプリ紹介（外部ストアへのリンク）を出してよい年代。
   bool get allowsPromo => isTeenOrAdult;
 

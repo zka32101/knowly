@@ -10,6 +10,7 @@ import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/parental_gate.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -33,7 +34,11 @@ class HomeScreen extends ConsumerWidget {
             key: const Key('open_settings'),
             tooltip: l.settingsTitle,
             icon: const Icon(Icons.settings_outlined),
-            onPressed: () => context.push('/settings'),
+            onPressed: () async {
+              // Kids は設定の前に保護者ゲートを通す（子どもが迷い込まないように）。
+              if (band == AgeBand.kids && !await showParentalGate(context)) return;
+              if (context.mounted) context.push('/settings');
+            },
           ),
         ],
       ),

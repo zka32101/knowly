@@ -140,10 +140,27 @@ void main() {
     expect(second, isNot(equals(first)));
   });
 
+  testWidgets('子どもモードは文字が大きく、大人モードは等倍', (tester) async {
+    Future<double> scale(String band) async {
+      await _pump(tester, prefs: {'ageBand': band});
+      final ctx = tester.element(find.byType(Scaffold).first);
+      final v = MediaQuery.textScalerOf(ctx).scale(14) / 14;
+      await tester.pumpWidget(const SizedBox());
+      return v;
+    }
+
+    expect(await scale('kids'), closeTo(1.3, 0.001));
+    expect(await scale('junior'), closeTo(1.15, 0.001));
+    expect(await scale('adult'), closeTo(1.0, 0.001));
+  });
+
   testWidgets('Kids: モード変更には保護者ゲートが必要（不正解は通さない）', (tester) async {
     await _pump(tester, prefs: {'ageBand': 'kids'});
     await tester.tap(find.byKey(const Key('open_settings')));
     await tester.pumpAndSettle();
+    // Kids は設定を開く前にもゲートがある
+    expect(find.text('保護者の方へ確認'), findsOneWidget);
+    await _solveGate(tester);
     // 他アプリ紹介は子どもには出さない
     expect(find.text('他のアプリもチェック！'), findsNothing);
 
