@@ -19,7 +19,8 @@ const _emoji = {
   'strawberry': '🍓',
   'penguin': '🐧', 'owl': '🦉', 'camel': '🐫', 'sloth': '🦥', 'salmon': '🐟',
   'squirrel': '🐿️', 'bat': '🦇', 'ladybug': '🐞', 'cricket': '🦗', 'bicycle': '🚲',
-  'airplane': '✈️',
+  'airplane': '✈️', 'snow': '❄️', 'maple': '🍁', 'tree': '🌳', 'sunflower': '🌻',
+  'hand': '✋', 'brain': '🧠', 'eye': '👁️',
 };
 
 /// 絵の id から、仮の絵文字を返す（共有画像など、ウィジェット以外で使う）。
