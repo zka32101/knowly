@@ -1,4 +1,4 @@
-package com.petitworks.knowly
+package com.yourwish.knowly
 
 import io.flutter.embedding.android.FlutterActivity
 

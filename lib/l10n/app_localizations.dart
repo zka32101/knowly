@@ -637,6 +637,36 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'つぎへ'**
   String get quizNext;
+
+  /// No description provided for @notifyTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'毎日の雑学を通知'**
+  String get notifyTitle;
+
+  /// No description provided for @notifySubtitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'毎日、決まった時刻に今日の雑学をお知らせします。端末の中だけで動きます。'**
+  String get notifySubtitle;
+
+  /// No description provided for @notifyJuniorNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'保護者の方が設定してください。端末の中だけで動き、情報は送られません。'**
+  String get notifyJuniorNote;
+
+  /// No description provided for @notifyTime.
+  ///
+  /// In ja, this message translates to:
+  /// **'通知の時刻'**
+  String get notifyTime;
+
+  /// No description provided for @notifyDenied.
+  ///
+  /// In ja, this message translates to:
+  /// **'通知が許可されていません。端末の設定で許可してください。'**
+  String get notifyDenied;
 }
 
 class _AppLocalizationsDelegate

@@ -37,6 +37,9 @@ class AppSettings {
     this.ratings = const {},
     this.knowledge = const {},
     this.readDays = const [],
+    this.notifyEnabled = false,
+    this.notifyHour = 7,
+    this.notifyMinute = 0,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -52,6 +55,11 @@ class AppSettings {
   /// 雑学を読んだ日（yyyy-MM-dd）。Teen/Adult のストリーク用。
   final List<String> readDays;
 
+  /// 毎日の通知（端末内の予定通知）。Kids はなし、Junior は保護者が設定したときだけ。
+  final bool notifyEnabled;
+  final int notifyHour;
+  final int notifyMinute;
+
   bool get onboarded => ageBand != null;
 
   AppSettings copyWith({
@@ -66,6 +74,9 @@ class AppSettings {
     Map<String, Set<Rating>>? ratings,
     Map<String, Knowledge>? knowledge,
     List<String>? readDays,
+    bool? notifyEnabled,
+    int? notifyHour,
+    int? notifyMinute,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -78,6 +89,9 @@ class AppSettings {
         ratings: ratings ?? this.ratings,
         knowledge: knowledge ?? this.knowledge,
         readDays: readDays ?? this.readDays,
+        notifyEnabled: notifyEnabled ?? this.notifyEnabled,
+        notifyHour: notifyHour ?? this.notifyHour,
+        notifyMinute: notifyMinute ?? this.notifyMinute,
       );
 }
 
@@ -114,17 +128,34 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
               if (v.name == k) id: v,
       },
       readDays: p.getStringList('readDays') ?? const [],
+      notifyEnabled: p.getBool('notifyEnabled') ?? false,
+      notifyHour: p.getInt('notifyHour') ?? 7,
+      notifyMinute: p.getInt('notifyMinute') ?? 0,
     );
   }
 
   void setAgeBand(AgeBand band) {
     // 年代が変わったら、年代で使えない絞り込みを外す。
+    // 子どもモードに切り替えたら通知はオフ（Junior では保護者が改めて設定する）。
     state = state.copyWith(
       ageBand: band,
       scenes: band.isTeenOrAdult ? state.scenes : const {},
+      notifyEnabled: band.isChild ? false : state.notifyEnabled,
     );
     _prefs.setString('ageBand', band.name);
     _prefs.setStringList('scenes', state.scenes.toList());
+    _prefs.setBool('notifyEnabled', state.notifyEnabled);
+  }
+
+  void setNotifyEnabled(bool enabled) {
+    state = state.copyWith(notifyEnabled: enabled);
+    _prefs.setBool('notifyEnabled', enabled);
+  }
+
+  void setNotifyTime(int hour, int minute) {
+    state = state.copyWith(notifyHour: hour, notifyMinute: minute);
+    _prefs.setInt('notifyHour', hour);
+    _prefs.setInt('notifyMinute', minute);
   }
 
   void setUiLanguage(String? code) {

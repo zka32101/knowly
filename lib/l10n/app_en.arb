@@ -116,5 +116,10 @@
   "quizFalse": "False",
   "quizCorrect": "Correct!",
   "quizWrong": "Not quite!",
-  "quizNext": "Next"
+  "quizNext": "Next",
+  "notifyTitle": "Daily fact reminder",
+  "notifySubtitle": "Get today's fact at a set time. Works entirely on your device.",
+  "notifyJuniorNote": "A parent should set this up. It works on the device only and sends no data.",
+  "notifyTime": "Notification time",
+  "notifyDenied": "Notifications are not allowed. Please enable them in your device settings."
 }

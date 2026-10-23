@@ -288,4 +288,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get quizNext => 'Next';
+
+  @override
+  String get notifyTitle => 'Daily fact reminder';
+
+  @override
+  String get notifySubtitle =>
+      'Get today\'s fact at a set time. Works entirely on your device.';
+
+  @override
+  String get notifyJuniorNote =>
+      'A parent should set this up. It works on the device only and sends no data.';
+
+  @override
+  String get notifyTime => 'Notification time';
+
+  @override
+  String get notifyDenied =>
+      'Notifications are not allowed. Please enable them in your device settings.';
 }

@@ -6,8 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:knowly/app.dart';
 import 'package:knowly/data/trivia_repository.dart';
+import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
+import 'package:knowly/services/notifications.dart';
 import 'package:knowly/services/tts.dart';
 import 'package:knowly/state/providers.dart';
 import 'package:knowly/state/settings.dart';
@@ -19,6 +21,30 @@ class FakeTts implements TtsService {
   Future<void> speak(String text, {required String language}) async => spoken.add(text);
   @override
   Future<void> stop() async {}
+}
+
+class FakeNotifications implements NotificationService {
+  FakeNotifications({this.grant = true});
+  final bool grant;
+  int permissionRequests = 0;
+  int cancels = 0;
+  List<NotificationItem>? lastScheduled;
+
+  @override
+  Future<bool> requestPermission() async {
+    permissionRequests++;
+    return grant;
+  }
+
+  @override
+  Future<void> schedule(List<NotificationItem> items, {required String channelName}) async =>
+      lastScheduled = items;
+
+  @override
+  Future<void> cancelAll() async {
+    cancels++;
+    lastScheduled = null;
+  }
 }
 
 TriviaRepository _repo() {
@@ -36,11 +62,15 @@ TriviaRepository _repo() {
   );
 }
 
+FakeNotifications? _lastNotifications;
+
 Future<FakeTts> _pump(
   WidgetTester tester, {
   Map<String, Object> prefs = const {},
   String deviceLanguage = 'ja',
+  FakeNotifications? notifications,
 }) async {
+  final notif = _lastNotifications = notifications ?? FakeNotifications();
   SharedPreferences.setMockInitialValues(prefs);
   final sp = await SharedPreferences.getInstance();
   final tts = FakeTts();
@@ -51,6 +81,7 @@ Future<FakeTts> _pump(
       deviceLanguageProvider.overrideWithValue(deviceLanguage),
       nowProvider.overrideWithValue(DateTime(2026, 10, 23)),
       ttsProvider.overrideWithValue(tts),
+      notificationServiceProvider.overrideWithValue(notif),
     ],
     child: const KnowlyApp(),
   ));
@@ -337,6 +368,101 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openFirstDetail(tester);
       expect(find.byKey(const Key('quiz_button')), findsNothing);
+    });
+  });
+
+  group('毎日の通知（端末内）', () {
+    Future<void> openSettings(WidgetTester tester) async {
+      await tester.tap(find.byKey(const Key('open_settings')));
+      await tester.pumpAndSettle();
+    }
+
+    testWidgets('Kids には通知の設定がなく、予定もない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids', 'notifyEnabled': true});
+      expect(_lastNotifications!.lastScheduled, isNull);
+      await openSettings(tester);
+      await _solveGate(tester);
+      expect(find.byKey(const Key('notify_switch')), findsNothing);
+    });
+
+    testWidgets('Adult: オンにすると許可を求め、14日ぶんが予定される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(_lastNotifications!.lastScheduled, isNull); // 既定はオフ
+      await openSettings(tester);
+      await tester.tap(find.byKey(const Key('notify_switch')));
+      await tester.pumpAndSettle();
+
+      final n = _lastNotifications!;
+      expect(n.permissionRequests, 1);
+      expect(n.lastScheduled, hasLength(14));
+      expect(n.lastScheduled!.first.fireAt.hour, 7);
+      // 通知の本文は、その日の雑学のタイトル。タイトルは空でない
+      expect(n.lastScheduled!.first.body, isNotEmpty);
+      expect(n.lastScheduled!.first.title, '雑学コレ！');
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getBool('notifyEnabled'), isTrue);
+    });
+
+    testWidgets('許可されなかったらオンにならず、案内が出る', (tester) async {
+      await _pump(tester,
+          prefs: {'ageBand': 'adult'}, notifications: FakeNotifications(grant: false));
+      await openSettings(tester);
+      await tester.tap(find.byKey(const Key('notify_switch')));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('通知が許可されていません'), findsOneWidget);
+      expect(_lastNotifications!.lastScheduled, isNull);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getBool('notifyEnabled'), isNot(true));
+    });
+
+    testWidgets('オフにすると予定が消える', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'notifyEnabled': true});
+      expect(_lastNotifications!.lastScheduled, hasLength(14));
+      await openSettings(tester);
+      await tester.tap(find.byKey(const Key('notify_switch')));
+      await tester.pumpAndSettle();
+      expect(_lastNotifications!.lastScheduled, isNull);
+    });
+
+    testWidgets('時刻を変えると予定が作り直される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'notifyEnabled': true});
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(settingsProvider.notifier).setNotifyTime(8, 30);
+      await tester.pumpAndSettle();
+      final first = _lastNotifications!.lastScheduled!.first.fireAt;
+      expect((first.hour, first.minute), (8, 30));
+    });
+
+    testWidgets('Junior: オンにするには保護者ゲートが必要', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openSettings(tester);
+      await tester.tap(find.byKey(const Key('notify_switch')));
+      await tester.pumpAndSettle();
+      expect(find.text('保護者の方へ確認'), findsOneWidget);
+      expect(_lastNotifications!.permissionRequests, 0);
+      await _solveGate(tester);
+      expect(_lastNotifications!.permissionRequests, 1);
+      expect(_lastNotifications!.lastScheduled, isNotNull);
+    });
+
+    testWidgets('Junior: ゲートをやめたらオンにならない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await openSettings(tester);
+      await tester.tap(find.byKey(const Key('notify_switch')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('やめる'));
+      await tester.pumpAndSettle();
+      expect(_lastNotifications!.permissionRequests, 0);
+      expect(_lastNotifications!.lastScheduled, isNull);
+    });
+
+    testWidgets('子どもモードに切り替えると通知はオフになる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'notifyEnabled': true});
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      container.read(settingsProvider.notifier).setAgeBand(AgeBand.junior);
+      await tester.pumpAndSettle();
+      expect(container.read(settingsProvider).notifyEnabled, isFalse);
+      expect(_lastNotifications!.lastScheduled, isNull);
     });
   });
 }

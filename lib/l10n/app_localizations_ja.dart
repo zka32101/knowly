@@ -284,4 +284,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get quizNext => 'つぎへ';
+
+  @override
+  String get notifyTitle => '毎日の雑学を通知';
+
+  @override
+  String get notifySubtitle => '毎日、決まった時刻に今日の雑学をお知らせします。端末の中だけで動きます。';
+
+  @override
+  String get notifyJuniorNote => '保護者の方が設定してください。端末の中だけで動き、情報は送られません。';
+
+  @override
+  String get notifyTime => '通知の時刻';
+
+  @override
+  String get notifyDenied => '通知が許可されていません。端末の設定で許可してください。';
 }

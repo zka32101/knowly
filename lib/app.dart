@@ -10,6 +10,7 @@ import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
+import 'state/notification_sync.dart';
 import 'state/settings.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -45,6 +46,7 @@ class KnowlyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = ref.watch(uiLanguageProvider);
+    ref.watch(notificationSyncProvider);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand));
     return MaterialApp.router(
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。

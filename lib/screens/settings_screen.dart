@@ -7,10 +7,11 @@ import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
 import '../models/age_band.dart';
 import '../services/cross_promo_bootstrap.dart';
+import '../services/notifications.dart';
 import '../state/settings.dart';
 import '../widgets/parental_gate.dart';
 
-const knowlyApplicationId = 'com.petitworks.knowly';
+const knowlyApplicationId = 'com.yourwish.knowly';
 
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
@@ -59,6 +60,38 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     if (picked != null) ref.read(settingsProvider.notifier).setAgeBand(picked);
   }
 
+  Future<void> _toggleNotify(bool value) async {
+    final l = AppLocalizations.of(context);
+    final notifier = ref.read(settingsProvider.notifier);
+    if (!value) {
+      notifier.setNotifyEnabled(false);
+      return;
+    }
+    // Junior は保護者が設定する。
+    if (ref.read(settingsProvider).ageBand == AgeBand.junior) {
+      final ok = await showParentalGate(context);
+      if (!ok || !mounted) return;
+    }
+    final granted = await ref.read(notificationServiceProvider).requestPermission();
+    if (!mounted) return;
+    if (granted) {
+      notifier.setNotifyEnabled(true);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.notifyDenied)));
+    }
+  }
+
+  Future<void> _pickTime() async {
+    final s = ref.read(settingsProvider);
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: s.notifyHour, minute: s.notifyMinute),
+    );
+    if (picked != null) {
+      ref.read(settingsProvider.notifier).setNotifyTime(picked.hour, picked.minute);
+    }
+  }
+
   Future<void> _openPremium() async {
     final band = ref.read(settingsProvider).ageBand;
     if (band != null && band.isChild) {
@@ -97,6 +130,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           languageTile(l.settingsUiLanguage, settings.uiLanguage, notifier.setUiLanguage),
           languageTile(l.settingsContentLanguage, settings.contentLanguage,
               notifier.setContentLanguage),
+          // 通知は Kids にはない。Junior は保護者が設定する。
+          if (band != AgeBand.kids) ...[
+            SwitchListTile(
+              key: const Key('notify_switch'),
+              title: Text(l.notifyTitle),
+              subtitle: Text(
+                  band == AgeBand.junior ? l.notifyJuniorNote : l.notifySubtitle),
+              value: settings.notifyEnabled,
+              onChanged: _toggleNotify,
+            ),
+            if (settings.notifyEnabled)
+              ListTile(
+                key: const Key('notify_time'),
+                title: Text(l.notifyTime),
+                trailing: Text(
+                    TimeOfDay(hour: settings.notifyHour, minute: settings.notifyMinute)
+                        .format(context)),
+                onTap: _pickTime,
+              ),
+          ],
           ListTile(
             key: const Key('change_mode'),
             title: Text(l.settingsMode),

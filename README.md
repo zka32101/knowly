@@ -13,6 +13,7 @@
 - **コンテンツ**: 60件 × 4年代 × 日英（`assets/trivia/trivia.json`）。カテゴリーは動物・むし・のりもの・たべもの・宇宙・からだ・自然・科学・地理
 - **子ども向けUI**: Kids は文字1.3倍・大きなボタン、Junior は1.15倍。Kids の設定は保護者ゲートの先
 - **無料/プレミアムの枠**: Kids/Junior は全て無料。Teen/Adult は無料で7日分・保存20件まで
+- **毎日の通知**: 端末内の予定通知（サーバー・通信なし）。先の14日ぶんを予定し、各日の通知は「その日の今日の雑学」と同じ。Teen/Adult は設定でオン、Junior は保護者ゲートの先、Kids はなし
 - **他アプリ紹介**（`cross_promo_kit` v0.3.0）: Teen/Adult の設定画面だけ。Kids/Junior では Firebase に接続しない
 
 ## 競合との差別化機能
@@ -50,4 +51,4 @@ flutter run
 ## 設計上の判断メモ
 
 - `app_common_kit` は使っていない。広告 SDK（`google_mobile_ads`）を依存に含み、子ども向けアプリの要件（広告 ID の権限なし）と衝突するため。保護者ゲートは `lib/widgets/parental_gate.dart` に同等のものを持つ
-- applicationId は仮に `com.petitworks.knowly`。ストア登録前に確定する
+- applicationId / bundle ID は `com.yourwish.knowly`
