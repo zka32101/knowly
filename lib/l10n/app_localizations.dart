@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In ja, this message translates to:
-  /// **'雑学コレ！'**
+  /// **'ノウリー'**
   String get appName;
 
   /// No description provided for @languageTitle.
@@ -2107,6 +2107,96 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'いちばん れんぞく：{n}'**
   String swipeBestCombo(int n);
+
+  /// No description provided for @tabHome.
+  ///
+  /// In ja, this message translates to:
+  /// **'ホーム'**
+  String get tabHome;
+
+  /// No description provided for @tabPlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'あそぶ'**
+  String get tabPlay;
+
+  /// No description provided for @tabCollect.
+  ///
+  /// In ja, this message translates to:
+  /// **'あつめる'**
+  String get tabCollect;
+
+  /// No description provided for @tabExplore.
+  ///
+  /// In ja, this message translates to:
+  /// **'さがす'**
+  String get tabExplore;
+
+  /// No description provided for @tabSettings.
+  ///
+  /// In ja, this message translates to:
+  /// **'せってい'**
+  String get tabSettings;
+
+  /// No description provided for @hubPlayIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズやゲームで、ざつがくを たのしもう。'**
+  String get hubPlayIntro;
+
+  /// No description provided for @hubCollectIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。'**
+  String get hubCollectIntro;
+
+  /// No description provided for @hubExploreIntro.
+  ///
+  /// In ja, this message translates to:
+  /// **'ざつがくを さがしたり、ひろげたりしよう。'**
+  String get hubExploreIntro;
+
+  /// No description provided for @hubQuizSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'1〜4人で対戦'**
+  String get hubQuizSub;
+
+  /// No description provided for @hubSwipeSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'ほんと？うそ？'**
+  String get hubSwipeSub;
+
+  /// No description provided for @hubDailySub.
+  ///
+  /// In ja, this message translates to:
+  /// **'まいにち3もん'**
+  String get hubDailySub;
+
+  /// No description provided for @hubReviewSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'わすれないように'**
+  String get hubReviewSub;
+
+  /// No description provided for @hubMythsSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'よくある かんちがい'**
+  String get hubMythsSub;
+
+  /// No description provided for @hubLibrarySub.
+  ///
+  /// In ja, this message translates to:
+  /// **'けんさく・ジャンル'**
+  String get hubLibrarySub;
+
+  /// No description provided for @hubListenSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'ながら聞き'**
+  String get hubListenSub;
 }
 
 class _AppLocalizationsDelegate

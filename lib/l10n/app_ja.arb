@@ -1,6 +1,6 @@
 {
   "@@locale": "ja",
-  "appName": "雑学コレ！",
+  "appName": "ノウリー",
   "languageTitle": "言語 / Language",
   "languageSystem": "端末の言語",
   "languageJa": "日本語",
@@ -473,5 +473,20 @@
   "swipeCombo": "🔥 {n} れんぞく！",
   "@swipeCombo": {"placeholders": {"n": {"type": "int"}}},
   "swipeBestCombo": "いちばん れんぞく：{n}",
-  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}}
+  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}},
+  "tabHome": "ホーム",
+  "tabPlay": "あそぶ",
+  "tabCollect": "あつめる",
+  "tabExplore": "さがす",
+  "tabSettings": "せってい",
+  "hubPlayIntro": "クイズやゲームで、ざつがくを たのしもう。",
+  "hubCollectIntro": "ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。",
+  "hubExploreIntro": "ざつがくを さがしたり、ひろげたりしよう。",
+  "hubQuizSub": "1〜4人で対戦",
+  "hubSwipeSub": "ほんと？うそ？",
+  "hubDailySub": "まいにち3もん",
+  "hubReviewSub": "わすれないように",
+  "hubMythsSub": "よくある かんちがい",
+  "hubLibrarySub": "けんさく・ジャンル",
+  "hubListenSub": "ながら聞き"
 }

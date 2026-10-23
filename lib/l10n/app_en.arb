@@ -473,5 +473,20 @@
   "swipeCombo": "🔥 {n} in a row!",
   "@swipeCombo": {"placeholders": {"n": {"type": "int"}}},
   "swipeBestCombo": "Best streak: {n}",
-  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}}
+  "@swipeBestCombo": {"placeholders": {"n": {"type": "int"}}},
+  "tabHome": "Home",
+  "tabPlay": "Play",
+  "tabCollect": "Collect",
+  "tabExplore": "Explore",
+  "tabSettings": "Settings",
+  "hubPlayIntro": "Enjoy trivia through quizzes and games.",
+  "hubCollectIntro": "The more facts you see, the more your buddy grows and your collection fills.",
+  "hubExploreIntro": "Search for facts, or dig deeper.",
+  "hubQuizSub": "1-4 players",
+  "hubSwipeSub": "True or false",
+  "hubDailySub": "3 questions a day",
+  "hubReviewSub": "Don't forget",
+  "hubMythsSub": "Common misconceptions",
+  "hubLibrarySub": "Search & genres",
+  "hubListenSub": "Hands-free"
 }

@@ -1123,4 +1123,50 @@ class AppLocalizationsEn extends AppLocalizations {
   String swipeBestCombo(int n) {
     return 'Best streak: $n';
   }
+
+  @override
+  String get tabHome => 'Home';
+
+  @override
+  String get tabPlay => 'Play';
+
+  @override
+  String get tabCollect => 'Collect';
+
+  @override
+  String get tabExplore => 'Explore';
+
+  @override
+  String get tabSettings => 'Settings';
+
+  @override
+  String get hubPlayIntro => 'Enjoy trivia through quizzes and games.';
+
+  @override
+  String get hubCollectIntro =>
+      'The more facts you see, the more your buddy grows and your collection fills.';
+
+  @override
+  String get hubExploreIntro => 'Search for facts, or dig deeper.';
+
+  @override
+  String get hubQuizSub => '1-4 players';
+
+  @override
+  String get hubSwipeSub => 'True or false';
+
+  @override
+  String get hubDailySub => '3 questions a day';
+
+  @override
+  String get hubReviewSub => 'Don\'t forget';
+
+  @override
+  String get hubMythsSub => 'Common misconceptions';
+
+  @override
+  String get hubLibrarySub => 'Search & genres';
+
+  @override
+  String get hubListenSub => 'Hands-free';
 }

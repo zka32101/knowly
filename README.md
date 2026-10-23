@@ -1,4 +1,4 @@
-# Knowly（雑学コレ！）
+# Knowly（ノウリー）
 
 就学前から大人まで、世界中で楽しめる雑学アプリ（Flutter）。設計は [`docs/knowly_design_v2_global.md`](docs/knowly_design_v2_global.md)。
 

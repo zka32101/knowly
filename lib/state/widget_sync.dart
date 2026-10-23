@@ -8,7 +8,7 @@ import '../services/home_widget_service.dart';
 import 'providers.dart';
 import 'settings.dart';
 
-const _appNames = {'ja': '雑学コレ！', 'en': 'Knowly'};
+const _appNames = {'ja': 'ノウリー', 'en': 'Knowly'};
 const _hints = {'ja': 'アプリを開いて、今日の雑学を見よう', 'en': 'Open the app for today\'s fact'};
 
 /// ホーム画面ウィジェットに、今日から数日ぶんの「今日の雑学」を書き込む（アプリを開くたびに更新）。

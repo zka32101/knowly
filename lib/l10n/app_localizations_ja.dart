@@ -9,7 +9,7 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get appName => '雑学コレ！';
+  String get appName => 'ノウリー';
 
   @override
   String get languageTitle => '言語 / Language';
@@ -1105,4 +1105,49 @@ class AppLocalizationsJa extends AppLocalizations {
   String swipeBestCombo(int n) {
     return 'いちばん れんぞく：$n';
   }
+
+  @override
+  String get tabHome => 'ホーム';
+
+  @override
+  String get tabPlay => 'あそぶ';
+
+  @override
+  String get tabCollect => 'あつめる';
+
+  @override
+  String get tabExplore => 'さがす';
+
+  @override
+  String get tabSettings => 'せってい';
+
+  @override
+  String get hubPlayIntro => 'クイズやゲームで、ざつがくを たのしもう。';
+
+  @override
+  String get hubCollectIntro => 'ざつがくを みるほど、あいぼうが そだって コレクションが ふえるよ。';
+
+  @override
+  String get hubExploreIntro => 'ざつがくを さがしたり、ひろげたりしよう。';
+
+  @override
+  String get hubQuizSub => '1〜4人で対戦';
+
+  @override
+  String get hubSwipeSub => 'ほんと？うそ？';
+
+  @override
+  String get hubDailySub => 'まいにち3もん';
+
+  @override
+  String get hubReviewSub => 'わすれないように';
+
+  @override
+  String get hubMythsSub => 'よくある かんちがい';
+
+  @override
+  String get hubLibrarySub => 'けんさく・ジャンル';
+
+  @override
+  String get hubListenSub => 'ながら聞き';
 }

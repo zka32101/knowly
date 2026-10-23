@@ -14,6 +14,8 @@ import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
 import 'screens/mascot_screen.dart';
 import 'screens/capsule_screen.dart';
+import 'screens/hubs.dart';
+import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
 import 'screens/swipe_quiz_screen.dart';
 import 'screens/zukan_screen.dart';
@@ -28,6 +30,7 @@ import 'screens/settings_screen.dart';
 import 'screens/today_screen.dart';
 import 'state/notification_sync.dart';
 import 'state/settings.dart';
+import 'theme.dart';
 import 'state/widget_sync.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -44,7 +47,26 @@ final routerProvider = Provider<GoRouter>((ref) {
       return null;
     },
     routes: [
-      GoRoute(path: '/', builder: (_, _) => const HomeScreen()),
+      StatefulShellRoute.indexedStack(
+        builder: (_, _, shell) => MainShell(shell: shell),
+        branches: [
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/', builder: (_, _) => const HomeScreen()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/play', builder: (_, _) => const PlayHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/collect', builder: (_, _) => const CollectHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/explore', builder: (_, _) => const ExploreHub()),
+          ]),
+          StatefulShellBranch(routes: [
+            GoRoute(path: '/me', builder: (_, _) => const SettingsScreen()),
+          ]),
+        ],
+      ),
       GoRoute(path: '/onboarding', builder: (_, _) => const OnboardingScreen()),
       GoRoute(
         path: '/detail/:id',
@@ -115,15 +137,8 @@ class KnowlyApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF2E7D6B),
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData(
-        colorSchemeSeed: const Color(0xFF2E7D6B),
-        brightness: Brightness.dark,
-        useMaterial3: true,
-      ),
+      theme: buildTheme(Brightness.light),
+      darkTheme: buildTheme(Brightness.dark),
     );
   }
 }
