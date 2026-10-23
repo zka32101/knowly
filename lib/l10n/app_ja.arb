@@ -274,5 +274,18 @@
   "listenInJapanese": "日本語で聞く",
   "vocabEnglishTitle": "英語のことば",
   "vocabJapaneseTitle": "日本語のことば",
-  "vocabTapToHear": "タップで発音を聞けます"
+  "vocabTapToHear": "タップで発音を聞けます",
+  "listenTitle": "ながら聞き",
+  "listenPlay": "再生",
+  "listenPause": "一時停止",
+  "listenNext": "つぎへ",
+  "listenPrev": "まえへ",
+  "listenSpeedLabel": "速さ",
+  "listenSlow": "ゆっくり",
+  "listenNormal": "ふつう",
+  "listenFast": "はやい",
+  "listenFinished": "おしまい。もういちど聞くには再生を押してください",
+  "listenNote": "画面を開いたまま使います（通勤・料理中など）。",
+  "listenEmpty": "いま聞ける雑学がありません",
+  "listenOpen": "ながら聞き"
 }

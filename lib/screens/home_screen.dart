@@ -29,6 +29,13 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l.appName),
         actions: [
+          if (band.isTeenOrAdult)
+            IconButton(
+              key: const Key('open_listen'),
+              tooltip: l.listenOpen,
+              icon: const Icon(Icons.headphones_outlined),
+              onPressed: () => context.push('/listen'),
+            ),
           IconButton(
             key: const Key('open_today'),
             tooltip: l.todayHome,

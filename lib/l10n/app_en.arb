@@ -274,5 +274,18 @@
   "listenInJapanese": "Listen in Japanese",
   "vocabEnglishTitle": "English words",
   "vocabJapaneseTitle": "Japanese words",
-  "vocabTapToHear": "Tap a word to hear it"
+  "vocabTapToHear": "Tap a word to hear it",
+  "listenTitle": "Listen mode",
+  "listenPlay": "Play",
+  "listenPause": "Pause",
+  "listenNext": "Next",
+  "listenPrev": "Previous",
+  "listenSpeedLabel": "Speed",
+  "listenSlow": "Slow",
+  "listenNormal": "Normal",
+  "listenFast": "Fast",
+  "listenFinished": "That's all. Press play to listen again",
+  "listenNote": "Keep the app open while listening (commuting, cooking...).",
+  "listenEmpty": "No facts to listen to right now",
+  "listenOpen": "Listen mode"
 }

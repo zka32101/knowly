@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -15,6 +16,7 @@ import 'package:knowly/models/why_link.dart';
 import 'package:knowly/services/notifications.dart';
 import 'package:knowly/widgets/ja_wrap_text.dart';
 import 'package:knowly/services/tts.dart';
+import 'package:knowly/state/listen_controller.dart';
 import 'package:knowly/state/providers.dart';
 import 'package:knowly/state/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,14 +25,42 @@ class FakeTts implements TtsService {
   final spoken = <String>[];
   final languages = <String>[];
   final rates = <double?>[];
+
+  /// false にすると、`speakAndWait` は [completeCurrent] を呼ぶまで終わらない（連続再生のテスト用）。
+  bool autoComplete = true;
+  final _pending = <Completer<void>>[];
+
   @override
   Future<void> speak(String text, {required String language, double? rate}) async {
     spoken.add(text);
     languages.add(language);
     rates.add(rate);
   }
+
   @override
-  Future<void> stop() async {}
+  Future<void> speakAndWait(String text, {required String language, double? rate}) async {
+    await speak(text, language: language, rate: rate);
+    if (autoComplete) return;
+    final c = Completer<void>();
+    _pending.add(c);
+    await c.future;
+  }
+
+  /// いま読んでいる雑学の読み上げを終わらせる。
+  void completeCurrent() {
+    if (_pending.isNotEmpty) _pending.removeAt(0).complete();
+  }
+  @override
+  Future<void> stop() async {
+    stops++;
+    // 本物と同じく、止めると待っていた読み上げが終わる。
+    for (final c in _pending) {
+      if (!c.isCompleted) c.complete();
+    }
+    _pending.clear();
+  }
+
+  int stops = 0;
 }
 
 class FakeNotifications implements NotificationService {
@@ -1331,6 +1361,87 @@ void main() {
       await tester.tap(find.byKey(const Key('listen_other')));
       await tester.pump();
       expect(tts.spoken.last.contains('（'), isFalse);
+    });
+  });
+
+  group('ながら聞き', () {
+    testWidgets('入口は Teen/Adult だけ', (tester) async {
+      for (final band in ['kids', 'junior']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        expect(find.byKey(const Key('open_listen')), findsNothing, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+      for (final band in ['teen', 'adult']) {
+        await _pump(tester, prefs: {'ageBand': band});
+        expect(find.byKey(const Key('open_listen')), findsOneWidget, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    testWidgets('再生すると今日の雑学から読み、終わったら次へ進む', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('listen_progress')), findsOneWidget);
+      final container = ProviderScope.containerOf(tester.element(find.byType(KnowlyApp)));
+      final queue = container.read(listenQueueProvider);
+      expect(queue.length, inInclusiveRange(2, 10));
+      expect(queue.first.id, container.read(feedProvider).first.id); // 先頭は今日の雑学
+      expect(queue.map((t) => t.id).toSet().length, queue.length); // 重複なし
+
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(tts.spoken, hasLength(1));
+      expect(find.byIcon(Icons.pause), findsOneWidget);
+
+      tts.completeCurrent();
+      await tester.pump();
+      await tester.pump();
+      expect(tts.spoken, hasLength(2));
+      expect(find.text('2 / ${queue.length}'), findsOneWidget);
+
+      // 一時停止
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(find.byIcon(Icons.play_arrow), findsOneWidget);
+      expect(tts.spoken, hasLength(2));
+    });
+
+    testWidgets('速さを変えられる', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('はやい'));
+      await tester.pump();
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      expect(tts.rates.last, 0.5);
+    });
+
+    testWidgets('一覧をタップすると、その雑学へ移動する', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('listen_item_2'));
+      await tester.tap(find.byKey(const Key('listen_item_2')));
+      await tester.pumpAndSettle();
+      await tester.drag(find.byType(ListView).last, const Offset(0, 2000));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('3 / '), findsOneWidget);
+    });
+
+    testWidgets('画面を閉じると読み上げが止まる', (tester) async {
+      final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+      tts.autoComplete = false;
+      await tester.tap(find.byKey(const Key('open_listen')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('listen_toggle')));
+      await tester.pump();
+      final before = tts.stops;
+      await _back(tester);
+      expect(tts.stops, greaterThan(before));
     });
   });
 }

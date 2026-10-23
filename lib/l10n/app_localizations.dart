@@ -1123,6 +1123,84 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'タップで発音を聞けます'**
   String get vocabTapToHear;
+
+  /// No description provided for @listenTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ながら聞き'**
+  String get listenTitle;
+
+  /// No description provided for @listenPlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'再生'**
+  String get listenPlay;
+
+  /// No description provided for @listenPause.
+  ///
+  /// In ja, this message translates to:
+  /// **'一時停止'**
+  String get listenPause;
+
+  /// No description provided for @listenNext.
+  ///
+  /// In ja, this message translates to:
+  /// **'つぎへ'**
+  String get listenNext;
+
+  /// No description provided for @listenPrev.
+  ///
+  /// In ja, this message translates to:
+  /// **'まえへ'**
+  String get listenPrev;
+
+  /// No description provided for @listenSpeedLabel.
+  ///
+  /// In ja, this message translates to:
+  /// **'速さ'**
+  String get listenSpeedLabel;
+
+  /// No description provided for @listenSlow.
+  ///
+  /// In ja, this message translates to:
+  /// **'ゆっくり'**
+  String get listenSlow;
+
+  /// No description provided for @listenNormal.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふつう'**
+  String get listenNormal;
+
+  /// No description provided for @listenFast.
+  ///
+  /// In ja, this message translates to:
+  /// **'はやい'**
+  String get listenFast;
+
+  /// No description provided for @listenFinished.
+  ///
+  /// In ja, this message translates to:
+  /// **'おしまい。もういちど聞くには再生を押してください'**
+  String get listenFinished;
+
+  /// No description provided for @listenNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'画面を開いたまま使います（通勤・料理中など）。'**
+  String get listenNote;
+
+  /// No description provided for @listenEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま聞ける雑学がありません'**
+  String get listenEmpty;
+
+  /// No description provided for @listenOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'ながら聞き'**
+  String get listenOpen;
 }
 
 class _AppLocalizationsDelegate

@@ -8,6 +8,7 @@ import 'screens/detail_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/interests_screen.dart';
 import 'screens/library_screen.dart';
+import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/premium_screen.dart';
@@ -40,6 +41,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           chain: int.tryParse(state.uri.queryParameters['chain'] ?? '') ?? 0,
         ),
       ),
+      GoRoute(path: '/listen', builder: (_, _) => const ListenScreen()),
       GoRoute(path: '/today', builder: (_, _) => const TodayScreen()),
       GoRoute(path: '/myths', builder: (_, _) => const MythScreen()),
       GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),

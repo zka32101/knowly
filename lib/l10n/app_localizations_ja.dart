@@ -550,4 +550,43 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get vocabTapToHear => 'タップで発音を聞けます';
+
+  @override
+  String get listenTitle => 'ながら聞き';
+
+  @override
+  String get listenPlay => '再生';
+
+  @override
+  String get listenPause => '一時停止';
+
+  @override
+  String get listenNext => 'つぎへ';
+
+  @override
+  String get listenPrev => 'まえへ';
+
+  @override
+  String get listenSpeedLabel => '速さ';
+
+  @override
+  String get listenSlow => 'ゆっくり';
+
+  @override
+  String get listenNormal => 'ふつう';
+
+  @override
+  String get listenFast => 'はやい';
+
+  @override
+  String get listenFinished => 'おしまい。もういちど聞くには再生を押してください';
+
+  @override
+  String get listenNote => '画面を開いたまま使います（通勤・料理中など）。';
+
+  @override
+  String get listenEmpty => 'いま聞ける雑学がありません';
+
+  @override
+  String get listenOpen => 'ながら聞き';
 }

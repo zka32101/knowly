@@ -560,4 +560,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get vocabTapToHear => 'Tap a word to hear it';
+
+  @override
+  String get listenTitle => 'Listen mode';
+
+  @override
+  String get listenPlay => 'Play';
+
+  @override
+  String get listenPause => 'Pause';
+
+  @override
+  String get listenNext => 'Next';
+
+  @override
+  String get listenPrev => 'Previous';
+
+  @override
+  String get listenSpeedLabel => 'Speed';
+
+  @override
+  String get listenSlow => 'Slow';
+
+  @override
+  String get listenNormal => 'Normal';
+
+  @override
+  String get listenFast => 'Fast';
+
+  @override
+  String get listenFinished => 'That\'s all. Press play to listen again';
+
+  @override
+  String get listenNote =>
+      'Keep the app open while listening (commuting, cooking...).';
+
+  @override
+  String get listenEmpty => 'No facts to listen to right now';
+
+  @override
+  String get listenOpen => 'Listen mode';
 }
