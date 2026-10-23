@@ -23,7 +23,37 @@
         ],
         "answer": 1
       },
-      "id": "octopus_blue_blood_0"
+      "id": "octopus_blue_blood_0",
+      "zh": {
+        "question": "章鱼的血是什么颜色的？",
+        "options": [
+          "红色",
+          "蓝色",
+          "绿色",
+          "黄色"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "문어의 피는 무슨 색일까요?",
+        "options": [
+          "빨간색",
+          "파란색",
+          "초록색",
+          "노란색"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿De qué color es la sangre de un pulpo?",
+        "options": [
+          "Roja",
+          "Azul",
+          "Verde",
+          "Amarilla"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "honey_never_spoils",
@@ -47,7 +77,37 @@
         ],
         "answer": 0
       },
-      "id": "honey_never_spoils_1"
+      "id": "honey_never_spoils_1",
+      "zh": {
+        "question": "哪种食物几乎不会变质？",
+        "options": [
+          "蜂蜜",
+          "牛奶",
+          "鸡蛋",
+          "生鱼片"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "거의 상하지 않는 음식은 무엇일까요?",
+        "options": [
+          "꿀",
+          "우유",
+          "달걀",
+          "회"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué alimento casi nunca se echa a perder?",
+        "options": [
+          "La miel",
+          "La leche",
+          "Los huevos",
+          "El sashimi"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "venus_day_longer",
@@ -71,7 +131,37 @@
         ],
         "answer": 1
       },
-      "id": "venus_day_longer_2"
+      "id": "venus_day_longer_2",
+      "zh": {
+        "question": "哪颗行星上的一天比一年还长？",
+        "options": [
+          "地球",
+          "金星",
+          "火星",
+          "木星"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "하루가 일 년보다 긴 행성은 어디일까요?",
+        "options": [
+          "지구",
+          "금성",
+          "화성",
+          "목성"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿En qué planeta un día dura más que un año?",
+        "options": [
+          "La Tierra",
+          "Venus",
+          "Marte",
+          "Júpiter"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "baby_bones",
@@ -95,7 +185,37 @@
         ],
         "answer": 1
       },
-      "id": "baby_bones_3"
+      "id": "baby_bones_3",
+      "zh": {
+        "question": "成年人有多少块骨头？",
+        "options": [
+          "106",
+          "206",
+          "306",
+          "406"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "어른의 뼈는 모두 몇 개일까요?",
+        "options": [
+          "106개",
+          "206개",
+          "306개",
+          "406개"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántos huesos tiene un adulto?",
+        "options": [
+          "106",
+          "206",
+          "306",
+          "406"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "baby_bones",
@@ -115,7 +235,31 @@
         ],
         "answer": 0
       },
-      "id": "baby_bones_4"
+      "id": "baby_bones_4",
+      "zh": {
+        "question": "婴儿和成年人，谁的骨头更多？",
+        "options": [
+          "婴儿",
+          "成年人"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "아기와 어른 중 누가 뼈가 더 많을까요?",
+        "options": [
+          "아기",
+          "어른"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Quién tiene más huesos: un bebé o un adulto?",
+        "options": [
+          "Un bebé",
+          "Un adulto"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "giraffe_seven_vertebrae",
@@ -139,7 +283,37 @@
         ],
         "answer": 1
       },
-      "id": "giraffe_seven_vertebrae_5"
+      "id": "giraffe_seven_vertebrae_5",
+      "zh": {
+        "question": "长颈鹿有多少块颈骨？",
+        "options": [
+          "3",
+          "7",
+          "14",
+          "30"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "기린의 목뼈는 몇 개일까요?",
+        "options": [
+          "3개",
+          "7개",
+          "14개",
+          "30개"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántos huesos tiene una jirafa en el cuello?",
+        "options": [
+          "3",
+          "7",
+          "14",
+          "30"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "sea_otters_hold_hands",
@@ -163,7 +337,37 @@
         ],
         "answer": 0
       },
-      "id": "sea_otters_hold_hands_6"
+      "id": "sea_otters_hold_hands_6",
+      "zh": {
+        "question": "海獭睡觉时为了不漂散会做什么？",
+        "options": [
+          "手拉手",
+          "爬上岩石",
+          "潜入水下",
+          "躲进窝里"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "해달은 떠내려가지 않으려고 잘 때 무엇을 할까요?",
+        "options": [
+          "손을 잡는다",
+          "바위에 올라간다",
+          "물속으로 잠수한다",
+          "둥지에 숨는다"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué hacen las nutrias marinas mientras duermen para no alejarse unas de otras?",
+        "options": [
+          "Se dan la mano",
+          "Se suben a una roca",
+          "Se sumergen",
+          "Se esconden en un nido"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "no_sound_in_space",
@@ -187,7 +391,37 @@
         ],
         "answer": 0
       },
-      "id": "no_sound_in_space_7"
+      "id": "no_sound_in_space_7",
+      "zh": {
+        "question": "什么东西无法在太空中传播？",
+        "options": [
+          "声音",
+          "光",
+          "无线电波",
+          "来自太阳的热"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "우주 공간을 지나갈 수 없는 것은 무엇일까요?",
+        "options": [
+          "소리",
+          "빛",
+          "전파",
+          "태양의 열"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué no puede viajar por el espacio exterior?",
+        "options": [
+          "El sonido",
+          "La luz",
+          "Las ondas de radio",
+          "El calor del Sol"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "ice_floats",
@@ -211,7 +445,37 @@
         ],
         "answer": 0
       },
-      "id": "ice_floats_8"
+      "id": "ice_floats_8",
+      "zh": {
+        "question": "冰为什么会浮在水面上？",
+        "options": [
+          "它比水轻",
+          "它很冷",
+          "它是白色的",
+          "它很硬"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "얼음은 왜 물에 뜰까요?",
+        "options": [
+          "물보다 가벼워서",
+          "차가워서",
+          "하얘서",
+          "딱딱해서"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Por qué flota el hielo en el agua?",
+        "options": [
+          "Es más ligero que el agua",
+          "Está frío",
+          "Es blanco",
+          "Es duro"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "moon_moving_away",
@@ -235,7 +499,37 @@
         ],
         "answer": 0
       },
-      "id": "moon_moving_away_9"
+      "id": "moon_moving_away_9",
+      "zh": {
+        "question": "月球相对于地球正在慢慢做什么？",
+        "options": [
+          "远离",
+          "靠近",
+          "保持不变",
+          "飞散出去"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "달은 지구에 대해 천천히 무엇을 하고 있을까요?",
+        "options": [
+          "멀어지고 있다",
+          "가까워지고 있다",
+          "그대로 있다",
+          "튕겨 나가고 있다"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué hace lentamente la Luna con respecto a la Tierra?",
+        "options": [
+          "Se aleja",
+          "Se acerca",
+          "Se queda igual",
+          "Sale despedida"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "sunlight_8_minutes",
@@ -259,7 +553,37 @@
         ],
         "answer": 1
       },
-      "id": "sunlight_8_minutes_10"
+      "id": "sunlight_8_minutes_10",
+      "zh": {
+        "question": "阳光到达地球需要多长时间？",
+        "options": [
+          "8秒",
+          "8分钟",
+          "8小时",
+          "8天"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "햇빛이 지구에 닿는 데 얼마나 걸릴까요?",
+        "options": [
+          "8초",
+          "8분",
+          "8시간",
+          "8일"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuánto tarda la luz del Sol en llegar a la Tierra?",
+        "options": [
+          "8 segundos",
+          "8 minutos",
+          "8 horas",
+          "8 días"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "heart_100k",
@@ -283,7 +607,37 @@
         ],
         "answer": 3
       },
-      "id": "heart_100k_11"
+      "id": "heart_100k_11",
+      "zh": {
+        "question": "心脏一天大约跳动多少次？",
+        "options": [
+          "100",
+          "1,000",
+          "10,000",
+          "100,000"
+        ],
+        "answer": 3
+      },
+      "ko": {
+        "question": "심장은 하루에 대략 몇 번 뛸까요?",
+        "options": [
+          "100번",
+          "1,000번",
+          "10,000번",
+          "100,000번"
+        ],
+        "answer": 3
+      },
+      "es": {
+        "question": "¿Cuántas veces late el corazón en un día, aproximadamente?",
+        "options": [
+          "100",
+          "1000",
+          "10 000",
+          "100 000"
+        ],
+        "answer": 3
+      }
     },
     {
       "factId": "antarctica_desert",
@@ -307,7 +661,37 @@
         ],
         "answer": 2
       },
-      "id": "antarctica_desert_12"
+      "id": "antarctica_desert_12",
+      "zh": {
+        "question": "世界上最大的沙漠是哪个？",
+        "options": [
+          "撒哈拉沙漠",
+          "戈壁沙漠",
+          "南极洲",
+          "阿拉伯沙漠"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "세계에서 가장 큰 사막은 어디일까요?",
+        "options": [
+          "사하라",
+          "고비",
+          "남극",
+          "아라비아"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuál es el desierto más grande del mundo?",
+        "options": [
+          "El Sahara",
+          "El Gobi",
+          "La Antártida",
+          "El Arábigo"
+        ],
+        "answer": 2
+      }
     },
     {
       "factId": "japan_islands",
@@ -331,7 +715,37 @@
         ],
         "answer": 2
       },
-      "id": "japan_islands_13"
+      "id": "japan_islands_13",
+      "zh": {
+        "question": "日本大约有多少个岛屿？",
+        "options": [
+          "约100个",
+          "约1,000个",
+          "约14,000个",
+          "约100,000个"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "일본에는 섬이 대략 몇 개 있을까요?",
+        "options": [
+          "약 100개",
+          "약 1,000개",
+          "약 14,000개",
+          "약 100,000개"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuántas islas tiene Japón, aproximadamente?",
+        "options": [
+          "Unas 100",
+          "Unas 1000",
+          "Unas 14 000",
+          "Unas 100 000"
+        ],
+        "answer": 2
+      }
     },
     {
       "factId": "spider_not_insect",
@@ -355,7 +769,37 @@
         ],
         "answer": 0
       },
-      "id": "spider_not_insect_14"
+      "id": "spider_not_insect_14",
+      "zh": {
+        "question": "下面哪一个不是昆虫？",
+        "options": [
+          "蜘蛛",
+          "蚂蚁",
+          "蝴蝶",
+          "蜜蜂"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "다음 중 곤충이 아닌 것은 무엇일까요?",
+        "options": [
+          "거미",
+          "개미",
+          "나비",
+          "벌"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuál de estos NO es un insecto?",
+        "options": [
+          "La araña",
+          "La hormiga",
+          "La mariposa",
+          "La abeja"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "mosquito_female_bites",
@@ -379,7 +823,37 @@
         ],
         "answer": 1
       },
-      "id": "mosquito_female_bites_15"
+      "id": "mosquito_female_bites_15",
+      "zh": {
+        "question": "哪种蚊子会叮人吸血？",
+        "options": [
+          "雄蚊",
+          "雌蚊",
+          "雌雄都会",
+          "只有幼蚊"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "피를 마시려고 사람을 무는 모기는 어느 쪽일까요?",
+        "options": [
+          "수컷",
+          "암컷",
+          "둘 다",
+          "아기 모기만"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué mosquitos pican a las personas para beber sangre?",
+        "options": [
+          "Los machos",
+          "Las hembras",
+          "Ambos",
+          "Solo las crías"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "beetle_quarter",
@@ -403,7 +877,37 @@
         ],
         "answer": 2
       },
-      "id": "beetle_quarter_16"
+      "id": "beetle_quarter_16",
+      "zh": {
+        "question": "哪一类动物的种类最多？",
+        "options": [
+          "哺乳动物",
+          "鱼类",
+          "甲虫",
+          "鸟类"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "종류가 가장 많은 동물 무리는 무엇일까요?",
+        "options": [
+          "포유류",
+          "어류",
+          "딱정벌레",
+          "조류"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué grupo de animales tiene más clases?",
+        "options": [
+          "Los mamíferos",
+          "Los peces",
+          "Los escarabajos",
+          "Las aves"
+        ],
+        "answer": 2
+      }
     },
     {
       "factId": "shinkansen_1964",
@@ -427,7 +931,37 @@
         ],
         "answer": 1
       },
-      "id": "shinkansen_1964_17"
+      "id": "shinkansen_1964_17",
+      "zh": {
+        "question": "新干线是哪一年开始运行的？",
+        "options": [
+          "1924年",
+          "1964年",
+          "1984年",
+          "2004年"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "신칸센이 달리기 시작한 해는 언제일까요?",
+        "options": [
+          "1924년",
+          "1964년",
+          "1984년",
+          "2004년"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿En qué año empezó a funcionar el Shinkansen?",
+        "options": [
+          "1924",
+          "1964",
+          "1984",
+          "2004"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "wright_first_flight",
@@ -451,7 +985,37 @@
         ],
         "answer": 0
       },
-      "id": "wright_first_flight_18"
+      "id": "wright_first_flight_18",
+      "zh": {
+        "question": "莱特兄弟的首次飞行持续了多长时间？",
+        "options": [
+          "12秒",
+          "12分钟",
+          "12小时",
+          "1秒"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "라이트 형제의 첫 비행은 얼마 동안이었을까요?",
+        "options": [
+          "12초",
+          "12분",
+          "12시간",
+          "1초"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuánto duró el primer vuelo de los hermanos Wright?",
+        "options": [
+          "12 segundos",
+          "12 minutos",
+          "12 horas",
+          "1 segundo"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "iss_sunrises",
@@ -475,7 +1039,37 @@
         ],
         "answer": 0
       },
-      "id": "iss_sunrises_19"
+      "id": "iss_sunrises_19",
+      "zh": {
+        "question": "国际空间站绕地球一圈需要多长时间？",
+        "options": [
+          "90分钟",
+          "9分钟",
+          "9小时",
+          "90天"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "국제우주정거장이 지구를 한 바퀴 도는 데 얼마나 걸릴까요?",
+        "options": [
+          "90분",
+          "9분",
+          "9시간",
+          "90일"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuánto tarda la EEI en dar una vuelta a la Tierra?",
+        "options": [
+          "90 minutos",
+          "9 minutos",
+          "9 horas",
+          "90 días"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "watermelon_92_water",
@@ -499,7 +1093,37 @@
         ],
         "answer": 3
       },
-      "id": "watermelon_92_water_20"
+      "id": "watermelon_92_water_20",
+      "zh": {
+        "question": "西瓜里有多少是水？",
+        "options": [
+          "12%",
+          "42%",
+          "72%",
+          "92%"
+        ],
+        "answer": 3
+      },
+      "ko": {
+        "question": "수박의 얼마만큼이 물일까요?",
+        "options": [
+          "12%",
+          "42%",
+          "72%",
+          "92%"
+        ],
+        "answer": 3
+      },
+      "es": {
+        "question": "¿Cuánto de una sandía es agua?",
+        "options": [
+          "12 %",
+          "42 %",
+          "72 %",
+          "92 %"
+        ],
+        "answer": 3
+      }
     },
     {
       "factId": "peanut_not_nut",
@@ -523,7 +1147,37 @@
         ],
         "answer": 1
       },
-      "id": "peanut_not_nut_21"
+      "id": "peanut_not_nut_21",
+      "zh": {
+        "question": "花生属于哪个植物家族？",
+        "options": [
+          "坚果",
+          "豆类（豆科）",
+          "薯类",
+          "水果"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "땅콩은 어떤 식물 무리에 속할까요?",
+        "options": [
+          "견과류",
+          "콩과 식물",
+          "감자류",
+          "과일"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿A qué familia de plantas pertenece el cacahuete?",
+        "options": [
+          "Los frutos secos",
+          "Las legumbres",
+          "Las papas",
+          "Las frutas"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "apple_floats",
@@ -547,7 +1201,37 @@
         ],
         "answer": 0
       },
-      "id": "apple_floats_22"
+      "id": "apple_floats_22",
+      "zh": {
+        "question": "苹果为什么能浮在水上？",
+        "options": [
+          "里面含有空气",
+          "颜色很浅",
+          "很甜",
+          "个头很小"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "사과는 왜 물에 뜰까요?",
+        "options": [
+          "공기가 들어 있어서",
+          "색이 가벼워서",
+          "달아서",
+          "작아서"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Por qué flotan las manzanas en el agua?",
+        "options": [
+          "Contienen aire",
+          "Su color es claro",
+          "Son dulces",
+          "Son pequeñas"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "cicada_17_years",
@@ -571,7 +1255,37 @@
         ],
         "answer": 2
       },
-      "id": "cicada_17_years_23"
+      "id": "cicada_17_years_23",
+      "zh": {
+        "question": "有些蝉每隔多少年会一起钻出地面？",
+        "options": [
+          "3年",
+          "7年",
+          "17年",
+          "50年"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "어떤 매미들은 몇 년마다 한꺼번에 나올까요?",
+        "options": [
+          "3년",
+          "7년",
+          "17년",
+          "50년"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cada cuántos años salen todas juntas algunas cigarras?",
+        "options": [
+          "3 años",
+          "7 años",
+          "17 años",
+          "50 años"
+        ],
+        "answer": 2
+      }
     },
     {
       "factId": "bee_waggle_dance",
@@ -595,7 +1309,37 @@
         ],
         "answer": 0
       },
-      "id": "bee_waggle_dance_24"
+      "id": "bee_waggle_dance_24",
+      "zh": {
+        "question": "蜜蜂用来表示花在哪里的舞蹈是什么形状？",
+        "options": [
+          "八字形",
+          "圆形",
+          "方形",
+          "之字形"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "벌이 꽃의 위치를 알려 주려고 추는 춤은 어떤 모양일까요?",
+        "options": [
+          "8자",
+          "동그라미",
+          "네모",
+          "지그재그"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué forma tiene el baile que usan las abejas para mostrar dónde hay flores?",
+        "options": [
+          "Un ocho",
+          "Un círculo",
+          "Un cuadrado",
+          "Un zigzag"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "cats_no_sweet",
@@ -619,7 +1363,37 @@
         ],
         "answer": 0
       },
-      "id": "cats_no_sweet_25"
+      "id": "cats_no_sweet_25",
+      "zh": {
+        "question": "猫尝不出哪种味道？",
+        "options": [
+          "甜味",
+          "咸味",
+          "酸味",
+          "苦味"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "고양이가 느끼지 못하는 맛은 무엇일까요?",
+        "options": [
+          "단맛",
+          "짠맛",
+          "신맛",
+          "쓴맛"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué sabor NO pueden percibir los gatos?",
+        "options": [
+          "El dulce",
+          "El salado",
+          "El ácido",
+          "El amargo"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "eiffel_grows_summer",
@@ -643,7 +1417,37 @@
         ],
         "answer": 0
       },
-      "id": "eiffel_grows_summer_26"
+      "id": "eiffel_grows_summer_26",
+      "zh": {
+        "question": "夏天埃菲尔铁塔会发生什么变化？",
+        "options": [
+          "会长高一点",
+          "会变矮一点",
+          "没有变化",
+          "会弯曲"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "여름에 에펠탑에는 무슨 일이 생길까요?",
+        "options": [
+          "조금 더 높아진다",
+          "조금 더 낮아진다",
+          "아무 일도 없다",
+          "휘어진다"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué le pasa a la torre Eiffel en verano?",
+        "options": [
+          "Crece un poco",
+          "Se encoge un poco",
+          "Nada",
+          "Se dobla"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "saturn_would_float",
@@ -667,7 +1471,37 @@
         ],
         "answer": 0
       },
-      "id": "saturn_would_float_27"
+      "id": "saturn_would_float_27",
+      "zh": {
+        "question": "哪颗行星能浮在巨大的浴缸里？",
+        "options": [
+          "土星",
+          "地球",
+          "火星",
+          "水星"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "커다란 욕조에 넣으면 뜰 행성은 무엇일까요?",
+        "options": [
+          "토성",
+          "지구",
+          "화성",
+          "수성"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué planeta flotaría en una bañera gigante?",
+        "options": [
+          "Saturno",
+          "La Tierra",
+          "Marte",
+          "Mercurio"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "crows_recognize_faces",
@@ -691,7 +1525,37 @@
         ],
         "answer": 0
       },
-      "id": "crows_recognize_faces_28"
+      "id": "crows_recognize_faces_28",
+      "zh": {
+        "question": "哪种鸟以能记住人脸而闻名？",
+        "options": [
+          "乌鸦",
+          "企鹅",
+          "猫头鹰",
+          "鸵鸟"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "사람의 얼굴을 기억하는 것으로 유명한 새는 무엇일까요?",
+        "options": [
+          "까마귀",
+          "펭귄",
+          "올빼미",
+          "타조"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué ave es famosa por recordar las caras humanas?",
+        "options": [
+          "La corneja",
+          "El pingüino",
+          "El búho",
+          "El avestruz"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "wombat_cube_poop",
@@ -715,7 +1579,37 @@
         ],
         "answer": 0
       },
-      "id": "wombat_cube_poop_29"
+      "id": "wombat_cube_poop_29",
+      "zh": {
+        "question": "袋熊的粪便是什么形状的？",
+        "options": [
+          "立方体",
+          "圆形",
+          "细长形",
+          "星形"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "웜뱃의 똥은 어떤 모양일까요?",
+        "options": [
+          "정육면체",
+          "동그란 모양",
+          "길고 가는 모양",
+          "별 모양"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué forma tiene la caca del wombat?",
+        "options": [
+          "De cubo",
+          "Redonda",
+          "Larga y delgada",
+          "De estrella"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "sharks_older_than_trees",
@@ -735,7 +1629,31 @@
         ],
         "answer": 0
       },
-      "id": "sharks_older_than_trees_30"
+      "id": "sharks_older_than_trees_30",
+      "zh": {
+        "question": "鲨鱼和树木，哪个出现得更早？",
+        "options": [
+          "鲨鱼",
+          "树木"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "상어와 나무 중 어느 쪽이 먼저 나타났을까요?",
+        "options": [
+          "상어",
+          "나무"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué apareció primero: los tiburones o los árboles?",
+        "options": [
+          "Los tiburones",
+          "Los árboles"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "dragonfly_before_dinosaurs",
@@ -755,7 +1673,31 @@
         ],
         "answer": 0
       },
-      "id": "dragonfly_before_dinosaurs_31"
+      "id": "dragonfly_before_dinosaurs_31",
+      "zh": {
+        "question": "蜻蜓的近亲和恐龙，哪个出现得更早？",
+        "options": [
+          "蜻蜓的近亲",
+          "恐龙"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "잠자리의 친척과 공룡 중 어느 쪽이 먼저 나타났을까요?",
+        "options": [
+          "잠자리의 친척",
+          "공룡"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué apareció primero: los parientes de las libélulas o los dinosaurios?",
+        "options": [
+          "Los parientes de las libélulas",
+          "Los dinosaurios"
+        ],
+        "answer": 0
+      }
     },
     {
       "factId": "penguin_huddle",
@@ -777,7 +1719,34 @@
         ],
         "answer": 1
       },
-      "id": "penguin_huddle_0"
+      "id": "penguin_huddle_0",
+      "zh": {
+        "question": "帝企鹅在冬天是怎么保暖的？",
+        "options": [
+          "独自睡觉",
+          "挤在一起",
+          "潜入海里"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "황제펭귄은 겨울에 어떻게 따뜻하게 지낼까요?",
+        "options": [
+          "혼자 잔다",
+          "모여서 붙어 있는다",
+          "바다에 뛰어든다"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo se mantienen calientes los pingüinos emperador en invierno?",
+        "options": [
+          "Duermen solos",
+          "Se juntan",
+          "Se zambullen en el mar"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "camel_hump_fat",
@@ -799,7 +1768,34 @@
         ],
         "answer": 1
       },
-      "id": "camel_hump_fat_0"
+      "id": "camel_hump_fat_0",
+      "zh": {
+        "question": "骆驼的驼峰里是什么？",
+        "options": [
+          "水",
+          "脂肪",
+          "骨头"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "낙타의 혹 속에는 무엇이 들어 있을까요?",
+        "options": [
+          "물",
+          "지방",
+          "뼈"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué hay dentro de la joroba de un camello?",
+        "options": [
+          "Agua",
+          "Grasa",
+          "Hueso"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "owl_head_turn",
@@ -821,7 +1817,34 @@
         ],
         "answer": 1
       },
-      "id": "owl_head_turn_0"
+      "id": "owl_head_turn_0",
+      "zh": {
+        "question": "猫头鹰是怎么看身后的？",
+        "options": [
+          "转动眼珠",
+          "转动脑袋",
+          "绕着飞一圈"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "올빼미는 어떻게 뒤를 볼까요?",
+        "options": [
+          "눈을 움직인다",
+          "고개를 돌린다",
+          "빙 돌아서 난다"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo mira un búho hacia atrás?",
+        "options": [
+          "Mueve los ojos",
+          "Gira la cabeza",
+          "Da la vuelta volando"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "bat_echolocation",
@@ -843,7 +1866,34 @@
         ],
         "answer": 1
       },
-      "id": "bat_echolocation_0"
+      "id": "bat_echolocation_0",
+      "zh": {
+        "question": "蝙蝠靠什么来找东西？",
+        "options": [
+          "气味",
+          "反弹的声音",
+          "光"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "박쥐는 무엇을 이용해 물건을 찾을까요?",
+        "options": [
+          "냄새",
+          "튕겨 오는 소리",
+          "빛"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué usa un murciélago para encontrar cosas?",
+        "options": [
+          "El olfato",
+          "El sonido que rebota",
+          "La luz"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "snow_hexagon",
@@ -865,7 +1915,34 @@
         ],
         "answer": 1
       },
-      "id": "snow_hexagon_0"
+      "id": "snow_hexagon_0",
+      "zh": {
+        "question": "雪花晶体通常有几条边？",
+        "options": [
+          "三条",
+          "六条",
+          "是圆的"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "눈 결정은 보통 모서리가 몇 개일까요?",
+        "options": [
+          "세 개",
+          "여섯 개",
+          "동그랗다"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántos lados suele tener un cristal de nieve?",
+        "options": [
+          "Tres",
+          "Seis",
+          "Es redondo"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "maple_red",
@@ -887,7 +1964,34 @@
         ],
         "answer": 2
       },
-      "id": "maple_red_0"
+      "id": "maple_red_0",
+      "zh": {
+        "question": "枫叶在什么时候变红？",
+        "options": [
+          "春天",
+          "夏天",
+          "秋天"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "단풍나무 잎은 언제 빨갛게 물들까요?",
+        "options": [
+          "봄",
+          "여름",
+          "가을"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuándo se ponen rojas las hojas de arce?",
+        "options": [
+          "En primavera",
+          "En verano",
+          "En otoño"
+        ],
+        "answer": 2
+      }
     },
     {
       "factId": "tree_rings",
@@ -909,7 +2013,34 @@
         ],
         "answer": 1
       },
-      "id": "tree_rings_0"
+      "id": "tree_rings_0",
+      "zh": {
+        "question": "数一数树的年轮能知道什么？",
+        "options": [
+          "高度",
+          "年龄",
+          "重量"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "나무의 나이테를 세면 무엇을 알 수 있을까요?",
+        "options": [
+          "키",
+          "나이",
+          "무게"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué indica contar los anillos de un árbol?",
+        "options": [
+          "La altura",
+          "La edad",
+          "El peso"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "fuji_3776",
@@ -931,7 +2062,34 @@
         ],
         "answer": 1
       },
-      "id": "fuji_3776_0"
+      "id": "fuji_3776_0",
+      "zh": {
+        "question": "富士山有多高？",
+        "options": [
+          "2,776米",
+          "3,776米",
+          "4,776米"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "후지산의 높이는 얼마일까요?",
+        "options": [
+          "2,776m",
+          "3,776m",
+          "4,776m"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué altura tiene el monte Fuji?",
+        "options": [
+          "2776 m",
+          "3776 m",
+          "4776 m"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "blink_times",
@@ -953,7 +2111,34 @@
         ],
         "answer": 1
       },
-      "id": "blink_times_0"
+      "id": "blink_times_0",
+      "zh": {
+        "question": "人每分钟大约眨眼多少次？",
+        "options": [
+          "1到2次",
+          "15到20次",
+          "100次"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "사람은 1분에 대략 몇 번 눈을 깜빡일까요?",
+        "options": [
+          "1~2번",
+          "15~20번",
+          "100번"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántas veces por minuto parpadean las personas, aproximadamente?",
+        "options": [
+          "De 1 a 2",
+          "De 15 a 20",
+          "100"
+        ],
+        "answer": 1
+      }
     },
     {
       "factId": "sunflower_sun",
@@ -975,7 +2160,34 @@
         ],
         "answer": 1
       },
-      "id": "sunflower_sun_0"
+      "id": "sunflower_sun_0",
+      "zh": {
+        "question": "幼小的向日葵会朝向什么？",
+        "options": [
+          "月亮",
+          "太阳",
+          "风"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "어린 해바라기는 무엇을 향해 몸을 돌릴까요?",
+        "options": [
+          "달",
+          "해",
+          "바람"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Hacia qué se giran los girasoles jóvenes?",
+        "options": [
+          "La luna",
+          "El sol",
+          "El viento"
+        ],
+        "answer": 1
+      }
     }
   ]
 }

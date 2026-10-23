@@ -10,6 +10,18 @@
       "en": {
         "statement": "An octopus has blue blood.",
         "answer": true
+      },
+      "zh": {
+        "statement": "章鱼的血是蓝色的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "문어의 피는 파란색이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un pulpo tiene sangre azul.",
+        "answer": true
       }
     },
     {
@@ -20,6 +32,18 @@
       },
       "en": {
         "statement": "Honey goes bad very quickly.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜂蜜很快就会变质。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "꿀은 아주 빨리 상해요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La miel se echa a perder muy rápido.",
         "answer": false
       }
     },
@@ -32,6 +56,18 @@
       "en": {
         "statement": "A strawberry counts as a berry in science.",
         "answer": false
+      },
+      "zh": {
+        "statement": "从科学上讲，草莓算是浆果。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "과학에서는 딸기도 베리로 봐요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Una fresa cuenta como baya en la ciencia.",
+        "answer": false
       }
     },
     {
@@ -42,6 +78,18 @@
       },
       "en": {
         "statement": "A day on Venus is longer than its year.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "金星上的一天比它的一年还长。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "금성은 하루가 일 년보다 길어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un día en Venus es más largo que su año.",
         "answer": true
       }
     },
@@ -54,6 +102,18 @@
       "en": {
         "statement": "Sharks appeared after trees did.",
         "answer": false
+      },
+      "zh": {
+        "statement": "鲨鱼出现的时间晚于树木。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "상어는 나무보다 나중에 나타났어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los tiburones aparecieron después que los árboles.",
+        "answer": false
       }
     },
     {
@@ -64,6 +124,18 @@
       },
       "en": {
         "statement": "Babies have fewer bones than grown-ups.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "婴儿的骨头比成年人少。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "아기는 어른보다 뼈가 적어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los bebés tienen menos huesos que los adultos.",
         "answer": false
       }
     },
@@ -76,6 +148,18 @@
       "en": {
         "statement": "A giraffe has seven neck bones.",
         "answer": true
+      },
+      "zh": {
+        "statement": "长颈鹿有七块颈骨。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "기린의 목뼈는 일곱 개예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una jirafa tiene siete huesos en el cuello.",
+        "answer": true
       }
     },
     {
@@ -86,6 +170,18 @@
       },
       "en": {
         "statement": "Lightning is cooler than the surface of the Sun.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "闪电的温度比太阳表面低。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "번개는 태양 표면보다 차가워요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El rayo es más frío que la superficie del Sol.",
         "answer": false
       }
     },
@@ -98,6 +194,18 @@
       "en": {
         "statement": "Sea otters sometimes hold hands when they sleep.",
         "answer": true
+      },
+      "zh": {
+        "statement": "海獭睡觉时有时会手拉手。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "해달은 잘 때 가끔 손을 잡아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "A veces las nutrias marinas se dan la mano cuando duermen.",
+        "answer": true
       }
     },
     {
@@ -108,6 +216,18 @@
       },
       "en": {
         "statement": "You can hear sounds well in space.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "在太空中可以清楚地听到声音。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "우주에서는 소리가 잘 들려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "En el espacio se oyen bien los sonidos.",
         "answer": false
       }
     },
@@ -120,6 +240,18 @@
       "en": {
         "statement": "Ice sinks in water.",
         "answer": false
+      },
+      "zh": {
+        "statement": "冰在水里会下沉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "얼음은 물에 가라앉아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El hielo se hunde en el agua.",
+        "answer": false
       }
     },
     {
@@ -130,6 +262,18 @@
       },
       "en": {
         "statement": "Wombat poop is shaped like cubes.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "袋熊的粪便是立方体形状的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "웜뱃의 똥은 네모난 모양이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La caca del wombat tiene forma de cubos.",
         "answer": true
       }
     },
@@ -142,6 +286,18 @@
       "en": {
         "statement": "The Moon is slowly moving away from Earth.",
         "answer": true
+      },
+      "zh": {
+        "statement": "月球正在慢慢远离地球。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "달은 지구에서 천천히 멀어지고 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La Luna se aleja lentamente de la Tierra.",
+        "answer": true
       }
     },
     {
@@ -152,6 +308,18 @@
       },
       "en": {
         "statement": "Butterflies taste with their feet.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蝴蝶用脚来尝味道。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나비는 발로 맛을 봐요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las mariposas saborean con las patas.",
         "answer": true
       }
     },
@@ -164,6 +332,18 @@
       "en": {
         "statement": "Cats can taste sweet things.",
         "answer": false
+      },
+      "zh": {
+        "statement": "猫能尝出甜味。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "고양이는 단맛을 느낄 수 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los gatos pueden sentir el sabor dulce.",
+        "answer": false
       }
     },
     {
@@ -174,6 +354,18 @@
       },
       "en": {
         "statement": "Sunlight reaches Earth in one second.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "阳光一秒钟就能到达地球。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "햇빛은 1초 만에 지구에 닿아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La luz del Sol llega a la Tierra en un segundo.",
         "answer": false
       }
     },
@@ -186,6 +378,18 @@
       "en": {
         "statement": "Saturn is light enough to float on water.",
         "answer": true
+      },
+      "zh": {
+        "statement": "土星轻得可以浮在水面上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "토성은 물에 뜰 만큼 가벼워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Saturno es lo bastante ligero para flotar en el agua.",
+        "answer": true
       }
     },
     {
@@ -196,6 +400,18 @@
       },
       "en": {
         "statement": "The Eiffel Tower gets a bit taller in winter.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "埃菲尔铁塔在冬天会长高一点。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "에펠탑은 겨울에 조금 더 높아져요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La torre Eiffel se hace un poco más alta en invierno.",
         "answer": false
       }
     },
@@ -208,6 +424,18 @@
       "en": {
         "statement": "Your heart beats about 100,000 times a day.",
         "answer": true
+      },
+      "zh": {
+        "statement": "你的心脏一天大约跳动10万次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "심장은 하루에 약 10만 번 뛰어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tu corazón late unas 100 000 veces al día.",
+        "answer": true
       }
     },
     {
@@ -218,6 +446,18 @@
       },
       "en": {
         "statement": "Some bamboo grows about a meter in one day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "有些竹子一天能长高大约一米。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 대나무는 하루에 1미터쯤 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Algunos bambúes crecen cerca de un metro en un día.",
         "answer": true
       }
     },
@@ -230,6 +470,18 @@
       "en": {
         "statement": "Crows can remember people's faces.",
         "answer": true
+      },
+      "zh": {
+        "statement": "乌鸦能记住人的面孔。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "까마귀는 사람의 얼굴을 기억할 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las cornejas pueden recordar las caras de las personas.",
+        "answer": true
       }
     },
     {
@@ -240,6 +492,18 @@
       },
       "en": {
         "statement": "A rainbow is really shaped like a square.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "彩虹其实是正方形的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "무지개는 사실 네모난 모양이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un arcoíris tiene en realidad forma de cuadrado.",
         "answer": false
       }
     },
@@ -252,6 +516,18 @@
       "en": {
         "statement": "Elephants talk in low sounds that people cannot hear.",
         "answer": true
+      },
+      "zh": {
+        "statement": "大象用人类听不到的低沉声音交流。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "코끼리는 사람이 들을 수 없는 낮은 소리로 이야기해요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los elefantes hablan con sonidos graves que las personas no pueden oír.",
+        "answer": true
       }
     },
     {
@@ -262,6 +538,18 @@
       },
       "en": {
         "statement": "Dolphins sleep with their whole brain at once.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "海豚睡觉时整个大脑同时入睡。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "돌고래는 뇌 전체가 한꺼번에 자요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los delfines duermen con todo el cerebro a la vez.",
         "answer": false
       }
     },
@@ -274,6 +562,18 @@
       "en": {
         "statement": "The biggest desert in the world is Antarctica.",
         "answer": true
+      },
+      "zh": {
+        "statement": "世界上最大的沙漠是南极洲。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세계에서 가장 큰 사막은 남극이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El desierto más grande del mundo es la Antártida.",
+        "answer": true
       }
     },
     {
@@ -284,6 +584,18 @@
       },
       "en": {
         "statement": "Koalas have fingerprints too.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "考拉也有指纹。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "코알라에게도 지문이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los koalas también tienen huellas dactilares.",
         "answer": true
       }
     },
@@ -296,6 +608,18 @@
       "en": {
         "statement": "An ant can carry ten times its own weight.",
         "answer": true
+      },
+      "zh": {
+        "statement": "蚂蚁能搬运相当于自身体重十倍的东西。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "개미는 자기 몸무게의 열 배를 나를 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una hormiga puede cargar diez veces su propio peso.",
+        "answer": true
       }
     },
     {
@@ -306,6 +630,18 @@
       },
       "en": {
         "statement": "Dragonfly relatives appeared after the dinosaurs.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜻蜓的近亲出现在恐龙之后。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "잠자리의 친척은 공룡보다 나중에 나타났어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los parientes de las libélulas aparecieron después de los dinosaurios.",
         "answer": false
       }
     },
@@ -318,6 +654,18 @@
       "en": {
         "statement": "A firefly's light is too hot to touch.",
         "answer": false
+      },
+      "zh": {
+        "statement": "萤火虫的光烫得不能碰。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "반딧불이의 빛은 너무 뜨거워서 만질 수 없어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La luz de una luciérnaga está demasiado caliente para tocarla.",
+        "answer": false
       }
     },
     {
@@ -328,6 +676,18 @@
       },
       "en": {
         "statement": "Honeybees dance to show where flowers are.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蜜蜂通过跳舞来表示花在哪里。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "꿀벌은 꽃이 어디 있는지 알려 주려고 춤을 춰요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las abejas melíferas bailan para mostrar dónde hay flores.",
         "answer": true
       }
     },
@@ -340,6 +700,18 @@
       "en": {
         "statement": "Only female mosquitoes bite people.",
         "answer": true
+      },
+      "zh": {
+        "statement": "只有雌蚊子才会叮人。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "사람을 무는 건 암컷 모기뿐이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Solo las hembras de mosquito pican a las personas.",
+        "answer": true
       }
     },
     {
@@ -350,6 +722,18 @@
       },
       "en": {
         "statement": "A spider is an insect.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜘蛛是昆虫。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "거미는 곤충이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Una araña es un insecto.",
         "answer": false
       }
     },
@@ -362,6 +746,18 @@
       "en": {
         "statement": "About a quarter of all animals are beetles.",
         "answer": true
+      },
+      "zh": {
+        "statement": "所有动物中大约四分之一是甲虫。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "모든 동물 중 약 4분의 1이 딱정벌레예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Cerca de una cuarta parte de todos los animales son escarabajos.",
+        "answer": true
       }
     },
     {
@@ -372,6 +768,18 @@
       },
       "en": {
         "statement": "Some cicadas stay underground for 17 years.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "有些蝉会在地下待17年。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 매미는 17년 동안 땅속에 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Algunas cigarras pasan 17 años bajo tierra.",
         "answer": true
       }
     },
@@ -384,6 +792,18 @@
       "en": {
         "statement": "Dung beetles use the Milky Way to find their way.",
         "answer": true
+      },
+      "zh": {
+        "statement": "蜣螂利用银河来辨别方向。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "쇠똥구리는 은하수를 보고 길을 찾아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los escarabajos peloteros usan la Vía Láctea para encontrar su camino.",
+        "answer": true
       }
     },
     {
@@ -394,6 +814,18 @@
       },
       "en": {
         "statement": "A silkworm cocoon is made of one long thread.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "一个蚕茧是由一根长长的丝构成的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "누에고치는 긴 실 한 가닥으로 만들어져요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El capullo de un gusano de seda está hecho de un solo hilo largo.",
         "answer": true
       }
     },
@@ -406,6 +838,18 @@
       "en": {
         "statement": "The Shinkansen started running in 1964.",
         "answer": true
+      },
+      "zh": {
+        "statement": "新干线于1964年开始运行。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "신칸센은 1964년에 달리기 시작했어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El Shinkansen empezó a funcionar en 1964.",
+        "answer": true
       }
     },
     {
@@ -416,6 +860,18 @@
       },
       "en": {
         "statement": "It is very cold outside where airplanes fly.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "飞机飞行的高度，外面非常寒冷。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "비행기가 나는 곳은 바깥이 아주 추워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Hace mucho frío fuera, donde vuelan los aviones.",
         "answer": true
       }
     },
@@ -428,6 +884,18 @@
       "en": {
         "statement": "The first airplane flew for a whole hour.",
         "answer": false
+      },
+      "zh": {
+        "statement": "第一架飞机飞行了整整一个小时。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "최초의 비행기는 한 시간 내내 날았어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El primer avión voló durante una hora entera.",
+        "answer": false
       }
     },
     {
@@ -438,6 +906,18 @@
       },
       "en": {
         "statement": "Asia's first subway was built in Tokyo.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "亚洲第一条地铁建在东京。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "아시아 최초의 지하철은 도쿄에 만들어졌어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El primer metro de Asia se construyó en Tokio.",
         "answer": true
       }
     },
@@ -450,6 +930,18 @@
       "en": {
         "statement": "A steel ship floats because it has air inside.",
         "answer": true
+      },
+      "zh": {
+        "statement": "钢铁船能浮起来，是因为里面有空气。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "강철 배는 속에 공기가 있어서 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un barco de acero flota porque tiene aire por dentro.",
+        "answer": true
       }
     },
     {
@@ -460,6 +952,18 @@
       },
       "en": {
         "statement": "A maglev train floats a little using magnets.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "磁悬浮列车借助磁铁会稍微浮起来。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "자기부상열차는 자석의 힘으로 살짝 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un tren maglev flota un poco gracias a imanes.",
         "answer": true
       }
     },
@@ -472,6 +976,18 @@
       "en": {
         "statement": "Airplane windows have a tiny hole.",
         "answer": true
+      },
+      "zh": {
+        "statement": "飞机的舷窗上有一个小孔。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "비행기 창문에는 아주 작은 구멍이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las ventanillas de los aviones tienen un agujerito.",
+        "answer": true
       }
     },
     {
@@ -482,6 +998,18 @@
       },
       "en": {
         "statement": "On the space station, the Sun rises about 16 times a day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "在空间站上，太阳一天大约升起16次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "우주정거장에서는 하루에 해가 약 16번 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "En la estación espacial, el Sol sale unas 16 veces al día.",
         "answer": true
       }
     },
@@ -494,6 +1022,18 @@
       "en": {
         "statement": "A watermelon is almost all water.",
         "answer": true
+      },
+      "zh": {
+        "statement": "西瓜几乎全是水。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "수박은 거의 다 물이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una sandía es casi toda agua.",
+        "answer": true
       }
     },
     {
@@ -504,6 +1044,18 @@
       },
       "en": {
         "statement": "Long ago, cacao beans were used like money.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "很久以前，可可豆曾被当作货币使用。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "아주 옛날에는 카카오 열매를 돈처럼 썼어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Hace mucho tiempo, los granos de cacao se usaban como dinero.",
         "answer": true
       }
     },
@@ -516,6 +1068,18 @@
       "en": {
         "statement": "Long ago, all carrots were orange.",
         "answer": false
+      },
+      "zh": {
+        "statement": "很久以前，所有的胡萝卜都是橙色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "아주 옛날에는 모든 당근이 주황색이었어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Hace mucho tiempo, todas las zanahorias eran anaranjadas.",
+        "answer": false
       }
     },
     {
@@ -526,6 +1090,18 @@
       },
       "en": {
         "statement": "Peanuts grow underground.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "花生长在地下。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "땅콩은 땅속에서 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los cacahuetes crecen bajo tierra.",
         "answer": true
       }
     },
@@ -538,6 +1114,18 @@
       "en": {
         "statement": "You can eat a pineapple one week after planting it.",
         "answer": false
+      },
+      "zh": {
+        "statement": "菠萝种下一周后就能吃。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "파인애플은 심고 일주일 뒤에 먹을 수 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Puedes comer una piña una semana después de plantarla.",
+        "answer": false
       }
     },
     {
@@ -548,6 +1136,18 @@
       },
       "en": {
         "statement": "Apples sink in water.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "苹果在水里会下沉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "사과는 물에 가라앉아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las manzanas se hunden en el agua.",
         "answer": false
       }
     },
@@ -560,6 +1160,18 @@
       "en": {
         "statement": "Popcorn pops because the water inside turns to steam.",
         "answer": true
+      },
+      "zh": {
+        "statement": "爆米花会爆开，是因为里面的水变成了水蒸气。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "팝콘은 속의 물이 수증기가 되어서 튀어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las palomitas estallan porque el agua de dentro se convierte en vapor.",
+        "answer": true
       }
     },
     {
@@ -570,6 +1182,18 @@
       },
       "en": {
         "statement": "The little dots on a strawberry are real fruits.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "草莓表面的小点点是真正的果实。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "딸기에 있는 작은 점들은 진짜 열매예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los puntitos de una fresa son frutos de verdad.",
         "answer": true
       }
     },
@@ -582,6 +1206,18 @@
       "en": {
         "statement": "Emperor penguins huddle together to stay warm in winter.",
         "answer": true
+      },
+      "zh": {
+        "statement": "帝企鹅在冬天会挤在一起取暖。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "황제펭귄은 겨울에 따뜻하게 지내려고 모여 붙어 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los pingüinos emperador se juntan para darse calor en invierno.",
+        "answer": true
       }
     },
     {
@@ -592,6 +1228,18 @@
       },
       "en": {
         "statement": "An owl moves its eyes around to look behind it.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "猫头鹰转动眼珠来看身后。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "올빼미는 뒤를 보려고 눈을 굴려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un búho mueve los ojos de un lado a otro para mirar hacia atrás.",
         "answer": false
       }
     },
@@ -604,6 +1252,18 @@
       "en": {
         "statement": "A camel's hump stores fat.",
         "answer": true
+      },
+      "zh": {
+        "statement": "骆驼的驼峰里储存着脂肪。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "낙타의 혹에는 지방이 저장돼 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La joroba de un camello guarda grasa.",
+        "answer": true
       }
     },
     {
@@ -614,6 +1274,18 @@
       },
       "en": {
         "statement": "Sloths move very slowly.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "树懒的动作非常缓慢。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나무늘보는 아주 느리게 움직여요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los perezosos se mueven muy despacio.",
         "answer": true
       }
     },
@@ -626,6 +1298,18 @@
       "en": {
         "statement": "Salmon return to the river where they were born to lay eggs.",
         "answer": true
+      },
+      "zh": {
+        "statement": "鲑鱼会回到自己出生的河流产卵。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "연어는 알을 낳으려고 태어난 강으로 돌아와요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los salmones regresan al río donde nacieron para poner huevos.",
+        "answer": true
       }
     },
     {
@@ -636,6 +1320,18 @@
       },
       "en": {
         "statement": "Squirrels always eat every acorn they bury.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "松鼠总会把埋起来的橡果全部吃掉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "다람쥐는 묻은 도토리를 언제나 모두 먹어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las ardillas siempre se comen todas las bellotas que entierran.",
         "answer": false
       }
     },
@@ -648,6 +1344,18 @@
       "en": {
         "statement": "Bats use bouncing sound to find where things are.",
         "answer": true
+      },
+      "zh": {
+        "statement": "蝙蝠利用反弹回来的声音来确定物体的位置。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "박쥐는 튕겨 오는 소리로 물건이 어디 있는지 알아내요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los murciélagos usan el sonido que rebota para saber dónde están las cosas.",
+        "answer": true
       }
     },
     {
@@ -658,6 +1366,18 @@
       },
       "en": {
         "statement": "The number of spots on a ladybug depends on its kind.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "瓢虫身上斑点的数量取决于它的种类。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "무당벌레의 점 개수는 종류에 따라 달라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La cantidad de puntos de una mariquita depende de su clase.",
         "answer": true
       }
     },
@@ -670,6 +1390,18 @@
       "en": {
         "statement": "Crickets make sound by rubbing their wings together.",
         "answer": true
+      },
+      "zh": {
+        "statement": "蟋蟀通过摩擦翅膀来发出声音。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "귀뚜라미는 날개를 비벼서 소리를 내요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los grillos producen sonido frotando las alas.",
+        "answer": true
       }
     },
     {
@@ -680,6 +1412,18 @@
       },
       "en": {
         "statement": "The very first bicycles had no pedals.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "最早的自行车没有踏板。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "맨 처음 자전거에는 페달이 없었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las primerísimas bicicletas no tenían pedales.",
         "answer": true
       }
     },
@@ -692,6 +1436,18 @@
       "en": {
         "statement": "An airplane's black box is jet black in color.",
         "answer": false
+      },
+      "zh": {
+        "statement": "飞机的黑匣子是纯黑色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "비행기의 블랙박스는 새까만 색이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La caja negra de un avión es de color negro azabache.",
+        "answer": false
       }
     },
     {
@@ -702,6 +1458,18 @@
       },
       "en": {
         "statement": "The Shinkansen's shape was inspired by a kingfisher's beak.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "新干线的车头形状灵感来自翠鸟的喙。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "신칸센의 모양은 물총새의 부리에서 아이디어를 얻었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La forma del Shinkansen se inspiró en el pico de un martín pescador.",
         "answer": true
       }
     },
@@ -714,6 +1482,18 @@
       "en": {
         "statement": "Most snow crystals are six-sided.",
         "answer": true
+      },
+      "zh": {
+        "statement": "大多数雪花晶体是六边形的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "대부분의 눈 결정은 여섯 모서리예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mayoría de los cristales de nieve tienen seis lados.",
+        "answer": true
       }
     },
     {
@@ -724,6 +1504,18 @@
       },
       "en": {
         "statement": "Your skin can get goosebumps when you are cold.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "冷的时候，你的皮肤会起鸡皮疙瘩。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "추울 때 피부에 닭살이 돋을 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tu piel puede ponerse de gallina cuando tienes frío.",
         "answer": true
       }
     },
@@ -736,6 +1528,18 @@
       "en": {
         "statement": "Maple leaves turn their reddest in summer.",
         "answer": false
+      },
+      "zh": {
+        "statement": "枫叶在夏天红得最鲜艳。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "단풍나무 잎은 여름에 가장 빨갛게 물들어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las hojas de arce se ponen más rojas en verano.",
+        "answer": false
       }
     },
     {
@@ -746,6 +1550,18 @@
       },
       "en": {
         "statement": "Counting a tree's rings tells you its age.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "数一数树的年轮就能知道它的年龄。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나무의 나이테를 세면 나이를 알 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Contar los anillos de un árbol indica su edad.",
         "answer": true
       }
     },
@@ -758,6 +1574,18 @@
       "en": {
         "statement": "Young sunflowers turn to follow the sun.",
         "answer": true
+      },
+      "zh": {
+        "statement": "幼小的向日葵会跟着太阳转动。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어린 해바라기는 해를 따라 몸을 돌려요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los girasoles jóvenes se giran para seguir al sol.",
+        "answer": true
       }
     },
     {
@@ -768,6 +1596,18 @@
       },
       "en": {
         "statement": "You hear thunder before you see the lightning.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "你会先听到雷声，后看到闪电。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "천둥소리는 번개를 보기 전에 먼저 들려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Se oye el trueno antes de ver el rayo.",
         "answer": false
       }
     },
@@ -780,6 +1620,18 @@
       "en": {
         "statement": "Your nails grow a little every day.",
         "answer": true
+      },
+      "zh": {
+        "statement": "你的指甲每天都会长一点。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "손톱은 날마다 조금씩 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tus uñas crecen un poquito cada día.",
+        "answer": true
       }
     },
     {
@@ -790,6 +1642,18 @@
       },
       "en": {
         "statement": "The brain uses a lot of energy.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大脑消耗大量能量。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "뇌는 에너지를 많이 써요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El cerebro usa mucha energía.",
         "answer": true
       }
     },
@@ -802,6 +1666,18 @@
       "en": {
         "statement": "People blink many thousands of times a day.",
         "answer": true
+      },
+      "zh": {
+        "statement": "人每天眨眼好几千次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "사람은 하루에 수천 번 눈을 깜빡여요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las personas parpadean muchos miles de veces al día.",
+        "answer": true
       }
     },
     {
@@ -812,6 +1688,18 @@
       },
       "en": {
         "statement": "Mt. Fuji is the lowest mountain in Japan.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "富士山是日本最矮的山。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "후지산은 일본에서 가장 낮은 산이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El monte Fuji es la montaña más baja de Japón.",
         "answer": false
       }
     }

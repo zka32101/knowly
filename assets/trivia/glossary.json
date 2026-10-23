@@ -18,6 +18,30 @@
         ],
         "simple": "A substance in the blood that carries oxygen. Octopuses and some other animals use it.",
         "detail": "A copper-containing protein that turns blue when it binds oxygen. It does the job that iron-based hemoglobin does in human blood."
+      },
+      "zh": {
+        "term": "血蓝蛋白",
+        "match": [
+          "血蓝蛋白"
+        ],
+        "simple": "血液中运送氧气的一种物质。章鱼和其他一些动物会用到它。",
+        "detail": "一种含铜的蛋白质，与氧气结合后会变成蓝色。它起的作用，相当于人类血液中含铁的血红蛋白。"
+      },
+      "ko": {
+        "term": "헤모시아닌",
+        "match": [
+          "헤모시아닌"
+        ],
+        "simple": "산소를 실어 나르는 피 속 물질이에요. 문어를 비롯한 몇몇 동물이 이걸 써요.",
+        "detail": "구리를 함유한 단백질로, 산소와 결합하면 파란색을 띱니다. 사람의 피에서 철 기반의 헤모글로빈이 하는 일을 대신합니다."
+      },
+      "es": {
+        "term": "hemocianina",
+        "match": [
+          "hemocianina"
+        ],
+        "simple": "Una sustancia de la sangre que transporta oxígeno. La usan los pulpos y algunos otros animales.",
+        "detail": "Una proteína con cobre que se vuelve azul al unirse al oxígeno. Hace el trabajo que hace la hemoglobina, que contiene hierro, en la sangre humana."
       }
     },
     {
@@ -37,6 +61,30 @@
         ],
         "simple": "The pull that moves water from a weaker solution toward a stronger one.",
         "detail": "When two solutions of different concentration are separated by a thin membrane, water moves toward the stronger side. Very sugary honey draws water out of microbes this way."
+      },
+      "zh": {
+        "term": "渗透压",
+        "match": [
+          "渗透压"
+        ],
+        "simple": "把水从较稀的溶液拉向较浓的溶液的那种拉力。",
+        "detail": "当两种浓度不同的溶液被一层薄膜隔开时，水会向较浓的一侧移动。含糖量很高的蜂蜜就是这样把微生物体内的水分抽出来的。"
+      },
+      "ko": {
+        "term": "삼투압",
+        "match": [
+          "삼투압"
+        ],
+        "simple": "묽은 용액에서 진한 용액 쪽으로 물을 끌어당기는 힘이에요.",
+        "detail": "농도가 다른 두 용액이 얇은 막을 사이에 두고 있을 때 물이 더 진한 쪽으로 이동합니다. 당분이 아주 많은 꿀은 이런 식으로 미생물에서 물을 빼앗습니다."
+      },
+      "es": {
+        "term": "presión osmótica",
+        "match": [
+          "presión osmótica"
+        ],
+        "simple": "La fuerza que mueve el agua de una solución más débil hacia una más fuerte.",
+        "detail": "Cuando dos soluciones de distinta concentración están separadas por una membrana delgada, el agua se mueve hacia el lado más concentrado. La miel, muy azucarada, extrae así el agua de los microbios."
       }
     },
     {
@@ -56,6 +104,30 @@
         ],
         "simple": "A liquid that stops germs from growing, often used to clean small cuts.",
         "detail": "A compound (H₂O₂) with one more oxygen atom than water. Its strong oxidizing power suppresses microbes, and bee enzymes make a little of it in honey."
+      },
+      "zh": {
+        "term": "过氧化氢",
+        "match": [
+          "过氧化氢"
+        ],
+        "simple": "一种能阻止细菌生长的液体，常用来清洁小伤口。",
+        "detail": "一种化合物（H₂O₂），比水多一个氧原子。它很强的氧化能力能抑制微生物，蜜蜂体内的酶会在蜂蜜中产生少量的过氧化氢。"
+      },
+      "ko": {
+        "term": "과산화수소",
+        "match": [
+          "과산화수소"
+        ],
+        "simple": "세균이 자라지 못하게 하는 액체로, 작은 상처를 소독할 때 자주 써요.",
+        "detail": "물보다 산소 원자가 하나 더 많은 화합물(H₂O₂)입니다. 강한 산화력으로 미생물을 억제하며, 꿀 속에서는 꿀벌의 효소가 소량 만들어 냅니다."
+      },
+      "es": {
+        "term": "peróxido de hidrógeno",
+        "match": [
+          "peróxido de hidrógeno"
+        ],
+        "simple": "Un líquido que impide que crezcan los gérmenes y que se usa a menudo para limpiar heridas pequeñas.",
+        "detail": "Un compuesto (H₂O₂) con un átomo de oxígeno más que el agua. Su fuerte poder oxidante suprime a los microbios, y las enzimas de las abejas producen un poco en la miel."
       }
     },
     {
@@ -75,6 +147,30 @@
         ],
         "simple": "A number that shows how acidic or alkaline something is.",
         "detail": "A scale of hydrogen-ion concentration: 7 is neutral, lower is more acidic and higher is more alkaline. Lemon juice is about 2 and pure water is about 7."
+      },
+      "zh": {
+        "term": "pH",
+        "match": [
+          "pH"
+        ],
+        "simple": "表示某种东西酸性或碱性强弱的数值。",
+        "detail": "氢离子浓度的一种标度：7为中性，数值越低酸性越强，越高碱性越强。柠檬汁的pH约为2，纯水约为7。"
+      },
+      "ko": {
+        "term": "pH",
+        "match": [
+          "pH"
+        ],
+        "simple": "어떤 것이 얼마나 산성인지 알칼리성인지 나타내는 숫자예요.",
+        "detail": "수소 이온 농도를 나타내는 척도로, 7은 중성이고 낮을수록 산성, 높을수록 알칼리성입니다. 레몬즙은 약 2, 순수한 물은 약 7입니다."
+      },
+      "es": {
+        "term": "pH",
+        "match": [
+          "pH"
+        ],
+        "simple": "Un número que indica qué tan ácida o alcalina es una cosa.",
+        "detail": "Una escala de concentración de iones de hidrógeno: 7 es neutro, un valor menor es más ácido y uno mayor es más alcalino. El jugo de limón tiene un pH de cerca de 2 y el agua pura, de cerca de 7."
       }
     },
     {
@@ -94,6 +190,30 @@
         ],
         "simple": "In science, a fruit with soft flesh and seeds that grows from one flower.",
         "detail": "A fruit in which the whole ovary of a single flower becomes fleshy. Bananas, tomatoes and grapes qualify; strawberries do not."
+      },
+      "zh": {
+        "term": "植物学意义上的浆果",
+        "match": [
+          "植物学意义上的浆果"
+        ],
+        "simple": "在科学上，指由一朵花长成的、果肉柔软且含有种子的果实。",
+        "detail": "由单朵花的整个子房发育成肉质的果实。香蕉、番茄和葡萄都符合，草莓则不符合。"
+      },
+      "ko": {
+        "term": "식물학적 베리",
+        "match": [
+          "식물학적 베리"
+        ],
+        "simple": "과학에서 말하는 베리는 꽃 한 송이에서 자란, 말랑한 과육과 씨가 있는 열매예요.",
+        "detail": "한 꽃의 씨방 전체가 과육질로 변한 열매입니다. 바나나, 토마토, 포도는 해당하지만 딸기는 해당하지 않습니다."
+      },
+      "es": {
+        "term": "baya botánica",
+        "match": [
+          "baya botánica"
+        ],
+        "simple": "En la ciencia, un fruto de pulpa blanda con semillas que crece a partir de una flor.",
+        "detail": "Un fruto en el que todo el ovario de una sola flor se vuelve carnoso. Los plátanos, los tomates y las uvas lo cumplen; las fresas no."
       }
     },
     {
@@ -113,6 +233,30 @@
         ],
         "simple": "The swollen base of a flower that holds the future seeds.",
         "detail": "The enlarged base of the pistil containing the ovules. After pollination it grows into the fruit."
+      },
+      "zh": {
+        "term": "子房",
+        "match": [
+          "子房"
+        ],
+        "simple": "花的膨大基部，里面装着将来的种子。",
+        "detail": "雌蕊基部膨大的部分，内含胚珠。授粉后，它会长成果实。"
+      },
+      "ko": {
+        "term": "씨방",
+        "match": [
+          "씨방"
+        ],
+        "simple": "꽃의 불룩한 밑부분으로, 나중에 씨앗이 될 것을 품고 있어요.",
+        "detail": "밑씨를 담고 있는 암술의 부푼 밑부분입니다. 수분 후 자라서 열매가 됩니다."
+      },
+      "es": {
+        "term": "ovario",
+        "match": [
+          "ovario"
+        ],
+        "simple": "La base hinchada de una flor que guarda las futuras semillas.",
+        "detail": "La base agrandada del pistilo que contiene los óvulos. Tras la polinización se convierte en el fruto."
       }
     },
     {
@@ -132,6 +276,30 @@
         ],
         "simple": "The base of a flower where the petals and sepals attach.",
         "detail": "The platform at the base of a flower. In strawberries, the receptacle swells into the red, fleshy part we eat."
+      },
+      "zh": {
+        "term": "花托",
+        "match": [
+          "花托"
+        ],
+        "simple": "花的基部，花瓣和萼片都连在上面。",
+        "detail": "位于花基部的平台。在草莓中，花托膨大成我们吃的红色多汁部分。"
+      },
+      "ko": {
+        "term": "꽃받기",
+        "match": [
+          "꽃받기"
+        ],
+        "simple": "꽃잎과 꽃받침이 붙어 있는 꽃의 밑부분이에요.",
+        "detail": "꽃의 밑부분에 있는 받침 구조입니다. 딸기에서는 꽃받기가 부풀어 우리가 먹는 붉은 과육이 됩니다."
+      },
+      "es": {
+        "term": "receptáculo",
+        "match": [
+          "receptáculo"
+        ],
+        "simple": "La base de la flor donde se unen los pétalos y los sépalos.",
+        "detail": "La plataforma en la base de una flor. En las fresas, el receptáculo se hincha y forma la parte roja y carnosa que comemos."
       }
     },
     {
@@ -151,6 +319,30 @@
         ],
         "simple": "A fruit where the part we eat is not the true fruit but another part of the flower.",
         "detail": "A fruit formed mostly from tissue other than the ovary, such as the receptacle. Strawberries and apples are typical examples."
+      },
+      "zh": {
+        "term": "假果",
+        "match": [
+          "假果"
+        ],
+        "simple": "我们吃的部分不是真正的果实，而是花的其他部分的果实。",
+        "detail": "主要由子房以外的组织（如花托）形成的果实。草莓和苹果是典型的例子。"
+      },
+      "ko": {
+        "term": "헛열매",
+        "match": [
+          "헛열매"
+        ],
+        "simple": "우리가 먹는 부분이 진짜 열매가 아니라 꽃의 다른 부분인 열매예요.",
+        "detail": "씨방이 아닌 꽃받기 같은 조직으로 대부분 이루어진 열매입니다. 딸기와 사과가 대표적인 예입니다."
+      },
+      "es": {
+        "term": "fruto accesorio",
+        "match": [
+          "fruto accesorio"
+        ],
+        "simple": "Un fruto en el que la parte que comemos no es el fruto verdadero, sino otra parte de la flor.",
+        "detail": "Un fruto formado sobre todo por tejido distinto del ovario, como el receptáculo. Las fresas y las manzanas son ejemplos típicos."
       }
     },
     {
@@ -171,6 +363,31 @@
         ],
         "simple": "A tiny dry fruit with one seed inside.",
         "detail": "A small dry fruit with a thin wall that holds a single seed. The dots on a strawberry's surface are achenes."
+      },
+      "zh": {
+        "term": "瘦果",
+        "match": [
+          "瘦果"
+        ],
+        "simple": "一种里面只有一粒种子的干燥小果实。",
+        "detail": "一种果皮很薄、内含单粒种子的干燥小果实。草莓表面的小点就是瘦果。"
+      },
+      "ko": {
+        "term": "수과",
+        "match": [
+          "수과"
+        ],
+        "simple": "안에 씨앗이 하나 들어 있는 아주 작은 마른 열매예요.",
+        "detail": "씨앗 하나를 품은 얇은 껍질의 작은 마른 열매입니다. 딸기 표면의 점들이 수과입니다."
+      },
+      "es": {
+        "term": "aquenio",
+        "match": [
+          "aquenios",
+          "aquenio"
+        ],
+        "simple": "Un fruto seco diminuto con una semilla dentro.",
+        "detail": "Un fruto seco pequeño, de pared delgada, que contiene una sola semilla. Los puntos de la superficie de una fresa son aquenios."
       }
     },
     {
@@ -190,6 +407,30 @@
         ],
         "simple": "The time a planet takes to spin around once.",
         "detail": "The time a body takes to turn once around its own axis. Earth's is about 24 hours (23 h 56 min measured against the stars)."
+      },
+      "zh": {
+        "term": "自转周期",
+        "match": [
+          "自转周期"
+        ],
+        "simple": "行星自己转一圈所需的时间。",
+        "detail": "天体绕自身轴线转一圈所需的时间。地球的自转周期约为24小时（相对于恒星测量为23小时56分）。"
+      },
+      "ko": {
+        "term": "자전 주기",
+        "match": [
+          "자전 주기"
+        ],
+        "simple": "행성이 한 바퀴 스스로 도는 데 걸리는 시간이에요.",
+        "detail": "천체가 자기 축을 중심으로 한 바퀴 도는 데 걸리는 시간입니다. 지구는 약 24시간(별을 기준으로 하면 23시간 56분)입니다."
+      },
+      "es": {
+        "term": "período de rotación",
+        "match": [
+          "período de rotación"
+        ],
+        "simple": "El tiempo que tarda un planeta en girar una vez sobre sí mismo.",
+        "detail": "El tiempo que tarda un cuerpo en dar una vuelta alrededor de su propio eje. El de la Tierra es de unas 24 horas (23 h 56 min medido respecto de las estrellas)."
       }
     },
     {
@@ -209,6 +450,30 @@
         ],
         "simple": "The time a planet takes to go once around the Sun.",
         "detail": "The time a body takes to complete one orbit around another. Earth's orbital period is one year."
+      },
+      "zh": {
+        "term": "公转周期",
+        "match": [
+          "公转周期"
+        ],
+        "simple": "行星绕太阳一圈所需的时间。",
+        "detail": "天体绕另一个天体完成一圈轨道运行所需的时间。地球的公转周期是一年。"
+      },
+      "ko": {
+        "term": "공전 주기",
+        "match": [
+          "공전 주기"
+        ],
+        "simple": "행성이 태양 둘레를 한 바퀴 도는 데 걸리는 시간이에요.",
+        "detail": "천체가 다른 천체 둘레를 한 바퀴 도는 데 걸리는 시간입니다. 지구의 공전 주기는 1년입니다."
+      },
+      "es": {
+        "term": "período orbital",
+        "match": [
+          "período orbital"
+        ],
+        "simple": "El tiempo que tarda un planeta en dar una vuelta alrededor del Sol.",
+        "detail": "El tiempo que tarda un cuerpo en completar una órbita alrededor de otro. El período orbital de la Tierra es de un año."
       }
     },
     {
@@ -228,6 +493,30 @@
         ],
         "simple": "One spin of a planet measured against the distant stars.",
         "detail": "The time for one rotation relative to distant stars. It differs slightly from the solar day, which is measured against the Sun."
+      },
+      "zh": {
+        "term": "恒星日",
+        "match": [
+          "恒星日"
+        ],
+        "simple": "以遥远的恒星为参照测得的行星自转一圈。",
+        "detail": "相对于遥远恒星测得的自转一周的时间。它与以太阳为参照测得的太阳日略有不同。"
+      },
+      "ko": {
+        "term": "항성일",
+        "match": [
+          "항성일"
+        ],
+        "simple": "먼 별을 기준으로 잰, 행성이 한 번 자전하는 시간이에요.",
+        "detail": "먼 별을 기준으로 한 번 자전하는 데 걸리는 시간입니다. 태양을 기준으로 재는 태양일과는 약간 다릅니다."
+      },
+      "es": {
+        "term": "día sidéreo",
+        "match": [
+          "día sidéreo"
+        ],
+        "simple": "Una vuelta de un planeta sobre sí mismo medida respecto de las estrellas lejanas.",
+        "detail": "El tiempo de una rotación respecto de las estrellas lejanas. Difiere un poco del día solar, que se mide respecto del Sol."
       }
     },
     {
@@ -248,6 +537,30 @@
         ],
         "simple": "Fish whose skeletons are made of soft cartilage instead of bone, like sharks and rays.",
         "detail": "A group of fish whose skeleton is made of cartilage rather than hard bone. It includes sharks, rays and chimaeras."
+      },
+      "zh": {
+        "term": "软骨鱼类",
+        "match": [
+          "软骨鱼类"
+        ],
+        "simple": "骨架由柔软的软骨而不是硬骨构成的鱼，比如鲨鱼和鳐鱼。",
+        "detail": "骨骼由软骨而非硬骨构成的一类鱼，包括鲨鱼、鳐鱼和银鲛。"
+      },
+      "ko": {
+        "term": "연골어류",
+        "match": [
+          "연골어류"
+        ],
+        "simple": "상어나 가오리처럼 뼈 대신 말랑한 연골로 된 골격을 가진 물고기예요.",
+        "detail": "골격이 단단한 뼈가 아니라 연골로 이루어진 어류 집단입니다. 상어, 가오리, 은상어류가 여기에 속합니다."
+      },
+      "es": {
+        "term": "peces cartilaginosos",
+        "match": [
+          "peces cartilaginosos"
+        ],
+        "simple": "Peces cuyo esqueleto es de cartílago blando en lugar de hueso, como los tiburones y las rayas.",
+        "detail": "Un grupo de peces cuyo esqueleto es de cartílago en lugar de hueso duro. Incluye tiburones, rayas y quimeras."
       }
     },
     {
@@ -278,6 +591,30 @@
         ],
         "simple": "Spots where bone starts to form; they later join together.",
         "detail": "Places in the developing skeleton where cartilage turns into bone. During growth many of them fuse into single bones."
+      },
+      "zh": {
+        "term": "骨化中心",
+        "match": [
+          "骨化中心"
+        ],
+        "simple": "骨头开始形成的地方，它们之后会连在一起。",
+        "detail": "发育中的骨骼里软骨变成骨头的部位。在生长过程中，其中许多会融合成单块的骨头。"
+      },
+      "ko": {
+        "term": "골화 중심",
+        "match": [
+          "골화 중심"
+        ],
+        "simple": "뼈가 만들어지기 시작하는 자리로, 나중에 서로 합쳐져요.",
+        "detail": "발달 중인 골격에서 연골이 뼈로 바뀌는 곳입니다. 성장하면서 이들 중 상당수가 하나의 뼈로 융합됩니다."
+      },
+      "es": {
+        "term": "centros de osificación",
+        "match": [
+          "centros de osificación"
+        ],
+        "simple": "Lugares donde empieza a formarse el hueso; después se unen.",
+        "detail": "Lugares del esqueleto en desarrollo donde el cartílago se convierte en hueso. Durante el crecimiento, muchos de ellos se fusionan en huesos únicos."
       }
     },
     {
@@ -297,6 +634,30 @@
         ],
         "simple": "The bones of the neck.",
         "detail": ""
+      },
+      "zh": {
+        "term": "颈椎",
+        "match": [
+          "颈椎"
+        ],
+        "simple": "脖子里的骨头。",
+        "detail": "颈部的椎骨。几乎所有哺乳动物都有七块颈椎。"
+      },
+      "ko": {
+        "term": "경추",
+        "match": [
+          "경추"
+        ],
+        "simple": "목을 이루는 뼈예요.",
+        "detail": "목을 이루는 척추뼈입니다."
+      },
+      "es": {
+        "term": "vértebras cervicales",
+        "match": [
+          "vértebras cervicales"
+        ],
+        "simple": "Los huesos del cuello.",
+        "detail": "Las vértebras de la región del cuello, entre el cráneo y el tórax."
       }
     },
     {
@@ -316,6 +677,30 @@
         ],
         "simple": "The glowing 'surface' of the Sun that we see.",
         "detail": "The layer of the Sun that gives off the light we see, a few hundred kilometers thick, at about 5,500 °C."
+      },
+      "zh": {
+        "term": "光球层",
+        "match": [
+          "光球层"
+        ],
+        "simple": "我们所看到的太阳发光的“表面”。",
+        "detail": "太阳发出我们所见光线的那一层，厚度为几百公里，温度约为5,500°C。"
+      },
+      "ko": {
+        "term": "광구",
+        "match": [
+          "광구"
+        ],
+        "simple": "우리 눈에 보이는, 빛나는 태양의 '표면'이에요.",
+        "detail": "우리가 보는 빛을 내보내는 태양의 층으로, 두께는 수백 km이고 온도는 약 5,500°C입니다."
+      },
+      "es": {
+        "term": "fotosfera",
+        "match": [
+          "fotosfera"
+        ],
+        "simple": "La «superficie» brillante del Sol que vemos.",
+        "detail": "La capa del Sol que emite la luz que vemos, de unos cientos de kilómetros de grosor, a unos 5500 °C."
       }
     },
     {
@@ -336,6 +721,30 @@
         ],
         "simple": "The way the Moon and Earth pull on each other and slightly stretch each other.",
         "detail": "The mutual pull by which the Moon and Earth slightly deform each other. It causes ocean tides and slowly pushes the Moon outward."
+      },
+      "zh": {
+        "term": "潮汐相互作用",
+        "match": [
+          "潮汐相互作用"
+        ],
+        "simple": "月球和地球互相牵引，并使彼此略微被拉长的现象。",
+        "detail": "月球和地球通过相互牵引而使彼此略微变形。它造成海洋潮汐，并慢慢把月球向外推。"
+      },
+      "ko": {
+        "term": "조석 상호작용",
+        "match": [
+          "조석 상호작용"
+        ],
+        "simple": "달과 지구가 서로 잡아당겨서 서로를 조금씩 늘어나게 하는 작용이에요.",
+        "detail": "달과 지구가 서로를 조금씩 변형시키는 상호 인력입니다. 바다의 조수를 일으키고 달을 서서히 바깥쪽으로 밀어냅니다."
+      },
+      "es": {
+        "term": "interacción de las mareas",
+        "match": [
+          "interacción de las mareas"
+        ],
+        "simple": "La forma en que la Luna y la Tierra se atraen y se estiran un poco entre sí.",
+        "detail": "La atracción mutua con la que la Luna y la Tierra se deforman ligeramente entre sí. Provoca las mareas oceánicas y empuja lentamente a la Luna hacia afuera."
       }
     },
     {
@@ -355,6 +764,30 @@
         ],
         "simple": "The material, like air or water, that carries a wave.",
         "detail": "The substance that carries a wave. Sound needs a medium such as air, water or a solid to travel."
+      },
+      "zh": {
+        "term": "介质",
+        "match": [
+          "介质"
+        ],
+        "simple": "传播波的物质，比如空气或水。",
+        "detail": "传播波的物质。声音的传播需要空气、水或固体等介质。"
+      },
+      "ko": {
+        "term": "매질",
+        "match": [
+          "매질"
+        ],
+        "simple": "공기나 물처럼 파동을 전해 주는 물질이에요.",
+        "detail": "파동을 전달하는 물질입니다. 소리가 전해지려면 공기, 물, 고체 같은 매질이 필요합니다."
+      },
+      "es": {
+        "term": "medio",
+        "match": [
+          "un medio"
+        ],
+        "simple": "El material, como el aire o el agua, que transporta una onda.",
+        "detail": "La sustancia que transporta una onda. El sonido necesita un medio, como el aire, el agua o un sólido, para viajar."
       }
     },
     {
@@ -375,6 +808,30 @@
         ],
         "simple": "A weak attraction that makes water molecules stick together.",
         "detail": "A weak attraction between a hydrogen atom and a nearby oxygen atom of another molecule. When water freezes, it arranges ice into an open structure."
+      },
+      "zh": {
+        "term": "氢键",
+        "match": [
+          "氢键"
+        ],
+        "simple": "一种使水分子互相黏在一起的微弱吸引力。",
+        "detail": "一个氢原子与另一个分子附近的氧原子之间的微弱吸引力。水结冰时，它使冰排列成开放的结构。"
+      },
+      "ko": {
+        "term": "수소 결합",
+        "match": [
+          "수소 결합"
+        ],
+        "simple": "물 분자들이 서로 달라붙게 하는 약한 끌어당김이에요.",
+        "detail": "수소 원자와 이웃한 다른 분자의 산소 원자 사이에 작용하는 약한 인력입니다. 물이 얼 때 이 결합이 얼음을 성긴 구조로 배열시킵니다."
+      },
+      "es": {
+        "term": "puente de hidrógeno",
+        "match": [
+          "puentes de hidrógeno"
+        ],
+        "simple": "Una atracción débil que hace que las moléculas de agua se peguen entre sí.",
+        "detail": "Una atracción débil entre un átomo de hidrógeno y un átomo de oxígeno cercano de otra molécula. Cuando el agua se congela, organiza el hielo en una estructura abierta."
       }
     },
     {
@@ -394,6 +851,30 @@
         ],
         "simple": "A tough kind of iron hammered into shape.",
         "detail": "A low-carbon iron that is worked by hammering. It was widely used in 19th-century structures such as the Eiffel Tower."
+      },
+      "zh": {
+        "term": "锻铁",
+        "match": [
+          "锻铁"
+        ],
+        "simple": "一种经锤打成形的坚韧的铁。",
+        "detail": "一种通过锤打加工的低碳铁。它在19世纪被广泛用于埃菲尔铁塔等建筑结构。"
+      },
+      "ko": {
+        "term": "연철",
+        "match": [
+          "연철"
+        ],
+        "simple": "망치로 두드려 모양을 만드는 단단한 철이에요.",
+        "detail": "망치질로 가공하는 탄소 함량이 낮은 철입니다. 에펠탑 같은 19세기 구조물에 널리 쓰였습니다."
+      },
+      "es": {
+        "term": "hierro forjado",
+        "match": [
+          "hierro forjado"
+        ],
+        "simple": "Un tipo de hierro resistente al que se da forma a martillazos.",
+        "detail": "Un hierro con poco carbono que se trabaja a martillazos. Se usó mucho en estructuras del siglo XIX, como la torre Eiffel."
       }
     },
     {
@@ -424,6 +905,30 @@
         ],
         "simple": "The ability of something to spring back after being stretched or pressed.",
         "detail": "The property of returning to the original shape after being deformed. Rubber and springs are typical examples."
+      },
+      "zh": {
+        "term": "弹性",
+        "match": [
+          "弹性"
+        ],
+        "simple": "物体被拉伸或挤压后能弹回原状的能力。",
+        "detail": "物体变形后恢复原来形状的性质。橡胶和弹簧是典型的例子。"
+      },
+      "ko": {
+        "term": "탄성",
+        "match": [
+          "탄성"
+        ],
+        "simple": "늘이거나 눌렀다가 다시 원래대로 돌아가는 성질이에요.",
+        "detail": "변형된 뒤 원래 모양으로 돌아가는 성질입니다. 고무와 용수철이 대표적인 예입니다."
+      },
+      "es": {
+        "term": "elasticidad",
+        "match": [
+          "elasticidad"
+        ],
+        "simple": "La capacidad de algo para recuperar su forma después de estirarse o apretarse.",
+        "detail": "La propiedad de volver a la forma original tras deformarse. La goma y los resortes son ejemplos típicos."
       }
     },
     {
@@ -443,6 +948,30 @@
         ],
         "simple": "The order of the four 'letters' (A, T, G, C) in DNA.",
         "detail": "The order of the four bases (A, T, G, C) that make up DNA. This order carries genetic information."
+      },
+      "zh": {
+        "term": "DNA序列",
+        "match": [
+          "DNA序列"
+        ],
+        "simple": "DNA中四种“字母”（A、T、G、C）的排列顺序。",
+        "detail": "构成DNA的四种碱基（A、T、G、C）的排列顺序。这个顺序携带着遗传信息。"
+      },
+      "ko": {
+        "term": "DNA 염기서열",
+        "match": [
+          "DNA 염기서열"
+        ],
+        "simple": "DNA를 이루는 네 가지 '글자'(A, T, G, C)의 순서예요.",
+        "detail": "DNA를 이루는 네 가지 염기(A, T, G, C)의 배열 순서입니다. 이 순서가 유전 정보를 담고 있습니다."
+      },
+      "es": {
+        "term": "secuencia de ADN",
+        "match": [
+          "secuencia de ADN"
+        ],
+        "simple": "El orden de las cuatro «letras» (A, T, G, C) del ADN.",
+        "detail": "El orden de las cuatro bases (A, T, G, C) que forman el ADN. Este orden contiene la información genética."
       }
     },
     {
@@ -462,6 +991,30 @@
         ],
         "simple": "The part of the tongue that detects sweetness.",
         "detail": "A protein on taste cells that detects sugars and other sweet substances."
+      },
+      "zh": {
+        "term": "甜味受体",
+        "match": [
+          "甜味受体"
+        ],
+        "simple": "舌头上感知甜味的部分。",
+        "detail": "味觉细胞上的一种蛋白质，用来检测糖和其他甜味物质。"
+      },
+      "ko": {
+        "term": "단맛 수용체",
+        "match": [
+          "단맛 수용체"
+        ],
+        "simple": "단맛을 알아차리는 혀의 부분이에요.",
+        "detail": "미각 세포에서 당과 그 밖의 단 물질을 감지하는 단백질입니다."
+      },
+      "es": {
+        "term": "receptor del sabor dulce",
+        "match": [
+          "receptor del sabor dulce"
+        ],
+        "simple": "La parte de la lengua que detecta el dulzor.",
+        "detail": "Una proteína de las células gustativas que detecta azúcares y otras sustancias dulces."
       }
     },
     {
@@ -481,6 +1034,30 @@
         ],
         "simple": "A gene that used to work but no longer does.",
         "detail": "A gene that has lost its function through mutations, often a leftover from a function that became unnecessary during evolution."
+      },
+      "zh": {
+        "term": "假基因",
+        "match": [
+          "假基因"
+        ],
+        "simple": "一种曾经起作用、现在不再起作用的基因。",
+        "detail": "因突变而丧失功能的基因，往往是演化过程中某种不再需要的功能所留下的残余。"
+      },
+      "ko": {
+        "term": "위유전자",
+        "match": [
+          "위유전자"
+        ],
+        "simple": "예전에는 작동했지만 지금은 작동하지 않는 유전자예요.",
+        "detail": "돌연변이로 기능을 잃은 유전자로, 진화 과정에서 필요 없어진 기능의 흔적인 경우가 많습니다."
+      },
+      "es": {
+        "term": "pseudogén",
+        "match": [
+          "pseudogén"
+        ],
+        "simple": "Un gen que antes funcionaba pero ya no.",
+        "detail": "Un gen que ha perdido su función por mutaciones, a menudo un vestigio de una función que dejó de ser necesaria durante la evolución."
       }
     },
     {
@@ -500,6 +1077,30 @@
         ],
         "simple": "When unrelated animals end up with similar features.",
         "detail": "The independent evolution of similar traits in distantly related organisms adapting to similar conditions."
+      },
+      "zh": {
+        "term": "趋同演化",
+        "match": [
+          "趋同演化"
+        ],
+        "simple": "毫无亲缘关系的动物最终拥有相似特征的现象。",
+        "detail": "亲缘关系较远的生物为适应相似的条件，各自独立地演化出相似的性状。"
+      },
+      "ko": {
+        "term": "수렴 진화",
+        "match": [
+          "수렴 진화"
+        ],
+        "simple": "서로 관계없는 동물이 비슷한 특징을 갖게 되는 일이에요.",
+        "detail": "비슷한 환경에 적응하는 먼 친척 생물들에서 비슷한 형질이 독립적으로 진화하는 현상입니다."
+      },
+      "es": {
+        "term": "evolución convergente",
+        "match": [
+          "evolución convergente"
+        ],
+        "simple": "Cuando animales sin parentesco acaban con rasgos parecidos.",
+        "detail": "La evolución independiente de rasgos similares en organismos lejanamente emparentados que se adaptan a condiciones parecidas."
       }
     },
     {
@@ -519,6 +1120,31 @@
         ],
         "simple": "Sleeping with only half of the brain at a time.",
         "detail": "Sleep in which one brain hemisphere enters slow-wave sleep while the other stays awake. Known in dolphins and some birds."
+      },
+      "zh": {
+        "term": "单半球慢波睡眠",
+        "match": [
+          "单半球慢波睡眠"
+        ],
+        "simple": "每次只让一半的大脑睡觉。",
+        "detail": "一侧大脑半球进入慢波睡眠，而另一侧保持清醒的睡眠方式。海豚和一些鸟类都有这种现象。"
+      },
+      "ko": {
+        "term": "반구 서파수면",
+        "match": [
+          "반구 서파수면",
+          "반구수면"
+        ],
+        "simple": "한 번에 뇌의 절반만 자는 잠이에요.",
+        "detail": "한쪽 대뇌 반구는 서파수면에 들고 다른 쪽은 깨어 있는 수면입니다. 돌고래와 일부 새에서 알려져 있습니다."
+      },
+      "es": {
+        "term": "sueño de ondas lentas unihemisférico",
+        "match": [
+          "sueño de ondas lentas unihemisférico"
+        ],
+        "simple": "Dormir con solo la mitad del cerebro cada vez.",
+        "detail": "Sueño en el que un hemisferio cerebral entra en sueño de ondas lentas mientras el otro permanece despierto. Se conoce en los delfines y en algunas aves."
       }
     },
     {
@@ -560,6 +1186,30 @@
         ],
         "simple": "A time about 300 million years ago when huge forests covered the land.",
         "detail": "The geological period from about 359 to 299 million years ago, when vast fern forests formed what later became coal."
+      },
+      "zh": {
+        "term": "石炭纪",
+        "match": [
+          "石炭纪"
+        ],
+        "simple": "大约3亿年前，巨大的森林覆盖陆地的时代。",
+        "detail": "大约从3.59亿年前到2.99亿年前的地质时期，当时广阔的蕨类森林形成了后来的煤炭。"
+      },
+      "ko": {
+        "term": "석탄기",
+        "match": [
+          "석탄기"
+        ],
+        "simple": "약 3억 년 전, 커다란 숲이 땅을 뒤덮고 있던 시기예요.",
+        "detail": "약 3억 5,900만 년 전부터 2억 9,900만 년 전까지의 지질 시대로, 거대한 양치식물 숲이 훗날 석탄이 되는 퇴적물을 이루었습니다."
+      },
+      "es": {
+        "term": "Carbonífero",
+        "match": [
+          "Carbonífero"
+        ],
+        "simple": "Una época de hace unos 300 millones de años en que enormes bosques cubrían la tierra.",
+        "detail": "El período geológico de hace unos 359 a 299 millones de años, cuando vastos bosques de helechos formaron lo que después sería el carbón."
       }
     },
     {
@@ -579,6 +1229,30 @@
         ],
         "simple": "The substance fireflies use to make light.",
         "detail": "The light-producing molecule in bioluminescence. With the enzyme luciferase it reacts with oxygen and emits light."
+      },
+      "zh": {
+        "term": "萤光素",
+        "match": [
+          "萤光素"
+        ],
+        "simple": "萤火虫用来发光的物质。",
+        "detail": "生物发光中产生光的分子。它与萤光素酶一起与氧气反应并发出光。"
+      },
+      "ko": {
+        "term": "루시페린",
+        "match": [
+          "루시페린"
+        ],
+        "simple": "반딧불이가 빛을 만드는 데 쓰는 물질이에요.",
+        "detail": "생물발광에서 빛을 내는 분자입니다. 루시페라제 효소와 함께 산소와 반응해 빛을 방출합니다."
+      },
+      "es": {
+        "term": "luciferina",
+        "match": [
+          "luciferina"
+        ],
+        "simple": "La sustancia que usan las luciérnagas para producir luz.",
+        "detail": "La molécula que produce luz en la bioluminiscencia. Con la enzima luciferasa reacciona con el oxígeno y emite luz."
       }
     },
     {
@@ -598,6 +1272,30 @@
         ],
         "simple": "When a living thing makes its own light.",
         "detail": "The emission of light by a living organism through a chemical reaction, seen in fireflies, firefly squid and deep-sea fishes."
+      },
+      "zh": {
+        "term": "生物发光",
+        "match": [
+          "生物发光"
+        ],
+        "simple": "生物自己制造光的现象。",
+        "detail": "生物体通过化学反应发出光，见于萤火虫、萤火鱿和深海鱼类。"
+      },
+      "ko": {
+        "term": "생물발광",
+        "match": [
+          "생물발광"
+        ],
+        "simple": "살아 있는 생물이 스스로 빛을 내는 현상이에요.",
+        "detail": "생물이 화학 반응으로 빛을 내는 현상으로, 반딧불이, 반딧불오징어, 심해어 등에서 볼 수 있습니다."
+      },
+      "es": {
+        "term": "bioluminiscencia",
+        "match": [
+          "bioluminiscencia"
+        ],
+        "simple": "Cuando un ser vivo produce su propia luz.",
+        "detail": "La emisión de luz por un organismo vivo mediante una reacción química, que se observa en las luciérnagas, el calamar luciérnaga y los peces de aguas profundas."
       }
     },
     {
@@ -618,6 +1316,30 @@
         ],
         "simple": "A number that can only be divided evenly by 1 and itself (2, 3, 5, 7, 11, 13...).",
         "detail": "An integer above 1 with no divisors other than 1 and itself. Cycles like 13 or 17 years rarely line up with shorter cycles."
+      },
+      "zh": {
+        "term": "质数",
+        "match": [
+          "质数"
+        ],
+        "simple": "只能被1和它自己整除的数（2、3、5、7、11、13……）。",
+        "detail": "大于1且除了1和自身外没有其他因数的整数。像13年或17年这样的周期，很少与较短的周期重合。"
+      },
+      "ko": {
+        "term": "소수",
+        "match": [
+          "소수 주기"
+        ],
+        "simple": "1과 자기 자신으로만 나누어떨어지는 수예요(2, 3, 5, 7, 11, 13...).",
+        "detail": "1보다 큰 정수 중 1과 자기 자신 외에는 약수가 없는 수입니다. 13년이나 17년 같은 주기는 더 짧은 주기와 잘 겹치지 않습니다."
+      },
+      "es": {
+        "term": "número primo",
+        "match": [
+          "números primos"
+        ],
+        "simple": "Un número que solo se puede dividir exactamente entre 1 y entre sí mismo (2, 3, 5, 7, 11, 13...).",
+        "detail": "Un entero mayor que 1 sin más divisores que 1 y él mismo. Ciclos como los de 13 o 17 años rara vez coinciden con ciclos más cortos."
       }
     },
     {
@@ -638,6 +1360,31 @@
         ],
         "simple": "The group of six-legged animals, including insects.",
         "detail": "The group of six-legged arthropods that includes insects, with the body divided into head, thorax and abdomen."
+      },
+      "zh": {
+        "term": "六足类",
+        "match": [
+          "六足类"
+        ],
+        "simple": "有六条腿的动物类群，包括昆虫。",
+        "detail": "包括昆虫在内的六足节肢动物类群，身体分为头、胸、腹三部分。"
+      },
+      "ko": {
+        "term": "육각류",
+        "match": [
+          "육각류"
+        ],
+        "simple": "곤충을 포함한, 다리가 여섯 개인 동물 무리예요.",
+        "detail": "곤충을 포함하는, 다리가 여섯 개인 절지동물 집단으로 몸이 머리, 가슴, 배로 나뉩니다."
+      },
+      "es": {
+        "term": "hexápodos",
+        "match": [
+          "hexápodos",
+          "hexápodo"
+        ],
+        "simple": "El grupo de animales de seis patas, que incluye a los insectos.",
+        "detail": "El grupo de artrópodos de seis patas que incluye a los insectos, con el cuerpo dividido en cabeza, tórax y abdomen."
       }
     },
     {
@@ -658,6 +1405,31 @@
         ],
         "simple": "Spiders, scorpions and mites. They are not insects.",
         "detail": "Arthropods with no antennae and with pincer-like mouthparts. The group includes spiders, scorpions and mites."
+      },
+      "zh": {
+        "term": "蛛形纲",
+        "match": [
+          "蛛形纲"
+        ],
+        "simple": "蜘蛛、蝎子和螨。它们不是昆虫。",
+        "detail": "没有触角、口器呈螯状的节肢动物。这一类群包括蜘蛛、蝎子和螨。"
+      },
+      "ko": {
+        "term": "거미류",
+        "match": [
+          "거미류"
+        ],
+        "simple": "거미, 전갈, 진드기예요. 곤충이 아니에요.",
+        "detail": "더듬이가 없고 집게 모양의 입 부위를 가진 절지동물입니다. 거미, 전갈, 진드기가 여기에 속합니다."
+      },
+      "es": {
+        "term": "arácnidos",
+        "match": [
+          "arácnidos",
+          "arácnido"
+        ],
+        "simple": "Las arañas, los escorpiones y los ácaros. No son insectos.",
+        "detail": "Artrópodos sin antenas y con piezas bucales en forma de pinza. El grupo incluye arañas, escorpiones y ácaros."
       }
     },
     {
@@ -677,6 +1449,30 @@
         ],
         "simple": "The group of beetles, which have hard wing covers.",
         "detail": "The insect order whose front wings are hardened into covers. It is the most species-rich order, with about 400,000 known species."
+      },
+      "zh": {
+        "term": "鞘翅目",
+        "match": [
+          "鞘翅目"
+        ],
+        "simple": "甲虫这一类，它们有坚硬的翅膀外壳。",
+        "detail": "前翅硬化成外壳的昆虫目。它是物种最丰富的目，已知约有40万种。"
+      },
+      "ko": {
+        "term": "딱정벌레목",
+        "match": [
+          "딱정벌레목"
+        ],
+        "simple": "단단한 날개 덮개를 가진 딱정벌레 무리예요.",
+        "detail": "앞날개가 단단한 덮개로 변한 곤충의 목입니다. 알려진 종이 약 40만 종으로 종 수가 가장 많은 목입니다."
+      },
+      "es": {
+        "term": "coleópteros",
+        "match": [
+          "coleópteros"
+        ],
+        "simple": "El grupo de los escarabajos, que tienen cubiertas duras sobre las alas.",
+        "detail": "El orden de insectos cuyas alas delanteras se han endurecido y forman cubiertas. Es el orden con más especies, con unas 400 000 conocidas."
       }
     },
     {
@@ -696,6 +1492,30 @@
         ],
         "simple": "The main protein that silk threads are made of.",
         "detail": "The fibrous protein at the core of silk produced by silkworms."
+      },
+      "zh": {
+        "term": "丝素",
+        "match": [
+          "丝素"
+        ],
+        "simple": "构成蚕丝的主要蛋白质。",
+        "detail": "蚕所产蚕丝核心的纤维状蛋白质。"
+      },
+      "ko": {
+        "term": "피브로인",
+        "match": [
+          "피브로인"
+        ],
+        "simple": "비단실을 이루는 주된 단백질이에요.",
+        "detail": "누에가 만드는 비단의 중심을 이루는 섬유 단백질입니다."
+      },
+      "es": {
+        "term": "fibroína",
+        "match": [
+          "fibroína"
+        ],
+        "simple": "La proteína principal de la que están hechos los hilos de seda.",
+        "detail": "La proteína fibrosa que forma el núcleo de la seda producida por los gusanos de seda."
       }
     },
     {
@@ -715,6 +1535,30 @@
         ],
         "simple": "A sticky protein that coats silk threads like glue.",
         "detail": "A protein that wraps and binds the fibroin strands. Removing it makes silk smooth and glossy."
+      },
+      "zh": {
+        "term": "丝胶",
+        "match": [
+          "丝胶"
+        ],
+        "simple": "像胶水一样包裹在蚕丝外面的黏性蛋白质。",
+        "detail": "包裹并黏合丝素丝股的蛋白质。把它去除后，蚕丝会变得光滑而有光泽。"
+      },
+      "ko": {
+        "term": "세리신",
+        "match": [
+          "세리신"
+        ],
+        "simple": "비단실을 풀처럼 감싸고 있는 끈적한 단백질이에요.",
+        "detail": "피브로인 가닥을 감싸 서로 붙이는 단백질입니다. 이를 제거하면 비단이 매끄럽고 윤기가 납니다."
+      },
+      "es": {
+        "term": "sericina",
+        "match": [
+          "sericina"
+        ],
+        "simple": "Una proteína pegajosa que recubre los hilos de seda como pegamento.",
+        "detail": "Una proteína que envuelve y une las hebras de fibroína. Al quitarla, la seda queda suave y brillante."
       }
     },
     {
@@ -734,6 +1578,30 @@
         ],
         "simple": "Kept at a higher air pressure inside, so people can breathe comfortably high in the sky.",
         "detail": "Raised to a higher pressure than the thin air outside so passengers can breathe and feel comfortable at altitude."
+      },
+      "zh": {
+        "term": "增压",
+        "match": [
+          "增压"
+        ],
+        "simple": "内部保持较高的气压，这样人在高空也能舒适地呼吸。",
+        "detail": "把压力提高到高于外面稀薄空气的水平，使乘客在高空也能呼吸并感到舒适。"
+      },
+      "ko": {
+        "term": "가압",
+        "match": [
+          "가압"
+        ],
+        "simple": "안쪽 기압을 높여서 높은 하늘에서도 사람이 편하게 숨 쉴 수 있게 한 상태예요.",
+        "detail": "승객이 고도에서도 숨 쉬고 편안하게 지낼 수 있도록 바깥의 희박한 공기보다 높은 압력으로 높여 둔 상태입니다."
+      },
+      "es": {
+        "term": "presurizado",
+        "match": [
+          "presuriza"
+        ],
+        "simple": "Mantenido con una presión de aire mayor por dentro, para que las personas respiren con comodidad a gran altura.",
+        "detail": "Llevado a una presión mayor que la del aire enrarecido del exterior para que los pasajeros puedan respirar y sentirse cómodos en altura."
       }
     },
     {
@@ -753,6 +1621,30 @@
         ],
         "simple": "An object in water is pushed up by a force equal to the weight of the water it pushes aside.",
         "detail": "The principle that an object in a fluid feels an upward buoyant force equal to the weight of the fluid it displaces."
+      },
+      "zh": {
+        "term": "阿基米德原理",
+        "match": [
+          "阿基米德原理"
+        ],
+        "simple": "水中的物体受到的向上的力，等于它排开的水的重量。",
+        "detail": "物体在流体中受到向上的浮力，大小等于它排开的流体的重量。"
+      },
+      "ko": {
+        "term": "아르키메데스의 원리",
+        "match": [
+          "아르키메데스의 원리"
+        ],
+        "simple": "물속의 물체는 자기가 밀어낸 물의 무게만큼의 힘으로 위로 떠받쳐진다는 원리예요.",
+        "detail": "유체 속의 물체는 자신이 밀어낸 유체의 무게와 같은 위쪽 방향의 부력을 받는다는 원리입니다."
+      },
+      "es": {
+        "term": "principio de Arquímedes",
+        "match": [
+          "principio de Arquímedes"
+        ],
+        "simple": "Un objeto en el agua recibe un empuje hacia arriba igual al peso del agua que desplaza.",
+        "detail": "El principio según el cual un objeto en un fluido siente un empuje ascendente igual al peso del fluido que desplaza."
       }
     },
     {
@@ -772,6 +1664,31 @@
         ],
         "simple": "The upward push that water gives to objects in it.",
         "detail": "The upward force a fluid exerts on an object. If the object is less dense than the fluid, it floats."
+      },
+      "zh": {
+        "term": "浮力",
+        "match": [
+          "浮力"
+        ],
+        "simple": "水对其中的物体产生的向上的托力。",
+        "detail": "流体对物体施加的向上的力。如果物体的密度比流体小，它就会浮起来。"
+      },
+      "ko": {
+        "term": "부력",
+        "match": [
+          "부력"
+        ],
+        "simple": "물이 그 안의 물체를 위로 밀어 올리는 힘이에요.",
+        "detail": "유체가 물체에 가하는 위쪽 방향의 힘입니다. 물체가 유체보다 밀도가 낮으면 뜹니다."
+      },
+      "es": {
+        "term": "empuje",
+        "match": [
+          "El empuje",
+          "empuje"
+        ],
+        "simple": "La fuerza hacia arriba que el agua ejerce sobre los objetos que hay en ella.",
+        "detail": "La fuerza ascendente que un fluido ejerce sobre un objeto. Si el objeto es menos denso que el fluido, flota."
       }
     },
     {
@@ -802,6 +1719,30 @@
         ],
         "simple": "Describes materials that carry electricity with no loss when very cold.",
         "detail": "Materials that, when cooled to extremely low temperatures, lose all electrical resistance. They enable very powerful magnets."
+      },
+      "zh": {
+        "term": "超导",
+        "match": [
+          "超导"
+        ],
+        "simple": "指在极低温度下能无损耗地导电的材料。",
+        "detail": "冷却到极低温度时，电阻完全消失的材料。它们能造出非常强大的磁体。"
+      },
+      "ko": {
+        "term": "초전도",
+        "match": [
+          "초전도"
+        ],
+        "simple": "아주 차가울 때 전기를 손실 없이 흘려보내는 물질의 성질을 말해요.",
+        "detail": "극저온으로 냉각되면 전기 저항이 완전히 사라지는 물질입니다. 매우 강력한 자석을 만들 수 있게 해 줍니다."
+      },
+      "es": {
+        "term": "superconductor",
+        "match": [
+          "superconductor"
+        ],
+        "simple": "Describe materiales que conducen la electricidad sin pérdidas cuando están muy fríos.",
+        "detail": "Materiales que, al enfriarse a temperaturas extremadamente bajas, pierden toda resistencia eléctrica. Permiten fabricar imanes muy potentes."
       }
     },
     {
@@ -821,6 +1762,30 @@
         ],
         "simple": "Floating in the air using the power of magnets.",
         "detail": "Lifting an object with magnetic repulsion or attraction. With no wheels touching the track, friction nearly disappears."
+      },
+      "zh": {
+        "term": "悬浮",
+        "match": [
+          "磁力悬浮"
+        ],
+        "simple": "利用磁铁的力量漂浮在空中。",
+        "detail": "利用磁的排斥力或吸引力把物体抬起来。由于没有车轮接触轨道，摩擦几乎消失。"
+      },
+      "ko": {
+        "term": "자기 부상",
+        "match": [
+          "부상"
+        ],
+        "simple": "자석의 힘으로 공중에 떠 있는 것이에요.",
+        "detail": "자기 반발력이나 인력으로 물체를 들어 올리는 것입니다. 바퀴가 선로에 닿지 않아 마찰이 거의 사라집니다."
+      },
+      "es": {
+        "term": "levitación",
+        "match": [
+          "levita"
+        ],
+        "simple": "Flotar en el aire con la fuerza de los imanes.",
+        "detail": "Elevar un objeto mediante repulsión o atracción magnética. Como ninguna rueda toca la vía, la fricción casi desaparece."
       }
     },
     {
@@ -840,6 +1805,30 @@
         ],
         "simple": "A tiny hole in an airplane window pane.",
         "detail": "A small hole in a middle pane that lets the outer pane carry the pressure difference and keeps the window from fogging."
+      },
+      "zh": {
+        "term": "透气孔",
+        "match": [
+          "透气孔"
+        ],
+        "simple": "飞机窗玻璃上的一个小孔。",
+        "detail": "中间一层玻璃上的小孔，它让外层玻璃承受压力差，并防止窗户起雾。"
+      },
+      "ko": {
+        "term": "브리더 홀",
+        "match": [
+          "브리더 홀"
+        ],
+        "simple": "비행기 창문 유리에 뚫린 아주 작은 구멍이에요.",
+        "detail": "가운데 창에 뚫린 작은 구멍으로, 바깥쪽 창이 압력 차이를 견디게 하고 창문에 김이 서리는 것을 막습니다."
+      },
+      "es": {
+        "term": "orificio de respiración",
+        "match": [
+          "orificio de respiración"
+        ],
+        "simple": "Un agujerito en una capa de la ventanilla de un avión.",
+        "detail": "Un pequeño orificio en una capa intermedia que permite que la capa exterior soporte la diferencia de presión y evita que la ventanilla se empañe."
       }
     },
     {
@@ -859,6 +1848,30 @@
         ],
         "simple": "The substance that makes tomatoes and watermelons red.",
         "detail": "A red carotenoid pigment found in tomatoes and watermelon. It acts as an antioxidant."
+      },
+      "zh": {
+        "term": "番茄红素",
+        "match": [
+          "番茄红素"
+        ],
+        "simple": "使番茄和西瓜呈红色的物质。",
+        "detail": "一种红色的类胡萝卜素色素，存在于番茄和西瓜中。它具有抗氧化作用。"
+      },
+      "ko": {
+        "term": "리코펜",
+        "match": [
+          "리코펜"
+        ],
+        "simple": "토마토와 수박을 빨갛게 만드는 물질이에요.",
+        "detail": "토마토와 수박에 들어 있는 붉은 카로티노이드 색소로, 항산화제로 작용합니다."
+      },
+      "es": {
+        "term": "licopeno",
+        "match": [
+          "licopeno"
+        ],
+        "simple": "La sustancia que vuelve rojos a los tomates y las sandías.",
+        "detail": "Un pigmento carotenoide rojo presente en el tomate y la sandía. Actúa como antioxidante."
       }
     },
     {
@@ -878,6 +1891,30 @@
         ],
         "simple": "An amino acid named after watermelon, where it is found in large amounts.",
         "detail": "An amino acid first isolated from watermelon (Citrullus). The body converts it into arginine."
+      },
+      "zh": {
+        "term": "瓜氨酸",
+        "match": [
+          "瓜氨酸"
+        ],
+        "simple": "一种以西瓜命名的氨基酸，西瓜中含量很多。",
+        "detail": "一种最早从西瓜（Citrullus）中分离出来的氨基酸。人体会把它转化为精氨酸。"
+      },
+      "ko": {
+        "term": "시트룰린",
+        "match": [
+          "시트룰린"
+        ],
+        "simple": "수박에서 이름을 딴 아미노산으로, 수박에 많이 들어 있어요.",
+        "detail": "수박(Citrullus)에서 처음 분리된 아미노산입니다. 몸속에서 아르기닌으로 바뀝니다."
+      },
+      "es": {
+        "term": "citrulina",
+        "match": [
+          "citrulina"
+        ],
+        "simple": "Un aminoácido que lleva el nombre de la sandía, donde se encuentra en grandes cantidades.",
+        "detail": "Un aminoácido aislado por primera vez de la sandía (Citrullus). El cuerpo lo convierte en arginina."
       }
     },
     {
@@ -897,6 +1934,30 @@
         ],
         "simple": "The orange pigment in carrots, which the body turns into vitamin A.",
         "detail": "A carotenoid that the body converts into vitamin A, found in carrots and pumpkins."
+      },
+      "zh": {
+        "term": "β-胡萝卜素",
+        "match": [
+          "β-胡萝卜素"
+        ],
+        "simple": "胡萝卜中的橙色色素，人体会把它转化为维生素A。",
+        "detail": "一种类胡萝卜素，人体会把它转化为维生素A，存在于胡萝卜和南瓜中。"
+      },
+      "ko": {
+        "term": "베타카로틴",
+        "match": [
+          "베타카로틴"
+        ],
+        "simple": "당근의 주황색 색소로, 몸속에서 비타민 A로 바뀌어요.",
+        "detail": "몸속에서 비타민 A로 전환되는 카로티노이드로, 당근과 호박에 들어 있습니다."
+      },
+      "es": {
+        "term": "betacaroteno",
+        "match": [
+          "betacaroteno"
+        ],
+        "simple": "El pigmento naranja de las zanahorias, que el cuerpo convierte en vitamina A.",
+        "detail": "Un carotenoide que el cuerpo convierte en vitamina A, presente en las zanahorias y las calabazas."
       }
     },
     {
@@ -916,6 +1977,30 @@
         ],
         "simple": "When a plant ripens its fruit underground.",
         "detail": "A habit in which, after pollination, a stalk pushes into the soil and the fruit develops there, as in peanuts."
+      },
+      "zh": {
+        "term": "地下结果",
+        "match": [
+          "地下结果"
+        ],
+        "simple": "植物让果实在地下成熟的现象。",
+        "detail": "一种习性：授粉后，花柄钻入土中，果实在土里发育，花生就是这样。"
+      },
+      "ko": {
+        "term": "지하결실",
+        "match": [
+          "지하결실"
+        ],
+        "simple": "식물이 열매를 땅속에서 익히는 것이에요.",
+        "detail": "수분 후 줄기가 흙 속으로 파고들어 그곳에서 열매가 발달하는 습성으로, 땅콩이 그 예입니다."
+      },
+      "es": {
+        "term": "geocarpia",
+        "match": [
+          "geocarpia"
+        ],
+        "simple": "Cuando una planta madura su fruto bajo tierra.",
+        "detail": "Un hábito en el que, tras la polinización, un tallo se hunde en el suelo y el fruto se desarrolla allí, como en los cacahuetes."
       }
     },
     {
@@ -935,6 +2020,30 @@
         ],
         "simple": "A young shoot growing from the base of a plant, used to grow new plants.",
         "detail": "A shoot that grows from the base or stem of a plant and can be cut off and planted as a new plant."
+      },
+      "zh": {
+        "term": "吸芽",
+        "match": [
+          "吸芽"
+        ],
+        "simple": "从植物基部长出的幼芽，可用来种出新植株。",
+        "detail": "从植物基部或茎上长出的芽，可以切下来作为新植株种植。"
+      },
+      "ko": {
+        "term": "흡지",
+        "match": [
+          "흡지"
+        ],
+        "simple": "식물의 밑동에서 자라는 어린 싹으로, 새 식물을 키우는 데 써요.",
+        "detail": "식물의 밑동이나 줄기에서 자라 잘라 내어 새 식물로 심을 수 있는 싹입니다."
+      },
+      "es": {
+        "term": "hijuelo",
+        "match": [
+          "hijuelos"
+        ],
+        "simple": "Un brote joven que crece en la base de una planta y sirve para obtener plantas nuevas.",
+        "detail": "Un brote que crece desde la base o el tallo de una planta y que puede cortarse y plantarse como una planta nueva."
       }
     },
     {
@@ -954,6 +2063,30 @@
         ],
         "simple": "The substance that gives wasabi its sharp, nose-tingling heat.",
         "detail": "A pungent compound in plants of the mustard family. It forms when wasabi is grated and evaporates into the nose."
+      },
+      "zh": {
+        "term": "异硫氰酸烯丙酯",
+        "match": [
+          "异硫氰酸烯丙酯"
+        ],
+        "simple": "使芥末有冲鼻辛辣味的物质。",
+        "detail": "芥菜科（十字花科）植物中的一种辛辣化合物。它在芥末被磨碎时形成，并蒸发进入鼻腔。"
+      },
+      "ko": {
+        "term": "알릴 이소티오시아네이트",
+        "match": [
+          "알릴 이소티오시아네이트"
+        ],
+        "simple": "와사비의 코를 찌르는 매운맛을 내는 물질이에요.",
+        "detail": "겨자과 식물에 들어 있는 자극성 화합물입니다. 와사비를 갈 때 만들어지며 증발해 코로 올라갑니다."
+      },
+      "es": {
+        "term": "isotiocianato de alilo",
+        "match": [
+          "isotiocianato de alilo"
+        ],
+        "simple": "La sustancia que da al wasabi su picante agudo que hace cosquillas en la nariz.",
+        "detail": "Un compuesto pungente de las plantas de la familia de la mostaza. Se forma cuando se ralla el wasabi y se evapora hacia la nariz."
       }
     },
     {
@@ -973,6 +2106,30 @@
         ],
         "simple": "The substance that makes chili peppers hot.",
         "detail": "The pungent compound in chili peppers that stimulates pain-sensing nerves. It does not dissolve well in water."
+      },
+      "zh": {
+        "term": "辣椒素",
+        "match": [
+          "辣椒素"
+        ],
+        "simple": "使辣椒变辣的物质。",
+        "detail": "辣椒中的辛辣化合物，会刺激感受疼痛的神经。它不太容易溶于水。"
+      },
+      "ko": {
+        "term": "캡사이신",
+        "match": [
+          "캡사이신"
+        ],
+        "simple": "고추를 맵게 만드는 물질이에요.",
+        "detail": "고추에 들어 있는 자극성 화합물로 통증을 느끼는 신경을 자극합니다. 물에는 잘 녹지 않습니다."
+      },
+      "es": {
+        "term": "capsaicina",
+        "match": [
+          "capsaicina"
+        ],
+        "simple": "La sustancia que hace que los chiles piquen.",
+        "detail": "El compuesto pungente de los chiles que estimula los nervios sensibles al dolor. No se disuelve bien en agua."
       }
     },
     {
@@ -992,6 +2149,30 @@
         ],
         "simple": "When starch turns sticky and soft with water and heat.",
         "detail": "The change in which starch swells with water and heat into a thick, sticky state. Cooking rice does the same."
+      },
+      "zh": {
+        "term": "糊化",
+        "match": [
+          "糊化"
+        ],
+        "simple": "淀粉遇水加热后变得黏稠柔软的现象。",
+        "detail": "淀粉遇水加热后膨胀成浓稠黏糊状态的变化。煮米饭时也会发生同样的变化。"
+      },
+      "ko": {
+        "term": "호화",
+        "match": [
+          "호화"
+        ],
+        "simple": "녹말이 물과 열을 만나 끈적하고 부드럽게 변하는 현상이에요.",
+        "detail": "녹말이 물과 열로 부풀어 끈적한 상태가 되는 변화입니다. 밥을 지을 때도 같은 일이 일어납니다."
+      },
+      "es": {
+        "term": "gelatinizarse",
+        "match": [
+          "gelatiniza"
+        ],
+        "simple": "Cuando el almidón se vuelve pegajoso y blando con agua y calor.",
+        "detail": "El cambio en el que el almidón se hincha con agua y calor hasta un estado espeso y pegajoso. Al cocer arroz ocurre lo mismo."
       }
     },
     {
@@ -1012,6 +2193,31 @@
         ],
         "simple": "Words for a group of things, like 'a flock'.",
         "detail": "Nouns that name a group of the same kind of thing. English has many playful ones for animals, such as a 'flamboyance' of flamingos."
+      },
+      "zh": {
+        "term": "集合名词",
+        "match": [
+          "集合名词"
+        ],
+        "simple": "表示一群事物的词，比如“一群”。",
+        "detail": "指称同类事物群体的名词。英语中有许多有趣的动物集合名词，比如一群火烈鸟叫“flamboyance”。"
+      },
+      "ko": {
+        "term": "집합명사",
+        "match": [
+          "집합명사"
+        ],
+        "simple": "'떼', '무리'처럼 여럿을 묶어 부르는 말이에요.",
+        "detail": "같은 종류의 여럿을 한데 묶어 가리키는 명사입니다. 영어에는 플라밍고 무리를 '플램보이언스'라고 하는 것처럼 동물에 쓰는 재미있는 집합명사가 많습니다."
+      },
+      "es": {
+        "term": "nombres colectivos",
+        "match": [
+          "nombres colectivos",
+          "nombre colectivo"
+        ],
+        "simple": "Palabras para un grupo de cosas, como «una bandada».",
+        "detail": "Sustantivos que nombran un grupo de cosas del mismo tipo. El inglés tiene muchos divertidos para animales, como una «flamboyance» de flamencos."
       }
     },
     {
@@ -1031,6 +2237,30 @@
         ],
         "simple": "A very large seaweed that grows in the sea like an underwater forest.",
         "detail": "A large brown seaweed that forms underwater forests and shelters many sea animals."
+      },
+      "zh": {
+        "term": "海带",
+        "match": [
+          "海带"
+        ],
+        "simple": "一种非常大的海藻，像水下森林一样生长在海里。",
+        "detail": "一种大型褐藻，形成水下森林，为许多海洋动物提供庇护。"
+      },
+      "ko": {
+        "term": "켈프",
+        "match": [
+          "켈프"
+        ],
+        "simple": "바다에서 물속 숲처럼 자라는 아주 큰 해초예요.",
+        "detail": "물속 숲을 이루어 많은 바다 동물의 쉼터가 되는 큰 갈조류입니다."
+      },
+      "es": {
+        "term": "kelp",
+        "match": [
+          "kelp"
+        ],
+        "simple": "Un alga enorme que crece en el mar como un bosque submarino.",
+        "detail": "Un alga parda de gran tamaño que forma bosques submarinos y da refugio a muchos animales marinos."
       }
     },
     {
@@ -1050,6 +2280,30 @@
         ],
         "simple": "A pigment that makes leaves and fruits red or purple.",
         "detail": "A red-to-purple plant pigment. It colors autumn leaves and fruits such as blueberries."
+      },
+      "zh": {
+        "term": "花青素",
+        "match": [
+          "花青素"
+        ],
+        "simple": "使叶子和果实呈红色或紫色的色素。",
+        "detail": "一种红色至紫色的植物色素。它使秋叶和蓝莓等果实着色。"
+      },
+      "ko": {
+        "term": "안토시아닌",
+        "match": [
+          "안토시아닌"
+        ],
+        "simple": "잎과 열매를 빨갛거나 보랏빛으로 만드는 색소예요.",
+        "detail": "붉은색에서 보라색을 띠는 식물 색소로, 단풍잎과 블루베리 같은 열매에 색을 입힙니다."
+      },
+      "es": {
+        "term": "antocianina",
+        "match": [
+          "antocianina"
+        ],
+        "simple": "Un pigmento que hace que las hojas y los frutos sean rojos o morados.",
+        "detail": "Un pigmento vegetal de color rojo a morado. Da color a las hojas de otoño y a frutos como los arándanos."
       }
     },
     {
@@ -1069,6 +2323,31 @@
         ],
         "simple": "When animals crowd close together to stay warm.",
         "detail": "Animals packing tightly together to shelter from cold and wind, as emperor penguins do."
+      },
+      "zh": {
+        "term": "挤成一团",
+        "match": [
+          "挤成一团"
+        ],
+        "simple": "动物紧紧挤在一起取暖。",
+        "detail": "动物紧密地挤在一起，抵御寒冷和风，就像帝企鹅那样。"
+      },
+      "ko": {
+        "term": "허들링",
+        "match": [
+          "모여",
+          "모입니다"
+        ],
+        "simple": "동물들이 따뜻하게 지내려고 바짝 모여 붙는 것이에요.",
+        "detail": "황제펭귄처럼 추위와 바람을 피하려고 동물들이 빽빽하게 모여 붙는 행동입니다."
+      },
+      "es": {
+        "term": "agruparse",
+        "match": [
+          "se agrupan"
+        ],
+        "simple": "Cuando los animales se juntan mucho para darse calor.",
+        "detail": "Animales que se aprietan unos contra otros para protegerse del frío y del viento, como hacen los pingüinos emperador."
       }
     },
     {
@@ -1088,6 +2367,30 @@
         ],
         "simple": "A kind of sugar that gives the body and brain energy.",
         "detail": "A sugar that fuels the body. The brain relies mainly on glucose for energy."
+      },
+      "zh": {
+        "term": "葡萄糖",
+        "match": [
+          "葡萄糖"
+        ],
+        "simple": "一种能为身体和大脑提供能量的糖。",
+        "detail": "为身体提供燃料的一种糖。大脑的能量主要依靠葡萄糖。"
+      },
+      "ko": {
+        "term": "포도당",
+        "match": [
+          "포도당"
+        ],
+        "simple": "몸과 뇌에 에너지를 주는 당의 한 종류예요.",
+        "detail": "몸의 연료가 되는 당입니다. 뇌는 에너지를 주로 포도당에 의존합니다."
+      },
+      "es": {
+        "term": "glucosa",
+        "match": [
+          "glucosa"
+        ],
+        "simple": "Un tipo de azúcar que da energía al cuerpo y al cerebro.",
+        "detail": "Un azúcar que alimenta al cuerpo. El cerebro depende sobre todo de la glucosa para obtener energía."
       }
     },
     {
@@ -1107,6 +2410,30 @@
         ],
         "simple": "Using bounced sound to find where things are.",
         "detail": "The ability to locate objects by listening to echoes of one's own sounds, used by bats and dolphins."
+      },
+      "zh": {
+        "term": "回声定位",
+        "match": [
+          "回声定位"
+        ],
+        "simple": "利用反弹的声音来确定物体的位置。",
+        "detail": "通过聆听自己发出的声音的回声来定位物体的能力，蝙蝠和海豚都会使用。"
+      },
+      "ko": {
+        "term": "반향정위",
+        "match": [
+          "반향정위"
+        ],
+        "simple": "튕겨 오는 소리로 물건이 어디 있는지 알아내는 것이에요.",
+        "detail": "자신이 낸 소리의 메아리를 들어 물체의 위치를 알아내는 능력으로, 박쥐와 돌고래가 씁니다."
+      },
+      "es": {
+        "term": "ecolocalización",
+        "match": [
+          "ecolocalización"
+        ],
+        "simple": "Usar el sonido que rebota para saber dónde están las cosas.",
+        "detail": "La capacidad de localizar objetos escuchando los ecos de los propios sonidos, que usan los murciélagos y los delfines."
       }
     }
   ]

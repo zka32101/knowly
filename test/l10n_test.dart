@@ -18,7 +18,7 @@ void main() {
     expect(supportedLanguageCodes, ['ja', 'en', 'zh', 'ko', 'es']);
     expect(contentLanguageCodes, ['ja', 'en', 'zh', 'ko', 'es']);
     for (final c in ['ja', 'en', 'zh', 'ko', 'es']) {
-      expect(resolveContentLanguage(c), c, reason: '$c');
+      expect(resolveContentLanguage(c), c, reason: c);
     }
     for (final c in [null, 'fr']) {
       expect(resolveContentLanguage(c), 'en', reason: '$c');
