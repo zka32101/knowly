@@ -1,7 +1,8 @@
 // 日本語の「表記」を、モード（年代）で変えるための、AppLocalizationsJa の派生クラス。
 // - AppLocalizationsJa（基本）: ひらがなと分かち書き（Kids）
 // - AppLocalizationsJaJunior: 基本から、ことばの間のスペースを取った表記（Junior）
-// - AppLocalizationsJaAdult: 漢字まじりの、ふつうの表記（Teen / Adult）
+// - AppLocalizationsJaTeen: 漢字まじりで、すこしくだけた言い回し（Teen）
+// - AppLocalizationsJaAdult: 漢字まじりの、ふつうの表記（Adult）
 // このファイルは tool/gen_ja_styles.py で作る。ひらがなの文言を足したら、tool/ja_adult.tsv にも書いて作り直す。
 // ignore_for_file: type=lint
 
@@ -1344,4 +1345,152 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get celebrateOutfit => '季節の衣装を獲得';
+}
+
+/// Teen: Adult の表記と同じ漢字まじりで、言い回しだけ、すこしくだけた（だよ・しよう）。
+class AppLocalizationsJaTeen extends AppLocalizationsJaAdult {
+  AppLocalizationsJaTeen([super.locale]);
+
+  @override
+  String get interestsTitle => '好きなジャンルを選ぼう';
+
+  @override
+  String get battleHandHint => '1台の端末を順番に回して遊ぼう。';
+
+  @override
+  String get battleFinished => '結果発表！';
+
+  @override
+  String get battleDraw => '引き分け！';
+
+  @override
+  String battleWinner(String name) {
+    return '${name}の勝ち！';
+  }
+
+  @override
+  String get battleTimeHint => '早く答えるほどボーナス点がもらえるよ（正解数が同じときの順位づけに使うよ）。';
+
+  @override
+  String get reviewNone => '今日の復習はないよ。「知らなかった」を選んだ雑学が、明日から出てくるよ。';
+
+  @override
+  String get reviewDoneNote => 'また明日、復習しよう。';
+
+  @override
+  String dailyStreak(int n) {
+    return '${n}日連続で挑戦中！';
+  }
+
+  @override
+  String get dailyComeBack => '明日もまた挑戦しよう！';
+
+  @override
+  String badgesCount(int n, int total) {
+    return '${total}個中${n}個ゲット！';
+  }
+
+  @override
+  String mascotNext(int n, String name) {
+    return 'あと${n}で「${name}」に成長するよ';
+  }
+
+  @override
+  String get mascotMax => '最大まで育ったよ！';
+
+  @override
+  String get mascotHint => '雑学を開くと+1、「知らなかった」を選ぶと+2。ポイントが貯まるほど相棒が育つよ。';
+
+  @override
+  String get mascotSay_egg => '…おもしろい雑学、待ってるよ。';
+
+  @override
+  String get mascotSay_chick => 'ぴよっ！ 雑学っておもしろいね！';
+
+  @override
+  String get mascotSay_chicklet => 'ふわふわ！ もっと知りたいな。';
+
+  @override
+  String get mascotSay_owl => 'ほー！ ものしりになってきたよ。';
+
+  @override
+  String get mascotSay_professor => 'ふむふむ、なるほど。きみは博士だね。';
+
+  @override
+  String get mascotSay_king => 'ほっほー！ 雑学の王様だ！';
+
+  @override
+  String celebrateStage(String name) {
+    return '${name}に成長したよ！';
+  }
+
+  @override
+  String get celebrateBadge => 'バッジをゲット！';
+
+  @override
+  String get zukanHint => '見た雑学が図鑑に増えていくよ。';
+
+  @override
+  String get capsuleOpen => '開けてみよう！';
+
+  @override
+  String get capsuleHint => '1日1回、ふしぎな雑学が出てくるよ。';
+
+  @override
+  String get capsuleDone => 'また明日あけよう！';
+
+  @override
+  String swipeCombo(int n) {
+    return '🔥 ${n}連続！';
+  }
+
+  @override
+  String get hubPlayIntro => 'クイズやゲームで、雑学を楽しもう。';
+
+  @override
+  String get hubCollectIntro => '雑学を見るほど、相棒が育ってコレクションが増えるよ。';
+
+  @override
+  String get hubExploreIntro => '雑学を探したり、深掘りしたりしよう。';
+
+  @override
+  String get wordsHint => '用語の解説を見ると、ここに増えていくよ。';
+
+  @override
+  String get mapNoLinks => 'つながる雑学はまだないよ';
+
+  @override
+  String get leagueNote => 'この端末で遊んだ対戦の得点を、1週間ごとに集計するよ。外には送らないよ。';
+
+  @override
+  String get leagueEmpty => 'まだ記録がないよ。2人以上で対戦すると、ここに載るよ。';
+
+  @override
+  String get leagueClearBody => '今週の得点が消えるよ。先週の優勝者は残るよ。';
+
+  @override
+  String get recapNote => '今日までの7日間と、その前の7日間を比べるよ。';
+
+  @override
+  String get recapMsgNone => '今週はお休みだったね。ひとつ読んで再開しよう！';
+
+  @override
+  String get recapMsgSome => 'いいペース！ 少しずつ増えていくよ。';
+
+  @override
+  String get recapMsgGreat => 'すごい！ ほぼ毎日遊んだね！';
+
+  @override
+  String get recapBanner => '今週のレポートができたよ';
+
+  @override
+  String stampsHint(int n) {
+    return 'いまの季節にぴったりの雑学を読むと、スタンプが1つ。${n}つ集めると、相棒がその季節の衣装を着るよ。';
+  }
+
+  @override
+  String get stampsOutfit => '衣装ゲット！';
+
+  @override
+  String get celebrateOutfit => '季節の衣装をゲット！';
 }

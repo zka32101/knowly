@@ -34,13 +34,44 @@ Set<String> _overridden(String source, String className) {
 }
 
 void main() {
+  test('Teen: Adult と同じ漢字まじりで、言い回しだけくだけている', () {
+    final teen = AppLocalizationsJaTeen();
+    final adult = AppLocalizationsJaAdult();
+    // 言い回しだけ違う
+    expect(adult.recapMsgSome, 'いいペースです。少しずつ積み上がっています。');
+    expect(teen.recapMsgSome, 'いいペース！ 少しずつ増えていくよ。');
+    expect(adult.dailyComeBack, '明日また挑戦しましょう。');
+    expect(teen.dailyComeBack, '明日もまた挑戦しよう！');
+    expect(teen.battleSoloScore(3, 5), adult.battleSoloScore(3, 5)); // 言い回しを変えない文言は、Adult と同じ
+    expect(teen.mascotNext(4, 'ひよこ'), 'あと4で「ひよこ」に成長するよ');
+    expect(teen.tabPlay, '遊ぶ');
+    expect(teen.battleTitle, 'クイズ対戦');
+  });
+
+  test('ja_teen.tsv のキーは、ja_adult.tsv にもあり、プレースホルダーが同じ', () {
+    final ph = RegExp(r'\{(\w+)\}');
+    Map<String, String> read(String path) => {
+          for (final line in File(path).readAsLinesSync())
+            if (line.trim().isNotEmpty) line.split('\t').first: line.substring(line.indexOf('\t') + 1),
+        };
+    final adult = read('tool/ja_adult.tsv');
+    final teen = read('tool/ja_teen.tsv');
+    expect(teen.keys.where((k) => !adult.containsKey(k)), isEmpty);
+    for (final e in teen.entries) {
+      expect({for (final m in ph.allMatches(e.value)) m.group(1)},
+          {for (final m in ph.allMatches(adult[e.key]!)) m.group(1)},
+          reason: e.key);
+    }
+    expect(teen.length, greaterThan(20));
+  });
+
   final keys = _hiraganaKeys();
   final generated = File('lib/l10n/ja_styles.dart').readAsStringSync();
 
-  test('モード → 表記: Kids=kids、Junior=junior、Teen/Adult/未選択=adult', () {
+  test('モード → 表記: Kids=kids、Junior=junior、Teen=teen、Adult/未選択=adult', () {
     expect(uiStyleFor(AgeBand.kids), UiStyle.kids);
     expect(uiStyleFor(AgeBand.junior), UiStyle.junior);
-    expect(uiStyleFor(AgeBand.teen), UiStyle.adult);
+    expect(uiStyleFor(AgeBand.teen), UiStyle.teen);
     expect(uiStyleFor(AgeBand.adult), UiStyle.adult);
     expect(uiStyleFor(null), UiStyle.adult);
   });

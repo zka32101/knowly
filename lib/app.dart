@@ -171,5 +171,6 @@ class KnowlyApp extends ConsumerWidget {
 UiStyle uiStyleFor(AgeBand? band) => switch (band) {
       AgeBand.kids => UiStyle.kids,
       AgeBand.junior => UiStyle.junior,
+      AgeBand.teen => UiStyle.teen,
       _ => UiStyle.adult,
     };

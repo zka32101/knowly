@@ -3560,10 +3560,15 @@ void main() {
       expect(find.text('クイズ対戦'), findsOneWidget);
     });
 
-    testWidgets('Teen も大人と同じ、漢字まじりの表記', (tester) async {
+    testWidgets('Teen は、Adult と同じ漢字まじりで、言い回しだけくだけている', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'teen'});
       await _tab(tester, 'tab_collect');
       expect(find.text('図鑑'), findsOneWidget);
+      expect(find.text('雑学を見るほど、相棒が育ってコレクションが増えるよ。'), findsOneWidget);
+      await tester.pumpWidget(const SizedBox());
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _tab(tester, 'tab_collect');
+      expect(find.text('雑学を見るほど、相棒が成長してコレクションが増えます。'), findsOneWidget);
     });
 
     testWidgets('英語・中国語などは、モードで表記を変えない', (tester) async {

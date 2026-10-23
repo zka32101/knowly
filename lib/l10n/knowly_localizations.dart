@@ -7,9 +7,10 @@ import 'ja_styles.dart';
 /// 画面の文言の「表記」。日本語では、モード（年代）で書き方を変える。
 /// - kids: ひらがなと分かち書き
 /// - junior: ひらがな（分かち書きなし）
-/// - adult: 漢字まじりの、ふつうの表記（Teen / Adult）
+/// - teen: 漢字まじりで、すこしくだけた言い回し（だよ・しよう）
+/// - adult: 漢字まじりの、ふつうの表記（です・ます）
 /// ほかの言語は、モードで変えない。
-enum UiStyle { kids, junior, adult }
+enum UiStyle { kids, junior, teen, adult }
 
 /// [AppLocalizations] を読み込む。日本語のときだけ、[style] に合わせた表記にする。
 /// 年代が変わると [style] が変わり、画面の文言がすぐに入れ替わる。
@@ -27,6 +28,7 @@ class KnowlyLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations
       return SynchronousFuture(switch (style) {
         UiStyle.kids => lookupAppLocalizations(locale),
         UiStyle.junior => AppLocalizationsJaJunior(name),
+        UiStyle.teen => AppLocalizationsJaTeen(name),
         UiStyle.adult => AppLocalizationsJaAdult(name),
       });
     }

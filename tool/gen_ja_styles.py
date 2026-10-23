@@ -3,6 +3,7 @@
 
 - 対象は、app_ja.arb のうち「ひらがなだけで書かれた文言」（Kids 向けの表記）。
 - Teen/Adult の表記は、tool/ja_adult.tsv（キー<TAB>文言）に書く。{name} のような ICU の置き換えは、そのまま書く。
+- Teen の表記は、Adult の表記を土台に、言い回し（です・ます → だよ・しよう）だけを tool/ja_teen.tsv で変える。
 - Junior の表記は、基本の文言から、日本語どうしの間のスペースを取って作る（自動）。
 使い方: python3 tool/gen_ja_styles.py  （先に flutter gen-l10n を実行しておく）
 """
@@ -23,6 +24,15 @@ for line in (root / 'tool/ja_adult.tsv').read_text(encoding='utf-8').splitlines(
     if line.strip():
         k, v = line.split('\t', 1)
         adult[k] = v
+
+teen = {}
+for line in (root / 'tool/ja_teen.tsv').read_text(encoding='utf-8').splitlines():
+    if line.strip():
+        k, v = line.split('\t', 1)
+        teen[k] = v
+unknown = [k for k in teen if k not in adult]
+if unknown:
+    sys.exit('tool/ja_teen.tsv のキーが ja_adult.tsv にない: ' + ', '.join(unknown))
 
 missing = [k for k in cands if k not in adult]
 if missing:
@@ -51,10 +61,16 @@ def interp(v):
     return out
 
 
-adult_members, junior_members = [], []
+adult_members, junior_members, teen_members = [], [], []
 for k in cands:
     kind, params = sig(k)
     text = interp(adult[k])
+    if k in teen:
+        ttext = interp(teen[k])
+        if kind == 'get':
+            teen_members.append(f"  @override\n  String get {k} => '{ttext}';\n")
+        else:
+            teen_members.append(f"  @override\n  String {k}({params}) {{\n    return '{ttext}';\n  }}\n")
     if kind == 'get':
         adult_members.append(f"  @override\n  String get {k} => '{text}';\n")
         junior_members.append(f"  @override\n  String get {k} => _jr(super.{k});\n")
@@ -67,7 +83,7 @@ for k in cands:
 header = """// 日本語の「表記」を、モード（年代）で変えるための、AppLocalizationsJa の派生クラス。
 // - AppLocalizationsJa（基本）: ひらがなと分かち書き（Kids）
 // - AppLocalizationsJaJunior: 基本から、ことばの間のスペースを取った表記（Junior）
-// - AppLocalizationsJaAdult: 漢字まじりの、ふつうの表記（Teen / Adult）
+// - AppLocalizationsJaTeen: 漢字まじりで、すこしくだけた言い回し（Teen）\n// - AppLocalizationsJaAdult: 漢字まじりの、ふつうの表記（Adult）
 // このファイルは tool/gen_ja_styles.py で作る。ひらがなの文言を足したら、tool/ja_adult.tsv にも書いて作り直す。
 // ignore_for_file: type=lint
 
@@ -83,6 +99,9 @@ out = (header
        + "class AppLocalizationsJaJunior extends AppLocalizationsJa {\n  AppLocalizationsJaJunior([super.locale]);\n\n"
        + "\n".join(junior_members) + "}\n\n"
        + "class AppLocalizationsJaAdult extends AppLocalizationsJa {\n  AppLocalizationsJaAdult([super.locale]);\n\n"
-       + "\n".join(adult_members) + "}\n")
+       + "\n".join(adult_members) + "}\n\n"
+       + "/// Teen: Adult の表記と同じ漢字まじりで、言い回しだけ、すこしくだけた（だよ・しよう）。\n"
+       + "class AppLocalizationsJaTeen extends AppLocalizationsJaAdult {\n  AppLocalizationsJaTeen([super.locale]);\n\n"
+       + "\n".join(teen_members) + "}\n")
 (root / 'lib/l10n/ja_styles.dart').write_text(out, encoding='utf-8')
 print('generated', len(cands), 'keys')
