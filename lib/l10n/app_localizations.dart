@@ -113,7 +113,7 @@ abstract class AppLocalizations {
   /// No description provided for @languageSystem.
   ///
   /// In ja, this message translates to:
-  /// **'端末の設定に合わせる'**
+  /// **'端末の言語'**
   String get languageSystem;
 
   /// No description provided for @languageJa.
@@ -281,13 +281,13 @@ abstract class AppLocalizations {
   /// No description provided for @kidsNext.
   ///
   /// In ja, this message translates to:
-  /// **'つぎのざつがく'**
+  /// **'つぎへ'**
   String get kidsNext;
 
   /// No description provided for @kidsListen.
   ///
   /// In ja, this message translates to:
-  /// **'きいてみよう'**
+  /// **'きく'**
   String get kidsListen;
 
   /// No description provided for @emptyFeed.
@@ -667,6 +667,24 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'通知が許可されていません。端末の設定で許可してください。'**
   String get notifyDenied;
+
+  /// No description provided for @birthYearHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'生まれた年'**
+  String get birthYearHint;
+
+  /// No description provided for @filterButton.
+  ///
+  /// In ja, this message translates to:
+  /// **'絞り込み'**
+  String get filterButton;
+
+  /// No description provided for @filterButtonActive.
+  ///
+  /// In ja, this message translates to:
+  /// **'絞り込み（{count}）'**
+  String filterButtonActive(int count);
 }
 
 class _AppLocalizationsDelegate

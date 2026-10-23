@@ -15,7 +15,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get languageTitle => '言語 / Language';
 
   @override
-  String get languageSystem => '端末の設定に合わせる';
+  String get languageSystem => '端末の言語';
 
   @override
   String get languageJa => '日本語';
@@ -100,10 +100,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get past => 'これまでの雑学';
 
   @override
-  String get kidsNext => 'つぎのざつがく';
+  String get kidsNext => 'つぎへ';
 
   @override
-  String get kidsListen => 'きいてみよう';
+  String get kidsListen => 'きく';
 
   @override
   String get emptyFeed => 'いま表示できる雑学がありません';
@@ -299,4 +299,15 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get notifyDenied => '通知が許可されていません。端末の設定で許可してください。';
+
+  @override
+  String get birthYearHint => '生まれた年';
+
+  @override
+  String get filterButton => '絞り込み';
+
+  @override
+  String filterButtonActive(int count) {
+    return '絞り込み（$count）';
+  }
 }

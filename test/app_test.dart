@@ -10,6 +10,7 @@ import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/services/notifications.dart';
+import 'package:knowly/widgets/ja_wrap_text.dart';
 import 'package:knowly/services/tts.dart';
 import 'package:knowly/state/providers.dart';
 import 'package:knowly/state/settings.dart';
@@ -284,24 +285,24 @@ void main() {
       await tester.pumpAndSettle();
     }
 
-    Text title(WidgetTester tester) =>
-        tester.widget<Text>(find.byKey(const Key('detail_title')));
+    WrapText title(WidgetTester tester) =>
+        tester.widget<WrapText>(find.byKey(const Key('detail_title')));
 
     testWidgets('親子モード: 大人が「就学前向け」の説明に切り替えられる', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openFirstDetail(tester);
-      final own = title(tester).data;
+      final own = title(tester).text;
       expect(find.byKey(const Key('view_kids')), findsOneWidget);
       expect(find.byKey(const Key('view_junior')), findsOneWidget);
 
       await tester.tap(find.byKey(const Key('view_kids')));
       await tester.pumpAndSettle();
-      final kids = title(tester).data;
+      final kids = title(tester).text;
       expect(kids, isNot(equals(own)));
 
       await tester.tap(find.byKey(const Key('view_own')));
       await tester.pumpAndSettle();
-      expect(title(tester).data, own);
+      expect(title(tester).text, own);
     });
 
     testWidgets('親子モード: 子どもモードには切り替えが出ない', (tester) async {
@@ -463,6 +464,70 @@ void main() {
       await tester.pumpAndSettle();
       expect(container.read(settingsProvider).notifyEnabled, isFalse);
       expect(_lastNotifications!.lastScheduled, isNull);
+    });
+  });
+
+  group('表示の崩れ防止', () {
+    testWidgets('Kids の日本語は単語の途中で折り返さない（単語ごとの Text になる）', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      final title = tester.widget<WrapText>(find.byKey(const Key('kids_title')));
+      expect(title.wordWrap, isTrue);
+      expect(title.text.contains(' '), isTrue);
+      // 単語ごとに別の Text になっている
+      final words = find.descendant(
+          of: find.byKey(const Key('kids_title')), matching: find.byType(Text));
+      expect(words.evaluate().length, greaterThan(1));
+    });
+
+    testWidgets('Kids の下のボタンは短い文言で、2行以上に折り返さない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'kids'});
+      for (final key in ['kids_listen', 'kids_next']) {
+        final box = tester.getSize(find.byKey(Key(key)));
+        expect(box.height, lessThan(90), reason: key);
+      }
+    });
+
+    testWidgets('Adult のホームは絞り込みが横スクロールで、一覧が画面の上半分から始まる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      final todayLabel = tester.getTopLeft(find.text('きょうの雑学'));
+      expect(todayLabel.dy, lessThan(400));
+    });
+  });
+
+  group('絞り込み', () {
+    testWidgets('絞り込みボタンからカテゴリーを選ぶと、一覧がそのカテゴリーだけになる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      expect(find.byType(FilterChip), findsNothing); // ホームにチップは並べない
+      await tester.tap(find.byKey(const Key('filter_button')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.widgetWithText(FilterChip, 'むし'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('閉じる'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('絞り込み（1）'), findsOneWidget);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('categories'), ['bugs']);
+      // 表示されたカードのカテゴリー表示は「むし」だけ
+      expect(find.text('どうぶつ'), findsNothing);
+      expect(find.text('たべもの'), findsNothing);
+      expect(find.text('むし'), findsWidgets);
+    });
+
+    testWidgets('リセットで絞り込みが解除される', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult', 'categories': ['bugs']});
+      expect(find.text('絞り込み（1）'), findsOneWidget);
+      await tester.tap(find.text('リセット'));
+      await tester.pumpAndSettle();
+      expect(find.text('絞り込み'), findsOneWidget);
+    });
+
+    testWidgets('Junior にはシーンの絞り込みは出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'junior'});
+      await tester.tap(find.byKey(const Key('filter_button')));
+      await tester.pumpAndSettle();
+      expect(find.widgetWithText(FilterChip, '友だちと'), findsNothing);
+      expect(find.widgetWithText(FilterChip, 'むし'), findsOneWidget);
     });
   });
 }

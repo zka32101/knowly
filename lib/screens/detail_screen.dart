@@ -11,6 +11,7 @@ import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/ja_wrap_text.dart';
 import '../widgets/quiz_sheet.dart';
 
 class DetailScreen extends ConsumerStatefulWidget {
@@ -134,10 +135,15 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
               ),
             ],
             const SizedBox(height: 12),
-            Text(level.title,
-                key: const Key('detail_title'), style: theme.textTheme.headlineSmall),
+            // 就学前・小学生向けの日本語は、単語の途中で折り返さない。
+            WrapText(level.title,
+                key: const Key('detail_title'),
+                wordWrap: lang == 'ja' && shownBand.isChild,
+                style: theme.textTheme.headlineSmall),
             const SizedBox(height: 12),
-            Text(level.body, style: theme.textTheme.bodyLarge?.copyWith(height: 1.6)),
+            WrapText(level.body,
+                wordWrap: lang == 'ja' && shownBand.isChild,
+                style: theme.textTheme.bodyLarge?.copyWith(height: 1.6)),
             if (otherLevel != null && otherLevel.title != level.title) ...[
               const SizedBox(height: 12),
               TextButton.icon(

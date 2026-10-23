@@ -2,7 +2,7 @@
   "@@locale": "en",
   "appName": "Knowly",
   "languageTitle": "Language",
-  "languageSystem": "Match device",
+  "languageSystem": "Device",
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Next",
@@ -30,7 +30,7 @@
   "filterReset": "Reset",
   "today": "Today's fact",
   "past": "Earlier facts",
-  "kidsNext": "Next fact",
+  "kidsNext": "Next",
   "kidsListen": "Listen",
   "emptyFeed": "No facts to show right now",
   "lockedFeedNote": "Older facts are available with Premium",
@@ -121,5 +121,15 @@
   "notifySubtitle": "Get today's fact at a set time. Works entirely on your device.",
   "notifyJuniorNote": "A parent should set this up. It works on the device only and sends no data.",
   "notifyTime": "Notification time",
-  "notifyDenied": "Notifications are not allowed. Please enable them in your device settings."
+  "notifyDenied": "Notifications are not allowed. Please enable them in your device settings.",
+  "birthYearHint": "Birth year",
+  "filterButton": "Filter",
+  "filterButtonActive": "Filter ({count})",
+  "@filterButtonActive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
 import '../models/quiz.dart';
+import 'ja_wrap_text.dart';
 
 /// ○×クイズ。結果は保存しない（採点・ランキングなし）。
 Future<void> showQuizSheet(
@@ -15,14 +16,15 @@ Future<void> showQuizSheet(
   return showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
-    builder: (_) => _QuizBody(question: q, explanation: explanation),
+    builder: (_) => _QuizBody(question: q, explanation: explanation, language: language),
   );
 }
 
 class _QuizBody extends StatefulWidget {
-  const _QuizBody({required this.question, required this.explanation});
+  const _QuizBody({required this.question, required this.explanation, required this.language});
   final ({String statement, bool answer}) question;
   final String explanation;
+  final String language;
 
   @override
   State<_QuizBody> createState() => _QuizBodyState();
@@ -36,6 +38,7 @@ class _QuizBodyState extends State<_QuizBody> {
     final l = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final picked = _picked;
+    final language = widget.language;
     final correct = picked != null && picked == widget.question.answer;
 
     return SafeArea(
@@ -46,8 +49,10 @@ class _QuizBodyState extends State<_QuizBody> {
           children: [
             Text(l.quizTitle, style: theme.textTheme.titleMedium),
             const SizedBox(height: 12),
-            Text(widget.question.statement,
-                textAlign: TextAlign.center, style: theme.textTheme.headlineSmall),
+            WrapText(widget.question.statement,
+                wordWrap: language == 'ja',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.headlineSmall),
             const SizedBox(height: 24),
             if (picked == null)
               Row(
@@ -73,14 +78,25 @@ class _QuizBodyState extends State<_QuizBody> {
                 ],
               )
             else ...[
-              Text(
-                correct ? '⭕ ${l.quizCorrect}' : '❌ ${l.quizWrong}',
+              Row(
                 key: const Key('quiz_result'),
-                style: theme.textTheme.headlineMedium,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    correct ? Icons.check_circle : Icons.cancel,
+                    size: 40,
+                    color: correct ? Colors.green : theme.colorScheme.error,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(correct ? l.quizCorrect : l.quizWrong,
+                      style: theme.textTheme.headlineMedium),
+                ],
               ),
               const SizedBox(height: 12),
-              Text(widget.explanation,
-                  textAlign: TextAlign.center, style: theme.textTheme.bodyLarge),
+              WrapText(widget.explanation,
+                  wordWrap: language == 'ja',
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodyLarge),
               const SizedBox(height: 16),
               FilledButton(
                 onPressed: () => Navigator.of(context).pop(),

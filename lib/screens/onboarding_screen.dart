@@ -69,6 +69,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
             DropdownButton<int>(
               key: const Key('birth_year_dropdown'),
               isExpanded: true,
+              hint: Text(l.birthYearHint),
               value: _birthYear,
               items: [
                 for (var y = now; y >= now - 100; y--)
@@ -150,6 +151,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               Expanded(child: SingleChildScrollView(child: body)),
               FilledButton(
                 key: const Key('onboarding_next'),
+                style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
                 onPressed: onNext,
                 child: Text(l.continueButton),
               ),

@@ -15,7 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get languageTitle => 'Language';
 
   @override
-  String get languageSystem => 'Match device';
+  String get languageSystem => 'Device';
 
   @override
   String get languageJa => '日本語';
@@ -101,7 +101,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get past => 'Earlier facts';
 
   @override
-  String get kidsNext => 'Next fact';
+  String get kidsNext => 'Next';
 
   @override
   String get kidsListen => 'Listen';
@@ -306,4 +306,15 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get notifyDenied =>
       'Notifications are not allowed. Please enable them in your device settings.';
+
+  @override
+  String get birthYearHint => 'Birth year';
+
+  @override
+  String get filterButton => 'Filter';
+
+  @override
+  String filterButtonActive(int count) {
+    return 'Filter ($count)';
+  }
 }

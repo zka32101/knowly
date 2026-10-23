@@ -2,7 +2,7 @@
   "@@locale": "ja",
   "appName": "雑学コレ！",
   "languageTitle": "言語 / Language",
-  "languageSystem": "端末の設定に合わせる",
+  "languageSystem": "端末の言語",
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
@@ -30,8 +30,8 @@
   "filterReset": "リセット",
   "today": "きょうの雑学",
   "past": "これまでの雑学",
-  "kidsNext": "つぎのざつがく",
-  "kidsListen": "きいてみよう",
+  "kidsNext": "つぎへ",
+  "kidsListen": "きく",
   "emptyFeed": "いま表示できる雑学がありません",
   "lockedFeedNote": "さらに前の雑学は、プレミアムで読めます",
   "savedTitle": "保存した雑学",
@@ -121,5 +121,15 @@
   "notifySubtitle": "毎日、決まった時刻に今日の雑学をお知らせします。端末の中だけで動きます。",
   "notifyJuniorNote": "保護者の方が設定してください。端末の中だけで動き、情報は送られません。",
   "notifyTime": "通知の時刻",
-  "notifyDenied": "通知が許可されていません。端末の設定で許可してください。"
+  "notifyDenied": "通知が許可されていません。端末の設定で許可してください。",
+  "birthYearHint": "生まれた年",
+  "filterButton": "絞り込み",
+  "filterButtonActive": "絞り込み（{count}）",
+  "@filterButtonActive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

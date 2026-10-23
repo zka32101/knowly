@@ -10,6 +10,7 @@ import '../services/tts.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/ja_wrap_text.dart';
 import '../widgets/parental_gate.dart';
 import '../widgets/quiz_sheet.dart';
 import '../logic/streak.dart';
@@ -96,14 +97,17 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                 children: [
                   TriviaIllustration(id: item.illustration, size: 120),
                   const SizedBox(height: 16),
-                  Text(level.title,
+                  WrapText(level.title,
+                      key: const Key('kids_title'),
+                      wordWrap: lang == 'ja',
                       textAlign: TextAlign.center,
                       style: Theme.of(context)
                           .textTheme
                           .headlineMedium
                           ?.copyWith(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 16),
-                  Text(level.body,
+                  WrapText(level.body,
+                      wordWrap: lang == 'ja',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headlineSmall),
                 ],
@@ -173,6 +177,8 @@ class _FeedHome extends ConsumerWidget {
     final feed = ref.watch(feedProvider);
     final resolve = ref.watch(levelResolverProvider);
     final premium = ref.watch(isPremiumNowProvider);
+    // Kids/Junior の日本語は、単語の途中で折り返さない。
+    final wordWrap = band.isChild && ref.watch(contentLanguageProvider) == 'ja';
 
     final hasFilter = settings.categories.isNotEmpty || settings.scenes.isNotEmpty;
 
@@ -208,24 +214,21 @@ class _FeedHome extends ConsumerWidget {
               ],
             ),
           ),
-        Wrap(
-          spacing: 8,
-          runSpacing: 4,
-          crossAxisAlignment: WrapCrossAlignment.center,
+        // 絞り込みはボタンからシートで選ぶ（チップを並べると一覧が画面の下に押し出されるため）。
+        Row(
           children: [
-            for (final c in allCategories)
-              FilterChip(
-                label: Text(categoryLabel(l, c)),
-                selected: settings.categories.contains(c),
-                onSelected: (_) => notifier.toggleCategory(c),
+            FilledButton.tonalIcon(
+              key: const Key('filter_button'),
+              icon: const Icon(Icons.filter_list),
+              label: Text(hasFilter
+                  ? l.filterButtonActive(settings.categories.length + settings.scenes.length)
+                  : l.filterButton),
+              onPressed: () => showModalBottomSheet<void>(
+                context: context,
+                isScrollControlled: true,
+                builder: (_) => const _FilterSheet(),
               ),
-            if (band.isTeenOrAdult)
-              for (final s in allScenes)
-                FilterChip(
-                  label: Text(sceneLabel(l, s)),
-                  selected: settings.scenes.contains(s),
-                  onSelected: (_) => notifier.toggleScene(s),
-                ),
+            ),
             if (hasFilter)
               TextButton(onPressed: notifier.clearFilters, child: Text(l.filterReset)),
           ],
@@ -239,13 +242,19 @@ class _FeedHome extends ConsumerWidget {
         else ...[
           Text(l.today, style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 8),
-          _TriviaCard(item: feed.first, level: resolve(feed.first)!, big: true),
+          _TriviaCard(
+            item: feed.first,
+            level: resolve(feed.first)!,
+            big: true,
+            wordWrap: wordWrap,
+          ),
           if (feed.length > 1) ...[
             const SizedBox(height: 16),
             Text(l.past, style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(height: 8),
             for (final t in feed.skip(1))
-              if (resolve(t) case final level?) _TriviaCard(item: t, level: level),
+              if (resolve(t) case final level?)
+                _TriviaCard(item: t, level: level, wordWrap: wordWrap),
           ],
         ],
         if (band.isTeenOrAdult && !premium)
@@ -264,11 +273,17 @@ class _FeedHome extends ConsumerWidget {
 }
 
 class _TriviaCard extends StatelessWidget {
-  const _TriviaCard({required this.item, required this.level, this.big = false});
+  const _TriviaCard({
+    required this.item,
+    required this.level,
+    this.big = false,
+    this.wordWrap = false,
+  });
 
   final Trivia item;
   final TriviaLevel level;
   final bool big;
+  final bool wordWrap;
 
   @override
   Widget build(BuildContext context) {
@@ -289,7 +304,8 @@ class _TriviaCard extends StatelessWidget {
                     Text(categoryLabel(l, item.category),
                         style: Theme.of(context).textTheme.labelSmall),
                     const SizedBox(height: 4),
-                    Text(level.title,
+                    WrapText(level.title,
+                        wordWrap: wordWrap,
                         style: big
                             ? Theme.of(context).textTheme.titleLarge
                             : Theme.of(context).textTheme.titleMedium),
@@ -299,6 +315,65 @@ class _TriviaCard extends StatelessWidget {
               const Icon(Icons.chevron_right),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// 絞り込みシート。カテゴリー同士・シーン同士は OR、カテゴリーとシーンは AND。
+class _FilterSheet extends ConsumerWidget {
+  const _FilterSheet();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final settings = ref.watch(settingsProvider);
+    final notifier = ref.read(settingsProvider.notifier);
+    final band = settings.ageBand ?? AgeBand.adult;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final c in allCategories)
+                  FilterChip(
+                    label: Text(categoryLabel(l, c)),
+                    selected: settings.categories.contains(c),
+                    onSelected: (_) => notifier.toggleCategory(c),
+                  ),
+              ],
+            ),
+            if (band.isTeenOrAdult) ...[
+              const SizedBox(height: 16),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final s in allScenes)
+                    FilterChip(
+                      label: Text(sceneLabel(l, s)),
+                      selected: settings.scenes.contains(s),
+                      onSelected: (_) => notifier.toggleScene(s),
+                    ),
+                ],
+              ),
+            ],
+            const SizedBox(height: 16),
+            Align(
+              alignment: Alignment.centerRight,
+              child: FilledButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(l.close),
+              ),
+            ),
+          ],
         ),
       ),
     );
