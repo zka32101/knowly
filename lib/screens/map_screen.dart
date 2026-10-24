@@ -60,7 +60,9 @@ class _MapScreenState extends ConsumerState<MapScreen> {
     final seen = ref.watch(settingsProvider.select((s) => s.seen));
     final repo = ref.watch(triviaRepositoryProvider);
     final resolve = ref.watch(levelResolverProvider);
-    final center = _center ??= _initialCenter();
+    // 年代・言語などを変えて、中心の雑学が対象外になったら、選び直す。
+    var center = _center;
+    if (center == null || !links.containsKey(center)) center = _center = _initialCenter();
     final centerItem = center == null ? null : repo.byId(center);
     final centerLevel = centerItem == null ? null : resolve(centerItem);
 
@@ -71,7 +73,7 @@ class _MapScreenState extends ConsumerState<MapScreen> {
       );
     }
 
-    final neighbors = neighborsOf(center!, links, links.keys.toSet(), seen: seen);
+    final neighbors = neighborsOf(center, links, links.keys.toSet(), seen: seen);
 
     Widget node(String id, Offset pos, double radius) {
       final t = repo.byId(id);

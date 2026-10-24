@@ -52,7 +52,9 @@ LeagueData rollWeek(LeagueData data, DateTime today) {
   if (data.week == current) return data;
   if (data.week == null) return LeagueData(week: current, lastWinner: data.lastWinner, lastPoints: data.lastPoints);
   // 先週より前の週なら、先週の優勝者としては出さない（1週間以上あいたとき）。
-  final prev = weekKey(DateTime.parse(data.week!).add(const Duration(days: 7)));
+  // 夏時間の切り替えで 7日=168時間 がずれないよう、日付で7日進める。
+  final w = DateTime.parse(data.week!);
+  final prev = weekKey(DateTime(w.year, w.month, w.day + 7));
   final winner = prev == current ? leader(data.scores) : null;
   return LeagueData(
     week: current,

@@ -36,6 +36,9 @@ for f in sys.argv[1:]:
             cids.add(c['id'])
     ill.update(d.get('illustrations', {}))
 by = {i['id']: i for i in trivia['items']}
+missing = sorted({r for i in trivia['items'] for r in i['related'] if r not in by})
+if missing:
+    sys.exit('related に、存在しない id がある: ' + ', '.join(missing))
 for i in trivia['items']:  # related は、おたがいに結ぶ
     for r in list(i['related']):
         if i['id'] not in by[r]['related']:
@@ -45,8 +48,10 @@ save('quiz.json', quiz)
 save('quiz_choice.json', choice)
 p = root / 'lib/widgets/illustration.dart'
 s = p.read_text(encoding='utf-8')
-add = ''.join(f"  '{k}': '{v}',\n" for k, v in ill.items() if f"'{k}':" not in s)
+add = ''.join(f"  '{k}': '{v}',\n" for k, v in ill.items() if not re.search(rf"'{re.escape(k)}':", s))
 if add:
+    if "  'hand': '✋'" not in s:
+        sys.exit('illustration.dart の差し込み位置（hand）が見つからない')
     s = s.replace("  'hand': '✋'", add + "  'hand': '✋'", 1)
     p.write_text(s, encoding='utf-8')
 print(len(trivia['items']), 'items')

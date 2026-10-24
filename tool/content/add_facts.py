@@ -48,6 +48,9 @@ for f in facts:
         'vocab': [{'en': e, 'ja': j, 'kanji': k} for e, j, k in f['vocab']],
     })
 by = {i['id']: i for i in doc['items']}
+missing = sorted({r for i in doc['items'] for r in i['related'] if r not in by})
+if missing:
+    sys.exit('related に、存在しない id がある: ' + ', '.join(missing))
 for i in doc['items']:  # related は、おたがいに結ぶ（テストで見張る）
     for r in list(i['related']):
         if i['id'] not in by[r]['related']:

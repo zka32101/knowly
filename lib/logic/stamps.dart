@@ -18,11 +18,12 @@ const seasonEmoji = {
   Season.winter: '⛄',
 };
 
-/// スタンプ帳の年。冬は12月〜2月にまたがるので、北半球の1〜2月は前の年の冬として数える。
-int stampYear(DateTime d, Season season, Hemisphere hemisphere) =>
-    (season == Season.winter && hemisphere == Hemisphere.north && d.month <= 2)
-        ? d.year - 1
-        : d.year;
+/// スタンプ帳の年。12月〜2月にまたがる季節（北半球の冬、南半球の夏）は、1〜2月を前の年として数える。
+int stampYear(DateTime d, Season season, Hemisphere hemisphere) {
+  final spansNewYear = (season == Season.winter && hemisphere == Hemisphere.north) ||
+      (season == Season.summer && hemisphere == Hemisphere.south);
+  return (spansNewYear && d.month <= 2) ? d.year - 1 : d.year;
+}
 
 /// スタンプの印。「年-季節:雑学の id」。
 String stampKey(int year, Season season, String factId) => '$year-${season.name}:$factId';
