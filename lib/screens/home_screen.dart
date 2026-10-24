@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
 import '../services/tts.dart';
@@ -27,7 +28,8 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
-    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
+    final band =
+        ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
 
     return Scaffold(
       appBar: AppBar(
@@ -101,7 +103,8 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
     final lang = ref.watch(contentLanguageProvider);
     // 見た雑学として記録する（相棒の成長用）。
     WidgetsBinding.instance.addPostFrameCallback(
-        (_) => ref.read(settingsProvider.notifier).markSeen(item.id));
+      (_) => ref.read(settingsProvider.notifier).markSeen(item.id),
+    );
 
     return Padding(
       padding: const EdgeInsets.all(24),
@@ -117,19 +120,22 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
                   const SizedBox(height: 16),
                   TriviaIllustration(id: item.illustration, size: 120),
                   const SizedBox(height: 16),
-                  WrapText(level.title,
-                      key: const Key('kids_title'),
-                      wordWrap: lang == 'ja',
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium
-                          ?.copyWith(fontWeight: FontWeight.bold)),
+                  WrapText(
+                    level.title,
+                    key: const Key('kids_title'),
+                    wordWrap: lang == 'ja',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   const SizedBox(height: 16),
-                  WrapText(level.body,
-                      wordWrap: lang == 'ja',
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineSmall),
+                  WrapText(
+                    level.body,
+                    wordWrap: lang == 'ja',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
                 ],
               ),
             ),
@@ -138,15 +144,19 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
           if (_whyCount >= whyChainCheerAt)
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
-              child: Text(l.whyCheer(_whyCount),
-                  key: const Key('why_cheer'),
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium),
+              child: Text(
+                l.whyCheer(_whyCount),
+                key: const Key('why_cheer'),
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
             ),
           if (why != null) ...[
             OutlinedButton(
               key: const Key('kids_why'),
-              style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+              style: OutlinedButton.styleFrom(
+                minimumSize: const Size.fromHeight(64),
+              ),
               onPressed: () {
                 ref.read(ttsProvider).stop();
                 setState(() {
@@ -157,23 +167,33 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(l.whyButton,
-                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  Text(
+                    l.whyButton,
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   const SizedBox(width: 12),
                   Flexible(
-                    child: WrapText(why.question,
-                        wordWrap: lang == 'ja',
-                        style: const TextStyle(fontSize: 16)),
+                    child: WrapText(
+                      why.question,
+                      wordWrap: lang == 'ja',
+                      style: const TextStyle(fontSize: 16),
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 12),
           ],
-          if (ref.watch(triviaRepositoryProvider).quizFor(item.id) case final quiz?) ...[
+          if (ref.watch(triviaRepositoryProvider).quizFor(item.id)
+              case final quiz?) ...[
             FilledButton.icon(
               key: const Key('quiz_button'),
-              style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+              style: FilledButton.styleFrom(
+                minimumSize: const Size.fromHeight(64),
+              ),
               icon: const Icon(Icons.quiz_outlined, size: 32),
               label: Text(l.quizButton, style: const TextStyle(fontSize: 20)),
               onPressed: () => showQuizSheet(
@@ -190,9 +210,14 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
               Expanded(
                 child: FilledButton.tonalIcon(
                   key: const Key('kids_listen'),
-                  style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size.fromHeight(64),
+                  ),
                   icon: const Icon(Icons.volume_up, size: 32),
-                  label: Text(l.kidsListen, style: const TextStyle(fontSize: 20)),
+                  label: Text(
+                    l.kidsListen,
+                    style: const TextStyle(fontSize: 20),
+                  ),
                   onPressed: () => ref
                       .read(ttsProvider)
                       .speak('${level.title}。${level.body}', language: lang),
@@ -202,7 +227,9 @@ class _KidsHomeState extends ConsumerState<_KidsHome> {
               Expanded(
                 child: FilledButton.icon(
                   key: const Key('kids_next'),
-                  style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(64)),
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size.fromHeight(64),
+                  ),
                   icon: const Icon(Icons.arrow_forward, size: 32),
                   label: Text(l.kidsNext, style: const TextStyle(fontSize: 20)),
                   onPressed: () {
@@ -239,7 +266,8 @@ class _FeedHome extends ConsumerWidget {
     // Kids/Junior の日本語は、単語の途中で折り返さない。
     final wordWrap = band.isChild && ref.watch(contentLanguageProvider) == 'ja';
 
-    final hasFilter = settings.categories.isNotEmpty || settings.scenes.isNotEmpty;
+    final hasFilter =
+        settings.categories.isNotEmpty || settings.scenes.isNotEmpty;
 
     final streak = band.isTeenOrAdult
         ? computeStreak(settings.readDays, ref.watch(nowProvider))
@@ -256,7 +284,9 @@ class _FeedHome extends ConsumerWidget {
               title: Text(l.hintHomeTips),
               trailing: TextButton(
                 key: const Key('home_tips_dismiss'),
-                onPressed: () => ref.read(settingsProvider.notifier).markHintSeen('home_tips'),
+                onPressed: () => ref
+                    .read(settingsProvider.notifier)
+                    .markHintSeen('home_tips'),
                 child: Text(l.hintGotIt),
               ),
             ),
@@ -294,9 +324,13 @@ class _FeedHome extends ConsumerWidget {
             FilledButton.tonalIcon(
               key: const Key('filter_button'),
               icon: const Icon(Icons.filter_list),
-              label: Text(hasFilter
-                  ? l.filterButtonActive(settings.categories.length + settings.scenes.length)
-                  : l.filterButton),
+              label: Text(
+                hasFilter
+                    ? l.filterButtonActive(
+                        settings.categories.length + settings.scenes.length,
+                      )
+                    : l.filterButton,
+              ),
               onPressed: () => showModalBottomSheet<void>(
                 context: context,
                 isScrollControlled: true,
@@ -304,7 +338,10 @@ class _FeedHome extends ConsumerWidget {
               ),
             ),
             if (hasFilter)
-              TextButton(onPressed: notifier.clearFilters, child: Text(l.filterReset)),
+              TextButton(
+                onPressed: notifier.clearFilters,
+                child: Text(l.filterReset),
+              ),
           ],
         ),
         const SizedBox(height: 12),
@@ -384,16 +421,21 @@ class _TriviaCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(badge ?? categoryLabel(l, item.category),
-                        key: badge == null ? null : const Key('reason_badge'),
-                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                            color: badge == null
-                                ? null
-                                : Theme.of(context).colorScheme.primary)),
+                    Text(
+                      badge ?? categoryLabel(l, item.category),
+                      key: badge == null ? null : const Key('reason_badge'),
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        color: badge == null
+                            ? null
+                            : Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
                     const SizedBox(height: 4),
-                    WrapText(level.title,
-                        wordWrap: wordWrap,
-                        style: Theme.of(context).textTheme.titleMedium),
+                    WrapText(
+                      level.title,
+                      wordWrap: wordWrap,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
                   ],
                 ),
               ),
@@ -423,33 +465,32 @@ class _FilterSheet extends ConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final c in ref.watch(categoryIdsProvider))
-                  FilterChip(
-                    label: Text(categoryLabel(l, c)),
-                    selected: settings.categories.contains(c),
-                    onSelected: (_) => notifier.toggleCategory(c),
-                  ),
-              ],
-            ),
+            // チップが多くても、「閉じる」は下に出したままにする（チップの部分だけスクロール）。
+            Flexible(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CategoryChips(selected: settings.categories, onToggle: notifier.toggleCategory),
             if (band.isTeenOrAdult) ...[
-              const SizedBox(height: 16),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  for (final s in allScenes)
-                    FilterChip(
-                      label: Text(sceneLabel(l, s)),
-                      selected: settings.scenes.contains(s),
-                      onSelected: (_) => notifier.toggleScene(s),
-                    ),
-                ],
+                      const SizedBox(height: 16),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: [
+                          for (final s in allScenes)
+                            FilterChip(
+                              label: Text(sceneLabel(l, s)),
+                              selected: settings.scenes.contains(s),
+                              onSelected: (_) => notifier.toggleScene(s),
+                            ),
+                        ],
+                      ),
+                    ],
+                  ],
+                ),
               ),
-            ],
+            ),
             const SizedBox(height: 16),
             Align(
               alignment: Alignment.centerRight,
@@ -480,16 +521,18 @@ class _InterestSection extends ConsumerWidget {
     final theme = Theme.of(context);
 
     Widget header({bool edit = true}) => Row(
-          children: [
-            Expanded(child: Text(l.interestsSection, style: theme.textTheme.titleSmall)),
-            if (edit)
-              TextButton(
-                key: const Key('interests_edit'),
-                onPressed: () => context.push('/interests'),
-                child: Text(l.interestsEdit),
-              ),
-          ],
-        );
+      children: [
+        Expanded(
+          child: Text(l.interestsSection, style: theme.textTheme.titleSmall),
+        ),
+        if (edit)
+          TextButton(
+            key: const Key('interests_edit'),
+            onPressed: () => context.push('/interests'),
+            child: Text(l.interestsEdit),
+          ),
+      ],
+    );
 
     if (settings.interests.isEmpty) {
       return Card(
@@ -534,15 +577,18 @@ class _InterestSection extends ConsumerWidget {
 }
 
 String seasonLabel(AppLocalizations l, Season s) => switch (s) {
-      Season.spring => l.seasonSpring,
-      Season.summer => l.seasonSummer,
-      Season.autumn => l.seasonAutumn,
-      Season.winter => l.seasonWinter,
-    };
+  Season.spring => l.seasonSpring,
+  Season.summer => l.seasonSummer,
+  Season.autumn => l.seasonAutumn,
+  Season.winter => l.seasonWinter,
+};
 
-String reasonLabel(AppLocalizations l, TimingReason r, Season? season) => switch (r) {
+String reasonLabel(AppLocalizations l, TimingReason r, Season? season) =>
+    switch (r) {
       TimingReason.date => l.reasonDate,
-      TimingReason.season => l.reasonSeason(season == null ? '' : seasonLabel(l, season)),
+      TimingReason.season => l.reasonSeason(
+        season == null ? '' : seasonLabel(l, season),
+      ),
       TimingReason.night => l.reasonNight,
       TimingReason.morning => l.reasonMorning,
       TimingReason.evening => l.reasonEvening,
@@ -559,10 +605,13 @@ class _TimingSection extends ConsumerWidget {
     final picks = ref.watch(timingPicksProvider);
     if (picks.isEmpty) return const SizedBox.shrink();
     final resolve = ref.watch(levelResolverProvider);
-    final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
+    final band =
+        ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
     final wordWrap = band.isChild && ref.watch(contentLanguageProvider) == 'ja';
     final hemisphere = ref.watch(hemisphereProvider);
-    final season = hemisphere == null ? null : seasonFor(ref.watch(nowProvider), hemisphere);
+    final season = hemisphere == null
+        ? null
+        : seasonFor(ref.watch(nowProvider), hemisphere);
 
     return Column(
       key: const Key('timing_section'),

@@ -1,9 +1,9 @@
-import '../state/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
 
@@ -154,17 +154,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           children: [
             Text(l.interestsTitle, style: theme.textTheme.headlineSmall),
             const SizedBox(height: 16),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final c in ref.watch(categoryIdsProvider))
-                  FilterChip(
-                    label: Text(categoryLabel(l, c)),
-                    selected: settings.interestCategories.contains(c),
-                    onSelected: (_) => notifier.toggleInterestCategory(c),
-                  ),
-              ],
+            CategoryChips(
+              keyPrefix: 'interest_cat_',
+              selected: settings.interestCategories,
+              onToggle: notifier.toggleInterestCategory,
             ),
             if (_band!.isTeenOrAdult) ...[
               const SizedBox(height: 16),

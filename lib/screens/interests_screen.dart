@@ -1,9 +1,9 @@
-import '../state/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
 
@@ -58,18 +58,10 @@ class _InterestsScreenState extends ConsumerState<InterestsScreen> {
         children: [
           Text(l.interestsNote, style: theme.textTheme.bodySmall),
           header(l.interestsCategories),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              for (final c in ref.watch(categoryIdsProvider))
-                FilterChip(
-                  key: Key('interest_cat_$c'),
-                  label: Text(categoryLabel(l, c)),
-                  selected: settings.interestCategories.contains(c),
-                  onSelected: (_) => notifier.toggleInterestCategory(c),
-                ),
-            ],
+          CategoryChips(
+            keyPrefix: 'interest_cat_',
+            selected: settings.interestCategories,
+            onToggle: notifier.toggleInterestCategory,
           ),
           if (band.isTeenOrAdult) ...[
             header(l.interestsScenes),

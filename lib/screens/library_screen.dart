@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../logic/search.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
@@ -102,15 +103,11 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   header(l.filterCategoryHeader),
-                  Wrap(spacing: 8, runSpacing: 8, children: [
-                    for (final c in ref.watch(categoryIdsProvider))
-                      FilterChip(
-                        label: Text(categoryLabel(l, c)),
-                        selected: _categories.contains(c),
-                        onSelected: (v) =>
-                            update(() => v ? _categories.add(c) : _categories.remove(c)),
-                      ),
-                  ]),
+                  CategoryChips(
+                    selected: _categories,
+                    onToggle: (c) => update(
+                        () => _categories.contains(c) ? _categories.remove(c) : _categories.add(c)),
+                  ),
                   if (band.isTeenOrAdult) ...[
                     header(l.filterSceneHeader),
                     Wrap(spacing: 8, runSpacing: 8, children: [

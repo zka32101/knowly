@@ -61,6 +61,9 @@ class CategoryRegistry {
     return out;
   }
 
+  /// [id] の階層の深さ（いちばん上は0）。
+  static int depth(String id) => ancestors(id).length;
+
   /// 雑学のカテゴリー [itemCategory] が、選んだカテゴリー [selected] のどれかに入るか（親を選ぶと子もふくむ）。
   static bool matches(Set<String> selected, String itemCategory) {
     if (selected.contains(itemCategory)) return true;

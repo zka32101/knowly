@@ -910,6 +910,38 @@ void main() {
       expect(find.text('昆虫'), findsWidgets);
     });
 
+    testWidgets('親のカテゴリーを選ぶと、子（てんき・うみ…）の雑学も一覧に出る', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('filter_button')));
+      await tester.pumpAndSettle();
+      // 子のチップは、親のチップの下に並ぶ
+      final parentY = tester
+          .getTopLeft(find.byKey(const Key('filter_cat_nature')))
+          .dy;
+      final childY = tester
+          .getTopLeft(find.byKey(const Key('filter_cat_weather')))
+          .dy;
+      expect(childY, greaterThan(parentY));
+      await tester.tap(find.byKey(const Key('filter_cat_nature')));
+      await tester.pumpAndSettle();
+      final container = ProviderScope.containerOf(
+        tester.element(find.byType(KnowlyApp)),
+      );
+      final cats = container
+          .read(allEligibleProvider)
+          .map((t) => t.category)
+          .toSet();
+      expect(cats, containsAll(['nature', 'weather', 'ocean']));
+      final filtered = container.read(feedFilterProvider);
+      final shown = container
+          .read(allEligibleProvider)
+          .where((t) => filtered.matches(t))
+          .map((t) => t.category)
+          .toSet();
+      expect(shown, containsAll(['weather', 'ocean']));
+      expect(shown, isNot(contains('animals')));
+    });
+
     testWidgets('リセットで絞り込みが解除される', (tester) async {
       await _pump(
         tester,
@@ -1015,8 +1047,11 @@ void main() {
       Future<void> pick(String key) async {
         await tester.tap(find.byKey(const Key('library_filter_button')));
         await tester.pumpAndSettle();
+        await tester.ensureVisible(find.byKey(Key(key)));
+        await tester.pumpAndSettle();
         await tester.tap(find.byKey(Key(key)));
         await tester.pumpAndSettle();
+        await tester.ensureVisible(find.text('閉じる'));
         await tester.tap(find.text('閉じる'));
         await tester.pumpAndSettle();
       }
@@ -1122,8 +1157,10 @@ void main() {
       await tester.tap(find.byKey(const Key('interests_register')));
       await tester.pumpAndSettle();
 
+      await _scrollTo(tester, const Key('interest_cat_space'));
       await tester.tap(find.byKey(const Key('interest_cat_space')));
       await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('keyword_field'));
       await tester.enterText(find.byKey(const Key('keyword_field')), '宇宙');
       await tester.tap(find.byKey(const Key('keyword_add')));
       await tester.pumpAndSettle();
@@ -1134,6 +1171,7 @@ void main() {
       expect(sp.getStringList('interestKeywords'), ['宇宙']);
 
       // 同じことばは重複して登録されない
+      await _scrollTo(tester, const Key('keyword_field'));
       await tester.enterText(find.byKey(const Key('keyword_field')), '宇宙');
       await tester.tap(find.byKey(const Key('keyword_add')));
       await tester.pumpAndSettle();
@@ -1162,6 +1200,7 @@ void main() {
       await _scrollTo(tester, const Key('interests_edit'));
       await tester.tap(find.byKey(const Key('interests_edit')));
       await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('keyword_field'));
       await tester.enterText(find.byKey(const Key('keyword_field')), 'あと1つ');
       await tester.tap(find.byKey(const Key('keyword_add')));
       await tester.pumpAndSettle();
@@ -1227,6 +1266,7 @@ void main() {
       await tester.pumpAndSettle();
       await _open(tester, const Key('open_interests'));
       await tester.pumpAndSettle();
+      await _scrollTo(tester, const Key('keyword_field'));
       expect(find.byKey(const Key('keyword_field')), findsOneWidget);
     });
   });
