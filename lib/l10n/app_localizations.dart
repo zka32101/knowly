@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @reportThisWeek.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅう：{seen}こ みて、{answered}もん とけたよ'**
+  String reportThisWeek(int seen, int answered);
+
   /// No description provided for @settingsJuniorRuby.
   ///
   /// In ja, this message translates to:

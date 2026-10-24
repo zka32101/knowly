@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "reportThisWeek": "こんしゅう：{seen}こ みて、{answered}もん とけたよ",
+  "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "ふりがなを つける",
   "listenSlow": "ゆっくり",
   "settingsTextSize": "文字の大きさ",

@@ -27,6 +27,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String reportThisWeek(int seen, int answered) {
+    return 'こんしゅう：$seenこ みて、$answeredもん とけたよ';
+  }
+
+  @override
   String get settingsJuniorRuby => 'ふりがなを つける';
 
   @override

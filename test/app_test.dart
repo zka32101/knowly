@@ -2940,13 +2940,33 @@ void main() {
           ],
           'quizCorrect': 3,
           'quizAnswered': 4,
+          // 今週（きょうをふくむ7日）の記録。8日前のぶんは数えない
+          'activity': [
+            '2026-10-23:5:1:6:4',
+            '2026-10-20:2:0:3:3',
+            '2026-10-10:9:9:9:9',
+          ],
         },
+        now: DateTime(2026, 10, 23, 10),
       );
       await tester.tap(find.byKey(const Key('open_settings')));
       await tester.pumpAndSettle();
       await tapV(tester, const Key('report_tile'));
       await _solveGate(tester);
       expect(find.text('3 / 4 (75%)'), findsOneWidget);
+      // 今週: 見た 5+2=7件、答えた 6+3=9問
+      expect(find.textContaining('7'), findsWidgets);
+      expect(
+        tester
+            .widget<Text>(
+              find.descendant(
+                of: find.byKey(const Key('report_week')),
+                matching: find.byType(Text),
+              ),
+            )
+            .data,
+        'こんしゅう：7こみて、9問（もん）とけたよ',
+      );
       expect(
         tester
             .widget<Text>(

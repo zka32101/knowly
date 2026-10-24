@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Siguiente",
+  "reportThisWeek": "Esta semana: {seen} datos vistos, {answered} preguntas respondidas",
+  "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "Mostrar lecturas (furigana)",
   "listenSlow": "Despacio",
   "settingsTextSize": "Tamaño del texto",

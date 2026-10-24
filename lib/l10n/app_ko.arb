@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "다음",
+  "reportThisWeek": "이번 주: {seen}개 봤고, {answered}문제 풀었어요",
+  "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "후리가나 표시",
   "listenSlow": "천천히",
   "settingsTextSize": "글자 크기",

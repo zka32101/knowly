@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "下一步",
+  "reportThisWeek": "本周：看了{seen}条，答了{answered}题",
+  "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "显示读音（假名）",
   "listenSlow": "慢速",
   "settingsTextSize": "文字大小",

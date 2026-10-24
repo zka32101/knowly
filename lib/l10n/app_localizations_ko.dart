@@ -27,6 +27,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String reportThisWeek(int seen, int answered) {
+    return '이번 주: $seen개 봤고, $answered문제 풀었어요';
+  }
+
+  @override
   String get settingsJuniorRuby => '후리가나 표시';
 
   @override

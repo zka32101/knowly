@@ -137,6 +137,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String reportThisWeek(int seen, int answered) => _jr(super.reportThisWeek(seen, answered));
+
+  @override
   String get settingsJuniorRuby => _jr(super.settingsJuniorRuby);
 
   @override
@@ -787,6 +790,11 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String reportThisWeek(int seen, int answered) {
+    return '今週：${seen}件を見て、${answered}問に答えました';
+  }
 
   @override
   String get settingsJuniorRuby => 'ふりがなを表示';

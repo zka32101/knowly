@@ -27,6 +27,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String reportThisWeek(int seen, int answered) {
+    return '本周：看了$seen条，答了$answered题';
+  }
+
+  @override
   String get settingsJuniorRuby => '显示读音（假名）';
 
   @override

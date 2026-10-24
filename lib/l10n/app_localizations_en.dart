@@ -27,6 +27,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String reportThisWeek(int seen, int answered) {
+    return 'This week: $seen facts seen, $answered questions answered';
+  }
+
+  @override
   String get settingsJuniorRuby => 'Show readings (furigana)';
 
   @override
