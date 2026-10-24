@@ -44,7 +44,7 @@ class TriviaRepository {
   })  : categories = _sortedCategories(categories),
          _quizzes = {for (final q in quizzes) q.factId: q},
         _whyLinks = {for (final w in whyLinks) w.from: w} {
-    CategoryRegistry.set(this.categories);
+    if (this.categories.isNotEmpty) CategoryRegistry.set(this.categories);
   }
 
   final List<Trivia> items;
@@ -61,6 +61,10 @@ class TriviaRepository {
 
   static List<TriviaCategory> _sortedCategories(List<TriviaCategory> c) =>
       c.where((e) => e.active).toList()..sort((a, b) => a.order.compareTo(b.order));
+
+  /// この言語の雑学が、この配信で出せる（レビュー済み、または開発中の下書き可）ものが1つでもあるか。
+  bool hasShippableContent(String lang, {bool allowDraft = kAllowDraftContent}) =>
+      items.any((t) => t.translations[lang]?.isShippable(allowDraft: allowDraft) ?? false);
 
   /// 選択肢に出すカテゴリーの id（表示順）。
   List<String> get categoryIds {
@@ -137,7 +141,9 @@ class TriviaRepository {
       categories = (catDecoded['items'] as List)
           .map((e) => TriviaCategory.fromJson(e as Map<String, dynamic>))
           .toList();
-    } catch (_) {}
+    } catch (e) {
+      debugPrint('categories.json を読めませんでした: $e');
+    }
     return TriviaRepository(list,
         categories: categories,
         quizzes: quizzes,

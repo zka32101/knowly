@@ -47,7 +47,9 @@ final pendingCelebrationsProvider = Provider<List<Celebration>>((ref) {
   if (celebratedOutfits != null) {
     for (final book in completedBooks(s.stamps)) {
       if (!celebratedOutfits.contains(book)) {
-        final season = Season.values.firstWhere((x) => book.endsWith('-${x.name}'));
+        // 保存データに知らない季節があっても、アプリ全体を止めない。
+        final season = Season.values.where((x) => book.endsWith('-${x.name}')).firstOrNull;
+        if (season == null) continue;
         out.add(Celebration(CelebrationKind.outfit, book, seasonAccessory[season]!));
       }
     }

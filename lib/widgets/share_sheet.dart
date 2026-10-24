@@ -42,12 +42,15 @@ class _ShareCardDialogState extends ConsumerState<_ShareCardDialog> {
   Future<void> _share() async {
     setState(() => _busy = true);
     try {
-      final render = _boundary.currentContext!.findRenderObject() as RenderRepaintBoundary;
+      final render = _boundary.currentContext?.findRenderObject() as RenderRepaintBoundary?;
+      if (render == null) return;
       final image = await render.toImage(pixelRatio: 3);
       final data = await image.toByteData(format: ui.ImageByteFormat.png);
       if (data == null) return;
       await ref.read(shareServiceProvider).shareImage(data.buffer.asUint8List(), text: widget.text);
       if (mounted) Navigator.of(context).pop();
+    } catch (e) {
+      debugPrint('share failed: $e'); // 画像を作れない・共有できないときは、ダイアログを開いたままにする
     } finally {
       if (mounted) setState(() => _busy = false);
     }

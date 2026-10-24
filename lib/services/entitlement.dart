@@ -177,7 +177,7 @@ Future<bool> premiumWithOfflineCache(
     final at = int.tryParse(parts[1]);
     if (at == null) return false;
     final age = now.difference(DateTime.fromMillisecondsSinceEpoch(at));
-    return parts[0] == 'true' && age.inDays < premiumOfflineGraceDays;
+    return parts[0] == 'true' && !age.isNegative && age.inDays < premiumOfflineGraceDays;
   }
 }
 

@@ -29,6 +29,30 @@ const _spoken = {
     done: 'All done!',
     score: 'correct',
   ),
+  'zh': (
+    trueFalse: '对，还是错？',
+    correct: '答对了！',
+    wrong: '差一点！',
+    answerIs: '答案是',
+    done: '结束啦！',
+    score: '题答对',
+  ),
+  'ko': (
+    trueFalse: '맞을까요, 틀릴까요?',
+    correct: '정답이에요!',
+    wrong: '아쉬워요!',
+    answerIs: '정답은',
+    done: '끝났어요!',
+    score: '개 맞혔어요',
+  ),
+  'es': (
+    trueFalse: '¿Verdadero o falso?',
+    correct: '¡Correcto!',
+    wrong: '¡Casi!',
+    answerIs: 'La respuesta es',
+    done: '¡Terminamos!',
+    score: 'correctas',
+  ),
 };
 
 const voiceQuizSize = 10;

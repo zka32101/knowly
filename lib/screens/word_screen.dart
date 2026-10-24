@@ -44,8 +44,11 @@ class WordScreen extends ConsumerWidget {
       return Scaffold(appBar: AppBar(), body: Center(child: Text(l.wordNotFound)));
     }
     // 見たことばは、ことばずかんに載る。
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => ref.read(settingsProvider.notifier).markWordSeen(entryId));
+    final notifier = ref.read(settingsProvider.notifier);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // 画面がすぐ閉じられても、いまの notifier（閉じた後の ref ではなく）に記録する。
+      notifier.markWordSeen(entryId);
+    });
     final facts = ref.watch(wordFactsProvider(entryId));
     final resolve = ref.watch(levelResolverProvider);
     // 子ども（Junior）にはやさしい説明だけ。Teen/Adult にはくわしい説明も。

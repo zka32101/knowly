@@ -11,7 +11,7 @@ import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
-import 'providers.dart' show nowProvider, stampRecorderProvider;
+import 'providers.dart' show nowProvider, stampRecorderProvider, triviaRepositoryProvider;
 
 /// 画面の言語。
 const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
@@ -648,5 +648,10 @@ final deviceRegionProvider =
 final uiLanguageProvider = Provider<String>((ref) =>
     resolveLanguage(ref.watch(settingsProvider).uiLanguage ?? ref.watch(deviceLanguageProvider)));
 
-final contentLanguageProvider = Provider<String>((ref) => resolveContentLanguage(
-    ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));
+/// 雑学の本文の言語。ja/en 以外は、その言語のレビュー済みの本文がある配信だけ（辞典・クイズも同じ言語になる）。
+final contentLanguageProvider = Provider<String>((ref) {
+  final lang = resolveContentLanguage(
+      ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider));
+  if (lang == 'ja' || lang == 'en') return lang;
+  return ref.watch(triviaRepositoryProvider).hasShippableContent(lang) ? lang : 'en';
+});

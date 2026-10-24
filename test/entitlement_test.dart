@@ -16,9 +16,15 @@ void main() {
     expect(await s.offers(), isEmpty);
     expect(await s.restore(), isFalse);
     expect(
-        await s.purchase(const PurchaseOffer(
-            id: 'x', period: PurchasePeriod.monthly, priceString: '')),
-        PurchaseOutcome.unavailable);
+      await s.purchase(
+        const PurchaseOffer(
+          id: 'x',
+          period: PurchasePeriod.monthly,
+          priceString: '',
+        ),
+      ),
+      PurchaseOutcome.unavailable,
+    );
   });
 
   test('エンタイトルメント ID は premium', () {
@@ -32,8 +38,18 @@ void main() {
     test('確認できたら、結果を保存して返す', () async {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
-      expect(await premiumWithOfflineCache(() async => true, prefs, t0), isTrue);
-      expect(await premiumWithOfflineCache(offline, prefs, t0.add(const Duration(days: 1))), isTrue);
+      expect(
+        await premiumWithOfflineCache(() async => true, prefs, t0),
+        isTrue,
+      );
+      expect(
+        await premiumWithOfflineCache(
+          offline,
+          prefs,
+          t0.add(const Duration(days: 1)),
+        ),
+        isTrue,
+      );
     });
 
     test('猶予の日数をすぎたら、無料に戻る', () async {
@@ -54,8 +70,19 @@ void main() {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
       await premiumWithOfflineCache(() async => true, prefs, t0);
-      expect(await premiumWithOfflineCache(() async => false, prefs, t0), isFalse);
+      expect(
+        await premiumWithOfflineCache(() async => false, prefs, t0),
+        isFalse,
+      );
       expect(await premiumWithOfflineCache(offline, prefs, t0), isFalse);
+    });
+
+    test('端末の時計を過去に戻しても、プレミアムが続かない', () async {
+      SharedPreferences.setMockInitialValues({});
+      final prefs = await SharedPreferences.getInstance();
+      await premiumWithOfflineCache(() async => true, prefs, t0);
+      final back = t0.subtract(const Duration(days: 3));
+      expect(await premiumWithOfflineCache(offline, prefs, back), isFalse);
     });
   });
 }

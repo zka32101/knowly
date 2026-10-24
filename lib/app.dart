@@ -35,6 +35,7 @@ import 'screens/projects_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/today_screen.dart';
+import 'state/clock_sync.dart';
 import 'state/notification_sync.dart';
 import 'state/settings.dart';
 import 'l10n/knowly_localizations.dart';
@@ -131,6 +132,7 @@ class KnowlyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = ref.watch(uiLanguageProvider);
+    ref.watch(clockSyncProvider);
     ref.watch(notificationSyncProvider);
     ref.watch(widgetSyncProvider);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand));

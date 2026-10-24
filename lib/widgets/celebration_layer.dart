@@ -80,9 +80,9 @@ class _CelebrationLayerState extends ConsumerState<CelebrationLayer>
       title = l.celebrateStage(mascotName(l, c.id));
       sub = mascotSay(l, c.id);
     } else if (c.kind == CelebrationKind.outfit) {
-      final season = Season.values.firstWhere((x) => c.id.endsWith('-${x.name}'));
+      final season = Season.values.where((x) => c.id.endsWith('-${x.name}')).firstOrNull;
       title = l.celebrateOutfit;
-      sub = seasonName(l, season);
+      sub = season == null ? '' : seasonName(l, season);
     } else {
       final def = badgeDefs.firstWhere((b) => b.id == c.id);
       title = l.celebrateBadge;
