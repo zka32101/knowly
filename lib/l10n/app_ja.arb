@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "relatedMore": "もっと みる（あと{n}こ）",
+  "@relatedMore": {"placeholders": {"n": {"type": "int"}}},
   "searchRecent": "最近の検索",
   "hintHomeTips": "カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！",
   "hintGotIt": "わかった",

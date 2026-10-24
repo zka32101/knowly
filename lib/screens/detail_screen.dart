@@ -32,6 +32,8 @@ class DetailScreen extends ConsumerStatefulWidget {
 }
 
 class _DetailScreenState extends ConsumerState<DetailScreen> {
+  bool _showAllRelated = false;
+
   /// 親子モード: Teen/Adult が「こどもに説明するなら」で別の年代の説明を読む。null なら自分の年代。
   AgeBand? _viewBand;
   bool _bilingual = false;
@@ -96,13 +98,21 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
 
     // 関連する雑学（この年代・言語・国で表示できるものだけ）。
     final region = ref.watch(regionProvider);
-    final related = [
+    final allRelated = [
       for (final id in item.related)
         if (repo.byId(id) case final r?)
           if (r.allowedInRegion(region.code, anyRegion: region.any) &&
               levelFor2(r, ownBand, lang) != null)
             r,
     ];
+    // 「つぎに読む」: まだ読んでいない雑学を先に。3件まで出し、残りは「もっと見る」で。
+    final unread = [
+      for (final r in allRelated)
+        if (!settings.seen.contains(r.id)) r,
+      for (final r in allRelated)
+        if (settings.seen.contains(r.id)) r,
+    ];
+    final related = _showAllRelated ? unread : unread.take(3).toList();
     TriviaLevel? relatedLevel(Trivia r) => levelFor2(r, ownBand, lang);
 
     String ratingLabel(Rating r) => switch (r) {
@@ -408,6 +418,12 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                       onTap: () => context.push('/detail/${r.id}'),
                     ),
                   ),
+              if (unread.length > related.length)
+                TextButton(
+                  key: const Key('related_more'),
+                  onPressed: () => setState(() => _showAllRelated = true),
+                  child: Text(l.relatedMore(unread.length - related.length)),
+                ),
             ],
           ],
         ),

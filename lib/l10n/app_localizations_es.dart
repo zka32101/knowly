@@ -27,6 +27,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueButton => 'Siguiente';
 
   @override
+  String relatedMore(int n) {
+    return 'Ver más ($n más)';
+  }
+
+  @override
   String get searchRecent => 'Recientes';
 
   @override

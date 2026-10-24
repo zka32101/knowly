@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "下一步",
+  "relatedMore": "查看更多（还有{n}条）",
+  "@relatedMore": {"placeholders": {"n": {"type": "int"}}},
   "searchRecent": "最近搜索",
   "hintHomeTips": "点按卡片可以翻面。“玩”里还有测验哦！",
   "hintGotIt": "知道了",

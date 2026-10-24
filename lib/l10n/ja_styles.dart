@@ -131,6 +131,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String relatedMore(int n) => _jr(super.relatedMore(n));
+
+  @override
   String get hintHomeTips => _jr(super.hintHomeTips);
 
   @override
@@ -772,6 +775,11 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String relatedMore(int n) {
+    return 'もっと見る（あと${n}件）';
+  }
 
   @override
   String get hintHomeTips => 'カードをタップするとめくれます。「遊ぶ」にはクイズもあります。';

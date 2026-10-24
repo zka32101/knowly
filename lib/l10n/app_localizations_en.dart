@@ -27,6 +27,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String relatedMore(int n) {
+    return 'Show more ($n more)';
+  }
+
+  @override
   String get searchRecent => 'Recent';
 
   @override

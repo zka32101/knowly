@@ -1545,12 +1545,24 @@ void main() {
       final container = ProviderScope.containerOf(
         tester.element(find.byType(KnowlyApp)),
       );
-      final first = container.read(feedProvider).first;
-      await tester.tap(find.byIcon(Icons.chevron_right).first);
+      container.read(routerProvider).push('/detail/giraffe_seven_vertebrae');
       await tester.pumpAndSettle();
-      await _scrollTo(tester, Key('related_${first.related.first}'));
+      Finder cards() => find.byWidgetPredicate((w) {
+        final k = w.key;
+        return k is ValueKey<String> &&
+            k.value.startsWith('related_') &&
+            k.value != 'related_more';
+      });
+      await _scrollTo(tester, const Key('related_more'));
       expect(find.text('関連する雑学'), findsOneWidget);
-      await tester.tap(find.byKey(Key('related_${first.related.first}')));
+      // 3件だけ出して、残りは「もっと見る」
+      expect(cards(), findsNWidgets(3));
+      await tester.tap(find.byKey(const Key('related_more')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('related_more')), findsNothing);
+      expect(cards().evaluate().length, greaterThan(3));
+      await tester.ensureVisible(cards().first);
+      await tester.tap(cards().first);
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('detail_title')), findsOneWidget);
     });

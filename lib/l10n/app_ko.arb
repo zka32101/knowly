@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "다음",
+  "relatedMore": "더 보기 ({n}개 더)",
+  "@relatedMore": {"placeholders": {"n": {"type": "int"}}},
   "searchRecent": "최근 검색",
   "hintHomeTips": "카드를 누르면 뒤집혀요. ‘놀기’에는 퀴즈도 있어요!",
   "hintGotIt": "알겠어요",

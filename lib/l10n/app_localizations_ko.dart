@@ -27,6 +27,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String relatedMore(int n) {
+    return '더 보기 ($n개 더)';
+  }
+
+  @override
   String get searchRecent => '최근 검색';
 
   @override

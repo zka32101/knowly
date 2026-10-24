@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Next",
+  "relatedMore": "Show more ({n} more)",
+  "@relatedMore": {"placeholders": {"n": {"type": "int"}}},
   "searchRecent": "Recent",
   "hintHomeTips": "Tap a card to flip it. Find quizzes in the Play tab!",
   "hintGotIt": "Got it",

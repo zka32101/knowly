@@ -27,6 +27,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String relatedMore(int n) {
+    return '查看更多（还有$n条）';
+  }
+
+  @override
   String get searchRecent => '最近搜索';
 
   @override

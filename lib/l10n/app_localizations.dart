@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @relatedMore.
+  ///
+  /// In ja, this message translates to:
+  /// **'もっと みる（あと{n}こ）'**
+  String relatedMore(int n);
+
   /// No description provided for @searchRecent.
   ///
   /// In ja, this message translates to:

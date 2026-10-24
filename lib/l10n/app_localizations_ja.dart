@@ -27,6 +27,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String relatedMore(int n) {
+    return 'もっと みる（あと$nこ）';
+  }
+
+  @override
   String get searchRecent => '最近の検索';
 
   @override
