@@ -47,5 +47,10 @@ for f in facts:
         'volatility': 'stable', 'contentFlags': [],
         'vocab': [{'en': e, 'ja': j, 'kanji': k} for e, j, k in f['vocab']],
     })
+by = {i['id']: i for i in doc['items']}
+for i in doc['items']:  # related は、おたがいに結ぶ（テストで見張る）
+    for r in list(i['related']):
+        if i['id'] not in by[r]['related']:
+            by[r]['related'].append(i['id'])
 path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(len(doc['items']), 'items')

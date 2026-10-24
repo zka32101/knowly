@@ -423,4 +423,58 @@ void main() {
       }
     });
   });
+
+  group('データのそろい方', () {
+    final quizIds = {
+      for (final q
+          in (jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())
+                  as Map<String, dynamic>)['items']
+              as List)
+        (q as Map<String, dynamic>)['factId'] as String,
+    };
+
+    test('Kids/Junior 向けの雑学には、○×クイズがある', () {
+      for (final i in items) {
+        if (i['minAgeBand'] == 'kids' || i['minAgeBand'] == 'junior') {
+          expect(quizIds, contains(i['id']), reason: '${i['id']}: ○×クイズがない');
+        }
+      }
+    });
+
+    test('○×クイズは、5つの言語がそろっている', () {
+      final quiz =
+          (jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())
+                  as Map<String, dynamic>)['items']
+              as List;
+      for (final q in quiz.cast<Map<String, dynamic>>()) {
+        for (final lang in ['ja', 'en', 'zh', 'ko', 'es']) {
+          expect(q[lang], isNotNull, reason: '${q['factId']}/$lang');
+        }
+      }
+    });
+
+    test('関連する雑学は、おたがいに結ばれている（A→B なら B→A）', () {
+      final byId = {for (final i in items) i['id'] as String: i};
+      for (final i in items) {
+        for (final r in i['related'] as List) {
+          expect(
+            (byId[r]!['related'] as List),
+            contains(i['id']),
+            reason: '${i['id']} → $r',
+          );
+        }
+      }
+    });
+
+    test('どの雑学も、5つの言語の本文がある', () {
+      for (final i in items) {
+        final tr = (i['translations'] as Map).keys;
+        expect(
+          tr,
+          containsAll(['ja', 'en', 'zh', 'ko', 'es']),
+          reason: i['id'] as String,
+        );
+      }
+    });
+  });
 }

@@ -149,7 +149,9 @@
       ],
       "related": [
         "sea_otters_hold_hands",
-        "giraffe_seven_vertebrae"
+        "giraffe_seven_vertebrae",
+        "cats_no_sweet",
+        "crows_recognize_faces"
       ],
       "sources": [],
       "verification": {
@@ -323,7 +325,9 @@
       ],
       "related": [
         "watermelon_92_water",
-        "cacao_money"
+        "cacao_money",
+        "banana_is_berry",
+        "strawberry_200_seeds"
       ],
       "sources": [],
       "verification": {
@@ -501,7 +505,8 @@
       "related": [
         "honey_never_spoils",
         "watermelon_92_water",
-        "strawberry_200_seeds"
+        "strawberry_200_seeds",
+        "popcorn_pop"
       ],
       "sources": [],
       "verification": {
@@ -677,7 +682,9 @@
       ],
       "related": [
         "moon_moving_away",
-        "sunlight_8_minutes"
+        "sunlight_8_minutes",
+        "orbital_speed",
+        "iss_sunrises"
       ],
       "sources": [],
       "verification": {
@@ -1024,7 +1031,10 @@
       ],
       "related": [
         "heart_100k",
-        "human_dna_same"
+        "human_dna_same",
+        "giraffe_seven_vertebrae",
+        "goosebumps_cold",
+        "nails_grow"
       ],
       "sources": [],
       "verification": {
@@ -1201,7 +1211,11 @@
         "dolphin_half_sleep",
         "elephant_ground_sounds",
         "baby_bones",
-        "heart_100k"
+        "heart_100k",
+        "octopus_blue_blood",
+        "sea_otters_hold_hands",
+        "human_dna_same",
+        "owl_head_turn"
       ],
       "sources": [],
       "verification": {
@@ -1377,7 +1391,8 @@
       ],
       "related": [
         "eiffel_grows_summer",
-        "rainbow_full_circle"
+        "rainbow_full_circle",
+        "thunder_count"
       ],
       "sources": [],
       "verification": {
@@ -1554,7 +1569,10 @@
       ],
       "related": [
         "giraffe_seven_vertebrae",
-        "dolphin_half_sleep"
+        "dolphin_half_sleep",
+        "octopus_blue_blood",
+        "cats_no_sweet",
+        "salmon_return"
       ],
       "sources": [],
       "verification": {
@@ -1734,7 +1752,10 @@
       ],
       "related": [
         "orbital_speed",
-        "iss_sunrises"
+        "iss_sunrises",
+        "sunlight_8_minutes",
+        "saturn_would_float",
+        "bat_echolocation"
       ],
       "sources": [],
       "verification": {
@@ -1913,7 +1934,12 @@
       ],
       "related": [
         "apple_floats",
-        "steel_ship_floats"
+        "steel_ship_floats",
+        "saturn_would_float",
+        "penguin_huddle",
+        "snow_hexagon",
+        "thunder_count",
+        "fuji_3776"
       ],
       "sources": [],
       "verification": {
@@ -2223,7 +2249,10 @@
       ],
       "related": [
         "flamingo_flamboyance",
-        "crows_recognize_faces"
+        "crows_recognize_faces",
+        "elephant_ground_sounds",
+        "koala_fingerprints",
+        "sloth_slow"
       ],
       "sources": [],
       "verification": {
@@ -2358,7 +2387,8 @@
       ],
       "related": [
         "giraffe_seven_vertebrae",
-        "baby_bones"
+        "baby_bones",
+        "heart_100k"
       ],
       "sources": [],
       "verification": {
@@ -2533,7 +2563,9 @@
       ],
       "related": [
         "crows_recognize_faces",
-        "cats_no_sweet"
+        "cats_no_sweet",
+        "wombat_cube_poop",
+        "koala_fingerprints"
       ],
       "sources": [],
       "verification": {
@@ -2711,7 +2743,9 @@
       ],
       "related": [
         "sunlight_8_minutes",
-        "saturn_would_float"
+        "saturn_would_float",
+        "venus_day_longer",
+        "iss_sunrises"
       ],
       "sources": [],
       "verification": {
@@ -2890,7 +2924,9 @@
       ],
       "related": [
         "ant_strong",
-        "dragonfly_before_dinosaurs"
+        "dragonfly_before_dinosaurs",
+        "dung_beetle_milky_way",
+        "silkworm_thread"
       ],
       "sources": [],
       "verification": {
@@ -3065,7 +3101,9 @@
       ],
       "related": [
         "octopus_blue_blood",
-        "sea_otters_hold_hands"
+        "sea_otters_hold_hands",
+        "flamingo_flamboyance",
+        "crows_recognize_faces"
       ],
       "sources": [],
       "verification": {
@@ -3242,7 +3280,9 @@
       ],
       "related": [
         "saturn_would_float",
-        "no_sound_in_space"
+        "no_sound_in_space",
+        "venus_day_longer",
+        "moon_moving_away"
       ],
       "sources": [],
       "verification": {
@@ -3421,7 +3461,10 @@
         "no_sound_in_space",
         "orbital_speed",
         "ice_floats",
-        "apple_floats"
+        "apple_floats",
+        "moon_moving_away",
+        "sunlight_8_minutes",
+        "steel_ship_floats"
       ],
       "sources": [],
       "verification": {
@@ -3776,7 +3819,8 @@
       ],
       "related": [
         "human_dna_same",
-        "giraffe_seven_vertebrae"
+        "giraffe_seven_vertebrae",
+        "baby_bones"
       ],
       "sources": [],
       "verification": {
@@ -3951,7 +3995,10 @@
         "たけのこ",
         "筍"
       ],
-      "related": [],
+      "related": [
+        "squirrel_acorns",
+        "tree_rings"
+      ],
       "sources": [],
       "verification": {
         "status": "unverified",
@@ -4124,7 +4171,11 @@
       ],
       "related": [
         "cats_no_sweet",
-        "octopus_blue_blood"
+        "octopus_blue_blood",
+        "wombat_cube_poop",
+        "flamingo_flamboyance",
+        "owl_head_turn",
+        "squirrel_acorns"
       ],
       "sources": [],
       "verification": {
@@ -4475,7 +4526,11 @@
       ],
       "related": [
         "koala_fingerprints",
-        "wombat_cube_poop"
+        "wombat_cube_poop",
+        "giraffe_seven_vertebrae",
+        "dolphin_half_sleep",
+        "camel_hump_fat",
+        "bat_echolocation"
       ],
       "sources": [],
       "verification": {
@@ -4654,7 +4709,9 @@
       "related": [
         "elephant_ground_sounds",
         "koala_fingerprints",
-        "sea_otters_hold_hands"
+        "sea_otters_hold_hands",
+        "giraffe_seven_vertebrae",
+        "salmon_return"
       ],
       "sources": [],
       "verification": {
@@ -4830,7 +4887,8 @@
       ],
       "related": [
         "chimborazo_farthest",
-        "japan_islands"
+        "japan_islands",
+        "camel_hump_fat"
       ],
       "sources": [],
       "verification": {
@@ -5005,7 +5063,11 @@
       ],
       "related": [
         "wombat_cube_poop",
-        "flamingo_flamboyance"
+        "flamingo_flamboyance",
+        "elephant_ground_sounds",
+        "dolphin_half_sleep",
+        "penguin_huddle",
+        "sloth_slow"
       ],
       "sources": [],
       "verification": {
@@ -5182,7 +5244,8 @@
       ],
       "related": [
         "antarctica_desert",
-        "chimborazo_farthest"
+        "chimborazo_farthest",
+        "fuji_3776"
       ],
       "sources": [],
       "verification": {
@@ -5358,7 +5421,9 @@
       ],
       "related": [
         "dragonfly_before_dinosaurs",
-        "firefly_cold_light"
+        "firefly_cold_light",
+        "butterfly_taste_feet",
+        "silkworm_thread"
       ],
       "sources": [],
       "verification": {
@@ -5535,7 +5600,9 @@
       ],
       "related": [
         "firefly_cold_light",
-        "bee_waggle_dance"
+        "bee_waggle_dance",
+        "butterfly_taste_feet",
+        "ant_strong"
       ],
       "sources": [],
       "verification": {
@@ -5714,7 +5781,9 @@
       ],
       "related": [
         "bee_waggle_dance",
-        "cicada_17_years"
+        "cicada_17_years",
+        "ant_strong",
+        "dragonfly_before_dinosaurs"
       ],
       "sources": [],
       "verification": {
@@ -5891,7 +5960,9 @@
       ],
       "related": [
         "cicada_17_years",
-        "mosquito_female_bites"
+        "mosquito_female_bites",
+        "dragonfly_before_dinosaurs",
+        "firefly_cold_light"
       ],
       "sources": [],
       "verification": {
@@ -6066,7 +6137,10 @@
       ],
       "related": [
         "mosquito_female_bites",
-        "spider_not_insect"
+        "spider_not_insect",
+        "firefly_cold_light",
+        "bee_waggle_dance",
+        "cricket_sing"
       ],
       "sources": [],
       "verification": {
@@ -6243,7 +6317,10 @@
       ],
       "related": [
         "spider_not_insect",
-        "beetle_quarter"
+        "beetle_quarter",
+        "bee_waggle_dance",
+        "cicada_17_years",
+        "cricket_sing"
       ],
       "sources": [],
       "verification": {
@@ -6419,7 +6496,10 @@
       ],
       "related": [
         "beetle_quarter",
-        "dung_beetle_milky_way"
+        "dung_beetle_milky_way",
+        "cicada_17_years",
+        "mosquito_female_bites",
+        "ladybug_spots"
       ],
       "sources": [],
       "verification": {
@@ -6594,7 +6674,10 @@
       ],
       "related": [
         "dung_beetle_milky_way",
-        "silkworm_thread"
+        "silkworm_thread",
+        "mosquito_female_bites",
+        "spider_not_insect",
+        "ladybug_spots"
       ],
       "sources": [],
       "verification": {
@@ -6770,7 +6853,9 @@
       ],
       "related": [
         "silkworm_thread",
-        "butterfly_taste_feet"
+        "butterfly_taste_feet",
+        "spider_not_insect",
+        "beetle_quarter"
       ],
       "sources": [],
       "verification": {
@@ -6950,7 +7035,9 @@
       ],
       "related": [
         "butterfly_taste_feet",
-        "ant_strong"
+        "ant_strong",
+        "beetle_quarter",
+        "dung_beetle_milky_way"
       ],
       "sources": [],
       "verification": {
@@ -7131,7 +7218,10 @@
       ],
       "related": [
         "maglev_603",
-        "tokyo_first_subway"
+        "tokyo_first_subway",
+        "iss_sunrises",
+        "shipping_80_percent",
+        "shinkansen_kingfisher"
       ],
       "sources": [],
       "verification": {
@@ -7307,7 +7397,10 @@
       ],
       "related": [
         "wright_first_flight",
-        "plane_window_hole"
+        "plane_window_hole",
+        "tokyo_first_subway",
+        "maglev_603",
+        "black_box_orange"
       ],
       "sources": [],
       "verification": {
@@ -7483,7 +7576,10 @@
       ],
       "related": [
         "plane_window_hole",
-        "steel_ship_floats"
+        "steel_ship_floats",
+        "airliner_cruise",
+        "tokyo_first_subway",
+        "bicycle_first"
       ],
       "sources": [],
       "verification": {
@@ -7664,7 +7760,10 @@
       ],
       "related": [
         "airliner_cruise",
-        "wright_first_flight"
+        "wright_first_flight",
+        "shinkansen_1964",
+        "maglev_603",
+        "bicycle_first"
       ],
       "sources": [],
       "verification": {
@@ -7844,7 +7943,10 @@
         "orbital_speed",
         "iss_sunrises",
         "saturn_would_float",
-        "ice_floats"
+        "ice_floats",
+        "wright_first_flight",
+        "plane_window_hole",
+        "apple_floats"
       ],
       "sources": [],
       "verification": {
@@ -8021,7 +8123,11 @@
       "related": [
         "iss_sunrises",
         "venus_day_longer",
-        "shipping_80_percent"
+        "shipping_80_percent",
+        "no_sound_in_space",
+        "saturn_would_float",
+        "steel_ship_floats",
+        "plane_window_hole"
       ],
       "sources": [],
       "verification": {
@@ -8201,7 +8307,10 @@
       ],
       "related": [
         "tokyo_first_subway",
-        "airliner_cruise"
+        "airliner_cruise",
+        "shinkansen_1964",
+        "shipping_80_percent",
+        "shinkansen_kingfisher"
       ],
       "sources": [],
       "verification": {
@@ -8379,7 +8488,10 @@
       ],
       "related": [
         "steel_ship_floats",
-        "orbital_speed"
+        "orbital_speed",
+        "airliner_cruise",
+        "wright_first_flight",
+        "black_box_orange"
       ],
       "sources": [],
       "verification": {
@@ -8560,7 +8672,10 @@
         "venus_day_longer",
         "moon_moving_away",
         "shipping_80_percent",
-        "shinkansen_1964"
+        "shinkansen_1964",
+        "no_sound_in_space",
+        "steel_ship_floats",
+        "orbital_speed"
       ],
       "sources": [],
       "verification": {
@@ -8738,7 +8853,9 @@
       ],
       "related": [
         "shinkansen_1964",
-        "maglev_603"
+        "maglev_603",
+        "orbital_speed",
+        "iss_sunrises"
       ],
       "sources": [],
       "verification": {
@@ -8916,7 +9033,9 @@
       ],
       "related": [
         "cacao_money",
-        "rice_half_world"
+        "rice_half_world",
+        "honey_never_spoils",
+        "banana_is_berry"
       ],
       "sources": [],
       "verification": {
@@ -9098,7 +9217,9 @@
       ],
       "related": [
         "rice_half_world",
-        "carrot_colors"
+        "carrot_colors",
+        "honey_never_spoils",
+        "watermelon_92_water"
       ],
       "sources": [],
       "verification": {
@@ -9278,7 +9399,9 @@
       ],
       "related": [
         "carrot_colors",
-        "peanut_not_nut"
+        "peanut_not_nut",
+        "watermelon_92_water",
+        "cacao_money"
       ],
       "sources": [],
       "verification": {
@@ -9455,7 +9578,9 @@
       ],
       "related": [
         "peanut_not_nut",
-        "pineapple_two_years"
+        "pineapple_two_years",
+        "cacao_money",
+        "rice_half_world"
       ],
       "sources": [],
       "verification": {
@@ -9631,7 +9756,9 @@
       ],
       "related": [
         "pineapple_two_years",
-        "apple_floats"
+        "apple_floats",
+        "rice_half_world",
+        "carrot_colors"
       ],
       "sources": [],
       "verification": {
@@ -9805,7 +9932,9 @@
       ],
       "related": [
         "apple_floats",
-        "wasabi_nose"
+        "wasabi_nose",
+        "carrot_colors",
+        "peanut_not_nut"
       ],
       "sources": [],
       "verification": {
@@ -9984,7 +10113,10 @@
         "wasabi_nose",
         "popcorn_pop",
         "steel_ship_floats",
-        "saturn_would_float"
+        "saturn_would_float",
+        "ice_floats",
+        "peanut_not_nut",
+        "pineapple_two_years"
       ],
       "sources": [],
       "verification": {
@@ -10159,7 +10291,9 @@
       ],
       "related": [
         "popcorn_pop",
-        "strawberry_200_seeds"
+        "strawberry_200_seeds",
+        "pineapple_two_years",
+        "apple_floats"
       ],
       "sources": [],
       "verification": {
@@ -10333,7 +10467,9 @@
       ],
       "related": [
         "strawberry_200_seeds",
-        "banana_is_berry"
+        "banana_is_berry",
+        "apple_floats",
+        "wasabi_nose"
       ],
       "sources": [],
       "verification": {
@@ -10511,7 +10647,9 @@
       ],
       "related": [
         "banana_is_berry",
-        "honey_never_spoils"
+        "honey_never_spoils",
+        "wasabi_nose",
+        "popcorn_pop"
       ],
       "sources": [],
       "verification": {
@@ -10688,7 +10826,9 @@
       ],
       "related": [
         "koala_fingerprints",
-        "ice_floats"
+        "ice_floats",
+        "snow_hexagon",
+        "goosebumps_cold"
       ],
       "sources": [],
       "verification": {
@@ -10863,7 +11003,8 @@
       ],
       "related": [
         "giraffe_seven_vertebrae",
-        "crows_recognize_faces"
+        "crows_recognize_faces",
+        "blink_times"
       ],
       "sources": [],
       "verification": {
@@ -12796,7 +12937,8 @@
       ],
       "related": [
         "ice_floats",
-        "penguin_huddle"
+        "penguin_huddle",
+        "maple_red"
       ],
       "sources": [],
       "verification": {
@@ -12973,7 +13115,9 @@
       ],
       "related": [
         "penguin_huddle",
-        "baby_bones"
+        "baby_bones",
+        "nails_grow",
+        "brain_energy"
       ],
       "sources": [],
       "verification": {
@@ -13150,7 +13294,8 @@
       ],
       "related": [
         "tree_rings",
-        "snow_hexagon"
+        "snow_hexagon",
+        "sunflower_sun"
       ],
       "sources": [],
       "verification": {
@@ -13324,7 +13469,8 @@
       ],
       "related": [
         "maple_red",
-        "bamboo_fast"
+        "bamboo_fast",
+        "sunflower_sun"
       ],
       "sources": [],
       "verification": {
@@ -13853,7 +13999,8 @@
       ],
       "related": [
         "goosebumps_cold",
-        "baby_bones"
+        "baby_bones",
+        "brain_energy"
       ],
       "sources": [],
       "verification": {
@@ -14028,7 +14175,8 @@
       ],
       "related": [
         "nails_grow",
-        "goosebumps_cold"
+        "goosebumps_cold",
+        "blink_times"
       ],
       "sources": [],
       "verification": {

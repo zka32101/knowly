@@ -1704,6 +1704,144 @@
         "statement": "El monte Fuji es la montaña más baja de Japón.",
         "answer": false
       }
+    },
+    {
+      "factId": "flamingo_flamboyance",
+      "ja": {
+        "statement": "フラミンゴの むれを「フランボヤンス」と よぶ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A group of flamingos is called a flamboyance.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "一群火烈鸟被称为“flamboyance”。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "플라밍고 무리는 ‘플램보이언스’라고 불러요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "A un grupo de flamencos se le llama «flamboyance».",
+        "answer": true
+      }
+    },
+    {
+      "factId": "japan_islands",
+      "ja": {
+        "statement": "にほんには、1まん4000いじょうの しまが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Japan has more than 14,000 islands.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "日本有一万四千多个岛屿。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "일본에는 1만 4천 개가 넘는 섬이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Japón tiene más de 14 000 islas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "orbital_speed",
+      "ja": {
+        "statement": "ロケットは、うちゅうへ いくために とても はやく とぶ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Rockets fly very fast to reach space.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "火箭为了到达太空，飞得非常快。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "로켓은 우주에 가려고 아주 빠르게 날아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los cohetes vuelan muy rápido para llegar al espacio.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "shipping_80_percent",
+      "ja": {
+        "statement": "せかいの にもつの おおくは、ふねで はこばれる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Most of the world's goods are carried by ship.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "世界上大部分货物是用船运输的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세계 물건의 대부분은 배로 옮겨져요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mayor parte de las mercancías del mundo viaja en barco.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "rice_half_world",
+      "ja": {
+        "statement": "こめは、せかいの おおくの ひとの おもな たべものだ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Rice is the main food for many people around the world.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大米是世界上许多人的主食。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "쌀은 세계 많은 사람들의 주식이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El arroz es el alimento principal de muchas personas en el mundo.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "wasabi_nose",
+      "ja": {
+        "statement": "わさびの からさは、はなに ぬける。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Wasabi's spiciness goes up your nose.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "芥末的辣味会直冲鼻子。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "와사비의 매운맛은 코로 올라와요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El picante del wasabi sube por la nariz.",
+        "answer": true
+      }
     }
   ]
 }
