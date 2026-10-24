@@ -441,6 +441,37 @@ void main() {
       }
     });
 
+    test('Kids/Junior 向けの雑学には、選択式クイズがある。5つの言語がそろっている', () {
+      final choice =
+          (jsonDecode(File('assets/trivia/quiz_choice.json').readAsStringSync())
+                  as Map<String, dynamic>)['items']
+              as List;
+      final facts = {
+        for (final c in choice.cast<Map<String, dynamic>>())
+          c['factId'] as String,
+      };
+      for (final i in items) {
+        if (i['minAgeBand'] == 'kids' || i['minAgeBand'] == 'junior') {
+          expect(facts, contains(i['id']), reason: '${i['id']}: 選択式クイズがない');
+        }
+      }
+      for (final c in choice.cast<Map<String, dynamic>>()) {
+        for (final lang in ['ja', 'en', 'zh', 'ko', 'es']) {
+          expect(c[lang], isNotNull, reason: '${c['id']}/$lang');
+          expect(
+            (c[lang]['options'] as List).length,
+            (c['ja']['options'] as List).length,
+            reason: '${c['id']}/$lang',
+          );
+          expect(
+            c[lang]['answer'],
+            c['ja']['answer'],
+            reason: '${c['id']}/$lang',
+          );
+        }
+      }
+    });
+
     test('○×クイズは、5つの言語がそろっている', () {
       final quiz =
           (jsonDecode(File('assets/trivia/quiz.json').readAsStringSync())

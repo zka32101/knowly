@@ -2190,6 +2190,1917 @@
         ],
         "answer": 1
       }
+    },
+    {
+      "factId": "banana_is_berry",
+      "ja": {
+        "question": "バナナは しょくぶつの どの なかま？",
+        "options": [
+          "ベリー",
+          "ナッツ",
+          "きのこ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What group of plants does a banana belong to?",
+        "options": [
+          "Berries",
+          "Nuts",
+          "Mushrooms"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "香蕉在植物分类上属于哪一类？",
+        "options": [
+          "浆果",
+          "坚果",
+          "蘑菇"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "바나나는 식물 분류로 어떤 무리일까요?",
+        "options": [
+          "베리",
+          "견과류",
+          "버섯"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿A qué grupo pertenece el plátano según la botánica?",
+        "options": [
+          "Bayas",
+          "Frutos secos",
+          "Hongos"
+        ],
+        "answer": 0
+      },
+      "id": "banana_is_berry_0"
+    },
+    {
+      "factId": "lightning_hotter_than_sun",
+      "ja": {
+        "question": "かみなりは たいようの ひょうめんと くらべると？",
+        "options": [
+          "もっと つめたい",
+          "もっと あつい",
+          "おなじ くらい"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How hot is lightning compared with the surface of the Sun?",
+        "options": [
+          "Colder",
+          "Hotter",
+          "About the same"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "闪电和太阳表面相比，温度怎么样？",
+        "options": [
+          "更冷",
+          "更热",
+          "差不多"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "번개는 태양 표면과 비교하면 어떨까요?",
+        "options": [
+          "더 차가워요",
+          "더 뜨거워요",
+          "비슷해요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo es un rayo comparado con la superficie del Sol?",
+        "options": [
+          "Más frío",
+          "Más caliente",
+          "Casi igual"
+        ],
+        "answer": 1
+      },
+      "id": "lightning_hotter_than_sun_0"
+    },
+    {
+      "factId": "flamingo_flamboyance",
+      "ja": {
+        "question": "フラミンゴの むれは なんと よぶ？",
+        "options": [
+          "ピクニック",
+          "パレード",
+          "フランボヤンス"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What is a group of flamingos called?",
+        "options": [
+          "A picnic",
+          "A parade",
+          "A flamboyance"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "一群火烈鸟叫什么？",
+        "options": [
+          "野餐群",
+          "游行群",
+          "火焰群"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "플라밍고 무리를 뭐라고 부를까요?",
+        "options": [
+          "피크닉",
+          "퍼레이드",
+          "플랑보양스"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cómo se llama un grupo de flamencos?",
+        "options": [
+          "Un picnic",
+          "Un desfile",
+          "Una flamboyance"
+        ],
+        "answer": 2
+      },
+      "id": "flamingo_flamboyance_0"
+    },
+    {
+      "factId": "butterfly_taste_feet",
+      "ja": {
+        "question": "ちょうちょは どこで あじを かんじる？",
+        "options": [
+          "あし",
+          "はね",
+          "おなか"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Where do butterflies taste things?",
+        "options": [
+          "Their feet",
+          "Their wings",
+          "Their belly"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "蝴蝶用哪里来尝味道？",
+        "options": [
+          "脚",
+          "翅膀",
+          "肚子"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "나비는 어디로 맛을 느낄까요?",
+        "options": [
+          "발",
+          "날개",
+          "배"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Con qué parte del cuerpo prueban el sabor las mariposas?",
+        "options": [
+          "Las patas",
+          "Las alas",
+          "La barriga"
+        ],
+        "answer": 0
+      },
+      "id": "butterfly_taste_feet_0"
+    },
+    {
+      "factId": "bamboo_fast",
+      "ja": {
+        "question": "たけは 1にちで どのくらい のびることが ある？",
+        "options": [
+          "1センチ",
+          "1メートル",
+          "10メートル"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How much can bamboo grow in one day?",
+        "options": [
+          "About 1 centimeter",
+          "About 1 meter",
+          "About 10 meters"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "竹子一天最多能长多高？",
+        "options": [
+          "大约1厘米",
+          "大约1米",
+          "大约10米"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "대나무는 하루에 얼마나 자랄 수 있을까요?",
+        "options": [
+          "1센티미터쯤",
+          "1미터쯤",
+          "10미터쯤"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuánto puede crecer el bambú en un solo día?",
+        "options": [
+          "Cerca de 1 centímetro",
+          "Cerca de 1 metro",
+          "Cerca de 10 metros"
+        ],
+        "answer": 1
+      },
+      "id": "bamboo_fast_0"
+    },
+    {
+      "factId": "rainbow_full_circle",
+      "ja": {
+        "question": "にじは ほんとうは どんな かたち？",
+        "options": [
+          "しかく",
+          "さんかく",
+          "まる"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What shape is a rainbow really?",
+        "options": [
+          "A square",
+          "A triangle",
+          "A circle"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "彩虹其实是什么形状的？",
+        "options": [
+          "正方形",
+          "三角形",
+          "圆形"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "무지개는 사실 어떤 모양일까요?",
+        "options": [
+          "네모",
+          "세모",
+          "동그라미"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué forma tiene en realidad un arcoíris?",
+        "options": [
+          "Un cuadrado",
+          "Un triángulo",
+          "Un círculo"
+        ],
+        "answer": 2
+      },
+      "id": "rainbow_full_circle_0"
+    },
+    {
+      "factId": "elephant_ground_sounds",
+      "ja": {
+        "question": "ぞうは とおくの なかまと なにで おはなしする？",
+        "options": [
+          "ひくい おと",
+          "ひかり",
+          "はくしゅ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How do elephants talk to friends far away?",
+        "options": [
+          "Very deep sounds",
+          "Flashing lights",
+          "Clapping"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "大象用什么和远处的同伴说话？",
+        "options": [
+          "很低沉的声音",
+          "闪光",
+          "拍手"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "코끼리는 멀리 있는 친구와 무엇으로 이야기할까요?",
+        "options": [
+          "아주 낮은 소리",
+          "반짝이는 빛",
+          "박수"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cómo hablan los elefantes con amigos que están lejos?",
+        "options": [
+          "Con sonidos muy graves",
+          "Con luces",
+          "Con aplausos"
+        ],
+        "answer": 0
+      },
+      "id": "elephant_ground_sounds_0"
+    },
+    {
+      "factId": "dolphin_half_sleep",
+      "ja": {
+        "question": "イルカは どうやって ねむる？",
+        "options": [
+          "ぜんぶ いっしょに",
+          "あたまの はんぶんずつ",
+          "ぜんぜん ねむらない"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How do dolphins sleep?",
+        "options": [
+          "The whole brain at once",
+          "Half of the brain at a time",
+          "They never sleep"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "海豚是怎么睡觉的？",
+        "options": [
+          "整个大脑一起睡",
+          "大脑一半一半地睡",
+          "从来不睡觉"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "돌고래는 어떻게 잠을 잘까요?",
+        "options": [
+          "뇌 전체가 한꺼번에 자요",
+          "뇌의 절반씩 번갈아 자요",
+          "전혀 자지 않아요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo duermen los delfines?",
+        "options": [
+          "Con todo el cerebro a la vez",
+          "Con la mitad del cerebro cada vez",
+          "Nunca duermen"
+        ],
+        "answer": 1
+      },
+      "id": "dolphin_half_sleep_0"
+    },
+    {
+      "factId": "koala_fingerprints",
+      "ja": {
+        "question": "コアラの ゆびには なにが ある？",
+        "options": [
+          "みずかき",
+          "はね",
+          "にんげんと おなじ ゆびの もよう"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What do koala fingers have, just like people?",
+        "options": [
+          "Webbing",
+          "Feathers",
+          "Fingerprints"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "考拉的手指和人一样有什么？",
+        "options": [
+          "蹼",
+          "羽毛",
+          "指纹"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "코알라의 손가락에는 사람처럼 무엇이 있을까요?",
+        "options": [
+          "물갈퀴",
+          "깃털",
+          "지문"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué tienen los dedos de los koalas, igual que las personas?",
+        "options": [
+          "Membranas",
+          "Plumas",
+          "Huellas dactilares"
+        ],
+        "answer": 2
+      },
+      "id": "koala_fingerprints_0"
+    },
+    {
+      "factId": "ant_strong",
+      "ja": {
+        "question": "アリは じぶんの おもさの どのくらいを はこべる？",
+        "options": [
+          "10ばい いじょう",
+          "はんぶん くらい",
+          "ぜんぜん はこべない"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How much can an ant carry compared with its own weight?",
+        "options": [
+          "More than 10 times",
+          "About half",
+          "Nothing at all"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "蚂蚁能搬动自己体重的多少倍？",
+        "options": [
+          "10倍以上",
+          "大约一半",
+          "什么也搬不动"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "개미는 자기 몸무게의 얼마나 옮길 수 있을까요?",
+        "options": [
+          "10배 이상",
+          "절반쯤",
+          "전혀 못 옮겨요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuánto puede cargar una hormiga comparado con su propio peso?",
+        "options": [
+          "Más de 10 veces",
+          "Cerca de la mitad",
+          "Nada en absoluto"
+        ],
+        "answer": 0
+      },
+      "id": "ant_strong_0"
+    },
+    {
+      "factId": "firefly_cold_light",
+      "ja": {
+        "question": "ホタルの ひかりは どう？",
+        "options": [
+          "とても あつい",
+          "ほとんど あつくない",
+          "ひが でる"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What is a firefly's light like?",
+        "options": [
+          "Very hot",
+          "Almost not hot",
+          "It makes fire"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "萤火虫的光是怎样的？",
+        "options": [
+          "非常烫",
+          "几乎不热",
+          "会冒出火苗"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "반딧불이의 빛은 어떨까요?",
+        "options": [
+          "아주 뜨거워요",
+          "거의 뜨겁지 않아요",
+          "불이 나와요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo es la luz de una luciérnaga?",
+        "options": [
+          "Es muy caliente",
+          "Casi no da calor",
+          "Echa fuego"
+        ],
+        "answer": 1
+      },
+      "id": "firefly_cold_light_0"
+    },
+    {
+      "factId": "dung_beetle_milky_way",
+      "ja": {
+        "question": "フンコロガシは なにを みて あるく？",
+        "options": [
+          "ひるの くも",
+          "まちの あかり",
+          "よぞらの ほし"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What do dung beetles look at to find their way?",
+        "options": [
+          "Clouds in the day",
+          "City lights",
+          "The stars in the night sky"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "蜣螂靠看什么来辨别方向？",
+        "options": [
+          "白天的云",
+          "城市的灯光",
+          "夜空中的星星"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "쇠똥구리는 무엇을 보고 길을 찾을까요?",
+        "options": [
+          "낮의 구름",
+          "도시의 불빛",
+          "밤하늘의 별"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué miran los escarabajos peloteros para encontrar su camino?",
+        "options": [
+          "Las nubes del día",
+          "Las luces de la ciudad",
+          "Las estrellas del cielo nocturno"
+        ],
+        "answer": 2
+      },
+      "id": "dung_beetle_milky_way_0"
+    },
+    {
+      "factId": "silkworm_thread",
+      "ja": {
+        "question": "カイコの まゆは どんな いとで できている？",
+        "options": [
+          "1ぽんの ながい いと",
+          "みじかい いとが たくさん",
+          "いとは つかわない"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What is a silkworm cocoon made of?",
+        "options": [
+          "One long thread",
+          "Many short threads",
+          "No thread at all"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "蚕茧是由什么做成的？",
+        "options": [
+          "一根很长的丝",
+          "很多短丝",
+          "完全没有丝"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "누에고치는 무엇으로 만들어졌을까요?",
+        "options": [
+          "길고 긴 실 한 가닥",
+          "짧은 실 여러 가닥",
+          "실이 아니에요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿De qué está hecho un capullo de gusano de seda?",
+        "options": [
+          "De un solo hilo largo",
+          "De muchos hilos cortos",
+          "No tiene hilo"
+        ],
+        "answer": 0
+      },
+      "id": "silkworm_thread_0"
+    },
+    {
+      "factId": "airliner_cruise",
+      "ja": {
+        "question": "ひこうきが とぶ たかい そらは どんな ところ？",
+        "options": [
+          "とても あつい",
+          "とても さむい",
+          "ぽかぽか あたたかい"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What is it like high in the sky where airplanes fly?",
+        "options": [
+          "Very hot",
+          "Very cold",
+          "Nice and warm"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "飞机飞行的高空是什么样的？",
+        "options": [
+          "非常热",
+          "非常冷",
+          "暖洋洋的"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "비행기가 나는 높은 하늘은 어떨까요?",
+        "options": [
+          "아주 더워요",
+          "아주 추워요",
+          "포근하고 따뜻해요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo es el cielo alto por donde vuelan los aviones?",
+        "options": [
+          "Muy caliente",
+          "Muy frío",
+          "Cálido y agradable"
+        ],
+        "answer": 1
+      },
+      "id": "airliner_cruise_0"
+    },
+    {
+      "factId": "tokyo_first_subway",
+      "ja": {
+        "question": "アジアで いちばん さいしょに ちかてつを つくった くには？",
+        "options": [
+          "ちゅうごく",
+          "インド",
+          "にほん"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Which country built the first subway in Asia?",
+        "options": [
+          "China",
+          "India",
+          "Japan"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "亚洲最早建成地铁的是哪个国家？",
+        "options": [
+          "中国",
+          "印度",
+          "日本"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "아시아에서 가장 먼저 지하철을 만든 나라는 어디일까요?",
+        "options": [
+          "중국",
+          "인도",
+          "일본"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué país construyó el primer metro de Asia?",
+        "options": [
+          "China",
+          "India",
+          "Japón"
+        ],
+        "answer": 2
+      },
+      "id": "tokyo_first_subway_0"
+    },
+    {
+      "factId": "steel_ship_floats",
+      "ja": {
+        "question": "てつの ふねは どうして うかぶ？",
+        "options": [
+          "なかに くうきが あって ひろい から",
+          "てつが とても かるい から",
+          "うみの みずが ねばねば だから"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Why can a steel ship float?",
+        "options": [
+          "It is wide and full of air inside",
+          "Steel is very light",
+          "Sea water is sticky"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "钢铁的船为什么能浮在水上？",
+        "options": [
+          "里面有空气而且很宽大",
+          "因为钢铁很轻",
+          "因为海水很黏"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "강철로 만든 배는 왜 물에 뜰까요?",
+        "options": [
+          "안에 공기가 있고 넓어서요",
+          "강철이 아주 가벼워서요",
+          "바닷물이 끈적해서요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Por qué flota un barco de acero?",
+        "options": [
+          "Es ancho y tiene aire por dentro",
+          "El acero es muy ligero",
+          "El agua del mar es pegajosa"
+        ],
+        "answer": 0
+      },
+      "id": "steel_ship_floats_0"
+    },
+    {
+      "factId": "orbital_speed",
+      "ja": {
+        "question": "ロケットは うちゅうに いくとき どうなる？",
+        "options": [
+          "ゆっくり ゆっくり とぶ",
+          "ものすごく はやく とぶ",
+          "とまって いる"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How does a rocket move to reach space?",
+        "options": [
+          "Very slowly",
+          "Super fast",
+          "It stays still"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "火箭飞向太空时是怎样的？",
+        "options": [
+          "飞得很慢很慢",
+          "飞得超级快",
+          "一动不动"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "로켓은 우주에 갈 때 어떻게 날까요?",
+        "options": [
+          "아주 천천히 날아요",
+          "엄청나게 빨리 날아요",
+          "멈춰 있어요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo se mueve un cohete para llegar al espacio?",
+        "options": [
+          "Muy despacio",
+          "Rapidísimo",
+          "Se queda quieto"
+        ],
+        "answer": 1
+      },
+      "id": "orbital_speed_0"
+    },
+    {
+      "factId": "maglev_603",
+      "ja": {
+        "question": "リニアは どうやって はしる？",
+        "options": [
+          "タイヤで ころがって",
+          "あしで あるいて",
+          "ちょっと うきながら"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "How does the maglev train run?",
+        "options": [
+          "It rolls on tires",
+          "It walks on legs",
+          "It floats a little"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "磁悬浮列车是怎么行驶的？",
+        "options": [
+          "靠轮胎滚动",
+          "用脚走路",
+          "稍微浮起来跑"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "리니어 열차는 어떻게 달릴까요?",
+        "options": [
+          "타이어로 굴러가요",
+          "다리로 걸어가요",
+          "살짝 떠서 달려요"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cómo avanza el tren de levitación magnética?",
+        "options": [
+          "Rodando sobre neumáticos",
+          "Caminando con patas",
+          "Flotando un poco"
+        ],
+        "answer": 2
+      },
+      "id": "maglev_603_0"
+    },
+    {
+      "factId": "plane_window_hole",
+      "ja": {
+        "question": "ひこうきの まどには なにが ある？",
+        "options": [
+          "ちいさな あな",
+          "ちいさな ドア",
+          "ちいさな ライト"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What is in an airplane window?",
+        "options": [
+          "A tiny hole",
+          "A tiny door",
+          "A tiny light"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "飞机的窗户上有什么？",
+        "options": [
+          "一个小孔",
+          "一扇小门",
+          "一盏小灯"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "비행기 창문에는 무엇이 있을까요?",
+        "options": [
+          "작은 구멍",
+          "작은 문",
+          "작은 전등"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué hay en la ventanilla de un avión?",
+        "options": [
+          "Un agujerito",
+          "Una puertita",
+          "Una lucecita"
+        ],
+        "answer": 0
+      },
+      "id": "plane_window_hole_0"
+    },
+    {
+      "factId": "shipping_80_percent",
+      "ja": {
+        "question": "せかいの にもつは なにで おおく はこばれている？",
+        "options": [
+          "ロケット",
+          "ふね",
+          "ヘリコプター"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What carries most of the world's goods?",
+        "options": [
+          "Rockets",
+          "Ships",
+          "Helicopters"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "世界上大部分货物是用什么运送的？",
+        "options": [
+          "火箭",
+          "轮船",
+          "直升机"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "세계의 짐은 대부분 무엇으로 옮길까요?",
+        "options": [
+          "로켓",
+          "배",
+          "헬리콥터"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué transporta la mayor parte de las mercancías del mundo?",
+        "options": [
+          "Los cohetes",
+          "Los barcos",
+          "Los helicópteros"
+        ],
+        "answer": 1
+      },
+      "id": "shipping_80_percent_0"
+    },
+    {
+      "factId": "cacao_money",
+      "ja": {
+        "question": "むかしの ひとは カカオの みを なにに つかった？",
+        "options": [
+          "ふうせん",
+          "おもちゃ",
+          "おかね"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What did people long ago use cacao beans for?",
+        "options": [
+          "Balloons",
+          "Toys",
+          "Money"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "很久以前的人把可可豆当作什么用？",
+        "options": [
+          "气球",
+          "玩具",
+          "钱"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "옛날 사람들은 카카오 열매를 무엇으로 썼을까요?",
+        "options": [
+          "풍선",
+          "장난감",
+          "돈"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Para qué usaban los granos de cacao las personas hace mucho tiempo?",
+        "options": [
+          "Como globos",
+          "Como juguetes",
+          "Como dinero"
+        ],
+        "answer": 2
+      },
+      "id": "cacao_money_0"
+    },
+    {
+      "factId": "rice_half_world",
+      "ja": {
+        "question": "まいにち おこめを たべる ひとは？",
+        "options": [
+          "せかいに たくさん いる",
+          "ほとんど いない",
+          "にほんだけ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How many people eat rice as their main food?",
+        "options": [
+          "Many people around the world",
+          "Almost nobody",
+          "Only people in Japan"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "把米饭当主食的人多不多？",
+        "options": [
+          "世界上有很多人",
+          "几乎没有",
+          "只有日本人"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "쌀을 주식으로 먹는 사람은 얼마나 될까요?",
+        "options": [
+          "세계에 아주 많아요",
+          "거의 없어요",
+          "일본 사람뿐이에요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuántas personas comen arroz como alimento principal?",
+        "options": [
+          "Muchísimas en todo el mundo",
+          "Casi nadie",
+          "Solo la gente de Japón"
+        ],
+        "answer": 0
+      },
+      "id": "rice_half_world_0"
+    },
+    {
+      "factId": "carrot_colors",
+      "ja": {
+        "question": "むかしの にんじんは どんな いろが おおかった？",
+        "options": [
+          "あおや ピンク",
+          "むらさきや きいろ",
+          "ぎんいろや きんいろ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What colors were many carrots long ago?",
+        "options": [
+          "Blue or pink",
+          "Purple or yellow",
+          "Silver or gold"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "很久以前的胡萝卜多是什么颜色？",
+        "options": [
+          "蓝色或粉色",
+          "紫色或黄色",
+          "银色或金色"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "옛날 당근은 어떤 색이 많았을까요?",
+        "options": [
+          "파란색이나 분홍색",
+          "보라색이나 노란색",
+          "은색이나 금색"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿De qué colores eran muchas zanahorias hace mucho tiempo?",
+        "options": [
+          "Azules o rosadas",
+          "Moradas o amarillas",
+          "Plateadas o doradas"
+        ],
+        "answer": 1
+      },
+      "id": "carrot_colors_0"
+    },
+    {
+      "factId": "pineapple_two_years",
+      "ja": {
+        "question": "パイナップルは みが なるまで どのくらい かかる？",
+        "options": [
+          "2にち",
+          "2かげつ",
+          "2ねん"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "How long does a pineapple need to grow?",
+        "options": [
+          "About 2 days",
+          "About 2 months",
+          "About 2 years"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "菠萝要长多久才能结果？",
+        "options": [
+          "大约2天",
+          "大约2个月",
+          "大约2年"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "파인애플은 열매가 열리기까지 얼마나 걸릴까요?",
+        "options": [
+          "2일쯤",
+          "2개월쯤",
+          "2년쯤"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuánto tarda en crecer una piña?",
+        "options": [
+          "Unos 2 días",
+          "Unos 2 meses",
+          "Unos 2 años"
+        ],
+        "answer": 2
+      },
+      "id": "pineapple_two_years_0"
+    },
+    {
+      "factId": "wasabi_nose",
+      "ja": {
+        "question": "わさびの からさは どこに つーんと くる？",
+        "options": [
+          "はな",
+          "あし",
+          "みみ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Where do you feel wasabi's spiciness?",
+        "options": [
+          "In your nose",
+          "In your feet",
+          "In your ears"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "芥末的辣味会冲到哪里？",
+        "options": [
+          "鼻子",
+          "脚",
+          "耳朵"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "와사비의 매운맛은 어디로 확 올라올까요?",
+        "options": [
+          "코",
+          "발",
+          "귀"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Dónde se siente el picante del wasabi?",
+        "options": [
+          "En la nariz",
+          "En los pies",
+          "En las orejas"
+        ],
+        "answer": 0
+      },
+      "id": "wasabi_nose_0"
+    },
+    {
+      "factId": "popcorn_pop",
+      "ja": {
+        "question": "ポップコーンが はじけるのは なかの なにが あつくなるから？",
+        "options": [
+          "すな",
+          "みず",
+          "ゆき"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What inside popcorn gets hot and makes it pop?",
+        "options": [
+          "Sand",
+          "Water",
+          "Snow"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "爆米花爆开，是因为里面的什么变热了？",
+        "options": [
+          "沙子",
+          "水",
+          "雪"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "팝콘이 터지는 건 안의 무엇이 뜨거워지기 때문일까요?",
+        "options": [
+          "모래",
+          "물",
+          "눈"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué hay dentro de las palomitas que se calienta y las hace estallar?",
+        "options": [
+          "Arena",
+          "Agua",
+          "Nieve"
+        ],
+        "answer": 1
+      },
+      "id": "popcorn_pop_0"
+    },
+    {
+      "factId": "strawberry_200_seeds",
+      "ja": {
+        "question": "いちごの つぶつぶは ほんとうは なに？",
+        "options": [
+          "さとうの つぶ",
+          "ちいさな はっぱ",
+          "ほんとうの み"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What are the little dots on a strawberry, really?",
+        "options": [
+          "Sugar grains",
+          "Tiny leaves",
+          "The real fruits"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "草莓表面的小颗粒其实是什么？",
+        "options": [
+          "糖粒",
+          "小叶子",
+          "真正的果实"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "딸기의 알갱이는 사실 무엇일까요?",
+        "options": [
+          "설탕 알갱이",
+          "작은 잎사귀",
+          "진짜 열매"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué son en realidad los puntitos de una fresa?",
+        "options": [
+          "Granitos de azúcar",
+          "Hojitas diminutas",
+          "Los verdaderos frutos"
+        ],
+        "answer": 2
+      },
+      "id": "strawberry_200_seeds_0"
+    },
+    {
+      "factId": "sloth_slow",
+      "ja": {
+        "question": "ナマケモノが トイレに いくのは どのくらい？",
+        "options": [
+          "1しゅうかんに 1かい くらい",
+          "1にちに 10かい",
+          "1じかんに 1かい"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How often does a sloth go to the bathroom?",
+        "options": [
+          "About once a week",
+          "Ten times a day",
+          "Once an hour"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "树懒多久上一次厕所？",
+        "options": [
+          "大约一周一次",
+          "一天十次",
+          "一小时一次"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "나무늘보는 얼마나 자주 화장실에 갈까요?",
+        "options": [
+          "일주일에 한 번쯤",
+          "하루에 열 번",
+          "한 시간에 한 번"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cada cuánto va al baño un perezoso?",
+        "options": [
+          "Más o menos una vez por semana",
+          "Diez veces al día",
+          "Una vez por hora"
+        ],
+        "answer": 0
+      },
+      "id": "sloth_slow_0"
+    },
+    {
+      "factId": "salmon_return",
+      "ja": {
+        "question": "サケは あきに どこへ もどってくる？",
+        "options": [
+          "ふかい うみ",
+          "うまれた かわ",
+          "やまの いけ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Where do salmon swim back to in autumn?",
+        "options": [
+          "The deep sea",
+          "The river where they were born",
+          "A mountain pond"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "秋天，鲑鱼会回到哪里？",
+        "options": [
+          "深海",
+          "自己出生的河",
+          "山上的池塘"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "연어는 가을에 어디로 돌아올까요?",
+        "options": [
+          "깊은 바다",
+          "태어난 강",
+          "산속 연못"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿A dónde regresan los salmones en otoño?",
+        "options": [
+          "Al mar profundo",
+          "Al río donde nacieron",
+          "A un estanque de montaña"
+        ],
+        "answer": 1
+      },
+      "id": "salmon_return_0"
+    },
+    {
+      "factId": "squirrel_acorns",
+      "ja": {
+        "question": "リスが わすれた どんぐりは どうなる？",
+        "options": [
+          "とけて なくなる",
+          "そらへ とんで いく",
+          "めが でる"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What happens to the acorns a squirrel forgets?",
+        "options": [
+          "They melt away",
+          "They fly into the sky",
+          "They can sprout"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "松鼠忘记的橡果会怎么样？",
+        "options": [
+          "会融化消失",
+          "会飞到天上",
+          "会发芽"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "다람쥐가 잊어버린 도토리는 어떻게 될까요?",
+        "options": [
+          "녹아서 없어져요",
+          "하늘로 날아가요",
+          "싹이 터요"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué pasa con las bellotas que olvida una ardilla?",
+        "options": [
+          "Se derriten",
+          "Vuelan al cielo",
+          "Pueden brotar"
+        ],
+        "answer": 2
+      },
+      "id": "squirrel_acorns_0"
+    },
+    {
+      "factId": "ladybug_spots",
+      "ja": {
+        "question": "テントウムシの ほしの かずで としは わかる？",
+        "options": [
+          "わからない",
+          "わかる",
+          "ほし 3つで 1さい"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Can you tell a ladybug's age by counting its spots?",
+        "options": [
+          "No, you can't",
+          "Yes, you can",
+          "3 spots means 1 year old"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "数瓢虫身上的斑点能知道它几岁吗？",
+        "options": [
+          "不能",
+          "能",
+          "3个斑点就是1岁"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "무당벌레의 점 개수로 나이를 알 수 있을까요?",
+        "options": [
+          "알 수 없어요",
+          "알 수 있어요",
+          "점이 3개면 1살이에요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Se puede saber la edad de una mariquita contando sus puntos?",
+        "options": [
+          "No, no se puede",
+          "Sí, se puede",
+          "3 puntos significa 1 año"
+        ],
+        "answer": 0
+      },
+      "id": "ladybug_spots_0"
+    },
+    {
+      "factId": "cricket_sing",
+      "ja": {
+        "question": "あきに なく むしは どれ？",
+        "options": [
+          "めすだけ",
+          "おすだけ",
+          "こどもだけ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Which autumn insects sing?",
+        "options": [
+          "Only the females",
+          "Only the males",
+          "Only the babies"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "秋天鸣叫的昆虫是哪些？",
+        "options": [
+          "只有雌虫",
+          "只有雄虫",
+          "只有幼虫"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "가을에 우는 곤충은 누구일까요?",
+        "options": [
+          "암컷만 울어요",
+          "수컷만 울어요",
+          "애벌레만 울어요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué insectos cantan en otoño?",
+        "options": [
+          "Solo las hembras",
+          "Solo los machos",
+          "Solo las crías"
+        ],
+        "answer": 1
+      },
+      "id": "cricket_sing_0"
+    },
+    {
+      "factId": "bicycle_first",
+      "ja": {
+        "question": "さいしょの じてんしゃに なかった ものは？",
+        "options": [
+          "タイヤ",
+          "ハンドル",
+          "ペダル"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What did the very first bicycle not have?",
+        "options": [
+          "Wheels",
+          "Handlebars",
+          "Pedals"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "最早的自行车没有什么？",
+        "options": [
+          "轮子",
+          "车把",
+          "脚踏板"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "맨 처음 자전거에 없었던 것은 무엇일까요?",
+        "options": [
+          "바퀴",
+          "핸들",
+          "페달"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué no tenía la primera bicicleta?",
+        "options": [
+          "Ruedas",
+          "Manillar",
+          "Pedales"
+        ],
+        "answer": 2
+      },
+      "id": "bicycle_first_0"
+    },
+    {
+      "factId": "black_box_orange",
+      "ja": {
+        "question": "ひこうきの ブラックボックスは ほんとうは なにいろ？",
+        "options": [
+          "オレンジ",
+          "しろ",
+          "みどり"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What color is an airplane's black box, really?",
+        "options": [
+          "Orange",
+          "White",
+          "Green"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "飞机的黑匣子其实是什么颜色的？",
+        "options": [
+          "橙色",
+          "白色",
+          "绿色"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "비행기의 블랙박스는 사실 무슨 색일까요?",
+        "options": [
+          "주황색",
+          "하얀색",
+          "초록색"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿De qué color es en realidad la caja negra de un avión?",
+        "options": [
+          "Naranja",
+          "Blanca",
+          "Verde"
+        ],
+        "answer": 0
+      },
+      "id": "black_box_orange_0"
+    },
+    {
+      "factId": "shinkansen_kingfisher",
+      "ja": {
+        "question": "しんかんせんの かたちは なにを まねした？",
+        "options": [
+          "さかなの ひれ",
+          "とりの くちばし",
+          "ねこの みみ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What does the bullet train's nose copy?",
+        "options": [
+          "A fish's fin",
+          "A bird's beak",
+          "A cat's ear"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "新干线车头的形状模仿了什么？",
+        "options": [
+          "鱼的鳍",
+          "鸟的嘴",
+          "猫的耳朵"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "신칸센의 앞모양은 무엇을 따라 했을까요?",
+        "options": [
+          "물고기의 지느러미",
+          "새의 부리",
+          "고양이의 귀"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué imita la forma de la punta del tren bala?",
+        "options": [
+          "La aleta de un pez",
+          "El pico de un ave",
+          "La oreja de un gato"
+        ],
+        "answer": 1
+      },
+      "id": "shinkansen_kingfisher_0"
+    },
+    {
+      "factId": "goosebumps_cold",
+      "ja": {
+        "question": "さむい とき はだに できる ぷつぷつは なんの ため？",
+        "options": [
+          "からだを ひやす ため",
+          "おなかを すかせる ため",
+          "からだを あたためる ため"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What are the bumps on your skin for when it is cold?",
+        "options": [
+          "To cool you down",
+          "To make you hungry",
+          "To help you stay warm"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "天冷时皮肤上起的小疙瘩有什么用？",
+        "options": [
+          "让身体变凉",
+          "让肚子变饿",
+          "帮助身体保暖"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "추울 때 피부에 생기는 오톨도톨한 것은 왜 생길까요?",
+        "options": [
+          "몸을 식히려고요",
+          "배고프게 하려고요",
+          "몸을 따뜻하게 하려고요"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Para qué sirven los bultitos de la piel cuando hace frío?",
+        "options": [
+          "Para enfriarte",
+          "Para darte hambre",
+          "Para mantenerte abrigado"
+        ],
+        "answer": 2
+      },
+      "id": "goosebumps_cold_0"
+    },
+    {
+      "factId": "thunder_count",
+      "ja": {
+        "question": "ぴかっと ひかってから おとが するまで かぞえると なにが わかる？",
+        "options": [
+          "かみなりまでの きょり",
+          "あしたの てんき",
+          "かみなりの いろ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What can you learn by counting from the flash to the boom?",
+        "options": [
+          "How far away the lightning is",
+          "Tomorrow's weather",
+          "The color of the lightning"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "从闪光数到雷声，可以知道什么？",
+        "options": [
+          "闪电离我们有多远",
+          "明天的天气",
+          "闪电的颜色"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "번쩍하고 나서 소리가 날 때까지 세면 무엇을 알 수 있을까요?",
+        "options": [
+          "번개까지의 거리",
+          "내일의 날씨",
+          "번개의 색깔"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué puedes saber si cuentas desde el destello hasta el trueno?",
+        "options": [
+          "Qué tan lejos cayó el rayo",
+          "El clima de mañana",
+          "El color del rayo"
+        ],
+        "answer": 0
+      },
+      "id": "thunder_count_0"
+    },
+    {
+      "factId": "nails_grow",
+      "ja": {
+        "question": "つめは どうなって いる？",
+        "options": [
+          "ぜんぜん のびない",
+          "まいにち すこしずつ のびる",
+          "ふゆだけ のびる"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What do your fingernails do?",
+        "options": [
+          "Never grow",
+          "Grow a tiny bit every day",
+          "Grow only in winter"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "指甲会怎么样？",
+        "options": [
+          "完全不长",
+          "每天都长一点点",
+          "只在冬天长"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "손톱은 어떻게 될까요?",
+        "options": [
+          "전혀 자라지 않아요",
+          "날마다 조금씩 자라요",
+          "겨울에만 자라요"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué hacen las uñas de tus dedos?",
+        "options": [
+          "Nunca crecen",
+          "Crecen un poquito cada día",
+          "Crecen solo en invierno"
+        ],
+        "answer": 1
+      },
+      "id": "nails_grow_0"
+    },
+    {
+      "factId": "brain_energy",
+      "ja": {
+        "question": "からだの なかで エネルギーを たくさん つかう ばしょは？",
+        "options": [
+          "ゆびの つめ",
+          "かみの け",
+          "のう"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Which part of your body uses a lot of energy?",
+        "options": [
+          "Fingernails",
+          "Hair",
+          "The brain"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "身体里哪个部位消耗很多能量？",
+        "options": [
+          "指甲",
+          "头发",
+          "大脑"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "몸에서 에너지를 많이 쓰는 곳은 어디일까요?",
+        "options": [
+          "손톱",
+          "머리카락",
+          "뇌"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué parte del cuerpo usa mucha energía?",
+        "options": [
+          "Las uñas",
+          "El pelo",
+          "El cerebro"
+        ],
+        "answer": 2
+      },
+      "id": "brain_energy_0"
     }
   ]
 }
