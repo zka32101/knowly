@@ -249,6 +249,19 @@ class _FeedHome extends ConsumerWidget {
       padding: const EdgeInsets.all(16),
       children: [
         const MascotCard(),
+        if (!settings.hintsSeen.contains('home_tips'))
+          Card(
+            key: const Key('home_tips'),
+            child: ListTile(
+              leading: const Text('💡', style: TextStyle(fontSize: 24)),
+              title: Text(l.hintHomeTips),
+              trailing: TextButton(
+                key: const Key('home_tips_dismiss'),
+                onPressed: () => ref.read(settingsProvider.notifier).markHintSeen('home_tips'),
+                child: Text(l.hintGotIt),
+              ),
+            ),
+          ),
         const _ReviewBanner(),
         const _RecapBanner(),
         if (streak != null)

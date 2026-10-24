@@ -27,6 +27,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get hintHomeTips => '点按卡片可以翻面。“玩”里还有测验哦！';
+
+  @override
+  String get hintGotIt => '知道了';
+
+  @override
   String get onboardingSkip => '稍后再说';
 
   @override

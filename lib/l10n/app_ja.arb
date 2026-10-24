@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "hintHomeTips": "カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！",
+  "hintGotIt": "わかった",
   "onboardingSkip": "あとで",
   "onboardingPickBand": "年齢にいちばん近いものを選んでください",
   "birthYearTitle": "生まれた年を えらんでください",

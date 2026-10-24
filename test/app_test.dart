@@ -483,6 +483,23 @@ void main() {
     expect(s.interestCategories, isEmpty);
   });
 
+  testWidgets('ホームの使い方のヒントは、初回だけ。「分かった」で消えて、二度と出ない', (tester) async {
+    await _pump(tester, prefs: {'ageBand': 'adult'});
+    expect(find.byKey(const Key('home_tips')), findsOneWidget);
+    await tester.tap(find.byKey(const Key('home_tips_dismiss')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const Key('home_tips')), findsNothing);
+    await tester.pumpWidget(const SizedBox());
+    await _pump(
+      tester,
+      prefs: {
+        'ageBand': 'adult',
+        'hintsSeen': ['home_tips'],
+      },
+    );
+    expect(find.byKey(const Key('home_tips')), findsNothing);
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));

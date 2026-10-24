@@ -27,6 +27,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get hintHomeTips => '카드를 누르면 뒤집혀요. ‘놀기’에는 퀴즈도 있어요!';
+
+  @override
+  String get hintGotIt => '알겠어요';
+
+  @override
   String get onboardingSkip => '나중에';
 
   @override

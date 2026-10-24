@@ -72,6 +72,7 @@ class AppSettings {
     this.celebratedBadges,
     this.capsule,
     this.words = const {},
+    this.hintsSeen = const {},
     this.league = const LeagueData(),
     this.activity = const {},
     this.stamps = const {},
@@ -132,6 +133,9 @@ class AppSettings {
   /// 説明を見たことのある用語の id（ことばずかん用）。
   final Set<String> words;
 
+  /// もう見せたヒント（初回だけ出す案内の id）。
+  final Set<String> hintsSeen;
+
   /// 家族リーグ（この端末で遊んだ対戦の、週ごとの得点）。
   final LeagueData league;
 
@@ -181,6 +185,7 @@ class AppSettings {
     Set<String>? celebratedBadges,
     String? capsule,
     Set<String>? words,
+    Set<String>? hintsSeen,
     LeagueData? league,
     Map<String, DayActivity>? activity,
     Set<String>? stamps,
@@ -214,6 +219,7 @@ class AppSettings {
         celebratedBadges: celebratedBadges ?? this.celebratedBadges,
         capsule: capsule ?? this.capsule,
         words: words ?? this.words,
+        hintsSeen: hintsSeen ?? this.hintsSeen,
         league: league ?? this.league,
         activity: activity ?? this.activity,
         stamps: stamps ?? this.stamps,
@@ -339,6 +345,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       seen: (p.getStringList('seen') ?? const []).toSet(),
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
+      hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
       league: _readLeague(p),
       stamps: (p.getStringList('stamps') ?? const []).toSet(),
       celebratedOutfits: p.getStringList('celebratedOutfits')?.toSet(),
@@ -548,6 +555,14 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final set = {...?state.celebratedOutfits, ...books};
     state = state.copyWith(celebratedOutfits: set);
     _prefs.setStringList('celebratedOutfits', set.toList());
+  }
+
+  /// 初回だけ出す案内を、見たことにする。
+  void markHintSeen(String id) {
+    if (state.hintsSeen.contains(id)) return;
+    final next = {...state.hintsSeen, id};
+    state = state.copyWith(hintsSeen: next);
+    _prefs.setStringList('hintsSeen', next.toList());
   }
 
   /// 用語の説明を見たことを記録する（ことばずかん用）。

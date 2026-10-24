@@ -27,6 +27,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueButton => 'Siguiente';
 
   @override
+  String get hintHomeTips =>
+      'Toca una tarjeta para girarla. ¡En «Jugar» hay quizzes!';
+
+  @override
+  String get hintGotIt => 'Entendido';
+
+  @override
   String get onboardingSkip => 'Más tarde';
 
   @override

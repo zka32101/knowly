@@ -140,6 +140,18 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @hintHomeTips.
+  ///
+  /// In ja, this message translates to:
+  /// **'カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！'**
+  String get hintHomeTips;
+
+  /// No description provided for @hintGotIt.
+  ///
+  /// In ja, this message translates to:
+  /// **'わかった'**
+  String get hintGotIt;
+
   /// No description provided for @onboardingSkip.
   ///
   /// In ja, this message translates to:

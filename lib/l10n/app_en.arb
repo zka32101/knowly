@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Next",
+  "hintHomeTips": "Tap a card to flip it. Find quizzes in the Play tab!",
+  "hintGotIt": "Got it",
   "onboardingSkip": "Maybe later",
   "onboardingPickBand": "Or just pick what fits best",
   "birthYearTitle": "Choose your birth year",

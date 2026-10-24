@@ -27,6 +27,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get hintHomeTips => 'カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！';
+
+  @override
+  String get hintGotIt => 'わかった';
+
+  @override
   String get onboardingSkip => 'あとで';
 
   @override

@@ -131,6 +131,12 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String get hintHomeTips => _jr(super.hintHomeTips);
+
+  @override
+  String get hintGotIt => _jr(super.hintGotIt);
+
+  @override
   String get onboardingSkip => _jr(super.onboardingSkip);
 
   @override
@@ -766,6 +772,12 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String get hintHomeTips => 'カードをタップするとめくれます。「遊ぶ」にはクイズもあります。';
+
+  @override
+  String get hintGotIt => '分かった';
 
   @override
   String get onboardingSkip => '後で';
@@ -1467,6 +1479,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 /// Teen: Adult の表記と同じ漢字まじりで、言い回しだけ、すこしくだけた（だよ・しよう）。
 class AppLocalizationsJaTeen extends AppLocalizationsJaAdult {
   AppLocalizationsJaTeen([super.locale]);
+
+  @override
+  String get hintHomeTips => 'カードをタップするとめくれるよ。「遊ぶ」にはクイズもあるよ！';
 
   @override
   String get interestsTitle => '好きなジャンルを選ぼう';
