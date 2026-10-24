@@ -1394,6 +1394,22 @@ void main() {
       expect(scheduled.first.body, level.title);
     });
 
+    testWidgets('通知の文面は、日によって見出しと「True or false?」の問いかけが入れかわる（英語）', (
+      tester,
+    ) async {
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult', 'notifyEnabled': true, 'uiLanguage': 'en'},
+        now: DateTime(2026, 7, 15, 6),
+      );
+      final scheduled = _lastNotifications!.lastScheduled!;
+      final teasers = scheduled.where(
+        (i) => i.body.startsWith('True or false? '),
+      );
+      expect(teasers, isNotEmpty);
+      expect(teasers.length, lessThan(scheduled.length));
+    });
+
     testWidgets('Kids には「いまのおすすめ」の欄が出ない', (tester) async {
       await _pump(
         tester,

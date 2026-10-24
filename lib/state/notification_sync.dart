@@ -9,6 +9,14 @@ import 'providers.dart';
 import 'settings.dart';
 
 const _appNames = {'ja': 'ノウリー', 'en': 'Knowly'};
+
+/// クイズの前につける、問いかけ（通知の文面に変化をつける）。
+const _teaserPrefix = {
+  'en': 'True or false? ',
+  'zh': '对还是错？',
+  'ko': '맞을까요, 틀릴까요? ',
+  'es': '¿Verdadero o falso? ',
+};
 const _channelNames = {'ja': '毎日の雑学', 'en': 'Daily fact'};
 
 /// 設定（通知のオン/オフ・時刻・年代・言語・絞り込み）が変わるたびに、予定通知を作り直す。
@@ -34,6 +42,9 @@ final notificationSyncProvider = Provider<void>((ref) {
     return;
   }
 
+  final repo = ref.watch(triviaRepositoryProvider);
+  String? quizStatement(String id) => repo.quizFor(id)?.forLanguage(lang)?.statement;
+
   final items = <NotificationItem>[];
   for (final p in planNotifications(pool: pool, now: now, hour: hour, minute: minute, picker: picker)) {
     final level = resolve(p.fact);
@@ -42,8 +53,15 @@ final notificationSyncProvider = Provider<void>((ref) {
       id: p.id,
       fireAt: p.fireAt,
       title: _appNames[lang] ?? _appNames['en']!,
-      body: level.title,
+      body: _body(p.fireAt, level.title, quizStatement(p.fact.id), lang),
     ));
   }
   unawaited(service.schedule(items, channelName: _channelNames[lang] ?? _channelNames['en']!));
 });
+
+/// 日によって、雑学の見出しと、○×の問いかけを入れかえる（毎日同じ文面にならないように）。
+String _body(DateTime fireAt, String title, String? statement, String lang) {
+  // 日本語の○×は、ひらがなだけ（子ども向け）なので、Teen/Adult の通知では使わない。
+  if (lang == 'ja' || statement == null || fireAt.day.isEven) return title;
+  return '${_teaserPrefix[lang] ?? _teaserPrefix['en']!}$statement';
+}
