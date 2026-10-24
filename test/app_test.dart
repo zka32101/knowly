@@ -500,6 +500,14 @@ void main() {
     expect(find.byKey(const Key('home_tips')), findsNothing);
   });
 
+  testWidgets('ホームは、きょうの1件が相棒より上にある', (tester) async {
+    await _pump(tester, prefs: {'ageBand': 'adult'});
+    expect(find.byKey(const Key('flip_front')), findsOneWidget);
+    final hero = tester.getTopLeft(find.byKey(const Key('flip_front'))).dy;
+    final mascot = tester.getTopLeft(find.byKey(const Key('mascot_card'))).dy;
+    expect(hero, lessThan(mascot));
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));
@@ -2833,6 +2841,7 @@ void main() {
         },
       );
       expect(find.text('🐥'), findsOneWidget); // 16点 → ちびふくろう
+      await _scrollTo(tester, const Key('mascot_card'));
       await tester.tap(find.byKey(const Key('mascot_card')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('mascot_current')), findsOneWidget);
@@ -2967,6 +2976,7 @@ void main() {
 
     testWidgets('相棒をさわると、よろこぶ', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
+      await _scrollTo(tester, const Key('mascot_card'));
       await tester.tap(find.byKey(const Key('mascot_card')));
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('mascot_face_idle')), findsOneWidget);

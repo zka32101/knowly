@@ -248,7 +248,6 @@ class _FeedHome extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        const MascotCard(),
         if (!settings.hintsSeen.contains('home_tips'))
           Card(
             key: const Key('home_tips'),
@@ -310,12 +309,8 @@ class _FeedHome extends ConsumerWidget {
         ),
         const SizedBox(height: 12),
         const _TodayBanner(),
-        if (feed.isEmpty)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 48),
-            child: Center(child: Text(l.emptyFeed)),
-          )
-        else ...[
+        // きょうの1件を、いちばん上に（読んだら相棒が反応する）。
+        if (feed.isNotEmpty) ...[
           Text(l.today, style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 8),
           FlipTodayCard(
@@ -324,6 +319,14 @@ class _FeedHome extends ConsumerWidget {
             wordWrap: wordWrap,
           ),
           const SizedBox(height: 16),
+        ],
+        const MascotCard(),
+        if (feed.isEmpty)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 48),
+            child: Center(child: Text(l.emptyFeed)),
+          )
+        else ...[
           const _TimingSection(),
           const _InterestSection(),
           if (feed.length > 1) ...[
