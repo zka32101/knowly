@@ -59,3 +59,13 @@
 - `thunder_count`: About 343 m/s at 20 C; claim rounds to 340.
 - `nails_grow`: Source says about 3.5 mm per month for fingernails (claim says 3 mm); seasonal speed-up not verified.
 - `blink_times`: Notes blink rate falls when focused, e.g. reading/computer screens; moisture function confirmed.
+
+## 本文を直したもの（2026-10-24）
+出典に合わせて、5言語の本文を直した（版を +1）。
+- `honey_never_spoils`: 古代エジプトの墓の蜂蜜の話を、Teen から削除。Adult は「確かな記録は確認されていない」に変更。
+- `silkworm_thread`: 糸の長さを 300〜900m に。
+- `nails_grow`: 手の爪は月に約3〜3.5mm（Junior は約3.5mm）。季節で速さが変わる、の記述を削除。
+- `shinkansen_kingfisher`: 「〜とされる」と断定を避けた書き方に。
+- `wombat_cube_poop`: 「仕組みはまだよく分かっていない」と明記。
+
+直していない（丸め・表現の違いと判断）: `orbital_speed`（7.9 は NASA などの通説の値）、`thunder_count`（340m/s は 343 の丸め）、`pineapple_two_years`、`baby_bones` など。人の確認で最終判断する。
