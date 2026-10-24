@@ -1116,6 +1116,42 @@ void main() {
       expect(sp.getStringList('recentSearches'), isNull);
     });
 
+    testWidgets('詳細を見て戻っても、検索のことばと絞り込みの結果が残る', (tester) async {
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult'},
+        entitlement: FakePurchases(premium: true),
+      );
+      await openLibrary(tester);
+      await tester.enterText(find.byKey(const Key('search_field')), 'ラッコ');
+      await tester.pumpAndSettle();
+      final before = count(tester);
+      expect(before, lessThan(10));
+      await tester.tap(
+        find
+            .descendant(
+              of: find.byWidgetPredicate(
+                (w) =>
+                    w.key is ValueKey<String> &&
+                    (w.key! as ValueKey<String>).value.startsWith('result_'),
+              ),
+              matching: find.byType(ListTile),
+            )
+            .first,
+      );
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('detail_title')), findsOneWidget);
+      await _back(tester);
+      expect(
+        tester
+            .widget<TextField>(find.byKey(const Key('search_field')))
+            .controller!
+            .text,
+        'ラッコ',
+      );
+      expect(count(tester), before);
+    });
+
     testWidgets('ホームの虫めがねから、すぐ検索できる画面が開く', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await tester.tap(find.byKey(const Key('home_search')));
