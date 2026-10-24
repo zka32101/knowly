@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @searchRecent.
+  ///
+  /// In ja, this message translates to:
+  /// **'最近の検索'**
+  String get searchRecent;
+
   /// No description provided for @hintHomeTips.
   ///
   /// In ja, this message translates to:

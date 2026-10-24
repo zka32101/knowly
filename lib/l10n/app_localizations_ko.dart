@@ -27,6 +27,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get searchRecent => '최근 검색';
+
+  @override
   String get hintHomeTips => '카드를 누르면 뒤집혀요. ‘놀기’에는 퀴즈도 있어요!';
 
   @override

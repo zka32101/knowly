@@ -1009,6 +1009,48 @@ void main() {
       );
     });
 
+    testWidgets('検索したことばは「最近の検索」に残り、タップで入力でき、消せる', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openLibrary(tester);
+      expect(find.byKey(const Key('recent_search_0')), findsNothing);
+      await tester.enterText(find.byKey(const Key('search_field')), 'ラッコ');
+      await tester.testTextInput.receiveAction(TextInputAction.search);
+      await tester.pumpAndSettle();
+      await tester.enterText(find.byKey(const Key('search_field')), '');
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('recent_search_0')), findsOneWidget);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getStringList('recentSearches'), ['ラッコ']);
+      await tester.tap(find.byKey(const Key('recent_search_0')));
+      await tester.pumpAndSettle();
+      expect(
+        tester
+            .widget<TextField>(find.byKey(const Key('search_field')))
+            .controller!
+            .text,
+        'ラッコ',
+      );
+      await tester.tap(find.byKey(const Key('search_clear')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(const Key('recent_search_clear')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('recent_search_0')), findsNothing);
+      expect(sp.getStringList('recentSearches'), isNull);
+    });
+
+    testWidgets('ホームの虫めがねから、すぐ検索できる画面が開く', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await tester.tap(find.byKey(const Key('home_search')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('search_field')), findsOneWidget);
+      expect(
+        tester
+            .widget<TextField>(find.byKey(const Key('search_field')))
+            .autofocus,
+        isTrue,
+      );
+    });
+
     testWidgets('一致しないと案内が出て、消すと全件に戻る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openLibrary(tester);

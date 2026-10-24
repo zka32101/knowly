@@ -342,6 +342,13 @@ class _FeedHome extends ConsumerWidget {
                 onPressed: notifier.clearFilters,
                 child: Text(l.filterReset),
               ),
+            const Spacer(),
+            IconButton(
+              key: const Key('home_search'),
+              tooltip: l.searchHint,
+              icon: const Icon(Icons.search),
+              onPressed: () => context.push('/library?focus=1'),
+            ),
           ],
         ),
         const SizedBox(height: 12),
@@ -471,8 +478,11 @@ class _FilterSheet extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CategoryChips(selected: settings.categories, onToggle: notifier.toggleCategory),
-            if (band.isTeenOrAdult) ...[
+                    CategoryChips(
+                      selected: settings.categories,
+                      onToggle: notifier.toggleCategory,
+                    ),
+                    if (band.isTeenOrAdult) ...[
                       const SizedBox(height: 16),
                       Wrap(
                         spacing: 8,

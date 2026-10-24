@@ -27,6 +27,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueButton => 'Siguiente';
 
   @override
+  String get searchRecent => 'Recientes';
+
+  @override
   String get hintHomeTips =>
       'Toca una tarjeta para girarla. ¡En «Jugar» hay quizzes!';
 

@@ -93,7 +93,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/listen', builder: (_, _) => const ListenScreen()),
       GoRoute(path: '/today', builder: (_, _) => const TodayScreen()),
       GoRoute(path: '/myths', builder: (_, _) => const MythScreen()),
-      GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
+      GoRoute(
+          path: '/library',
+          builder: (_, state) =>
+              LibraryScreen(autofocus: state.uri.queryParameters['focus'] == '1')),
       GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),
       GoRoute(path: '/saved', builder: (_, _) => const SavedScreen()),
       GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),

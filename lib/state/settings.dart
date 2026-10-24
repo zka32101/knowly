@@ -31,6 +31,9 @@ String resolveContentLanguage(String? code) =>
 const maxInterestKeywords = 10;
 const maxInterestKeywordLength = 20;
 
+/// 最近の検索ことばを残す件数。
+const maxRecentSearches = 5;
+
 /// 無料プランで保存できる件数。
 const freeSaveLimit = 20;
 
@@ -73,6 +76,7 @@ class AppSettings {
     this.capsule,
     this.words = const {},
     this.hintsSeen = const {},
+    this.recentSearches = const [],
     this.league = const LeagueData(),
     this.activity = const {},
     this.stamps = const {},
@@ -136,6 +140,9 @@ class AppSettings {
   /// もう見せたヒント（初回だけ出す案内の id）。
   final Set<String> hintsSeen;
 
+  /// 最近の検索ことば（新しい順、最大 $maxRecentSearches 件）。
+  final List<String> recentSearches;
+
   /// 家族リーグ（この端末で遊んだ対戦の、週ごとの得点）。
   final LeagueData league;
 
@@ -186,6 +193,7 @@ class AppSettings {
     String? capsule,
     Set<String>? words,
     Set<String>? hintsSeen,
+    List<String>? recentSearches,
     LeagueData? league,
     Map<String, DayActivity>? activity,
     Set<String>? stamps,
@@ -220,6 +228,7 @@ class AppSettings {
         capsule: capsule ?? this.capsule,
         words: words ?? this.words,
         hintsSeen: hintsSeen ?? this.hintsSeen,
+        recentSearches: recentSearches ?? this.recentSearches,
         league: league ?? this.league,
         activity: activity ?? this.activity,
         stamps: stamps ?? this.stamps,
@@ -346,6 +355,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
       hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
+      recentSearches: p.getStringList('recentSearches') ?? const [],
       league: _readLeague(p),
       stamps: (p.getStringList('stamps') ?? const []).toSet(),
       celebratedOutfits: p.getStringList('celebratedOutfits')?.toSet(),
@@ -555,6 +565,20 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     final set = {...?state.celebratedOutfits, ...books};
     state = state.copyWith(celebratedOutfits: set);
     _prefs.setStringList('celebratedOutfits', set.toList());
+  }
+
+  /// 検索したことばを記録する（短すぎるものは記録しない。同じことばは新しい順に1つだけ）。
+  void addRecentSearch(String query) {
+    final q = query.trim();
+    if (q.runes.length < 2) return;
+    final next = [q, ...state.recentSearches.where((e) => e != q)].take(maxRecentSearches).toList();
+    state = state.copyWith(recentSearches: next);
+    _prefs.setStringList('recentSearches', next);
+  }
+
+  void clearRecentSearches() {
+    state = state.copyWith(recentSearches: const []);
+    _prefs.remove('recentSearches');
   }
 
   /// 初回だけ出す案内を、見たことにする。
