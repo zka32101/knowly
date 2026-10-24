@@ -84,6 +84,7 @@ class AppSettings {
     this.words = const {},
     this.hintsSeen = const {},
     this.textSize = 0,
+    this.worldOptIn = false,
     this.juniorRuby = true,
     this.slowSpeech = false,
     this.recentSearches = const [],
@@ -153,6 +154,9 @@ class AppSettings {
   /// 文字の大きさ（0=ふつう / 1=大きい / 2=とても大きい）。年代の拡大率に上乗せする。
   final int textSize;
 
+  /// 「世界の人の集計」に、匿名で参加する（Teen/Adult の設定。初期はオフ）。
+  final bool worldOptIn;
+
   /// Junior の画面で、漢字に読み仮名を付ける。
   final bool juniorRuby;
 
@@ -213,6 +217,7 @@ class AppSettings {
     Set<String>? words,
     Set<String>? hintsSeen,
     int? textSize,
+    bool? worldOptIn,
     bool? juniorRuby,
     bool? slowSpeech,
     List<String>? recentSearches,
@@ -251,6 +256,7 @@ class AppSettings {
         words: words ?? this.words,
         hintsSeen: hintsSeen ?? this.hintsSeen,
         textSize: textSize ?? this.textSize,
+        worldOptIn: worldOptIn ?? this.worldOptIn,
         juniorRuby: juniorRuby ?? this.juniorRuby,
         slowSpeech: slowSpeech ?? this.slowSpeech,
         recentSearches: recentSearches ?? this.recentSearches,
@@ -381,6 +387,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       words: (p.getStringList('words') ?? const []).toSet(),
       hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
       slowSpeech: p.getBool('slowSpeech') ?? false,
+      worldOptIn: p.getBool('worldOptIn') ?? false,
       juniorRuby: p.getBool('juniorRuby') ?? true,
       textSize: (p.getInt('textSize') ?? 0).clamp(0, textSizeFactors.length - 1),
       recentSearches: p.getStringList('recentSearches') ?? const [],
@@ -465,6 +472,11 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(notifyHour: hour, notifyMinute: minute);
     _prefs.setInt('notifyHour', hour);
     _prefs.setInt('notifyMinute', minute);
+  }
+
+  void setWorldOptIn(bool on) {
+    state = state.copyWith(worldOptIn: on);
+    _prefs.setBool('worldOptIn', on);
   }
 
   void setJuniorRuby(bool on) {

@@ -27,6 +27,31 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get worldAskTitle => '전 세계 사람들도 이 상식을 보고 있어요';
+
+  @override
+  String get worldAskBody =>
+      '오늘 이 상식을 본 사람 수와 나라 수를 볼 수 있어요. 상식 ID, 국가, 날짜만 이름이나 계정 없이 보내요.';
+
+  @override
+  String get worldJoin => '참여하기';
+
+  @override
+  String get worldNotNow => '나중에';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '오늘 $countries개국 $total명이 봤어요';
+  }
+
+  @override
+  String get settingsWorld => '세계 통계에 참여';
+
+  @override
+  String get settingsWorldNote =>
+      '오늘의 상식을 본 사람 수를 익명으로 공유해요 (설정에서 언제든 끌 수 있어요)';
+
+  @override
   String reportThisWeek(int seen, int answered) {
     return '이번 주: $seen개 봤고, $answered문제 풀었어요';
   }
@@ -733,7 +758,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen과 Adult 모드는 앱 추천 표시(설정에서 끌 수 있어요)와 Premium 상태 확인을 위해 연결될 수 있어요. 결제 정보는 앱에 전달되지 않아요.';
+      'Teen과 Adult 모드는 앱 추천 표시(설정에서 끌 수 있어요)와 Premium 상태 확인을 위해 연결될 수 있어요. 결제 정보는 앱에 전달되지 않아요. ‘세계 통계’를 켠 경우에만 상식 ID, 국가, 날짜를 이름이나 계정 없이 보내요.';
 
   @override
   String privacyContact(String email) {

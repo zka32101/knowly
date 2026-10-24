@@ -27,6 +27,29 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get worldAskTitle => '世界各地的人也在看这条知识';
+
+  @override
+  String get worldAskBody => '可以看到今天有多少人看了这条知识，来自多少个国家。只会发送知识编号、国家和日期，不含姓名或账号。';
+
+  @override
+  String get worldJoin => '参加';
+
+  @override
+  String get worldNotNow => '暂不';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '今天有 $total 人（来自 $countries 个国家）看了这条';
+  }
+
+  @override
+  String get settingsWorld => '参加世界统计';
+
+  @override
+  String get settingsWorldNote => '匿名共享今日知识的阅读人数（可随时在设置中关闭）';
+
+  @override
   String reportThisWeek(int seen, int answered) {
     return '本周：看了$seen条，答了$answered题';
   }
@@ -730,7 +753,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen 和 Adult 模式可能会联网，用于显示应用推荐（可在设置中关闭）和确认 Premium 状态。支付信息不会传到本应用。';
+      'Teen 和 Adult 模式可能会联网，用于显示应用推荐（可在设置中关闭）和确认 Premium 状态。支付信息不会传到本应用。只有开启“世界统计”时，才会发送知识编号、国家和日期，不含姓名或账号。';
 
   @override
   String privacyContact(String email) {

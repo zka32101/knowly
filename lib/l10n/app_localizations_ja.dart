@@ -27,6 +27,30 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get worldAskTitle => '世界の人も、この雑学を見ています';
+
+  @override
+  String get worldAskBody =>
+      '今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。';
+
+  @override
+  String get worldJoin => '参加する';
+
+  @override
+  String get worldNotNow => 'いまはしない';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '今日、この雑学を見た人: $total人（$countriesか国）';
+  }
+
+  @override
+  String get settingsWorld => '世界の集計に参加';
+
+  @override
+  String get settingsWorldNote => '今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）';
+
+  @override
   String reportThisWeek(int seen, int answered) {
     return 'こんしゅう：$seenこ みて、$answeredもん とけたよ';
   }
@@ -731,7 +755,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。';
+      'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。';
 
   @override
   String privacyContact(String email) {

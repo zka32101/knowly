@@ -24,7 +24,9 @@ import 'package:knowly/models/glossary.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
 import 'package:knowly/models/why_link.dart';
+import 'package:knowly/logic/streak.dart';
 import 'package:knowly/services/entitlement.dart';
+import 'package:knowly/services/world_stats.dart';
 import 'package:knowly/services/notifications.dart';
 import 'package:knowly/widgets/ja_wrap_text.dart';
 import 'package:knowly/services/tts.dart';
@@ -242,6 +244,33 @@ TriviaRepository _repo({bool withSources = false}) {
   );
 }
 
+/// 世界の集計のテスト用。送られた記録と、返す集計を持つ。
+class FakeWorldStats implements WorldStatsService {
+  FakeWorldStats({
+    this.stats = const WorldStats(
+      total: 1234,
+      countries: 41,
+      top: [('JP', 400), ('US', 210)],
+    ),
+  });
+  WorldStats? stats;
+  final views = <({String fact, String? region, String day})>[];
+
+  @override
+  bool get available => true;
+
+  @override
+  Future<void> recordView(
+    String factId, {
+    String? region,
+    required DateTime day,
+  }) async => views.add((fact: factId, region: region, day: dayKey(day)));
+
+  @override
+  Future<WorldStats?> today(String factId, {required DateTime day}) async =>
+      stats;
+}
+
 class FakePurchases implements EntitlementService {
   FakePurchases({
     this.offline = false,
@@ -312,6 +341,7 @@ Future<FakeTts> _pump(
   EntitlementService? entitlement,
   bool withSources = false,
   ShareService? share,
+  WorldStatsService? world,
 }) async {
   final notif = _lastNotifications = notifications ?? FakeNotifications();
   final homeWidget = _lastWidget = FakeHomeWidget();
@@ -327,6 +357,7 @@ Future<FakeTts> _pump(
           _repo(withSources: withSources),
         ),
         if (share != null) shareServiceProvider.overrideWithValue(share),
+        if (world != null) worldStatsServiceProvider.overrideWithValue(world),
         deviceLanguageProvider.overrideWithValue(deviceLanguage),
         nowProvider.overrideWithValue(now ?? DateTime(2026, 10, 23)),
         deviceRegionProvider.overrideWithValue(deviceRegion),
@@ -579,6 +610,141 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('saved_empty')), findsNothing);
     expect(find.byKey(const Key('filter_button')), findsOneWidget); // ホームに戻った
+  });
+
+  group('世界の人の集計', () {
+    Future<void> openFact(WidgetTester tester) async {
+      // 画面を縦に長くして、スクロールなしで下のカードまで見えるようにする。
+      tester.view.physicalSize = const Size(800, 3000);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      ProviderScope.containerOf(
+        tester.element(find.byType(KnowlyApp)),
+      ).read(routerProvider).push('/detail/octopus_blue_blood');
+      await tester.pumpAndSettle();
+      await tester.ensureVisible(find.byKey(const Key('detail_title')));
+    }
+
+    testWidgets('サーバーがないビルドでは、この機能は出ない', (tester) async {
+      await _pump(tester, prefs: {'ageBand': 'adult'});
+      await openFact(tester);
+      await _scrollTo(tester, const Key('detail_title'));
+      expect(find.byKey(const Key('world_ask')), findsNothing);
+      expect(find.byKey(const Key('world_card')), findsNothing);
+    });
+
+    testWidgets('参加するまでは何も送らない。「参加する」で匿名の記録を1回だけ送り、集計が出る', (tester) async {
+      final world = FakeWorldStats();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, world: world);
+      await openFact(tester);
+      await tester.scrollUntilVisible(
+        find.byKey(const Key('world_ask')),
+        200,
+        scrollable: find.byType(Scrollable).last,
+      );
+      expect(world.views, isEmpty);
+      await tester.ensureVisible(find.byKey(const Key('world_join')));
+      await tester.tap(find.byKey(const Key('world_join')));
+      await tester.pumpAndSettle();
+      expect(world.views, hasLength(1));
+      expect(world.views.single.fact, 'octopus_blue_blood');
+      expect(world.views.single.region, 'JP');
+      expect(world.views.single.day, '2026-10-23');
+      await tester.scrollUntilVisible(
+        find.byKey(const Key('world_today')),
+        200,
+        scrollable: find.byType(Scrollable).last,
+      );
+      expect(
+        tester.widget<Text>(find.byKey(const Key('world_today'))).data,
+        contains('1234'),
+      );
+      expect(find.text('🇯🇵 400'), findsOneWidget);
+      final sp = await SharedPreferences.getInstance();
+      expect(sp.getBool('worldOptIn'), isTrue);
+    });
+
+    testWidgets('「いまはしない」を選ぶと、何も送らず、案内も二度と出ない', (tester) async {
+      final world = FakeWorldStats();
+      await _pump(tester, prefs: {'ageBand': 'adult'}, world: world);
+      await openFact(tester);
+      await tester.scrollUntilVisible(
+        find.byKey(const Key('world_not_now')),
+        200,
+        scrollable: find.byType(Scrollable).last,
+      );
+      await tester.ensureVisible(find.byKey(const Key('world_not_now')));
+      await tester.tap(find.byKey(const Key('world_not_now')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(const Key('world_ask')), findsNothing);
+      expect(world.views, isEmpty);
+    });
+
+    testWidgets('人数が少ないうちは、集計を出さない', (tester) async {
+      final world = FakeWorldStats(
+        stats: const WorldStats(
+          total: worldMinShown - 1,
+          countries: 1,
+          top: [('JP', 4)],
+        ),
+      );
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult', 'worldOptIn': true},
+        world: world,
+      );
+      await openFact(tester);
+      expect(world.views, hasLength(1)); // 記録は送るが、少ないうちは出さない
+      expect(find.byKey(const Key('world_card')), findsNothing);
+    });
+
+    testWidgets('同じ日に同じ雑学は、1回しか送らない', (tester) async {
+      final world = FakeWorldStats();
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult', 'worldOptIn': true},
+        world: world,
+      );
+      await openFact(tester);
+      await _back(tester);
+      await openFact(tester);
+      expect(world.views, hasLength(1));
+    });
+
+    testWidgets('Kids と Junior では、サーバーがあっても出ない・送らない', (tester) async {
+      for (final band in ['kids', 'junior']) {
+        final world = FakeWorldStats();
+        await _pump(
+          tester,
+          prefs: {'ageBand': band, 'worldOptIn': true},
+          world: world,
+        );
+        ProviderScope.containerOf(
+          tester.element(find.byType(KnowlyApp)),
+        ).read(routerProvider).push('/detail/octopus_blue_blood');
+        await tester.pumpAndSettle();
+        expect(find.byKey(const Key('world_card')), findsNothing, reason: band);
+        expect(find.byKey(const Key('world_ask')), findsNothing, reason: band);
+        expect(world.views, isEmpty, reason: band);
+        await tester.pumpWidget(const SizedBox());
+      }
+    });
+
+    test('国旗の絵文字と、集計のよみこみ', () {
+      expect(flagEmoji('JP'), '🇯🇵');
+      expect(flagEmoji('us'), '🇺🇸');
+      expect(flagEmoji('XXX'), '🌍');
+      final s = WorldStats.fromJson({
+        'total': 10,
+        'countries': 3,
+        'top': [
+          {'code': 'jp', 'count': 6},
+          {'code': 'US'}, // 人数がないものは無視
+        ],
+      });
+      expect(s.total, 10);
+      expect(s.top, [('JP', 6)]);
+    });
   });
 
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {

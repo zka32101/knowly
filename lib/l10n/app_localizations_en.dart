@@ -27,6 +27,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String get worldAskTitle => 'People around the world are reading this too';
+
+  @override
+  String get worldAskBody =>
+      'See how many people viewed this fact today, and from how many countries. Only the fact ID, country and date are sent, with no name or account.';
+
+  @override
+  String get worldJoin => 'Join';
+
+  @override
+  String get worldNotNow => 'Not now';
+
+  @override
+  String worldToday(int total, int countries) {
+    return 'Read today by $total people from $countries countries';
+  }
+
+  @override
+  String get settingsWorld => 'Join world stats';
+
+  @override
+  String get settingsWorldNote =>
+      'Share anonymous counts of today\'s facts with the world (turn off any time)';
+
+  @override
   String reportThisWeek(int seen, int answered) {
     return 'This week: $seen facts seen, $answered questions answered';
   }
@@ -750,7 +775,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app.';
+      'Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app. If you turn on \"world stats\", only the fact ID, country and date are sent, with no name or account.';
 
   @override
   String privacyContact(String email) {

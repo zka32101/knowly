@@ -6,6 +6,14 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "worldAskTitle": "世界の人も、この雑学を見ています",
+  "worldAskBody": "今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。",
+  "worldJoin": "参加する",
+  "worldNotNow": "いまはしない",
+  "worldToday": "今日、この雑学を見た人: {total}人（{countries}か国）",
+  "@worldToday": {"placeholders": {"total": {"type": "int"}, "countries": {"type": "int"}}},
+  "settingsWorld": "世界の集計に参加",
+  "settingsWorldNote": "今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）",
   "reportThisWeek": "こんしゅう：{seen}こ みて、{answered}もん とけたよ",
   "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "ふりがなを つける",
@@ -342,7 +350,7 @@
   "privacyPointBirthYear": "生まれた年は年代の判定にだけ使い、保存しません。",
   "privacyPointNoAds": "広告も、利用状況の分析（アナリティクス）もありません。",
   "privacyPointChildren": "Kids / Junior では、ネットワーク通信も課金のしくみも使いません。",
-  "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。",
+  "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。",
   "privacyContact": "お問い合わせ: {email}",
   "@privacyContact": {
     "placeholders": {

@@ -11,6 +11,7 @@ import '../models/age_band.dart';
 import '../models/trivia.dart';
 import '../models/why_link.dart';
 import '../services/tts.dart';
+import '../services/world_stats.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/glossary_text.dart';
@@ -72,6 +73,8 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
     }
 
     final notifier = ref.read(settingsProvider.notifier);
+    // 参加している人は、詳細を開いた時点で（カードまでスクロールしなくても）匿名の記録を1回送る。
+    if (ref.watch(worldJoinedProvider)) ref.watch(worldStatsProvider(item.id));
     final saved = settings.saved.contains(item.id);
     final ratings = settings.ratings[item.id] ?? const <Rating>{};
     final knowledge = settings.knowledge[item.id];
@@ -414,6 +417,10 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                   ),
                 ),
             ],
+            if (ref.watch(worldEnabledProvider)) ...[
+              const SizedBox(height: 24),
+              _WorldCard(factId: item.id),
+            ],
             if (related.isNotEmpty) ...[
               const SizedBox(height: 24),
               Row(
@@ -457,3 +464,83 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
 String _jaWord(VocabEntry v, AgeBand band) =>
     band.isTeenOrAdult && v.kanji.isNotEmpty ? '${v.ja}（${v.kanji}）' : v.ja;
 
+
+
+/// 「世界の人も、今日この雑学を見ている」。オンのときは集計、オフのときはお誘い（本人が決める）。
+class _WorldCard extends ConsumerWidget {
+  const _WorldCard({required this.factId});
+  final String factId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l = AppLocalizations.of(context);
+    final joined = ref.watch(worldJoinedProvider);
+    final notifier = ref.read(settingsProvider.notifier);
+    final asked = ref.watch(settingsProvider.select((s) => s.hintsSeen.contains('world_ask')));
+    if (!joined) {
+      if (asked) return const SizedBox.shrink();
+      return Card(
+        key: const Key('world_ask'),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('🌍 ${l.worldAskTitle}', style: Theme.of(context).textTheme.titleSmall),
+              const SizedBox(height: 4),
+              Text(l.worldAskBody),
+              const SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    key: const Key('world_not_now'),
+                    onPressed: () => notifier.markHintSeen('world_ask'),
+                    child: Text(l.worldNotNow),
+                  ),
+                  FilledButton(
+                    key: const Key('world_join'),
+                    onPressed: () {
+                      notifier.markHintSeen('world_ask');
+                      notifier.setWorldOptIn(true);
+                    },
+                    child: Text(l.worldJoin),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+    final stats = ref.watch(worldStatsProvider(factId));
+    return stats.when(
+      loading: () => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
+      data: (s) {
+        // 人数が少ないうちは出さない（個人が特定されないように）。
+        if (s == null || s.total < worldMinShown) return const SizedBox.shrink();
+        return Card(
+          key: const Key('world_card'),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('🌍 ${l.worldToday(s.total, s.countries)}',
+                    key: const Key('world_today'), style: Theme.of(context).textTheme.titleSmall),
+                if (s.top.isNotEmpty) ...[
+                  const SizedBox(height: 8),
+                  Wrap(spacing: 12, runSpacing: 4, children: [
+                    for (final (code, count) in s.top.take(5))
+                      Text('${flagEmoji(code)} $count', key: Key('world_top_$code')),
+                  ]),
+                ],
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}

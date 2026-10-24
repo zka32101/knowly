@@ -27,6 +27,31 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueButton => 'Siguiente';
 
   @override
+  String get worldAskTitle => 'Personas de todo el mundo también lo leen';
+
+  @override
+  String get worldAskBody =>
+      'Mira cuántas personas vieron este dato hoy y desde cuántos países. Solo se envía el ID del dato, el país y la fecha, sin nombre ni cuenta.';
+
+  @override
+  String get worldJoin => 'Participar';
+
+  @override
+  String get worldNotNow => 'Ahora no';
+
+  @override
+  String worldToday(int total, int countries) {
+    return 'Hoy lo leyeron $total personas de $countries países';
+  }
+
+  @override
+  String get settingsWorld => 'Participar en estadísticas mundiales';
+
+  @override
+  String get settingsWorldNote =>
+      'Comparte de forma anónima cuántas personas leyeron los datos de hoy (puedes desactivarlo cuando quieras)';
+
+  @override
   String reportThisWeek(int seen, int answered) {
     return 'Esta semana: $seen datos vistos, $answered preguntas respondidas';
   }
@@ -759,7 +784,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Los modos Teen y Adult pueden conectarse para mostrar recomendaciones de apps (se puede desactivar en Ajustes) y comprobar tu estado Premium. Los datos de pago nunca llegan a la app.';
+      'Los modos Teen y Adult pueden conectarse para mostrar recomendaciones de apps (se puede desactivar en Ajustes) y comprobar tu estado Premium. Los datos de pago nunca llegan a la app. Solo si activas las «estadísticas mundiales» se envían el ID del dato, el país y la fecha, sin nombre ni cuenta.';
 
   @override
   String privacyContact(String email) {

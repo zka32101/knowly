@@ -140,6 +140,48 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @worldAskTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'世界の人も、この雑学を見ています'**
+  String get worldAskTitle;
+
+  /// No description provided for @worldAskBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。'**
+  String get worldAskBody;
+
+  /// No description provided for @worldJoin.
+  ///
+  /// In ja, this message translates to:
+  /// **'参加する'**
+  String get worldJoin;
+
+  /// No description provided for @worldNotNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'いまはしない'**
+  String get worldNotNow;
+
+  /// No description provided for @worldToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日、この雑学を見た人: {total}人（{countries}か国）'**
+  String worldToday(int total, int countries);
+
+  /// No description provided for @settingsWorld.
+  ///
+  /// In ja, this message translates to:
+  /// **'世界の集計に参加'**
+  String get settingsWorld;
+
+  /// No description provided for @settingsWorldNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）'**
+  String get settingsWorldNote;
+
   /// No description provided for @reportThisWeek.
   ///
   /// In ja, this message translates to:
@@ -1475,7 +1517,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyPointTeenAdult.
   ///
   /// In ja, this message translates to:
-  /// **'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。'**
+  /// **'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。'**
   String get privacyPointTeenAdult;
 
   /// No description provided for @privacyContact.

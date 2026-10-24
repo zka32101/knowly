@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
+import '../services/world_stats.dart';
 import '../l10n/labels.dart';
 import '../l10n/regions.dart';
 import '../models/age_band.dart';
@@ -158,6 +159,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       body: ListView(
         children: [
           uiLanguageTile,
+          if (ref.watch(worldStatsServiceProvider).available && (settings.ageBand?.isTeenOrAdult ?? false))
+            SwitchListTile(
+              key: const Key('world_switch'),
+              title: Text(l.settingsWorld),
+              subtitle: Text(l.settingsWorldNote),
+              value: settings.worldOptIn,
+              onChanged: notifier.setWorldOptIn,
+            ),
           if (settings.ageBand == AgeBand.junior)
             SwitchListTile(
               key: const Key('junior_ruby_switch'),

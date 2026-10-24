@@ -137,6 +137,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String get worldNotNow => _jr(super.worldNotNow);
+
+  @override
   String reportThisWeek(int seen, int answered) => _jr(super.reportThisWeek(seen, answered));
 
   @override
@@ -790,6 +793,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String get worldNotNow => '今はしない';
 
   @override
   String reportThisWeek(int seen, int answered) {

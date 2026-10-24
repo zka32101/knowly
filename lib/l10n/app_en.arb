@@ -6,6 +6,14 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Next",
+  "worldAskTitle": "People around the world are reading this too",
+  "worldAskBody": "See how many people viewed this fact today, and from how many countries. Only the fact ID, country and date are sent, with no name or account.",
+  "worldJoin": "Join",
+  "worldNotNow": "Not now",
+  "worldToday": "Read today by {total} people from {countries} countries",
+  "@worldToday": {"placeholders": {"total": {"type": "int"}, "countries": {"type": "int"}}},
+  "settingsWorld": "Join world stats",
+  "settingsWorldNote": "Share anonymous counts of today's facts with the world (turn off any time)",
   "reportThisWeek": "This week: {seen} facts seen, {answered} questions answered",
   "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
   "settingsJuniorRuby": "Show readings (furigana)",
@@ -342,7 +350,7 @@
   "privacyPointBirthYear": "Your birth year is used only to pick an age mode and is never stored.",
   "privacyPointNoAds": "There are no ads and no usage analytics.",
   "privacyPointChildren": "Kids and Junior modes use no network connection and no purchase SDK.",
-  "privacyPointTeenAdult": "Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app.",
+  "privacyPointTeenAdult": "Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app. If you turn on \"world stats\", only the fact ID, country and date are sent, with no name or account.",
   "privacyContact": "Contact: {email}",
   "@privacyContact": {
     "placeholders": {
