@@ -131,6 +131,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String get listenSlow => _jr(super.listenSlow);
+
+  @override
   String get textSizeNormal => _jr(super.textSizeNormal);
 
   @override
@@ -264,9 +267,6 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
 
   @override
   String get listenPrev => _jr(super.listenPrev);
-
-  @override
-  String get listenSlow => _jr(super.listenSlow);
 
   @override
   String get listenNormal => _jr(super.listenNormal);
@@ -780,6 +780,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
   String get continueButton => '次へ';
 
   @override
+  String get listenSlow => 'ゆっくり';
+
+  @override
   String get textSizeNormal => '普通';
 
   @override
@@ -921,9 +924,6 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get listenPrev => '前へ';
-
-  @override
-  String get listenSlow => 'ゆっくり';
 
   @override
   String get listenNormal => 'ふつう';

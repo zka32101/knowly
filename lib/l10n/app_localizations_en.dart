@@ -27,6 +27,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String get listenSlow => 'Slow';
+
+  @override
   String get settingsTextSize => 'Text size';
 
   @override
@@ -615,9 +618,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listenSpeedLabel => 'Speed';
-
-  @override
-  String get listenSlow => 'Slow';
 
   @override
   String get listenNormal => 'Normal';

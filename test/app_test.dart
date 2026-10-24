@@ -530,6 +530,26 @@ void main() {
     expect(container.read(settingsProvider).textSize, 2);
   });
 
+  testWidgets('詳細の「きく」の大きいボタン。「ゆっくり」にすると、読み上げの速さが変わる', (tester) async {
+    final tts = await _pump(tester, prefs: {'ageBand': 'adult'});
+    final container = ProviderScope.containerOf(
+      tester.element(find.byType(KnowlyApp)),
+    );
+    container.read(routerProvider).push('/detail/octopus_blue_blood');
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('detail_listen_big')));
+    await tester.pump();
+    expect(tts.spoken, hasLength(1));
+    expect(tts.rates.last, isNull); // ふつう
+    await tester.tap(find.byKey(const Key('listen_slow')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('detail_listen_big')));
+    await tester.pump();
+    expect(tts.rates.last, speechRateSlow);
+    final sp = await SharedPreferences.getInstance();
+    expect(sp.getBool('slowSpeech'), isTrue);
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));

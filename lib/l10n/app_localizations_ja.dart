@@ -27,6 +27,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get listenSlow => 'ゆっくり';
+
+  @override
   String get settingsTextSize => '文字の大きさ';
 
   @override
@@ -603,9 +606,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get listenSpeedLabel => '速さ';
-
-  @override
-  String get listenSlow => 'ゆっくり';
 
   @override
   String get listenNormal => 'ふつう';

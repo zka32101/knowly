@@ -27,6 +27,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get listenSlow => '慢';
+
+  @override
   String get settingsTextSize => '文字大小';
 
   @override
@@ -602,9 +605,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get listenSpeedLabel => '速度';
-
-  @override
-  String get listenSlow => '慢';
 
   @override
   String get listenNormal => '正常';

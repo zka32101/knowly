@@ -27,6 +27,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get listenSlow => '느리게';
+
+  @override
   String get settingsTextSize => '글자 크기';
 
   @override
@@ -604,9 +607,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get listenSpeedLabel => '속도';
-
-  @override
-  String get listenSlow => '느리게';
 
   @override
   String get listenNormal => '보통';

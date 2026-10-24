@@ -31,6 +31,10 @@ String resolveContentLanguage(String? code) =>
 const maxInterestKeywords = 10;
 const maxInterestKeywordLength = 20;
 
+/// 読み上げの速さ（ふつう / ゆっくり）。
+const speechRateNormal = 0.4;
+const speechRateSlow = 0.28;
+
 /// 文字の大きさの段階ごとの拡大率。
 const textSizeFactors = [1.0, 1.15, 1.3];
 
@@ -80,6 +84,7 @@ class AppSettings {
     this.words = const {},
     this.hintsSeen = const {},
     this.textSize = 0,
+    this.slowSpeech = false,
     this.recentSearches = const [],
     this.league = const LeagueData(),
     this.activity = const {},
@@ -147,6 +152,9 @@ class AppSettings {
   /// 文字の大きさ（0=ふつう / 1=大きい / 2=とても大きい）。年代の拡大率に上乗せする。
   final int textSize;
 
+  /// 読み上げをゆっくりにする。
+  final bool slowSpeech;
+
   /// 最近の検索ことば（新しい順、最大 $maxRecentSearches 件）。
   final List<String> recentSearches;
 
@@ -201,6 +209,7 @@ class AppSettings {
     Set<String>? words,
     Set<String>? hintsSeen,
     int? textSize,
+    bool? slowSpeech,
     List<String>? recentSearches,
     LeagueData? league,
     Map<String, DayActivity>? activity,
@@ -237,6 +246,7 @@ class AppSettings {
         words: words ?? this.words,
         hintsSeen: hintsSeen ?? this.hintsSeen,
         textSize: textSize ?? this.textSize,
+        slowSpeech: slowSpeech ?? this.slowSpeech,
         recentSearches: recentSearches ?? this.recentSearches,
         league: league ?? this.league,
         activity: activity ?? this.activity,
@@ -364,6 +374,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
       hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
+      slowSpeech: p.getBool('slowSpeech') ?? false,
       textSize: (p.getInt('textSize') ?? 0).clamp(0, textSizeFactors.length - 1),
       recentSearches: p.getStringList('recentSearches') ?? const [],
       league: _readLeague(p),
@@ -447,6 +458,11 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(notifyHour: hour, notifyMinute: minute);
     _prefs.setInt('notifyHour', hour);
     _prefs.setInt('notifyMinute', minute);
+  }
+
+  void setSlowSpeech(bool slow) {
+    state = state.copyWith(slowSpeech: slow);
+    _prefs.setBool('slowSpeech', slow);
   }
 
   void setTextSize(int size) {

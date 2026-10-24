@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @listenSlow.
+  ///
+  /// In ja, this message translates to:
+  /// **'ゆっくり'**
+  String get listenSlow;
+
   /// No description provided for @settingsTextSize.
   ///
   /// In ja, this message translates to:
@@ -1231,12 +1237,6 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'速さ'**
   String get listenSpeedLabel;
-
-  /// No description provided for @listenSlow.
-  ///
-  /// In ja, this message translates to:
-  /// **'ゆっくり'**
-  String get listenSlow;
 
   /// No description provided for @listenNormal.
   ///

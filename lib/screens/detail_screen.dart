@@ -76,6 +76,10 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
     final ratings = settings.ratings[item.id] ?? const <Rating>{};
     final knowledge = settings.knowledge[item.id];
     final theme = Theme.of(context);
+    void speakNow() => ref.read(ttsProvider).speak(
+        stripReadings('${level.title}。${level.body}'),
+        language: lang,
+        rate: settings.slowSpeech ? speechRateSlow : null);
 
     // 親子モード: 自分より下の年代の説明があるときだけ切り替えを出す。
     final childBands = [
@@ -134,9 +138,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
             key: const Key('detail_listen'),
             icon: const Icon(Icons.volume_up),
             tooltip: l.kidsListen,
-            onPressed: () => ref
-                .read(ttsProvider)
-                .speak(stripReadings('${level.title}。${level.body}'), language: lang),
+            onPressed: speakNow,
           ),
         ],
       ),
@@ -184,6 +186,25 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                 key: const Key('detail_title'),
                 wordWrap: lang == 'ja' && shownBand.isChild,
                 style: theme.textTheme.headlineSmall),
+            const SizedBox(height: 8),
+            // 読み上げ: 大きいボタンと、速さの切りかえ。
+            Row(
+              children: [
+                FilledButton.tonalIcon(
+                  key: const Key('detail_listen_big'),
+                  icon: const Icon(Icons.volume_up),
+                  label: Text(l.kidsListen),
+                  onPressed: speakNow,
+                ),
+                const SizedBox(width: 12),
+                FilterChip(
+                  key: const Key('listen_slow'),
+                  label: Text(l.listenSlow),
+                  selected: settings.slowSpeech,
+                  onSelected: notifier.setSlowSpeech,
+                ),
+              ],
+            ),
             const SizedBox(height: 12),
             // 難しいことばはタップで説明（Kids と、単語ごとに折り返す日本語の子ども向けは対象外）。
             if (shownBand != AgeBand.kids && !(lang == 'ja' && shownBand.isChild))
