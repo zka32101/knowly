@@ -187,6 +187,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premiumUnavailable => '결제 기능은 준비 중이에요';
 
   @override
+  String get premiumOffline => '요금제를 불러오지 못했어요. 인터넷에 연결한 뒤 다시 열어 주세요.';
+
+  @override
   String get gateTitle => '부모님께';
 
   @override

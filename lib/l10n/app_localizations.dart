@@ -452,6 +452,12 @@ abstract class AppLocalizations {
   /// **'購入機能は準備中です'**
   String get premiumUnavailable;
 
+  /// No description provided for @premiumOffline.
+  ///
+  /// In ja, this message translates to:
+  /// **'プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください'**
+  String get premiumOffline;
+
   /// No description provided for @gateTitle.
   ///
   /// In ja, this message translates to:

@@ -4101,6 +4101,986 @@
         "answer": 2
       },
       "id": "brain_energy_0"
+    },
+    {
+      "factId": "fog_is_cloud",
+      "ja": {
+        "question": "きりって なあに？",
+        "options": [
+          "くもの なかま",
+          "あめの なかま",
+          "かぜの なかま"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What is fog?",
+        "options": [
+          "A cloud near the ground",
+          "A kind of rain",
+          "A kind of wind"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "雾是什么？",
+        "options": [
+          "靠近地面的云",
+          "一种雨",
+          "一种风"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "안개는 무엇일까요?",
+        "options": [
+          "땅 가까이에 있는 구름",
+          "비의 한 종류",
+          "바람의 한 종류"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué es la niebla?",
+        "options": [
+          "Una nube cerca del suelo",
+          "Un tipo de lluvia",
+          "Un tipo de viento"
+        ],
+        "answer": 0
+      },
+      "id": "fog_is_cloud_0"
+    },
+    {
+      "factId": "hail_ice_layers",
+      "ja": {
+        "question": "ひょうは なにで できて いる？",
+        "options": [
+          "みず",
+          "こおり",
+          "すな"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What is hail made of?",
+        "options": [
+          "Water vapor only",
+          "Ice",
+          "Sand"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "冰雹是由什么组成的？",
+        "options": [
+          "只有水蒸气",
+          "冰",
+          "沙子"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "우박은 무엇으로 이루어져 있을까요?",
+        "options": [
+          "수증기만",
+          "얼음",
+          "모래"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿De qué está hecho el granizo?",
+        "options": [
+          "Solo vapor de agua",
+          "Hielo",
+          "Arena"
+        ],
+        "answer": 1
+      },
+      "id": "hail_ice_layers_0"
+    },
+    {
+      "factId": "wind_named_from",
+      "ja": {
+        "question": "きたかぜは どこから ふく？",
+        "options": [
+          "みなみ",
+          "ひがし",
+          "きた"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Where does a north wind blow from?",
+        "options": [
+          "The south",
+          "The east",
+          "The north"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "北风是从哪里吹来的？",
+        "options": [
+          "南边",
+          "东边",
+          "北边"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "북풍은 어디에서 불어올까요?",
+        "options": [
+          "남쪽",
+          "동쪽",
+          "북쪽"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿De dónde sopla el viento del norte?",
+        "options": [
+          "Del sur",
+          "Del este",
+          "Del norte"
+        ],
+        "answer": 2
+      },
+      "id": "wind_named_from_0"
+    },
+    {
+      "factId": "typhoon_eye_calm",
+      "ja": {
+        "question": "たいふうの まんなかの よびなは？",
+        "options": [
+          "め",
+          "はな",
+          "くち"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What is the middle of a typhoon called?",
+        "options": [
+          "The eye",
+          "The nose",
+          "The mouth"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "台风中间叫什么？",
+        "options": [
+          "眼",
+          "鼻子",
+          "嘴"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "태풍의 한가운데를 뭐라고 부를까요?",
+        "options": [
+          "눈",
+          "코",
+          "입"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cómo se llama el centro de un tifón?",
+        "options": [
+          "El ojo",
+          "La nariz",
+          "La boca"
+        ],
+        "answer": 0
+      },
+      "id": "typhoon_eye_calm_0"
+    },
+    {
+      "factId": "seahorse_dad_pouch",
+      "ja": {
+        "question": "たまごを ふくろで そだてる たつのおとしごは どっち？",
+        "options": [
+          "オス",
+          "メス",
+          "りょうほう おなじ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Which seahorse carries the eggs in a pouch?",
+        "options": [
+          "The male",
+          "The female",
+          "Both the same"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "哪一种海马用育儿袋带着卵？",
+        "options": [
+          "雄性",
+          "雌性",
+          "两者一样"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "알을 주머니에 넣어 키우는 해마는 누구일까요?",
+        "options": [
+          "수컷",
+          "암컷",
+          "둘 다 같아요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué caballito de mar lleva los huevos en la bolsa?",
+        "options": [
+          "El macho",
+          "La hembra",
+          "Los dos igual"
+        ],
+        "answer": 0
+      },
+      "id": "seahorse_dad_pouch_0"
+    },
+    {
+      "factId": "blue_whale_largest",
+      "ja": {
+        "question": "いちばん おおきい どうぶつは どれ？",
+        "options": [
+          "ぞう",
+          "シロナガスクジラ",
+          "サメ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Which is the biggest animal known?",
+        "options": [
+          "Elephant",
+          "Blue whale",
+          "Shark"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "已知最大的动物是哪一个？",
+        "options": [
+          "大象",
+          "蓝鲸",
+          "鲨鱼"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "알려진 가장 큰 동물은 무엇일까요?",
+        "options": [
+          "코끼리",
+          "흰긴수염고래",
+          "상어"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuál es el animal más grande conocido?",
+        "options": [
+          "Elefante",
+          "Ballena azul",
+          "Tiburón"
+        ],
+        "answer": 1
+      },
+      "id": "blue_whale_largest_0"
+    },
+    {
+      "factId": "jellyfish_no_brain",
+      "ja": {
+        "question": "クラゲに ないものは どれ？",
+        "options": [
+          "からだ",
+          "しんけい",
+          "のう"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What do jellyfish not have?",
+        "options": [
+          "A body",
+          "Nerves",
+          "A brain"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "水母没有下面哪一样？",
+        "options": [
+          "身体",
+          "神经",
+          "大脑"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "해파리에게 없는 것은 무엇일까요?",
+        "options": [
+          "몸",
+          "신경",
+          "뇌"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué no tienen las medusas?",
+        "options": [
+          "Cuerpo",
+          "Nervios",
+          "Cerebro"
+        ],
+        "answer": 2
+      },
+      "id": "jellyfish_no_brain_0"
+    },
+    {
+      "factId": "coral_is_animal",
+      "ja": {
+        "question": "さんごは なんの なかま？",
+        "options": [
+          "どうぶつ",
+          "しょくぶつ",
+          "いし"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What kind of living thing is coral?",
+        "options": [
+          "An animal",
+          "A plant",
+          "A stone"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "珊瑚属于哪一类？",
+        "options": [
+          "动物",
+          "植物",
+          "石头"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "산호는 무엇의 한 종류일까요?",
+        "options": [
+          "동물",
+          "식물",
+          "돌"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué tipo de ser es el coral?",
+        "options": [
+          "Un animal",
+          "Una planta",
+          "Una piedra"
+        ],
+        "answer": 0
+      },
+      "id": "coral_is_animal_0"
+    },
+    {
+      "factId": "marathon_42195",
+      "ja": {
+        "question": "まらそんは なんきろめーとる？",
+        "options": [
+          "42.195きろ",
+          "10きろ",
+          "100きろ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How long is a marathon?",
+        "options": [
+          "42.195 km",
+          "10 km",
+          "100 km"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "马拉松全程有多长？",
+        "options": [
+          "42.195公里",
+          "10公里",
+          "100公里"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "마라톤은 몇 킬로미터일까요?",
+        "options": [
+          "42.195킬로미터",
+          "10킬로미터",
+          "100킬로미터"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuánto mide un maratón?",
+        "options": [
+          "42,195 km",
+          "10 km",
+          "100 km"
+        ],
+        "answer": 0
+      },
+      "id": "marathon_42195_0"
+    },
+    {
+      "factId": "basketball_hoop_305",
+      "ja": {
+        "question": "ばすけの りんぐの たかさは？",
+        "options": [
+          "2めーとる",
+          "3.05めーとる",
+          "5めーとる"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How high is a basketball rim?",
+        "options": [
+          "2 meters",
+          "3.05 meters",
+          "5 meters"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "篮圈有多高？",
+        "options": [
+          "2米",
+          "3.05米",
+          "5米"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "농구 링의 높이는 얼마일까요?",
+        "options": [
+          "2미터",
+          "3.05미터",
+          "5미터"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿A qué altura está el aro de baloncesto?",
+        "options": [
+          "2 metros",
+          "3,05 metros",
+          "5 metros"
+        ],
+        "answer": 1
+      },
+      "id": "basketball_hoop_305_0"
+    },
+    {
+      "factId": "olympic_five_rings",
+      "ja": {
+        "question": "おりんぴっくの わは いくつ？",
+        "options": [
+          "2つ",
+          "3つ",
+          "5つ"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "How many rings are in the Olympic symbol?",
+        "options": [
+          "Two",
+          "Three",
+          "Five"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "奥运会标志里有几个环？",
+        "options": [
+          "两个",
+          "三个",
+          "五个"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "올림픽 마크에는 고리가 몇 개 있을까요?",
+        "options": [
+          "두 개",
+          "세 개",
+          "다섯 개"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuántos aros tiene el símbolo olímpico?",
+        "options": [
+          "Dos",
+          "Tres",
+          "Cinco"
+        ],
+        "answer": 2
+      },
+      "id": "olympic_five_rings_0"
+    },
+    {
+      "factId": "table_tennis_ball_40mm",
+      "ja": {
+        "question": "たっきゅうの ぼーるの おおきさは？",
+        "options": [
+          "40みり",
+          "10みり",
+          "100みり"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How wide is a table tennis ball?",
+        "options": [
+          "40 mm",
+          "10 mm",
+          "100 mm"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "乒乓球的直径是多少？",
+        "options": [
+          "40毫米",
+          "10毫米",
+          "100毫米"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "탁구공의 지름은 얼마일까요?",
+        "options": [
+          "40밀리미터",
+          "10밀리미터",
+          "100밀리미터"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cuánto mide una pelota de tenis de mesa?",
+        "options": [
+          "40 mm",
+          "10 mm",
+          "100 mm"
+        ],
+        "answer": 0
+      },
+      "id": "table_tennis_ball_40mm_0"
+    },
+    {
+      "factId": "zero_number",
+      "ja": {
+        "question": "ぜろを たすと、かずは どうなる？",
+        "options": [
+          "かわらない",
+          "2ばいに なる",
+          "1つ ふえる"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What happens when you add zero to a number?",
+        "options": [
+          "It stays the same",
+          "It doubles",
+          "It goes up by one"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "给一个数加上零，这个数会怎样？",
+        "options": [
+          "不变",
+          "变成两倍",
+          "增加一"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "어떤 수에 영을 더하면 어떻게 될까요?",
+        "options": [
+          "그대로예요",
+          "2배가 돼요",
+          "1 늘어나요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué pasa si sumas cero a un número?",
+        "options": [
+          "Se queda igual",
+          "Se duplica",
+          "Aumenta en uno"
+        ],
+        "answer": 0
+      },
+      "id": "zero_number_0"
+    },
+    {
+      "factId": "pi_circle_ratio",
+      "ja": {
+        "question": "えんの まわりの ながさは、はばの やく なんばい？",
+        "options": [
+          "やく 2ばい",
+          "やく 3.14ばい",
+          "やく 10ばい"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "About how many times is the distance around a circle compared to its width?",
+        "options": [
+          "About 2",
+          "About 3.14",
+          "About 10"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "圆的周长大约是它宽度的多少倍？",
+        "options": [
+          "约2倍",
+          "约3.14倍",
+          "约10倍"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "원의 둘레는 폭의 약 몇 배일까요?",
+        "options": [
+          "약 2배",
+          "약 3.14배",
+          "약 10배"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántas veces mide aproximadamente el contorno de un círculo respecto a su ancho?",
+        "options": [
+          "Unas 2",
+          "Unas 3,14",
+          "Unas 10"
+        ],
+        "answer": 1
+      },
+      "id": "pi_circle_ratio_0"
+    },
+    {
+      "factId": "triangle_180",
+      "ja": {
+        "question": "さんかくの 3つの かどを たすと なんど？",
+        "options": [
+          "90ど",
+          "360ど",
+          "180ど"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What do the three angles of a flat triangle add up to?",
+        "options": [
+          "90 degrees",
+          "360 degrees",
+          "180 degrees"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "平面三角形的三个角加起来是多少度？",
+        "options": [
+          "90度",
+          "360度",
+          "180度"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "평평한 삼각형의 세 각을 더하면 몇 도일까요?",
+        "options": [
+          "90도",
+          "360도",
+          "180도"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿A cuánto suman los tres ángulos de un triángulo plano?",
+        "options": [
+          "90 grados",
+          "360 grados",
+          "180 grados"
+        ],
+        "answer": 2
+      },
+      "id": "triangle_180_0"
+    },
+    {
+      "factId": "two_even_prime",
+      "ja": {
+        "question": "ぐうすうの そすうは どれ？",
+        "options": [
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Which even number is a prime?",
+        "options": [
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "哪个偶数是质数？",
+        "options": [
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "짝수 중에서 소수는 어느 것일까요?",
+        "options": [
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué número par es primo?",
+        "options": [
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 0
+      },
+      "id": "two_even_prime_0"
+    },
+    {
+      "factId": "piano_88_keys",
+      "id": "piano_88_keys_0",
+      "ja": {
+        "question": "ふつうの ピアノの けんばんは いくつ？",
+        "options": [
+          "66こ",
+          "88こ",
+          "100こ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Normal pianos have how many keys?",
+        "options": [
+          "66",
+          "88",
+          "100"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "普通钢琴有多少个键？",
+        "options": [
+          "66个",
+          "88个",
+          "100个"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "보통 피아노의 건반은 몇 개일까요?",
+        "options": [
+          "66개",
+          "88개",
+          "100개"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántas teclas tiene un piano normal?",
+        "options": [
+          "66",
+          "88",
+          "100"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "factId": "theremin_no_touch",
+      "id": "theremin_no_touch_0",
+      "ja": {
+        "question": "テルミンは どうやって ひく？",
+        "options": [
+          "さわらずに ひく",
+          "ふいて ひく",
+          "たたいて ひく"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "How do you play a theremin?",
+        "options": [
+          "Without touching it",
+          "By blowing into it",
+          "By hitting it"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "怎样演奏特雷门琴？",
+        "options": [
+          "不用碰它",
+          "吹奏",
+          "敲打"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "테레민은 어떻게 연주할까요?",
+        "options": [
+          "만지지 않고",
+          "불어서",
+          "두드려서"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Cómo se toca un theremín?",
+        "options": [
+          "Sin tocarlo",
+          "Soplando",
+          "Golpeándolo"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "factId": "a440_tuning_pitch",
+      "id": "a440_tuning_pitch_0",
+      "ja": {
+        "question": "チューニングで ラの おとは なんヘルツ？",
+        "options": [
+          "220ヘルツ",
+          "440ヘルツ",
+          "880ヘルツ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "In standard tuning, the note A is how many hertz?",
+        "options": [
+          "220",
+          "440",
+          "880"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "标准调音中，音符A是多少赫兹？",
+        "options": [
+          "220赫兹",
+          "440赫兹",
+          "880赫兹"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "En la afinación estándar, ¿cuántos hercios tiene la nota La?",
+        "options": [
+          "220",
+          "440",
+          "880"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "표준 조율에서 라 음은 몇 헤르츠일까요?",
+        "options": [
+          "220헤르츠",
+          "440헤르츠",
+          "880헤르츠"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "factId": "beethoven_kept_composing",
+      "id": "beethoven_kept_composing_0",
+      "ja": {
+        "question": "みみが きこえにくく なっても おんがくを つくった ひとは？",
+        "options": [
+          "ベートーベン",
+          "ピカソ",
+          "ノーベル"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Who kept composing as their hearing faded?",
+        "options": [
+          "Beethoven",
+          "Picasso",
+          "Nobel"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "谁在听力变差后仍坚持作曲？",
+        "options": [
+          "贝多芬",
+          "毕加索",
+          "诺贝尔"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "누가 청력이 나빠져도 작곡을 계속했을까요?",
+        "options": [
+          "베토벤",
+          "피카소",
+          "노벨"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Quién siguió componiendo aunque oía cada vez menos?",
+        "options": [
+          "Beethoven",
+          "Picasso",
+          "Nobel"
+        ],
+        "answer": 2
+      }
     }
   ]
 }

@@ -1842,6 +1842,466 @@
         "statement": "El picante del wasabi sube por la nariz.",
         "answer": true
       }
+    },
+    {
+      "factId": "fog_is_cloud",
+      "ja": {
+        "statement": "きりは、じめんの ちかくに できた くもの なかま。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Fog is a cloud near the ground.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "雾是靠近地面的云。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "안개는 땅 가까이에 생긴 구름이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La niebla es una nube cerca del suelo.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "hail_ice_layers",
+      "ja": {
+        "statement": "ひょうは、あつい ひに できる あたたかい みずの つぶ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Hail is made of warm water drops.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "冰雹是由温水滴形成的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "우박은 따뜻한 물방울로 만들어져요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El granizo está hecho de gotas de agua caliente.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "wind_named_from",
+      "ja": {
+        "statement": "きたかぜは、きたから ふいて くる かぜ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A north wind blows from the north.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "北风是从北边吹来的风。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "북풍은 북쪽에서 불어오는 바람이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El viento del norte sopla desde el norte.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "typhoon_eye_calm",
+      "ja": {
+        "statement": "たいふうの めの なかは、かぜが よわい ことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Winds can be weak inside the eye of a typhoon.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "台风眼里的风可能很弱。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "태풍의 눈 속은 바람이 약할 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Dentro del ojo de un tifón el viento puede ser débil.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "seahorse_dad_pouch",
+      "ja": {
+        "statement": "たつのおとしごは、オスが おなかの ふくろで たまごを そだてる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Male seahorses carry the eggs in a pouch.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "雄性海马用育儿袋带着卵。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "수컷 해마는 주머니에 알을 넣어 키워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El caballito de mar macho lleva los huevos en una bolsa.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "blue_whale_largest",
+      "ja": {
+        "statement": "シロナガスクジラは、いままで しられている どうぶつで いちばん おおきい。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The blue whale is the largest animal known to have existed.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蓝鲸是已知曾经存在过的最大的动物。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "흰긴수염고래는 지금까지 알려진 가장 큰 동물이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La ballena azul es el animal más grande que se sabe que ha existido.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "jellyfish_no_brain",
+      "ja": {
+        "statement": "クラゲには、のうが ない。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Jellyfish have no brain.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "水母没有大脑。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "해파리는 뇌가 없어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las medusas no tienen cerebro.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "coral_is_animal",
+      "ja": {
+        "statement": "さんごは、しょくぶつの なかま。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Coral is a kind of plant.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "珊瑚是一种植物。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "산호는 식물의 한 종류예요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El coral es un tipo de planta.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "marathon_42195",
+      "ja": {
+        "statement": "まらそんは 42.195きろめーとる はしる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A marathon is 42.195 km long.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "马拉松全程是42.195公里。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "마라톤은 42.195킬로미터를 달려요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El maratón mide 42,195 km.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "basketball_hoop_305",
+      "ja": {
+        "statement": "ばすけっとぼーるの りんぐは、ゆかから 2めーとるの たかさ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A basketball hoop is 2 meters above the floor.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "篮球架的篮圈离地面2米。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "농구 링은 바닥에서 2미터 높이에 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El aro de baloncesto está a 2 metros del suelo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "olympic_five_rings",
+      "ja": {
+        "statement": "おりんぴっくの わは 7つ ある。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Olympic symbol has seven rings.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "奥运会的标志有七个环。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "올림픽 마크에는 고리가 일곱 개 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El símbolo olímpico tiene siete aros.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "table_tennis_ball_40mm",
+      "ja": {
+        "statement": "たっきゅうの ぼーるは、おおきさが 40みり。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A table tennis ball is 40 mm wide.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "乒乓球的直径是40毫米。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "탁구공의 지름은 40밀리미터예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La pelota de tenis de mesa mide 40 mm.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "zero_number",
+      "ja": {
+        "statement": "ぜろを たしても、かずは かわらない。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Adding zero to a number does not change it.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "给一个数加上零，这个数不会变。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 수에 영을 더해도 그 수는 그대로예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Si sumas cero a un número, el número no cambia.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "pi_circle_ratio",
+      "ja": {
+        "statement": "おおきい えんは、ちいさい えんより えんしゅうりつが おおきい。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A bigger circle has a bigger pi than a small circle.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "大圆的圆周率比小圆的圆周率大。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "큰 원은 작은 원보다 원주율이 더 커요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un círculo grande tiene un pi mayor que uno pequeño.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "triangle_180",
+      "ja": {
+        "statement": "さんかくの 3つの かどを たすと、いつも 180ど。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The three angles of a flat triangle always add up to 180 degrees.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "平面三角形的三个角加起来总是180度。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "평평한 삼각형의 세 각을 더하면 항상 180도예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los tres ángulos de un triángulo plano siempre suman 180 grados.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "two_even_prime",
+      "ja": {
+        "statement": "4は そすうである。",
+        "answer": false
+      },
+      "en": {
+        "statement": "4 is a prime number.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "4是质数。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "4는 소수예요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El 4 es un número primo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "piano_88_keys",
+      "ja": {
+        "statement": "ピアノの けんばんは ぜんぶで 88こ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The standard piano has 88 keys.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "标准钢琴一共有88个键。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "표준 피아노의 건반은 모두 88개예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El piano estándar tiene 88 teclas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "theremin_no_touch",
+      "ja": {
+        "statement": "テルミンは てで さわって ひく がっき。",
+        "answer": false
+      },
+      "en": {
+        "statement": "You must touch the theremin to play it.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "演奏特雷门琴必须用手碰它。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "테레민은 꼭 만져서 연주해야 해요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Para tocar el theremín hay que tocarlo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "a440_tuning_pitch",
+      "ja": {
+        "statement": "ラの おとを 440ヘルツに あわせるのが ひょうじゅん。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The standard tuning pitch sets the note A to 440 hertz.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "标准调音是把音符A调到440赫兹。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "표준 조율은 라 음을 440헤르츠로 맞춰요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La afinación estándar pone la nota La en 440 hercios.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "beethoven_kept_composing",
+      "ja": {
+        "statement": "ベートーベンは みみが きこえにくく なってから おんがくを つくるのを やめた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Beethoven stopped composing as soon as his hearing faded.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "贝多芬听力变差后立刻不再作曲。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "베토벤은 청력이 나빠지자 곧바로 작곡을 그만뒀어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Beethoven dejó de componer en cuanto perdió oído.",
+        "answer": false
+      }
     }
   ]
 }

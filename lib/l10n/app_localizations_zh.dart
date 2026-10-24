@@ -185,6 +185,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumUnavailable => '购买功能即将推出';
 
   @override
+  String get premiumOffline => '无法加载套餐。请连接网络后重新打开此页面。';
+
+  @override
   String get gateTitle => '致家长';
 
   @override

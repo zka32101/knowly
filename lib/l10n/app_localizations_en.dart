@@ -188,6 +188,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get premiumUnavailable => 'Purchases are coming soon';
 
   @override
+  String get premiumOffline =>
+      'Couldn\'t load plans. Connect to the internet and open this screen again.';
+
+  @override
   String get gateTitle => 'For parents';
 
   @override

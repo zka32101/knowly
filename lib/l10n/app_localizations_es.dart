@@ -192,6 +192,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get premiumUnavailable => 'Las compras estarán disponibles pronto';
 
   @override
+  String get premiumOffline =>
+      'No se pudieron cargar los planes. Conéctate a internet y vuelve a abrir esta pantalla.';
+
+  @override
   String get gateTitle => 'Para los padres';
 
   @override

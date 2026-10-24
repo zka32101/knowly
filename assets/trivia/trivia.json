@@ -151,7 +151,10 @@
         "sea_otters_hold_hands",
         "giraffe_seven_vertebrae",
         "cats_no_sweet",
-        "crows_recognize_faces"
+        "crows_recognize_faces",
+        "seahorse_dad_pouch",
+        "jellyfish_no_brain",
+        "coral_is_animal"
       ],
       "sources": [
         {
@@ -895,7 +898,11 @@
         "樹木",
         "きょうりゅう"
       ],
-      "related": [],
+      "related": [
+        "blue_whale_largest",
+        "jellyfish_no_brain",
+        "coral_is_animal"
+      ],
       "sources": [
         {
           "title": "Chondrichthyes",
@@ -1284,7 +1291,8 @@
         "octopus_blue_blood",
         "sea_otters_hold_hands",
         "human_dna_same",
-        "owl_head_turn"
+        "owl_head_turn",
+        "basketball_hoop_305"
       ],
       "sources": [
         {
@@ -1469,7 +1477,9 @@
       "related": [
         "eiffel_grows_summer",
         "rainbow_full_circle",
-        "thunder_count"
+        "thunder_count",
+        "hail_ice_layers",
+        "typhoon_eye_calm"
       ],
       "sources": [
         {
@@ -1664,7 +1674,10 @@
         "dolphin_half_sleep",
         "octopus_blue_blood",
         "cats_no_sweet",
-        "salmon_return"
+        "salmon_return",
+        "seahorse_dad_pouch",
+        "jellyfish_no_brain",
+        "coral_is_animal"
       ],
       "sources": [],
       "verification": {
@@ -1847,7 +1860,11 @@
         "iss_sunrises",
         "sunlight_8_minutes",
         "saturn_would_float",
-        "bat_echolocation"
+        "bat_echolocation",
+        "piano_88_keys",
+        "theremin_no_touch",
+        "a440_tuning_pitch",
+        "beethoven_kept_composing"
       ],
       "sources": [
         {
@@ -2039,7 +2056,8 @@
         "penguin_huddle",
         "snow_hexagon",
         "thunder_count",
-        "fuji_3776"
+        "fuji_3776",
+        "hail_ice_layers"
       ],
       "sources": [
         {
@@ -2182,7 +2200,8 @@
       ],
       "related": [
         "japan_islands",
-        "antarctica_desert"
+        "antarctica_desert",
+        "olympic_five_rings"
       ],
       "sources": [
         {
@@ -3446,7 +3465,9 @@
         "saturn_would_float",
         "no_sound_in_space",
         "venus_day_longer",
-        "moon_moving_away"
+        "moon_moving_away",
+        "fog_is_cloud",
+        "wind_named_from"
       ],
       "sources": [
         {
@@ -4000,7 +4021,10 @@
       "related": [
         "human_dna_same",
         "giraffe_seven_vertebrae",
-        "baby_bones"
+        "baby_bones",
+        "marathon_42195",
+        "zero_number",
+        "two_even_prime"
       ],
       "sources": [
         {
@@ -4185,7 +4209,8 @@
       ],
       "related": [
         "squirrel_acorns",
-        "tree_rings"
+        "tree_rings",
+        "basketball_hoop_305"
       ],
       "sources": [
         {
@@ -4555,7 +4580,11 @@
       ],
       "related": [
         "lightning_hotter_than_sun",
-        "eiffel_grows_summer"
+        "eiffel_grows_summer",
+        "fog_is_cloud",
+        "wind_named_from",
+        "typhoon_eye_calm",
+        "pi_circle_ratio"
       ],
       "sources": [
         {
@@ -4938,7 +4967,9 @@
         "koala_fingerprints",
         "sea_otters_hold_hands",
         "giraffe_seven_vertebrae",
-        "salmon_return"
+        "salmon_return",
+        "seahorse_dad_pouch",
+        "blue_whale_largest"
       ],
       "sources": [
         {
@@ -5123,7 +5154,8 @@
       "related": [
         "chimborazo_farthest",
         "japan_islands",
-        "camel_hump_fat"
+        "camel_hump_fat",
+        "olympic_five_rings"
       ],
       "sources": [
         {
@@ -5503,7 +5535,8 @@
       "related": [
         "antarctica_desert",
         "chimborazo_farthest",
-        "fuji_3776"
+        "fuji_3776",
+        "olympic_five_rings"
       ],
       "sources": [
         {
@@ -6437,7 +6470,8 @@
         "spider_not_insect",
         "firefly_cold_light",
         "bee_waggle_dance",
-        "cricket_sing"
+        "cricket_sing",
+        "two_even_prime"
       ],
       "sources": [
         {
@@ -8358,7 +8392,8 @@
         "ice_floats",
         "wright_first_flight",
         "plane_window_hole",
-        "apple_floats"
+        "apple_floats",
+        "blue_whale_largest"
       ],
       "sources": [
         {
@@ -10271,7 +10306,8 @@
         "pineapple_two_years",
         "apple_floats",
         "rice_half_world",
-        "carrot_colors"
+        "carrot_colors",
+        "table_tennis_ball_40mm"
       ],
       "sources": [
         {
@@ -10645,7 +10681,8 @@
         "saturn_would_float",
         "ice_floats",
         "peanut_not_nut",
-        "pineapple_two_years"
+        "pineapple_two_years",
+        "table_tennis_ball_40mm"
       ],
       "sources": [
         {
@@ -11014,7 +11051,8 @@
         "strawberry_200_seeds",
         "banana_is_berry",
         "apple_floats",
-        "wasabi_nose"
+        "wasabi_nose",
+        "table_tennis_ball_40mm"
       ],
       "sources": [
         {
@@ -12499,7 +12537,11 @@
       ],
       "related": [
         "no_sound_in_space",
-        "elephant_ground_sounds"
+        "elephant_ground_sounds",
+        "piano_88_keys",
+        "theremin_no_touch",
+        "a440_tuning_pitch",
+        "beethoven_kept_composing"
       ],
       "sources": [
         {
@@ -12881,7 +12923,11 @@
       ],
       "related": [
         "cicada_17_years",
-        "mosquito_female_bites"
+        "mosquito_female_bites",
+        "piano_88_keys",
+        "theremin_no_touch",
+        "a440_tuning_pitch",
+        "beethoven_kept_composing"
       ],
       "sources": [
         {
@@ -13064,7 +13110,8 @@
       ],
       "related": [
         "wright_first_flight",
-        "tokyo_first_subway"
+        "tokyo_first_subway",
+        "marathon_42195"
       ],
       "sources": [
         {
@@ -13623,7 +13670,8 @@
       "related": [
         "ice_floats",
         "penguin_huddle",
-        "maple_red"
+        "maple_red",
+        "triangle_180"
       ],
       "sources": [
         {
@@ -14179,7 +14227,8 @@
       "related": [
         "maple_red",
         "bamboo_fast",
-        "sunflower_sun"
+        "sunflower_sun",
+        "pi_circle_ratio"
       ],
       "sources": [
         {
@@ -14371,7 +14420,8 @@
       ],
       "related": [
         "maple_red",
-        "tree_rings"
+        "tree_rings",
+        "pi_circle_ratio"
       ],
       "sources": [
         {
@@ -14556,7 +14606,11 @@
       ],
       "related": [
         "lightning_hotter_than_sun",
-        "ice_floats"
+        "ice_floats",
+        "hail_ice_layers",
+        "wind_named_from",
+        "typhoon_eye_calm",
+        "triangle_180"
       ],
       "sources": [
         {
@@ -15107,7 +15161,8 @@
       ],
       "related": [
         "brain_energy",
-        "owl_head_turn"
+        "owl_head_turn",
+        "zero_number"
       ],
       "sources": [
         {
@@ -15291,7 +15346,12 @@
       ],
       "related": [
         "japan_islands",
-        "ice_floats"
+        "ice_floats",
+        "marathon_42195",
+        "basketball_hoop_305",
+        "zero_number",
+        "triangle_180",
+        "two_even_prime"
       ],
       "sources": [
         {
@@ -15325,6 +15385,3754 @@
           "en": "tall",
           "ja": "たかい",
           "kanji": "高い"
+        }
+      ]
+    },
+    {
+      "id": "fog_is_cloud",
+      "category": "weather",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "fog",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "きりは じめんの くも",
+              "body": "きりは、じめんの ちかくに できた くもの なかま だよ。"
+            },
+            "junior": {
+              "title": "きりは地面（じめん）の近（ちか）くの雲（くも）",
+              "body": "きりは、地面（じめん）の近（ちか）くにできた雲（くも）のなかまです。小（ちい）さな水（みず）のつぶが空気（くうき）にういています。"
+            },
+            "teen": {
+              "title": "霧は地面近くにできる雲",
+              "body": "霧は、地面の近くにできる雲の仲間です。空気中にうかぶ小さな水のつぶが集まって、遠くが見えにくくなります。"
+            },
+            "adult": {
+              "title": "霧は地表付近に生じる低い雲の一種",
+              "body": "霧は、微小な水滴や氷の粒が地表付近の空気中に浮かんだ状態で、低く垂れ込める層雲に似た性質を持ちます。水辺など湿った場所の近くで発生しやすい現象です。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Fog is a cloud near the ground",
+              "body": "Fog is a cloud that sits close to the ground."
+            },
+            "junior": {
+              "title": "Fog is a low-lying cloud",
+              "body": "Fog is a cloud near the ground. It is made of tiny drops of water floating in the air."
+            },
+            "teen": {
+              "title": "Fog is basically a cloud at ground level",
+              "body": "Fog is a low cloud made of tiny water droplets hanging near the surface. It makes it hard to see far."
+            },
+            "adult": {
+              "title": "Fog is a low-lying cloud near the Earth's surface",
+              "body": "Fog is a visible aerosol of tiny water droplets or ice crystals suspended near the surface, resembling stratus cloud. It forms most readily near moist sources such as lakes and oceans."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "雾是靠近地面的云",
+              "body": "雾是贴近地面的云。"
+            },
+            "junior": {
+              "title": "雾是低低的云",
+              "body": "雾是靠近地面的云，由空气中飘着的小水滴组成。"
+            },
+            "teen": {
+              "title": "雾其实就是地面附近的云",
+              "body": "雾是由悬浮在地面附近的微小水滴组成的低云，会让人看不清远处。"
+            },
+            "adult": {
+              "title": "雾是贴近地表的低层云状现象",
+              "body": "雾是悬浮于近地面空气中的微小水滴或冰晶形成的可见气溶胶，性质类似层云，常在湖泊、海洋等潮湿水源附近形成。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "안개는 땅 가까이에 있는 구름",
+              "body": "안개는 땅 가까이에 있는 구름이에요."
+            },
+            "junior": {
+              "title": "안개는 낮게 깔린 구름이에요",
+              "body": "안개는 땅 가까이에 생긴 구름이에요. 아주 작은 물방울이 공기 중에 떠 있어요."
+            },
+            "teen": {
+              "title": "안개는 땅 위에 내려앉은 구름이에요",
+              "body": "안개는 땅 가까이에 떠 있는 작은 물방울로 이루어진 낮은 구름이에요. 멀리 있는 것이 잘 안 보이게 돼요."
+            },
+            "adult": {
+              "title": "안개는 지표 부근에 생기는 낮은 구름입니다",
+              "body": "안개는 지표 부근 공기 중에 떠 있는 미세한 물방울이나 얼음 알갱이로, 층운과 비슷한 성질을 갖습니다. 호수나 바다처럼 습기가 많은 곳 근처에서 잘 생깁니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La niebla es una nube cerca del suelo",
+              "body": "La niebla es una nube que está cerca del suelo."
+            },
+            "junior": {
+              "title": "La niebla es una nube baja",
+              "body": "La niebla es una nube cerca del suelo. Está hecha de gotitas de agua muy pequeñas en el aire."
+            },
+            "teen": {
+              "title": "La niebla es básicamente una nube a ras de suelo",
+              "body": "La niebla es una nube baja hecha de gotitas diminutas que flotan cerca de la superficie. Hace difícil ver a lo lejos."
+            },
+            "adult": {
+              "title": "La niebla es una nube baja junto a la superficie terrestre",
+              "body": "La niebla es un aerosol visible de gotitas de agua o cristales de hielo suspendidos cerca de la superficie, similar a un estrato. Se forma sobre todo cerca de fuentes de humedad como lagos y océanos."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [
+        "autumn",
+        "winter"
+      ],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "霧",
+        "きり",
+        "fog",
+        "雲",
+        "天気",
+        "weather",
+        "cloud"
+      ],
+      "related": [
+        "rainbow_full_circle",
+        "sunlight_8_minutes"
+      ],
+      "sources": [
+        {
+          "title": "Fog",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fog",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "fog",
+          "ja": "きり",
+          "kanji": "霧"
+        },
+        {
+          "en": "cloud",
+          "ja": "くも",
+          "kanji": "雲"
+        },
+        {
+          "en": "ground",
+          "ja": "じめん",
+          "kanji": "地面"
+        }
+      ]
+    },
+    {
+      "id": "hail_ice_layers",
+      "category": "weather",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "hail",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ひょうは こおりの つぶ",
+              "body": "ひょうは、かみなりぐもで できる こおりの つぶ だよ。"
+            },
+            "junior": {
+              "title": "ひょうは氷（こおり）のつぶ",
+              "body": "ひょうは、かみなりぐもの中（なか）でできる氷（こおり）のつぶです。切（き）ると、たまねぎのように何（なん）まいも重（かさ）なっています。"
+            },
+            "teen": {
+              "title": "ひょうは雷雲の中で氷が育ったもの",
+              "body": "ひょうは、雷雲の中で氷のつぶが上下に動きながら大きくなったものです。切ってみると、透明な層と白い層が交互に重なっています。"
+            },
+            "adult": {
+              "title": "雹は積乱雲内で氷が層状に成長したもの",
+              "body": "雹は、積乱雲内の上昇気流で氷の粒が上下に運ばれ、過冷却の水滴を取り込みながら成長して地上に落ちてきたものです。断面には透明な氷の層と白く不透明な層が交互に見られます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Hail is lumps of ice",
+              "body": "Hail is ice that falls from thundercloud."
+            },
+            "junior": {
+              "title": "Hail grows in layers",
+              "body": "Hail forms inside thunderclouds. If you cut one open, it has layers like an onion."
+            },
+            "teen": {
+              "title": "Hail grows as it rides up and down in a storm cloud",
+              "body": "Hail is ice that grows while moving up and down inside a thundercloud. Cut one open and you see clear layers and white layers."
+            },
+            "adult": {
+              "title": "Hailstones are built from alternating clear and opaque ice layers",
+              "body": "Hailstones form in thunderstorm updrafts, growing as they collect water droplets. A cross-section shows layers of transparent and translucent ice alternating with thin, white, opaque layers."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "冰雹是冰块",
+              "body": "冰雹是从雷雨云里掉下来的冰。"
+            },
+            "junior": {
+              "title": "冰雹是一层一层长大的",
+              "body": "冰雹在雷雨云里形成。切开一颗，会看到像洋葱一样的一层层。"
+            },
+            "teen": {
+              "title": "冰雹在雷雨云里上下翻滚长大",
+              "body": "冰雹是冰粒在雷雨云中上下移动、不断长大形成的。切开后能看到透明层和白色层交替出现。"
+            },
+            "adult": {
+              "title": "冰雹由透明与不透明的冰层交替构成",
+              "body": "冰雹在雷暴的上升气流中形成，并在吸附水滴的过程中增大。其截面可见透明或半透明的冰层与较薄的白色不透明冰层交替排列。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "우박은 얼음 덩어리예요",
+              "body": "우박은 천둥 구름에서 떨어지는 얼음이에요."
+            },
+            "junior": {
+              "title": "우박은 층층이 자라요",
+              "body": "우박은 천둥 구름 속에서 만들어져요. 잘라 보면 양파처럼 여러 겹이 있어요."
+            },
+            "teen": {
+              "title": "우박은 구름 속에서 오르내리며 자라요",
+              "body": "우박은 얼음 알갱이가 천둥 구름 속을 오르내리며 커진 거예요. 잘라 보면 투명한 층과 하얀 층이 번갈아 있어요."
+            },
+            "adult": {
+              "title": "우박은 투명한 층과 불투명한 층이 번갈아 쌓인 얼음입니다",
+              "body": "우박은 뇌우의 상승 기류 속에서 물방울을 모으며 자라납니다. 단면에는 투명하거나 반투명한 얼음 층과 얇고 하얀 불투명한 층이 번갈아 나타납니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El granizo son bolitas de hielo",
+              "body": "El granizo es hielo que cae de las nubes de tormenta."
+            },
+            "junior": {
+              "title": "El granizo crece en capas",
+              "body": "El granizo se forma dentro de las nubes de tormenta. Si lo cortas, tiene capas como una cebolla."
+            },
+            "teen": {
+              "title": "El granizo crece subiendo y bajando dentro de la nube",
+              "body": "El granizo es hielo que crece al moverse hacia arriba y hacia abajo dentro de una nube de tormenta. Al cortarlo se ven capas transparentes y blancas."
+            },
+            "adult": {
+              "title": "El granizo se forma con capas alternas de hielo transparente y opaco",
+              "body": "Las piedras de granizo se forman en las corrientes ascendentes de las tormentas y crecen al captar gotas de agua. Un corte muestra capas de hielo transparente o translúcido que alternan con capas finas, blancas y opacas."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ひょう",
+        "雹",
+        "hail",
+        "氷",
+        "天気",
+        "weather",
+        "雷雲"
+      ],
+      "related": [
+        "thunder_count",
+        "lightning_hotter_than_sun",
+        "ice_floats"
+      ],
+      "sources": [
+        {
+          "title": "Hail",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hail",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "hail",
+          "ja": "ひょう",
+          "kanji": "雹"
+        },
+        {
+          "en": "ice",
+          "ja": "こおり",
+          "kanji": "氷"
+        },
+        {
+          "en": "thundercloud",
+          "ja": "かみなりぐも",
+          "kanji": "雷雲"
+        }
+      ]
+    },
+    {
+      "id": "wind_named_from",
+      "category": "weather",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "wind",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "きたかぜは きたから ふく",
+              "body": "きたかぜは、きたから ふいて くる かぜの ことだよ。"
+            },
+            "junior": {
+              "title": "北風（きたかぜ）は北（きた）から来（く）る風（かぜ）",
+              "body": "風（かぜ）の向（む）きは、ふいてくる方（ほう）の名前（なまえ）で言（い）います。北風（きたかぜ）は、北（きた）から南（みなみ）へふく風（かぜ）です。"
+            },
+            "teen": {
+              "title": "風向きは「吹いてくる方角」で言う",
+              "body": "風向きは、風が吹いてくる方角で表します。北風は北から南へ向かって吹く風で、南風は南から吹く風です。"
+            },
+            "adult": {
+              "title": "風向は風が吹いてくる方位で表す",
+              "body": "風向は、風が吹いてくる方位で表す決まりです。たとえば北風は、北から南へ向かって吹く風を指し、風が向かう先ではありません。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A north wind comes from the north",
+              "body": "A north wind is wind that blows from the north."
+            },
+            "junior": {
+              "title": "Wind is named for where it comes from",
+              "body": "We name wind by the direction it comes from. A north wind blows from the north toward the south."
+            },
+            "teen": {
+              "title": "Wind direction means where the wind comes from",
+              "body": "Wind direction is given by where the wind comes from. A north wind blows from north to south, not toward the north."
+            },
+            "adult": {
+              "title": "Wind direction is reported as the direction of origin",
+              "body": "By convention, wind direction is the direction from which the wind is blowing. A northerly wind therefore moves from north to south, not toward the north."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "北风是从北边吹来的风",
+              "body": "北风是从北边吹来的风。"
+            },
+            "junior": {
+              "title": "风向按风从哪里来命名",
+              "body": "风向是按风吹来的方向来叫的。北风是从北边吹向南边的风。"
+            },
+            "teen": {
+              "title": "风向指的是风从哪里吹来",
+              "body": "风向用风吹来的方向表示。北风是从北向南吹的风，而不是吹向北方。"
+            },
+            "adult": {
+              "title": "风向以来向方位表示",
+              "body": "按惯例，风向是指风吹来的方向。因此北风是自北向南吹的风，而不是吹向北方的风。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "북풍은 북쪽에서 불어오는 바람",
+              "body": "북풍은 북쪽에서 불어오는 바람이에요."
+            },
+            "junior": {
+              "title": "바람은 불어오는 곳으로 이름을 붙여요",
+              "body": "바람의 방향은 불어오는 쪽으로 말해요. 북풍은 북쪽에서 남쪽으로 부는 바람이에요."
+            },
+            "teen": {
+              "title": "풍향은 바람이 불어오는 방향이에요",
+              "body": "풍향은 바람이 불어오는 쪽으로 나타내요. 북풍은 북쪽에서 남쪽으로 부는 바람이고, 북쪽으로 향하는 바람이 아니에요."
+            },
+            "adult": {
+              "title": "풍향은 바람이 불어오는 방위로 나타냅니다",
+              "body": "관례상 풍향은 바람이 불어오는 방향입니다. 따라서 북풍은 북쪽에서 남쪽으로 이동하는 바람이며, 북쪽을 향해 부는 바람이 아닙니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El viento del norte viene del norte",
+              "body": "El viento del norte sopla desde el norte."
+            },
+            "junior": {
+              "title": "El viento se nombra por de dónde viene",
+              "body": "Nombramos el viento por la dirección de la que viene. Un viento del norte sopla del norte hacia el sur."
+            },
+            "teen": {
+              "title": "La dirección del viento es de dónde viene",
+              "body": "La dirección del viento se da según de dónde viene. Un viento del norte va del norte al sur, no hacia el norte."
+            },
+            "adult": {
+              "title": "La dirección del viento indica su procedencia",
+              "body": "Por convención, la dirección del viento es aquella desde la que sopla. Así, un viento del norte se desplaza de norte a sur, y no hacia el norte."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "風",
+        "かぜ",
+        "wind",
+        "北風",
+        "風向き",
+        "weather",
+        "direction"
+      ],
+      "related": [
+        "sunlight_8_minutes",
+        "rainbow_full_circle",
+        "thunder_count"
+      ],
+      "sources": [
+        {
+          "title": "Wind",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wind",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "kanji": "風"
+        },
+        {
+          "en": "north",
+          "ja": "きた",
+          "kanji": "北"
+        },
+        {
+          "en": "direction",
+          "ja": "ほうこう",
+          "kanji": "方向"
+        }
+      ]
+    },
+    {
+      "id": "typhoon_eye_calm",
+      "category": "weather",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "typhoon",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "たいふうの めは しずか",
+              "body": "たいふうの まんなかの 「め」は、かぜが よわくて おだやかな ことが あるよ。"
+            },
+            "junior": {
+              "title": "台風（たいふう）の目（め）は風（かぜ）が弱（よわ）い",
+              "body": "台風（たいふう）の真（ま）ん中（なか）には「目（め）」とよばれる丸（まる）い所（ところ）があります。そこでは風（かぜ）が弱（よわ）く、空（そら）が見（み）えることもあります。"
+            },
+            "teen": {
+              "title": "台風の目の中は風が弱くなる",
+              "body": "台風の中心には「目」と呼ばれる丸い部分があります。目の中は風が弱く、雲が少なくて青空が見えることもありますが、周りには強い雨と風があります。"
+            },
+            "adult": {
+              "title": "台風の目では風が弱く、雲も少ない",
+              "body": "発達した台風の中心には「目」と呼ばれる領域があり、通常は風が穏やかで雲も少なくなっています。一方、その周囲の壁雲では非常に強い風と雨が観測されます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A typhoon has a calm middle",
+              "body": "The middle of a typhoon is called the eye. It can be calm."
+            },
+            "junior": {
+              "title": "The eye of a typhoon is calm",
+              "body": "A typhoon has a round hole in the middle called the eye. The wind is weak there, and you can sometimes see the sky."
+            },
+            "teen": {
+              "title": "The eye of a typhoon is surprisingly calm",
+              "body": "At the center of a typhoon is the eye. Winds are light and clouds are thin there, but strong wind and rain surround it."
+            },
+            "adult": {
+              "title": "A tropical cyclone's eye is normally calm and clear",
+              "body": "The eye of a well-developed tropical cyclone is normally calm and free of strong winds and heavy cloud, while the surrounding eyewall holds the most intense winds and rain."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "台风中间很平静",
+              "body": "台风的中间叫作“风眼”，那里可能很平静。"
+            },
+            "junior": {
+              "title": "台风眼里风很小",
+              "body": "台风中间有一个圆圆的地方叫风眼。那里风很弱，有时还能看到天空。"
+            },
+            "teen": {
+              "title": "台风眼里出人意料地平静",
+              "body": "台风中心是风眼。那里风小、云少，有时能看到蓝天，但周围有强风和大雨。"
+            },
+            "adult": {
+              "title": "热带气旋的风眼通常平静少云",
+              "body": "发展成熟的热带气旋，其风眼通常风力平静、云量稀少，而周围的眼墙则伴有最强的风和降雨。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "태풍의 가운데는 조용해요",
+              "body": "태풍의 한가운데를 눈이라고 불러요. 그곳은 조용할 수 있어요."
+            },
+            "junior": {
+              "title": "태풍의 눈에서는 바람이 약해요",
+              "body": "태풍 가운데에 눈이라고 부르는 둥근 곳이 있어요. 그곳은 바람이 약하고 하늘이 보일 때도 있어요."
+            },
+            "teen": {
+              "title": "태풍의 눈 속은 의외로 고요해요",
+              "body": "태풍의 중심에는 눈이 있어요. 눈 속은 바람이 약하고 구름이 적어서 푸른 하늘이 보이기도 하지만, 주변에는 강한 비바람이 있어요."
+            },
+            "adult": {
+              "title": "태풍의 눈은 보통 바람이 잔잔하고 구름이 적습니다",
+              "body": "충분히 발달한 열대 저기압의 눈은 보통 바람이 약하고 구름이 거의 없는 반면, 그 주변의 눈벽에는 가장 강한 바람과 비가 몰립니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El centro de un tifón es tranquilo",
+              "body": "El centro de un tifón se llama ojo. Puede estar tranquilo."
+            },
+            "junior": {
+              "title": "El ojo de un tifón está en calma",
+              "body": "Un tifón tiene un hueco redondo en el centro llamado ojo. Allí el viento es débil y a veces se ve el cielo."
+            },
+            "teen": {
+              "title": "El ojo de un tifón sorprende por su calma",
+              "body": "En el centro de un tifón está el ojo. Allí el viento es suave y hay pocas nubes, pero alrededor hay viento fuerte y lluvia."
+            },
+            "adult": {
+              "title": "El ojo de un ciclón tropical suele estar en calma y despejado",
+              "body": "El ojo de un ciclón tropical bien desarrollado suele estar en calma y libre de vientos fuertes y nubes densas, mientras que la pared del ojo que lo rodea concentra los vientos y la lluvia más intensos."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [
+        "summer",
+        "autumn"
+      ],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "台風",
+        "たいふう",
+        "台風の目",
+        "typhoon",
+        "eye",
+        "weather",
+        "hurricane"
+      ],
+      "related": [
+        "thunder_count",
+        "lightning_hotter_than_sun",
+        "rainbow_full_circle"
+      ],
+      "sources": [
+        {
+          "title": "Tropical cyclone",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tropical_cyclone",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "typhoon",
+          "ja": "たいふう",
+          "kanji": "台風"
+        },
+        {
+          "en": "eye",
+          "ja": "め",
+          "kanji": "目"
+        },
+        {
+          "en": "calm",
+          "ja": "おだやか",
+          "kanji": "穏やか"
+        }
+      ]
+    },
+    {
+      "id": "seahorse_dad_pouch",
+      "category": "ocean",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "seahorse",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "たつのおとしごの パパが あかちゃんを そだてる",
+              "body": "たつのおとしごは、オスの おなかの ふくろで たまごを そだてるよ。"
+            },
+            "junior": {
+              "title": "タツノオトシゴのオスが子（こ）どもを育（そだ）てる",
+              "body": "海（うみ）のタツノオトシゴは、オスのおなかにふくろがあります。メスがたまごをふくろに入（い）れ、オスが子（こ）どもが生（う）まれるまで運（はこ）びます。"
+            },
+            "teen": {
+              "title": "タツノオトシゴは、オスが育児袋で卵を育てる",
+              "body": "タツノオトシゴのオスには、お腹に育児嚢（いくじのう）という袋があります。メスが産んだ卵をその中で育て、赤ちゃんが生まれるとオスが送り出します。"
+            },
+            "adult": {
+              "title": "タツノオトシゴは、オスが育児嚢で卵を保育する",
+              "body": "タツノオトシゴ類のオスは腹側に育児嚢を持ち、メスが産み付けた卵をその中で孵化まで保護します。1回に最大で1,500個ほどの卵を受け入れる例も知られています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Seahorse dads carry the babies",
+              "body": "A seahorse dad keeps the eggs safe in a pouch on his tummy."
+            },
+            "junior": {
+              "title": "Male seahorses raise the eggs",
+              "body": "The mother seahorse puts her eggs into the father's belly pouch. He carries them until the babies are ready to be born."
+            },
+            "teen": {
+              "title": "In seahorses, the male carries the eggs",
+              "body": "Male seahorses have a brood pouch on the front of the tail. The female places her eggs inside, and the male keeps them there until the young hatch and swim out."
+            },
+            "adult": {
+              "title": "Male seahorses brood the eggs in a pouch",
+              "body": "Male seahorses have a ventral brood pouch into which the female deposits her eggs. The eggs develop there until hatching, and a single male can receive up to about 1,500 eggs."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "海马爸爸带宝宝",
+              "body": "海马爸爸把卵放在肚子上的小袋子里保护。"
+            },
+            "junior": {
+              "title": "海马爸爸孵育卵",
+              "body": "海马妈妈把卵放进爸爸肚子上的育儿袋里。爸爸一直带着它们，直到小海马出生。"
+            },
+            "teen": {
+              "title": "海马由雄性来孵育卵",
+              "body": "雄性海马的尾部前侧有一个育儿袋。雌性把卵放进去后，雄性一直把卵留在袋里，直到小海马孵化并游出来。"
+            },
+            "adult": {
+              "title": "雄性海马在育儿袋中孵育卵",
+              "body": "雄性海马在身体腹侧有育儿袋，雌性将卵产入其中，卵在袋内发育直至孵化。一只雄性海马最多可接收约1500枚卵。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "해마는 아빠가 아기를 키워요",
+              "body": "해마 아빠는 배에 있는 주머니에 알을 넣고 지켜요."
+            },
+            "junior": {
+              "title": "해마는 아빠가 알을 키워요",
+              "body": "해마 엄마가 알을 아빠의 배 주머니에 넣어요. 아빠는 아기 해마가 태어날 때까지 알을 품고 있어요."
+            },
+            "teen": {
+              "title": "해마는 수컷이 알을 품어요",
+              "body": "수컷 해마는 꼬리 앞쪽에 육아낭이라는 주머니가 있어요. 암컷이 그 안에 알을 넣으면 수컷이 알이 부화해서 아기가 나올 때까지 품어요."
+            },
+            "adult": {
+              "title": "수컷 해마는 육아낭에서 알을 부화시킵니다",
+              "body": "수컷 해마는 몸 앞쪽에 육아낭이 있고, 암컷이 그 안에 알을 낳습니다. 알은 주머니 안에서 부화할 때까지 자라며, 수컷 한 마리가 최대 1,500개 정도의 알을 받기도 합니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El papá caballito de mar cuida a los bebés",
+              "body": "El papá caballito de mar guarda los huevos en una bolsa de su barriga."
+            },
+            "junior": {
+              "title": "El macho del caballito de mar cuida los huevos",
+              "body": "La mamá pone los huevos en la bolsa de la barriga del papá. Él los lleva hasta que los bebés están listos para nacer."
+            },
+            "teen": {
+              "title": "En los caballitos de mar, el macho lleva los huevos",
+              "body": "Los machos tienen una bolsa de cría en la parte delantera de la cola. La hembra deposita los huevos dentro y el macho los mantiene allí hasta que las crías nacen y salen nadando."
+            },
+            "adult": {
+              "title": "El macho del caballito de mar incuba los huevos en una bolsa",
+              "body": "Los machos poseen una bolsa de cría ventral donde la hembra deposita sus huevos. Los huevos se desarrollan allí hasta la eclosión, y un solo macho puede recibir hasta unos 1500 huevos."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "タツノオトシゴ",
+        "海",
+        "seahorse",
+        "ocean",
+        "father",
+        "うみ"
+      ],
+      "related": [
+        "octopus_blue_blood",
+        "dolphin_half_sleep",
+        "sea_otters_hold_hands"
+      ],
+      "sources": [
+        {
+          "title": "Seahorse",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Seahorse",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "seahorse",
+          "ja": "たつのおとしご",
+          "kanji": "竜の落とし子"
+        },
+        {
+          "en": "pouch",
+          "ja": "ふくろ",
+          "kanji": "袋"
+        },
+        {
+          "en": "egg",
+          "ja": "たまご",
+          "kanji": "卵"
+        }
+      ]
+    },
+    {
+      "id": "blue_whale_largest",
+      "category": "ocean",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "whale",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "シロナガスクジラは いちばん おおきい どうぶつ",
+              "body": "シロナガスクジラは、いままで いきた どうぶつの なかで いちばん おおきいと いわれているよ。"
+            },
+            "junior": {
+              "title": "シロナガスクジラは一番（いちばん）大（おお）きい動物（どうぶつ）",
+              "body": "シロナガスクジラは、体（からだ）の長（なが）さが30メートルちかくになる、大（おお）きな動物（どうぶつ）です。地球（ちきゅう）にいた生（い）き物（もの）の中（なか）でも、いちばん大（おお）きいと考（かんが）えられています。"
+            },
+            "teen": {
+              "title": "シロナガスクジラは地球史上最大の動物",
+              "body": "シロナガスクジラは、体長が最大で約30メートルにもなる海の動物です。恐竜をふくめても、これまでに知られている中でいちばん大きな動物だと考えられています。"
+            },
+            "adult": {
+              "title": "シロナガスクジラは、知られる限り史上最大の動物",
+              "body": "シロナガスクジラは体長が最大で約30メートルに達するヒゲクジラ類で、これまでに存在したことが知られている動物の中で最大とされています。海中の浮力が巨大な体を支えています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The blue whale is the biggest animal",
+              "body": "The blue whale is the biggest animal we know of. It lives in the ocean."
+            },
+            "junior": {
+              "title": "The biggest animal ever is a whale",
+              "body": "The blue whale can be almost 30 meters long. It is thought to be the biggest animal that has ever lived on Earth."
+            },
+            "teen": {
+              "title": "The blue whale is the largest animal known",
+              "body": "Blue whales can grow to roughly 30 meters long. Even counting dinosaurs, they are the largest animal known to have ever existed."
+            },
+            "adult": {
+              "title": "The blue whale is the largest animal known to have existed",
+              "body": "The blue whale, a baleen whale, reaches lengths of up to about 30 meters. It is regarded as the largest animal known to have ever existed, and the buoyancy of seawater helps support its enormous body."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "蓝鲸是最大的动物",
+              "body": "蓝鲸是我们所知最大的动物，它生活在海里。"
+            },
+            "junior": {
+              "title": "史上最大的动物是鲸",
+              "body": "蓝鲸身长可接近30米。人们认为它是地球上曾经生活过的最大的动物。"
+            },
+            "teen": {
+              "title": "蓝鲸是已知最大的动物",
+              "body": "蓝鲸最长可达约30米。即使把恐龙算进去，它也是已知曾经存在过的最大的动物。"
+            },
+            "adult": {
+              "title": "蓝鲸是已知史上最大的动物",
+              "body": "蓝鲸属须鲸类，体长最长可达约30米，被认为是已知曾经存在过的最大动物。海水的浮力帮助支撑它巨大的身体。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "흰긴수염고래는 가장 큰 동물이에요",
+              "body": "흰긴수염고래는 우리가 아는 가장 큰 동물이에요. 바다에서 살아요."
+            },
+            "junior": {
+              "title": "가장 큰 동물은 고래예요",
+              "body": "흰긴수염고래는 몸길이가 30미터 가까이 될 수 있어요. 지구에 살았던 동물 중 가장 크다고 여겨져요."
+            },
+            "teen": {
+              "title": "흰긴수염고래는 알려진 가장 큰 동물이에요",
+              "body": "흰긴수염고래는 몸길이가 최대 약 30미터까지 자라요. 공룡까지 포함해도 지금까지 알려진 동물 중 가장 커요."
+            },
+            "adult": {
+              "title": "흰긴수염고래는 알려진 사상 최대의 동물입니다",
+              "body": "수염고래류인 흰긴수염고래는 몸길이가 최대 약 30미터에 달하며, 지금까지 존재한 것으로 알려진 동물 중 가장 큰 것으로 여겨집니다. 바닷물의 부력이 거대한 몸을 받쳐 줍니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La ballena azul es el animal más grande",
+              "body": "La ballena azul es el animal más grande que conocemos. Vive en el océano."
+            },
+            "junior": {
+              "title": "El animal más grande de la historia es una ballena",
+              "body": "La ballena azul puede medir casi 30 metros. Se cree que es el animal más grande que ha vivido en la Tierra."
+            },
+            "teen": {
+              "title": "La ballena azul es el animal más grande conocido",
+              "body": "Las ballenas azules pueden medir unos 30 metros. Incluso contando a los dinosaurios, son el animal más grande que se sabe que ha existido."
+            },
+            "adult": {
+              "title": "La ballena azul es el mayor animal conocido que ha existido",
+              "body": "La ballena azul, un misticeto, alcanza hasta unos 30 metros de longitud. Se considera el animal más grande que se sabe que ha existido, y la flotabilidad del agua marina ayuda a sostener su enorme cuerpo."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "シロナガスクジラ",
+        "クジラ",
+        "blue whale",
+        "ocean",
+        "largest animal",
+        "うみ"
+      ],
+      "related": [
+        "sharks_older_than_trees",
+        "dolphin_half_sleep",
+        "steel_ship_floats"
+      ],
+      "sources": [
+        {
+          "title": "Blue whale",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Blue_whale",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "whale",
+          "ja": "くじら",
+          "kanji": "鯨"
+        },
+        {
+          "en": "big",
+          "ja": "おおきい",
+          "kanji": "大きい"
+        },
+        {
+          "en": "sea",
+          "ja": "うみ",
+          "kanji": "海"
+        }
+      ]
+    },
+    {
+      "id": "jellyfish_no_brain",
+      "category": "ocean",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "jellyfish",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "くらげには のうが ないよ",
+              "body": "クラゲには、のうが ありません。それでも うみを ふわふわ およげるよ。"
+            },
+            "junior": {
+              "title": "クラゲには「のう」がない",
+              "body": "クラゲには、のうがありません。かわりに、体（からだ）じゅうにあるしんけいで、まわりのようすを感（かん）じています。"
+            },
+            "teen": {
+              "title": "クラゲには脳がない",
+              "body": "クラゲには脳も、脳の代わりになる中枢神経もありません。体全体に広がる神経のネットワークで、光や触れたものなどを感じ取っています。"
+            },
+            "adult": {
+              "title": "クラゲは脳も中枢神経系も持たない",
+              "body": "クラゲ類は脳や中枢神経系を持たず、呼吸や循環のための専用の器官も発達していません。感覚と動きは、体に分布する神経網によって調整されています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Jellyfish have no brain",
+              "body": "A jellyfish has no brain, but it can still float and swim in the sea."
+            },
+            "junior": {
+              "title": "A jellyfish has no brain",
+              "body": "Jellyfish do not have a brain. Nerves all over the body help them sense what is around them."
+            },
+            "teen": {
+              "title": "Jellyfish get by without a brain",
+              "body": "Jellyfish have no brain and no central nervous system. A net of nerves spread across the body lets them sense light and touch and react."
+            },
+            "adult": {
+              "title": "Jellyfish lack a brain and a central nervous system",
+              "body": "Jellyfish have neither a brain nor a central nervous system, and no specialized organs for respiration or circulation. A nerve net distributed through the body coordinates sensing and movement."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "水母没有大脑",
+              "body": "水母没有大脑，但还是能在海里漂浮和游动。"
+            },
+            "junior": {
+              "title": "水母没有大脑",
+              "body": "水母没有大脑。遍布全身的神经帮助它们感知周围的情况。"
+            },
+            "teen": {
+              "title": "水母没有大脑也能生活",
+              "body": "水母既没有大脑，也没有中枢神经系统。遍布全身的神经网让它们能感知光和触碰并做出反应。"
+            },
+            "adult": {
+              "title": "水母没有大脑和中枢神经系统",
+              "body": "水母既没有大脑也没有中枢神经系统，也没有专门的呼吸和循环器官。分布于全身的神经网协调着感觉和运动。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "해파리는 뇌가 없어요",
+              "body": "해파리는 뇌가 없지만 바다에서 둥둥 떠다니고 헤엄칠 수 있어요."
+            },
+            "junior": {
+              "title": "해파리에게는 뇌가 없어요",
+              "body": "해파리는 뇌가 없어요. 몸 전체에 퍼져 있는 신경이 주변을 느끼도록 도와줘요."
+            },
+            "teen": {
+              "title": "해파리는 뇌 없이도 살아가요",
+              "body": "해파리는 뇌도 중추신경계도 없어요. 몸에 퍼져 있는 신경망으로 빛이나 닿는 것을 느끼고 반응해요."
+            },
+            "adult": {
+              "title": "해파리는 뇌와 중추신경계가 없습니다",
+              "body": "해파리류는 뇌도 중추신경계도 없으며, 호흡이나 순환을 위한 전용 기관도 발달하지 않았습니다. 몸에 분포한 신경망이 감각과 움직임을 조절합니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Las medusas no tienen cerebro",
+              "body": "Una medusa no tiene cerebro, pero aun así flota y nada en el mar."
+            },
+            "junior": {
+              "title": "Una medusa no tiene cerebro",
+              "body": "Las medusas no tienen cerebro. Los nervios repartidos por el cuerpo les ayudan a notar lo que hay a su alrededor."
+            },
+            "teen": {
+              "title": "Las medusas viven sin cerebro",
+              "body": "Las medusas no tienen cerebro ni sistema nervioso central. Una red de nervios repartida por el cuerpo les permite notar la luz y el contacto y reaccionar."
+            },
+            "adult": {
+              "title": "Las medusas carecen de cerebro y de sistema nervioso central",
+              "body": "Las medusas no tienen cerebro ni sistema nervioso central, ni órganos especializados para la respiración o la circulación. Una red nerviosa distribuida por el cuerpo coordina los sentidos y el movimiento."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "クラゲ",
+        "脳",
+        "jellyfish",
+        "ocean",
+        "brain",
+        "うみ"
+      ],
+      "related": [
+        "octopus_blue_blood",
+        "sharks_older_than_trees",
+        "sea_otters_hold_hands"
+      ],
+      "sources": [
+        {
+          "title": "Jellyfish",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jellyfish",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "jellyfish",
+          "ja": "くらげ",
+          "kanji": "海月"
+        },
+        {
+          "en": "brain",
+          "ja": "のう",
+          "kanji": "脳"
+        },
+        {
+          "en": "swim",
+          "ja": "およぐ",
+          "kanji": "泳ぐ"
+        }
+      ]
+    },
+    {
+      "id": "coral_is_animal",
+      "category": "ocean",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "coral",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "さんごは どうぶつの なかま",
+              "body": "さんごは、くさや きでは なく、どうぶつの なかまだよ。"
+            },
+            "junior": {
+              "title": "サンゴは動物（どうぶつ）",
+              "body": "サンゴは石（いし）のように見（み）えますが、じつは動物（どうぶつ）のなかまです。小（ちい）さな生（い）き物（もの）が集（あつ）まって、かたい体（からだ）を作（つく）ります。"
+            },
+            "teen": {
+              "title": "サンゴは石ではなく動物",
+              "body": "サンゴは岩のように見えますが、実はクラゲやイソギンチャクの仲間の動物です。小さなポリプがたくさん集まって、かたい骨格を作ります。"
+            },
+            "adult": {
+              "title": "サンゴは刺胞動物門に属する群体性の動物",
+              "body": "サンゴは刺胞動物門に属する海の無脊椎動物で、多数のポリプが群体を作ります。造礁サンゴ類は炭酸カルシウムの硬い骨格を分泌し、熱帯の海でサンゴ礁を形づくります。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Coral is an animal",
+              "body": "Coral is not a plant or a rock. It is a kind of animal."
+            },
+            "junior": {
+              "title": "Coral is an animal, not a rock",
+              "body": "Coral can look like stone, but it is really an animal. Many tiny animals gather together and build a hard body."
+            },
+            "teen": {
+              "title": "Coral is an animal, not a stone",
+              "body": "Coral may look like rock, but it is an animal related to jellyfish and sea anemones. Lots of tiny polyps live together and build a hard skeleton."
+            },
+            "adult": {
+              "title": "Corals are colonial marine invertebrates",
+              "body": "Corals are colonial marine invertebrates in the phylum Cnidaria, made up of many polyps. Reef-building stony corals secrete a calcium carbonate skeleton and form coral reefs in tropical seas."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "珊瑚是动物",
+              "body": "珊瑚不是植物，也不是石头，它是一种动物。"
+            },
+            "junior": {
+              "title": "珊瑚是动物，不是石头",
+              "body": "珊瑚看起来像石头，其实是动物。许多小动物聚在一起，造出坚硬的身体。"
+            },
+            "teen": {
+              "title": "珊瑚是动物，不是石头",
+              "body": "珊瑚看起来像岩石，其实是与水母和海葵有亲缘关系的动物。许多微小的珊瑚虫生活在一起，造出坚硬的骨骼。"
+            },
+            "adult": {
+              "title": "珊瑚是群体生活的海洋无脊椎动物",
+              "body": "珊瑚属于刺胞动物门，是由许多珊瑚虫组成的群体海洋无脊椎动物。造礁石珊瑚分泌碳酸钙骨骼，在热带海域形成珊瑚礁。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "산호는 동물이에요",
+              "body": "산호는 식물도 바위도 아니에요. 동물의 한 종류예요."
+            },
+            "junior": {
+              "title": "산호는 돌이 아니라 동물이에요",
+              "body": "산호는 돌처럼 보이지만 사실은 동물이에요. 작은 동물들이 모여서 단단한 몸을 만들어요."
+            },
+            "teen": {
+              "title": "산호는 돌이 아니라 동물이에요",
+              "body": "산호는 바위처럼 보이지만 해파리와 말미잘의 친척인 동물이에요. 작은 폴립이 많이 모여 살면서 단단한 골격을 만들어요."
+            },
+            "adult": {
+              "title": "산호는 군체를 이루는 해양 무척추동물입니다",
+              "body": "산호는 자포동물문에 속하며 수많은 폴립으로 이루어진 군체성 해양 무척추동물입니다. 조초 산호류는 탄산칼슘 골격을 분비해 열대 바다에서 산호초를 이룹니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El coral es un animal",
+              "body": "El coral no es una planta ni una roca. Es un tipo de animal."
+            },
+            "junior": {
+              "title": "El coral es un animal, no una roca",
+              "body": "El coral parece piedra, pero en realidad es un animal. Muchos animalitos se juntan y construyen un cuerpo duro."
+            },
+            "teen": {
+              "title": "El coral es un animal, no una piedra",
+              "body": "El coral puede parecer roca, pero es un animal emparentado con las medusas y las anémonas. Muchos pólipos diminutos viven juntos y construyen un esqueleto duro."
+            },
+            "adult": {
+              "title": "Los corales son invertebrados marinos coloniales",
+              "body": "Los corales son invertebrados marinos coloniales del filo Cnidaria, formados por muchos pólipos. Los corales pétreos constructores de arrecifes secretan un esqueleto de carbonato de calcio y forman arrecifes en mares tropicales."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "サンゴ",
+        "珊瑚",
+        "coral",
+        "ocean",
+        "reef",
+        "うみ"
+      ],
+      "related": [
+        "octopus_blue_blood",
+        "sea_otters_hold_hands",
+        "sharks_older_than_trees"
+      ],
+      "sources": [
+        {
+          "title": "Coral",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Coral",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "coral",
+          "ja": "さんご",
+          "kanji": "珊瑚"
+        },
+        {
+          "en": "reef",
+          "ja": "さんごしょう",
+          "kanji": "珊瑚礁"
+        },
+        {
+          "en": "animal",
+          "ja": "どうぶつ",
+          "kanji": "動物"
+        }
+      ]
+    },
+    {
+      "id": "marathon_42195",
+      "category": "sports",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "marathon",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "まらそんは 42.195きろ",
+              "body": "まらそんは、42.195きろめーとる はしる きょうそうだよ。"
+            },
+            "junior": {
+              "title": "マラソンは42.195キロ",
+              "body": "マラソンは、42.195キロメートルを走（はし）ります。道（みち）を走（はし）る大会（たいかい）が多（おお）いです。"
+            },
+            "teen": {
+              "title": "マラソンの距離は42.195キロ",
+              "body": "マラソンは42.195キロメートル（約26.2マイル）を走る競技です。多くは街の道路を使った大会で行われます。"
+            },
+            "adult": {
+              "title": "マラソンの公式距離は42.195キロメートル",
+              "body": "マラソンの距離は42.195キロメートル（約26.22マイル）と定められています。主に道路を走るロードレースとして行われますが、トレイルのコースで行われることもあります。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A marathon is 42.195 km",
+              "body": "A marathon is a very long run of 42.195 kilometers."
+            },
+            "junior": {
+              "title": "The marathon is 42.195 kilometers",
+              "body": "Runners in a marathon go 42.195 kilometers. Many marathons are held on city streets."
+            },
+            "teen": {
+              "title": "The marathon distance is 42.195 km",
+              "body": "A marathon is a foot race of 42.195 kilometers, about 26.2 miles. Most are run as road races through city streets."
+            },
+            "adult": {
+              "title": "The official marathon distance is 42.195 kilometres",
+              "body": "The marathon is a long-distance foot race of 42.195 kilometres (about 26.22 miles). It is usually run as a road race, although it can also be held on trail routes."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "马拉松是42.195公里",
+              "body": "马拉松是一项要跑42.195公里的长跑。"
+            },
+            "junior": {
+              "title": "马拉松全程42.195公里",
+              "body": "马拉松选手要跑42.195公里。很多马拉松比赛在城市的道路上举行。"
+            },
+            "teen": {
+              "title": "马拉松的距离是42.195公里",
+              "body": "马拉松是全程42.195公里（约26.2英里）的长跑比赛，大多数在城市道路上举行。"
+            },
+            "adult": {
+              "title": "马拉松的标准距离为42.195公里",
+              "body": "马拉松是一项长距离跑步赛事，距离为42.195公里（约26.22英里）。通常以公路赛的形式进行，也可以在越野路线上举行。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "마라톤은 42.195킬로미터",
+              "body": "마라톤은 42.195킬로미터를 달리는 아주 긴 달리기예요."
+            },
+            "junior": {
+              "title": "마라톤은 42.195킬로미터예요",
+              "body": "마라톤 선수는 42.195킬로미터를 달려요. 도시의 길에서 열리는 대회가 많아요."
+            },
+            "teen": {
+              "title": "마라톤 거리는 42.195킬로미터예요",
+              "body": "마라톤은 42.195킬로미터(약 26.2마일)를 달리는 경기예요. 대부분 도시의 도로에서 열려요."
+            },
+            "adult": {
+              "title": "마라톤의 공식 거리는 42.195킬로미터입니다",
+              "body": "마라톤은 42.195킬로미터(약 26.22마일)를 달리는 장거리 달리기입니다. 보통 도로 경주로 열리지만 트레일 코스에서 열리기도 합니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El maratón mide 42,195 km",
+              "body": "El maratón es una carrera muy larga de 42,195 kilómetros."
+            },
+            "junior": {
+              "title": "El maratón mide 42,195 kilómetros",
+              "body": "Los corredores de un maratón recorren 42,195 kilómetros. Muchos maratones se hacen por las calles de una ciudad."
+            },
+            "teen": {
+              "title": "La distancia del maratón es de 42,195 km",
+              "body": "El maratón es una carrera a pie de 42,195 kilómetros, unas 26,2 millas. La mayoría se corre en carreteras de la ciudad."
+            },
+            "adult": {
+              "title": "La distancia oficial del maratón es de 42,195 kilómetros",
+              "body": "El maratón es una carrera de larga distancia de 42,195 kilómetros (unas 26,22 millas). Suele celebrarse como carrera en carretera, aunque también puede hacerse en rutas de montaña."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "マラソン",
+        "42.195",
+        "marathon",
+        "距離",
+        "スポーツ",
+        "sports"
+      ],
+      "related": [
+        "heart_100k",
+        "bicycle_first",
+        "fuji_3776"
+      ],
+      "sources": [
+        {
+          "title": "Marathon",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Marathon",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "marathon",
+          "ja": "まらそん",
+          "kanji": ""
+        },
+        {
+          "en": "run",
+          "ja": "はしる",
+          "kanji": "走る"
+        },
+        {
+          "en": "kilometer",
+          "ja": "きろ",
+          "kanji": ""
+        }
+      ]
+    },
+    {
+      "id": "basketball_hoop_305",
+      "category": "sports",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "basketball",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ばすけの りんぐは たかい",
+              "body": "ばすけっとぼーるの りんぐは、ゆかから 3.05めーとる の たかさだよ。"
+            },
+            "junior": {
+              "title": "バスケットボールのリングの高（たか）さ",
+              "body": "バスケットボールのリングは、ゆかから3.05メートルの高（たか）さにあります。ほとんどの大会（たいかい）で同（おな）じ高（たか）さです。"
+            },
+            "teen": {
+              "title": "バスケのリングは高さ3.05メートル",
+              "body": "バスケットボールのリングの上のふちは、コートから10フィート（3.05メートル）の高さです。ほとんどのレベルの試合で同じ高さです。"
+            },
+            "adult": {
+              "title": "バスケットボールのリングは地上10フィート",
+              "body": "バスケットボールのリングの上端は、ほぼすべての競技レベルでコートから10フィート（3.05メートル）、エンドラインから4フィート（1.22メートル）内側に設置されます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A basketball hoop is high up",
+              "body": "A basketball hoop is 10 feet, or 3.05 meters, above the floor."
+            },
+            "junior": {
+              "title": "Basketball hoops are 10 feet high",
+              "body": "The rim of a basketball hoop is 10 feet (3.05 meters) above the floor. It is the same height in almost all games."
+            },
+            "teen": {
+              "title": "The basketball rim is 3.05 meters high",
+              "body": "The top of the rim is 10 feet (3.05 meters) above the court, whether you play at school or in a big league."
+            },
+            "adult": {
+              "title": "The basketball rim stands 10 feet above the court",
+              "body": "At almost all levels of competition, the top of the rim is exactly 10 feet (3.05 metres) above the court and 4 feet (1.22 metres) inside the baseline."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "篮球架很高",
+              "body": "篮球架的篮圈离地面有10英尺，也就是3.05米。"
+            },
+            "junior": {
+              "title": "篮圈高10英尺",
+              "body": "篮球篮圈离地面10英尺（3.05米）。几乎所有比赛的高度都一样。"
+            },
+            "teen": {
+              "title": "篮圈高3.05米",
+              "body": "篮圈上沿离球场地面10英尺（3.05米），无论是学校比赛还是大型联赛都是这样。"
+            },
+            "adult": {
+              "title": "篮圈上沿距地面10英尺",
+              "body": "在几乎所有级别的比赛中，篮圈上沿都恰好距球场地面10英尺（3.05米），并在底线内侧4英尺（1.22米）处。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "농구 골대는 높아요",
+              "body": "농구 골대의 링은 바닥에서 10피트, 3.05미터 높이에 있어요."
+            },
+            "junior": {
+              "title": "농구 링은 10피트 높이예요",
+              "body": "농구 링은 바닥에서 10피트(3.05미터) 높이에 있어요. 거의 모든 경기에서 높이가 같아요."
+            },
+            "teen": {
+              "title": "농구 링 높이는 3.05미터예요",
+              "body": "링의 윗부분은 코트에서 10피트(3.05미터) 높이예요. 학교 경기든 큰 리그든 똑같아요."
+            },
+            "adult": {
+              "title": "농구 링은 코트에서 10피트 높이에 있습니다",
+              "body": "거의 모든 수준의 경기에서 링의 윗부분은 코트에서 정확히 10피트(3.05미터), 베이스라인에서 4피트(1.22미터) 안쪽에 있습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El aro de baloncesto está alto",
+              "body": "El aro de baloncesto está a 10 pies, o 3,05 metros, del suelo."
+            },
+            "junior": {
+              "title": "El aro está a 10 pies de altura",
+              "body": "El aro de baloncesto está a 10 pies (3,05 metros) del suelo. Tiene la misma altura en casi todos los partidos."
+            },
+            "teen": {
+              "title": "El aro mide 3,05 metros de altura",
+              "body": "La parte de arriba del aro está a 10 pies (3,05 metros) de la cancha, ya sea en un partido escolar o en una gran liga."
+            },
+            "adult": {
+              "title": "El aro de baloncesto está a 10 pies de la cancha",
+              "body": "En casi todos los niveles de competición, la parte superior del aro está exactamente a 10 pies (3,05 metros) de la cancha y a 4 pies (1,22 metros) dentro de la línea de fondo."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "バスケットボール",
+        "リング",
+        "basketball",
+        "hoop",
+        "3.05",
+        "スポーツ",
+        "sports"
+      ],
+      "related": [
+        "giraffe_seven_vertebrae",
+        "fuji_3776",
+        "bamboo_fast"
+      ],
+      "sources": [
+        {
+          "title": "Basketball",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Basketball",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "basketball",
+          "ja": "ばすけっとぼーる",
+          "kanji": ""
+        },
+        {
+          "en": "hoop",
+          "ja": "りんぐ",
+          "kanji": ""
+        },
+        {
+          "en": "high",
+          "ja": "たかい",
+          "kanji": "高い"
+        }
+      ]
+    },
+    {
+      "id": "olympic_five_rings",
+      "category": "sports",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "rings",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "おりんぴっくの わは 5つ",
+              "body": "おりんぴっくの まーくには、5つの わが あるよ。せかいの 5つの ちいきを あらわすよ。"
+            },
+            "junior": {
+              "title": "オリンピックの5つのわ",
+              "body": "オリンピックのマークには、5つのわがあります。世界（せかい）の5つのちいきを表（あらわ）します。"
+            },
+            "teen": {
+              "title": "オリンピックの五輪は5つの大陸",
+              "body": "オリンピックの旗にある5つの輪は、人が住む5つの大陸を表しています。アメリカ大陸は1つと数えます。"
+            },
+            "adult": {
+              "title": "五輪のマークは人が住む5つの大陸を表す",
+              "body": "五輪のマークは、青・黄・黒・緑・赤の5つの輪が白地に組み合わさった意匠で、人が住む世界の5つの大陸（南北アメリカは1つの大陸とみなす）を表します。1913年にクーベルタンが考案しました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The Olympics have five rings",
+              "body": "The Olympic symbol has five rings. They stand for five parts of the world."
+            },
+            "junior": {
+              "title": "The five Olympic rings",
+              "body": "The Olympic flag shows five linked rings. They stand for five parts of the world."
+            },
+            "teen": {
+              "title": "The five rings are five continents",
+              "body": "The five rings on the Olympic flag stand for the inhabited continents of the world, with the Americas counted as one."
+            },
+            "adult": {
+              "title": "The Olympic rings represent five inhabited continents",
+              "body": "The Olympic rings are five interlocking rings in blue, yellow, black, green and red on a white field. They represent the inhabited continents of the world, with the Americas considered as one. Pierre de Coubertin created the symbol in 1913."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "奥运会有五个环",
+              "body": "奥运会的标志有五个环，代表世界的五个部分。"
+            },
+            "junior": {
+              "title": "奥运五环",
+              "body": "奥运会会旗上有五个相连的圆环，代表世界的五个部分。"
+            },
+            "teen": {
+              "title": "五环代表五大洲",
+              "body": "奥运会会旗上的五个环代表世界上有人居住的大洲，其中美洲算作一个。"
+            },
+            "adult": {
+              "title": "奥运五环象征有人居住的五大洲",
+              "body": "奥运五环是白底上蓝、黄、黑、绿、红五个相互连接的圆环，代表世界上有人居住的大洲（美洲视为一个）。该标志由顾拜旦于1913年创作。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "올림픽에는 고리가 다섯 개",
+              "body": "올림픽 마크에는 고리가 다섯 개 있어요. 세계의 다섯 부분을 뜻해요."
+            },
+            "junior": {
+              "title": "올림픽의 다섯 고리",
+              "body": "올림픽 깃발에는 이어진 고리 다섯 개가 있어요. 세계의 다섯 부분을 뜻해요."
+            },
+            "teen": {
+              "title": "다섯 고리는 다섯 대륙이에요",
+              "body": "올림픽 깃발의 다섯 고리는 사람이 사는 대륙을 뜻해요. 아메리카는 하나로 세어요."
+            },
+            "adult": {
+              "title": "오륜기는 사람이 사는 다섯 대륙을 상징합니다",
+              "body": "오륜기는 흰 바탕에 파랑, 노랑, 검정, 초록, 빨강의 고리 다섯 개가 얽힌 모양으로, 사람이 사는 대륙(아메리카는 하나로 봄)을 나타냅니다. 이 상징은 1913년 쿠베르탱이 만들었습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Los Juegos Olímpicos tienen cinco aros",
+              "body": "El símbolo olímpico tiene cinco aros. Representan cinco partes del mundo."
+            },
+            "junior": {
+              "title": "Los cinco aros olímpicos",
+              "body": "La bandera olímpica tiene cinco aros unidos. Representan cinco partes del mundo."
+            },
+            "teen": {
+              "title": "Los cinco aros son cinco continentes",
+              "body": "Los cinco aros de la bandera olímpica representan los continentes habitados del mundo, con América contada como uno solo."
+            },
+            "adult": {
+              "title": "Los aros olímpicos representan cinco continentes habitados",
+              "body": "Los aros olímpicos son cinco aros entrelazados de color azul, amarillo, negro, verde y rojo sobre fondo blanco. Representan los continentes habitados del mundo, con América considerada como uno. Pierre de Coubertin creó el símbolo en 1913."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "オリンピック",
+        "五輪",
+        "Olympic",
+        "rings",
+        "大陸",
+        "スポーツ",
+        "sports"
+      ],
+      "related": [
+        "japan_islands",
+        "antarctica_desert",
+        "chimborazo_farthest"
+      ],
+      "sources": [
+        {
+          "title": "Olympic symbols",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Olympic_symbols",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "ring",
+          "ja": "わ",
+          "kanji": "輪"
+        },
+        {
+          "en": "flag",
+          "ja": "はた",
+          "kanji": "旗"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "kanji": "世界"
+        }
+      ]
+    },
+    {
+      "id": "table_tennis_ball_40mm",
+      "category": "sports",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "pingpong",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "たっきゅうの ぼーるは 40みり",
+              "body": "たっきゅうの ぼーるは、おおきさが 40みり。ちいさくて まるいよ。"
+            },
+            "junior": {
+              "title": "ピンポンの玉（たま）は40ミリ",
+              "body": "ピンポンの玉（たま）は、大（おお）きさが40ミリメートルです。小（ちい）さくて、まるいボールです。"
+            },
+            "teen": {
+              "title": "卓球のボールは直径40ミリ",
+              "body": "いまの卓球の公式ボールは、直径が40ミリです。2000年のシドニー五輪のあとに、ルールが変わりました。"
+            },
+            "adult": {
+              "title": "卓球の公式球は直径40ミリ",
+              "body": "国際卓球連盟（ITTF）は、2000年のシドニー五輪後にルールを改め、公式球を40ミリのものにしました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A table tennis ball is 40 mm",
+              "body": "A table tennis ball is small and round. It is 40 millimeters wide."
+            },
+            "junior": {
+              "title": "Table tennis balls are 40 mm",
+              "body": "A table tennis ball is 40 millimeters wide. It is a small, round ball."
+            },
+            "teen": {
+              "title": "Table tennis balls are 40 mm wide",
+              "body": "Today's table tennis balls are 40 millimeters across. The sport moved to this size after the 2000 Sydney Olympics."
+            },
+            "adult": {
+              "title": "The standard table tennis ball is 40 mm",
+              "body": "After the 2000 Sydney Olympics, the ITTF instituted rule changes for table tennis, including the use of the 40 mm ball."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "乒乓球直径40毫米",
+              "body": "乒乓球又小又圆，宽度是40毫米。"
+            },
+            "junior": {
+              "title": "乒乓球是40毫米",
+              "body": "乒乓球的直径是40毫米。它是一个小小的圆球。"
+            },
+            "teen": {
+              "title": "乒乓球直径40毫米",
+              "body": "现在的乒乓球直径是40毫米。2000年悉尼奥运会之后，比赛改用了这种尺寸。"
+            },
+            "adult": {
+              "title": "标准乒乓球直径为40毫米",
+              "body": "2000年悉尼奥运会之后，国际乒联修改了规则，其中包括使用40毫米的乒乓球。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "탁구공은 40밀리미터",
+              "body": "탁구공은 작고 동그래요. 너비가 40밀리미터예요."
+            },
+            "junior": {
+              "title": "탁구공은 40밀리미터예요",
+              "body": "탁구공의 지름은 40밀리미터예요. 작고 동그란 공이에요."
+            },
+            "teen": {
+              "title": "탁구공은 지름이 40밀리미터예요",
+              "body": "지금의 탁구공은 지름이 40밀리미터예요. 2000년 시드니 올림픽 뒤에 이 크기로 바뀌었어요."
+            },
+            "adult": {
+              "title": "표준 탁구공의 지름은 40밀리미터입니다",
+              "body": "2000년 시드니 올림픽 이후 국제탁구연맹(ITTF)은 규칙을 바꾸어 40밀리미터 공을 쓰도록 했습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La pelota de tenis de mesa mide 40 mm",
+              "body": "La pelota de tenis de mesa es pequeña y redonda. Mide 40 milímetros de ancho."
+            },
+            "junior": {
+              "title": "La pelota de ping-pong mide 40 mm",
+              "body": "La pelota de tenis de mesa mide 40 milímetros de ancho. Es una pelota pequeña y redonda."
+            },
+            "teen": {
+              "title": "La pelota de tenis de mesa mide 40 mm",
+              "body": "Las pelotas actuales de tenis de mesa miden 40 milímetros. El deporte adoptó este tamaño después de los Juegos de Sídney 2000."
+            },
+            "adult": {
+              "title": "La pelota estándar de tenis de mesa mide 40 mm",
+              "body": "Tras los Juegos Olímpicos de Sídney 2000, la ITTF cambió las reglas del tenis de mesa, entre otras cosas para usar la pelota de 40 mm."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "卓球",
+        "ピンポン",
+        "table tennis",
+        "ball",
+        "40mm",
+        "スポーツ",
+        "sports"
+      ],
+      "related": [
+        "peanut_not_nut",
+        "apple_floats",
+        "popcorn_pop"
+      ],
+      "sources": [
+        {
+          "title": "Table tennis",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Table_tennis",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "ball",
+          "ja": "たま",
+          "kanji": "玉"
+        },
+        {
+          "en": "table tennis",
+          "ja": "たっきゅう",
+          "kanji": "卓球"
+        },
+        {
+          "en": "small",
+          "ja": "ちいさい",
+          "kanji": "小さい"
+        }
+      ]
+    },
+    {
+      "id": "zero_number",
+      "category": "math",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "zero",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ぜろは「なにもない」を あらわす かず",
+              "body": "ぜろを たしても ひいても、かずは かわらないよ。"
+            },
+            "junior": {
+              "title": "ゼロは「なにもない」を表（あらわ）す数（かず）",
+              "body": "ゼロは、ものが1つもないことを表（あらわ）す数（かず）です。どんな数（かず）にゼロをたしても、数（かず）はかわりません。"
+            },
+            "teen": {
+              "title": "ゼロは「何もない」を表す数",
+              "body": "ゼロは、ものが1つもないことを表す数です。どんな数にゼロを足しても、その数は変わりません。"
+            },
+            "adult": {
+              "title": "ゼロは加法の単位元",
+              "body": "0は「何もない」ことを表す数であり、任意の数に足しても値が変わらない加法単位元です。位取り記数法では、桁が空であることを示す記号としても重要な役割を果たします。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Zero means nothing",
+              "body": "Adding zero to a number does not change it."
+            },
+            "junior": {
+              "title": "Zero is the number for nothing",
+              "body": "Zero shows that there are none of something. If you add zero to any number, the number stays the same."
+            },
+            "teen": {
+              "title": "Zero stands for nothing at all",
+              "body": "Zero is the number that means none. Adding it to any number leaves that number unchanged."
+            },
+            "adult": {
+              "title": "Zero is the additive identity",
+              "body": "Zero denotes an empty quantity and is the additive identity: adding it to any number leaves the value unchanged. In place-value notation it also marks an empty digit position."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "零表示什么都没有",
+              "body": "给一个数加上零，这个数不会变。"
+            },
+            "junior": {
+              "title": "零是表示“没有”的数",
+              "body": "零表示一个都没有。给任何数加上零，这个数都不会变。"
+            },
+            "teen": {
+              "title": "零代表什么都没有",
+              "body": "零是表示“没有”的数。给任何数加上零，结果还是原来的数。"
+            },
+            "adult": {
+              "title": "零是加法单位元",
+              "body": "零表示空的数量，是加法单位元：与任何数相加，数值都不变。在位值记数法中，它还用来标记空缺的数位。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "영은 아무것도 없다는 뜻이에요",
+              "body": "어떤 수에 영을 더해도 그 수는 그대로예요."
+            },
+            "junior": {
+              "title": "영은 '없다'를 나타내는 수예요",
+              "body": "영은 하나도 없다는 것을 나타내요. 어떤 수에 영을 더해도 그 수는 변하지 않아요."
+            },
+            "teen": {
+              "title": "영은 아무것도 없음을 나타내는 수예요",
+              "body": "영은 '없음'을 뜻하는 수예요. 어떤 수에 영을 더해도 원래 수 그대로예요."
+            },
+            "adult": {
+              "title": "영은 덧셈의 항등원입니다",
+              "body": "영은 비어 있는 양을 나타내며, 어떤 수에 더해도 값이 변하지 않는 덧셈의 항등원입니다. 위치 기수법에서는 비어 있는 자리를 표시하는 역할도 합니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El cero significa nada",
+              "body": "Si sumas cero a un número, el número no cambia."
+            },
+            "junior": {
+              "title": "El cero es el número de la nada",
+              "body": "El cero muestra que no hay nada de algo. Si sumas cero a cualquier número, el número sigue igual."
+            },
+            "teen": {
+              "title": "El cero representa la nada",
+              "body": "El cero es el número que significa ninguno. Al sumarlo a cualquier número, este no cambia."
+            },
+            "adult": {
+              "title": "El cero es el elemento neutro de la suma",
+              "body": "El cero denota una cantidad vacía y es el elemento neutro de la suma: sumado a cualquier número no altera su valor. En la notación posicional también marca una posición vacía."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ゼロ",
+        "0",
+        "zero",
+        "数",
+        "さんすう",
+        "math",
+        "number"
+      ],
+      "related": [
+        "fuji_3776",
+        "blink_times",
+        "heart_100k"
+      ],
+      "sources": [
+        {
+          "title": "0",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/0",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "zero",
+          "ja": "ぜろ",
+          "kanji": "零"
+        },
+        {
+          "en": "number",
+          "ja": "かず",
+          "kanji": "数"
+        },
+        {
+          "en": "nothing",
+          "ja": "なにもない",
+          "kanji": "無"
+        }
+      ]
+    },
+    {
+      "id": "pi_circle_ratio",
+      "category": "math",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "pi",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "えんの まわりは まんなかの 3ばいより ちょっと ながい",
+              "body": "どんな おおきさの えんでも、まわりの ながさは はばの 3.14ばいだよ。"
+            },
+            "junior": {
+              "title": "円（えん）のまわりの長（なが）さは、はばのやく3.14倍（ばい）",
+              "body": "どんな大（おお）きさの円（えん）でも、まわりの長（なが）さは、はばのやく3.14倍（ばい）になります。この数（かず）をえんしゅうりつといいます。"
+            },
+            "teen": {
+              "title": "円周率は円の周りの長さと直径の比",
+              "body": "円周率は、円の周りの長さが直径の何倍かを表す数で、約3.14です。円の大きさに関係なく、いつも同じ値になります。"
+            },
+            "adult": {
+              "title": "円周率πは円周と直径の比",
+              "body": "円周率πは、円周の長さと直径の長さの比であり、円の大きさによらず一定で、約3.14159です。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Every circle is about 3.14 times around as wide",
+              "body": "Walk around any circle and it is about 3.14 times as long as the circle is wide."
+            },
+            "junior": {
+              "title": "Around a circle is about 3.14 times across",
+              "body": "For any circle, the distance around is about 3.14 times the distance across. We call this number pi."
+            },
+            "teen": {
+              "title": "Pi compares a circle's edge to its width",
+              "body": "Pi is how many times the distance around a circle fits its diameter, about 3.14. It is the same for every circle, big or small."
+            },
+            "adult": {
+              "title": "Pi is the ratio of circumference to diameter",
+              "body": "Pi is the ratio of a circle's circumference to its diameter, roughly 3.14159. The ratio is constant for every circle, whatever its size."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "每个圆的周长约是宽度的3.14倍",
+              "body": "不管多大的圆，绕一圈的长度都约是它宽度的3.14倍。"
+            },
+            "junior": {
+              "title": "圆的周长约是直径的3.14倍",
+              "body": "任何圆，绕一圈的长度都约是它直径的3.14倍。这个数叫做圆周率。"
+            },
+            "teen": {
+              "title": "圆周率是周长与直径的比",
+              "body": "圆周率表示圆的周长是直径的多少倍，约为3.14。无论圆是大是小，这个值都一样。"
+            },
+            "adult": {
+              "title": "圆周率是圆周长与直径之比",
+              "body": "圆周率π是圆的周长与直径之比，约为3.14159。无论圆的大小如何，这个比值都是常数。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "모든 원의 둘레는 폭의 약 3.14배예요",
+              "body": "크기가 어떻든 원의 둘레는 폭의 약 3.14배예요."
+            },
+            "junior": {
+              "title": "원의 둘레는 지름의 약 3.14배예요",
+              "body": "어떤 크기의 원이든 둘레는 지름의 약 3.14배예요. 이 수를 원주율이라고 해요."
+            },
+            "teen": {
+              "title": "원주율은 둘레와 지름의 비예요",
+              "body": "원주율은 원의 둘레가 지름의 몇 배인지 나타내는 수로, 약 3.14예요. 원이 크든 작든 값은 항상 같아요."
+            },
+            "adult": {
+              "title": "원주율은 원둘레와 지름의 비입니다",
+              "body": "원주율 π는 원둘레와 지름의 비로, 약 3.14159입니다. 원의 크기와 상관없이 일정한 값입니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Todo círculo mide unas 3,14 veces su ancho",
+              "body": "Da la vuelta a cualquier círculo: mide unas 3,14 veces lo que mide de ancho."
+            },
+            "junior": {
+              "title": "El contorno de un círculo es unas 3,14 veces su ancho",
+              "body": "En cualquier círculo, la distancia alrededor es unas 3,14 veces la distancia de lado a lado. A este número lo llamamos pi."
+            },
+            "teen": {
+              "title": "Pi compara el borde de un círculo con su ancho",
+              "body": "Pi indica cuántas veces cabe el diámetro en el contorno de un círculo, unas 3,14. Es igual para todos los círculos, grandes o pequeños."
+            },
+            "adult": {
+              "title": "Pi es la razón entre circunferencia y diámetro",
+              "body": "Pi es la razón entre la circunferencia y el diámetro de un círculo, aproximadamente 3,14159. Es constante para todos los círculos, sea cual sea su tamaño."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "円周率",
+        "π",
+        "pi",
+        "円",
+        "さんすう",
+        "math",
+        "circle"
+      ],
+      "related": [
+        "rainbow_full_circle",
+        "tree_rings",
+        "sunflower_sun"
+      ],
+      "sources": [
+        {
+          "title": "Pi",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pi",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "circle",
+          "ja": "えん",
+          "kanji": "円"
+        },
+        {
+          "en": "pi",
+          "ja": "えんしゅうりつ",
+          "kanji": "円周率"
+        },
+        {
+          "en": "diameter",
+          "ja": "ちょっけい",
+          "kanji": "直径"
+        }
+      ]
+    },
+    {
+      "id": "triangle_180",
+      "category": "math",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "triangle",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "さんかくの 3つの かどを あわせると 180ど",
+              "body": "どんな さんかくでも、3つの かどの おおきさを たすと 180ど。"
+            },
+            "junior": {
+              "title": "三角形（さんかくけい）の3つの角（かど）をたすと180度（ど）",
+              "body": "どんな三角形（さんかくけい）でも、3つの角（かく）の大（おお）きさをたすと、いつも180度（ど）になります。形（かたち）がかわっても同（おな）じです。"
+            },
+            "teen": {
+              "title": "三角形の内角の和は180度",
+              "body": "三角形は、どんな形でも3つの角の大きさを足すと必ず180度になります。細長くても、大きくても小さくても同じです。"
+            },
+            "adult": {
+              "title": "平面上の三角形の内角の和は180度",
+              "body": "ユークリッド平面上の三角形では、3つの内角の和は形や大きさによらず常に180度（πラジアン）です。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A triangle's corners add up to 180",
+              "body": "Add the three corners of any flat triangle and you get 180 degrees."
+            },
+            "junior": {
+              "title": "The three angles of a triangle add up to 180 degrees",
+              "body": "Whatever its shape, a flat triangle's three angles always add up to 180 degrees. Tall, wide, big or small makes no difference."
+            },
+            "teen": {
+              "title": "A triangle's angles always total 180 degrees",
+              "body": "Add the three angles of any triangle drawn on flat paper and you always get 180 degrees, however stretched or tiny it is."
+            },
+            "adult": {
+              "title": "Interior angles of a plane triangle sum to 180 degrees",
+              "body": "In a triangle on a Euclidean plane the three interior angles sum to 180 degrees (pi radians), regardless of its shape or size."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "三角形的三个角加起来是180度",
+              "body": "任何平面三角形，三个角加起来都是180度。"
+            },
+            "junior": {
+              "title": "三角形的三个角之和是180度",
+              "body": "不管是什么形状，平面三角形的三个角加起来总是180度。高的、宽的、大的、小的都一样。"
+            },
+            "teen": {
+              "title": "三角形的内角和总是180度",
+              "body": "在平面上画的任何三角形，三个角加起来都是180度，不管它多细长或多小。"
+            },
+            "adult": {
+              "title": "平面三角形的内角和为180度",
+              "body": "在欧几里得平面上，三角形的三个内角之和恒为180度（π弧度），与其形状和大小无关。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "삼각형의 세 각을 더하면 180도예요",
+              "body": "평평한 삼각형은 무엇이든 세 각을 더하면 180도예요."
+            },
+            "junior": {
+              "title": "삼각형의 세 각의 합은 180도예요",
+              "body": "어떤 모양이든 평평한 삼각형의 세 각을 더하면 늘 180도예요. 크거나 작아도 같아요."
+            },
+            "teen": {
+              "title": "삼각형의 내각의 합은 항상 180도예요",
+              "body": "평평한 종이에 그린 삼각형은 세 각을 더하면 언제나 180도예요. 길쭉하든 작든 마찬가지예요."
+            },
+            "adult": {
+              "title": "평면 삼각형의 내각의 합은 180도입니다",
+              "body": "유클리드 평면에서 삼각형의 세 내각의 합은 모양과 크기에 관계없이 항상 180도(π 라디안)입니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Los tres ángulos de un triángulo suman 180",
+              "body": "Suma los tres ángulos de cualquier triángulo plano y obtienes 180 grados."
+            },
+            "junior": {
+              "title": "Los tres ángulos de un triángulo suman 180 grados",
+              "body": "Sea cual sea su forma, los tres ángulos de un triángulo plano siempre suman 180 grados. Grande o pequeño, da igual."
+            },
+            "teen": {
+              "title": "Los ángulos de un triángulo siempre suman 180 grados",
+              "body": "Suma los tres ángulos de cualquier triángulo dibujado en un plano y siempre obtienes 180 grados, aunque sea alargado o diminuto."
+            },
+            "adult": {
+              "title": "Los ángulos interiores de un triángulo plano suman 180 grados",
+              "body": "En un triángulo del plano euclídeo, los tres ángulos interiores suman 180 grados (pi radianes), sin importar su forma o tamaño."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "三角形",
+        "内角",
+        "triangle",
+        "180度",
+        "さんすう",
+        "math",
+        "angle"
+      ],
+      "related": [
+        "snow_hexagon",
+        "fuji_3776",
+        "thunder_count"
+      ],
+      "sources": [
+        {
+          "title": "Triangle",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Triangle",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "triangle",
+          "ja": "さんかくけい",
+          "kanji": "三角形"
+        },
+        {
+          "en": "angle",
+          "ja": "かく",
+          "kanji": "角"
+        },
+        {
+          "en": "degree",
+          "ja": "ど",
+          "kanji": "度"
+        }
+      ]
+    },
+    {
+      "id": "two_even_prime",
+      "category": "math",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "prime",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "2は ただ ひとつの ぐうすうの そすう",
+              "body": "そすうの なかで、2だけが 2で わりきれる かずだよ。"
+            },
+            "junior": {
+              "title": "2は、ただ1つのぐうすうのそすう",
+              "body": "1と自分（じぶん）でしかわれない数（かず）をそすうといいます。その中（なか）で、2でわれるぐうすうは2だけです。"
+            },
+            "teen": {
+              "title": "偶数の素数は2だけ",
+              "body": "素数は、1と自分自身でしか割り切れない数です。2以外の偶数は2でも割れるので、素数になれません。だから偶数の素数は2だけです。"
+            },
+            "adult": {
+              "title": "2は唯一の偶数の素数",
+              "body": "素数とは1と自分自身以外に正の約数をもたない2以上の整数です。2より大きい偶数は2でも割り切れるため素数ではなく、2は唯一の偶数の素数です。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "2 is the only even prime",
+              "body": "Among prime numbers, only 2 can be divided by 2."
+            },
+            "junior": {
+              "title": "2 is the only even prime",
+              "body": "A prime number can only be divided evenly by 1 and itself. Every other even number can also be divided by 2, so 2 is the only even prime."
+            },
+            "teen": {
+              "title": "Only one prime is even: 2",
+              "body": "A prime is divisible only by 1 and itself. Any even number bigger than 2 also divides by 2, so none of them is prime."
+            },
+            "adult": {
+              "title": "2 is the only even prime number",
+              "body": "A prime has no positive divisors other than 1 and itself. Every even number greater than 2 is also divisible by 2, so it is composite, which makes 2 the sole even prime."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "2是唯一的偶数质数",
+              "body": "在质数里，只有2能被2整除。"
+            },
+            "junior": {
+              "title": "2是唯一的偶数质数",
+              "body": "质数只能被1和它自己整除。其他偶数还能被2整除，所以只有2是偶数质数。"
+            },
+            "teen": {
+              "title": "偶数里只有2是质数",
+              "body": "质数只能被1和它本身整除。大于2的偶数还能被2整除，所以都不是质数。"
+            },
+            "adult": {
+              "title": "2是唯一的偶质数",
+              "body": "质数除1和自身外没有其他正因数。大于2的偶数都能被2整除，因而是合数，所以2是唯一的偶质数。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "2는 하나뿐인 짝수 소수예요",
+              "body": "소수 중에서 2만 2로 나누어떨어져요."
+            },
+            "junior": {
+              "title": "2는 유일한 짝수 소수예요",
+              "body": "소수는 1과 자기 자신으로만 나누어지는 수예요. 다른 짝수는 2로도 나누어지니까 짝수 소수는 2뿐이에요."
+            },
+            "teen": {
+              "title": "짝수인 소수는 2뿐이에요",
+              "body": "소수는 1과 자기 자신으로만 나누어지는 수예요. 2보다 큰 짝수는 2로도 나누어져서 소수가 될 수 없어요."
+            },
+            "adult": {
+              "title": "2는 유일한 짝수 소수입니다",
+              "body": "소수는 1과 자기 자신 외에 양의 약수가 없는 수입니다. 2보다 큰 짝수는 2로도 나누어떨어져 합성수이므로, 2가 유일한 짝수 소수입니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El 2 es el único primo par",
+              "body": "Entre los números primos, solo el 2 se puede dividir entre 2."
+            },
+            "junior": {
+              "title": "El 2 es el único primo par",
+              "body": "Un número primo solo se divide exactamente entre 1 y él mismo. Los demás pares también se dividen entre 2, así que el 2 es el único primo par."
+            },
+            "teen": {
+              "title": "Solo un primo es par: el 2",
+              "body": "Un primo solo se divide entre 1 y él mismo. Cualquier par mayor que 2 también se divide entre 2, así que ninguno es primo."
+            },
+            "adult": {
+              "title": "El 2 es el único número primo par",
+              "body": "Un primo no tiene divisores positivos aparte de 1 y de sí mismo. Todo par mayor que 2 es divisible entre 2, por lo que es compuesto; así, el 2 es el único primo par."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "素数",
+        "偶数",
+        "prime",
+        "even",
+        "さんすう",
+        "math",
+        "number"
+      ],
+      "related": [
+        "fuji_3776",
+        "cicada_17_years",
+        "heart_100k"
+      ],
+      "sources": [
+        {
+          "title": "Prime number",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Prime_number",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "prime number",
+          "ja": "そすう",
+          "kanji": "素数"
+        },
+        {
+          "en": "even number",
+          "ja": "ぐうすう",
+          "kanji": "偶数"
+        },
+        {
+          "en": "two",
+          "ja": "に",
+          "kanji": "二"
+        }
+      ]
+    },
+    {
+      "id": "piano_88_keys",
+      "category": "music",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "piano",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ピアノの けんばんは 88こ",
+              "body": "ふつうの ピアノには けんばんが 88こ あるよ。しろい けんと くろい けんが あるよ。"
+            },
+            "junior": {
+              "title": "ピアノのけんばんは88こ",
+              "body": "ふつうのピアノには、白（しろ）いけんが52こ、黒（くろ）いけんが36こ、ぜんぶで88こあります。ひくい音（おと）から高（たか）い音（おと）まで出（だ）せます。"
+            },
+            "teen": {
+              "title": "ピアノの鍵盤は全部で88個",
+              "body": "現代のピアノは白鍵52個と黒鍵36個、合わせて88個の鍵盤があります。7オクターブと少しの広い音域を1台で弾けるのが魅力です。"
+            },
+            "adult": {
+              "title": "標準的なピアノの鍵盤は88鍵",
+              "body": "現代の一般的なピアノは白鍵52、黒鍵36の計88鍵で、A0からC8までの7オクターブと短3度の音域を持ちます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A piano has 88 keys",
+              "body": "A normal piano has 88 keys. Some are white and some are black."
+            },
+            "junior": {
+              "title": "Most pianos have 88 keys",
+              "body": "A modern piano has 52 white keys and 36 black keys. That makes 88 in all, from very low notes to very high ones."
+            },
+            "teen": {
+              "title": "The standard piano keyboard has 88 keys",
+              "body": "Most modern pianos have 52 white and 36 black keys, covering a bit more than seven octaves. One instrument can play a huge range of notes."
+            },
+            "adult": {
+              "title": "The modern piano keyboard spans 88 keys",
+              "body": "Most modern pianos have 52 white and 36 black keys, 88 in total, spanning seven octaves plus a minor third from A0 to C8."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "钢琴有88个键",
+              "body": "普通的钢琴有88个键。有白键，也有黑键。"
+            },
+            "junior": {
+              "title": "大多数钢琴有88个键",
+              "body": "现代钢琴有52个白键和36个黑键，一共88个。从很低的音到很高的音都能弹。"
+            },
+            "teen": {
+              "title": "标准钢琴键盘一共有88个键",
+              "body": "大多数现代钢琴有52个白键和36个黑键，音域比七个八度多一点。一台乐器就能弹出非常宽的音域。"
+            },
+            "adult": {
+              "title": "现代钢琴键盘共有88个键",
+              "body": "大多数现代钢琴有52个白键和36个黑键，共88个，音域从A0到C8，跨越七个八度加一个小三度。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "피아노는 건반이 88개예요",
+              "body": "보통 피아노에는 건반이 88개 있어요. 하얀 건반도 있고 검은 건반도 있어요."
+            },
+            "junior": {
+              "title": "대부분의 피아노는 건반이 88개예요",
+              "body": "요즘 피아노에는 흰 건반 52개와 검은 건반 36개가 있어요. 모두 합하면 88개예요. 아주 낮은 소리부터 높은 소리까지 낼 수 있어요."
+            },
+            "teen": {
+              "title": "표준 피아노 건반은 모두 88개예요",
+              "body": "현대 피아노 대부분은 흰 건반 52개와 검은 건반 36개를 갖고 있고, 음역은 7옥타브보다 조금 더 넓어요. 악기 하나로 아주 넓은 음역을 연주할 수 있어요."
+            },
+            "adult": {
+              "title": "현대 피아노의 건반은 88개입니다",
+              "body": "대부분의 현대 피아노는 흰 건반 52개와 검은 건반 36개, 총 88개로 이루어져 있으며, A0에서 C8까지 7옥타브와 단3도의 음역을 가집니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Un piano tiene 88 teclas",
+              "body": "Un piano normal tiene 88 teclas. Unas son blancas y otras son negras."
+            },
+            "junior": {
+              "title": "La mayoría de los pianos tienen 88 teclas",
+              "body": "Un piano moderno tiene 52 teclas blancas y 36 negras. En total son 88, desde notas muy graves hasta muy agudas."
+            },
+            "teen": {
+              "title": "El teclado estándar del piano tiene 88 teclas",
+              "body": "La mayoría de los pianos modernos tienen 52 teclas blancas y 36 negras, y cubren un poco más de siete octavas. Un solo instrumento toca una gama enorme de notas."
+            },
+            "adult": {
+              "title": "El teclado del piano moderno abarca 88 teclas",
+              "body": "La mayoría de los pianos modernos tienen 52 teclas blancas y 36 negras, 88 en total, que abarcan siete octavas más una tercera menor, de La0 a Do8."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ピアノ",
+        "けんばん",
+        "piano",
+        "keys",
+        "88",
+        "楽器",
+        "おんがく",
+        "music",
+        "instrument"
+      ],
+      "related": [
+        "bat_echolocation",
+        "cricket_sing",
+        "no_sound_in_space"
+      ],
+      "sources": [
+        {
+          "title": "Piano",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Piano",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "piano",
+          "ja": "ぴあの",
+          "kanji": ""
+        },
+        {
+          "en": "key",
+          "ja": "けんばん",
+          "kanji": "鍵盤"
+        },
+        {
+          "en": "black",
+          "ja": "くろ",
+          "kanji": "黒"
+        }
+      ]
+    },
+    {
+      "id": "theremin_no_touch",
+      "category": "music",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "theremin",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "テルミンは さわらずに ひく",
+              "body": "テルミンは、さわらないで ひく がっきだよ。てを ちかづけたり はなしたりして おとを かえるよ。"
+            },
+            "junior": {
+              "title": "テルミンはさわらずにひくがっき",
+              "body": "テルミンは、手（て）でさわらずに音（おと）を出（だ）す電子（でんし）のがっきです。手（て）を近（ちか）づけたり遠（とお）ざけたりして、音（おと）の高（たか）さをかえます。"
+            },
+            "teen": {
+              "title": "テルミンは触れずに演奏する楽器",
+              "body": "テルミンは、演奏者が楽器に触れずに手の動きだけで音を操る電子楽器です。手とアンテナの距離で音の高さや大きさが変わります。"
+            },
+            "adult": {
+              "title": "テルミンは非接触で演奏される電子楽器",
+              "body": "テルミンは演奏者が楽器に物理的に触れずに操作する電子楽器で、この点が他の楽器と一線を画します。手とアンテナの距離の変化で音の高さと音量を制御します。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "You play the theremin without touching it",
+              "body": "The theremin is played without touching it. You move your hands in the air to change the sound."
+            },
+            "junior": {
+              "title": "The theremin is played with no touching",
+              "body": "The theremin is an electronic instrument you play without touching it. Moving your hand closer or farther changes the pitch."
+            },
+            "teen": {
+              "title": "The theremin is controlled by hand movements in the air",
+              "body": "The theremin is an electronic instrument played without physical contact. The distance between your hands and its antennas changes the pitch and volume."
+            },
+            "adult": {
+              "title": "The theremin is played without physical contact",
+              "body": "The theremin is an electronic musical instrument controlled without physical contact by the performer, who varies pitch and volume through the distance of the hands from two antennas."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "演奏特雷门琴不用碰它",
+              "body": "特雷门琴不用碰就能演奏。在空中移动双手，声音就会改变。"
+            },
+            "junior": {
+              "title": "特雷门琴不用接触就能演奏",
+              "body": "特雷门琴是一种不用碰就能弹奏的电子乐器。手靠近或远离，音的高低就会改变。"
+            },
+            "teen": {
+              "title": "特雷门琴靠空中的手势来控制",
+              "body": "特雷门琴是一种无需身体接触就能演奏的电子乐器。双手与天线之间的距离会改变音高和音量。"
+            },
+            "adult": {
+              "title": "特雷门琴是无需身体接触的电子乐器",
+              "body": "特雷门琴是一种由演奏者无需物理接触就能控制的电子乐器，演奏者通过双手与两根天线的距离来改变音高和音量。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "테레민은 만지지 않고 연주해요",
+              "body": "테레민은 만지지 않고 연주하는 악기예요. 공중에서 손을 움직이면 소리가 바뀌어요."
+            },
+            "junior": {
+              "title": "테레민은 손대지 않고 연주하는 악기예요",
+              "body": "테레민은 손으로 만지지 않고 연주하는 전자 악기예요. 손을 가까이하거나 멀리하면 음의 높낮이가 바뀌어요."
+            },
+            "teen": {
+              "title": "테레민은 공중에서 손을 움직여 조절해요",
+              "body": "테레민은 몸이 닿지 않아도 연주할 수 있는 전자 악기예요. 두 손과 안테나 사이의 거리에 따라 음높이와 음량이 달라져요."
+            },
+            "adult": {
+              "title": "테레민은 비접촉으로 연주되는 전자 악기입니다",
+              "body": "테레민은 연주자가 물리적으로 접촉하지 않고 조작하는 전자 악기로, 두 손과 두 안테나 사이의 거리로 음높이와 음량을 조절합니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El theremín se toca sin tocarlo",
+              "body": "El theremín se toca sin tocarlo. Mueves las manos en el aire y el sonido cambia."
+            },
+            "junior": {
+              "title": "El theremín se toca sin contacto",
+              "body": "El theremín es un instrumento electrónico que se toca sin tocarlo. Si acercas o alejas la mano, cambia el tono."
+            },
+            "teen": {
+              "title": "El theremín se controla moviendo las manos en el aire",
+              "body": "El theremín es un instrumento electrónico que se toca sin contacto físico. La distancia entre tus manos y sus antenas cambia el tono y el volumen."
+            },
+            "adult": {
+              "title": "El theremín se interpreta sin contacto físico",
+              "body": "El theremín es un instrumento musical electrónico que el intérprete controla sin contacto físico, variando el tono y el volumen según la distancia de las manos a dos antenas."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "テルミン",
+        "がっき",
+        "theremin",
+        "electronic instrument",
+        "おんがく",
+        "music",
+        "電子楽器"
+      ],
+      "related": [
+        "no_sound_in_space",
+        "bat_echolocation",
+        "cricket_sing"
+      ],
+      "sources": [
+        {
+          "title": "Theremin",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Theremin",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "instrument",
+          "ja": "がっき",
+          "kanji": "楽器"
+        },
+        {
+          "en": "hand",
+          "ja": "て",
+          "kanji": "手"
+        },
+        {
+          "en": "sound",
+          "ja": "おと",
+          "kanji": "音"
+        }
+      ]
+    },
+    {
+      "id": "a440_tuning_pitch",
+      "category": "music",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "tuning",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ラの おとは 440ヘルツ",
+              "body": "おんがくの チューニングでは、ラの おとを 440ヘルツに あわせる ことが おおいよ。"
+            },
+            "junior": {
+              "title": "チューニングの「ラ」は440ヘルツ",
+              "body": "音楽（おんがく）でがっきの音（おと）をそろえるとき、「ラ」の音（おと）を1びょうに440回（かい）ゆれる高（たか）さにするのがきじゅんです。"
+            },
+            "teen": {
+              "title": "チューニングの基準は「ラ」=440Hz",
+              "body": "中央のドの上のラの音を440Hzに合わせるのが、チューニングの標準になっています。オーケストラも、この音を基準に音を合わせます。"
+            },
+            "adult": {
+              "title": "A440は国際的な標準ピッチ",
+              "body": "A440は、中央ハの上のA（A4）を440Hzとする調律の標準です。オーケストラや多くの楽器の調律の基準として広く使われています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The note A is 440 hertz",
+              "body": "To tune instruments, musicians often set the note A to 440 hertz."
+            },
+            "junior": {
+              "title": "Tuning uses A at 440 hertz",
+              "body": "To make instruments match, the note A is set to a pitch that wobbles 440 times each second. This is the usual standard."
+            },
+            "teen": {
+              "title": "The tuning standard is A = 440 Hz",
+              "body": "The A above middle C is set to 440 Hz as the tuning standard. Orchestras and many musicians use this note to get in tune together."
+            },
+            "adult": {
+              "title": "A440 is the common tuning pitch standard",
+              "body": "A440 is the tuning standard in which the A above middle C (A4) is 440 Hz, widely used as the reference pitch for orchestras and many instruments."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "音符A是440赫兹",
+              "body": "给乐器调音时，常常把音符A调到440赫兹。"
+            },
+            "junior": {
+              "title": "调音时A是440赫兹",
+              "body": "为了让乐器的音一致，常把A音调到每秒振动440次的高度。这是常用的标准。"
+            },
+            "teen": {
+              "title": "调音标准是A=440赫兹",
+              "body": "把中央C上方的A音调到440赫兹是调音的标准。管弦乐队和许多乐手都用这个音来统一音高。"
+            },
+            "adult": {
+              "title": "A440是通用的标准音高",
+              "body": "A440是以中央C上方的A（A4）为440赫兹的调音标准，被广泛用作管弦乐队和许多乐器的参考音高。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "라 음은 440헤르츠예요",
+              "body": "악기를 조율할 때 라 음을 440헤르츠로 맞출 때가 많아요."
+            },
+            "junior": {
+              "title": "조율할 때 라 음은 440헤르츠예요",
+              "body": "악기의 소리를 맞추기 위해 라 음을 1초에 440번 떨리는 높이로 맞춰요. 가장 흔한 기준이에요."
+            },
+            "teen": {
+              "title": "조율 기준은 라=440헤르츠예요",
+              "body": "가운데 도 위의 라 음을 440헤르츠로 맞추는 것이 조율의 표준이에요. 오케스트라와 많은 연주자가 이 음으로 소리를 맞춰요."
+            },
+            "adult": {
+              "title": "A440은 일반적인 표준 음높이입니다",
+              "body": "A440은 가운데 도 위의 A(A4)를 440헤르츠로 정하는 조율 표준으로, 오케스트라와 많은 악기의 기준 음높이로 널리 쓰입니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La nota La es de 440 hercios",
+              "body": "Para afinar instrumentos, se suele poner la nota La en 440 hercios."
+            },
+            "junior": {
+              "title": "Se afina con el La a 440 hercios",
+              "body": "Para que los instrumentos suenen igual, la nota La se pone en un tono que vibra 440 veces por segundo. Es el estándar más común."
+            },
+            "teen": {
+              "title": "El estándar de afinación es La = 440 Hz",
+              "body": "El La por encima del Do central se fija en 440 Hz como estándar de afinación. Las orquestas y muchos músicos usan esta nota para afinar juntos."
+            },
+            "adult": {
+              "title": "A440 es el estándar habitual de afinación",
+              "body": "A440 es el estándar de afinación en el que el La por encima del Do central (A4) vale 440 Hz, muy usado como tono de referencia para orquestas y muchos instrumentos."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "チューニング",
+        "ラ",
+        "440Hz",
+        "A440",
+        "tuning",
+        "pitch",
+        "おんがく",
+        "music",
+        "音程"
+      ],
+      "related": [
+        "bat_echolocation",
+        "cricket_sing",
+        "no_sound_in_space"
+      ],
+      "sources": [
+        {
+          "title": "A440 (pitch standard)",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/A440_(pitch_standard)",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "note",
+          "ja": "おんぷ",
+          "kanji": "音符"
+        },
+        {
+          "en": "tuning",
+          "ja": "ちょうりつ",
+          "kanji": "調律"
+        },
+        {
+          "en": "orchestra",
+          "ja": "オーケストラ",
+          "kanji": "管弦楽団"
+        }
+      ]
+    },
+    {
+      "id": "beethoven_kept_composing",
+      "category": "music",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "beethoven",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ベートーベンは みみが きこえにくく なっても つくった",
+              "body": "ベートーベンは、みみが きこえにくく なっても、おんがくを つくりつづけたよ。"
+            },
+            "junior": {
+              "title": "ベートーベンは耳（みみ）が聞（き）こえにくくなっても作曲（さっきょく）した",
+              "body": "ベートーベンは、耳（みみ）が聞（き）こえにくくなっていきました。それでも曲（きょく）を作（つく）りつづけて、有名（ゆうめい）な「第九（だいく）」も作（つく）りました。"
+            },
+            "teen": {
+              "title": "ベートーヴェンは聴力が弱まっても作曲を続けた",
+              "body": "ベートーヴェンは20代のころから耳の不調に悩まされ、次第に聴力を失っていきました。それでも作曲を続け、交響曲第9番は1824年に初演されました。"
+            },
+            "adult": {
+              "title": "ベートーヴェンは難聴が進行しても作曲を続けた",
+              "body": "ベートーヴェンは1798年ごろから難聴の症状が出始め、耳鳴りにも苦しみました。聴力が衰える中でも創作を続け、『ミサ・ソレムニス』と最後の交響曲となる第9番は1824年に初演されました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Beethoven kept making music as his hearing faded",
+              "body": "Beethoven could hear less and less. He still kept writing music."
+            },
+            "junior": {
+              "title": "Beethoven kept composing as he lost his hearing",
+              "body": "Beethoven slowly lost his hearing. He kept writing music anyway, including his famous Ninth Symphony."
+            },
+            "teen": {
+              "title": "Beethoven kept composing as his hearing declined",
+              "body": "Beethoven's hearing loss began around 1798 and he also suffered from tinnitus. He kept composing, and his Ninth Symphony premiered in 1824."
+            },
+            "adult": {
+              "title": "Beethoven continued to compose despite progressive hearing loss",
+              "body": "Beethoven began experiencing hearing loss around 1798, later compounded by severe tinnitus. He continued composing, and both the Missa solemnis and his final symphony, the Ninth, premiered in 1824."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "贝多芬听力变差后还在作曲",
+              "body": "贝多芬的听力越来越差。但他还是继续写音乐。"
+            },
+            "junior": {
+              "title": "贝多芬失去听力后仍然作曲",
+              "body": "贝多芬的听力慢慢变差。他还是不停地写曲子，包括有名的第九交响曲。"
+            },
+            "teen": {
+              "title": "贝多芬在听力下降时继续创作",
+              "body": "贝多芬大约从1798年起听力开始下降，还受耳鸣困扰。他仍坚持作曲，第九交响曲于1824年首演。"
+            },
+            "adult": {
+              "title": "贝多芬在听力持续减退的情况下仍坚持作曲",
+              "body": "贝多芬约在1798年出现听力下降，后来又饱受严重耳鸣之苦。他仍继续创作，《庄严弥撒》和他最后一部交响曲第九交响曲都于1824年首演。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "베토벤은 귀가 안 들려도 곡을 썼어요",
+              "body": "베토벤은 점점 소리가 잘 안 들렸어요. 그래도 계속 음악을 만들었어요."
+            },
+            "junior": {
+              "title": "베토벤은 청력을 잃어가면서도 작곡했어요",
+              "body": "베토벤은 청력이 조금씩 나빠졌어요. 그래도 곡 쓰기를 멈추지 않았고, 유명한 교향곡 9번도 만들었어요."
+            },
+            "teen": {
+              "title": "베토벤은 청력이 떨어져도 작곡을 이어갔어요",
+              "body": "베토벤은 1798년쯤부터 청력이 나빠지기 시작했고 이명으로도 힘들어했어요. 그래도 작곡을 계속했고, 교향곡 9번은 1824년에 처음 연주되었어요."
+            },
+            "adult": {
+              "title": "베토벤은 청력이 점차 악화되는 중에도 작곡을 계속했습니다",
+              "body": "베토벤은 1798년경부터 청력 저하를 겪기 시작했고 이후 심한 이명까지 더해졌습니다. 그럼에도 작곡을 이어 갔으며, 「장엄 미사」와 마지막 교향곡인 9번은 1824년에 초연되었습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Beethoven siguió componiendo aunque oía cada vez menos",
+              "body": "Beethoven oía cada vez menos. Aun así, siguió escribiendo música."
+            },
+            "junior": {
+              "title": "Beethoven siguió componiendo mientras perdía el oído",
+              "body": "Beethoven fue perdiendo el oído poco a poco. Aun así siguió escribiendo música, incluida su famosa Novena Sinfonía."
+            },
+            "teen": {
+              "title": "Beethoven siguió componiendo aunque su audición empeoraba",
+              "body": "La pérdida de audición de Beethoven empezó hacia 1798 y también sufrió acúfenos. Siguió componiendo, y su Novena Sinfonía se estrenó en 1824."
+            },
+            "adult": {
+              "title": "Beethoven continuó componiendo pese a su pérdida progresiva de audición",
+              "body": "Beethoven comenzó a perder audición hacia 1798, y más tarde sufrió acúfenos intensos. Continuó componiendo, y tanto la Missa solemnis como su última sinfonía, la Novena, se estrenaron en 1824."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ベートーベン",
+        "ベートーヴェン",
+        "作曲",
+        "Beethoven",
+        "composer",
+        "おんがく",
+        "music",
+        "第九"
+      ],
+      "related": [
+        "no_sound_in_space",
+        "bat_echolocation",
+        "cricket_sing"
+      ],
+      "sources": [
+        {
+          "title": "Ludwig van Beethoven",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "ear",
+          "ja": "みみ",
+          "kanji": "耳"
+        },
+        {
+          "en": "composer",
+          "ja": "さっきょくか",
+          "kanji": "作曲家"
+        },
+        {
+          "en": "symphony",
+          "ja": "こうきょうきょく",
+          "kanji": "交響曲"
         }
       ]
     }

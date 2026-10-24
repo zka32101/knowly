@@ -58,6 +58,7 @@
   "premiumBenefit3": "오프라인 저장과 심화 해설 (준비 중)",
   "premiumKidsFree": "Kids와 Junior의 상식은 언제나 무료예요.",
   "premiumUnavailable": "결제 기능은 준비 중이에요",
+  "premiumOffline": "요금제를 불러오지 못했어요. 인터넷에 연결한 뒤 다시 열어 주세요.",
   "gateTitle": "부모님께",
   "gateDescription": "이 단계는 어른용이에요.\n아래 계산식의 답을 입력하세요.",
   "gateHint": "답을 입력하세요",

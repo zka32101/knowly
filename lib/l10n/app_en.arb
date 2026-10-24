@@ -65,6 +65,7 @@
   "premiumBenefit3": "Offline saving and deep dives (coming soon)",
   "premiumKidsFree": "Kids and Junior facts are always free.",
   "premiumUnavailable": "Purchases are coming soon",
+  "premiumOffline": "Couldn't load plans. Connect to the internet and open this screen again.",
   "gateTitle": "For parents",
   "gateDescription": "This step is for adults.\nEnter the answer to the sum below.",
   "gateHint": "Enter the answer",

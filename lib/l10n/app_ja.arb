@@ -65,6 +65,7 @@
   "premiumBenefit3": "オフライン保存・深掘り解説（準備中）",
   "premiumKidsFree": "キッズ・ジュニアの雑学はずっと無料です。",
   "premiumUnavailable": "購入機能は準備中です",
+  "premiumOffline": "プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください",
   "gateTitle": "保護者の方へ確認",
   "gateDescription": "これは大人の方が行う操作です。\n下の計算の答えを入力してください。",
   "gateHint": "答えを入力",

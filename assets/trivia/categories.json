@@ -172,6 +172,91 @@
         "ko": "일본",
         "es": "Japón"
       }
+    },
+    {
+      "id": "weather",
+      "order": 110,
+      "emoji": "🌦️",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "てんき",
+          "junior": "天気（てんき）",
+          "adult": "天気"
+        },
+        "en": "Weather",
+        "zh": "天气",
+        "ko": "날씨",
+        "es": "El tiempo"
+      }
+    },
+    {
+      "id": "ocean",
+      "order": 120,
+      "emoji": "🌊",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "うみ",
+          "junior": "海（うみ）",
+          "adult": "海"
+        },
+        "en": "Ocean",
+        "zh": "海洋",
+        "ko": "바다",
+        "es": "Océano"
+      }
+    },
+    {
+      "id": "sports",
+      "order": 130,
+      "emoji": "⚽",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "スポーツ",
+          "junior": "スポーツ",
+          "adult": "スポーツ"
+        },
+        "en": "Sports",
+        "zh": "体育运动",
+        "ko": "스포츠",
+        "es": "Deportes"
+      }
+    },
+    {
+      "id": "math",
+      "order": 140,
+      "emoji": "🔢",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "さんすう",
+          "junior": "算数（さんすう）",
+          "adult": "数学"
+        },
+        "en": "Math",
+        "zh": "数学",
+        "ko": "수학",
+        "es": "Matemáticas"
+      }
+    },
+    {
+      "id": "music",
+      "order": 150,
+      "emoji": "🎵",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "おんがく",
+          "junior": "音楽（おんがく）",
+          "adult": "音楽"
+        },
+        "en": "Music",
+        "zh": "音乐",
+        "ko": "음악",
+        "es": "Música"
+      }
     }
   ]
 }

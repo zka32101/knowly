@@ -58,6 +58,7 @@
   "premiumBenefit3": "Guardado sin conexión y explicaciones a fondo (próximamente)",
   "premiumKidsFree": "Los datos de Kids y Junior son siempre gratuitos.",
   "premiumUnavailable": "Las compras estarán disponibles pronto",
+  "premiumOffline": "No se pudieron cargar los planes. Conéctate a internet y vuelve a abrir esta pantalla.",
   "gateTitle": "Para los padres",
   "gateDescription": "Este paso es para adultos.\nEscribe el resultado de la suma de abajo.",
   "gateHint": "Escribe la respuesta",

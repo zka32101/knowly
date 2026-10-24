@@ -186,6 +186,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get premiumUnavailable => '購入機能は準備中です';
 
   @override
+  String get premiumOffline => 'プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください';
+
+  @override
   String get gateTitle => '保護者の方へ確認';
 
   @override

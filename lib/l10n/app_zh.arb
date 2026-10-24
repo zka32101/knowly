@@ -58,6 +58,7 @@
   "premiumBenefit3": "离线保存与深度解读（即将推出）",
   "premiumKidsFree": "Kids 和 Junior 的冷知识永远免费。",
   "premiumUnavailable": "购买功能即将推出",
+  "premiumOffline": "无法加载套餐。请连接网络后重新打开此页面。",
   "gateTitle": "致家长",
   "gateDescription": "此步骤仅限成人。\n请输入下面算式的答案。",
   "gateHint": "请输入答案",

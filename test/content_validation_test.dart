@@ -19,8 +19,9 @@ void main() {
     if (p.length != 2) return false;
     final m = int.tryParse(p[0]);
     final d = int.tryParse(p[1]);
-    if (m == null || d == null || m < 1 || m > 12 || d < 1 || d > 31)
+    if (m == null || d == null || m < 1 || m > 12 || d < 1 || d > 31) {
       return false;
+    }
     return DateTime.utc(2024, m, d).month == m; // うるう年で存在する日か
   }
 
