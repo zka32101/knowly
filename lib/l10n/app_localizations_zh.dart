@@ -27,6 +27,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get settingsJuniorRuby => '显示读音（假名）';
+
+  @override
   String get listenSlow => '慢';
 
   @override

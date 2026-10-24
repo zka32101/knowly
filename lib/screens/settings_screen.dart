@@ -158,6 +158,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       body: ListView(
         children: [
           uiLanguageTile,
+          if (settings.ageBand == AgeBand.junior)
+            SwitchListTile(
+              key: const Key('junior_ruby_switch'),
+              title: Text(l.settingsJuniorRuby),
+              value: settings.juniorRuby,
+              onChanged: notifier.setJuniorRuby,
+            ),
           ListTile(
             key: const Key('text_size_tile'),
             title: Text(l.settingsTextSize),

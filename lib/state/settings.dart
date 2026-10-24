@@ -84,6 +84,7 @@ class AppSettings {
     this.words = const {},
     this.hintsSeen = const {},
     this.textSize = 0,
+    this.juniorRuby = true,
     this.slowSpeech = false,
     this.recentSearches = const [],
     this.league = const LeagueData(),
@@ -152,6 +153,9 @@ class AppSettings {
   /// 文字の大きさ（0=ふつう / 1=大きい / 2=とても大きい）。年代の拡大率に上乗せする。
   final int textSize;
 
+  /// Junior の画面で、漢字に読み仮名を付ける。
+  final bool juniorRuby;
+
   /// 読み上げをゆっくりにする。
   final bool slowSpeech;
 
@@ -209,6 +213,7 @@ class AppSettings {
     Set<String>? words,
     Set<String>? hintsSeen,
     int? textSize,
+    bool? juniorRuby,
     bool? slowSpeech,
     List<String>? recentSearches,
     LeagueData? league,
@@ -246,6 +251,7 @@ class AppSettings {
         words: words ?? this.words,
         hintsSeen: hintsSeen ?? this.hintsSeen,
         textSize: textSize ?? this.textSize,
+        juniorRuby: juniorRuby ?? this.juniorRuby,
         slowSpeech: slowSpeech ?? this.slowSpeech,
         recentSearches: recentSearches ?? this.recentSearches,
         league: league ?? this.league,
@@ -375,6 +381,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       words: (p.getStringList('words') ?? const []).toSet(),
       hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
       slowSpeech: p.getBool('slowSpeech') ?? false,
+      juniorRuby: p.getBool('juniorRuby') ?? true,
       textSize: (p.getInt('textSize') ?? 0).clamp(0, textSizeFactors.length - 1),
       recentSearches: p.getStringList('recentSearches') ?? const [],
       league: _readLeague(p),
@@ -458,6 +465,11 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(notifyHour: hour, notifyMinute: minute);
     _prefs.setInt('notifyHour', hour);
     _prefs.setInt('notifyMinute', minute);
+  }
+
+  void setJuniorRuby(bool on) {
+    state = state.copyWith(juniorRuby: on);
+    _prefs.setBool('juniorRuby', on);
   }
 
   void setSlowSpeech(bool slow) {

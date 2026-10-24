@@ -139,7 +139,7 @@ class KnowlyApp extends ConsumerWidget {
     ref.watch(notificationSyncProvider);
     ref.watch(widgetSyncProvider);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand));
-    final uiStyle = uiStyleFor(band);
+    final uiStyle = uiStyleFor(band, juniorRuby: ref.watch(settingsProvider.select((s) => s.juniorRuby)));
     return MaterialApp.router(
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
       builder: (context, child) {
@@ -174,9 +174,9 @@ class KnowlyApp extends ConsumerWidget {
 }
 
 /// モード（年代）→ 日本語の表記。まだ年代を選んでいない（最初の画面）ときは、ふつうの表記。
-UiStyle uiStyleFor(AgeBand? band) => switch (band) {
+UiStyle uiStyleFor(AgeBand? band, {bool juniorRuby = true}) => switch (band) {
       AgeBand.kids => UiStyle.kids,
-      AgeBand.junior => UiStyle.junior,
+      AgeBand.junior => juniorRuby ? UiStyle.junior : UiStyle.juniorPlain,
       AgeBand.teen => UiStyle.teen,
       _ => UiStyle.adult,
     };

@@ -27,6 +27,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String get settingsJuniorRuby => 'Show readings (furigana)';
+
+  @override
   String get listenSlow => 'Slow';
 
   @override

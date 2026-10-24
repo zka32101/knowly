@@ -27,6 +27,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get settingsJuniorRuby => 'ふりがなを つける';
+
+  @override
   String get listenSlow => 'ゆっくり';
 
   @override

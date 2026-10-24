@@ -550,6 +550,23 @@ void main() {
     expect(sp.getBool('slowSpeech'), isTrue);
   });
 
+  testWidgets('Junior: ふりがなをオフにすると、画面の漢字から（よみ）が消える', (tester) async {
+    await _pump(tester, prefs: {'ageBand': 'junior'});
+    expect(find.text('遊（あそ）ぶ'), findsWidgets);
+    final container = ProviderScope.containerOf(
+      tester.element(find.byType(KnowlyApp)),
+    );
+    container.read(settingsProvider.notifier).setJuniorRuby(false);
+    await tester.pumpAndSettle();
+    expect(find.text('遊（あそ）ぶ'), findsNothing);
+    expect(find.text('遊ぶ'), findsWidgets);
+    final sp = await SharedPreferences.getInstance();
+    expect(sp.getBool('juniorRuby'), isFalse);
+    container.read(settingsProvider.notifier).setJuniorRuby(true);
+    await tester.pumpAndSettle();
+    expect(find.text('遊（あそ）ぶ'), findsWidgets);
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));

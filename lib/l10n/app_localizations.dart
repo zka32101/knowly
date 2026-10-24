@@ -140,6 +140,12 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @settingsJuniorRuby.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふりがなを つける'**
+  String get settingsJuniorRuby;
+
   /// No description provided for @listenSlow.
   ///
   /// In ja, this message translates to:

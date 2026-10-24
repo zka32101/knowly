@@ -27,6 +27,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get settingsJuniorRuby => '후리가나 표시';
+
+  @override
   String get listenSlow => '느리게';
 
   @override

@@ -24,6 +24,11 @@ final _juniorDigitRegexps = [
   for (final (from, to) in _juniorAfterDigit) (RegExp('(?<=[0-9])$from$_wordAfter'), to),
 ];
 
+/// Junior の読み仮名（「漢字（よみ）」の「（よみ）」）を付けるか。設定で切りかえる（画面の文言を作り直す前に決める）。
+bool juniorRubyEnabled = true;
+
+final _rubyRegexp = RegExp('（[ぁ-んー]+）');
+
 /// Junior: 先に、スペースで分かれたことばごとに漢字にして、そのあとスペースを取る。
 String _jr(String s) {
   var t = s;
@@ -33,7 +38,8 @@ String _jr(String s) {
   for (final (re, to) in _juniorDigitRegexps) {
     t = t.replaceAll(re, to);
   }
-  return t.replaceAll(_jaSpace, '');
+  t = t.replaceAll(_jaSpace, '');
+  return juniorRubyEnabled ? t : t.replaceAll(_rubyRegexp, '');
 }
 
 /// Junior の表記で漢字にする、よく使うことば（小学1〜3年で習う漢字だけ）。
@@ -129,6 +135,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
 
   @override
   String get continueButton => _jr(super.continueButton);
+
+  @override
+  String get settingsJuniorRuby => _jr(super.settingsJuniorRuby);
 
   @override
   String get listenSlow => _jr(super.listenSlow);
@@ -778,6 +787,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String get settingsJuniorRuby => 'ふりがなを表示';
 
   @override
   String get listenSlow => 'ゆっくり';

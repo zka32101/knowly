@@ -10,7 +10,8 @@ import 'ja_styles.dart';
 /// - teen: 漢字まじりで、すこしくだけた言い回し（だよ・しよう）
 /// - adult: 漢字まじりの、ふつうの表記（です・ます）
 /// ほかの言語は、モードで変えない。
-enum UiStyle { kids, junior, teen, adult }
+/// - juniorPlain: junior から、読み仮名（漢字のあとの（よみ））を外したもの
+enum UiStyle { kids, junior, juniorPlain, teen, adult }
 
 /// [AppLocalizations] を読み込む。日本語のときだけ、[style] に合わせた表記にする。
 /// 年代が変わると [style] が変わり、画面の文言がすぐに入れ替わる。
@@ -25,9 +26,10 @@ class KnowlyLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations
   Future<AppLocalizations> load(Locale locale) {
     if (locale.languageCode == 'ja') {
       final name = locale.toString();
+      juniorRubyEnabled = style != UiStyle.juniorPlain;
       return SynchronousFuture(switch (style) {
         UiStyle.kids => lookupAppLocalizations(locale),
-        UiStyle.junior => AppLocalizationsJaJunior(name),
+        UiStyle.junior || UiStyle.juniorPlain => AppLocalizationsJaJunior(name),
         UiStyle.teen => AppLocalizationsJaTeen(name),
         UiStyle.adult => AppLocalizationsJaAdult(name),
       });
