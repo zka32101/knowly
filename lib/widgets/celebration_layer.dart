@@ -6,7 +6,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../l10n/app_localizations.dart';
 import '../logic/badges.dart';
 import '../logic/mascot.dart';
+import '../logic/timing.dart';
 import '../screens/badges_screen.dart';
+import '../screens/stamps_screen.dart' show seasonName;
 import '../state/celebration.dart';
 import '../state/settings.dart';
 import 'mascot_card.dart';
@@ -51,6 +53,8 @@ class _CelebrationLayerState extends ConsumerState<CelebrationLayer>
     _controller.reset();
     if (c.kind == CelebrationKind.stage) {
       notifier.ackStage(mascotStages.indexWhere((s) => s.id == c.id));
+    } else if (c.kind == CelebrationKind.outfit) {
+      notifier.ackOutfits([c.id]);
     } else {
       notifier.ackBadges([c.id]);
     }
@@ -75,6 +79,10 @@ class _CelebrationLayerState extends ConsumerState<CelebrationLayer>
     if (c.kind == CelebrationKind.stage) {
       title = l.celebrateStage(mascotName(l, c.id));
       sub = mascotSay(l, c.id);
+    } else if (c.kind == CelebrationKind.outfit) {
+      final season = Season.values.where((x) => c.id.endsWith('-${x.name}')).firstOrNull;
+      title = l.celebrateOutfit;
+      sub = season == null ? '' : seasonName(l, season);
     } else {
       final def = badgeDefs.firstWhere((b) => b.id == c.id);
       title = l.celebrateBadge;

@@ -32,7 +32,26 @@ class SavedScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: Text(l.savedTitle)),
       body: rows.isEmpty
-          ? Center(child: Text(l.savedEmpty))
+          ? Center(
+              key: const Key('saved_empty'),
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.bookmark_border, size: 48),
+                    const SizedBox(height: 12),
+                    Text(l.savedEmpty, textAlign: TextAlign.center),
+                    const SizedBox(height: 16),
+                    FilledButton.tonal(
+                      key: const Key('saved_empty_go'),
+                      onPressed: () => context.go('/'),
+                      child: Text(l.today),
+                    ),
+                  ],
+                ),
+              ),
+            )
           : ListView(children: rows),
     );
   }

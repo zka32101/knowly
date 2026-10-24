@@ -140,6 +140,126 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @worldAskTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'世界の人も、この雑学を見ています'**
+  String get worldAskTitle;
+
+  /// No description provided for @worldAskBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。'**
+  String get worldAskBody;
+
+  /// No description provided for @worldJoin.
+  ///
+  /// In ja, this message translates to:
+  /// **'参加する'**
+  String get worldJoin;
+
+  /// No description provided for @worldNotNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'いまはしない'**
+  String get worldNotNow;
+
+  /// No description provided for @worldToday.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日、この雑学を見た人: {total}人（{countries}か国）'**
+  String worldToday(int total, int countries);
+
+  /// No description provided for @settingsWorld.
+  ///
+  /// In ja, this message translates to:
+  /// **'世界の集計に参加'**
+  String get settingsWorld;
+
+  /// No description provided for @settingsWorldNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）'**
+  String get settingsWorldNote;
+
+  /// No description provided for @reportThisWeek.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅう：{seen}こ みて、{answered}もん とけたよ'**
+  String reportThisWeek(int seen, int answered);
+
+  /// No description provided for @settingsJuniorRuby.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふりがなを つける'**
+  String get settingsJuniorRuby;
+
+  /// No description provided for @listenSlow.
+  ///
+  /// In ja, this message translates to:
+  /// **'ゆっくり'**
+  String get listenSlow;
+
+  /// No description provided for @settingsTextSize.
+  ///
+  /// In ja, this message translates to:
+  /// **'文字の大きさ'**
+  String get settingsTextSize;
+
+  /// No description provided for @textSizeNormal.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふつう'**
+  String get textSizeNormal;
+
+  /// No description provided for @textSizeLarge.
+  ///
+  /// In ja, this message translates to:
+  /// **'大きい'**
+  String get textSizeLarge;
+
+  /// No description provided for @textSizeXLarge.
+  ///
+  /// In ja, this message translates to:
+  /// **'とても大きい'**
+  String get textSizeXLarge;
+
+  /// No description provided for @relatedMore.
+  ///
+  /// In ja, this message translates to:
+  /// **'もっと みる（あと{n}こ）'**
+  String relatedMore(int n);
+
+  /// No description provided for @searchRecent.
+  ///
+  /// In ja, this message translates to:
+  /// **'最近の検索'**
+  String get searchRecent;
+
+  /// No description provided for @hintHomeTips.
+  ///
+  /// In ja, this message translates to:
+  /// **'カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！'**
+  String get hintHomeTips;
+
+  /// No description provided for @hintGotIt.
+  ///
+  /// In ja, this message translates to:
+  /// **'わかった'**
+  String get hintGotIt;
+
+  /// No description provided for @onboardingSkip.
+  ///
+  /// In ja, this message translates to:
+  /// **'あとで'**
+  String get onboardingSkip;
+
+  /// No description provided for @onboardingPickBand.
+  ///
+  /// In ja, this message translates to:
+  /// **'年齢にいちばん近いものを選んでください'**
+  String get onboardingPickBand;
+
   /// No description provided for @birthYearTitle.
   ///
   /// In ja, this message translates to:
@@ -317,7 +437,7 @@ abstract class AppLocalizations {
   /// No description provided for @savedEmpty.
   ///
   /// In ja, this message translates to:
-  /// **'まだ保存した雑学はありません'**
+  /// **'まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります'**
   String get savedEmpty;
 
   /// No description provided for @savedLimit.
@@ -451,6 +571,12 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'購入機能は準備中です'**
   String get premiumUnavailable;
+
+  /// No description provided for @premiumOffline.
+  ///
+  /// In ja, this message translates to:
+  /// **'プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください'**
+  String get premiumOffline;
 
   /// No description provided for @gateTitle.
   ///
@@ -1166,12 +1292,6 @@ abstract class AppLocalizations {
   /// **'速さ'**
   String get listenSpeedLabel;
 
-  /// No description provided for @listenSlow.
-  ///
-  /// In ja, this message translates to:
-  /// **'ゆっくり'**
-  String get listenSlow;
-
   /// No description provided for @listenNormal.
   ///
   /// In ja, this message translates to:
@@ -1397,7 +1517,7 @@ abstract class AppLocalizations {
   /// No description provided for @privacyPointTeenAdult.
   ///
   /// In ja, this message translates to:
-  /// **'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。'**
+  /// **'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。'**
   String get privacyPointTeenAdult;
 
   /// No description provided for @privacyContact.
@@ -2221,6 +2341,318 @@ abstract class AppLocalizations {
   /// In ja, this message translates to:
   /// **'Español'**
   String get languageEs;
+
+  /// No description provided for @wordTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばの せつめい'**
+  String get wordTitle;
+
+  /// No description provided for @wordSimple.
+  ///
+  /// In ja, this message translates to:
+  /// **'かんたんに いうと'**
+  String get wordSimple;
+
+  /// No description provided for @wordDetail.
+  ///
+  /// In ja, this message translates to:
+  /// **'くわしく'**
+  String get wordDetail;
+
+  /// No description provided for @wordFacts.
+  ///
+  /// In ja, this message translates to:
+  /// **'この ことばが でてくる ざつがく'**
+  String get wordFacts;
+
+  /// No description provided for @wordHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'線のついた ことばを タップすると、いみが わかるよ。'**
+  String get wordHint;
+
+  /// No description provided for @wordNotFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'せつめいが みつかりません。'**
+  String get wordNotFound;
+
+  /// No description provided for @wordsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばずかん'**
+  String get wordsTitle;
+
+  /// No description provided for @wordsFound.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n} / {total} ことば'**
+  String wordsFound(int n, int total);
+
+  /// No description provided for @wordOfDay.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうの ことば'**
+  String get wordOfDay;
+
+  /// No description provided for @wordQuizTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばクイズ'**
+  String get wordQuizTitle;
+
+  /// No description provided for @wordQuizQuestion.
+  ///
+  /// In ja, this message translates to:
+  /// **'「{term}」の いみは？'**
+  String wordQuizQuestion(String term);
+
+  /// No description provided for @wordsHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'ことばの せつめいを みると、ここに ふえていくよ。'**
+  String get wordsHint;
+
+  /// No description provided for @mapTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながりマップ'**
+  String get mapTitle;
+
+  /// No description provided for @mapLinkCount.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながる ざつがく {n}こ'**
+  String mapLinkCount(int n);
+
+  /// No description provided for @mapNoLinks.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながる ざつがくは まだ ないよ'**
+  String get mapNoLinks;
+
+  /// No description provided for @mapOpen.
+  ///
+  /// In ja, this message translates to:
+  /// **'つながりを みる'**
+  String get mapOpen;
+
+  /// No description provided for @voiceQuizTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'みみで クイズ'**
+  String get voiceQuizTitle;
+
+  /// No description provided for @voiceReplay.
+  ///
+  /// In ja, this message translates to:
+  /// **'もういちど きく'**
+  String get voiceReplay;
+
+  /// No description provided for @voiceQuizSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'よみあげて こたえる'**
+  String get voiceQuizSub;
+
+  /// No description provided for @leagueTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'かぞくリーグ'**
+  String get leagueTitle;
+
+  /// No description provided for @leagueNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。'**
+  String get leagueNote;
+
+  /// No description provided for @leagueThisWeek.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの じゅんい'**
+  String get leagueThisWeek;
+
+  /// No description provided for @leagueLastWinner.
+  ///
+  /// In ja, this message translates to:
+  /// **'せんしゅうの ゆうしょう：{name}'**
+  String leagueLastWinner(String name);
+
+  /// No description provided for @leagueEmpty.
+  ///
+  /// In ja, this message translates to:
+  /// **'まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。'**
+  String get leagueEmpty;
+
+  /// No description provided for @leagueGames.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}しあい・{wins}しょう'**
+  String leagueGames(int n, int wins);
+
+  /// No description provided for @leaguePlay.
+  ///
+  /// In ja, this message translates to:
+  /// **'たいせんする'**
+  String get leaguePlay;
+
+  /// No description provided for @leagueClear.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの きろくを けす'**
+  String get leagueClear;
+
+  /// No description provided for @leagueClearTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの きろくを けしますか？'**
+  String get leagueClearTitle;
+
+  /// No description provided for @leagueClearBody.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。'**
+  String get leagueClearBody;
+
+  /// No description provided for @leagueRecord.
+  ///
+  /// In ja, this message translates to:
+  /// **'かぞくリーグに きろくする'**
+  String get leagueRecord;
+
+  /// No description provided for @leagueSub.
+  ///
+  /// In ja, this message translates to:
+  /// **'1しゅうかんの しょうぶ'**
+  String get leagueSub;
+
+  /// No description provided for @recapTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'1しゅうかんの ふりかえり'**
+  String get recapTitle;
+
+  /// No description provided for @recapNote.
+  ///
+  /// In ja, this message translates to:
+  /// **'きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。'**
+  String get recapNote;
+
+  /// No description provided for @recapSeen.
+  ///
+  /// In ja, this message translates to:
+  /// **'みた ざつがく'**
+  String get recapSeen;
+
+  /// No description provided for @recapLearned.
+  ///
+  /// In ja, this message translates to:
+  /// **'あたらしく しれた'**
+  String get recapLearned;
+
+  /// No description provided for @recapQuiz.
+  ///
+  /// In ja, this message translates to:
+  /// **'クイズの せいかい'**
+  String get recapQuiz;
+
+  /// No description provided for @recapActiveDays.
+  ///
+  /// In ja, this message translates to:
+  /// **'あそんだ ひ'**
+  String get recapActiveDays;
+
+  /// No description provided for @recapMsgNone.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうは おやすみだったね。また ひとつ、よんでみよう！'**
+  String get recapMsgNone;
+
+  /// No description provided for @recapMsgSome.
+  ///
+  /// In ja, this message translates to:
+  /// **'いい ちょうし！ すこしずつ ふえていくよ。'**
+  String get recapMsgSome;
+
+  /// No description provided for @recapMsgGreat.
+  ///
+  /// In ja, this message translates to:
+  /// **'すごい！ まいにちの ように あそんだね！'**
+  String get recapMsgGreat;
+
+  /// No description provided for @recapChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふりかえり'**
+  String get recapChip;
+
+  /// No description provided for @recapBanner.
+  ///
+  /// In ja, this message translates to:
+  /// **'こんしゅうの ふりかえりが できたよ'**
+  String get recapBanner;
+
+  /// No description provided for @stampsTitle.
+  ///
+  /// In ja, this message translates to:
+  /// **'きせつの スタンプちょう'**
+  String get stampsTitle;
+
+  /// No description provided for @stampsChip.
+  ///
+  /// In ja, this message translates to:
+  /// **'スタンプちょう'**
+  String get stampsChip;
+
+  /// No description provided for @stampsHint.
+  ///
+  /// In ja, this message translates to:
+  /// **'いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。{n}つ あつめると、あいぼうが その きせつの ようふくを きるよ。'**
+  String stampsHint(int n);
+
+  /// No description provided for @stampsSpring.
+  ///
+  /// In ja, this message translates to:
+  /// **'はる'**
+  String get stampsSpring;
+
+  /// No description provided for @stampsSummer.
+  ///
+  /// In ja, this message translates to:
+  /// **'なつ'**
+  String get stampsSummer;
+
+  /// No description provided for @stampsAutumn.
+  ///
+  /// In ja, this message translates to:
+  /// **'あき'**
+  String get stampsAutumn;
+
+  /// No description provided for @stampsWinter.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふゆ'**
+  String get stampsWinter;
+
+  /// No description provided for @stampsNow.
+  ///
+  /// In ja, this message translates to:
+  /// **'いま'**
+  String get stampsNow;
+
+  /// No description provided for @stampsOutfit.
+  ///
+  /// In ja, this message translates to:
+  /// **'ようふくゲット！'**
+  String get stampsOutfit;
+
+  /// No description provided for @celebrateOutfit.
+  ///
+  /// In ja, this message translates to:
+  /// **'きせつの ようふくを ゲット！'**
+  String get celebrateOutfit;
 }
 
 class _AppLocalizationsDelegate

@@ -86,7 +86,14 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
               loading: () => const Center(
                   key: Key('offers_loading'),
                   child: Padding(padding: EdgeInsets.all(16), child: CircularProgressIndicator())),
-              error: (_, _) => FilledButton(onPressed: null, child: Text(l.premiumUnavailable)),
+              error: (_, _) => Column(
+                key: const Key('offers_offline'),
+                children: [
+                  FilledButton(onPressed: null, child: Text(l.premiumUnavailable)),
+                  const SizedBox(height: 8),
+                  Text(l.premiumOffline, textAlign: TextAlign.center),
+                ],
+              ),
               data: (list) => list.isEmpty
                   ? FilledButton(
                       key: const Key('premium_unavailable'),

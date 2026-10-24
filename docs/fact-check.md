@@ -1,0 +1,553 @@
+# 事実確認チェックリスト
+
+雑学 118 件。上から順に確認する（出典なし → 注記あり → 出典あり）。確認したら、`assets/trivia/trivia.json` の `verification`（status: verified / verifiedBy / verifiedAt）と、各言語の `reviewStatus`（reviewed / published、reviewedBy / reviewedAt）を更新する。
+
+- [ ] = 未確認　事実の確認と、各言語の訳のレビューは別（母語話者が見る）。
+
+
+## 出典なし
+
+- [ ] **sea_otters_hold_hands**（animals）ラッコの手つなぎ行動
+  - ラッコは海上で休む際、群れが離れないよう互いの手を握ることが知られています。ケルプに体を巻き付けて係留する行動も観察されています。
+  - Resting sea otters are known to hold each other's paws to keep the group together on the water. They have also been observed wrapping themselves in kelp as an anchor.
+- [ ] **ant_strong**（bugs）アリの怪力はスケール効果で説明できる
+  - アリは自分の体重の10〜50倍の荷物を運びます。体が小さいほど体重(体積に比例)に対して筋肉の断面積が相対的に大きくなるため、同じ筋力でも体重比の力が強く見えます。これは体長のスケール効果で、人間が同じ比率で運べるわけではありません。
+  - Ants carry loads of 10-50 times their body weight. Because weight scales with volume while muscle strength scales with cross-sectional area, smaller animals are relatively stronger. This does not mean a human could do the same at that ratio.
+- [ ] **eiffel_grows_summer**（science）エッフェル塔の高さは季節で変わる
+  - エッフェル塔は錬鉄製で、熱膨張により気温が高い夏には冬に比べて最大約15cm高くなると言われます。日当たりで塔の片側が膨張するため、頂部がわずかに傾くこともあります。
+  - The tower is made of wrought iron, which expands as it warms, so it can be up to about 15 cm taller in summer than in winter. Uneven sun exposure can also make its top lean slightly.
+
+## 注記あり
+
+- [ ] **butterfly_taste_feet**（animals）チョウは脚の感覚毛で味を感じる
+  - チョウの前脚の先端などには味覚受容器を持つ感覚毛があり、葉に触れるだけで植物の化学物質を検知します。メスはこれで産卵に適した食草を見分けます。
+  - Butterflies have chemoreceptive sensilla on their legs, particularly the front pair, that detect plant chemicals on contact. Females use them to identify suitable host plants for egg-laying.
+  - 出典: [Butterfly](https://en.wikipedia.org/wiki/Butterfly)（CC BY-SA 4.0）
+  - 注記: Source says taste receptors are on palps and feet; does not specifically mention front legs or egg-laying host-plant detection.
+- [ ] **cats_no_sweet**（animals）ネコは甘味受容体を持たない
+  - ネコは甘味受容体を構成する遺伝子(Tas1r2)が機能しない偽遺伝子となっており、甘味を感知できません。肉食に特化した進化の結果と考えられています。
+  - The gene Tas1r2, part of the sweet taste receptor, is a nonfunctional pseudogene in cats, so they cannot detect sweetness, likely an evolutionary consequence of strict carnivory.
+  - 出典: [Cat senses - Wikipedia](https://en.wikipedia.org/wiki/Cat_senses)（CC BY-SA 4.0）
+  - 注記: Describes a Tas1r2 deletion/frame-shift; 'pseudogene' wording per article's gene description.
+- [ ] **crows_recognize_faces**（animals）カラスはヒトの顔を識別・記憶する
+  - アメリカの研究では、アメリカガラスが、自分を捕獲した人物が着けていたマスクの顔を数年にわたり記憶し、他の個体もその人物を警戒するようになることが示されました。
+  - Studies of American crows found they remembered the face of a mask-wearing person who had trapped them for years, and other crows that had never been trapped learned to scold that person too.
+  - 出典: [Anger a Crow and It Will Never Forget Your Face](https://www.nbcnews.com/news/amp/wbna43570637)（© NBC News (reference only)）
+  - 注記: Describes UW study (Marzluff) with mask-wearing trapper; other crows joined scolding. Source says 'years of retribution'; trapping was of 7-15 birds at five sites.
+- [ ] **dolphin_half_sleep**（animals）イルカの半球睡眠
+  - イルカは息を意識的にしなければならないため、脳の片半球ずつ睡眠をとる「単半球徐波睡眠」を行います。起きている側の脳で呼吸や警戒、泳ぎを維持します。
+  - Because breathing is voluntary, dolphins practice unihemispheric slow-wave sleep, resting one brain hemisphere at a time while the awake side maintains swimming, respiration and vigilance.
+  - 出典: [Unihemispheric slow-wave sleep - Wikipedia](https://en.wikipedia.org/wiki/Unihemispheric_slow-wave_sleep)（CC BY-SA 4.0）
+  - 注記: Supports unihemispheric sleep in dolphins; 'voluntary breathing' wording not seen in the page text.
+- [ ] **giraffe_seven_vertebrae**（animals）キリンの頸椎は7個
+  - 哺乳類の頸椎はほぼ例外なく7個で、キリンも同数です。長い首は個々の頸椎が非常に長く(約25cm前後)なることで実現しています。
+  - Nearly all mammals have seven cervical vertebrae, giraffes included. Their long necks result from extremely elongated individual vertebrae, each roughly 25 cm long.
+  - 出典: [Cervical vertebrae - Wikipedia](https://en.wikipedia.org/wiki/Cervical_vertebrae)（CC BY-SA 4.0）
+  - 注記: Confirms giraffe has seven cervical vertebrae; the ~25 cm per-vertebra figure was not verified in the opened pages.
+- [ ] **koala_fingerprints**（animals）コアラの指紋はヒトと見分けにくいほど似ている
+  - コアラの指紋は、顕微鏡で見てもヒトのものと区別しにくいほどよく似ています。霊長類とは系統が離れており、収斂進化の例とされます。
+  - Koala fingerprints are so similar to human ones that they can be hard to tell apart even under a microscope. Koalas are only distantly related to primates, which makes this a classic case of convergent evolution.
+  - 出典: [Fingerprint](https://en.wikipedia.org/wiki/Fingerprint)（CC BY-SA 4.0）
+  - 注記: Cites a study: koala and human fingerprints are hard to distinguish even with electron microscope. Convergent-evolution framing not checked on this page.
+- [ ] **salmon_return**（animals）サケは母川回帰し、産卵のために生まれた川へ戻る
+  - サケは川で生まれて海で成長し、成熟すると産卵のために生まれた川へ戻ります(母川回帰)。川の水に含まれる化学物質のにおいを記憶して、たどり着くと考えられています。
+  - Salmon hatch in rivers and mature at sea, then return to their natal river to spawn. They are thought to imprint on the chemical scent of the river water and follow it back.
+  - 出典: [Salmon](https://en.wikipedia.org/wiki/Salmon)（CC BY-SA 4.0）
+  - 注記: Homing depends on olfactory memory; mostly return to natal stream, some stray.
+- [ ] **sloth_slow**（animals）ナマケモノは、低エネルギーの生活で葉を食べて生きる
+  - ナマケモノは栄養の少ない葉を主食とし、代謝が低く、動きがとてもゆっくりです。消化にも日数がかかり、排泄はおよそ1週間に1回、木から降りて地上で行うことが知られています。
+  - Sloths feed on low-nutrient leaves, have a low metabolic rate and move slowly. Digestion takes many days, and they typically descend to the ground to defecate only about once a week.
+  - 出典: [Sloth](https://en.wikipedia.org/wiki/Sloth)（CC BY-SA 4.0）
+  - 注記: Three-toed sloths descend about once a week; digestion can take a month or more (claim says 'many days').
+- [ ] **wombat_cube_poop**（animals）ウォンバットの立方体状の糞
+  - ウォンバットの糞は立方体に近い形をしています。仕組みはまだよく分かっていませんが、研究では腸の壁の弾性の差が関わると考えられています。転がりにくいため、縄張りの目印として都合がよいとも言われます。
+  - Wombat feces are nearly cubic. The mechanism is not fully understood, but research points to differences in the elasticity of the intestinal wall. The shape is also thought to suit territory marking because cubes resist rolling.
+  - 出典: [Wombat](https://en.wikipedia.org/wiki/Wombat)（CC BY-SA 4.0）
+  - 注記: Source says shape is thought to aid stacking/not rolling and intestine stretches unevenly; mechanism 'not well understood'.
+- [ ] **baby_bones**（body）乳児の骨は約300、成人は206
+  - 新生児の骨格は約300個の骨・骨化中心で構成され、成長に伴い癒合して、成人では206個になります。頭蓋骨や仙骨などで癒合が顕著です。
+  - A newborn skeleton consists of roughly 300 bones and ossification centers that fuse during growth, notably in the skull and sacrum, leaving 206 bones in adults.
+  - 出典: [How Many Bones Does a Baby Have?](https://healthline.com/health/how-many-bones-does-a-baby-have)（© Healthline (reference only)）
+  - 出典: [Bone - Wikipedia](https://en.wikipedia.org/wiki/Bone)（CC BY-SA 4.0）
+  - 注記: Says babies are born with around 300 bones; adults 206. Some sources give 270-300.
+- [ ] **blink_times**（body）まばたきは1分間に約15〜20回
+  - 人は1分間に平均15〜20回まばたきをします。目の表面を涙で潤し、ほこりを洗い流すためで、画面を集中して見ていると回数が減ります。
+  - Blinks keep the cornea moist and clear debris. Blink rate drops during intense visual focus such as screen use.
+  - 出典: [Blinking](https://en.wikipedia.org/wiki/Blinking)（CC BY-SA 4.0）
+  - 注記: Notes blink rate falls when focused, e.g. reading/computer screens; moisture function confirmed.
+- [ ] **goosebumps_cold**（body）鳥肌は、毛を立てて体温を守る名残
+  - 寒いと、毛穴の周りの筋肉が縮んで毛が立ち、鳥肌になります。体毛が多かった祖先が、毛を立てて空気の層をつくり、体温を逃がさないようにしていた名残だと考えられています。
+  - Arrector pili muscles contract and raise body hairs. In furrier ancestors this trapped insulating air; in humans it is considered a vestigial reflex.
+  - 出典: [Goose bumps - Wikipedia](https://en.wikipedia.org/wiki/Goose_bumps)（CC BY-SA 4.0）
+  - 注記: Described as considered by some a vestigial reflex.
+- [ ] **heart_100k**（body）心臓は1日に約10万回拍動する
+  - 成人の安静時の心拍数は毎分約60〜80回で、1日では約10万回、1年では約3,600万回に達します。一生では約25〜30億回拍動する計算になります。
+  - At a resting rate of about 60-80 beats per minute, an adult heart beats roughly 100,000 times a day and about 36 million times a year, working out to around 2.5-3 billion beats over a lifetime.
+  - 出典: [NOVA Online: Heart facts](https://www.pbs.org/wgbh/nova/eheart/facts.html)（© PBS/WGBH (reference only)）
+  - 注記: Says ~100,000 beats/day, ~35 million/year, more than 2.5 billion in a lifetime.
+- [ ] **nails_grow**（body）手の爪は、1か月に約3〜3.5mm伸びる
+  - 手の爪は1日に約0.1mm、1か月に約3〜3.5mmのペースで伸びるとされます。足の爪は手より遅く伸びます。
+  - Fingernails extend about 3 to 3.5 mm per month, faster than toenails.
+  - 出典: [Nail (anatomy) - Wikipedia](https://en.wikipedia.org/wiki/Nail_(anatomy))（CC BY-SA 4.0）
+  - 注記: Source says about 3.5 mm per month for fingernails (claim says 3 mm); seasonal speed-up not verified.
+- [ ] **beetle_quarter**（bugs）甲虫は既知の動物種の約4分の1を占める
+  - 甲虫目は約40万種が記載されており、既知の動物種の約4分の1を占めるとされる、最も種数の多い目です。「神は甲虫をこよなく愛している」という言葉でも知られます。
+  - Coleoptera has around 400,000 described species, about a quarter of all known animal species, making it the most species-rich order. It inspired the quip that God has an inordinate fondness for beetles.
+  - 出典: [Beetle - Wikipedia](https://en.wikipedia.org/wiki/Beetle)（CC BY-SA 4.0）
+  - 出典: [J. B. S. Haldane - Wikipedia](https://en.wikipedia.org/wiki/J._B._S._Haldane)（CC BY-SA 4.0）
+  - 注記: About 400,000 described species, almost 40% of described arthropods; 'quarter of all animal species' not confirmed on this page.; Source of the 'inordinate fondness for beetles' quip (attributed).
+- [ ] **cricket_sing**（bugs）コオロギやスズムシは、オスが翅をこすって鳴く
+  - 秋の夜に聞こえる虫の声の多くは、オスが前翅をこすり合わせて出す音で、メスを呼ぶためのものです。コオロギの仲間は、耳が前脚にあり、仲間の声を聞き分けます。
+  - Much of the insect song heard on autumn nights is made by males rubbing their forewings together to attract females. Crickets have their ears on their front legs, which they use to pick out the songs of their own kind.
+  - 出典: [Cricket (insect)](https://en.wikipedia.org/wiki/Cricket_(insect))（CC BY-SA 4.0）
+  - 注記: Wikipedia: males chirp by rubbing front wings (elytra); ears (tympana) on front-leg tibiae.
+- [ ] **dragonfly_before_dinosaurs**（bugs）トンボ類の祖先は恐竜より古い
+  - トンボ類に近縁なグループは石炭紀の約3億年前に出現し、翅を広げると70cmほどになる巨大な種もいました。恐竜の出現(約2億3千万年前)よりも古い系統です。
+  - Relatives of dragonflies appeared in the Carboniferous about 300 million years ago, including giant species with wingspans of around 70 cm. This predates the appearance of dinosaurs roughly 230 million years ago.
+  - 出典: [Meganeura](https://en.wikipedia.org/wiki/Meganeura)（CC BY-SA 4.0）
+  - 出典: [Dinosaur](https://en.wikipedia.org/wiki/Dinosaur)（CC BY-SA 4.0）
+  - 注記: Late Carboniferous ~300 Mya; wingspan estimates up to 70-75 cm. Meganeura is a dragonfly-like meganisopteran, not a true dragonfly.; Oldest well-known dinosaur fossils ~231-230 Mya (Carnian, Triassic).
+- [ ] **dung_beetle_milky_way**（bugs）糞虫は天の川を使って方角を保つ
+  - 2013年の研究で、アフリカの糞虫が月のない夜に、天の川の光の帯を手がかりに糞玉を直線で運ぶことが示されました。星空を方位の指標に使う昆虫として初めて報告されたものです。
+  - A 2013 study showed that African dung beetles keep their dung balls on a straight course on moonless nights by using the Milky Way's band of light, the first insect reported to use the starry sky for orientation.
+  - 出典: [Dung beetle - Wikipedia](https://en.wikipedia.org/wiki/Dung_beetle)（CC BY-SA 4.0）
+  - 注記: Page says dung beetles are among the few invertebrates known to use the Milky Way; 'first insect' / 2013 not verified in the page text.
+- [ ] **firefly_cold_light**（bugs）ホタルの生物発光は熱損失が非常に小さい
+  - ホタルの発光は、ルシフェリンという物質が酵素(ルシフェラーゼ)の働きで酸素と反応して起こる生物発光です。エネルギーのほとんどが光になり、熱としてはほとんど失われません。
+  - Firefly light is bioluminescence: the molecule luciferin reacts with oxygen under the enzyme luciferase. Nearly all the energy is emitted as light, with very little lost as heat.
+  - 出典: [Firefly](https://en.wikipedia.org/wiki/Firefly)（CC BY-SA 4.0）
+  - 注記: Confirms luciferin/luciferase/oxygen and 'cold light'; 'nearly all energy as light' not explicitly stated.
+- [ ] **silkworm_thread**（bugs）繭は1本の連続した糸
+  - カイコの繭は、1本の連続した繭糸(フィブロイン2本をセリシンで包んだもの)でできています。一つの繭からは約300〜900メートルの糸が得られ、生糸の原料になります。
+  - A cocoon consists of a single continuous filament, two fibroin strands glued with sericin. Roughly 300-900 meters of thread can be reeled from one cocoon, which is the raw material of silk.
+  - 出典: [Bombyx mori](https://en.wikipedia.org/wiki/Bombyx_mori)（CC BY-SA 4.0）
+  - 出典: [Sericulture](https://en.wikipedia.org/wiki/Sericulture)（CC BY-SA 4.0）
+  - 注記: DISCREPANCY: source says cocoon thread is about 300-900 m long, not 1,000-1,500 m.; Continuous filament of fibroin with sericin gum confirmed; length figure not given.
+- [ ] **apple_floats**（food）リンゴの体積の約25%は空気
+  - リンゴの果肉には細胞の隙間が多く、体積の約4分の1を空気が占めるため、全体の密度が水より小さく、水に浮かびます。
+  - Apple flesh has many air-filled gaps between its cells, making up about 25% of its volume. This lowers its overall density below that of water, so apples float.
+  - 出典: [Why do apples float?](https://www.freshplaza.com/north-america/article/2004965/why-do-apples-float/)（© FreshPlaza (reference only)）
+  - 注記: Trade-news article; states 25% of apple volume is air.
+- [ ] **cacao_money**（food）カカオ豆は貨幣として流通した
+  - アステカ帝国などの中央アメリカでは、カカオ豆が貨幣代わりに使われ、税として納められることもありました。飲み物としても高貴な人に重んじられ、これが現在のチョコレートの起源になりました。
+  - In Central America, including the Aztec Empire, cacao beans circulated as currency and could be paid as tribute. Cacao was also prized as a drink, the origin of today's chocolate.
+  - 出典: [Cocoa bean](https://en.wikipedia.org/wiki/Cocoa_bean)（CC BY-SA 4.0）
+  - 出典: [Aztecs](https://en.wikipedia.org/wiki/Aztecs)（CC BY-SA 4.0）
+  - 注記: Cacao beans used for small purchases; tribute payment in cacao not verified on page.
+- [ ] **carrot_colors**（food）オレンジ色のニンジンは後に広まった
+  - 栽培化された初期のニンジンは紫や黄色が中心で、オレンジ色のニンジンはその後の品種改良で広まったとされます。βカロテンを多く含み、体内でビタミンAに変わるのがオレンジ色の理由です。
+  - Early domesticated carrots were mostly purple and yellow, and orange types spread later through selective breeding. Orange comes from beta-carotene, which the body converts to vitamin A.
+  - 出典: [Carrot - Wikipedia](https://en.wikipedia.org/wiki/Carrot)（CC BY-SA 4.0）
+  - 注記: Purple roots (West Asia, India, Europe) noted; orange colour from beta-carotene, source of vitamin A.
+- [ ] **peanut_not_nut**（food）落花生はナッツではなくマメ科
+  - 落花生はマメ科の植物で、木の実(ナッツ)ではありません。受粉後に子房柄が地中に伸びて莢を作る「地下結実」が特徴で、名前の「落花生」は花が落ちて地中で実ることに由来します。
+  - The peanut is a legume, not a tree nut. After pollination, the stalk-like gynophore pushes into the soil, where the pod develops, a habit called geocarpy. The Japanese name rakkasei, 'flower falls, fruit grows,' reflects this.
+  - 出典: [Peanut - Wikipedia](https://en.wikipedia.org/wiki/Peanut)（CC BY-SA 4.0）
+  - 注記: Confirms geocarpy and gynophore/peg; the Japanese name rakkasei is not covered.
+- [ ] **pineapple_two_years**（food）パイナップルは結実まで約18〜24か月
+  - パイナップルは、苗を植えてから収穫まで条件によりますが約18〜24か月かかります。1株には基本的に1個の果実がなり、収穫後は株元から出る芽(吸芽)で増やします。
+  - From planting to harvest, a pineapple generally takes around 18-24 months depending on conditions. Each plant normally bears a single fruit, and growers propagate it afterward from suckers growing at the base.
+  - 出典: [Pineapple](https://en.wikipedia.org/wiki/Pineapple)（CC BY-SA 4.0）
+  - 注記: Page says 12-20 months to flowering, after which fruit develops; suckers used for propagation. Total 18-24 months not stated exactly.
+- [ ] **popcorn_pop**（food）ポップコーンは水蒸気圧で爆裂する
+  - 爆裂種の粒は硬い外皮の内側に水分(約14%)を含み、約180℃に熱せられると水蒸気の圧力が高まり、外皮が破れて内部のデンプンが一気に膨張・糊化して弾けます。
+  - A popcorn kernel holds about 14% moisture inside a tough hull. At roughly 180 °C the steam pressure ruptures the hull, and the starch inside expands and gelatinizes explosively into the fluffy shape.
+  - 出典: [Popcorn - Wikipedia](https://en.wikipedia.org/wiki/Popcorn)（CC BY-SA 4.0）
+  - 注記: Source gives 14-20% moisture; the 180 C figure was not verified.
+- [ ] **rice_half_world**（food）世界人口の約半数がイネを主食とする
+  - イネは、世界人口の約半数にとっての主食作物とされ、特にアジアで多く生産・消費されます。栽培品種は数万にのぼるとされ、国際稲研究所には十万点以上の遺伝資源が保存されています。
+  - Rice is the staple crop for around half of the world's population, with production and consumption concentrated in Asia. Tens of thousands of varieties exist, and the International Rice Research Institute conserves more than 100,000 accessions.
+  - 出典: [Rice](https://en.wikipedia.org/wiki/Rice)（CC BY-SA 4.0）
+  - 出典: [International Rice Research Institute](https://en.wikipedia.org/wiki/International_Rice_Research_Institute)（CC BY-SA 4.0）
+  - 注記: Genebank holds more than 127,000 accessions (consistent with >100,000).
+- [ ] **watermelon_92_water**（food）スイカの水分含有量は約92%
+  - スイカの可食部は水分が約90〜92%を占めます。カリウムや、赤い果肉の色素であるリコピン、シトルリンを含むことでも知られます。
+  - The edible part of a watermelon is about 90-92% water. It is also known for containing potassium, the red pigment lycopene, and citrulline.
+  - 出典: [Watermelon - Wikipedia](https://en.wikipedia.org/wiki/Watermelon)（CC BY-SA 4.0）
+  - 注記: Nutrition table gives water 91.45 g per 100 g; lycopene and citrulline confirmed (citrulline is described as produced in the rind).
+- [ ] **antarctica_desert**（geography）世界最大の砂漠は南極大陸
+  - 砂漠の定義は年間降水量(降雪を水に換算)が約250mm未満の地域です。南極大陸は内陸部でさらに少なく、面積約1,400万km²で、サハラ砂漠(約900万km²)を上回る世界最大の砂漠とされます。
+  - Deserts are defined by low annual precipitation, under about 250 mm of water equivalent. Inland Antarctica receives far less, and at roughly 14 million km² the continent exceeds the Sahara (about 9 million km²) as the largest desert.
+  - 出典: [Desert](https://en.wikipedia.org/wiki/Desert)（CC BY-SA 4.0）
+  - 出典: [Antarctica](https://en.wikipedia.org/wiki/Antarctica)（CC BY-SA 4.0）
+  - 注記: Antarctic interior receives under 50 mm/yr; area 14.2 million km2. Sahara area not checked on this page.
+- [ ] **japan_islands**（geography）日本の島の数は14,125
+  - 国土地理院は2023年、海岸線の長さが100m以上の島を数え直し、日本の島の数を14,125と発表しました。それ以前は6,852とされていましたが、数え方を変えて大幅に増えました。
+  - In 2023, the Geospatial Information Authority of Japan recounted islands with a coastline of at least 100 m and announced a total of 14,125, up from the 6,852 reported earlier, mainly because the counting method changed.
+  - 出典: [List of islands of Japan - Wikipedia](https://en.wikipedia.org/wiki/List_of_islands_of_Japan)（CC BY-SA 4.0）
+  - 注記: Confirms 14,125 after a 2023 recount using digital maps; the earlier 6,852 figure was not confirmed in fetched text.
+- [ ] **bamboo_fast**（nature）竹は最速級の成長を示す植物
+  - 一部の竹は、1日に約90cm以上伸びることが観測されており、世界で最も成長が速い植物の一つとされます。地下茎で養分を蓄え、タケノコが短期間で一気に伸びます。
+  - Some bamboo species have been recorded growing 90 cm or more in a day. Stored energy in the underground rhizome lets new shoots elongate rapidly within a short period.
+  - 出典: [Bamboo - Wikipedia](https://en.wikipedia.org/wiki/Bamboo)（CC BY-SA 4.0）
+  - 注記: Source: 91 cm in 24 h for certain species, up to 120 cm for Phyllostachys bambusoides; rhizome-energy mechanism is not explicitly confirmed.
+- [ ] **maple_red**（nature）紅葉は、アントシアニンが作られて赤くなる
+  - 秋に気温が下がると、葉の緑の色素が分解されます。モミジなどでは、さらに赤い色素のアントシアニンが作られるため、葉が赤く染まります。
+  - Cooling temperatures degrade chlorophyll. In maples and similar trees, sugars in the leaf are used to produce red anthocyanin pigments, so the leaf turns red.
+  - 出典: [Autumn leaf color - Wikipedia](https://en.wikipedia.org/wiki/Autumn_leaf_color)（CC BY-SA 4.0）
+  - 注記: Covers anthocyanin red coloration; the sugar-to-anthocyanin detail was not verified in the page text.
+- [ ] **sunflower_sun**（nature）ヒマワリは、つぼみの間だけ太陽を追う
+  - 若いヒマワリは、茎の成長のしかたの差で、日中に東から西へ向きを変えます。花が咲いて成長が止まると、ほぼ東を向いたまま固定されます。
+  - Differential stem growth makes immature sunflowers track the sun. When flowering ends growth, the head locks facing roughly east.
+  - 出典: [Heliotropism](https://en.wikipedia.org/wiki/Heliotropism)（CC BY-SA 4.0）
+  - 注記: Immature buds track the sun; mature flowerheads face east.
+- [ ] **thunder_count**（nature）雷までの距離は、光と音の時間差で分かる
+  - 雷の光は一瞬で届きますが、音は秒速約340mです。光ってから音が聞こえるまでの秒数に約340をかけると、落雷までのおおよその距離(m)が分かります。
+  - Light reaches you almost immediately while sound travels at roughly 340 m/s, so the delay in seconds times about 340 gives the strike distance in meters.
+  - 出典: [Speed of sound - Wikipedia](https://en.wikipedia.org/wiki/Speed_of_sound)（CC BY-SA 4.0）
+  - 注記: About 343 m/s at 20 C; claim rounds to 340.
+- [ ] **honey_never_spoils**（science）はちみつが腐りにくい理由
+  - 蜂蜜は水分が約17〜18%と低く、糖濃度が高いため浸透圧で微生物が生育しにくく、さらに酸性(pH約3.5〜4.5)で、蜂の酵素が作る過酸化水素も働きます。古代エジプトの墓から蜂蜜が見つかった話は有名ですが、数千年後も食べられたという確かな記録は確認されていません。
+  - Honey is about 17-18% water with a very high sugar concentration, so osmotic pressure inhibits microbes. It is also acidic (pH roughly 3.5-4.5), and hydrogen peroxide produced by bee enzymes helps. Stories of edible honey in ancient Egyptian tombs are popular, but no solid record confirms honey that stayed edible for millennia.
+  - 出典: [Honey - Wikipedia](https://en.wikipedia.org/wiki/Honey)（CC BY-SA 4.0）
+  - 注記: Confirms ~18% water and acidic, high sugar; but states no edible honey has actually been found in Egyptian tombs (such claims were other substances), contradicting the tomb claim.
+- [ ] **ice_floats**（science）氷の密度が水より小さい理由
+  - 水は凍結時に水素結合によって隙間の多い結晶構造をとり、体積が約9%増えるため氷の密度(約0.92g/cm³)は水より小さくなります。多くの物質は固体のほうが高密度で、水は例外的です。湖が上から凍り、底の生き物が生き延びられる一因でもあります。
+  - Freezing locks water into an open hydrogen-bonded crystal structure that expands about 9%, giving ice a density of about 0.92 g/cm³. Most substances are denser as solids, so water is an exception, and it helps explain why lakes freeze from the top down and aquatic life survives below.
+  - 出典: [Ice - Wikipedia](https://en.wikipedia.org/wiki/Ice)（CC BY-SA 4.0）
+  - 注記: Source gives density 0.9167-0.9168 g/cm3 and 9% volumetric expansion; lake-freezing point not checked.
+- [ ] **rainbow_full_circle**（science）虹は本来は完全な円
+  - 虹は太陽と観測者を結ぶ軸のまわりに広がる円錐状の光の分布で、本来は円形です。地平線が下側を遮るため弧に見えるだけで、航空機や高い山からは円形の虹が観測されることがあります。
+  - A rainbow is a cone of light distributed around the line from the Sun through the observer, so it is inherently circular. The horizon usually hides the lower part, but complete circular rainbows can be seen from aircraft or high vantage points.
+  - 出典: [Rainbow](https://en.wikipedia.org/wiki/Rainbow)（CC BY-SA 4.0）
+  - 注記: Page has a 'Full-circle rainbow' section and says each raindrop scatters light over a circular disc; aircraft viewing not explicitly verified.
+- [ ] **saturn_would_float**（space）土星の平均密度は水より小さい
+  - 土星の平均密度は約0.69g/cm³で水(1.0g/cm³)より小さく、主に水素とヘリウムからなるためです。仮に十分大きな水槽があれば浮かびますが、そのようなものは存在しません。
+  - Saturn's mean density is about 0.69 g/cm³, below water's 1.0 g/cm³, because it is made mostly of hydrogen and helium. It would float in a sufficiently large bath, which of course does not exist.
+  - 出典: [Saturn](https://en.wikipedia.org/wiki/Saturn)（CC BY-SA 4.0）
+  - 注記: Mean density listed as 0.6871 g/cm3; hydrogen/helium composition not separately checked on this page.
+- [ ] **sunlight_8_minutes**（space）太陽光の到達時間は約8分20秒
+  - 太陽と地球の平均距離は約1億5千万kmで、光が届くまでに約8分20秒かかります。私たちが見ているのは約8分前の太陽の姿です。
+  - At an average distance of about 150 million km, light from the Sun takes roughly 8 minutes and 20 seconds to arrive, so we always see the Sun as it was about eight minutes earlier.
+  - 出典: [Sunlight - Wikipedia](https://en.wikipedia.org/wiki/Sunlight)（CC BY-SA 4.0）
+  - 注記: Source says about 8.3 minutes (about 8 min 18 s) from the Sun's surface.
+- [ ] **airliner_cruise**（vehicles）旅客機の巡航高度は約10,000m
+  - 旅客機は燃費のよい高度約9,000〜12,000mを巡航し、外気温はマイナス50℃前後になります。外の空気は薄く、機内は与圧して概ね標高2,000〜2,400m程度の気圧に保たれています。
+  - Airliners cruise at an efficient altitude of about 9,000-12,000 m, where outside temperatures are around -50 °C. The air is thin, so the cabin is pressurized to roughly the equivalent of 2,000-2,400 m above sea level.
+  - 出典: [Cabin pressurization - Wikipedia](https://en.wikipedia.org/wiki/Cabin_pressurization)（CC BY-SA 4.0）
+  - 注記: Cruising altitude around 10,000 m; cabin altitude must be at most 2,438 m (8,000 ft). -50 C temperature not confirmed here.
+- [ ] **black_box_orange**（vehicles）フライトレコーダーは、発見しやすいオレンジ色に塗られている
+  - 航空機の飛行データや操縦室の音声を記録する装置は、通称「ブラックボックス」ですが、実際は事故の際に発見しやすいよう、明るいオレンジ色に塗られています。名前の由来には諸説あります。
+  - The devices that record an aircraft's flight data and cockpit audio are nicknamed black boxes, yet they are painted bright orange so they can be found easily after an accident. The origin of the nickname is disputed.
+  - 出典: [Flight recorder - Wikipedia](https://en.wikipedia.org/wiki/Flight_recorder)（CC BY-SA 4.0）
+  - 注記: The nickname's origin was not checked in the opened text; the page calls 'black box' a misnomer.
+- [ ] **iss_sunrises**（vehicles）ISSは約90分で地球を1周する
+  - ISSは高度約400kmを時速約2万8千kmで飛び、約90分で地球を1周します。1日に約16周するので、宇宙飛行士は約16回の日の出と日の入りを経験します。
+  - The ISS orbits at about 400 km altitude and about 28,000 km/h, circling the Earth roughly every 90 minutes. That is about 16 orbits a day, so astronauts experience about 16 sunrises and sunsets.
+  - 出典: [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station)（CC BY-SA 4.0）
+  - 注記: Page infobox: 92.9 min period, 15.5 orbits/day, 27,600 km/h; body text says 16 sunrises/sunsets daily. Claim's 'about 28,000 km/h' and '16 orbits' slightly rounded.
+- [ ] **maglev_603**（vehicles）山梨リニア実験線で有人走行の世界記録603km/h
+  - 超電導リニア(L0系)は、超電導磁石による磁気浮上と推進で走行します。2015年4月に山梨実験線で、鉄道の有人走行として世界最高速度の時速603kmを記録しました。
+  - Japan's superconducting maglev (the L0 Series) levitates and is propelled magnetically. In April 2015 it set the world speed record for a manned rail vehicle, 603 km/h, on the Yamanashi test line.
+  - 出典: [SCMaglev - Wikipedia](https://en.wikipedia.org/wiki/SCMaglev)（CC BY-SA 4.0）
+  - 注記: Confirms 603 km/h crewed record; the L0 Series name and April 2015 date were not checked in the opened text.
+- [ ] **orbital_speed**（vehicles）第一宇宙速度は約7.9km/s
+  - 地表付近の円軌道を維持するための速度(第一宇宙速度)は約7.9km/s(時速約2万8千km)です。ロケットは主に上昇よりも、この水平方向の速度を得るために大量の燃料を使います。
+  - Staying in a low circular orbit takes about 7.9 km/s (around 28,000 km/h). Rockets spend most of their fuel gaining this sideways speed rather than simply going up.
+  - 出典: [Low Earth orbit - Wikipedia](https://en.wikipedia.org/wiki/Low_Earth_orbit)（CC BY-SA 4.0）
+  - 注記: Article gives about 7.8 km/s (28,000 km/h), claim says 7.9 km/s.
+- [ ] **plane_window_hole**（vehicles）旅客機の窓のブリーザーホール
+  - 旅客機の窓は多くが2〜3枚重ねで、内側以外の窓の1枚に小さな穴(ブリーザーホール)があります。機内外の気圧差を外側の窓に集中させて構造を守り、窓間の結露・曇りを防ぎます。
+  - Airliner windows are typically multi-layered, and one pane has a small breather hole. It makes the outer pane carry the pressure difference between the cabin and outside, protecting the structure, and it lets moisture escape to prevent fogging.
+  - 出典: [Here's why there's a tiny hole in airplane windows](https://www.sciencealert.com/here-s-why-there-s-a-tiny-hole-in-airplane-windows)（© ScienceAlert (reference only)）
+  - 注記: Bleed hole is in the middle pane (claim says 'one pane'); outer pane bears pressure; hole helps prevent fogging.
+- [ ] **shinkansen_1964**（vehicles）東海道新幹線は1964年開業の世界初の高速鉄道
+  - 東海道新幹線は東京オリンピック直前の1964年10月に、東京〜新大阪間で開業しました。最高速度は当初時速210kmで、営業運転で時速200kmを超える世界初の高速鉄道とされます。
+  - The Tokaido Shinkansen opened between Tokyo and Shin-Osaka in October 1964, days before the Tokyo Olympics. Its initial top speed of 210 km/h made it the first railway in the world to operate regularly above 200 km/h.
+  - 出典: [Tokaido Shinkansen](https://en.wikipedia.org/wiki/Tokaido_Shinkansen)（CC BY-SA 4.0）
+  - 注記: Opened 1 Oct 1964, timed for Tokyo Olympics; designed for 210 km/h. 'First above 200 km/h' not verified here.
+- [ ] **shinkansen_kingfisher**（vehicles）500系新幹線の先頭形状は、カワセミのくちばしがヒントになったとされる
+  - トンネルに高速で突入すると、空気の圧力波により「トンネルドン」という大きな音が出ます。500系新幹線は、水に飛び込む際に水しぶきを立てないカワセミのくちばしに学んだとされる細長い先頭形状で、これを抑えました。
+  - When a high-speed train enters a tunnel, pressure waves can cause a loud boom. The long, slender nose of the 500 Series Shinkansen is said to have been designed with the kingfisher's beak in mind, a bird that dives with hardly a splash, to reduce it.
+  - 出典: [500 Series Shinkansen](https://en.wikipedia.org/wiki/500_Series_Shinkansen)（CC BY-SA 4.0）
+  - 注記: Page says nose mimics a kingfisher's beak; tagged 'better source needed'.
+- [ ] **shipping_80_percent**（vehicles）世界貿易量の約80%は海上輸送
+  - 国連貿易開発会議(UNCTAD)などによると、世界の貿易量(重量ベース)の約80%は海上輸送で運ばれています。大量の貨物を安い費用で運べるためで、コンテナ船が重要な役割を担っています。
+  - According to UNCTAD and others, roughly 80% of global trade by volume is carried by sea. Ships move enormous cargoes at low cost per unit, with container ships playing a central role.
+  - 出典: [Review of Maritime Transport](https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport)（© UNCTAD (reference only)）
+  - 注記: Around 80% of the volume of international trade in goods is carried by sea.
+- [ ] **tokyo_first_subway**（vehicles）東京地下鉄道はアジア初の地下鉄(1927年)
+  - 1927年12月30日、東京地下鉄道が上野〜浅草間(約2.2km)を開業し、アジア初の地下鉄となりました。現在の東京メトロ銀座線の一部にあたります。
+  - Tokyo Underground Railway opened between Ueno and Asakusa (about 2.2 km) on December 30, 1927, as Asia's first subway. It is now part of the Tokyo Metro Ginza Line.
+  - 出典: [Tokyo Metro Ginza Line](https://en.wikipedia.org/wiki/Tokyo_Metro_Ginza_Line)（CC BY-SA 4.0）
+  - 出典: [Tokyo Underground Railway](https://en.wikipedia.org/wiki/Tokyo_Underground_Railway)（CC BY-SA 4.0）
+  - 注記: Confirms Ueno-Asakusa opening in 1927; the 2.2 km length was not verified on the page.
+
+## 出典あり
+
+- [ ] **bat_echolocation**（animals）コウモリは反響定位で暗闇でも獲物を捕らえる
+  - コウモリは超音波のパルスを発し、物に当たって返ってくる反響を聞き分けて、周囲の物体の位置や距離を把握します(反響定位)。これにより、暗闇でも飛びながら小さな昆虫を捕らえることができます。
+  - Bats emit ultrasonic pulses and listen to the echoes returning from objects to judge their position and distance. This echolocation lets them catch small insects on the wing even in total darkness.
+  - 出典: [Bat - Wikipedia](https://en.wikipedia.org/wiki/Bat)（CC BY-SA 4.0）
+  - 出典: [Animal echolocation - Wikipedia](https://en.wikipedia.org/wiki/Animal_echolocation)（CC BY-SA 4.0）
+- [ ] **camel_hump_fat**（animals）ラクダのこぶは水ではなく脂肪の貯蔵庫
+  - ラクダのこぶは水を貯めた袋ではなく、脂肪の塊です。食べ物が乏しい砂漠で、この脂肪をエネルギー源に使います。体の他の部分に脂肪がつきにくいため、熱がこもりにくい効果もあるとされます。
+  - A camel's hump is a lump of fat rather than a bag of water. In deserts where food is scarce, the camel metabolizes it for energy. Concentrating fat in the hump may also help the rest of the body shed heat.
+  - 出典: [Camel - Wikipedia](https://en.wikipedia.org/wiki/Camel)（CC BY-SA 4.0）
+- [ ] **elephant_ground_sounds**（animals）ゾウは低周波音で長距離コミュニケーションする
+  - ゾウは人の可聴域より低い周波数(インフラサウンド)の音を発し、数キロ離れた仲間とも交信できると考えられています。音は空気だけでなく地面も伝わり、足や鼻先で受け取っている可能性が研究されています。
+  - Elephants produce sounds below the range of human hearing, which are thought to carry for several kilometers. The sound also travels through the ground, and research suggests they may sense it through their feet.
+  - 出典: [Elephant communication - Wikipedia](https://en.wikipedia.org/wiki/Elephant_communication)（CC BY-SA 4.0）
+  - 出典: [Elephant cognition - Wikipedia](https://en.wikipedia.org/wiki/Elephant_cognition)（CC BY-SA 4.0）
+- [ ] **flamingo_flamboyance**（animals）フラミンゴの集合名詞は flamboyance
+  - 英語でフラミンゴの群れは「flamboyance」と呼ばれます。「華やかさ」を意味する語で、動物の集団を表す集合名詞の面白い例として知られます。
+  - A group of flamingos is called a "flamboyance" in English, a word meaning showiness, and a charming example of the many collective nouns used for animals.
+  - 出典: [Flamingo - Wikipedia](https://en.wikipedia.org/wiki/Flamingo)（CC BY-SA 4.0）
+- [ ] **octopus_blue_blood**（animals）タコの血が青いのは銅のせい
+  - タコの血液は酸素を運ぶのにヘモシアニン(銅を含むたんぱく質)を使うため、酸素と結びつくと青くなります。鰓心臓2つと体心臓1つ、計3つの心臓を持ちます。
+  - Octopuses carry oxygen with hemocyanin, a copper-containing protein, which turns blue when oxygenated. They have two branchial hearts serving the gills and one systemic heart.
+  - 出典: [Octopus](https://en.wikipedia.org/wiki/Octopus)（CC BY-SA 4.0）
+- [ ] **owl_head_turn**（animals）フクロウは眼球がほぼ固定されているため、首を約270度回す
+  - フクロウの眼球は筒状で頭蓋骨にほぼ固定されており、目を動かせません。その代わり、首の骨(頸椎)の数が多く、約270度まで首を回して周囲を見渡します。
+  - An owl's tubular eyes are nearly fixed in the skull, so it cannot move them. Instead, flexible neck vertebrae let it rotate its head up to about 270 degrees to scan its surroundings.
+  - 出典: [Owl - Wikipedia](https://en.wikipedia.org/wiki/Owl)（CC BY-SA 4.0）
+- [ ] **penguin_huddle**（animals）コウテイペンギンは、ハドルで寒さをしのぐ
+  - コウテイペンギンは南極の冬、気温がマイナス数十℃になる中で、数千羽が密集して「ハドル」と呼ばれる群れをつくります。外側と内側の個体が少しずつ入れ替わるため、全員が風を避けて体温を保つことができます。
+  - During the Antarctic winter, with temperatures far below freezing, thousands of emperor penguins form a dense huddle. Individuals gradually rotate between the windy outer edge and the sheltered center, so the whole colony conserves body heat.
+  - 出典: [Emperor penguin](https://en.wikipedia.org/wiki/Emperor_penguin)（CC BY-SA 4.0）
+- [ ] **squirrel_acorns**（animals）リスの貯食行動は、森の木を増やす手助けになる
+  - リスは秋に、冬の食料としてドングリなどの種子を土の中に分散して埋めます(貯食行動)。埋めた場所を忘れた種子が発芽して成長することがあり、結果として森の更新に役立っていると考えられています。
+  - In autumn, squirrels scatter-hoard acorns and other seeds in the soil for winter. Seeds whose locations are forgotten may germinate and grow, so caching likely helps forests regenerate.
+  - 出典: [Squirrel - Wikipedia](https://en.wikipedia.org/wiki/Squirrel)（CC BY-SA 4.0）
+- [ ] **brain_energy**（body）脳は体重の約2%で、エネルギーの約2割を使う
+  - 脳の重さは体重の約2%ですが、安静時に消費するエネルギーは全体の約20%にのぼります。主なエネルギー源はブドウ糖です。
+  - Though only about 2% of body mass, the brain accounts for roughly 20% of resting energy use, relying mainly on glucose.
+  - 出典: [Human brain](https://en.wikipedia.org/wiki/Human_brain)（CC BY-SA 4.0）
+- [ ] **human_dna_same**（body）ヒトのDNAは個人間で約99.9%一致する
+  - 血縁のない2人のヒトの間でも、DNAの塩基配列は約99.9%が共通しています。残りの約0.1%の違いが、体質や見た目などの個人差の元の一部になっています。
+  - Any two unrelated people share roughly 99.9% of their DNA sequence. The remaining differences, including single-letter variants, account for much of human variation.
+  - 出典: [Human genetic variation - Wikipedia](https://en.wikipedia.org/wiki/Human_genetic_variation)（CC BY-SA 4.0）
+- [ ] **bee_waggle_dance**（bugs）ミツバチの8の字ダンス
+  - ミツバチの採餌バチは、巣の中で尻振りダンス(waggle dance)を踊ります。直線部分の向きが太陽に対する方角を、長さが餌場までの距離を表し、仲間はそれを読み取って飛んでいきます。
+  - A forager performs a waggle dance in the hive. The angle of the straight run relative to vertical encodes the direction of the food relative to the Sun, and its duration encodes the distance, which nestmates decode to find the source.
+  - 出典: [Waggle dance - Wikipedia](https://en.wikipedia.org/wiki/Waggle_dance)（CC BY-SA 4.0）
+- [ ] **cicada_17_years**（bugs）周期ゼミは13年または17年周期で一斉に羽化する
+  - 北アメリカの周期ゼミ(マジシカダ属)は、13年または17年かけて地中で成長し、同じ年に数百万匹規模で一斉に羽化します。周期が素数であることは、天敵や他の周期の個体群と発生時期が重なりにくくするためだという説があります。
+  - North American periodical cicadas (Magicicada) develop underground for 13 or 17 years, then emerge in synchrony in the millions. One hypothesis is that prime-numbered cycles make it less likely to coincide with predator cycles or other broods.
+  - 出典: [Magicicada - Wikipedia](https://en.wikipedia.org/wiki/Magicicada)（CC BY-SA 4.0）
+- [ ] **ladybug_spots**（bugs）テントウムシの斑点の数は種によって決まっていて、年齢とは関係ない
+  - テントウムシの背中の斑点の数は、ナナホシテントウは7個というように、種によってほぼ決まっています。成虫になってからは変わらないため、斑点の数から年齢を知ることはできません。
+  - The number of spots on a ladybug's back is largely fixed by species, for example seven in the seven-spot ladybird. It does not change after the adult stage, so spots cannot be used to tell age.
+  - 出典: [Myth buster: Can you tell a ladybug's age by its spots? In a word, no](https://www.reconnectwithnature.org/headlines/news/myth-buster-can-you-tell-a-ladybug-s-age-by-its-spots)（© Forest Preserve District of Will County (reference only)）
+  - 出典: [Coccinella septempunctata](https://en.wikipedia.org/wiki/Coccinella_septempunctata)（CC BY-SA 4.0）
+- [ ] **mosquito_female_bites**（bugs）吸血するのはメスの蚊のみ
+  - 吸血するのは産卵のためにタンパク質を必要とするメスだけで、オスは花の蜜などの糖分を摂ります。メスも普段は蜜を吸い、吸血は卵を作るときに限られます。
+  - Only females take blood meals, since they need protein to develop eggs. Males feed on sugars such as nectar, and females also feed on nectar for energy, taking blood only for reproduction.
+  - 出典: [Mosquito](https://en.wikipedia.org/wiki/Mosquito)（CC BY-SA 4.0）
+- [ ] **spider_not_insect**（bugs）クモ類は昆虫と別の分類群
+  - 昆虫は六脚類で、頭・胸・腹の3部に分かれ脚は6本、触角と翅(多くの種)を持ちます。クモは鋏角類のクモ綱で、頭胸部と腹部の2部に分かれ、脚は8本、触角と翅はありません。
+  - Insects (hexapods) have three body regions, six legs, antennae and often wings. Spiders are arachnids, with two body regions, eight legs, and no antennae or wings.
+  - 出典: [Insect](https://en.wikipedia.org/wiki/Insect)（CC BY-SA 4.0）
+  - 出典: [Spider](https://en.wikipedia.org/wiki/Spider)（CC BY-SA 4.0）
+- [ ] **golden_gate_orange**（buildings）ゴールデンゲートブリッジの塗装色は公式にインターナショナル・オレンジ
+  - 橋の色は公式には朱色に近いインターナショナル・オレンジです。コンサルティング建築家のアーヴィング・モローが、周囲の自然と調和し霧の中でも視認性が高まるとして選びました。
+  - The bridge's color is officially an orange vermilion called International Orange. Consulting architect Irving Morrow chose it because it complements the natural surroundings and enhances visibility in fog.
+  - 出典: [Golden Gate Bridge](https://en.wikipedia.org/wiki/Golden_Gate_Bridge)（CC BY-SA 4.0）
+- [ ] **opera_house_tiles**（buildings）シドニー・オペラハウスの屋根は1,056,006枚のタイルで覆われている
+  - 屋根は一様に白く見えますが、実際には光沢のある白とつや消しのクリーム色の2色のタイル計1,056,006枚が、繊細な矢筈模様を描いています。屋根はプレキャストコンクリートの板とリブで支えられています。
+  - The shells look uniformly white from a distance, but they show a subtle chevron pattern made of 1,056,006 tiles in glossy white and matte cream. Precast concrete panels and ribs support the roof.
+  - 出典: [Sydney Opera House](https://en.wikipedia.org/wiki/Sydney_Opera_House)（CC BY-SA 4.0）
+- [ ] **pisa_tower_lean**（buildings）ピサの斜塔は軟弱地盤のため建設中から傾斜した
+  - 12世紀の着工後まもなく、軟弱な地盤が塔の荷重を支えきれずに傾斜が始まりました。工事は3期に分かれ、完成まで199年を要し、1990年には傾きが約5.5度に達していました。
+  - Soft ground failed to support the structure's weight, and the lean began during 12th-century construction. Work occurred in three stages over 199 years, and by 1990 the tilt had reached about 5.5 degrees.
+  - 出典: [Leaning Tower of Pisa](https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa)（CC BY-SA 4.0）
+- [ ] **skytree_634**（buildings）東京スカイツリーの高さ634mは「武蔵」の語呂合わせ
+  - 東京スカイツリーの高さ634mは、覚えやすい数字として6（む）・3（さ）・4（し）の語呂合わせで選ばれ、この地の旧称「武蔵」にちなんでいます。2009年に計画高さが610mから634mへ引き上げられました。
+  - The 634 m height was selected through numeric substitution, with 6 (mu), 3 (sa) and 4 (shi) standing for Musashi, an old name for the region. The projected height was raised from 610 m to 634 m in 2009.
+  - 出典: [Tokyo Skytree](https://en.wikipedia.org/wiki/Tokyo_Skytree)（CC BY-SA 4.0）
+- [ ] **emoji_docomo_1999**（culture）ドコモの絵文字セット（1999年）
+  - 広く知られるドコモの絵文字セットは、1999年に栗田穂高氏がNTTドコモのiモード用に制作した176個の絵文字です。この作品はニューヨーク近代美術館（MoMA）にも収蔵されています。
+  - The best-known DoCoMo emoji set was created by Shigetaka Kurita in 1999 for NTT DoCoMo's i-mode platform: 176 tiny pixel pictures. His original work is held in the Museum of Modern Art in New York.
+  - 出典: [Emoji](https://en.wikipedia.org/wiki/Emoji)（CC BY-SA 4.0）
+- [ ] **five_yen_hole**（culture）五円硬貨に穴が開けられた経緯
+  - 1948年発行の穴なし五円硬貨は一円黄銅貨と直径が2mmしか違わず、ともにギザ付きで混同されがちでした。1949年の改鋳で孔径5mmの穴が設けられ、識別性の向上（視覚障害者への配慮を含む）や材料費の節約が理由に挙げられています。
+  - The 1948 solid 5-yen coin was a brass coin only 2 mm wider than the 1-yen coin, and both had milled edges, so they were often confused. The 1949 redesign added a 5 mm hole to aid recognition, including for blind users, and to save material.
+  - 出典: [5円硬貨](https://ja.wikipedia.org/wiki/5円硬貨)（CC BY-SA 4.0）
+- [ ] **one_yen_floats**（culture）一円硬貨が水に浮く理由
+  - 純アルミニウム製の一円硬貨は比重2.7で水より重いものの、乾いた状態で水面に静かに平らに置くと、浮力と表面張力が重さと釣り合い浮かびます。界面活性剤で表面張力を下げると沈みます。
+  - The pure-aluminum 1-yen coin has a specific gravity of 2.7, heavier than water, but placed dry and flat on the surface, buoyancy and surface tension balance its weight. Adding detergent lowers the surface tension and it sinks.
+  - 出典: [1円硬貨](https://ja.wikipedia.org/wiki/1円硬貨)（CC BY-SA 4.0）
+- [ ] **randoseru_ransel**（culture）ランドセルの語源と通学かばんへの転用
+  - 幕末に幕府陸軍が洋式化した際、オランダ語の背嚢「ransel」が「ランドセル」になまったとされます。通学用としては、1885年に学習院が生徒自身が学用品を持つ方針の下で導入したことが起源とされています。
+  - When the shogunate modernized its army, the Dutch word "ransel" for a knapsack is said to have become "randoseru." Its use as a school bag is traced to Gakushuin in 1885, which had students carry their own supplies.
+  - 出典: [ランドセル](https://ja.wikipedia.org/wiki/ランドセル)（CC BY-SA 4.0）
+- [ ] **strawberry_200_seeds**（food）イチゴの本当の果実は表面の粒(痩果)
+  - イチゴの可食部は花托が肥大した偽果で、表面の粒(痩果)が植物学上の果実です。1つのイチゴには約200個の痩果が付き、その中に1つずつ種が入っています。
+  - The edible part of a strawberry is an accessory fruit formed from the enlarged receptacle, and the surface dots (achenes) are the botanical fruits. A single strawberry carries about 200 achenes, each containing a seed.
+  - 出典: [Strawberry](https://en.wikipedia.org/wiki/Strawberry)（CC BY-SA 4.0）
+  - 出典: [Why do strawberries have seeds on the outside?](https://www.livescience.com/planet-earth/plants/why-do-strawberries-have-seeds-on-the-outside)（© Live Science (reference only)）
+- [ ] **wasabi_nose**（food）わさびの辛味成分は揮発性
+  - わさびの辛味成分はアリルイソチオシアネートで、すりおろすと酵素の働きで生成され、揮発しやすいため鼻腔に抜けます。唐辛子のカプサイシンのような舌に残る辛さとは性質が異なり、持続時間も短めです。
+  - Wasabi's pungent compound is allyl isothiocyanate, produced by enzymes when it is grated. It is volatile and passes into the nasal cavity, unlike chili's capsaicin, which lingers on the tongue, and its effect fades faster.
+  - 出典: [Wasabi - Wikipedia](https://en.wikipedia.org/wiki/Wasabi)（CC BY-SA 4.0）
+- [ ] **chimborazo_farthest**（geography）地球の中心から最も遠い山頂はチンボラソ山
+  - 地球は自転による遠心力で赤道付近が膨らんでいるため、赤道に近いチンボラソ山(エクアドル)の山頂は、地球の中心から約6,384kmと、海抜でははるかに高いエベレストより遠くなります。
+  - Earth's equatorial bulge puts Chimborazo's summit (about 6,384 km from the center) farther out than Everest's, even though Everest is far higher above sea level.
+  - 出典: [Chimborazo](https://en.wikipedia.org/wiki/Chimborazo)（CC BY-SA 4.0）
+- [ ] **instant_noodle_1958**（inventions）チキンラーメンから始まったインスタントラーメン
+  - インスタントラーメンは、日清食品の安藤百福によって発明され、1958年に「チキンラーメン」の名で発売されました。1971年には世界初のカップめん「カップヌードル」が登場し、即席めんは世界中に普及しました。
+  - Instant noodles were invented by Momofuku Ando of Nissin Foods and launched in 1958 as Chikin Ramen. In 1971 Nissin introduced Cup Noodles, the first cup noodle product, and instant noodles spread worldwide.
+  - 出典: [Instant noodle](https://en.wikipedia.org/wiki/Instant_noodle)（CC BY-SA 4.0）
+- [ ] **postit_weak_glue**（inventions）ポストイットは「弱い接着剤」の用途探しから生まれた
+  - 1968年、3Mのスペンサー・シルバーは超強力接着剤の開発中に、粘着力が低く再利用できる感圧接着剤を偶然生み出しました。数年間用途が見つかりませんでしたが、1974年に同僚のアーサー・フライが本のしおりを固定する用途を着想し、製品化につながりました。
+  - In 1968 Spencer Silver set out to make a super-strong adhesive and instead produced a low-tack, reusable one. For years he found no use for it, until Arthur Fry realized in 1974 that it could anchor a bookmark, which led to the product.
+  - 出典: [Post-it note](https://en.wikipedia.org/wiki/Post-it_note)（CC BY-SA 4.0）
+- [ ] **velcro_burdock**（inventions）面ファスナーは草の実のかぎ形のとげがヒント
+  - 1941年ごろ、スイスの技術者ジョルジュ・デ・メストラルは、ゴボウの実が衣服や犬の毛に付くのを顕微鏡で観察し、無数のかぎ状の突起に注目しました。これが後の面ファスナー（ベルクロ）の着想になりました。
+  - In 1941 George de Mestral examined burdock burrs under a microscope and found hundreds of tiny hooks catching on loops of fabric and fur. That observation led to the fastener he named Velcro, from the French velours and crochet.
+  - 出典: [Velcro](https://en.wikipedia.org/wiki/Velcro)（CC BY-SA 4.0）
+- [ ] **zipper_sundback**（inventions）現代的なジッパーの完成者ギデオン・サンドバック
+  - スウェーデン生まれの米国の技術者ギデオン・サンドバックは、1910年代に先行する留め具を改良し、現代のジッパーにつながる構造を完成させました。「ジッパー」の名称は、のちにB.F.グッドリッチ社が使った商標に由来します。
+  - Swedish-born American engineer Gideon Sundback improved earlier fasteners in the 1910s and developed the structure behind the modern zipper. The name zipper later came from a brand used by the B.F. Goodrich Company.
+  - 出典: [Zipper](https://en.wikipedia.org/wiki/Zipper)（CC BY-SA 4.0）
+- [ ] **fuji_3776**（japan）富士山の標高は3776m
+  - 富士山は日本一高い山で、標高は3776mです。
+  - Mt. Fuji's summit elevation is 3,776 m, the highest in Japan.
+  - 出典: [Mount Fuji - Wikipedia](https://en.wikipedia.org/wiki/Mount_Fuji)（CC BY-SA 4.0）
+- [ ] **pi_circle_ratio**（math）円周率πは円周と直径の比
+  - 円周率πは、円周の長さと直径の長さの比であり、円の大きさによらず一定で、約3.14159です。
+  - Pi is the ratio of a circle's circumference to its diameter, roughly 3.14159. The ratio is constant for every circle, whatever its size.
+  - 出典: [Pi](https://en.wikipedia.org/wiki/Pi)（CC BY-SA 4.0）
+- [ ] **triangle_180**（math）平面上の三角形の内角の和は180度
+  - ユークリッド平面上の三角形では、3つの内角の和は形や大きさによらず常に180度（πラジアン）です。
+  - In a triangle on a Euclidean plane the three interior angles sum to 180 degrees (pi radians), regardless of its shape or size.
+  - 出典: [Triangle](https://en.wikipedia.org/wiki/Triangle)（CC BY-SA 4.0）
+- [ ] **two_even_prime**（math）2は唯一の偶数の素数
+  - 素数とは1と自分自身以外に正の約数をもたない2以上の整数です。2より大きい偶数は2でも割り切れるため素数ではなく、2は唯一の偶数の素数です。
+  - A prime has no positive divisors other than 1 and itself. Every even number greater than 2 is also divisible by 2, so it is composite, which makes 2 the sole even prime.
+  - 出典: [Prime number](https://en.wikipedia.org/wiki/Prime_number)（CC BY-SA 4.0）
+- [ ] **zero_number**（math）ゼロは加法の単位元
+  - 0は「何もない」ことを表す数であり、任意の数に足しても値が変わらない加法単位元です。位取り記数法では、桁が空であることを示す記号としても重要な役割を果たします。
+  - Zero denotes an empty quantity and is the additive identity: adding it to any number leaves the value unchanged. In place-value notation it also marks an empty digit position.
+  - 出典: [0](https://en.wikipedia.org/wiki/0)（CC BY-SA 4.0）
+- [ ] **a440_tuning_pitch**（music）A440は国際的な標準ピッチ
+  - A440は、中央ハの上のA（A4）を440Hzとする調律の標準です。オーケストラや多くの楽器の調律の基準として広く使われています。
+  - A440 is the tuning standard in which the A above middle C (A4) is 440 Hz, widely used as the reference pitch for orchestras and many instruments.
+  - 出典: [A440 (pitch standard)](https://en.wikipedia.org/wiki/A440_(pitch_standard))（CC BY-SA 4.0）
+- [ ] **beethoven_kept_composing**（music）ベートーヴェンは難聴が進行しても作曲を続けた
+  - ベートーヴェンは1798年ごろから難聴の症状が出始め、耳鳴りにも苦しみました。聴力が衰える中でも創作を続け、『ミサ・ソレムニス』と最後の交響曲となる第9番は1824年に初演されました。
+  - Beethoven began experiencing hearing loss around 1798, later compounded by severe tinnitus. He continued composing, and both the Missa solemnis and his final symphony, the Ninth, premiered in 1824.
+  - 出典: [Ludwig van Beethoven](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven)（CC BY-SA 4.0）
+- [ ] **piano_88_keys**（music）標準的なピアノの鍵盤は88鍵
+  - 現代の一般的なピアノは白鍵52、黒鍵36の計88鍵で、A0からC8までの7オクターブと短3度の音域を持ちます。
+  - Most modern pianos have 52 white and 36 black keys, 88 in total, spanning seven octaves plus a minor third from A0 to C8.
+  - 出典: [Piano](https://en.wikipedia.org/wiki/Piano)（CC BY-SA 4.0）
+- [ ] **theremin_no_touch**（music）テルミンは非接触で演奏される電子楽器
+  - テルミンは演奏者が楽器に物理的に触れずに操作する電子楽器で、この点が他の楽器と一線を画します。手とアンテナの距離の変化で音の高さと音量を制御します。
+  - The theremin is an electronic musical instrument controlled without physical contact by the performer, who varies pitch and volume through the distance of the hands from two antennas.
+  - 出典: [Theremin](https://en.wikipedia.org/wiki/Theremin)（CC BY-SA 4.0）
+- [ ] **banana_is_berry**（nature）植物学上、バナナは液果でイチゴは違う
+  - 植物学の「液果(berry)」は、1つの花の子房全体が肉質に育ち、種を含む果実です。バナナはこれに該当しますが、イチゴは花托が肥大した偽果で、表面の粒が本来の果実(痩果)です。
+  - A botanical berry develops from one flower's ovary into a fleshy fruit containing seeds. Bananas qualify. A strawberry is an accessory fruit: the flesh is the enlarged receptacle, and the true fruits are the achenes on its surface.
+  - 出典: [Berry (botany) - Wikipedia](https://en.wikipedia.org/wiki/Berry_(botany))（CC BY-SA 4.0）
+  - 出典: [Strawberry - Wikipedia](https://en.wikipedia.org/wiki/Strawberry)（CC BY-SA 4.0）
+- [ ] **sharks_older_than_trees**（nature）サメの系統は樹木より古い
+  - 軟骨魚類は約4億年以上前のデボン紀以前に出現しており、森を作る本格的な樹木(アーケオプテリスなど)が現れた約3億8千万〜3億6千万年前より古い系統です。
+  - Cartilaginous fishes appeared more than 400 million years ago, earlier than forest-forming trees such as Archaeopteris, which date to roughly 380-360 million years ago.
+  - 出典: [Chondrichthyes](https://en.wikipedia.org/wiki/Chondrichthyes)（CC BY-SA 4.0）
+  - 出典: [Archaeopteris](https://en.wikipedia.org/wiki/Archaeopteris)（CC BY-SA 4.0）
+- [ ] **snow_hexagon**（nature）雪の結晶は六角形を基本にしている
+  - 雪の結晶は、水分子が規則的に並ぶ氷の性質から、六角形を基本とした形になります。気温や湿度によって、板状・針状・樹枝状など多様な形に育ちます。
+  - Ice's molecular lattice is hexagonal, so snow crystals share a six-fold symmetry. Temperature and humidity decide whether they grow as plates, needles or branching dendrites.
+  - 出典: [Snowflake](https://en.wikipedia.org/wiki/Snowflake)（CC BY-SA 4.0）
+- [ ] **tree_rings**（nature）年輪を数えると、木の年齢が分かる
+  - 木は、成長の早い春から夏と、遅い秋から冬で密度が変わり、1年に1本の輪ができます。この数を数えると年齢が分かり、輪の幅から当時の天候も推測できます。
+  - Seasonal growth differences leave one ring per year. Ring width and density are used in dendrochronology to date wood and infer past climate.
+  - 出典: [Tree ring](https://en.wikipedia.org/wiki/Tree_ring)（CC BY-SA 4.0）
+  - 出典: [Dendrochronology](https://en.wikipedia.org/wiki/Dendrochronology)（CC BY-SA 4.0）
+- [ ] **blue_whale_largest**（ocean）シロナガスクジラは、知られる限り史上最大の動物
+  - シロナガスクジラは体長が最大で約30メートルに達するヒゲクジラ類で、これまでに存在したことが知られている動物の中で最大とされています。海中の浮力が巨大な体を支えています。
+  - The blue whale, a baleen whale, reaches lengths of up to about 30 meters. It is regarded as the largest animal known to have ever existed, and the buoyancy of seawater helps support its enormous body.
+  - 出典: [Blue whale](https://en.wikipedia.org/wiki/Blue_whale)（CC BY-SA 4.0）
+- [ ] **coral_is_animal**（ocean）サンゴは刺胞動物門に属する群体性の動物
+  - サンゴは刺胞動物門に属する海の無脊椎動物で、多数のポリプが群体を作ります。造礁サンゴ類は炭酸カルシウムの硬い骨格を分泌し、熱帯の海でサンゴ礁を形づくります。
+  - Corals are colonial marine invertebrates in the phylum Cnidaria, made up of many polyps. Reef-building stony corals secrete a calcium carbonate skeleton and form coral reefs in tropical seas.
+  - 出典: [Coral](https://en.wikipedia.org/wiki/Coral)（CC BY-SA 4.0）
+- [ ] **jellyfish_no_brain**（ocean）クラゲは脳も中枢神経系も持たない
+  - クラゲ類は脳や中枢神経系を持たず、呼吸や循環のための専用の器官も発達していません。感覚と動きは、体に分布する神経網によって調整されています。
+  - Jellyfish have neither a brain nor a central nervous system, and no specialized organs for respiration or circulation. A nerve net distributed through the body coordinates sensing and movement.
+  - 出典: [Jellyfish](https://en.wikipedia.org/wiki/Jellyfish)（CC BY-SA 4.0）
+- [ ] **seahorse_dad_pouch**（ocean）タツノオトシゴは、オスが育児嚢で卵を保育する
+  - タツノオトシゴ類のオスは腹側に育児嚢を持ち、メスが産み付けた卵をその中で孵化まで保護します。1回に最大で1,500個ほどの卵を受け入れる例も知られています。
+  - Male seahorses have a ventral brood pouch into which the female deposits her eggs. The eggs develop there until hatching, and a single male can receive up to about 1,500 eggs.
+  - 出典: [Seahorse](https://en.wikipedia.org/wiki/Seahorse)（CC BY-SA 4.0）
+- [ ] **dandelion_parachute**（plants）タンポポの種は冠毛で風に乗って散布される
+  - タンポポの果実には冠毛と呼ばれる細い毛が付いており、これが空気抵抗を生んで落下を遅らせます。風散布によって種子は親株から離れた場所へ運ばれ、生育域を広げます。
+  - Each dandelion fruit carries a pappus, a ring of fine hairs that creates drag and slows its fall. Wind can then carry the seed well away from the parent plant, helping the species spread.
+  - 出典: [Dandelion](https://en.wikipedia.org/wiki/Dandelion)（CC BY-SA 4.0）
+- [ ] **mimosa_shy_leaves**（plants）オジギソウは刺激を電気信号で葉に伝える
+  - オジギソウは触れられると、刺激が活動電位として葉の付け根の葉枕に伝わり、細胞の水分が移動して小葉が閉じます。外敵を避ける防御や水分の蒸発を減らすためなどと考えられています。
+  - A stimulus travels as an action potential to swollen leaf joints called pulvini, where water shifts out of cells and the leaflets fold. Possible reasons include discouraging grazers or reducing water loss.
+  - 出典: [Mimosa pudica](https://en.wikipedia.org/wiki/Mimosa_pudica)（CC BY-SA 4.0）
+- [ ] **redwood_tallest**（plants）コーストレッドウッドは地球上で最も高い樹木を生む
+  - セコイア（Sequoia sempervirens）はヒノキ科の針葉樹で、これまでに測定された最も高い個体は約116メートルに達します。幹の直径も最大で約9メートルになります。
+  - This cypress-family conifer has reached about 116 meters in height, with trunks up to roughly 9 meters across. No other living tree species is known to grow taller.
+  - 出典: [Sequoia sempervirens](https://en.wikipedia.org/wiki/Sequoia_sempervirens)（CC BY-SA 4.0）
+- [ ] **venus_flytrap_two_touches**（plants）ハエトリグサは2回の刺激を数えて罠を閉じる
+  - ハエトリグサは、葉の内側の感覚毛が約20秒以内に2回刺激されると、約0.1秒で葉を閉じます。1回だけでは閉じないため、雨粒など獲物ではないものに反応してエネルギーを無駄にするのを避けられます。
+  - The trap springs shut in about a tenth of a second, but only when trigger hairs are stimulated twice within about 20 seconds, or one hair twice in quick succession. This filters out false alarms such as raindrops.
+  - 出典: [Venus flytrap](https://en.wikipedia.org/wiki/Venus_flytrap)（CC BY-SA 4.0）
+- [ ] **lightning_hotter_than_sun**（science）雷放電の温度は太陽表面の約5倍
+  - 落雷の放電路は一瞬で約30,000℃に達するとされ、太陽の光球の温度(約5,500℃)の5倍以上です。この急激な加熱で空気が膨張し、雷鳴が生じます。
+  - A lightning discharge channel is estimated to reach about 30,000 °C, more than five times the roughly 5,500 °C of the solar photosphere. The sudden heating expands the air explosively, producing thunder.
+  - 出典: [Lightning](https://en.wikipedia.org/wiki/Lightning)（CC BY-SA 4.0）
+  - 出典: [Photosphere](https://en.wikipedia.org/wiki/Photosphere)（CC BY-SA 4.0）
+- [ ] **moon_moving_away**（space）月は年に約3.8cmずつ遠ざかっている
+  - 月は潮汐相互作用により、年に約3.8cmの割合で地球から遠ざかっています。アポロ計画などで月面に置かれた反射鏡へレーザーを当て、往復時間を測る観測で確認されています。
+  - Tidal interaction pushes the Moon away from Earth at roughly 3.8 cm a year, confirmed by lunar laser ranging, which times laser pulses reflected from retroreflectors placed on the surface.
+  - 出典: [Lunar Laser Ranging experiment](https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiment)（CC BY-SA 4.0）
+- [ ] **no_sound_in_space**（space）真空中では音波が伝播しない
+  - 音波は媒質の振動として伝わるため、ほぼ真空の宇宙空間では伝播しません。宇宙飛行士の会話は電波(無線)で行われ、船内では空気があるため通常どおり音が聞こえます。
+  - Sound waves need a medium to propagate, and space is nearly a vacuum, so they cannot travel through it. Astronauts communicate by radio, and inside a spacecraft the air carries sound normally.
+  - 出典: [Sound - Wikipedia](https://en.wikipedia.org/wiki/Sound)（CC BY-SA 4.0）
+- [ ] **venus_day_longer**（space）金星では自転周期が公転周期を上回る
+  - 金星の自転周期は約243地球日(しかも他の惑星と逆向き)で、公転周期は約225地球日です。このため恒星日は1金星年より長くなります。
+  - Venus has a sidereal rotation period of about 243 Earth days, in the retrograde direction, and an orbital period of about 225 Earth days, so a sidereal day exceeds a Venusian year.
+  - 出典: [Venus](https://en.wikipedia.org/wiki/Venus)（CC BY-SA 4.0）
+- [ ] **basketball_hoop_305**（sports）バスケットボールのリングは地上10フィート
+  - バスケットボールのリングの上端は、ほぼすべての競技レベルでコートから10フィート（3.05メートル）、エンドラインから4フィート（1.22メートル）内側に設置されます。
+  - At almost all levels of competition, the top of the rim is exactly 10 feet (3.05 metres) above the court and 4 feet (1.22 metres) inside the baseline.
+  - 出典: [Basketball](https://en.wikipedia.org/wiki/Basketball)（CC BY-SA 4.0）
+- [ ] **marathon_42195**（sports）マラソンの公式距離は42.195キロメートル
+  - マラソンの距離は42.195キロメートル（約26.22マイル）と定められています。主に道路を走るロードレースとして行われますが、トレイルのコースで行われることもあります。
+  - The marathon is a long-distance foot race of 42.195 kilometres (about 26.22 miles). It is usually run as a road race, although it can also be held on trail routes.
+  - 出典: [Marathon](https://en.wikipedia.org/wiki/Marathon)（CC BY-SA 4.0）
+- [ ] **olympic_five_rings**（sports）五輪のマークは人が住む5つの大陸を表す
+  - 五輪のマークは、青・黄・黒・緑・赤の5つの輪が白地に組み合わさった意匠で、人が住む世界の5つの大陸（南北アメリカは1つの大陸とみなす）を表します。1913年にクーベルタンが考案しました。
+  - The Olympic rings are five interlocking rings in blue, yellow, black, green and red on a white field. They represent the inhabited continents of the world, with the Americas considered as one. Pierre de Coubertin created the symbol in 1913.
+  - 出典: [Olympic symbols](https://en.wikipedia.org/wiki/Olympic_symbols)（CC BY-SA 4.0）
+- [ ] **table_tennis_ball_40mm**（sports）卓球の公式球は直径40ミリ
+  - 国際卓球連盟（ITTF）は、2000年のシドニー五輪後にルールを改め、公式球を40ミリのものにしました。
+  - After the 2000 Sydney Olympics, the ITTF instituted rule changes for table tennis, including the use of the 40 mm ball.
+  - 出典: [Table tennis](https://en.wikipedia.org/wiki/Table_tennis)（CC BY-SA 4.0）
+- [ ] **bicycle_first**（vehicles）初期の自転車（ドライジーネ）にはペダルがなかった
+  - 1817年にドイツのカール・ドライスが考案した「ドライジーネ」は、自転車の原型とされ、ペダルがなく、乗り手が地面を足で蹴って進みました。ペダルを前輪に付けた型は、その後の1860年代に登場します。
+  - The draisine, devised by Karl Drais in Germany in 1817 and regarded as the ancestor of the bicycle, had no pedals; riders pushed themselves along with their feet. Pedals mounted on the front wheel appeared in the 1860s.
+  - 出典: [Dandy horse - Wikipedia](https://en.wikipedia.org/wiki/Dandy_horse)（CC BY-SA 4.0）
+  - 出典: [Bicycle - Wikipedia](https://en.wikipedia.org/wiki/Bicycle)（CC BY-SA 4.0）
+- [ ] **steel_ship_floats**（vehicles）鉄の船が浮くのはアルキメデスの原理
+  - 船は鉄でできていても、中が空洞で全体の平均密度が水より小さくなるため浮きます。押しのけた水の重さと同じ大きさの浮力が働くというアルキメデスの原理で説明されます。
+  - Even though steel is dense, a ship's hull encloses air, so its average density is below water's. The buoyant force equals the weight of the water displaced, per Archimedes' principle.
+  - 出典: [Ship](https://en.wikipedia.org/wiki/Ship)（CC BY-SA 4.0）
+  - 出典: [Buoyancy](https://en.wikipedia.org/wiki/Buoyancy)（CC BY-SA 4.0）
+- [ ] **wright_first_flight**（vehicles）ライト兄弟の初飛行は12秒・約37m
+  - 1903年12月17日、ライト兄弟のフライヤー号が米国ノースカロライナ州キティホークで人類初の動力飛行に成功しました。1回目の飛行は12秒・約37メートルで、その日の最長飛行は59秒でした。
+  - On December 17, 1903, the Wright Flyer made the first powered, controlled flight at Kitty Hawk, North Carolina. The first flight lasted 12 seconds and covered about 37 m; the longest of that day's four flights was 59 seconds.
+  - 出典: [Wright Flyer - Wikipedia](https://en.wikipedia.org/wiki/Wright_Flyer)（CC BY-SA 4.0）
+  - 出典: [Wright brothers - Wikipedia](https://en.wikipedia.org/wiki/Wright_brothers)（CC BY-SA 4.0）
+- [ ] **fog_is_cloud**（weather）霧は地表付近に生じる低い雲の一種
+  - 霧は、微小な水滴や氷の粒が地表付近の空気中に浮かんだ状態で、低く垂れ込める層雲に似た性質を持ちます。水辺など湿った場所の近くで発生しやすい現象です。
+  - Fog is a visible aerosol of tiny water droplets or ice crystals suspended near the surface, resembling stratus cloud. It forms most readily near moist sources such as lakes and oceans.
+  - 出典: [Fog](https://en.wikipedia.org/wiki/Fog)（CC BY-SA 4.0）
+- [ ] **hail_ice_layers**（weather）雹は積乱雲内で氷が層状に成長したもの
+  - 雹は、積乱雲内の上昇気流で氷の粒が上下に運ばれ、過冷却の水滴を取り込みながら成長して地上に落ちてきたものです。断面には透明な氷の層と白く不透明な層が交互に見られます。
+  - Hailstones form in thunderstorm updrafts, growing as they collect water droplets. A cross-section shows layers of transparent and translucent ice alternating with thin, white, opaque layers.
+  - 出典: [Hail](https://en.wikipedia.org/wiki/Hail)（CC BY-SA 4.0）
+- [ ] **typhoon_eye_calm**（weather）台風の目では風が弱く、雲も少ない
+  - 発達した台風の中心には「目」と呼ばれる領域があり、通常は風が穏やかで雲も少なくなっています。一方、その周囲の壁雲では非常に強い風と雨が観測されます。
+  - The eye of a well-developed tropical cyclone is normally calm and free of strong winds and heavy cloud, while the surrounding eyewall holds the most intense winds and rain.
+  - 出典: [Tropical cyclone](https://en.wikipedia.org/wiki/Tropical_cyclone)（CC BY-SA 4.0）
+- [ ] **wind_named_from**（weather）風向は風が吹いてくる方位で表す
+  - 風向は、風が吹いてくる方位で表す決まりです。たとえば北風は、北から南へ向かって吹く風を指し、風が向かう先ではありません。
+  - By convention, wind direction is the direction from which the wind is blowing. A northerly wind therefore moves from north to south, not toward the north.
+  - 出典: [Wind](https://en.wikipedia.org/wiki/Wind)（CC BY-SA 4.0）

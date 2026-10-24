@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
 
@@ -27,9 +28,11 @@ class _InterestsScreenState extends ConsumerState<InterestsScreen> {
   void _add() {
     final l = AppLocalizations.of(context);
     final notifier = ref.read(settingsProvider.notifier);
-    if (ref.read(settingsProvider).interestKeywords.length >= maxInterestKeywords) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(l.interestsMax(maxInterestKeywords))));
+    if (ref.read(settingsProvider).interestKeywords.length >=
+        maxInterestKeywords) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l.interestsMax(maxInterestKeywords))),
+      );
       return;
     }
     if (notifier.addInterestKeyword(_controller.text)) _controller.clear();
@@ -44,9 +47,9 @@ class _InterestsScreenState extends ConsumerState<InterestsScreen> {
     final theme = Theme.of(context);
 
     Widget header(String text) => Padding(
-          padding: const EdgeInsets.only(top: 20, bottom: 8),
-          child: Text(text, style: theme.textTheme.titleSmall),
-        );
+      padding: const EdgeInsets.only(top: 20, bottom: 8),
+      child: Text(text, style: theme.textTheme.titleSmall),
+    );
 
     return Scaffold(
       appBar: AppBar(title: Text(l.interestsScreenTitle)),
@@ -55,26 +58,26 @@ class _InterestsScreenState extends ConsumerState<InterestsScreen> {
         children: [
           Text(l.interestsNote, style: theme.textTheme.bodySmall),
           header(l.interestsCategories),
-          Wrap(spacing: 8, runSpacing: 8, children: [
-            for (final c in allCategories)
-              FilterChip(
-                key: Key('interest_cat_$c'),
-                label: Text(categoryLabel(l, c)),
-                selected: settings.interestCategories.contains(c),
-                onSelected: (_) => notifier.toggleInterestCategory(c),
-              ),
-          ]),
+          CategoryChips(
+            keyPrefix: 'interest_cat_',
+            selected: settings.interestCategories,
+            onToggle: notifier.toggleInterestCategory,
+          ),
           if (band.isTeenOrAdult) ...[
             header(l.interestsScenes),
-            Wrap(spacing: 8, runSpacing: 8, children: [
-              for (final s in allScenes)
-                FilterChip(
-                  key: Key('interest_scene_$s'),
-                  label: Text(sceneLabel(l, s)),
-                  selected: settings.interestScenes.contains(s),
-                  onSelected: (_) => notifier.toggleInterestScene(s),
-                ),
-            ]),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final s in allScenes)
+                  FilterChip(
+                    key: Key('interest_scene_$s'),
+                    label: Text(sceneLabel(l, s)),
+                    selected: settings.interestScenes.contains(s),
+                    onSelected: (_) => notifier.toggleInterestScene(s),
+                  ),
+              ],
+            ),
           ],
           header(l.interestsKeywords),
           Row(
@@ -101,14 +104,18 @@ class _InterestsScreenState extends ConsumerState<InterestsScreen> {
             ],
           ),
           const SizedBox(height: 12),
-          Wrap(spacing: 8, runSpacing: 8, children: [
-            for (final k in settings.interestKeywords)
-              InputChip(
-                key: Key('keyword_$k'),
-                label: Text(k),
-                onDeleted: () => notifier.removeInterestKeyword(k),
-              ),
-          ]),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final k in settings.interestKeywords)
+                InputChip(
+                  key: Key('keyword_$k'),
+                  label: Text(k),
+                  onDeleted: () => notifier.removeInterestKeyword(k),
+                ),
+            ],
+          ),
         ],
       ),
     );

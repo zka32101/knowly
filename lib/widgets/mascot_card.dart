@@ -37,8 +37,12 @@ class MascotFace extends StatefulWidget {
     required this.stage,
     this.size = 56,
     this.mood = MascotMood.idle,
+    this.accessory,
   });
   final MascotStage stage;
+
+  /// 今の季節の飾り（スタンプ帳を完成させると着る）。
+  final String? accessory;
   final double size;
   final MascotMood mood;
 
@@ -122,6 +126,14 @@ class _MascotFaceState extends State<MascotFace> with SingleTickerProviderStateM
                   child: Transform.scale(scale: scale, child: face),
                 ),
               ),
+              if (widget.accessory != null)
+                Positioned(
+                  left: -widget.size * 0.12,
+                  top: -widget.size * 0.12,
+                  child: Text(widget.accessory!,
+                      key: const Key('mascot_accessory'),
+                      style: TextStyle(fontSize: widget.size * 0.42)),
+                ),
               if (badge != null)
                 Positioned(
                   right: -widget.size * 0.1,
@@ -156,7 +168,8 @@ class MascotCard extends ConsumerWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           child: Row(
             children: [
-              MascotFace(stage: stage, size: 40),
+              MascotFace(
+                  stage: stage, size: 40, accessory: ref.watch(mascotAccessoryProvider)),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(

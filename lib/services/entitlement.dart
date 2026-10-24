@@ -2,7 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../state/providers.dart';
 import '../state/settings.dart';
 
 enum PurchasePeriod { monthly, annual }
@@ -75,7 +77,7 @@ class RevenueCatEntitlementService implements EntitlementService {
       return _active(await Purchases.getCustomerInfo());
     } catch (e) {
       debugPrint('isPremium failed: $e');
-      return false;
+      rethrow; // オフラインなどで確認できないとき。呼び出し側が、前回の結果を使う
     }
   }
 
@@ -108,7 +110,7 @@ class RevenueCatEntitlementService implements EntitlementService {
       return out;
     } catch (e) {
       debugPrint('offers failed: $e');
-      return const [];
+      rethrow; // オフラインなど。画面で「ネットにつないでください」と案内する
     }
   }
 
@@ -155,11 +157,38 @@ final entitlementServiceProvider = Provider<EntitlementService>((ref) {
   return key.isEmpty ? const FreeEntitlementService() : RevenueCatEntitlementService(key);
 });
 
+/// 最後に確認できたプレミアムの状態を、この日数まで、オフラインのとき使う。
+const premiumOfflineGraceDays = 14;
+const _premiumCacheKey = 'premiumCache'; // 'true|<unix ms>' / 'false|<unix ms>'
+
+/// 確認できたら保存して返す。確認できない（オフラインなど）ときは、猶予の間は前回の結果を返す。
+Future<bool> premiumWithOfflineCache(
+  Future<bool> Function() check,
+  SharedPreferences prefs,
+  DateTime now,
+) async {
+  try {
+    final active = await check();
+    await prefs.setString(_premiumCacheKey, '$active|${now.millisecondsSinceEpoch}');
+    return active;
+  } catch (_) {
+    final parts = (prefs.getString(_premiumCacheKey) ?? '').split('|');
+    if (parts.length != 2) return false;
+    final at = int.tryParse(parts[1]);
+    if (at == null) return false;
+    final age = now.difference(DateTime.fromMillisecondsSinceEpoch(at));
+    return parts[0] == 'true' && !age.isNegative && age.inDays < premiumOfflineGraceDays;
+  }
+}
+
 /// プレミアムかどうか。Kids/Junior は、すべて無料なので購入の SDK を呼ばない（通信を発生させない）。
+/// オフラインのときは、最後に確認できた状態を [premiumOfflineGraceDays] 日まで使う。
 final isPremiumProvider = FutureProvider<bool>((ref) async {
   final band = ref.watch(settingsProvider.select((s) => s.ageBand));
   if (band == null || band.isChild) return false;
-  return ref.watch(entitlementServiceProvider).isPremium();
+  final service = ref.watch(entitlementServiceProvider);
+  return premiumWithOfflineCache(
+      service.isPremium, ref.watch(sharedPreferencesProvider), ref.read(nowProvider));
 });
 
 /// 購入できるプラン（プレミアム画面を開いたときに取得する）。

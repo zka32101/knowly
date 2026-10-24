@@ -97,7 +97,7 @@ class _ShareDialogState extends ConsumerState<_ShareDialog> {
       if (data == null) return;
       await ref.read(shareServiceProvider).shareImage(
             data.buffer.asUint8List(),
-            text: '${widget.title} - $appName',
+            text: '${widget.title} - $appName #$appName',
           );
       if (mounted) Navigator.of(context).pop();
     } finally {

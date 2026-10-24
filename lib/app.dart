@@ -12,11 +12,18 @@ import 'screens/listen_screen.dart';
 import 'screens/myth_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/badges_screen.dart';
+import 'screens/league_screen.dart';
+import 'screens/map_screen.dart';
 import 'screens/mascot_screen.dart';
 import 'screens/capsule_screen.dart';
 import 'screens/hubs.dart';
 import 'screens/main_shell.dart';
 import 'screens/premium_screen.dart';
+import 'screens/recap_screen.dart';
+import 'screens/voice_quiz_screen.dart';
+import 'screens/word_screen.dart';
+import 'screens/words_screen.dart';
+import 'screens/stamps_screen.dart';
 import 'screens/swipe_quiz_screen.dart';
 import 'screens/zukan_screen.dart';
 import 'widgets/celebration_layer.dart';
@@ -28,8 +35,11 @@ import 'screens/projects_screen.dart';
 import 'screens/saved_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/today_screen.dart';
+import 'state/clock_sync.dart';
 import 'state/notification_sync.dart';
 import 'state/settings.dart';
+import 'l10n/knowly_localizations.dart';
+import 'models/age_band.dart';
 import 'theme.dart';
 import 'state/widget_sync.dart';
 
@@ -83,7 +93,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/listen', builder: (_, _) => const ListenScreen()),
       GoRoute(path: '/today', builder: (_, _) => const TodayScreen()),
       GoRoute(path: '/myths', builder: (_, _) => const MythScreen()),
-      GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
+      GoRoute(
+          path: '/library',
+          builder: (_, state) =>
+              LibraryScreen(autofocus: state.uri.queryParameters['focus'] == '1')),
       GoRoute(path: '/interests', builder: (_, _) => const InterestsScreen()),
       GoRoute(path: '/saved', builder: (_, _) => const SavedScreen()),
       GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),
@@ -97,6 +110,20 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/zukan', builder: (_, _) => const ZukanScreen()),
       GoRoute(path: '/capsule', builder: (_, _) => const CapsuleScreen()),
       GoRoute(path: '/swipe', builder: (_, _) => const SwipeQuizScreen()),
+      GoRoute(
+        path: '/word/:id',
+        builder: (_, state) => WordScreen(entryId: state.pathParameters['id']!),
+      ),
+      GoRoute(path: '/words', builder: (_, _) => const WordsScreen()),
+      GoRoute(path: '/wordquiz', builder: (_, _) => const WordQuizScreen()),
+      GoRoute(
+        path: '/map',
+        builder: (_, state) => MapScreen(startId: state.uri.queryParameters['id']),
+      ),
+      GoRoute(path: '/voicequiz', builder: (_, _) => const VoiceQuizScreen()),
+      GoRoute(path: '/league', builder: (_, _) => const LeagueScreen()),
+      GoRoute(path: '/recap', builder: (_, _) => const RecapScreen()),
+      GoRoute(path: '/stamps', builder: (_, _) => const StampsScreen()),
       GoRoute(path: '/premium', builder: (_, _) => const PremiumScreen()),
     ],
   );
@@ -108,13 +135,16 @@ class KnowlyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = ref.watch(uiLanguageProvider);
+    ref.watch(clockSyncProvider);
     ref.watch(notificationSyncProvider);
     ref.watch(widgetSyncProvider);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+    final uiStyle = uiStyleFor(band, juniorRuby: ref.watch(settingsProvider.select((s) => s.juniorRuby)));
     return MaterialApp.router(
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
       builder: (context, child) {
-        final factor = band?.textScaleFactor ?? 1.0;
+        final factor = (band?.textScaleFactor ?? 1.0) *
+            textSizeFactors[ref.watch(settingsProvider.select((s) => s.textSize))];
         var app = child!;
         if (factor != 1.0) {
           final media = MediaQuery.of(context);
@@ -131,8 +161,8 @@ class KnowlyApp extends ConsumerWidget {
       routerConfig: ref.watch(routerProvider),
       locale: Locale(lang),
       supportedLocales: AppLocalizations.supportedLocales,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
+      localizationsDelegates: [
+        KnowlyLocalizationsDelegate(uiStyle),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -142,3 +172,11 @@ class KnowlyApp extends ConsumerWidget {
     );
   }
 }
+
+/// モード（年代）→ 日本語の表記。まだ年代を選んでいない（最初の画面）ときは、ふつうの表記。
+UiStyle uiStyleFor(AgeBand? band, {bool juniorRuby = true}) => switch (band) {
+      AgeBand.kids => UiStyle.kids,
+      AgeBand.junior => juniorRuby ? UiStyle.junior : UiStyle.juniorPlain,
+      AgeBand.teen => UiStyle.teen,
+      _ => UiStyle.adult,
+    };

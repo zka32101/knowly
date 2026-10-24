@@ -1,0 +1,44 @@
+interestsTitle	好きなジャンルを選ぼう
+battleHandHint	1台の端末を順番に回して遊ぼう。
+battleTimeHint	早く答えるほどボーナス点がもらえるよ（正解数が同じときの順位づけに使うよ）。
+reviewNone	今日の復習はないよ。「知らなかった」を選んだ雑学が、明日から出てくるよ。
+reviewDoneNote	また明日、復習しよう。
+dailyComeBack	明日もまた挑戦しよう！
+mascotHint	雑学を開くと+1、「知らなかった」を選ぶと+2。ポイントが貯まるほど相棒が育つよ。
+mascotMax	最大まで育ったよ！
+mascotNext	あと{n}で「{name}」に成長するよ
+mascotSay_egg	…おもしろい雑学、待ってるよ。
+mascotSay_chick	ぴよっ！ 雑学っておもしろいね！
+mascotSay_chicklet	ふわふわ！ もっと知りたいな。
+mascotSay_owl	ほー！ ものしりになってきたよ。
+mascotSay_professor	ふむふむ、なるほど。きみは博士だね。
+mascotSay_king	ほっほー！ 雑学の王様だ！
+celebrateStage	{name}に成長したよ！
+celebrateBadge	バッジをゲット！
+celebrateOutfit	季節の衣装をゲット！
+stampsOutfit	衣装ゲット！
+zukanHint	見た雑学が図鑑に増えていくよ。
+capsuleHint	1日1回、ふしぎな雑学が出てくるよ。
+capsuleOpen	開けてみよう！
+capsuleDone	また明日あけよう！
+hubPlayIntro	クイズやゲームで、雑学を楽しもう。
+hubCollectIntro	雑学を見るほど、相棒が育ってコレクションが増えるよ。
+hubExploreIntro	雑学を探したり、深掘りしたりしよう。
+wordsHint	用語の解説を見ると、ここに増えていくよ。
+mapNoLinks	つながる雑学はまだないよ
+leagueNote	この端末で遊んだ対戦の得点を、1週間ごとに集計するよ。外には送らないよ。
+leagueEmpty	まだ記録がないよ。2人以上で対戦すると、ここに載るよ。
+leagueClearBody	今週の得点が消えるよ。先週の優勝者は残るよ。
+recapNote	今日までの7日間と、その前の7日間を比べるよ。
+recapMsgNone	今週はお休みだったね。ひとつ読んで再開しよう！
+recapMsgSome	いいペース！ 少しずつ増えていくよ。
+recapMsgGreat	すごい！ ほぼ毎日遊んだね！
+recapBanner	今週のレポートができたよ
+stampsHint	いまの季節にぴったりの雑学を読むと、スタンプが1つ。{n}つ集めると、相棒がその季節の衣装を着るよ。
+badgesCount	{total}個中{n}個ゲット！
+dailyStreak	{n}日連続で挑戦中！
+swipeCombo	🔥 {n}連続！
+battleDraw	引き分け！
+battleWinner	{name}の勝ち！
+battleFinished	結果発表！
+hintHomeTips	カードをタップするとめくれるよ。「遊ぶ」にはクイズもあるよ！

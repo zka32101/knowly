@@ -11,13 +11,21 @@ abstract class TtsService {
   Future<void> stop();
 }
 
+String _ttsLocale(String language) => switch (language) {
+      'ja' => 'ja-JP',
+      'zh' => 'zh-CN',
+      'ko' => 'ko-KR',
+      'es' => 'es-ES',
+      _ => 'en-US',
+    };
+
 class DeviceTtsService implements TtsService {
   final FlutterTts _tts = FlutterTts();
 
   @override
   Future<void> speak(String text, {required String language, double? rate}) async {
     try {
-      await _tts.setLanguage(language == 'ja' ? 'ja-JP' : 'en-US');
+      await _tts.setLanguage(_ttsLocale(language));
       await _tts.setSpeechRate(rate ?? 0.4);
       await _tts.speak(text);
     } catch (_) {}
@@ -26,7 +34,7 @@ class DeviceTtsService implements TtsService {
   @override
   Future<void> speakAndWait(String text, {required String language, double? rate}) async {
     try {
-      await _tts.setLanguage(language == 'ja' ? 'ja-JP' : 'en-US');
+      await _tts.setLanguage(_ttsLocale(language));
       await _tts.setSpeechRate(rate ?? 0.4);
       await _tts.awaitSpeakCompletion(true);
       // iOS: 画面を消したり他のアプリに切り替えても読み上げが続くように、再生カテゴリにする。

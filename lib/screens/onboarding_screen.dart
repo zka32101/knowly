@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
 
@@ -45,16 +46,36 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               onChanged: (v) {
                 notifier.setUiLanguage(v);
                 // 雑学の本文は日本語・英語だけ。ほかの言語の画面では、本文は英語（自動）にする。
-                notifier.setContentLanguage(contentLanguageCodes.contains(v) ? v : null);
+                notifier.setContentLanguage(
+                  contentLanguageCodes.contains(v) ? v : null,
+                );
               },
               child: Column(
                 children: [
-                  RadioListTile<String?>(value: null, title: Text(l.languageSystem)),
-                  RadioListTile<String?>(value: 'ja', title: Text(l.languageJa)),
-                  RadioListTile<String?>(value: 'en', title: Text(l.languageEn)),
-                  RadioListTile<String?>(value: 'zh', title: Text(l.languageZh)),
-                  RadioListTile<String?>(value: 'ko', title: Text(l.languageKo)),
-                  RadioListTile<String?>(value: 'es', title: Text(l.languageEs)),
+                  RadioListTile<String?>(
+                    value: null,
+                    title: Text(l.languageSystem),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'ja',
+                    title: Text(l.languageJa),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'en',
+                    title: Text(l.languageEn),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'zh',
+                    title: Text(l.languageZh),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'ko',
+                    title: Text(l.languageKo),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'es',
+                    title: Text(l.languageEs),
+                  ),
                 ],
               ),
             ),
@@ -84,9 +105,26 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 _band = y == null ? null : AgeBand.fromBirthYear(y);
               }),
             ),
+            const SizedBox(height: 16),
+            Text(l.onboardingPickBand, style: theme.textTheme.bodySmall),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final b in AgeBand.values)
+                  ChoiceChip(
+                    key: Key('band_${b.name}'),
+                    label: Text(modeLabel(l, b)),
+                    selected: _band == b,
+                    onSelected: (_) => setState(() {
+                      _birthYear = null;
+                      _band = b;
+                    }),
+                  ),
+              ],
+            ),
             if (_band != null) ...[
-              const SizedBox(height: 16),
-              Text(modeLabel(l, _band!), style: theme.textTheme.titleMedium),
               if (_band!.isChild) ...[
                 const SizedBox(height: 12),
                 Card(
@@ -95,7 +133,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(l.parentNoteTitle, style: theme.textTheme.titleSmall),
+                        Text(
+                          l.parentNoteTitle,
+                          style: theme.textTheme.titleSmall,
+                        ),
                         const SizedBox(height: 4),
                         Text(l.parentNoteBody),
                       ],
@@ -113,17 +154,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           children: [
             Text(l.interestsTitle, style: theme.textTheme.headlineSmall),
             const SizedBox(height: 16),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final c in allCategories)
-                  FilterChip(
-                    label: Text(categoryLabel(l, c)),
-                    selected: settings.interestCategories.contains(c),
-                    onSelected: (_) => notifier.toggleInterestCategory(c),
-                  ),
-              ],
+            CategoryChips(
+              keyPrefix: 'interest_cat_',
+              selected: settings.interestCategories,
+              onToggle: notifier.toggleInterestCategory,
             ),
             if (_band!.isTeenOrAdult) ...[
               const SizedBox(height: 16),
@@ -153,9 +187,17 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           child: Column(
             children: [
               Expanded(child: SingleChildScrollView(child: body)),
+              if (_step == 2)
+                TextButton(
+                  key: const Key('onboarding_skip'),
+                  onPressed: _finish,
+                  child: Text(l.onboardingSkip),
+                ),
               FilledButton(
                 key: const Key('onboarding_next'),
-                style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(52),
+                ),
                 onPressed: onNext,
                 child: Text(l.continueButton),
               ),

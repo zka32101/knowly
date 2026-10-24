@@ -14,11 +14,13 @@ void main() {
   final template = _arb('ja');
   final keys = template.keys.where((k) => !k.startsWith('@')).toList();
 
-  test('対応する画面の言語は5つ（ja, en, zh, ko, es）で、本文は ja/en だけ', () {
+  test('対応する画面の言語は5つ（ja, en, zh, ko, es）で、本文も同じ5つ（訳がない雑学は英語）', () {
     expect(supportedLanguageCodes, ['ja', 'en', 'zh', 'ko', 'es']);
-    expect(contentLanguageCodes, ['ja', 'en']);
-    expect(resolveContentLanguage('ja'), 'ja');
-    for (final c in ['en', 'zh', 'ko', 'es', null, 'fr']) {
+    expect(contentLanguageCodes, ['ja', 'en', 'zh', 'ko', 'es']);
+    for (final c in ['ja', 'en', 'zh', 'ko', 'es']) {
+      expect(resolveContentLanguage(c), c, reason: c);
+    }
+    for (final c in [null, 'fr']) {
       expect(resolveContentLanguage(c), 'en', reason: '$c');
     }
     expect(resolveLanguage('fr'), 'en');

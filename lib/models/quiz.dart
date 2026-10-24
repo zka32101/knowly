@@ -9,7 +9,7 @@ class QuizItem {
 
   factory QuizItem.fromJson(Map<String, dynamic> json) {
     final statements = <String, ({String statement, bool answer})>{};
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final m = json[lang] as Map<String, dynamic>?;
       if (m != null) {
         statements[lang] = (
@@ -37,7 +37,7 @@ class ChoiceQuiz {
 
   factory ChoiceQuiz.fromJson(Map<String, dynamic> json) {
     final texts = <String, ({String question, List<String> options, int answer})>{};
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final m = json[lang] as Map<String, dynamic>?;
       if (m != null) {
         texts[lang] = (

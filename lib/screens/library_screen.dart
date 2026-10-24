@@ -1,9 +1,11 @@
+import '../models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../widgets/category_chips.dart';
 import '../logic/search.dart';
 import '../models/age_band.dart';
 import '../models/trivia.dart';
@@ -18,7 +20,10 @@ enum StatusFilter { saved, knew, learned, unrated }
 /// ライブラリ: すべての雑学を、検索とフィルター（ジャンル・シーン・状態）で探す。
 /// 日本語と英語のどちらのことばでも探せる。
 class LibraryScreen extends ConsumerStatefulWidget {
-  const LibraryScreen({super.key});
+  const LibraryScreen({super.key, this.autofocus = false});
+
+  /// ホームの虫めがねから来たとき、すぐ入力できるようにする。
+  final bool autofocus;
 
   @override
   ConsumerState<LibraryScreen> createState() => _LibraryScreenState();
@@ -57,7 +62,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
     final tokens = queryTokens(_query);
     final scored = <(Trivia, int)>[];
     for (final t in ref.watch(allEligibleProvider)) {
-      if (_categories.isNotEmpty && !_categories.contains(t.category)) continue;
+      if (_categories.isNotEmpty && !CategoryRegistry.matches(_categories, t.category)) continue;
       if (_scenes.isNotEmpty && !t.scenes.any(_scenes.contains)) continue;
       if (!_statusMatches(t, settings)) continue;
       final entry = index[t.id];
@@ -101,15 +106,11 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   header(l.filterCategoryHeader),
-                  Wrap(spacing: 8, runSpacing: 8, children: [
-                    for (final c in allCategories)
-                      FilterChip(
-                        label: Text(categoryLabel(l, c)),
-                        selected: _categories.contains(c),
-                        onSelected: (v) =>
-                            update(() => v ? _categories.add(c) : _categories.remove(c)),
-                      ),
-                  ]),
+                  CategoryChips(
+                    selected: _categories,
+                    onToggle: (c) => update(
+                        () => _categories.contains(c) ? _categories.remove(c) : _categories.add(c)),
+                  ),
                   if (band.isTeenOrAdult) ...[
                     header(l.filterSceneHeader),
                     Wrap(spacing: 8, runSpacing: 8, children: [
@@ -165,6 +166,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
     final results = _results();
+    final recent = ref.watch(settingsProvider.select((s) => s.recentSearches));
     final resolve = ref.watch(levelResolverProvider);
     final unlocked = ref.watch(unlockedIdsProvider);
     final band = ref.watch(settingsProvider.select((s) => s.ageBand)) ?? AgeBand.adult;
@@ -174,6 +176,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
       appBar: AppBar(
         title: TextField(
           key: const Key('search_field'),
+          autofocus: widget.autofocus,
           controller: _controller,
           textInputAction: TextInputAction.search,
           decoration: InputDecoration(
@@ -192,10 +195,46 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                   ),
           ),
           onChanged: (v) => setState(() => _query = v),
+          onSubmitted: (v) => ref.read(settingsProvider.notifier).addRecentSearch(v),
         ),
       ),
       body: Column(
         children: [
+          if (_query.isEmpty && recent.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Wrap(
+                      spacing: 8,
+                      runSpacing: 4,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        Text(l.searchRecent, style: Theme.of(context).textTheme.labelMedium),
+                        for (var i = 0; i < recent.length; i++)
+                          ActionChip(
+                            key: Key('recent_search_$i'),
+                            label: Text(recent[i]),
+                            onPressed: () {
+                              _controller.text = recent[i];
+                              _controller.selection =
+                                  TextSelection.collapsed(offset: recent[i].length);
+                              setState(() => _query = recent[i]);
+                            },
+                          ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    key: const Key('recent_search_clear'),
+                    tooltip: l.searchClear,
+                    icon: const Icon(Icons.delete_outline),
+                    onPressed: ref.read(settingsProvider.notifier).clearRecentSearches,
+                  ),
+                ],
+              ),
+            ),
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
             child: Row(

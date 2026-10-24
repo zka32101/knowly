@@ -6,6 +6,29 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "worldAskTitle": "世界の人も、この雑学を見ています",
+  "worldAskBody": "今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。",
+  "worldJoin": "参加する",
+  "worldNotNow": "いまはしない",
+  "worldToday": "今日、この雑学を見た人: {total}人（{countries}か国）",
+  "@worldToday": {"placeholders": {"total": {"type": "int"}, "countries": {"type": "int"}}},
+  "settingsWorld": "世界の集計に参加",
+  "settingsWorldNote": "今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）",
+  "reportThisWeek": "こんしゅう：{seen}こ みて、{answered}もん とけたよ",
+  "@reportThisWeek": {"placeholders": {"seen": {"type": "int"}, "answered": {"type": "int"}}},
+  "settingsJuniorRuby": "ふりがなを つける",
+  "listenSlow": "ゆっくり",
+  "settingsTextSize": "文字の大きさ",
+  "textSizeNormal": "ふつう",
+  "textSizeLarge": "大きい",
+  "textSizeXLarge": "とても大きい",
+  "relatedMore": "もっと みる（あと{n}こ）",
+  "@relatedMore": {"placeholders": {"n": {"type": "int"}}},
+  "searchRecent": "最近の検索",
+  "hintHomeTips": "カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！",
+  "hintGotIt": "わかった",
+  "onboardingSkip": "あとで",
+  "onboardingPickBand": "年齢にいちばん近いものを選んでください",
   "birthYearTitle": "生まれた年を えらんでください",
   "birthYearNote": "年齢に合った内容にするためだけに使います。生まれた年は保存せず、端末の外にも送りません。",
   "parentNoteTitle": "保護者の方へ",
@@ -35,7 +58,7 @@
   "emptyFeed": "いま表示できる雑学がありません",
   "lockedFeedNote": "さらに前の雑学は、プレミアムで読めます",
   "savedTitle": "保存した雑学",
-  "savedEmpty": "まだ保存した雑学はありません",
+  "savedEmpty": "まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります",
   "savedLimit": "無料プランで保存できるのは{count}件までです",
   "@savedLimit": {
     "placeholders": {
@@ -65,6 +88,7 @@
   "premiumBenefit3": "オフライン保存・深掘り解説（準備中）",
   "premiumKidsFree": "キッズ・ジュニアの雑学はずっと無料です。",
   "premiumUnavailable": "購入機能は準備中です",
+  "premiumOffline": "プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください",
   "gateTitle": "保護者の方へ確認",
   "gateDescription": "これは大人の方が行う操作です。\n下の計算の答えを入力してください。",
   "gateHint": "答えを入力",
@@ -326,7 +350,7 @@
   "privacyPointBirthYear": "生まれた年は年代の判定にだけ使い、保存しません。",
   "privacyPointNoAds": "広告も、利用状況の分析（アナリティクス）もありません。",
   "privacyPointChildren": "Kids / Junior では、ネットワーク通信も課金のしくみも使いません。",
-  "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。",
+  "privacyPointTeenAdult": "Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。",
   "privacyContact": "お問い合わせ: {email}",
   "@privacyContact": {
     "placeholders": {
@@ -674,5 +698,105 @@
   "hubListenSub": "画面を消しても聞ける",
   "languageZh": "简体中文",
   "languageKo": "한국어",
-  "languageEs": "Español"
+  "languageEs": "Español",
+  "wordTitle": "ことばの せつめい",
+  "wordSimple": "かんたんに いうと",
+  "wordDetail": "くわしく",
+  "wordFacts": "この ことばが でてくる ざつがく",
+  "wordHint": "線のついた ことばを タップすると、いみが わかるよ。",
+  "wordNotFound": "せつめいが みつかりません。",
+  "wordsTitle": "ことばずかん",
+  "wordsFound": "{n} / {total} ことば",
+  "@wordsFound": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "wordOfDay": "きょうの ことば",
+  "wordQuizTitle": "ことばクイズ",
+  "wordQuizQuestion": "「{term}」の いみは？",
+  "@wordQuizQuestion": {
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "wordsHint": "ことばの せつめいを みると、ここに ふえていくよ。",
+  "mapTitle": "つながりマップ",
+  "mapLinkCount": "つながる ざつがく {n}こ",
+  "@mapLinkCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mapNoLinks": "つながる ざつがくは まだ ないよ",
+  "mapOpen": "つながりを みる",
+  "voiceQuizTitle": "みみで クイズ",
+  "voiceReplay": "もういちど きく",
+  "voiceQuizSub": "よみあげて こたえる",
+  "leagueTitle": "かぞくリーグ",
+  "leagueNote": "この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。",
+  "leagueThisWeek": "こんしゅうの じゅんい",
+  "leagueLastWinner": "せんしゅうの ゆうしょう：{name}",
+  "@leagueLastWinner": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "leagueEmpty": "まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。",
+  "leagueGames": "{n}しあい・{wins}しょう",
+  "@leagueGames": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "wins": {
+        "type": "int"
+      }
+    }
+  },
+  "leaguePlay": "たいせんする",
+  "leagueClear": "こんしゅうの きろくを けす",
+  "leagueClearTitle": "こんしゅうの きろくを けしますか？",
+  "leagueClearBody": "こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。",
+  "leagueRecord": "かぞくリーグに きろくする",
+  "leagueSub": "1しゅうかんの しょうぶ",
+  "recapTitle": "1しゅうかんの ふりかえり",
+  "recapNote": "きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。",
+  "recapSeen": "みた ざつがく",
+  "recapLearned": "あたらしく しれた",
+  "recapQuiz": "クイズの せいかい",
+  "recapActiveDays": "あそんだ ひ",
+  "recapMsgNone": "こんしゅうは おやすみだったね。また ひとつ、よんでみよう！",
+  "recapMsgSome": "いい ちょうし！ すこしずつ ふえていくよ。",
+  "recapMsgGreat": "すごい！ まいにちの ように あそんだね！",
+  "recapChip": "ふりかえり",
+  "recapBanner": "こんしゅうの ふりかえりが できたよ",
+  "stampsTitle": "きせつの スタンプちょう",
+  "stampsChip": "スタンプちょう",
+  "stampsHint": "いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。{n}つ あつめると、あいぼうが その きせつの ようふくを きるよ。",
+  "@stampsHint": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "stampsSpring": "はる",
+  "stampsSummer": "なつ",
+  "stampsAutumn": "あき",
+  "stampsWinter": "ふゆ",
+  "stampsNow": "いま",
+  "stampsOutfit": "ようふくゲット！",
+  "celebrateOutfit": "きせつの ようふくを ゲット！"
 }
