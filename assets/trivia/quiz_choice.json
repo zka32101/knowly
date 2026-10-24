@@ -5669,6 +5669,202 @@
         "answer": 1
       },
       "id": "skytree_634_0"
+    },
+    {
+      "factId": "five_yen_hole",
+      "ja": {
+        "question": "5えんだまの まんなかには なにが ある？",
+        "options": [
+          "もじ",
+          "あな",
+          "ほし"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What is in the middle of a 5-yen coin?",
+        "options": [
+          "A letter",
+          "A hole",
+          "A star"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "5日元硬币的中间有什么？",
+        "options": [
+          "字母",
+          "洞",
+          "星星"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "5엔 동전 가운데에는 무엇이 있을까요?",
+        "options": [
+          "글자",
+          "구멍",
+          "별"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué hay en el centro de una moneda de 5 yenes?",
+        "options": [
+          "Una letra",
+          "Un agujero",
+          "Una estrella"
+        ],
+        "answer": 1
+      },
+      "id": "five_yen_hole_0"
+    },
+    {
+      "factId": "one_yen_floats",
+      "ja": {
+        "question": "1えんだまを そっと みずに おくと どうなる？",
+        "options": [
+          "しずむ",
+          "とける",
+          "うく"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "What can happen if you gently lay a 1-yen coin on water?",
+        "options": [
+          "It sinks",
+          "It melts",
+          "It floats"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "把1日元硬币轻轻放在水面上，会怎么样？",
+        "options": [
+          "会沉",
+          "会融化",
+          "能浮起来"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "1엔 동전을 물 위에 살짝 올려 놓으면 어떻게 될까요?",
+        "options": [
+          "가라앉는다",
+          "녹는다",
+          "뜰 수 있다"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Qué puede pasar si colocas con cuidado una moneda de 1 yen sobre el agua?",
+        "options": [
+          "Se hunde",
+          "Se derrite",
+          "Flota"
+        ],
+        "answer": 2
+      },
+      "id": "one_yen_floats_0"
+    },
+    {
+      "factId": "emoji_docomo_1999",
+      "ja": {
+        "question": "さいしょの えもじは どこの くにの けいたいでんわで うまれた？",
+        "options": [
+          "にほん",
+          "アメリカ",
+          "フランス"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "In which country were the famous first mobile emoji sets made?",
+        "options": [
+          "Japan",
+          "The United States",
+          "France"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "著名的最早手机绘文字诞生在哪个国家？",
+        "options": [
+          "日本",
+          "美国",
+          "法国"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "유명한 최초의 휴대전화 이모지는 어느 나라에서 만들어졌을까요?",
+        "options": [
+          "일본",
+          "미국",
+          "프랑스"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿En qué país se crearon los famosos primeros emojis para móviles?",
+        "options": [
+          "Japón",
+          "Estados Unidos",
+          "Francia"
+        ],
+        "answer": 0
+      },
+      "id": "emoji_docomo_1999_0"
+    },
+    {
+      "factId": "randoseru_ransel",
+      "ja": {
+        "question": "ランドセルの ことばの もとは どこの くにの ことば？",
+        "options": [
+          "ちゅうごく",
+          "ブラジル",
+          "オランダ"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Which language does the word randoseru come from?",
+        "options": [
+          "Chinese",
+          "Portuguese",
+          "Dutch"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "“ランドセル”这个词来自哪种语言？",
+        "options": [
+          "中文",
+          "葡萄牙语",
+          "荷兰语"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "란도세루라는 말은 어느 나라 말에서 왔을까요?",
+        "options": [
+          "중국어",
+          "포르투갈어",
+          "네덜란드어"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿De qué idioma viene la palabra randoseru?",
+        "options": [
+          "Chino",
+          "Portugués",
+          "Neerlandés"
+        ],
+        "answer": 2
+      },
+      "id": "randoseru_ransel_0"
     }
   ]
 }

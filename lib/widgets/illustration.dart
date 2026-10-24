@@ -52,6 +52,11 @@ const _emoji = {
   'opera': '🎭',
   'bridge': '🌉',
   'skytree': '🗼',
+  'coin5': '🪙',
+  'coin1': '🪙',
+  'emoji': '😀',
+  'backpack': '🎒',
+  'ramen': '🍜',
   'hand': '✋', 'brain': '🧠', 'eye': '👁️',
 };
 

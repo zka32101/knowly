@@ -423,7 +423,9 @@ void main() {
         expect(catIds, contains(i['category']), reason: i['id'] as String);
       }
       // 親は実在し、ループしない
-      final parents = {for (final c in cats) c['id'] as String: c['parent'] as String?};
+      final parents = {
+        for (final c in cats) c['id'] as String: c['parent'] as String?,
+      };
       for (final e in parents.entries) {
         var p = e.value;
         var steps = 0;

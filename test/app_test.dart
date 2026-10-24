@@ -905,7 +905,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       await openLibrary(tester);
       final all = count(tester);
-      expect(all, 114);
+      expect(all, 118);
 
       await tester.enterText(find.byKey(const Key('search_field')), 'ラッコ');
       await tester.pumpAndSettle();
@@ -936,7 +936,7 @@ void main() {
       expect(find.textContaining('見つかりませんでした'), findsOneWidget);
       await tester.tap(find.byKey(const Key('search_clear')));
       await tester.pumpAndSettle();
-      expect(count(tester), 114);
+      expect(count(tester), 118);
     });
 
     testWidgets('ジャンルで絞り込める', (tester) async {
@@ -978,7 +978,7 @@ void main() {
       expect(count(tester), 1);
       await pick('status_learned');
       await pick('status_unrated');
-      expect(count(tester), 112); // 114件のうち評価済み2件を除く
+      expect(count(tester), 116); // 118件のうち評価済み2件を除く
     });
 
     testWidgets('無料の Adult は、無料の範囲外の雑学に鍵がつき、タップでプレミアム案内', (tester) async {
@@ -1195,7 +1195,7 @@ void main() {
 
     testWidgets('日本では、日本限定の雑学（4件）も出る', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: 'JP');
-      expect(await libraryCount(tester), 114);
+      expect(await libraryCount(tester), 118);
     });
 
     testWidgets('アメリカでは、日本限定の雑学が出ない', (tester) async {
@@ -1212,7 +1212,7 @@ void main() {
         prefs: {'ageBand': 'adult', 'regionMode': 'all'},
         deviceRegion: 'US',
       );
-      expect(await libraryCount(tester), 114);
+      expect(await libraryCount(tester), 118);
     });
 
     testWidgets('国を選ぶ設定は、端末の国より優先される', (tester) async {
@@ -1221,12 +1221,12 @@ void main() {
         prefs: {'ageBand': 'adult', 'regionMode': 'JP'},
         deviceRegion: 'US',
       );
-      expect(await libraryCount(tester), 114);
+      expect(await libraryCount(tester), 118);
     });
 
     testWidgets('端末に国がなくても、日本語の端末は日本として扱う', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'adult'}, deviceRegion: null);
-      expect(await libraryCount(tester), 114);
+      expect(await libraryCount(tester), 118);
     });
 
     testWidgets('英語の端末で国が不明なら、国限定の雑学は出ない', (tester) async {

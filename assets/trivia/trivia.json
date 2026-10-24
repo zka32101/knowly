@@ -2058,7 +2058,8 @@
         "snow_hexagon",
         "thunder_count",
         "fuji_3776",
-        "hail_ice_layers"
+        "hail_ice_layers",
+        "one_yen_floats"
       ],
       "sources": [
         {
@@ -7635,7 +7636,8 @@
         "iss_sunrises",
         "shipping_80_percent",
         "shinkansen_kingfisher",
-        "golden_gate_orange"
+        "golden_gate_orange",
+        "emoji_docomo_1999"
       ],
       "sources": [
         {
@@ -8211,7 +8213,8 @@
         "bicycle_first",
         "pisa_tower_lean",
         "opera_house_tiles",
-        "skytree_634"
+        "skytree_634",
+        "randoseru_ransel"
       ],
       "sources": [
         {
@@ -8411,7 +8414,8 @@
         "plane_window_hole",
         "apple_floats",
         "blue_whale_largest",
-        "golden_gate_orange"
+        "golden_gate_orange",
+        "one_yen_floats"
       ],
       "sources": [
         {
@@ -8987,7 +8991,8 @@
         "orbital_speed",
         "airliner_cruise",
         "wright_first_flight",
-        "black_box_orange"
+        "black_box_orange",
+        "five_yen_hole"
       ],
       "sources": [
         {
@@ -9747,7 +9752,8 @@
         "rice_half_world",
         "carrot_colors",
         "honey_never_spoils",
-        "watermelon_92_water"
+        "watermelon_92_water",
+        "five_yen_hole"
       ],
       "sources": [
         {
@@ -10701,7 +10707,8 @@
         "ice_floats",
         "peanut_not_nut",
         "pineapple_two_years",
-        "table_tennis_ball_40mm"
+        "table_tennis_ball_40mm",
+        "one_yen_floats"
       ],
       "sources": [
         {
@@ -13136,7 +13143,9 @@
         "marathon_42195",
         "velcro_burdock",
         "postit_weak_glue",
-        "zipper_sundback"
+        "zipper_sundback",
+        "emoji_docomo_1999",
+        "randoseru_ransel"
       ],
       "sources": [
         {
@@ -13328,7 +13337,10 @@
         "airliner_cruise",
         "plane_window_hole",
         "postit_weak_glue",
-        "zipper_sundback"
+        "zipper_sundback",
+        "five_yen_hole",
+        "emoji_docomo_1999",
+        "randoseru_ransel"
       ],
       "sources": [
         {
@@ -21415,6 +21427,762 @@
         }
       ],
       "reviewDueAt": "2027-10-24"
+    },
+    {
+      "id": "five_yen_hole",
+      "category": "culture",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [
+        "JP"
+      ],
+      "illustration": "coin5",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "5えんだまには あなが あるよ",
+              "body": "ほかの おかねと まちがえにくい ように、まんなかに あなが あいて いるよ。"
+            },
+            "junior": {
+              "title": "五円（ごえん）玉（だま）にはあながある",
+              "body": "1949年（ねん）からの五円（ごえん）玉（だま）は、まん中（なか）にあながあります。大（おお）きさがにた一円（いちえん）玉（だま）と、まちがえにくくするためなどと言（い）われています。"
+            },
+            "teen": {
+              "title": "五円玉の真ん中に穴がある理由",
+              "body": "1949年以降の五円硬貨には中央に穴があります。1948年発行の穴なしの五円玉は一円玉と大きさが近く、間違えやすかったためなどとされています。"
+            },
+            "adult": {
+              "title": "五円硬貨に穴が開けられた経緯",
+              "body": "1948年発行の穴なし五円硬貨は一円黄銅貨と直径が2mmしか違わず、ともにギザ付きで混同されがちでした。1949年の改鋳で孔径5mmの穴が設けられ、識別性の向上（視覚障害者への配慮を含む）や材料費の節約が理由に挙げられています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The 5-yen coin has a hole",
+              "body": "It has a hole in the middle so it is not mixed up with other coins."
+            },
+            "junior": {
+              "title": "Why the 5-yen coin has a hole",
+              "body": "Japan's 5-yen coin has had a hole in the middle since 1949. One reason is that the older solid coin looked too much like the 1-yen coin."
+            },
+            "teen": {
+              "title": "The hole in the Japanese 5-yen coin",
+              "body": "Since 1949, the 5-yen coin has had a hole in its center. The earlier 1948 version had no hole and was easy to confuse with the similar-sized 1-yen coin."
+            },
+            "adult": {
+              "title": "Why the 5-yen coin was given a hole",
+              "body": "The 1948 solid 5-yen coin was a brass coin only 2 mm wider than the 1-yen coin, and both had milled edges, so they were often confused. The 1949 redesign added a 5 mm hole to aid recognition, including for blind users, and to save material."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "5日元硬币有个洞",
+              "body": "它中间有个洞，这样就不容易和别的硬币弄混。"
+            },
+            "junior": {
+              "title": "5日元硬币为什么有洞",
+              "body": "日本的5日元硬币从1949年起，中间就有一个洞。原因之一是以前没有洞的硬币和1日元硬币看起来太像了。"
+            },
+            "teen": {
+              "title": "日本5日元硬币中间的洞",
+              "body": "自1949年起，5日元硬币的中央就有一个洞。1948年发行的无孔版本与大小相近的1日元硬币很容易混淆。"
+            },
+            "adult": {
+              "title": "5日元硬币为何开孔",
+              "body": "1948年发行的无孔5日元黄铜硬币，直径仅比1日元硬币大2毫米，且边缘都有齿纹，常被混淆。1949年改版时开了直径5毫米的孔，以提高辨识度（包括方便视障人士）并节省材料。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "5엔 동전에는 구멍이 있어요",
+              "body": "다른 동전과 헷갈리지 않도록 가운데에 구멍이 있어요."
+            },
+            "junior": {
+              "title": "5엔 동전에 구멍이 있는 이유",
+              "body": "일본의 5엔 동전은 1949년부터 가운데에 구멍이 있어요. 이전의 구멍 없는 동전이 1엔 동전과 너무 비슷했던 것이 이유 중 하나예요."
+            },
+            "teen": {
+              "title": "일본 5엔 동전의 가운데 구멍",
+              "body": "1949년부터 5엔 동전 가운데에는 구멍이 있어요. 1948년에 나온 구멍 없는 동전은 크기가 비슷한 1엔 동전과 헷갈리기 쉬웠어요."
+            },
+            "adult": {
+              "title": "5엔 동전에 구멍을 낸 경위",
+              "body": "1948년에 발행된 구멍 없는 5엔 황동 동전은 1엔 동전보다 지름이 2mm밖에 크지 않고 둘 다 톱니 모양 테두리여서 자주 혼동되었습니다. 1949년 개주 때 지름 5mm의 구멍을 내어 식별성(시각장애인 배려 포함)을 높이고 재료도 아꼈습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La moneda de 5 yenes tiene un agujero",
+              "body": "Tiene un agujero en el centro para no confundirla con otras monedas."
+            },
+            "junior": {
+              "title": "Por qué la moneda de 5 yenes tiene agujero",
+              "body": "La moneda japonesa de 5 yenes tiene un agujero en el centro desde 1949. Una razón es que la antigua moneda sin agujero se parecía demasiado a la de 1 yen."
+            },
+            "teen": {
+              "title": "El agujero de la moneda japonesa de 5 yenes",
+              "body": "Desde 1949, la moneda de 5 yenes tiene un agujero en el centro. La versión de 1948 no lo tenía y era fácil de confundir con la moneda de 1 yen, de tamaño parecido."
+            },
+            "adult": {
+              "title": "Por qué se perforó la moneda de 5 yenes",
+              "body": "La moneda maciza de 5 yenes de 1948, de latón, era solo 2 mm más ancha que la de 1 yen y ambas tenían canto estriado, así que se confundían. El rediseño de 1949 añadió un agujero de 5 mm para facilitar su identificación, también para personas ciegas, y ahorrar material."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "5円玉",
+        "穴",
+        "硬貨",
+        "five yen coin",
+        "hole",
+        "coin",
+        "くらし"
+      ],
+      "related": [
+        "cacao_money",
+        "black_box_orange",
+        "plane_window_hole"
+      ],
+      "sources": [
+        {
+          "title": "5円硬貨",
+          "publisher": "Wikipedia (ja)",
+          "url": "https://ja.wikipedia.org/wiki/5円硬貨",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "coin",
+          "ja": "こうか",
+          "kanji": "硬貨"
+        },
+        {
+          "en": "hole",
+          "ja": "あな",
+          "kanji": "穴"
+        },
+        {
+          "en": "yen",
+          "ja": "えん",
+          "kanji": "円"
+        }
+      ]
+    },
+    {
+      "id": "one_yen_floats",
+      "category": "culture",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [
+        "JP"
+      ],
+      "illustration": "coin1",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "1えんだまは みずに うくよ",
+              "body": "1えんだまは、そっと へいらに おくと、みずの うえに うかぶよ。"
+            },
+            "junior": {
+              "title": "一円（いちえん）玉（だま）は水（みず）にうく",
+              "body": "一円（いちえん）玉（だま）は水（みず）より重（おも）いのに、そっと平（たい）らに水（みず）の上（うえ）へおくとうきます。水（みず）の表面（ひょうめん）がひっぱる力（ちから）でささえられるからです。"
+            },
+            "teen": {
+              "title": "一円玉が水に浮くしくみ",
+              "body": "一円玉はアルミニウム製で水より重いのですが、乾いたまま水面にそっと平らに置くと浮きます。水の表面張力が一円玉を支えるためです。"
+            },
+            "adult": {
+              "title": "一円硬貨が水に浮く理由",
+              "body": "純アルミニウム製の一円硬貨は比重2.7で水より重いものの、乾いた状態で水面に静かに平らに置くと、浮力と表面張力が重さと釣り合い浮かびます。界面活性剤で表面張力を下げると沈みます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "A 1-yen coin can float",
+              "body": "If you set it down gently and flat, it floats on water."
+            },
+            "junior": {
+              "title": "A 1-yen coin floats on water",
+              "body": "A 1-yen coin is heavier than water, but it floats if you lay it flat on the surface very gently. The skin of the water holds it up."
+            },
+            "teen": {
+              "title": "How a 1-yen coin floats",
+              "body": "The coin is aluminum and denser than water, yet a dry one laid flat and gently on the surface stays up. Surface tension supports its weight."
+            },
+            "adult": {
+              "title": "Why the 1-yen coin floats",
+              "body": "The pure-aluminum 1-yen coin has a specific gravity of 2.7, heavier than water, but placed dry and flat on the surface, buoyancy and surface tension balance its weight. Adding detergent lowers the surface tension and it sinks."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "1日元硬币能浮在水上",
+              "body": "轻轻平放在水面上，它就会浮起来。"
+            },
+            "junior": {
+              "title": "1日元硬币会浮在水上",
+              "body": "1日元硬币比水重，但如果平平地、轻轻地放在水面上，它就会浮起来。是水面那层“皮”托住了它。"
+            },
+            "teen": {
+              "title": "1日元硬币为什么能浮",
+              "body": "硬币是铝制的，比水重，但干燥的硬币平放在水面上并轻轻放下就能浮着。水的表面张力托住了它的重量。"
+            },
+            "adult": {
+              "title": "1日元硬币浮在水面的原理",
+              "body": "纯铝制的1日元硬币比重为2.7，比水重，但干燥时平放在水面上，浮力与表面张力可与其重量平衡而浮起。加入表面活性剂降低表面张力后就会沉下去。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "1엔 동전은 물에 뜰 수 있어요",
+              "body": "살짝 평평하게 놓으면 물 위에 떠요."
+            },
+            "junior": {
+              "title": "1엔 동전은 물에 떠요",
+              "body": "1엔 동전은 물보다 무겁지만, 물 위에 평평하게 살짝 놓으면 떠요. 물의 겉면이 잡아 주기 때문이에요."
+            },
+            "teen": {
+              "title": "1엔 동전이 뜨는 원리",
+              "body": "동전은 알루미늄이라 물보다 무겁지만, 마른 동전을 수면에 평평하게 살짝 놓으면 떠요. 물의 표면 장력이 무게를 받쳐 줘요."
+            },
+            "adult": {
+              "title": "1엔 동전이 물에 뜨는 이유",
+              "body": "순수 알루미늄으로 만든 1엔 동전은 비중이 2.7로 물보다 무겁지만, 마른 상태로 수면에 조용히 평평하게 놓으면 부력과 표면 장력이 무게와 균형을 이루어 뜹니다. 계면활성제로 표면 장력을 낮추면 가라앉습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Una moneda de 1 yen puede flotar",
+              "body": "Si la apoyas plana y con suavidad, flota sobre el agua."
+            },
+            "junior": {
+              "title": "La moneda de 1 yen flota en el agua",
+              "body": "La moneda de 1 yen pesa más que el agua, pero flota si la pones plana y con mucho cuidado sobre la superficie. La piel del agua la sostiene."
+            },
+            "teen": {
+              "title": "Cómo flota una moneda de 1 yen",
+              "body": "La moneda es de aluminio y más densa que el agua, pero si está seca y la apoyas plana y suavemente, se mantiene arriba. La tensión superficial sostiene su peso."
+            },
+            "adult": {
+              "title": "Por qué flota la moneda de 1 yen",
+              "body": "La moneda de 1 yen, de aluminio puro, tiene una densidad relativa de 2,7, mayor que la del agua, pero colocada seca y plana sobre la superficie, el empuje y la tensión superficial equilibran su peso. Con detergente la tensión baja y se hunde."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "1円玉",
+        "浮く",
+        "表面張力",
+        "one yen coin",
+        "float",
+        "surface tension",
+        "くらし"
+      ],
+      "related": [
+        "ice_floats",
+        "apple_floats",
+        "steel_ship_floats"
+      ],
+      "sources": [
+        {
+          "title": "1円硬貨",
+          "publisher": "Wikipedia (ja)",
+          "url": "https://ja.wikipedia.org/wiki/1円硬貨",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "float",
+          "ja": "うく",
+          "kanji": "浮"
+        },
+        {
+          "en": "water",
+          "ja": "みず",
+          "kanji": "水"
+        },
+        {
+          "en": "coin",
+          "ja": "こうか",
+          "kanji": "硬貨"
+        }
+      ]
+    },
+    {
+      "id": "emoji_docomo_1999",
+      "category": "culture",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [
+        "JP"
+      ],
+      "illustration": "emoji",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "えもじは にほんで うまれたよ",
+              "body": "1999ねんに、にほんの けいたいでんわの ために えもじが つくられたよ。"
+            },
+            "junior": {
+              "title": "絵文字（えもじ）は日本（にほん）で生（う）まれた",
+              "body": "1999年（ねん）に、くりたさんがけいたい電話（でんわ）用（よう）の絵文字（えもじ）を176こ作（つく）りました。字（じ）だけでなく絵（え）で気持（きも）ちを伝（つた）えるためです。"
+            },
+            "teen": {
+              "title": "世界の絵文字は日本の携帯電話から",
+              "body": "1999年、栗田穂高氏がNTTドコモのiモード向けに176個の絵文字を作りました。短いメッセージで気持ちや天気を絵で伝えやすくするためのものでした。"
+            },
+            "adult": {
+              "title": "ドコモの絵文字セット（1999年）",
+              "body": "広く知られるドコモの絵文字セットは、1999年に栗田穂高氏がNTTドコモのiモード用に制作した176個の絵文字です。この作品はニューヨーク近代美術館（MoMA）にも収蔵されています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Emoji began in Japan",
+              "body": "In 1999, little pictures called emoji were made for Japanese mobile phones."
+            },
+            "junior": {
+              "title": "Emoji were born in Japan",
+              "body": "In 1999, Shigetaka Kurita made 176 emoji for a Japanese mobile phone service. They let people show feelings with pictures, not just words."
+            },
+            "teen": {
+              "title": "Emoji came from Japanese mobile phones",
+              "body": "In 1999, Shigetaka Kurita designed 176 emoji for NTT DoCoMo's i-mode service. They made short messages easier to read by adding feelings and weather in picture form."
+            },
+            "adult": {
+              "title": "The 1999 DoCoMo emoji set",
+              "body": "The best-known DoCoMo emoji set was created by Shigetaka Kurita in 1999 for NTT DoCoMo's i-mode platform: 176 tiny pixel pictures. His original work is held in the Museum of Modern Art in New York."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "表情符号诞生在日本",
+              "body": "1999年，日本为手机做出了叫“绘文字”的小图画。"
+            },
+            "junior": {
+              "title": "绘文字诞生在日本",
+              "body": "1999年，栗田穗高为日本的手机服务做了176个绘文字。它们让人不只用文字，也能用图画表达心情。"
+            },
+            "teen": {
+              "title": "绘文字来自日本的手机",
+              "body": "1999年，栗田穗高为NTT DoCoMo的i-mode服务设计了176个绘文字。它们用图画表达心情和天气，让短消息更好读。"
+            },
+            "adult": {
+              "title": "1999年的DoCoMo绘文字",
+              "body": "广为人知的DoCoMo绘文字套组由栗田穗高于1999年为NTT DoCoMo的i-mode平台制作，共176个小像素图案。他的原作也被纽约现代艺术博物馆收藏。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "이모지는 일본에서 시작됐어요",
+              "body": "1999년에 일본 휴대전화를 위해 이모지라는 작은 그림이 만들어졌어요."
+            },
+            "junior": {
+              "title": "이모지는 일본에서 태어났어요",
+              "body": "1999년에 구리타 시게타카가 일본의 휴대전화 서비스를 위해 이모지를 176개 만들었어요. 글자뿐 아니라 그림으로도 마음을 전할 수 있게 됐어요."
+            },
+            "teen": {
+              "title": "이모지는 일본 휴대전화에서 왔어요",
+              "body": "1999년 구리타 시게타카가 NTT 도코모의 i-mode 서비스를 위해 이모지 176개를 디자인했어요. 감정과 날씨를 그림으로 전해서 짧은 메시지를 읽기 쉽게 했어요."
+            },
+            "adult": {
+              "title": "1999년 도코모 이모지 세트",
+              "body": "널리 알려진 도코모 이모지 세트는 1999년 구리타 시게타카가 NTT 도코모의 i-mode 플랫폼용으로 만든 176개의 작은 픽셀 그림입니다. 그의 원작은 뉴욕 현대미술관(MoMA)에도 소장되어 있습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Los emojis nacieron en Japón",
+              "body": "En 1999 se hicieron dibujitos llamados emojis para los teléfonos móviles de Japón."
+            },
+            "junior": {
+              "title": "Los emojis nacieron en Japón",
+              "body": "En 1999, Shigetaka Kurita creó 176 emojis para un servicio de móviles japonés. Permitían mostrar sentimientos con dibujos, no solo con palabras."
+            },
+            "teen": {
+              "title": "Los emojis vienen de los móviles japoneses",
+              "body": "En 1999, Shigetaka Kurita diseñó 176 emojis para el servicio i-mode de NTT DoCoMo. Añadían emociones y el tiempo en forma de dibujo para que los mensajes cortos fueran más claros."
+            },
+            "adult": {
+              "title": "El conjunto de emojis de DoCoMo de 1999",
+              "body": "El conjunto de emojis de DoCoMo más conocido lo creó Shigetaka Kurita en 1999 para la plataforma i-mode de NTT DoCoMo: 176 pequeños dibujos de píxeles. Su obra original se conserva en el Museo de Arte Moderno de Nueva York."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "絵文字",
+        "栗田穂高",
+        "ドコモ",
+        "emoji",
+        "Shigetaka Kurita",
+        "i-mode",
+        "くらし"
+      ],
+      "related": [
+        "bicycle_first",
+        "shinkansen_1964",
+        "black_box_orange"
+      ],
+      "sources": [
+        {
+          "title": "Emoji",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Emoji",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "picture",
+          "ja": "え",
+          "kanji": "絵"
+        },
+        {
+          "en": "character",
+          "ja": "もじ",
+          "kanji": "文字"
+        },
+        {
+          "en": "phone",
+          "ja": "でんわ",
+          "kanji": "電話"
+        }
+      ]
+    },
+    {
+      "id": "randoseru_ransel",
+      "category": "culture",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [
+        "JP"
+      ],
+      "illustration": "backpack",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ランドセルの なまえの ひみつ",
+              "body": "ランドセルの なまえは、オランダごの 「ランセル」が もとと いわれて いるよ。"
+            },
+            "junior": {
+              "title": "ランドセルは外国（がいこく）のことばから",
+              "body": "ランドセルという名前（なまえ）は、オランダ語（ご）のかばん「ランセル」がなまったものだといわれます。1885年（ねん）に学習院（がくしゅういん）が通学（つうがく）かばんとして使（つか）いました。"
+            },
+            "teen": {
+              "title": "ランドセルの語源はオランダ語",
+              "body": "「ランドセル」は、幕末に軍隊用の背嚢として伝わったオランダ語「ランセル」がなまったものとされます。1885年に学習院が通学かばんに取り入れたのが、学校での使用の起源です。"
+            },
+            "adult": {
+              "title": "ランドセルの語源と通学かばんへの転用",
+              "body": "幕末に幕府陸軍が洋式化した際、オランダ語の背嚢「ransel」が「ランドセル」になまったとされます。通学用としては、1885年に学習院が生徒自身が学用品を持つ方針の下で導入したことが起源とされています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The secret behind the word randoseru",
+              "body": "The word comes from \"ransel,\" a Dutch word for a backpack."
+            },
+            "junior": {
+              "title": "Randoseru comes from a Dutch word",
+              "body": "The name randoseru is said to come from the Dutch word \"ransel,\" meaning a backpack. In 1885, a Tokyo school called Gakushuin began using them as school bags."
+            },
+            "teen": {
+              "title": "Randoseru comes from Dutch",
+              "body": "The word is said to be a Japanese twist on the Dutch \"ransel,\" a soldier's backpack brought to Japan in the 1860s. Gakushuin adopted the bag for students in 1885, the start of its use at school."
+            },
+            "adult": {
+              "title": "The origin of the randoseru",
+              "body": "When the shogunate modernized its army, the Dutch word \"ransel\" for a knapsack is said to have become \"randoseru.\" Its use as a school bag is traced to Gakushuin in 1885, which had students carry their own supplies."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "书包“ランドセル”名字的秘密",
+              "body": "这个词来自荷兰语“ransel”，意思是背包。"
+            },
+            "junior": {
+              "title": "日本书包的名字来自荷兰语",
+              "body": "“ランドセル”这个名字据说来自荷兰语的背包“ransel”。1885年，一所叫学习院的学校开始把它当作上学的书包。"
+            },
+            "teen": {
+              "title": "ランドセル来自荷兰语",
+              "body": "据说这个词是荷兰语“ransel”（士兵的背包）的日语读法变化，在19世纪60年代传入日本。1885年学习院让学生使用它，成为在学校使用的起源。"
+            },
+            "adult": {
+              "title": "ランドセル的语源",
+              "body": "幕末幕府陆军西式化时，荷兰语中的背囊“ransel”据说演变为“ランドセル”。作为上学用书包，则可追溯到1885年学习院——该校要求学生自己携带学用品。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "란도세루 이름의 비밀",
+              "body": "이 말은 배낭을 뜻하는 네덜란드어 'ransel'에서 왔어요."
+            },
+            "junior": {
+              "title": "란도세루는 네덜란드어에서 왔어요",
+              "body": "란도세루라는 이름은 배낭을 뜻하는 네덜란드어 'ransel'에서 왔다고 해요. 1885년에 가쿠슈인이라는 학교가 통학 가방으로 쓰기 시작했어요."
+            },
+            "teen": {
+              "title": "란도세루의 어원은 네덜란드어",
+              "body": "이 말은 1860년대 일본에 들어온 군인용 배낭인 네덜란드어 'ransel'이 변한 것이라고 해요. 1885년 가쿠슈인이 학생용 가방으로 도입한 것이 학교 사용의 시작이에요."
+            },
+            "adult": {
+              "title": "란도세루의 기원",
+              "body": "막부 육군이 서양식으로 바뀔 때 네덜란드어로 배낭을 뜻하는 'ransel'이 '란도세루'로 바뀌었다고 합니다. 통학 가방으로는 학생이 직접 학용품을 들게 한 1885년 가쿠슈인의 도입이 기원으로 여겨집니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El secreto de la palabra randoseru",
+              "body": "La palabra viene de \"ransel\", que en neerlandés significa mochila."
+            },
+            "junior": {
+              "title": "Randoseru viene del neerlandés",
+              "body": "Se dice que el nombre randoseru viene de la palabra neerlandesa \"ransel\", que significa mochila. En 1885, una escuela llamada Gakushuin empezó a usarlas como mochilas escolares."
+            },
+            "teen": {
+              "title": "Randoseru viene del neerlandés",
+              "body": "Se dice que la palabra es una deformación del neerlandés \"ransel\", la mochila de los soldados que llegó a Japón en la década de 1860. Gakushuin la adoptó para sus alumnos en 1885, el inicio de su uso escolar."
+            },
+            "adult": {
+              "title": "El origen del randoseru",
+              "body": "Cuando el shogunato modernizó su ejército, la palabra neerlandesa \"ransel\" (mochila militar) pasó a ser \"randoseru\". Su uso escolar se remonta a 1885, cuando Gakushuin hizo que los alumnos llevaran ellos mismos sus útiles."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ランドセル",
+        "ransel",
+        "通学",
+        "randoseru",
+        "school bag",
+        "backpack",
+        "くらし"
+      ],
+      "related": [
+        "bicycle_first",
+        "black_box_orange",
+        "tokyo_first_subway"
+      ],
+      "sources": [
+        {
+          "title": "ランドセル",
+          "publisher": "Wikipedia (ja)",
+          "url": "https://ja.wikipedia.org/wiki/ランドセル",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "bag",
+          "ja": "かばん",
+          "kanji": ""
+        },
+        {
+          "en": "school",
+          "ja": "がっこう",
+          "kanji": "学校"
+        },
+        {
+          "en": "backpack",
+          "ja": "はいのう",
+          "kanji": "背嚢"
+        }
+      ]
     }
   ]
 }

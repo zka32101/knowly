@@ -2578,6 +2578,98 @@
         "statement": "Los 634 m de la Skytree juegan con el antiguo nombre \"Musashi\".",
         "answer": true
       }
+    },
+    {
+      "factId": "five_yen_hole",
+      "ja": {
+        "statement": "5えんだまには あなが ない。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Japanese 5-yen coin has no hole.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "日本的5日元硬币中间没有洞。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "일본의 5엔 동전에는 구멍이 없어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La moneda japonesa de 5 yenes no tiene agujero.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "one_yen_floats",
+      "ja": {
+        "statement": "1えんだまは、そっと おくと みずに うく ことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A 1-yen coin can float if you place it gently and flat.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "1日元硬币轻轻平放可以浮在水面上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "1엔 동전은 살짝 평평하게 놓으면 물에 뜰 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una moneda de 1 yen puede flotar si la pones con suavidad y plana.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "emoji_docomo_1999",
+      "ja": {
+        "statement": "えもじは アメリカで さいしょに つくられた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Emoji were first created in the United States.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "绘文字最早诞生在美国。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "이모지는 미국에서 처음 만들어졌어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los emojis se crearon por primera vez en Estados Unidos.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "randoseru_ransel",
+      "ja": {
+        "statement": "ランドセルの なまえは、オランダごが もとと いわれる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The word randoseru is said to come from a Dutch word.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "据说“ランドセル”这个词来自荷兰语。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "란도세루라는 말은 네덜란드어에서 왔다고 해요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Se dice que la palabra randoseru viene del neerlandés.",
+        "answer": true
+      }
     }
   ]
 }
