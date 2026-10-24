@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "Next",
+  "onboardingSkip": "Maybe later",
+  "onboardingPickBand": "Or just pick what fits best",
   "birthYearTitle": "Choose your birth year",
   "birthYearNote": "Used only to match content to your age. Your birth year is not saved or sent anywhere.",
   "parentNoteTitle": "For parents",

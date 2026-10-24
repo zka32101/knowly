@@ -73,7 +73,7 @@ class _MapScreenState extends ConsumerState<MapScreen> {
       );
     }
 
-    final neighbors = neighborsOf(center, links, links.keys.toSet(), seen: seen);
+    final neighbors = neighborsOf(center!, links, links.keys.toSet(), seen: seen);
 
     Widget node(String id, Offset pos, double radius) {
       final t = repo.byId(id);
@@ -130,7 +130,7 @@ class _MapScreenState extends ConsumerState<MapScreen> {
                         ),
                       ),
                       for (final e in positions.entries) node(e.key, e.value, 30),
-                      node(center, mid, 44),
+                      node(center!, mid, 44),
                     ],
                   );
                 },

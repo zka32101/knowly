@@ -27,6 +27,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get onboardingSkip => '稍后再说';
+
+  @override
+  String get onboardingPickBand => '或者直接选择最合适的';
+
+  @override
   String get birthYearTitle => '请选择出生年份';
 
   @override

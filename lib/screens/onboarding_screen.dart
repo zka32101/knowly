@@ -105,9 +105,26 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 _band = y == null ? null : AgeBand.fromBirthYear(y);
               }),
             ),
+            const SizedBox(height: 16),
+            Text(l.onboardingPickBand, style: theme.textTheme.bodySmall),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final b in AgeBand.values)
+                  ChoiceChip(
+                    key: Key('band_${b.name}'),
+                    label: Text(modeLabel(l, b)),
+                    selected: _band == b,
+                    onSelected: (_) => setState(() {
+                      _birthYear = null;
+                      _band = b;
+                    }),
+                  ),
+              ],
+            ),
             if (_band != null) ...[
-              const SizedBox(height: 16),
-              Text(modeLabel(l, _band!), style: theme.textTheme.titleMedium),
               if (_band!.isChild) ...[
                 const SizedBox(height: 12),
                 Card(
@@ -177,6 +194,12 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           child: Column(
             children: [
               Expanded(child: SingleChildScrollView(child: body)),
+              if (_step == 2)
+                TextButton(
+                  key: const Key('onboarding_skip'),
+                  onPressed: _finish,
+                  child: Text(l.onboardingSkip),
+                ),
               FilledButton(
                 key: const Key('onboarding_next'),
                 style: FilledButton.styleFrom(

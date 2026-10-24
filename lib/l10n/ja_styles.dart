@@ -131,6 +131,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String get onboardingSkip => _jr(super.onboardingSkip);
+
+  @override
   String get interestsTitle => _jr(super.interestsTitle);
 
   @override
@@ -763,6 +766,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String get onboardingSkip => '後で';
 
   @override
   String get interestsTitle => '好きなジャンルを選んでください';

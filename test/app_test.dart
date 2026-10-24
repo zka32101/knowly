@@ -458,6 +458,31 @@ void main() {
     expect(find.text('きょうの雑学'), findsOneWidget);
   });
 
+  testWidgets('初回起動: 生まれた年を入れなくても、ボタンで年代を選べる。興味は「あとで」で飛ばせる', (tester) async {
+    await _pump(tester);
+    await tester.tap(find.byKey(const Key('onboarding_next')));
+    await tester.pumpAndSettle();
+    expect(
+      tester
+          .widget<FilledButton>(find.byKey(const Key('onboarding_next')))
+          .onPressed,
+      isNull,
+    );
+    await tester.tap(find.byKey(const Key('band_teen')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('onboarding_next')));
+    await tester.pumpAndSettle();
+    // 興味を選ばずに、すぐ始める
+    expect(find.byKey(const Key('onboarding_skip')), findsOneWidget);
+    await tester.tap(find.byKey(const Key('onboarding_skip')));
+    await tester.pumpAndSettle();
+    final s = ProviderScope.containerOf(
+      tester.element(find.byType(KnowlyApp)),
+    ).read(settingsProvider);
+    expect(s.ageBand, AgeBand.teen);
+    expect(s.interestCategories, isEmpty);
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));

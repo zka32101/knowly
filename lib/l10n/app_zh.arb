@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "下一步",
+  "onboardingSkip": "稍后再说",
+  "onboardingPickBand": "或者直接选择最合适的",
   "birthYearTitle": "请选择出生年份",
   "birthYearNote": "仅用于匹配适合你年龄的内容。出生年份不会被保存，也不会发送到任何地方。",
   "parentNoteTitle": "致家长",

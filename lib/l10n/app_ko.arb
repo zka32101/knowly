@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "다음",
+  "onboardingSkip": "나중에",
+  "onboardingPickBand": "또는 가장 알맞은 것을 골라 주세요",
   "birthYearTitle": "태어난 해를 선택하세요",
   "birthYearNote": "연령에 맞는 콘텐츠를 보여 주는 데만 사용합니다. 태어난 해는 저장되거나 어디로도 전송되지 않습니다.",
   "parentNoteTitle": "부모님께",

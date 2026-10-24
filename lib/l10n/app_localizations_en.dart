@@ -27,6 +27,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String get onboardingSkip => 'Maybe later';
+
+  @override
+  String get onboardingPickBand => 'Or just pick what fits best';
+
+  @override
   String get birthYearTitle => 'Choose your birth year';
 
   @override

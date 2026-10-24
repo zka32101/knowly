@@ -27,6 +27,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get onboardingSkip => '나중에';
+
+  @override
+  String get onboardingPickBand => '또는 가장 알맞은 것을 골라 주세요';
+
+  @override
   String get birthYearTitle => '태어난 해를 선택하세요';
 
   @override

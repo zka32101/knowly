@@ -140,6 +140,18 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @onboardingSkip.
+  ///
+  /// In ja, this message translates to:
+  /// **'あとで'**
+  String get onboardingSkip;
+
+  /// No description provided for @onboardingPickBand.
+  ///
+  /// In ja, this message translates to:
+  /// **'年齢にいちばん近いものを選んでください'**
+  String get onboardingPickBand;
+
   /// No description provided for @birthYearTitle.
   ///
   /// In ja, this message translates to:

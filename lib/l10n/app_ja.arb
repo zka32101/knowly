@@ -6,6 +6,8 @@
   "languageJa": "日本語",
   "languageEn": "English",
   "continueButton": "つぎへ",
+  "onboardingSkip": "あとで",
+  "onboardingPickBand": "年齢にいちばん近いものを選んでください",
   "birthYearTitle": "生まれた年を えらんでください",
   "birthYearNote": "年齢に合った内容にするためだけに使います。生まれた年は保存せず、端末の外にも送りません。",
   "parentNoteTitle": "保護者の方へ",

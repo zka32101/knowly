@@ -27,6 +27,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get onboardingSkip => 'あとで';
+
+  @override
+  String get onboardingPickBand => '年齢にいちばん近いものを選んでください';
+
+  @override
   String get birthYearTitle => '生まれた年を えらんでください';
 
   @override
