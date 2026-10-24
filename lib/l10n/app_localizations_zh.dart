@@ -27,6 +27,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get settingsTextSize => '文字大小';
+
+  @override
+  String get textSizeNormal => '标准';
+
+  @override
+  String get textSizeLarge => '大';
+
+  @override
+  String get textSizeXLarge => '特大';
+
+  @override
   String relatedMore(int n) {
     return '查看更多（还有$n条）';
   }

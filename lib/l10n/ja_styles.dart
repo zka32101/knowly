@@ -131,6 +131,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get continueButton => _jr(super.continueButton);
 
   @override
+  String get textSizeNormal => _jr(super.textSizeNormal);
+
+  @override
   String relatedMore(int n) => _jr(super.relatedMore(n));
 
   @override
@@ -775,6 +778,9 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get continueButton => '次へ';
+
+  @override
+  String get textSizeNormal => '普通';
 
   @override
   String relatedMore(int n) {

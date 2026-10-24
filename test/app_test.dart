@@ -508,6 +508,28 @@ void main() {
     expect(hero, lessThan(mascot));
   });
 
+  testWidgets('設定で文字の大きさを変えると、画面全体の文字が大きくなる（年代の拡大率に上乗せ）', (tester) async {
+    await _pump(tester, prefs: {'ageBand': 'adult'});
+    double scale() =>
+        MediaQuery.of(
+          tester.element(find.byType(Scaffold).first),
+        ).textScaler.scale(14) /
+        14;
+    final base = scale();
+    final container = ProviderScope.containerOf(
+      tester.element(find.byType(KnowlyApp)),
+    );
+    container.read(settingsProvider.notifier).setTextSize(2);
+    await tester.pumpAndSettle();
+    expect(scale() / base, closeTo(1.3, 0.01));
+    final sp = await SharedPreferences.getInstance();
+    expect(sp.getInt('textSize'), 2);
+    container
+        .read(settingsProvider.notifier)
+        .setTextSize(99); // 範囲外は、いちばん大きい段階に
+    expect(container.read(settingsProvider).textSize, 2);
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));
@@ -775,6 +797,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult'});
       expect(_lastNotifications!.lastScheduled, isNull); // 既定はオフ
       await openSettings(tester);
+      await _scrollTo(tester, const Key('notify_switch'));
       await tester.tap(find.byKey(const Key('notify_switch')));
       await tester.pumpAndSettle();
 
@@ -796,6 +819,7 @@ void main() {
         notifications: FakeNotifications(grant: false),
       );
       await openSettings(tester);
+      await _scrollTo(tester, const Key('notify_switch'));
       await tester.tap(find.byKey(const Key('notify_switch')));
       await tester.pumpAndSettle();
       expect(find.textContaining('通知が許可されていません'), findsOneWidget);
@@ -808,6 +832,7 @@ void main() {
       await _pump(tester, prefs: {'ageBand': 'adult', 'notifyEnabled': true});
       expect(_lastNotifications!.lastScheduled, hasLength(14));
       await openSettings(tester);
+      await _scrollTo(tester, const Key('notify_switch'));
       await tester.tap(find.byKey(const Key('notify_switch')));
       await tester.pumpAndSettle();
       expect(_lastNotifications!.lastScheduled, isNull);
@@ -827,6 +852,7 @@ void main() {
     testWidgets('Junior: オンにするには保護者ゲートが必要', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'junior'});
       await openSettings(tester);
+      await _scrollTo(tester, const Key('notify_switch'));
       await tester.tap(find.byKey(const Key('notify_switch')));
       await tester.pumpAndSettle();
       expect(find.text('保護者の方へ確認'), findsOneWidget);
@@ -839,6 +865,7 @@ void main() {
     testWidgets('Junior: ゲートをやめたらオンにならない', (tester) async {
       await _pump(tester, prefs: {'ageBand': 'junior'});
       await openSettings(tester);
+      await _scrollTo(tester, const Key('notify_switch'));
       await tester.tap(find.byKey(const Key('notify_switch')));
       await tester.pumpAndSettle();
       await tester.tap(find.text('やめる'));

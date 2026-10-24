@@ -140,6 +140,30 @@ abstract class AppLocalizations {
   /// **'つぎへ'**
   String get continueButton;
 
+  /// No description provided for @settingsTextSize.
+  ///
+  /// In ja, this message translates to:
+  /// **'文字の大きさ'**
+  String get settingsTextSize;
+
+  /// No description provided for @textSizeNormal.
+  ///
+  /// In ja, this message translates to:
+  /// **'ふつう'**
+  String get textSizeNormal;
+
+  /// No description provided for @textSizeLarge.
+  ///
+  /// In ja, this message translates to:
+  /// **'大きい'**
+  String get textSizeLarge;
+
+  /// No description provided for @textSizeXLarge.
+  ///
+  /// In ja, this message translates to:
+  /// **'とても大きい'**
+  String get textSizeXLarge;
+
   /// No description provided for @relatedMore.
   ///
   /// In ja, this message translates to:

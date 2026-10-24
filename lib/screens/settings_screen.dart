@@ -158,6 +158,20 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       body: ListView(
         children: [
           uiLanguageTile,
+          ListTile(
+            key: const Key('text_size_tile'),
+            title: Text(l.settingsTextSize),
+            subtitle: SegmentedButton<int>(
+              showSelectedIcon: false,
+              segments: [
+                ButtonSegment(value: 0, label: Text(l.textSizeNormal)),
+                ButtonSegment(value: 1, label: Text(l.textSizeLarge)),
+                ButtonSegment(value: 2, label: Text(l.textSizeXLarge)),
+              ],
+              selected: {settings.textSize},
+              onSelectionChanged: (v) => notifier.setTextSize(v.first),
+            ),
+          ),
           contentLanguageTile(),
           ListTile(
             title: Text(l.settingsRegion),

@@ -27,6 +27,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get settingsTextSize => '글자 크기';
+
+  @override
+  String get textSizeNormal => '보통';
+
+  @override
+  String get textSizeLarge => '크게';
+
+  @override
+  String get textSizeXLarge => '아주 크게';
+
+  @override
   String relatedMore(int n) {
     return '더 보기 ($n개 더)';
   }

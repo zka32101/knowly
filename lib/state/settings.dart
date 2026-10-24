@@ -31,6 +31,9 @@ String resolveContentLanguage(String? code) =>
 const maxInterestKeywords = 10;
 const maxInterestKeywordLength = 20;
 
+/// 文字の大きさの段階ごとの拡大率。
+const textSizeFactors = [1.0, 1.15, 1.3];
+
 /// 最近の検索ことばを残す件数。
 const maxRecentSearches = 5;
 
@@ -76,6 +79,7 @@ class AppSettings {
     this.capsule,
     this.words = const {},
     this.hintsSeen = const {},
+    this.textSize = 0,
     this.recentSearches = const [],
     this.league = const LeagueData(),
     this.activity = const {},
@@ -140,6 +144,9 @@ class AppSettings {
   /// もう見せたヒント（初回だけ出す案内の id）。
   final Set<String> hintsSeen;
 
+  /// 文字の大きさ（0=ふつう / 1=大きい / 2=とても大きい）。年代の拡大率に上乗せする。
+  final int textSize;
+
   /// 最近の検索ことば（新しい順、最大 $maxRecentSearches 件）。
   final List<String> recentSearches;
 
@@ -193,6 +200,7 @@ class AppSettings {
     String? capsule,
     Set<String>? words,
     Set<String>? hintsSeen,
+    int? textSize,
     List<String>? recentSearches,
     LeagueData? league,
     Map<String, DayActivity>? activity,
@@ -228,6 +236,7 @@ class AppSettings {
         capsule: capsule ?? this.capsule,
         words: words ?? this.words,
         hintsSeen: hintsSeen ?? this.hintsSeen,
+        textSize: textSize ?? this.textSize,
         recentSearches: recentSearches ?? this.recentSearches,
         league: league ?? this.league,
         activity: activity ?? this.activity,
@@ -355,6 +364,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       capsule: p.getString('capsule'),
       words: (p.getStringList('words') ?? const []).toSet(),
       hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
+      textSize: (p.getInt('textSize') ?? 0).clamp(0, textSizeFactors.length - 1),
       recentSearches: p.getStringList('recentSearches') ?? const [],
       league: _readLeague(p),
       stamps: (p.getStringList('stamps') ?? const []).toSet(),
@@ -437,6 +447,12 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(notifyHour: hour, notifyMinute: minute);
     _prefs.setInt('notifyHour', hour);
     _prefs.setInt('notifyMinute', minute);
+  }
+
+  void setTextSize(int size) {
+    final v = size.clamp(0, textSizeFactors.length - 1);
+    state = state.copyWith(textSize: v);
+    _prefs.setInt('textSize', v);
   }
 
   void setUiLanguage(String? code) {

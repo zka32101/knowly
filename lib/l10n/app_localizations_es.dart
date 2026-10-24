@@ -27,6 +27,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get continueButton => 'Siguiente';
 
   @override
+  String get settingsTextSize => 'Tamaño del texto';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Grande';
+
+  @override
+  String get textSizeXLarge => 'Muy grande';
+
+  @override
   String relatedMore(int n) {
     return 'Ver más ($n más)';
   }

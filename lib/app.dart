@@ -143,7 +143,8 @@ class KnowlyApp extends ConsumerWidget {
     return MaterialApp.router(
       // 子どもモードは文字を大きくする（端末の文字サイズ設定に上乗せ）。
       builder: (context, child) {
-        final factor = band?.textScaleFactor ?? 1.0;
+        final factor = (band?.textScaleFactor ?? 1.0) *
+            textSizeFactors[ref.watch(settingsProvider.select((s) => s.textSize))];
         var app = child!;
         if (factor != 1.0) {
           final media = MediaQuery.of(context);

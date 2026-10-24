@@ -27,6 +27,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get settingsTextSize => '文字の大きさ';
+
+  @override
+  String get textSizeNormal => 'ふつう';
+
+  @override
+  String get textSizeLarge => '大きい';
+
+  @override
+  String get textSizeXLarge => 'とても大きい';
+
+  @override
   String relatedMore(int n) {
     return 'もっと みる（あと$nこ）';
   }
