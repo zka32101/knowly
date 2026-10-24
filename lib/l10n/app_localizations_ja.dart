@@ -153,7 +153,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get savedTitle => '保存した雑学';
 
   @override
-  String get savedEmpty => 'まだ保存した雑学はありません';
+  String get savedEmpty => 'まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります';
 
   @override
   String savedLimit(int count) {

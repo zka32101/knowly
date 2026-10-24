@@ -48,7 +48,7 @@
   "emptyFeed": "지금 보여 줄 상식이 없어요",
   "lockedFeedNote": "이전 상식은 Premium에서 볼 수 있어요",
   "savedTitle": "저장함",
-  "savedEmpty": "아직 저장한 것이 없어요",
+  "savedEmpty": "아직 저장한 것이 없어요. 상세 화면에서 책갈피 아이콘을 누르면 여기에 모여요.",
   "savedLimit": "무료 플랜에서는 최대 {count}개까지 저장할 수 있어요",
   "save": "저장",
   "unsave": "저장됨",

@@ -48,7 +48,7 @@
   "emptyFeed": "现在没有可显示的冷知识",
   "lockedFeedNote": "更早的冷知识需要 Premium",
   "savedTitle": "已收藏",
-  "savedEmpty": "还没有收藏",
+  "savedEmpty": "还没有收藏。在详情页点按书签图标，就会收藏到这里。",
   "savedLimit": "免费版最多可收藏 {count} 条",
   "save": "收藏",
   "unsave": "已收藏",

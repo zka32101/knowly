@@ -152,7 +152,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get savedTitle => '已收藏';
 
   @override
-  String get savedEmpty => '还没有收藏';
+  String get savedEmpty => '还没有收藏。在详情页点按书签图标，就会收藏到这里。';
 
   @override
   String savedLimit(int count) {

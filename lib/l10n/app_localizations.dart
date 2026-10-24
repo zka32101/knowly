@@ -389,7 +389,7 @@ abstract class AppLocalizations {
   /// No description provided for @savedEmpty.
   ///
   /// In ja, this message translates to:
-  /// **'まだ保存した雑学はありません'**
+  /// **'まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります'**
   String get savedEmpty;
 
   /// No description provided for @savedLimit.

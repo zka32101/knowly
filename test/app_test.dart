@@ -567,6 +567,20 @@ void main() {
     expect(find.text('遊（あそ）ぶ'), findsWidgets);
   });
 
+  testWidgets('保存が0件のとき、使い方の案内と「きょうの雑学」へのボタンが出る', (tester) async {
+    await _pump(tester, prefs: {'ageBand': 'adult'});
+    ProviderScope.containerOf(
+      tester.element(find.byType(KnowlyApp)),
+    ).read(routerProvider).push('/saved');
+    await tester.pumpAndSettle();
+    expect(find.byKey(const Key('saved_empty')), findsOneWidget);
+    expect(find.textContaining('しおり'), findsOneWidget);
+    await tester.tap(find.byKey(const Key('saved_empty_go')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const Key('saved_empty')), findsNothing);
+    expect(find.byKey(const Key('filter_button')), findsOneWidget); // ホームに戻った
+  });
+
   testWidgets('初回起動: 子どもの年では保護者向けの案内が出る', (tester) async {
     await _pump(tester);
     await tester.tap(find.byKey(const Key('onboarding_next')));

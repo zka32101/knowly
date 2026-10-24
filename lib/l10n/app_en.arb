@@ -48,7 +48,7 @@
   "emptyFeed": "No facts to show right now",
   "lockedFeedNote": "Older facts are available with Premium",
   "savedTitle": "Saved",
-  "savedEmpty": "Nothing saved yet",
+  "savedEmpty": "Nothing saved yet. Tap the bookmark on a fact to keep it here.",
   "savedLimit": "The free plan can save up to {count} facts",
   "@savedLimit": {
     "placeholders": {

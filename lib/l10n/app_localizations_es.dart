@@ -156,7 +156,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get savedTitle => 'Guardados';
 
   @override
-  String get savedEmpty => 'Todavía no has guardado nada';
+  String get savedEmpty =>
+      'Aún no has guardado nada. Toca el marcador en un dato para guardarlo aquí.';
 
   @override
   String savedLimit(int count) {

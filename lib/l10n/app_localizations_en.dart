@@ -155,7 +155,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get savedTitle => 'Saved';
 
   @override
-  String get savedEmpty => 'Nothing saved yet';
+  String get savedEmpty =>
+      'Nothing saved yet. Tap the bookmark on a fact to keep it here.';
 
   @override
   String savedLimit(int count) {

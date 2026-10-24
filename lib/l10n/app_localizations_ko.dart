@@ -154,7 +154,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get savedTitle => '저장함';
 
   @override
-  String get savedEmpty => '아직 저장한 것이 없어요';
+  String get savedEmpty => '아직 저장한 것이 없어요. 상세 화면에서 책갈피 아이콘을 누르면 여기에 모여요.';
 
   @override
   String savedLimit(int count) {

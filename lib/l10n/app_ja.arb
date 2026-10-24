@@ -48,7 +48,7 @@
   "emptyFeed": "いま表示できる雑学がありません",
   "lockedFeedNote": "さらに前の雑学は、プレミアムで読めます",
   "savedTitle": "保存した雑学",
-  "savedEmpty": "まだ保存した雑学はありません",
+  "savedEmpty": "まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります",
   "savedLimit": "無料プランで保存できるのは{count}件までです",
   "@savedLimit": {
     "placeholders": {

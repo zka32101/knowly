@@ -48,7 +48,7 @@
   "emptyFeed": "Ahora no hay datos para mostrar",
   "lockedFeedNote": "Los datos anteriores están disponibles con Premium",
   "savedTitle": "Guardados",
-  "savedEmpty": "Todavía no has guardado nada",
+  "savedEmpty": "Aún no has guardado nada. Toca el marcador en un dato para guardarlo aquí.",
   "savedLimit": "El plan gratuito permite guardar hasta {count} datos",
   "save": "Guardar",
   "unsave": "Guardado",
