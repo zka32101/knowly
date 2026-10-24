@@ -5081,6 +5081,594 @@
         ],
         "answer": 2
       }
+    },
+    {
+      "factId": "venus_flytrap_two_touches",
+      "ja": {
+        "question": "ハエトリグサは なんかい さわると とじる？",
+        "options": [
+          "いっかい",
+          "にかい",
+          "ひゃっかい"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "How many touches does a Venus flytrap need to close?",
+        "options": [
+          "One",
+          "Two",
+          "One hundred"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "捕蝇草要被碰几次才会合上？",
+        "options": [
+          "一次",
+          "两次",
+          "一百次"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "파리지옥이 닫히려면 몇 번 건드려야 할까요?",
+        "options": [
+          "한 번",
+          "두 번",
+          "백 번"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuántos toques necesita una atrapamoscas para cerrarse?",
+        "options": [
+          "Uno",
+          "Dos",
+          "Cien"
+        ],
+        "answer": 1
+      },
+      "id": "venus_flytrap_two_touches_0"
+    },
+    {
+      "factId": "mimosa_shy_leaves",
+      "ja": {
+        "question": "おじぎそうの はを さわると どうなる？",
+        "options": [
+          "とじる",
+          "おおきくなる",
+          "あかくなる"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What happens when you touch a sensitive plant's leaves?",
+        "options": [
+          "They fold up",
+          "They grow bigger",
+          "They turn red"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "碰含羞草的叶子会怎么样？",
+        "options": [
+          "合起来",
+          "变大",
+          "变红"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "미모사 잎을 만지면 어떻게 될까요?",
+        "options": [
+          "접혀요",
+          "커져요",
+          "빨개져요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Qué pasa cuando tocas las hojas de una mimosa?",
+        "options": [
+          "Se pliegan",
+          "Crecen",
+          "Se ponen rojas"
+        ],
+        "answer": 0
+      },
+      "id": "mimosa_shy_leaves_0"
+    },
+    {
+      "factId": "redwood_tallest",
+      "ja": {
+        "question": "せかいで いちばん たかい きの なかまは？",
+        "options": [
+          "さくら",
+          "セコイア",
+          "うめ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Which tree is the tallest in the world?",
+        "options": [
+          "Cherry",
+          "Redwood",
+          "Plum"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "世界上最高的树是哪一种？",
+        "options": [
+          "樱花树",
+          "红杉",
+          "梅树"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "세계에서 가장 키가 큰 나무는 무엇일까요?",
+        "options": [
+          "벚나무",
+          "세쿼이아",
+          "매화나무"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cuál es el árbol más alto del mundo?",
+        "options": [
+          "Cerezo",
+          "Secuoya",
+          "Ciruelo"
+        ],
+        "answer": 1
+      },
+      "id": "redwood_tallest_0"
+    },
+    {
+      "factId": "dandelion_parachute",
+      "ja": {
+        "question": "たんぽぽの わたげは なんの やくめ？",
+        "options": [
+          "たねを とばす",
+          "はなを まもる",
+          "みずを のむ"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "What is a dandelion's fluff for?",
+        "options": [
+          "Carrying seeds on the wind",
+          "Protecting the flower",
+          "Drinking water"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "蒲公英的绒毛有什么作用？",
+        "options": [
+          "带着种子飘走",
+          "保护花朵",
+          "喝水"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "민들레 솜털은 무슨 역할을 할까요?",
+        "options": [
+          "씨앗을 날려 보내요",
+          "꽃을 지켜요",
+          "물을 마셔요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Para qué sirve el vilano del diente de león?",
+        "options": [
+          "Llevar las semillas con el viento",
+          "Proteger la flor",
+          "Beber agua"
+        ],
+        "answer": 0
+      },
+      "id": "dandelion_parachute_0"
+    },
+    {
+      "factId": "velcro_burdock",
+      "ja": {
+        "question": "なにを ヒントに めんファスナーが うまれた？",
+        "options": [
+          "さかな",
+          "いぬの けに ついた くさの み",
+          "とり"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What inspired Velcro?",
+        "options": [
+          "A fish",
+          "Burrs stuck to a dog's fur",
+          "A bird"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "魔术贴的灵感来自什么？",
+        "options": [
+          "鱼",
+          "粘在狗毛上的刺果",
+          "鸟"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "찍찍이는 무엇에서 힌트를 얻었을까요?",
+        "options": [
+          "물고기",
+          "강아지 털에 붙은 열매",
+          "새"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Qué inspiró el velcro?",
+        "options": [
+          "Un pez",
+          "Semillas pegadas al pelo de un perro",
+          "Un pájaro"
+        ],
+        "answer": 1
+      },
+      "id": "velcro_burdock_0"
+    },
+    {
+      "factId": "postit_weak_glue",
+      "ja": {
+        "question": "ふせんは どんな のりから うまれた？",
+        "options": [
+          "くっつかない のり",
+          "とても つよい のり",
+          "よわくて はがせる のり"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "Post-it notes came from what kind of glue?",
+        "options": [
+          "Glue that never sticks",
+          "Extra-strong glue",
+          "Weak, peelable glue"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "便利贴来自哪种胶水？",
+        "options": [
+          "完全不粘的胶",
+          "超强胶",
+          "弱粘、可揭下的胶"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "포스트잇은 어떤 풀에서 나왔을까요?",
+        "options": [
+          "전혀 안 붙는 풀",
+          "아주 강한 풀",
+          "약해서 떼어낼 수 있는 풀"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿De qué tipo de pegamento salieron las Post-it?",
+        "options": [
+          "Uno que nunca pega",
+          "Uno superfuerte",
+          "Uno débil y despegable"
+        ],
+        "answer": 2
+      },
+      "id": "postit_weak_glue_0"
+    },
+    {
+      "factId": "instant_noodle_1958",
+      "ja": {
+        "question": "チキンラーメンが うまれたのは なんねん？",
+        "options": [
+          "1958ねん",
+          "1858ねん",
+          "2008ねん"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "In what year was Chikin Ramen launched?",
+        "options": [
+          "1958",
+          "1858",
+          "2008"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "鸡汤拉面是哪一年上市的？",
+        "options": [
+          "1958年",
+          "1858年",
+          "2008年"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "치킨 라멘은 몇 년에 나왔을까요?",
+        "options": [
+          "1958년",
+          "1858년",
+          "2008년"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿En qué año se lanzó Chikin Ramen?",
+        "options": [
+          "1958",
+          "1858",
+          "2008"
+        ],
+        "answer": 0
+      },
+      "id": "instant_noodle_1958_0"
+    },
+    {
+      "factId": "zipper_sundback",
+      "ja": {
+        "question": "いまの ジッパーに ちかい かたちを つくったのは どこの ひと？",
+        "options": [
+          "ブラジル",
+          "スウェーデンうまれ",
+          "オーストラリア"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "Where was Gideon Sundback born?",
+        "options": [
+          "Brazil",
+          "Sweden",
+          "Australia"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "吉迪恩·桑德巴克出生在哪里？",
+        "options": [
+          "巴西",
+          "瑞典",
+          "澳大利亚"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "기디온 선드백은 어디에서 태어났을까요?",
+        "options": [
+          "브라질",
+          "스웨덴",
+          "호주"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Dónde nació Gideon Sundback?",
+        "options": [
+          "Brasil",
+          "Suecia",
+          "Australia"
+        ],
+        "answer": 1
+      },
+      "id": "zipper_sundback_0"
+    },
+    {
+      "factId": "pisa_tower_lean",
+      "ja": {
+        "question": "ピサの とうは、どうして かたむいた？",
+        "options": [
+          "じめんが やわらかかった",
+          "じしんが きた",
+          "わざと そう つくった"
+        ],
+        "answer": 0
+      },
+      "en": {
+        "question": "Why does the Pisa tower lean?",
+        "options": [
+          "The ground was soft",
+          "An earthquake hit",
+          "It was built that way on purpose"
+        ],
+        "answer": 0
+      },
+      "zh": {
+        "question": "比萨塔为什么会倾斜？",
+        "options": [
+          "地面很软",
+          "发生了地震",
+          "故意这样建的"
+        ],
+        "answer": 0
+      },
+      "ko": {
+        "question": "피사의 탑은 왜 기울었을까요?",
+        "options": [
+          "땅이 물렁했어요",
+          "지진이 났어요",
+          "일부러 그렇게 지었어요"
+        ],
+        "answer": 0
+      },
+      "es": {
+        "question": "¿Por qué se inclina la torre de Pisa?",
+        "options": [
+          "El suelo era blando",
+          "Hubo un terremoto",
+          "La construyeron así a propósito"
+        ],
+        "answer": 0
+      },
+      "id": "pisa_tower_lean_0"
+    },
+    {
+      "factId": "opera_house_tiles",
+      "ja": {
+        "question": "オペラハウスの やねに、タイルは どのくらい ある？",
+        "options": [
+          "100まい ぐらい",
+          "1000まい ぐらい",
+          "100まん まい いじょう"
+        ],
+        "answer": 2
+      },
+      "en": {
+        "question": "How many tiles cover the Sydney Opera House roof?",
+        "options": [
+          "About 100",
+          "About 1,000",
+          "More than a million"
+        ],
+        "answer": 2
+      },
+      "zh": {
+        "question": "悉尼歌剧院的屋顶上有多少块瓷砖？",
+        "options": [
+          "大约100块",
+          "大约1000块",
+          "超过一百万块"
+        ],
+        "answer": 2
+      },
+      "ko": {
+        "question": "시드니 오페라 하우스 지붕에는 타일이 얼마나 있을까요?",
+        "options": [
+          "약 100장",
+          "약 1,000장",
+          "100만 장 넘게"
+        ],
+        "answer": 2
+      },
+      "es": {
+        "question": "¿Cuántas baldosas cubren el techo de la Ópera de Sídney?",
+        "options": [
+          "Unas 100",
+          "Unas 1000",
+          "Más de un millón"
+        ],
+        "answer": 2
+      },
+      "id": "opera_house_tiles_0"
+    },
+    {
+      "factId": "golden_gate_orange",
+      "ja": {
+        "question": "ゴールデンゲートブリッジは なにいろ？",
+        "options": [
+          "きんいろ",
+          "あかっぽい オレンジいろ",
+          "みどりいろ"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What color is the Golden Gate Bridge?",
+        "options": [
+          "Gold",
+          "Reddish orange",
+          "Green"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "金门大桥是什么颜色的？",
+        "options": [
+          "金色",
+          "偏红的橙色",
+          "绿色"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "금문교는 무슨 색일까요?",
+        "options": [
+          "금색",
+          "붉은 기가 도는 주황색",
+          "초록색"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿De qué color es el puente Golden Gate?",
+        "options": [
+          "Dorado",
+          "Naranja rojizo",
+          "Verde"
+        ],
+        "answer": 1
+      },
+      "id": "golden_gate_orange_0"
+    },
+    {
+      "factId": "skytree_634",
+      "ja": {
+        "question": "スカイツリーの 634 は、なんと よめる？",
+        "options": [
+          "ろくさんし",
+          "むさし",
+          "ろくさんよん"
+        ],
+        "answer": 1
+      },
+      "en": {
+        "question": "What can 6-3-4 be read as in Japanese?",
+        "options": [
+          "Rokusanshi",
+          "Musashi",
+          "Rokusanyon"
+        ],
+        "answer": 1
+      },
+      "zh": {
+        "question": "在日语里，6-3-4可以读成什么？",
+        "options": [
+          "Rokusanshi",
+          "Musashi（武藏）",
+          "Rokusanyon"
+        ],
+        "answer": 1
+      },
+      "ko": {
+        "question": "일본어로 6-3-4는 뭐라고 읽을 수 있을까요?",
+        "options": [
+          "로쿠산시",
+          "무사시",
+          "로쿠산욘"
+        ],
+        "answer": 1
+      },
+      "es": {
+        "question": "¿Cómo se puede leer 6-3-4 en japonés?",
+        "options": [
+          "Rokusanshi",
+          "Musashi",
+          "Rokusanyon"
+        ],
+        "answer": 1
+      },
+      "id": "skytree_634_0"
     }
   ]
 }

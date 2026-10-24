@@ -26,7 +26,7 @@ class FeedFilter {
   final Set<String> scenes;
 
   bool matches(Trivia t) =>
-      (categories.isEmpty || categories.contains(t.category)) &&
+      (categories.isEmpty || CategoryRegistry.matches(categories, t.category)) &&
       (scenes.isEmpty || t.scenes.any(scenes.contains));
 }
 
@@ -63,9 +63,23 @@ class TriviaRepository {
       c.where((e) => e.active).toList()..sort((a, b) => a.order.compareTo(b.order));
 
   /// 選択肢に出すカテゴリーの id（表示順）。
-  List<String> get categoryIds => categories.isNotEmpty
-      ? [for (final c in categories) c.id]
-      : (items.map((t) => t.category).toSet().toList()..sort());
+  List<String> get categoryIds {
+    if (categories.isEmpty) return items.map((t) => t.category).toSet().toList()..sort();
+    // 親の次に子が並ぶ順（それぞれ order の順）。
+    final ids = {for (final c in categories) c.id};
+    final out = <String>[];
+    void add(TriviaCategory c) {
+      if (out.contains(c.id)) return;
+      out.add(c.id);
+      for (final k in categories) {
+        if (k.parent == c.id) add(k);
+      }
+    }
+    for (final c in categories) {
+      if (c.parent == null || !ids.contains(c.parent)) add(c);
+    }
+    return out;
+  }
   final Map<String, QuizItem> _quizzes;
   final Map<String, WhyLink> _whyLinks;
 

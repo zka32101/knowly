@@ -40,6 +40,18 @@ const _emoji = {
   'theremin': '👋',
   'tuning': '🎼',
   'beethoven': '🎼',
+  'flytrap': '🪤',
+  'mimosa': '🌱',
+  'redwood': '🌲',
+  'dandelion': '🌼',
+  'velcro': '🧷',
+  'postit': '📝',
+  'noodles': '🍜',
+  'zipper': '🤐',
+  'pisa': '🏛️',
+  'opera': '🎭',
+  'bridge': '🌉',
+  'skytree': '🗼',
   'hand': '✋', 'brain': '🧠', 'eye': '👁️',
 };
 

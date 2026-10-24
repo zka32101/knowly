@@ -1292,7 +1292,8 @@
         "sea_otters_hold_hands",
         "human_dna_same",
         "owl_head_turn",
-        "basketball_hoop_305"
+        "basketball_hoop_305",
+        "redwood_tallest"
       ],
       "sources": [
         {
@@ -3845,7 +3846,11 @@
       ],
       "related": [
         "rainbow_full_circle",
-        "lightning_hotter_than_sun"
+        "lightning_hotter_than_sun",
+        "pisa_tower_lean",
+        "opera_house_tiles",
+        "golden_gate_orange",
+        "skytree_634"
       ],
       "sources": [],
       "verification": {
@@ -4210,7 +4215,10 @@
       "related": [
         "squirrel_acorns",
         "tree_rings",
-        "basketball_hoop_305"
+        "basketball_hoop_305",
+        "venus_flytrap_two_touches",
+        "mimosa_shy_leaves",
+        "redwood_tallest"
       ],
       "sources": [
         {
@@ -6097,7 +6105,8 @@
         "bee_waggle_dance",
         "cicada_17_years",
         "ant_strong",
-        "dragonfly_before_dinosaurs"
+        "dragonfly_before_dinosaurs",
+        "velcro_burdock"
       ],
       "sources": [
         {
@@ -6284,7 +6293,8 @@
         "cicada_17_years",
         "mosquito_female_bites",
         "dragonfly_before_dinosaurs",
-        "firefly_cold_light"
+        "firefly_cold_light",
+        "dandelion_parachute"
       ],
       "sources": [
         {
@@ -6846,7 +6856,8 @@
         "dung_beetle_milky_way",
         "cicada_17_years",
         "mosquito_female_bites",
-        "ladybug_spots"
+        "ladybug_spots",
+        "venus_flytrap_two_touches"
       ],
       "sources": [
         {
@@ -7422,7 +7433,9 @@
         "butterfly_taste_feet",
         "ant_strong",
         "beetle_quarter",
-        "dung_beetle_milky_way"
+        "dung_beetle_milky_way",
+        "postit_weak_glue",
+        "zipper_sundback"
       ],
       "sources": [
         {
@@ -7621,7 +7634,8 @@
         "tokyo_first_subway",
         "iss_sunrises",
         "shipping_80_percent",
-        "shinkansen_kingfisher"
+        "shinkansen_kingfisher",
+        "golden_gate_orange"
       ],
       "sources": [
         {
@@ -8194,7 +8208,10 @@
         "wright_first_flight",
         "shinkansen_1964",
         "maglev_603",
-        "bicycle_first"
+        "bicycle_first",
+        "pisa_tower_lean",
+        "opera_house_tiles",
+        "skytree_634"
       ],
       "sources": [
         {
@@ -8393,7 +8410,8 @@
         "wright_first_flight",
         "plane_window_hole",
         "apple_floats",
-        "blue_whale_largest"
+        "blue_whale_largest",
+        "golden_gate_orange"
       ],
       "sources": [
         {
@@ -9926,7 +9944,8 @@
         "carrot_colors",
         "peanut_not_nut",
         "watermelon_92_water",
-        "cacao_money"
+        "cacao_money",
+        "instant_noodle_1958"
       ],
       "sources": [
         {
@@ -10867,7 +10886,8 @@
         "popcorn_pop",
         "strawberry_200_seeds",
         "pineapple_two_years",
-        "apple_floats"
+        "apple_floats",
+        "instant_noodle_1958"
       ],
       "sources": [
         {
@@ -11052,7 +11072,8 @@
         "banana_is_berry",
         "apple_floats",
         "wasabi_nose",
-        "table_tennis_ball_40mm"
+        "table_tennis_ball_40mm",
+        "instant_noodle_1958"
       ],
       "sources": [
         {
@@ -12541,7 +12562,8 @@
         "piano_88_keys",
         "theremin_no_touch",
         "a440_tuning_pitch",
-        "beethoven_kept_composing"
+        "beethoven_kept_composing",
+        "velcro_burdock"
       ],
       "sources": [
         {
@@ -13111,7 +13133,10 @@
       "related": [
         "wright_first_flight",
         "tokyo_first_subway",
-        "marathon_42195"
+        "marathon_42195",
+        "velcro_burdock",
+        "postit_weak_glue",
+        "zipper_sundback"
       ],
       "sources": [
         {
@@ -13301,7 +13326,9 @@
       ],
       "related": [
         "airliner_cruise",
-        "plane_window_hole"
+        "plane_window_hole",
+        "postit_weak_glue",
+        "zipper_sundback"
       ],
       "sources": [
         {
@@ -14044,7 +14071,9 @@
       "related": [
         "tree_rings",
         "snow_hexagon",
-        "sunflower_sun"
+        "sunflower_sun",
+        "mimosa_shy_leaves",
+        "dandelion_parachute"
       ],
       "sources": [
         {
@@ -14228,7 +14257,9 @@
         "maple_red",
         "bamboo_fast",
         "sunflower_sun",
-        "pi_circle_ratio"
+        "pi_circle_ratio",
+        "redwood_tallest",
+        "pisa_tower_lean"
       ],
       "sources": [
         {
@@ -14421,7 +14452,10 @@
       "related": [
         "maple_red",
         "tree_rings",
-        "pi_circle_ratio"
+        "pi_circle_ratio",
+        "venus_flytrap_two_touches",
+        "mimosa_shy_leaves",
+        "dandelion_parachute"
       ],
       "sources": [
         {
@@ -15351,7 +15385,9 @@
         "basketball_hoop_305",
         "zero_number",
         "triangle_180",
-        "two_even_prime"
+        "two_even_prime",
+        "opera_house_tiles",
+        "skytree_634"
       ],
       "sources": [
         {
@@ -19135,6 +19171,2250 @@
           "kanji": "交響曲"
         }
       ]
+    },
+    {
+      "id": "venus_flytrap_two_touches",
+      "category": "plants",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "flytrap",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ハエトリグサは にかい さわると とじる",
+              "body": "ハエトリグサの はは、むしが にかい さわると ぱくっと とじるよ。"
+            },
+            "junior": {
+              "title": "ハエトリグサは二回（にかい）さわるととじる",
+              "body": "ハエトリグサの葉（は）は、毛（け）に二回（にかい）さわられるととじて、虫（むし）をつかまえます。二十（にじゅう）びょうぐらいの間（あいだ）に二回（にかい）さわられることが大切（たいせつ）です。"
+            },
+            "teen": {
+              "title": "ハエトリグサは2回触れると閉じる",
+              "body": "ハエトリグサの葉には感覚毛があり、約20秒以内に2回触れられると、一瞬で閉じて虫を捕らえます。雨粒などの1回の刺激では閉じないので、むだな力を使わずにすみます。"
+            },
+            "adult": {
+              "title": "ハエトリグサは2回の刺激を数えて罠を閉じる",
+              "body": "ハエトリグサは、葉の内側の感覚毛が約20秒以内に2回刺激されると、約0.1秒で葉を閉じます。1回だけでは閉じないため、雨粒など獲物ではないものに反応してエネルギーを無駄にするのを避けられます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The flytrap counts to two",
+              "body": "The Venus flytrap shuts its leaf when a bug touches it two times."
+            },
+            "junior": {
+              "title": "Venus flytraps need two touches",
+              "body": "A Venus flytrap leaf has tiny hairs inside. If a bug touches them twice within about 20 seconds, the leaf snaps shut."
+            },
+            "teen": {
+              "title": "A flytrap waits for a second touch",
+              "body": "The trap only closes if its trigger hairs are touched twice within roughly 20 seconds. That way it does not waste energy on a raindrop or a bit of dust."
+            },
+            "adult": {
+              "title": "Venus flytraps need two stimuli to close",
+              "body": "The trap springs shut in about a tenth of a second, but only when trigger hairs are stimulated twice within about 20 seconds, or one hair twice in quick succession. This filters out false alarms such as raindrops."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "捕蝇草会数到二",
+              "body": "当小虫碰到捕蝇草两次，它的叶子就会合上。"
+            },
+            "junior": {
+              "title": "捕蝇草要碰两次才会合上",
+              "body": "捕蝇草的叶子里面有小小的毛。如果小虫在大约20秒内碰到两次，叶子就会啪地合上。"
+            },
+            "teen": {
+              "title": "捕蝇草会等第二次触碰",
+              "body": "只有触发毛在大约20秒内被碰到两次，捕虫夹才会合上。这样它就不会因为一滴雨或一点灰尘而白白浪费能量。"
+            },
+            "adult": {
+              "title": "捕蝇草需要两次刺激才会闭合",
+              "body": "捕虫夹约在十分之一秒内闭合，但只有在约20秒内触发毛被刺激两次，或同一根毛被连续刺激两次时才会触发。这样可以过滤掉雨滴等误报。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "파리지옥은 두 번을 세요",
+              "body": "파리지옥은 벌레가 두 번 건드리면 잎을 닫아요."
+            },
+            "junior": {
+              "title": "파리지옥은 두 번 닿아야 닫혀요",
+              "body": "파리지옥 잎 안쪽에는 작은 털이 있어요. 벌레가 약 20초 안에 두 번 건드리면 잎이 탁 닫혀요."
+            },
+            "teen": {
+              "title": "파리지옥은 두 번째 접촉을 기다려요",
+              "body": "덫은 약 20초 안에 감각털이 두 번 닿아야만 닫혀요. 그래서 빗방울이나 먼지 때문에 에너지를 낭비하지 않아요."
+            },
+            "adult": {
+              "title": "파리지옥은 두 번의 자극이 있어야 닫힙니다",
+              "body": "덫은 약 0.1초 만에 닫히지만, 약 20초 안에 감각털이 두 번 자극되거나 한 털이 연달아 두 번 자극될 때만 작동합니다. 덕분에 빗방울 같은 오작동을 걸러 냅니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La atrapamoscas cuenta hasta dos",
+              "body": "La atrapamoscas cierra su hoja cuando un bicho la toca dos veces."
+            },
+            "junior": {
+              "title": "La atrapamoscas necesita dos toques",
+              "body": "Dentro de la hoja hay pelitos. Si un insecto los toca dos veces en unos 20 segundos, la hoja se cierra de golpe."
+            },
+            "teen": {
+              "title": "La atrapamoscas espera un segundo toque",
+              "body": "La trampa solo se cierra si sus pelos sensibles se tocan dos veces en unos 20 segundos. Así no gasta energía por una gota de lluvia o una mota de polvo."
+            },
+            "adult": {
+              "title": "La atrapamoscas necesita dos estímulos para cerrarse",
+              "body": "La trampa se cierra en una décima de segundo, pero solo si los pelos sensores se estimulan dos veces en unos 20 segundos, o un mismo pelo dos veces seguidas. Esto filtra falsas alarmas como las gotas de lluvia."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ハエトリグサ",
+        "食虫植物",
+        "Venus flytrap",
+        "carnivorous plant",
+        "しょくぶつ",
+        "plants"
+      ],
+      "related": [
+        "bamboo_fast",
+        "sunflower_sun",
+        "spider_not_insect"
+      ],
+      "sources": [
+        {
+          "title": "Venus flytrap",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Venus_flytrap",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "Venus flytrap",
+          "ja": "はえとりぐさ",
+          "kanji": ""
+        },
+        {
+          "en": "leaf",
+          "ja": "は",
+          "kanji": "葉"
+        },
+        {
+          "en": "insect",
+          "ja": "むし",
+          "kanji": "虫"
+        }
+      ]
+    },
+    {
+      "id": "mimosa_shy_leaves",
+      "category": "plants",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "mimosa",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "おじぎそうは さわると とじる",
+              "body": "おじぎそうの はは、さわると すぐに とじて さがるよ。"
+            },
+            "junior": {
+              "title": "おじぎ草（そう）はさわると葉（は）をとじる",
+              "body": "おじぎ草（そう）の葉（は）は、さわるとすぐにとじて下（した）にさがります。しばらくすると、また開（ひら）きます。"
+            },
+            "teen": {
+              "title": "オジギソウは触れると葉を閉じる",
+              "body": "オジギソウは、触れたりゆらしたりすると小さな葉をすばやく閉じて垂れ下がり、数分後にまた開きます。夜になっても葉を閉じます。"
+            },
+            "adult": {
+              "title": "オジギソウは刺激を電気信号で葉に伝える",
+              "body": "オジギソウは触れられると、刺激が活動電位として葉の付け根の葉枕に伝わり、細胞の水分が移動して小葉が閉じます。外敵を避ける防御や水分の蒸発を減らすためなどと考えられています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The shy plant folds up",
+              "body": "The sensitive plant folds its leaves when you touch it."
+            },
+            "junior": {
+              "title": "A plant that folds when touched",
+              "body": "When you touch the leaves of a sensitive plant, they fold up and droop. A few minutes later they open again."
+            },
+            "teen": {
+              "title": "The sensitive plant moves fast",
+              "body": "Its leaflets fold inward and droop when touched, shaken or blown on, then reopen in a few minutes. It also closes its leaves at night."
+            },
+            "adult": {
+              "title": "Mimosa pudica folds in response to touch",
+              "body": "A stimulus travels as an action potential to swollen leaf joints called pulvini, where water shifts out of cells and the leaflets fold. Possible reasons include discouraging grazers or reducing water loss."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "害羞的含羞草会合起来",
+              "body": "含羞草被碰到时，叶子会合起来。"
+            },
+            "junior": {
+              "title": "一碰就合上的植物",
+              "body": "碰一下含羞草的叶子，叶子就会合起来并垂下去。过几分钟，它们又会重新张开。"
+            },
+            "teen": {
+              "title": "含羞草的动作很快",
+              "body": "含羞草的小叶被碰、被摇或被吹时，会迅速向内合拢并下垂，几分钟后再张开。到了晚上它的叶子也会合上。"
+            },
+            "adult": {
+              "title": "含羞草通过电信号对触碰作出反应",
+              "body": "刺激以动作电位的形式传到叶片的膨大关节叶枕，细胞中的水分移出，小叶便合拢。可能的原因包括吓退啃食者或减少水分散失。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "부끄럼쟁이 식물은 잎을 접어요",
+              "body": "미모사는 만지면 잎을 접어요."
+            },
+            "junior": {
+              "title": "만지면 접히는 식물이에요",
+              "body": "미모사 잎을 만지면 잎이 접히고 아래로 처져요. 몇 분 뒤에는 다시 펴져요."
+            },
+            "teen": {
+              "title": "미모사는 움직임이 빨라요",
+              "body": "잎이 닿거나 흔들리거나 바람이 불면 안쪽으로 접히며 처지고, 몇 분 뒤 다시 펴져요. 밤에도 잎을 접어요."
+            },
+            "adult": {
+              "title": "미모사는 자극을 전기 신호로 전달해요",
+              "body": "자극은 활동 전위로 잎자루 끝의 잎맥(엽침)에 전해지고, 세포에서 물이 빠져나가면서 작은 잎이 접혀요. 초식 동물을 막거나 수분 손실을 줄이기 위해서라고 여겨져요."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La planta tímida se pliega",
+              "body": "La mimosa pliega sus hojas cuando la tocas."
+            },
+            "junior": {
+              "title": "Una planta que se cierra al tocarla",
+              "body": "Si tocas las hojas de una mimosa, se pliegan y se caen hacia abajo. Unos minutos después se abren otra vez."
+            },
+            "teen": {
+              "title": "La mimosa se mueve rápido",
+              "body": "Sus foliolos se pliegan hacia dentro y caen cuando los tocas, los sacudes o soplas sobre ellos, y se reabren en pocos minutos. También cierra las hojas de noche."
+            },
+            "adult": {
+              "title": "La Mimosa pudica reacciona al tacto",
+              "body": "El estímulo viaja como un potencial de acción hasta unas articulaciones hinchadas llamadas pulvinos, donde el agua sale de las células y los foliolos se pliegan. Se cree que sirve para disuadir a los herbívoros o reducir la pérdida de agua."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "おじぎそう",
+        "オジギソウ",
+        "mimosa",
+        "sensitive plant",
+        "しょくぶつ",
+        "plants"
+      ],
+      "related": [
+        "sunflower_sun",
+        "maple_red",
+        "bamboo_fast"
+      ],
+      "sources": [
+        {
+          "title": "Mimosa pudica",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mimosa_pudica",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "sensitive plant",
+          "ja": "おじぎそう",
+          "kanji": "おじぎ草"
+        },
+        {
+          "en": "leaf",
+          "ja": "は",
+          "kanji": "葉"
+        },
+        {
+          "en": "touch",
+          "ja": "さわる",
+          "kanji": ""
+        }
+      ]
+    },
+    {
+      "id": "redwood_tallest",
+      "category": "plants",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "redwood",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "セコイアは せかいで いちばん たかい き",
+              "body": "セコイアの なかまは、ひゃく メートルを こえる ことも あるよ。"
+            },
+            "junior": {
+              "title": "セコイアは世界（せかい）で一番（いちばん）高（たか）い木（き）",
+              "body": "北（きた）アメリカの海（うみ）に近（ちか）い所（ところ）にはえるセコイアは、高（たか）さが百（ひゃく）メートルをこえる木（き）もあります。"
+            },
+            "teen": {
+              "title": "セコイアは世界一高い木になる",
+              "body": "北アメリカの太平洋岸に育つセコイア（コーストレッドウッド）は、高さが100メートルを超える木もあり、現在知られている中で世界一高い木の種類です。"
+            },
+            "adult": {
+              "title": "コーストレッドウッドは地球上で最も高い樹木を生む",
+              "body": "セコイア（Sequoia sempervirens）はヒノキ科の針葉樹で、これまでに測定された最も高い個体は約116メートルに達します。幹の直径も最大で約9メートルになります。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The tallest tree",
+              "body": "Redwood trees can grow taller than a 30-story building."
+            },
+            "junior": {
+              "title": "Redwoods are the tallest trees",
+              "body": "Coast redwoods in North America can grow more than 100 meters tall. That is taller than any other kind of tree."
+            },
+            "teen": {
+              "title": "Coast redwoods reach record heights",
+              "body": "The coast redwood grows along the Pacific coast of North America. The tallest known trees are over 115 meters, which is higher than the Statue of Liberty."
+            },
+            "adult": {
+              "title": "Sequoia sempervirens produces the tallest living trees",
+              "body": "This cypress-family conifer has reached about 116 meters in height, with trunks up to roughly 9 meters across. No other living tree species is known to grow taller."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "最高的树",
+              "body": "红杉可以长得比三十层楼还高。"
+            },
+            "junior": {
+              "title": "红杉是最高的树",
+              "body": "北美的海岸红杉可以长到一百多米高，比其他任何树种都高。"
+            },
+            "teen": {
+              "title": "海岸红杉能长到创纪录的高度",
+              "body": "海岸红杉生长在北美太平洋沿岸。已知最高的红杉超过115米，比自由女神像还要高。"
+            },
+            "adult": {
+              "title": "北美红杉长出了现存最高的树",
+              "body": "这种柏科针叶树的最高记录约为116米，树干直径最大约9米。目前已知没有其他活着的树种能长得更高。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "가장 키가 큰 나무",
+              "body": "세쿼이아는 30층 건물보다 더 높이 자랄 수 있어요."
+            },
+            "junior": {
+              "title": "세쿼이아는 가장 키가 큰 나무예요",
+              "body": "북아메리카의 해안 세쿼이아는 100미터가 넘게 자랄 수 있어요. 다른 어떤 나무보다 높아요."
+            },
+            "teen": {
+              "title": "해안 세쿼이아는 기록적인 높이에 이르러요",
+              "body": "해안 세쿼이아는 북아메리카 태평양 연안에서 자라요. 알려진 가장 큰 나무는 115미터가 넘고, 자유의 여신상보다 높아요."
+            },
+            "adult": {
+              "title": "세쿼이아는 살아 있는 가장 큰 나무를 만듭니다",
+              "body": "측백나무과 침엽수인 이 나무는 높이가 약 116미터에 이른 기록이 있고, 줄기 지름은 최대 약 9미터입니다. 이보다 더 높이 자라는 나무는 알려져 있지 않습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El árbol más alto",
+              "body": "Las secuoyas pueden crecer más que un edificio de 30 pisos."
+            },
+            "junior": {
+              "title": "Las secuoyas son los árboles más altos",
+              "body": "Las secuoyas de la costa de Norteamérica pueden medir más de 100 metros. Son más altas que cualquier otro tipo de árbol."
+            },
+            "teen": {
+              "title": "La secuoya roja alcanza alturas récord",
+              "body": "La secuoya roja crece en la costa del Pacífico de Norteamérica. Los árboles más altos conocidos superan los 115 metros, más que la Estatua de la Libertad."
+            },
+            "adult": {
+              "title": "Sequoia sempervirens da los árboles vivos más altos",
+              "body": "Esta conífera de la familia de los cipreses ha alcanzado unos 116 metros de altura, con troncos de hasta unos 9 metros de diámetro. No se conoce ninguna otra especie viva que crezca más."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "セコイア",
+        "コーストレッドウッド",
+        "redwood",
+        "tallest tree",
+        "しょくぶつ",
+        "plants"
+      ],
+      "related": [
+        "tree_rings",
+        "bamboo_fast",
+        "giraffe_seven_vertebrae"
+      ],
+      "sources": [
+        {
+          "title": "Sequoia sempervirens",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sequoia_sempervirens",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "tree",
+          "ja": "き",
+          "kanji": "木"
+        },
+        {
+          "en": "tall",
+          "ja": "たかい",
+          "kanji": "高い"
+        },
+        {
+          "en": "world",
+          "ja": "せかい",
+          "kanji": "世界"
+        }
+      ]
+    },
+    {
+      "id": "dandelion_parachute",
+      "category": "plants",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "dandelion",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "たんぽぽの わたげは そらを とぶ",
+              "body": "たんぽぽの たねには ふわふわの けが ついていて、かぜに のって とおくへ いくよ。"
+            },
+            "junior": {
+              "title": "たんぽぽのわたげは風（かぜ）にのる",
+              "body": "たんぽぽのたねには、わたげという毛（け）がついています。わたげがパラシュートのようになり、風（かぜ）にのって遠（とお）くまで行（い）きます。"
+            },
+            "teen": {
+              "title": "タンポポの綿毛は種のパラシュート",
+              "body": "タンポポの種には冠毛（綿毛）という細い毛がついていて、パラシュートのように風をとらえます。軽い種は風に乗って、親の株から遠くまで運ばれます。"
+            },
+            "adult": {
+              "title": "タンポポの種は冠毛で風に乗って散布される",
+              "body": "タンポポの果実には冠毛と呼ばれる細い毛が付いており、これが空気抵抗を生んで落下を遅らせます。風散布によって種子は親株から離れた場所へ運ばれ、生育域を広げます。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Dandelion fluff flies",
+              "body": "Dandelion seeds have fluffy hairs that float on the wind."
+            },
+            "junior": {
+              "title": "Dandelion seeds ride the wind",
+              "body": "Each dandelion seed has a puff of fine hairs. It works like a parachute and carries the seed far away on the wind."
+            },
+            "teen": {
+              "title": "Dandelion seeds have built-in parachutes",
+              "body": "The white fluff is a ring of fine hairs called a pappus. It catches the air so the light seed drifts away from the parent plant."
+            },
+            "adult": {
+              "title": "Dandelions spread seeds by wind using a pappus",
+              "body": "Each dandelion fruit carries a pappus, a ring of fine hairs that creates drag and slows its fall. Wind can then carry the seed well away from the parent plant, helping the species spread."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "蒲公英的绒毛会飞",
+              "body": "蒲公英的种子有毛茸茸的绒毛，能在风中飘。"
+            },
+            "junior": {
+              "title": "蒲公英的种子乘风而行",
+              "body": "每颗蒲公英种子都有一簇细毛，像降落伞一样，让种子随风飘到很远的地方。"
+            },
+            "teen": {
+              "title": "蒲公英的种子自带降落伞",
+              "body": "白色的绒毛是一圈细毛，叫作冠毛。它能兜住空气，让轻轻的种子从母株旁飘走。"
+            },
+            "adult": {
+              "title": "蒲公英靠冠毛借风传播种子",
+              "body": "每个蒲公英果实都带有冠毛，这圈细毛产生空气阻力，减慢下落速度。风可以把种子带到离母株很远的地方，帮助这个物种扩散。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "민들레 홀씨는 날아가요",
+              "body": "민들레 씨앗에는 보송보송한 털이 있어서 바람에 날아가요."
+            },
+            "junior": {
+              "title": "민들레 씨앗은 바람을 타요",
+              "body": "민들레 씨앗마다 가는 털이 한 뭉치씩 달려 있어요. 낙하산처럼 씨앗을 바람에 실어 멀리 보내요."
+            },
+            "teen": {
+              "title": "민들레 씨앗에는 낙하산이 달려 있어요",
+              "body": "하얀 솜털은 관모라고 부르는 가는 털 고리예요. 공기를 붙잡아서 가벼운 씨앗이 어미 식물에서 멀리 날아가요."
+            },
+            "adult": {
+              "title": "민들레는 관모를 이용해 바람으로 씨앗을 퍼뜨립니다",
+              "body": "민들레 열매에는 관모라는 가는 털이 달려 있어 공기 저항으로 떨어지는 속도를 늦춥니다. 바람이 씨앗을 어미 식물에서 멀리 옮겨 주어 번식 범위를 넓힙니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El vilano del diente de león vuela",
+              "body": "Las semillas del diente de león tienen pelitos suaves que flotan con el viento."
+            },
+            "junior": {
+              "title": "Las semillas del diente de león viajan con el viento",
+              "body": "Cada semilla tiene un penacho de pelitos finos. Funciona como un paracaídas y la lleva lejos con el viento."
+            },
+            "teen": {
+              "title": "Las semillas del diente de león traen paracaídas",
+              "body": "El vilano blanco es un anillo de pelos finos. Atrapa el aire para que la semilla ligera se aleje de la planta madre."
+            },
+            "adult": {
+              "title": "El diente de león dispersa semillas con el viento gracias al vilano",
+              "body": "Cada fruto lleva un vilano, un anillo de pelos finos que genera resistencia al aire y frena la caída. Así el viento puede llevar la semilla lejos de la planta madre y ayudar a la especie a expandirse."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [
+        "spring"
+      ],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "たんぽぽ",
+        "タンポポ",
+        "わたげ",
+        "dandelion",
+        "seeds",
+        "しょくぶつ",
+        "plants"
+      ],
+      "related": [
+        "sunflower_sun",
+        "maple_red",
+        "bee_waggle_dance"
+      ],
+      "sources": [
+        {
+          "title": "Dandelion",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dandelion",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "dandelion",
+          "ja": "たんぽぽ",
+          "kanji": ""
+        },
+        {
+          "en": "seed",
+          "ja": "たね",
+          "kanji": "種"
+        },
+        {
+          "en": "wind",
+          "ja": "かぜ",
+          "kanji": "風"
+        }
+      ]
+    },
+    {
+      "id": "velcro_burdock",
+      "category": "inventions",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "velcro",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "いぬの けから うまれた ファスナー",
+              "body": "いぬの けに くっついた くさの みから、ひらめいたよ。"
+            },
+            "junior": {
+              "title": "犬（いぬ）の毛（け）から生（う）まれた面（めん）ファスナー",
+              "body": "スイスの人（ひと）が、山（やま）で犬（いぬ）の毛（け）にくっついた草（くさ）の実（み）を見（み）て、面（めん）ファスナーを発明（はつめい）しました。"
+            },
+            "teen": {
+              "title": "犬の毛についた草の実から生まれた面ファスナー",
+              "body": "1941年、スイスの技術者ジョルジュ・デ・メストラルは、犬の毛にくっついた草の実を見て、小さなかぎ爪の仕組みを思いつきました。"
+            },
+            "adult": {
+              "title": "面ファスナーは草の実のかぎ形のとげがヒント",
+              "body": "1941年ごろ、スイスの技術者ジョルジュ・デ・メストラルは、ゴボウの実が衣服や犬の毛に付くのを顕微鏡で観察し、無数のかぎ状の突起に注目しました。これが後の面ファスナー（ベルクロ）の着想になりました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Velcro came from a dog's fur",
+              "body": "A sticky plant seed gave a man a big idea."
+            },
+            "junior": {
+              "title": "Velcro was inspired by a dog's fur",
+              "body": "A Swiss man saw plant burrs stuck to his dog and invented hook-and-loop tape."
+            },
+            "teen": {
+              "title": "Velcro copied the hooks on burrs",
+              "body": "In 1941, Swiss engineer George de Mestral noticed burrs sticking to his dog's fur and clothes. Their tiny hooks inspired hook-and-loop fasteners."
+            },
+            "adult": {
+              "title": "Burdock burrs inspired the hook-and-loop fastener",
+              "body": "In 1941 George de Mestral examined burdock burrs under a microscope and found hundreds of tiny hooks catching on loops of fabric and fur. That observation led to the fastener he named Velcro, from the French velours and crochet."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "魔术贴来自狗的毛",
+              "body": "一颗粘人的植物种子，带来了一个好主意。"
+            },
+            "junior": {
+              "title": "魔术贴的灵感来自狗毛",
+              "body": "一位瑞士人看到植物的刺果粘在狗身上，发明了魔术贴。"
+            },
+            "teen": {
+              "title": "魔术贴模仿了刺果上的小钩",
+              "body": "1941年，瑞士工程师乔治·德·梅斯特拉尔发现刺果粘在狗毛和衣服上，小钩子给了他发明魔术贴的灵感。"
+            },
+            "adult": {
+              "title": "牛蒡刺果启发了钩环式尼龙搭扣",
+              "body": "1941年，乔治·德·梅斯特拉尔在显微镜下观察牛蒡的刺果，发现上面有数百个小钩钩住织物和毛发的环。这一发现促成了他以法语velours和crochet命名的Velcro。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "찍찍이는 강아지 털에서 나왔어요",
+              "body": "달라붙는 풀씨가 좋은 생각을 줬어요."
+            },
+            "junior": {
+              "title": "찍찍이는 강아지 털에서 힌트를 얻었어요",
+              "body": "스위스 사람이 강아지 털에 붙은 도깨비풀 열매를 보고 찍찍이를 만들었어요."
+            },
+            "teen": {
+              "title": "찍찍이는 풀열매의 작은 갈고리를 본떴어요",
+              "body": "1941년 스위스 기술자 조르주 드 메스트랄은 강아지 털과 옷에 붙은 열매를 보고 작은 갈고리 구조를 떠올렸어요."
+            },
+            "adult": {
+              "title": "우엉 열매가 벨크로의 착상이 되었습니다",
+              "body": "1941년 조르주 드 메스트랄은 우엉 열매를 현미경으로 관찰하여 수백 개의 작은 갈고리가 천과 털의 고리에 걸리는 것을 발견했습니다. 이것이 프랑스어 velours와 crochet에서 이름을 딴 벨크로로 이어졌습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El velcro vino del pelo de un perro",
+              "body": "Una semilla pegajosa le dio una gran idea a un hombre."
+            },
+            "junior": {
+              "title": "El velcro se inspiró en el pelo de un perro",
+              "body": "Un suizo vio semillas de bardana pegadas a su perro e inventó el velcro."
+            },
+            "teen": {
+              "title": "El velcro copió los ganchitos de las semillas",
+              "body": "En 1941, el ingeniero suizo George de Mestral vio semillas pegadas al pelo de su perro y a su ropa. Sus ganchitos le dieron la idea del cierre de gancho y bucle."
+            },
+            "adult": {
+              "title": "Las semillas de bardana inspiraron el cierre de gancho y bucle",
+              "body": "En 1941, George de Mestral examinó con un microscopio las semillas de bardana y vio cientos de ganchitos que se enganchaban en las fibras de tela y pelo. De ahí nació el velcro, nombre formado con las palabras francesas velours y crochet."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "面ファスナー",
+        "マジックテープ",
+        "velcro",
+        "ごぼう",
+        "発明",
+        "inventions"
+      ],
+      "related": [
+        "bat_echolocation",
+        "firefly_cold_light",
+        "bicycle_first"
+      ],
+      "sources": [
+        {
+          "title": "Velcro",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Velcro",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "burr",
+          "ja": "いが",
+          "kanji": ""
+        },
+        {
+          "en": "dog",
+          "ja": "いぬ",
+          "kanji": "犬"
+        },
+        {
+          "en": "invention",
+          "ja": "はつめい",
+          "kanji": "発明"
+        }
+      ]
+    },
+    {
+      "id": "postit_weak_glue",
+      "category": "inventions",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "postit",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ふせんは しっぱいから うまれた",
+              "body": "つよい のりを つくろうと して、はがれやすい のりが できたよ。"
+            },
+            "junior": {
+              "title": "ふせんは しっぱいから 生（う）まれた",
+              "body": "1968年（ねん）、強（つよ）いのりを作（つく）ろうとして、はがれやすいのりができました。のちに、本（ほん）のしおりに使（つか）うアイデアでふせんになりました。"
+            },
+            "teen": {
+              "title": "付箋は失敗作の糊から生まれた",
+              "body": "1968年、米国3Mの科学者スペンサー・シルバーは強力な接着剤を研究中、偶然に弱くて何度も貼れる糊を作りました。1974年、同僚のアーサー・フライがしおりに使うことを思いつきました。"
+            },
+            "adult": {
+              "title": "ポストイットは「弱い接着剤」の用途探しから生まれた",
+              "body": "1968年、3Mのスペンサー・シルバーは超強力接着剤の開発中に、粘着力が低く再利用できる感圧接着剤を偶然生み出しました。数年間用途が見つかりませんでしたが、1974年に同僚のアーサー・フライが本のしおりを固定する用途を着想し、製品化につながりました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Sticky notes began as a mistake",
+              "body": "A glue that was too weak turned into a handy note."
+            },
+            "junior": {
+              "title": "Sticky notes came from a weak glue",
+              "body": "A scientist tried to make strong glue but made a weak, reusable one. It later became Post-it notes."
+            },
+            "teen": {
+              "title": "Post-it notes started with a failed super glue",
+              "body": "In 1968, 3M scientist Spencer Silver made a low-tack, reusable adhesive by accident. In 1974, colleague Arthur Fry thought of using it to hold a bookmark in place."
+            },
+            "adult": {
+              "title": "Post-it notes were a solution looking for a problem",
+              "body": "In 1968 Spencer Silver set out to make a super-strong adhesive and instead produced a low-tack, reusable one. For years he found no use for it, until Arthur Fry realized in 1974 that it could anchor a bookmark, which led to the product."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "便利贴源于一次失败",
+              "body": "一种太弱的胶水，变成了好用的便条纸。"
+            },
+            "junior": {
+              "title": "便利贴来自一种弱胶水",
+              "body": "一位科学家想做强力胶，却做出了可重复粘贴的弱胶，后来成了便利贴。"
+            },
+            "teen": {
+              "title": "便利贴起源于失败的强力胶",
+              "body": "1968年，3M公司的科学家斯宾塞·西尔弗在研发强力胶时意外做出了粘性弱、可重复使用的胶。1974年，同事亚瑟·弗莱想到用它来固定书签。"
+            },
+            "adult": {
+              "title": "便利贴是“找到用途的弱胶”",
+              "body": "1968年，斯宾塞·西尔弗本想研制超强胶，却得到了一种低粘性、可重复使用的压敏胶。它多年无人问津，直到1974年亚瑟·弗莱想到用它固定书签，才催生了这一产品。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "포스트잇은 실패에서 태어났어요",
+              "body": "너무 약한 풀이 편리한 메모지가 되었어요."
+            },
+            "junior": {
+              "title": "포스트잇은 약한 풀에서 나왔어요",
+              "body": "한 과학자가 강한 풀을 만들려다 떼었다 붙일 수 있는 약한 풀을 만들었고, 나중에 포스트잇이 되었어요."
+            },
+            "teen": {
+              "title": "포스트잇은 실패한 강력 접착제에서 시작됐어요",
+              "body": "1968년 3M의 과학자 스펜서 실버는 우연히 접착력이 약하고 다시 쓸 수 있는 접착제를 만들었어요. 1974년 동료 아서 프라이가 책갈피를 붙이는 데 쓰자고 생각했어요."
+            },
+            "adult": {
+              "title": "포스트잇은 쓸모를 찾던 약한 접착제였습니다",
+              "body": "1968년 스펜서 실버는 초강력 접착제를 만들려다 접착력이 낮고 재사용 가능한 접착제를 얻었습니다. 오랫동안 쓸 곳이 없었지만 1974년 아서 프라이가 책갈피를 고정하는 용도를 떠올려 제품화로 이어졌습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Las notas adhesivas nacieron de un error",
+              "body": "Un pegamento demasiado débil se volvió una nota útil."
+            },
+            "junior": {
+              "title": "Las notas adhesivas salieron de un pegamento débil",
+              "body": "Un científico quiso hacer un pegamento fuerte, pero hizo uno débil y reutilizable. Después se convirtió en las notas Post-it."
+            },
+            "teen": {
+              "title": "Las Post-it empezaron con un superpegamento fallido",
+              "body": "En 1968, el científico de 3M Spencer Silver creó por accidente un adhesivo suave y reutilizable. En 1974, su colega Arthur Fry pensó en usarlo para sujetar un marcapáginas."
+            },
+            "adult": {
+              "title": "Las Post-it fueron una solución en busca de un problema",
+              "body": "En 1968 Spencer Silver quiso crear un adhesivo muy fuerte y obtuvo uno de baja adherencia y reutilizable. Durante años no encontró uso, hasta que en 1974 Arthur Fry vio que podía fijar un marcapáginas, y así nació el producto."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "付箋",
+        "ポストイット",
+        "post-it",
+        "のり",
+        "発明",
+        "inventions"
+      ],
+      "related": [
+        "black_box_orange",
+        "bicycle_first",
+        "silkworm_thread"
+      ],
+      "sources": [
+        {
+          "title": "Post-it note",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Post-it_note",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "glue",
+          "ja": "のり",
+          "kanji": "糊"
+        },
+        {
+          "en": "sticky note",
+          "ja": "ふせん",
+          "kanji": "付箋"
+        },
+        {
+          "en": "mistake",
+          "ja": "しっぱい",
+          "kanji": "失敗"
+        }
+      ]
+    },
+    {
+      "id": "instant_noodle_1958",
+      "category": "inventions",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "noodles",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "チキンラーメンは 1958ねん",
+              "body": "おゆを かけるだけで たべられる ラーメンを つくったよ。"
+            },
+            "junior": {
+              "title": "チキンラーメンは1958年（ねん）にできた",
+              "body": "1958年（ねん）、にっしん食品（しょくひん）のあんどうももふくさんが、お湯（ゆ）をかけるだけで食（た）べられる「チキンラーメン」を作（つく）りました。"
+            },
+            "teen": {
+              "title": "インスタントラーメンは1958年に誕生",
+              "body": "1958年、日清食品の安藤百福は、お湯をかけるだけで食べられる「チキンラーメン」を発売しました。日本で生まれた即席めんは、のちに世界へ広がりました。"
+            },
+            "adult": {
+              "title": "チキンラーメンから始まったインスタントラーメン",
+              "body": "インスタントラーメンは、日清食品の安藤百福によって発明され、1958年に「チキンラーメン」の名で発売されました。1971年には世界初のカップめん「カップヌードル」が登場し、即席めんは世界中に普及しました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Instant noodles began in 1958",
+              "body": "A man in Japan made noodles you just add hot water to."
+            },
+            "junior": {
+              "title": "Chikin Ramen came out in 1958",
+              "body": "Momofuku Ando of Nissin made noodles you can eat just by adding hot water."
+            },
+            "teen": {
+              "title": "Instant noodles were born in Japan in 1958",
+              "body": "Nissin's Momofuku Ando launched Chikin Ramen in 1958, noodles ready with hot water. They later spread around the world."
+            },
+            "adult": {
+              "title": "Instant noodles started with Chikin Ramen",
+              "body": "Instant noodles were invented by Momofuku Ando of Nissin Foods and launched in 1958 as Chikin Ramen. In 1971 Nissin introduced Cup Noodles, the first cup noodle product, and instant noodles spread worldwide."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "方便面诞生于1958年",
+              "body": "日本人发明了只要加热水就能吃的面。"
+            },
+            "junior": {
+              "title": "鸡汤拉面在1958年问世",
+              "body": "日清食品的安藤百福做出了加热水就能吃的面。"
+            },
+            "teen": {
+              "title": "方便面1958年诞生于日本",
+              "body": "1958年，日清食品的安藤百福推出了只需加热水的“鸡汤拉面”。这种即食面后来传遍了世界。"
+            },
+            "adult": {
+              "title": "方便面始于“鸡汤拉面”",
+              "body": "方便面由日清食品的安藤百福发明，1958年以“鸡汤拉面”（Chikin Ramen）之名上市。1971年日清推出了首款杯面“合味道”，方便面由此风靡全球。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "즉석 라면은 1958년에 나왔어요",
+              "body": "일본에서 뜨거운 물만 부으면 되는 면을 만들었어요."
+            },
+            "junior": {
+              "title": "치킨 라멘은 1958년에 나왔어요",
+              "body": "닛신의 안도 모모후쿠가 뜨거운 물만 부으면 먹는 면을 만들었어요."
+            },
+            "teen": {
+              "title": "즉석 라면은 1958년 일본에서 태어났어요",
+              "body": "닛신식품의 안도 모모후쿠가 1958년 뜨거운 물만 부으면 되는 '치킨 라멘'을 내놓았어요. 이 면은 나중에 전 세계로 퍼졌어요."
+            },
+            "adult": {
+              "title": "즉석 라면은 치킨 라멘에서 시작되었습니다",
+              "body": "즉석 라면은 닛신식품의 안도 모모후쿠가 발명하여 1958년 '치킨 라멘'이라는 이름으로 출시되었습니다. 1971년에는 최초의 컵라면 '컵 누들'이 나와 즉석 라면이 전 세계로 보급되었습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Los fideos instantáneos nacieron en 1958",
+              "body": "Un hombre en Japón hizo fideos que solo necesitan agua caliente."
+            },
+            "junior": {
+              "title": "Chikin Ramen salió en 1958",
+              "body": "Momofuku Ando, de Nissin, hizo fideos que se comen solo con agua caliente."
+            },
+            "teen": {
+              "title": "Los fideos instantáneos nacieron en Japón en 1958",
+              "body": "Momofuku Ando, de Nissin, lanzó en 1958 Chikin Ramen, unos fideos listos con agua caliente. Después se extendieron por todo el mundo."
+            },
+            "adult": {
+              "title": "Los fideos instantáneos empezaron con Chikin Ramen",
+              "body": "Los fideos instantáneos fueron inventados por Momofuku Ando, de Nissin Foods, y se lanzaron en 1958 como Chikin Ramen. En 1971 Nissin presentó Cup Noodles, el primer producto de fideos en vaso, y se difundieron por el mundo."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "インスタントラーメン",
+        "チキンラーメン",
+        "安藤百福",
+        "noodles",
+        "日清",
+        "inventions"
+      ],
+      "related": [
+        "rice_half_world",
+        "popcorn_pop",
+        "wasabi_nose"
+      ],
+      "sources": [
+        {
+          "title": "Instant noodle",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Instant_noodle",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "noodles",
+          "ja": "めん",
+          "kanji": "麺"
+        },
+        {
+          "en": "hot water",
+          "ja": "おゆ",
+          "kanji": "お湯"
+        },
+        {
+          "en": "invention",
+          "ja": "はつめい",
+          "kanji": "発明"
+        }
+      ]
+    },
+    {
+      "id": "zipper_sundback",
+      "category": "inventions",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "zipper",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ジッパーの かたちは 1913ねん ごろ",
+              "body": "スウェーデンうまれの ひとが、いまの ジッパーに ちかい かたちに したよ。"
+            },
+            "junior": {
+              "title": "ジッパーは1913年（ねん）ごろに今（いま）の形（かたち）に",
+              "body": "1913年（ねん）ごろ、スウェーデン生（う）まれのサンドバックさんが、今（いま）のジッパーに近（ちか）い形（かたち）に作（つく）りました。"
+            },
+            "teen": {
+              "title": "ジッパーは1913年ごろ現在の形に",
+              "body": "スウェーデン生まれの技術者ギデオン・サンドバックが、1913年ごろに今のジッパーにつながる設計を完成させました。それ以前の留め具は使いにくいものでした。"
+            },
+            "adult": {
+              "title": "現代的なジッパーの完成者ギデオン・サンドバック",
+              "body": "スウェーデン生まれの米国の技術者ギデオン・サンドバックは、1910年代に先行する留め具を改良し、現代のジッパーにつながる構造を完成させました。「ジッパー」の名称は、のちにB.F.グッドリッチ社が使った商標に由来します。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The zipper took shape around 1913",
+              "body": "A Swedish-born man made a zipper much like today's."
+            },
+            "junior": {
+              "title": "The modern zipper dates to about 1913",
+              "body": "Gideon Sundback, born in Sweden, made a zipper close to the ones we use now."
+            },
+            "teen": {
+              "title": "Sundback built the modern zipper",
+              "body": "Swedish-born engineer Gideon Sundback developed the design behind today's zipper around 1913. Earlier fasteners had been harder to use."
+            },
+            "adult": {
+              "title": "Gideon Sundback perfected the modern zipper",
+              "body": "Swedish-born American engineer Gideon Sundback improved earlier fasteners in the 1910s and developed the structure behind the modern zipper. The name zipper later came from a brand used by the B.F. Goodrich Company."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "拉链在1913年左右成形",
+              "body": "一位瑞典出生的人做出了很像现在的拉链。"
+            },
+            "junior": {
+              "title": "现代拉链约出现于1913年",
+              "body": "瑞典出生的吉迪恩·桑德巴克做出了接近今天的拉链。"
+            },
+            "teen": {
+              "title": "桑德巴克做出了现代拉链",
+              "body": "瑞典出生的工程师吉迪恩·桑德巴克在1913年左右完成了今天拉链的设计。此前的扣件更难使用。"
+            },
+            "adult": {
+              "title": "吉迪恩·桑德巴克完善了现代拉链",
+              "body": "瑞典出生的美国工程师吉迪恩·桑德巴克在20世纪10年代改进了早期的扣件，完成了现代拉链的结构。“zipper”这个名称后来源于B.F.古德里奇公司使用的商标。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "지퍼는 1913년쯤 모양을 갖췄어요",
+              "body": "스웨덴 태생의 사람이 지금과 비슷한 지퍼를 만들었어요."
+            },
+            "junior": {
+              "title": "현대 지퍼는 1913년쯤 나왔어요",
+              "body": "스웨덴 태생의 기디온 선드백이 지금 쓰는 것과 비슷한 지퍼를 만들었어요."
+            },
+            "teen": {
+              "title": "선드백이 현대 지퍼를 완성했어요",
+              "body": "스웨덴 태생의 기술자 기디온 선드백이 1913년쯤 오늘날 지퍼로 이어지는 설계를 만들었어요. 그 전의 잠금 장치는 쓰기 불편했어요."
+            },
+            "adult": {
+              "title": "기디온 선드백이 현대 지퍼를 완성했습니다",
+              "body": "스웨덴 태생의 미국 기술자 기디온 선드백은 1910년대에 이전의 잠금 장치를 개량하여 현대 지퍼의 구조를 완성했습니다. '지퍼'라는 이름은 이후 B.F. 굿리치 사가 사용한 상표에서 유래했습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La cremallera tomó forma hacia 1913",
+              "body": "Un hombre nacido en Suecia hizo una cremallera parecida a la de hoy."
+            },
+            "junior": {
+              "title": "La cremallera moderna data de hacia 1913",
+              "body": "Gideon Sundback, nacido en Suecia, hizo una cremallera cercana a las actuales."
+            },
+            "teen": {
+              "title": "Sundback creó la cremallera moderna",
+              "body": "El ingeniero sueco Gideon Sundback desarrolló hacia 1913 el diseño de la cremallera actual. Los cierres anteriores eran más difíciles de usar."
+            },
+            "adult": {
+              "title": "Gideon Sundback perfeccionó la cremallera moderna",
+              "body": "El ingeniero estadounidense de origen sueco Gideon Sundback mejoró en la década de 1910 los cierres anteriores y desarrolló la estructura de la cremallera moderna. El nombre zipper vino después de una marca usada por la empresa B.F. Goodrich."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ファスナー",
+        "ジッパー",
+        "チャック",
+        "zipper",
+        "発明",
+        "inventions"
+      ],
+      "related": [
+        "silkworm_thread",
+        "bicycle_first",
+        "black_box_orange"
+      ],
+      "sources": [
+        {
+          "title": "Zipper",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Zipper",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "zipper",
+          "ja": "ジッパー",
+          "kanji": ""
+        },
+        {
+          "en": "clothes",
+          "ja": "ふく",
+          "kanji": "服"
+        },
+        {
+          "en": "invention",
+          "ja": "はつめい",
+          "kanji": "発明"
+        }
+      ]
+    },
+    {
+      "id": "pisa_tower_lean",
+      "category": "buildings",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "pisa",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ピサの とうは たてている ときから かたむいた",
+              "body": "じめんが やわらかくて、たてている ときから かたむき はじめたよ。"
+            },
+            "junior": {
+              "title": "ピサのしゃとうは、作（つく）っている間（あいだ）にかたむいた",
+              "body": "地面（じめん）がやわらかかったので、作（つく）っている間（あいだ）にかたむきはじめました。作（つく）り終（お）わるまで200年（にひゃくねん）近（ちか）くかかりました。"
+            },
+            "teen": {
+              "title": "ピサの斜塔は建設中に傾き始めた",
+              "body": "地盤が軟らかく塔の重さを支えきれなかったため、12世紀の建設中から傾き始めました。完成までには約200年かかっています。"
+            },
+            "adult": {
+              "title": "ピサの斜塔は軟弱地盤のため建設中から傾斜した",
+              "body": "12世紀の着工後まもなく、軟弱な地盤が塔の荷重を支えきれずに傾斜が始まりました。工事は3期に分かれ、完成まで199年を要し、1990年には傾きが約5.5度に達していました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The Pisa tower leaned while being built",
+              "body": "The ground was soft, so the tower started to tilt as people built it."
+            },
+            "junior": {
+              "title": "The Leaning Tower of Pisa tilted during construction",
+              "body": "The ground under it was too soft to hold the tower's weight, so it began to lean while it was still being built. The whole job took almost 200 years."
+            },
+            "teen": {
+              "title": "Pisa's tower began leaning before it was even finished",
+              "body": "Soft ground could not properly support the tower's weight, so it started tilting during construction in the 12th century. Building took about 200 years in three stages."
+            },
+            "adult": {
+              "title": "The Leaning Tower of Pisa tilted because of soft foundation soil",
+              "body": "Soft ground failed to support the structure's weight, and the lean began during 12th-century construction. Work occurred in three stages over 199 years, and by 1990 the tilt had reached about 5.5 degrees."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "比萨塔在建造时就歪了",
+              "body": "地面很软，所以塔在建造的时候就开始倾斜了。"
+            },
+            "junior": {
+              "title": "比萨斜塔在建造过程中倾斜",
+              "body": "塔下的地面太软，撑不住塔的重量，所以在建造时就开始倾斜。整个工程花了将近200年。"
+            },
+            "teen": {
+              "title": "比萨斜塔在完工前就已经开始倾斜",
+              "body": "松软的地基无法很好地承受塔的重量，因此在12世纪施工期间就开始倾斜。工程分三个阶段，大约花了200年。"
+            },
+            "adult": {
+              "title": "比萨斜塔因地基土质松软而倾斜",
+              "body": "松软的地基无法支撑结构的重量，倾斜在12世纪施工期间就已出现。工程分三个阶段，历时199年，到1990年倾斜度已达约5.5度。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "피사의 탑은 짓는 동안 기울었어요",
+              "body": "땅이 물렁해서 탑을 짓는 동안 기울기 시작했어요."
+            },
+            "junior": {
+              "title": "피사의 사탑은 짓는 도중에 기울었어요",
+              "body": "탑 아래 땅이 너무 물렁해서 무게를 버티지 못했고, 짓는 동안 기울기 시작했어요. 다 짓는 데 200년 가까이 걸렸어요."
+            },
+            "teen": {
+              "title": "피사의 사탑은 완공 전부터 기울기 시작했어요",
+              "body": "무른 땅이 탑의 무게를 제대로 받치지 못해서 12세기 공사 중에 기울기 시작했어요. 공사는 세 단계로 나뉘어 약 200년이 걸렸어요."
+            },
+            "adult": {
+              "title": "피사의 사탑은 연약한 지반 때문에 기울었습니다",
+              "body": "연약한 지반이 구조물의 무게를 지탱하지 못해 12세기 공사 중에 기울기 시작했습니다. 공사는 세 단계에 걸쳐 199년이 걸렸고, 1990년에는 기울기가 약 5.5도에 이르렀습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La torre de Pisa se inclinó mientras la construían",
+              "body": "El suelo era blando, así que la torre empezó a inclinarse mientras la construían."
+            },
+            "junior": {
+              "title": "La Torre de Pisa se inclinó durante su construcción",
+              "body": "El suelo bajo ella era demasiado blando para aguantar su peso, así que empezó a inclinarse cuando aún la estaban construyendo. La obra duró casi 200 años."
+            },
+            "teen": {
+              "title": "La torre de Pisa empezó a inclinarse antes de terminarse",
+              "body": "El terreno blando no pudo sostener bien el peso de la torre, y empezó a inclinarse durante la construcción en el siglo XII. La obra duró unos 200 años en tres etapas."
+            },
+            "adult": {
+              "title": "La Torre de Pisa se inclinó por el suelo blando de su cimentación",
+              "body": "El terreno blando no soportó el peso de la estructura y la inclinación comenzó durante las obras del siglo XII. Los trabajos se hicieron en tres etapas a lo largo de 199 años, y en 1990 la inclinación alcanzaba unos 5,5 grados."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ピサの斜塔",
+        "斜塔",
+        "Leaning Tower of Pisa",
+        "Pisa",
+        "たてもの",
+        "buildings",
+        "イタリア"
+      ],
+      "related": [
+        "eiffel_grows_summer",
+        "tree_rings",
+        "tokyo_first_subway"
+      ],
+      "sources": [
+        {
+          "title": "Leaning Tower of Pisa",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "tower",
+          "ja": "とう",
+          "kanji": "塔"
+        },
+        {
+          "en": "ground",
+          "ja": "じめん",
+          "kanji": "地面"
+        },
+        {
+          "en": "Italy",
+          "ja": "イタリア",
+          "kanji": ""
+        }
+      ]
+    },
+    {
+      "id": "opera_house_tiles",
+      "category": "buildings",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "opera",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "オペラハウスの やねは タイルが たくさん",
+              "body": "シドニーの オペラハウスの やねには、100まん まいより おおい タイルが あるよ。"
+            },
+            "junior": {
+              "title": "オペラハウスの屋根（やね）はタイルがいっぱい",
+              "body": "シドニーのオペラハウスの屋根（やね）には、100万（ひゃくまん）まいより多（おお）いタイルがはってあります。白（しろ）とクリーム色（いろ）の2しゅるいです。"
+            },
+            "teen": {
+              "title": "シドニー・オペラハウスの屋根は100万枚超のタイル",
+              "body": "白い貝殻のような屋根は、遠くからは真っ白に見えます。近づくと、つやのある白とつや消しのクリーム色のタイルが、約106万枚も使われています。"
+            },
+            "adult": {
+              "title": "シドニー・オペラハウスの屋根は1,056,006枚のタイルで覆われている",
+              "body": "屋根は一様に白く見えますが、実際には光沢のある白とつや消しのクリーム色の2色のタイル計1,056,006枚が、繊細な矢筈模様を描いています。屋根はプレキャストコンクリートの板とリブで支えられています。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The Opera House roof has lots of tiles",
+              "body": "The roof of the Sydney Opera House has more than one million tiles."
+            },
+            "junior": {
+              "title": "The Sydney Opera House roof is covered in tiles",
+              "body": "More than one million tiles cover the curved roofs. They come in two colors, shiny white and creamy matte."
+            },
+            "teen": {
+              "title": "The Sydney Opera House roof uses over a million tiles",
+              "body": "From far away the roof looks pure white. Up close, it is made of more than a million glossy white and matte cream tiles."
+            },
+            "adult": {
+              "title": "The Sydney Opera House roof has 1,056,006 tiles",
+              "body": "The shells look uniformly white from a distance, but they show a subtle chevron pattern made of 1,056,006 tiles in glossy white and matte cream. Precast concrete panels and ribs support the roof."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "歌剧院的屋顶有很多瓷砖",
+              "body": "悉尼歌剧院的屋顶上有一百多万块瓷砖。"
+            },
+            "junior": {
+              "title": "悉尼歌剧院的屋顶铺满了瓷砖",
+              "body": "弯弯的屋顶上铺着一百多万块瓷砖，有光亮的白色和柔和的奶油色两种。"
+            },
+            "teen": {
+              "title": "悉尼歌剧院的屋顶用了超过一百万块瓷砖",
+              "body": "从远处看，屋顶是纯白色的。走近就能看到，它由一百多万块光泽白色和哑光奶油色的瓷砖组成。"
+            },
+            "adult": {
+              "title": "悉尼歌剧院的屋顶共有1,056,006块瓷砖",
+              "body": "从远处看，壳形屋顶似乎是均匀的白色，实际上由1,056,006块光泽白色和哑光奶油色瓷砖拼成细微的人字形图案。屋顶由预制混凝土板和肋支撑。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "오페라 하우스 지붕에는 타일이 많아요",
+              "body": "시드니 오페라 하우스 지붕에는 타일이 100만 장이 넘게 있어요."
+            },
+            "junior": {
+              "title": "시드니 오페라 하우스 지붕은 타일로 덮여 있어요",
+              "body": "동그랗게 휘어진 지붕에 타일이 100만 장 넘게 붙어 있어요. 반짝이는 흰색과 부드러운 크림색 두 가지예요."
+            },
+            "teen": {
+              "title": "시드니 오페라 하우스 지붕에는 타일이 100만 장 넘게 쓰였어요",
+              "body": "멀리서 보면 지붕은 새하얗게 보여요. 가까이서 보면 광택 있는 흰색과 무광 크림색 타일 100만 장 넘게로 이루어져 있어요."
+            },
+            "adult": {
+              "title": "시드니 오페라 하우스 지붕은 1,056,006장의 타일로 덮여 있습니다",
+              "body": "멀리서는 지붕이 고르게 흰색으로 보이지만, 실제로는 광택 있는 흰색과 무광 크림색 타일 1,056,006장이 은은한 V자 무늬를 이룹니다. 지붕은 프리캐스트 콘크리트 판과 리브가 받치고 있습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El techo de la Ópera tiene muchas baldosas",
+              "body": "El techo de la Ópera de Sídney tiene más de un millón de baldosas."
+            },
+            "junior": {
+              "title": "El techo de la Ópera de Sídney está cubierto de baldosas",
+              "body": "Más de un millón de baldosas cubren los techos curvos. Son de dos colores: blanco brillante y crema mate."
+            },
+            "teen": {
+              "title": "El techo de la Ópera de Sídney usa más de un millón de baldosas",
+              "body": "De lejos el techo parece blanco puro. De cerca, está hecho de más de un millón de baldosas blancas brillantes y crema mate."
+            },
+            "adult": {
+              "title": "El techo de la Ópera de Sídney tiene 1.056.006 baldosas",
+              "body": "De lejos las cubiertas parecen uniformemente blancas, pero muestran un sutil patrón en zigzag formado por 1.056.006 baldosas en blanco brillante y crema mate. Paneles y costillas de hormigón prefabricado sostienen el techo."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "シドニー",
+        "オペラハウス",
+        "タイル",
+        "Sydney Opera House",
+        "tiles",
+        "たてもの",
+        "buildings",
+        "屋根"
+      ],
+      "related": [
+        "eiffel_grows_summer",
+        "fuji_3776",
+        "tokyo_first_subway"
+      ],
+      "sources": [
+        {
+          "title": "Sydney Opera House",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "roof",
+          "ja": "やね",
+          "kanji": "屋根"
+        },
+        {
+          "en": "tile",
+          "ja": "タイル",
+          "kanji": ""
+        },
+        {
+          "en": "white",
+          "ja": "しろ",
+          "kanji": "白"
+        }
+      ]
+    },
+    {
+      "id": "golden_gate_orange",
+      "category": "buildings",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "bridge",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "ゴールデンゲートブリッジは きんいろ じゃない",
+              "body": "ゴールデンゲートブリッジは、きんいろ では なくて、あかっぽい オレンジいろ だよ。"
+            },
+            "junior": {
+              "title": "ゴールデンゲートブリッジは金色（きんいろ）ではない",
+              "body": "名前（なまえ）は「金（きん）」ですが、色（いろ）は赤（あか）っぽいオレンジ色（いろ）です。きりの中（なか）でも見（み）つけやすい色（いろ）です。"
+            },
+            "teen": {
+              "title": "金門橋の色は金色ではなくインターナショナル・オレンジ",
+              "body": "橋の色は「インターナショナル・オレンジ」という赤みがかったオレンジ色です。周りの自然に合い、霧の中でも船から見つけやすい色として選ばれました。"
+            },
+            "adult": {
+              "title": "ゴールデンゲートブリッジの塗装色は公式にインターナショナル・オレンジ",
+              "body": "橋の色は公式には朱色に近いインターナショナル・オレンジです。コンサルティング建築家のアーヴィング・モローが、周囲の自然と調和し霧の中でも視認性が高まるとして選びました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "The Golden Gate Bridge is not gold",
+              "body": "The Golden Gate Bridge is not gold. It is a reddish orange color."
+            },
+            "junior": {
+              "title": "The Golden Gate Bridge is orange, not gold",
+              "body": "Even though it says gold in the name, the bridge is painted a reddish orange. That color is easy to spot even in fog."
+            },
+            "teen": {
+              "title": "The Golden Gate Bridge is painted International Orange",
+              "body": "The bridge is a reddish orange called International Orange. It was chosen because it suits the natural surroundings and makes the bridge easier to see in fog."
+            },
+            "adult": {
+              "title": "The Golden Gate Bridge's official color is International Orange",
+              "body": "The bridge's color is officially an orange vermilion called International Orange. Consulting architect Irving Morrow chose it because it complements the natural surroundings and enhances visibility in fog."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "金门大桥不是金色的",
+              "body": "金门大桥不是金色的，它是偏红的橙色。"
+            },
+            "junior": {
+              "title": "金门大桥是橙色，不是金色",
+              "body": "名字里虽然有“金”，但大桥被漆成偏红的橙色。这种颜色在雾里也很容易看见。"
+            },
+            "teen": {
+              "title": "金门大桥漆成了国际橙",
+              "body": "大桥的颜色叫“国际橙”，是一种偏红的橙色。选这个颜色是因为它与周围的自然景色很搭，在雾中也更容易被看见。"
+            },
+            "adult": {
+              "title": "金门大桥的官方颜色是国际橙",
+              "body": "大桥的官方颜色是一种橙朱色，称为“国际橙”。顾问建筑师欧文·莫罗选择了它，因为它与周围自然环境相得益彰，并能提高雾中的可见度。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "금문교는 금색이 아니에요",
+              "body": "금문교는 금색이 아니라 붉은 기가 도는 주황색이에요."
+            },
+            "junior": {
+              "title": "금문교는 금색이 아니라 주황색이에요",
+              "body": "이름에는 금이 들어가지만 다리는 붉은 기가 도는 주황색으로 칠해져 있어요. 안개 속에서도 눈에 잘 띄는 색이에요."
+            },
+            "teen": {
+              "title": "금문교는 인터내셔널 오렌지색으로 칠해져 있어요",
+              "body": "다리 색은 '인터내셔널 오렌지'라는 붉은 기가 도는 주황색이에요. 주변 자연과 어울리고 안개 속에서도 잘 보인다는 이유로 골랐어요."
+            },
+            "adult": {
+              "title": "금문교의 공식 색상은 인터내셔널 오렌지입니다",
+              "body": "다리의 색은 공식적으로 '인터내셔널 오렌지'라 불리는 주홍빛 주황색입니다. 자문 건축가 어빙 모로가 주변 자연과 어우러지고 안개 속 가시성을 높인다는 이유로 선택했습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "El Golden Gate no es dorado",
+              "body": "El puente Golden Gate no es dorado. Es de un color naranja rojizo."
+            },
+            "junior": {
+              "title": "El Golden Gate es naranja, no dorado",
+              "body": "Aunque su nombre dice dorado, el puente está pintado de naranja rojizo. Es un color fácil de ver incluso con niebla."
+            },
+            "teen": {
+              "title": "El Golden Gate está pintado de naranja internacional",
+              "body": "El puente es de un naranja rojizo llamado naranja internacional. Se eligió porque combina con el paisaje y se ve mejor con niebla."
+            },
+            "adult": {
+              "title": "El color oficial del Golden Gate es el naranja internacional",
+              "body": "El color del puente es oficialmente un naranja bermellón llamado naranja internacional. El arquitecto consultor Irving Morrow lo eligió porque complementa el entorno natural y mejora la visibilidad con niebla."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "ゴールデンゲートブリッジ",
+        "金門橋",
+        "Golden Gate Bridge",
+        "オレンジ",
+        "international orange",
+        "たてもの",
+        "buildings",
+        "橋",
+        "bridge"
+      ],
+      "related": [
+        "steel_ship_floats",
+        "eiffel_grows_summer",
+        "shinkansen_1964"
+      ],
+      "sources": [
+        {
+          "title": "Golden Gate Bridge",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "stable",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "bridge",
+          "ja": "はし",
+          "kanji": "橋"
+        },
+        {
+          "en": "orange",
+          "ja": "オレンジ",
+          "kanji": ""
+        },
+        {
+          "en": "fog",
+          "ja": "きり",
+          "kanji": "霧"
+        }
+      ]
+    },
+    {
+      "id": "skytree_634",
+      "category": "buildings",
+      "scenes": [
+        "friends",
+        "kids",
+        "family",
+        "learning"
+      ],
+      "minAgeBand": "kids",
+      "sensitivity": "none",
+      "regions": [],
+      "illustration": "skytree",
+      "translations": {
+        "ja": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "スカイツリーの たかさは 634 メートル",
+              "body": "634 は「む さ し」と よめるよ。むかしの ばしょの なまえ なんだ。"
+            },
+            "junior": {
+              "title": "スカイツリーの高（たか）さは634メートル",
+              "body": "6・3・4を「む・さ・し」と読（よ）みます。むかしこのあたりが「むさし」とよばれていたことにちなんで、この高（たか）さにしました。"
+            },
+            "teen": {
+              "title": "スカイツリーの634メートルは「武蔵」の語呂合わせ",
+              "body": "東京スカイツリーの高さは634メートルで、6（む）・3（さ）・4（し）と読んで、この地域の旧国名「武蔵」にちなんでいます。覚えやすい高さとして決められました。"
+            },
+            "adult": {
+              "title": "東京スカイツリーの高さ634mは「武蔵」の語呂合わせ",
+              "body": "東京スカイツリーの高さ634mは、覚えやすい数字として6（む）・3（さ）・4（し）の語呂合わせで選ばれ、この地の旧称「武蔵」にちなんでいます。2009年に計画高さが610mから634mへ引き上げられました。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "en": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "Skytree is 634 meters tall",
+              "body": "In Japanese, 6-3-4 can be read as \"mu-sa-shi,\" an old name for the area."
+            },
+            "junior": {
+              "title": "Skytree's height is a word game",
+              "body": "Tokyo Skytree is 634 meters tall. In Japanese the numbers 6, 3 and 4 sound like \"Musashi,\" an old name for the region."
+            },
+            "teen": {
+              "title": "Tokyo Skytree's 634 m is a number pun",
+              "body": "The height of 634 m was chosen to be easy to remember: 6 (mu), 3 (sa) and 4 (shi) spell \"Musashi,\" an old name for the region where the tower stands."
+            },
+            "adult": {
+              "title": "Tokyo Skytree's 634 m height is a goroawase pun on Musashi",
+              "body": "The 634 m height was selected through numeric substitution, with 6 (mu), 3 (sa) and 4 (shi) standing for Musashi, an old name for the region. The projected height was raised from 610 m to 634 m in 2009."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "zh": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "晴空塔高634米",
+              "body": "在日语里，6-3-4可以读作“mu-sa-shi”，是这一带的旧名字。"
+            },
+            "junior": {
+              "title": "晴空塔的高度是个文字游戏",
+              "body": "东京晴空塔高634米。在日语里，数字6、3、4听起来像“武藏”，这是这个地区的旧名。"
+            },
+            "teen": {
+              "title": "东京晴空塔的634米是个数字谐音",
+              "body": "634米这个高度是为了好记而定的：6（mu）、3（sa）、4（shi）合起来读作“武藏”，这是塔所在地区的旧名。"
+            },
+            "adult": {
+              "title": "东京晴空塔634米的高度是“武藏”的谐音",
+              "body": "634米的高度是通过数字替换选定的，6（mu）、3（sa）、4（shi）代表该地区的旧称“武藏”。2009年，计划高度从610米提高到了634米。"
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "ko": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "스카이트리는 634미터예요",
+              "body": "일본어로 6-3-4는 '무사시'라고 읽을 수 있어요. 이 지역의 옛 이름이에요."
+            },
+            "junior": {
+              "title": "스카이트리의 높이는 말놀이예요",
+              "body": "도쿄 스카이트리는 높이가 634미터예요. 일본어로 6, 3, 4는 이 지역의 옛 이름인 '무사시'처럼 들려요."
+            },
+            "teen": {
+              "title": "도쿄 스카이트리의 634m는 숫자 말장난이에요",
+              "body": "634m라는 높이는 기억하기 쉽도록 정했어요. 6(무), 3(사), 4(시)가 이 지역의 옛 이름인 '무사시'를 뜻해요."
+            },
+            "adult": {
+              "title": "도쿄 스카이트리의 높이 634m는 '무사시'의 말장난입니다",
+              "body": "634m라는 높이는 숫자 대입으로 정해졌으며, 6(무)·3(사)·4(시)는 이 지역의 옛 이름 '무사시'를 뜻합니다. 2009년에 계획 높이가 610m에서 634m로 높아졌습니다."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        },
+        "es": {
+          "reviewStatus": "draft",
+          "levels": {
+            "kids": {
+              "title": "La Skytree mide 634 metros",
+              "body": "En japonés, 6-3-4 se puede leer \"mu-sa-shi\", un nombre antiguo de la zona."
+            },
+            "junior": {
+              "title": "La altura de la Skytree es un juego de palabras",
+              "body": "La Tokyo Skytree mide 634 metros. En japonés, los números 6, 3 y 4 suenan como \"Musashi\", un nombre antiguo de la región."
+            },
+            "teen": {
+              "title": "Los 634 m de la Tokyo Skytree son un juego de números",
+              "body": "Se eligió la altura de 634 m para que fuera fácil de recordar: 6 (mu), 3 (sa) y 4 (shi) forman \"Musashi\", un nombre antiguo de la región donde está la torre."
+            },
+            "adult": {
+              "title": "Los 634 m de la Tokyo Skytree son un goroawase sobre Musashi",
+              "body": "La altura de 634 m se eligió por sustitución numérica: 6 (mu), 3 (sa) y 4 (shi) representan Musashi, un nombre antiguo de la región. En 2009 la altura prevista se elevó de 610 m a 634 m."
+            }
+          },
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      },
+      "seasons": [],
+      "dates": [],
+      "timeOfDay": [],
+      "status": "active",
+      "version": 1,
+      "createdAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "excludeRegions": [],
+      "keywords": [
+        "東京スカイツリー",
+        "スカイツリー",
+        "634",
+        "武蔵",
+        "Tokyo Skytree",
+        "tower",
+        "たてもの",
+        "buildings"
+      ],
+      "related": [
+        "fuji_3776",
+        "tokyo_first_subway",
+        "eiffel_grows_summer"
+      ],
+      "sources": [
+        {
+          "title": "Tokyo Skytree",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tokyo_Skytree",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
+      "verification": {
+        "status": "unverified",
+        "verifiedBy": null,
+        "verifiedAt": null,
+        "note": "出典あり・人の確認待ち。"
+      },
+      "volatility": "changing",
+      "contentFlags": [],
+      "vocab": [
+        {
+          "en": "tower",
+          "ja": "とう",
+          "kanji": "塔"
+        },
+        {
+          "en": "height",
+          "ja": "たかさ",
+          "kanji": "高さ"
+        },
+        {
+          "en": "meter",
+          "ja": "メートル",
+          "kanji": ""
+        }
+      ],
+      "reviewDueAt": "2027-10-24"
     }
   ]
 }

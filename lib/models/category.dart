@@ -5,6 +5,7 @@ class TriviaCategory {
     required this.order,
     required this.emoji,
     required this.labels,
+    this.parent,
     this.active = true,
   });
 
@@ -13,6 +14,9 @@ class TriviaCategory {
   final String emoji;
   final bool active;
 
+  /// 親のカテゴリー（なければ、いちばん上のカテゴリー）。親を選ぶと、子の雑学もふくむ。
+  final String? parent;
+
   /// 言語 → 名前。日本語は {kids, junior, adult}（なければ kids → adult の順で代用）、ほかは文字列。
   final Map<String, Object> labels;
 
@@ -20,6 +24,7 @@ class TriviaCategory {
         id: json['id'] as String,
         order: json['order'] as int? ?? 1000,
         emoji: json['emoji'] as String? ?? '💡',
+        parent: json['parent'] as String?,
         active: (json['status'] as String? ?? 'active') == 'active',
         labels: Map<String, Object>.from(json['labels'] as Map),
       );
@@ -44,4 +49,21 @@ class CategoryRegistry {
   }
 
   static TriviaCategory? get(String id) => _byId[id];
+
+  /// [id] の親・祖父母…（近い順）。ループしても止まるようにする。
+  static List<String> ancestors(String id) {
+    final out = <String>[];
+    var p = _byId[id]?.parent;
+    while (p != null && !out.contains(p) && out.length < 8) {
+      out.add(p);
+      p = _byId[p]?.parent;
+    }
+    return out;
+  }
+
+  /// 雑学のカテゴリー [itemCategory] が、選んだカテゴリー [selected] のどれかに入るか（親を選ぶと子もふくむ）。
+  static bool matches(Set<String> selected, String itemCategory) {
+    if (selected.contains(itemCategory)) return true;
+    return ancestors(itemCategory).any(selected.contains);
+  }
 }

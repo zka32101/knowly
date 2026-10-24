@@ -2302,6 +2302,282 @@
         "statement": "Beethoven dejó de componer en cuanto perdió oído.",
         "answer": false
       }
+    },
+    {
+      "factId": "venus_flytrap_two_touches",
+      "ja": {
+        "statement": "ハエトリグサは、むしが にかい さわると とじるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A Venus flytrap closes when a bug touches it twice.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "当小虫碰到捕蝇草两次，它就会合上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "파리지옥은 벌레가 두 번 건드리면 닫혀요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La atrapamoscas se cierra cuando un bicho la toca dos veces.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "mimosa_shy_leaves",
+      "ja": {
+        "statement": "おじぎそうは、さわると はを とじるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A sensitive plant folds its leaves when touched.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "含羞草被碰到时会合起叶子。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "미모사는 만지면 잎을 접어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mimosa pliega sus hojas cuando se la toca.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "redwood_tallest",
+      "ja": {
+        "statement": "セコイアは、ひゃく メートルを こえる ことが ある き。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Redwoods can grow taller than 100 meters.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "红杉可以长到一百米以上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세쿼이아는 100미터 넘게 자랄 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las secuoyas pueden medir más de 100 metros.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "dandelion_parachute",
+      "ja": {
+        "statement": "たんぽぽの たねは、わたげで かぜに のるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Dandelion seeds travel on the wind using fluffy hairs.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蒲公英的种子靠绒毛乘风飘行。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "민들레 씨앗은 솜털로 바람을 타요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las semillas del diente de león viajan con el viento gracias a sus pelitos.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "velcro_burdock",
+      "ja": {
+        "statement": "いぬの けに ついた くさの みが ヒントで、めんファスナーが うまれた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Velcro was inspired by burrs stuck to a dog's fur.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "魔术贴的灵感来自粘在狗毛上的刺果。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "찍찍이는 강아지 털에 붙은 풀열매에서 힌트를 얻었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El velcro se inspiró en semillas pegadas al pelo de un perro.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "postit_weak_glue",
+      "ja": {
+        "statement": "ふせんの のりは、とても つよい のりを めざして ねらいどおりに できた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Post-it glue came out exactly as the strong glue the scientist planned.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "便利贴的胶水正是科学家想要的强力胶。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "포스트잇 풀은 과학자가 계획한 대로 강력한 풀이었어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El pegamento de las Post-it fue justo el pegamento fuerte que planeaba el científico.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "instant_noodle_1958",
+      "ja": {
+        "statement": "チキンラーメンは 1958ねんに はつばい された。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Chikin Ramen was launched in 1958.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "鸡汤拉面于1958年上市。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "치킨 라멘은 1958년에 출시되었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Chikin Ramen se lanzó en 1958.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "zipper_sundback",
+      "ja": {
+        "statement": "いまの ジッパーに ちかい かたちを つくったのは、にほんの ひとだ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A Japanese person made the zipper design close to today's.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "做出接近今天拉链的是一位日本人。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "지금과 비슷한 지퍼를 만든 사람은 일본 사람이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un japonés hizo la cremallera cercana a la actual.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "pisa_tower_lean",
+      "ja": {
+        "statement": "ピサの とうは、たてている ときから かたむき はじめた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Pisa's tower started to lean while it was being built.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "比萨塔在建造的时候就开始倾斜了。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "피사의 탑은 짓는 동안 기울기 시작했어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La torre de Pisa empezó a inclinarse mientras la construían.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "opera_house_tiles",
+      "ja": {
+        "statement": "オペラハウスの やねの タイルは、ぜんぶ まっくろ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Sydney Opera House roof tiles are all jet black.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "悉尼歌剧院屋顶的瓷砖全是黑色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "시드니 오페라 하우스 지붕의 타일은 전부 새까매요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las baldosas del techo de la Ópera de Sídney son todas negras.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "golden_gate_orange",
+      "ja": {
+        "statement": "ゴールデンゲートブリッジは、ほんとうに きんいろ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Golden Gate Bridge is painted real gold.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "金门大桥涂的是真正的金色。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "금문교는 진짜 금색으로 칠해져 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El puente Golden Gate está pintado de verdadero dorado.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "skytree_634",
+      "ja": {
+        "statement": "スカイツリーの たかさ 634 メートルは、むかしの ちめい「むさし」に ちなむ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Skytree's 634 m height is a pun on the old name \"Musashi.\"",
+        "answer": true
+      },
+      "zh": {
+        "statement": "晴空塔634米的高度谐音旧地名“武藏”。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "스카이트리의 634m는 옛 이름 '무사시'에서 따왔어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los 634 m de la Skytree juegan con el antiguo nombre \"Musashi\".",
+        "answer": true
+      }
     }
   ]
 }

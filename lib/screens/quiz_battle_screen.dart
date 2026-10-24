@@ -1,3 +1,4 @@
+import '../models/category.dart';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -89,7 +90,7 @@ class _QuizBattleScreenState extends ConsumerState<QuizBattleScreen> {
         for (final q in pool)
           if ((_kind == _Kind.all ||
                   (_kind == _Kind.trueFalse) == q.isTrueFalse) &&
-              (_category == null || q.category == _category))
+              (_category == null || CategoryRegistry.matches({_category!}, q.category)))
             q,
       ];
 

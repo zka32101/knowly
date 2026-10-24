@@ -1,3 +1,4 @@
+import '../models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -57,7 +58,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
     final tokens = queryTokens(_query);
     final scored = <(Trivia, int)>[];
     for (final t in ref.watch(allEligibleProvider)) {
-      if (_categories.isNotEmpty && !_categories.contains(t.category)) continue;
+      if (_categories.isNotEmpty && !CategoryRegistry.matches(_categories, t.category)) continue;
       if (_scenes.isNotEmpty && !t.scenes.any(_scenes.contains)) continue;
       if (!_statusMatches(t, settings)) continue;
       final entry = index[t.id];

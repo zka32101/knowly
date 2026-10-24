@@ -1,3 +1,4 @@
+import '../models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -44,8 +45,8 @@ class _ZukanScreenState extends ConsumerState<ZukanScreen> {
     final theme = Theme.of(context);
     final all = ref.watch(allEligibleProvider);
     final seen = ref.watch(settingsProvider.select((s) => s.seen));
-    final categories = [for (final c in ref.watch(categoryIdsProvider)) if (all.any((t) => t.category == c)) c];
-    final shown = [for (final t in all) if (_category == null || t.category == _category) t];
+    final categories = [for (final c in ref.watch(categoryIdsProvider)) if (all.any((t) => CategoryRegistry.matches({c}, t.category))) c];
+    final shown = [for (final t in all) if (_category == null || CategoryRegistry.matches({_category!}, t.category)) t];
     final found = shown.where((t) => seen.contains(t.id)).length;
 
     return Scaffold(

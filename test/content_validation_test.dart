@@ -422,6 +422,18 @@ void main() {
       for (final i in items) {
         expect(catIds, contains(i['category']), reason: i['id'] as String);
       }
+      // 親は実在し、ループしない
+      final parents = {for (final c in cats) c['id'] as String: c['parent'] as String?};
+      for (final e in parents.entries) {
+        var p = e.value;
+        var steps = 0;
+        while (p != null) {
+          expect(parents.containsKey(p), isTrue, reason: '${e.key}: 親 $p がない');
+          expect(p, isNot(e.key), reason: '${e.key}: 親がループしている');
+          p = parents[p];
+          expect(++steps, lessThan(8), reason: '${e.key}: 親をたどれない');
+        }
+      }
     });
   });
 
