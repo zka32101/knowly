@@ -19,6 +19,7 @@ import 'package:knowly/models/age_band.dart';
 import 'package:knowly/models/calendar_event.dart';
 import 'package:knowly/models/myth.dart';
 import 'package:knowly/models/project.dart';
+import 'package:knowly/models/category.dart';
 import 'package:knowly/models/glossary.dart';
 import 'package:knowly/models/quiz.dart';
 import 'package:knowly/models/trivia.dart';
@@ -188,12 +189,16 @@ TriviaRepository _repo({bool withSources = false}) {
             as Map<String, dynamic>)['items'] as List)
         .map((e) => ChoiceQuiz.fromJson(e as Map<String, dynamic>))
         .toList(),
-    whyLinks: (why['links'] as List)
+    whyLinks: (why['items'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
         .toList(),
     myths: ((jsonDecode(File('assets/trivia/myths.json').readAsStringSync())
             as Map<String, dynamic>)['items'] as List)
         .map((e) => Myth.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    categories: ((jsonDecode(File('assets/trivia/categories.json').readAsStringSync())
+            as Map<String, dynamic>)['items'] as List)
+        .map((e) => TriviaCategory.fromJson(e as Map<String, dynamic>))
         .toList(),
     events: ((jsonDecode(File('assets/trivia/calendar.json').readAsStringSync())
             as Map<String, dynamic>)['items'] as List)

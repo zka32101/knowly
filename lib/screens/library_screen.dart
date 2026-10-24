@@ -102,7 +102,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                 children: [
                   header(l.filterCategoryHeader),
                   Wrap(spacing: 8, runSpacing: 8, children: [
-                    for (final c in allCategories)
+                    for (final c in ref.watch(categoryIdsProvider))
                       FilterChip(
                         label: Text(categoryLabel(l, c)),
                         selected: _categories.contains(c),

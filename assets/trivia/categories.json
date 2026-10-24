@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.10.23",
+  "updatedAt": "2026-10-23",
+  "items": [
+    {
+      "id": "animals",
+      "order": 10,
+      "emoji": "🐾",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "どうぶつ",
+          "junior": "動物（どうぶつ）",
+          "adult": "動物"
+        },
+        "en": "Animals",
+        "zh": "动物",
+        "ko": "동물",
+        "es": "Animales"
+      }
+    },
+    {
+      "id": "bugs",
+      "order": 20,
+      "emoji": "🐞",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "むし",
+          "junior": "虫（むし）",
+          "adult": "虫"
+        },
+        "en": "Bugs",
+        "zh": "昆虫",
+        "ko": "곤충",
+        "es": "Insectos"
+      }
+    },
+    {
+      "id": "vehicles",
+      "order": 30,
+      "emoji": "🚆",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "のりもの",
+          "junior": "乗（の）り物（もの）",
+          "adult": "乗り物"
+        },
+        "en": "Vehicles",
+        "zh": "交通工具",
+        "ko": "탈것",
+        "es": "Vehículos"
+      }
+    },
+    {
+      "id": "food",
+      "order": 40,
+      "emoji": "🍙",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "たべもの",
+          "junior": "食（た）べ物（もの）",
+          "adult": "食べ物"
+        },
+        "en": "Food",
+        "zh": "食物",
+        "ko": "음식",
+        "es": "Comida"
+      }
+    },
+    {
+      "id": "space",
+      "order": 50,
+      "emoji": "🪐",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "うちゅう",
+          "junior": "宇宙（うちゅう）",
+          "adult": "宇宙"
+        },
+        "en": "Space",
+        "zh": "宇宙",
+        "ko": "우주",
+        "es": "Espacio"
+      }
+    },
+    {
+      "id": "body",
+      "order": 60,
+      "emoji": "🫀",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "からだ",
+          "junior": "体（からだ）",
+          "adult": "体"
+        },
+        "en": "Body",
+        "zh": "身体",
+        "ko": "몸",
+        "es": "Cuerpo"
+      }
+    },
+    {
+      "id": "nature",
+      "order": 70,
+      "emoji": "🌿",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "しぜん",
+          "junior": "自然（しぜん）",
+          "adult": "自然"
+        },
+        "en": "Nature",
+        "zh": "自然",
+        "ko": "자연",
+        "es": "Naturaleza"
+      }
+    },
+    {
+      "id": "science",
+      "order": 80,
+      "emoji": "🔬",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "かがく",
+          "junior": "科学（かがく）",
+          "adult": "科学"
+        },
+        "en": "Science",
+        "zh": "科学",
+        "ko": "과학",
+        "es": "Ciencia"
+      }
+    },
+    {
+      "id": "geography",
+      "order": 90,
+      "emoji": "🗺️",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "ちり",
+          "junior": "地理（ちり）",
+          "adult": "地理"
+        },
+        "en": "Geography",
+        "zh": "地理",
+        "ko": "지리",
+        "es": "Geografía"
+      }
+    },
+    {
+      "id": "japan",
+      "order": 100,
+      "emoji": "🗾",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "にほん",
+          "junior": "日本（にほん）",
+          "adult": "日本"
+        },
+        "en": "Japan",
+        "zh": "日本",
+        "ko": "일본",
+        "es": "Japón"
+      }
+    }
+  ]
+}

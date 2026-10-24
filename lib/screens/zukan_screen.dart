@@ -44,7 +44,7 @@ class _ZukanScreenState extends ConsumerState<ZukanScreen> {
     final theme = Theme.of(context);
     final all = ref.watch(allEligibleProvider);
     final seen = ref.watch(settingsProvider.select((s) => s.seen));
-    final categories = [for (final c in allCategories) if (all.any((t) => t.category == c)) c];
+    final categories = [for (final c in ref.watch(categoryIdsProvider)) if (all.any((t) => t.category == c)) c];
     final shown = [for (final t in all) if (_category == null || t.category == _category) t];
     final found = shown.where((t) => seen.contains(t.id)).length;
 

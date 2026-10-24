@@ -1,3 +1,4 @@
+import '../state/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -45,16 +46,36 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               onChanged: (v) {
                 notifier.setUiLanguage(v);
                 // 雑学の本文は日本語・英語だけ。ほかの言語の画面では、本文は英語（自動）にする。
-                notifier.setContentLanguage(contentLanguageCodes.contains(v) ? v : null);
+                notifier.setContentLanguage(
+                  contentLanguageCodes.contains(v) ? v : null,
+                );
               },
               child: Column(
                 children: [
-                  RadioListTile<String?>(value: null, title: Text(l.languageSystem)),
-                  RadioListTile<String?>(value: 'ja', title: Text(l.languageJa)),
-                  RadioListTile<String?>(value: 'en', title: Text(l.languageEn)),
-                  RadioListTile<String?>(value: 'zh', title: Text(l.languageZh)),
-                  RadioListTile<String?>(value: 'ko', title: Text(l.languageKo)),
-                  RadioListTile<String?>(value: 'es', title: Text(l.languageEs)),
+                  RadioListTile<String?>(
+                    value: null,
+                    title: Text(l.languageSystem),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'ja',
+                    title: Text(l.languageJa),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'en',
+                    title: Text(l.languageEn),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'zh',
+                    title: Text(l.languageZh),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'ko',
+                    title: Text(l.languageKo),
+                  ),
+                  RadioListTile<String?>(
+                    value: 'es',
+                    title: Text(l.languageEs),
+                  ),
                 ],
               ),
             ),
@@ -95,7 +116,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(l.parentNoteTitle, style: theme.textTheme.titleSmall),
+                        Text(
+                          l.parentNoteTitle,
+                          style: theme.textTheme.titleSmall,
+                        ),
                         const SizedBox(height: 4),
                         Text(l.parentNoteBody),
                       ],
@@ -117,7 +141,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               spacing: 8,
               runSpacing: 8,
               children: [
-                for (final c in allCategories)
+                for (final c in ref.watch(categoryIdsProvider))
                   FilterChip(
                     label: Text(categoryLabel(l, c)),
                     selected: settings.interestCategories.contains(c),
@@ -155,7 +179,9 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               Expanded(child: SingleChildScrollView(child: body)),
               FilledButton(
                 key: const Key('onboarding_next'),
-                style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(52),
+                ),
                 onPressed: onNext,
                 child: Text(l.continueButton),
               ),

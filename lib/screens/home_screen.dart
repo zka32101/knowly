@@ -411,7 +411,7 @@ class _FilterSheet extends ConsumerWidget {
               spacing: 8,
               runSpacing: 8,
               children: [
-                for (final c in allCategories)
+                for (final c in ref.watch(categoryIdsProvider))
                   FilterChip(
                     label: Text(categoryLabel(l, c)),
                     selected: settings.categories.contains(c),

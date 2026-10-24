@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
+  "contentVersion": "2026.10.23",
   "updatedAt": "2026-10-23",
-  "links": [
+  "items": [
     {
       "from": "ice_floats",
       "to": "apple_floats",

@@ -20,7 +20,7 @@ for f in sys.argv[1:]:
             t = d[n].get(i['id'])
             if t:
                 i['translations'][lang] = {**meta, **t}
-    for l in files['why_chains'][1]['links']:
+    for l in files['why_chains'][1]['items']:
         t = d['why'].get(f"{l['from']}>{l['to']}")
         if t:
             l[lang] = t

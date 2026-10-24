@@ -255,7 +255,7 @@ void main() {
   group('なぜ？チェーン', () {
     final doc = jsonDecode(File('assets/trivia/why_chains.json').readAsStringSync())
         as Map<String, dynamic>;
-    final links = (doc['links'] as List).cast<Map<String, dynamic>>();
+    final links = (doc['items'] as List).cast<Map<String, dynamic>>();
     final byId = {for (final t in items) t.id: t};
 
     test('つなぐ先の雑学が実在し、自分自身につながらず、1つの雑学から1本だけ', () {

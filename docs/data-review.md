@@ -22,5 +22,10 @@
 2. メタ情報の名前・持ち方をそろえ、「全雑学にクイズがある」をテストにする。
 3. `related` を双方向にするか決める。
 
-## 未対応
-上記はすべて未対応（記録のみ）。
+## 対応状況
+- 2（メタ情報）: 対応済み。全ファイルが `schemaVersion` / `contentVersion` / `updatedAt` / `items` の形（why_chains の `links` も `items` に）。テストで見張る。
+- カテゴリーの追加: 対応済み。`assets/trivia/categories.json` に1件足せば、選択肢・図鑑・絞り込みに出る（コードの変更は不要）。
+  - 項目: `id`, `order`, `emoji`, `status`(active/hidden), `labels`（ja は kids/junior/adult、ほかは文字列）。
+  - 既存の9カテゴリーは、画面の言語ファイル（ARB）の名前が優先。新しいカテゴリーは `labels` から名前を出す。
+  - 追加で見つかった不具合: 「japan」カテゴリーが選択肢になく、名前も出ていなかった（categories.json に追加して解消）。
+- 1, 3（クイズの網羅テスト）, 4, 5〜8: 未対応。

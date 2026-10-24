@@ -20,6 +20,10 @@ import 'settings.dart';
 final triviaRepositoryProvider =
     Provider<TriviaRepository>((ref) => throw UnimplementedError());
 
+/// 選択肢に出すカテゴリーの id（表示順）。
+final categoryIdsProvider = Provider<List<String>>(
+    (ref) => ref.watch(triviaRepositoryProvider).categoryIds);
+
 /// 「今日」の基準。テストで差し替える。
 final nowProvider = Provider<DateTime>((ref) => DateTime.now());
 

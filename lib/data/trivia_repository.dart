@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../models/age_band.dart';
 import '../models/calendar_event.dart';
+import '../models/category.dart';
 import '../models/glossary.dart';
 import '../models/myth.dart';
 import '../models/project.dart';
@@ -39,8 +40,12 @@ class TriviaRepository {
     this.myths = const [],
     this.events = const [],
     this.projects = const [],
-  })  : _quizzes = {for (final q in quizzes) q.factId: q},
-        _whyLinks = {for (final w in whyLinks) w.from: w};
+    List<TriviaCategory> categories = const [],
+  })  : categories = _sortedCategories(categories),
+         _quizzes = {for (final q in quizzes) q.factId: q},
+        _whyLinks = {for (final w in whyLinks) w.from: w} {
+    CategoryRegistry.set(this.categories);
+  }
 
   final List<Trivia> items;
   final List<Myth> myths;
@@ -50,6 +55,17 @@ class TriviaRepository {
   final List<GlossaryEntry> glossary;
   final List<CalendarEvent> events;
   final List<Project> projects;
+
+  /// カテゴリー（表示順）。categories.json がなければ、雑学に出てくるカテゴリーを並べる。
+  final List<TriviaCategory> categories;
+
+  static List<TriviaCategory> _sortedCategories(List<TriviaCategory> c) =>
+      c.where((e) => e.active).toList()..sort((a, b) => a.order.compareTo(b.order));
+
+  /// 選択肢に出すカテゴリーの id（表示順）。
+  List<String> get categoryIds => categories.isNotEmpty
+      ? [for (final c in categories) c.id]
+      : (items.map((t) => t.category).toSet().toList()..sort());
   final Map<String, QuizItem> _quizzes;
   final Map<String, WhyLink> _whyLinks;
 
@@ -61,6 +77,7 @@ class TriviaRepository {
   static const mythAssetPath = 'assets/trivia/myths.json';
   static const calendarAssetPath = 'assets/trivia/calendar.json';
   static const projectAssetPath = 'assets/trivia/projects.json';
+  static const categoryAssetPath = 'assets/trivia/categories.json';
 
   static Future<TriviaRepository> load({AssetBundle? bundle}) async {
     final b = bundle ?? rootBundle;
@@ -84,7 +101,7 @@ class TriviaRepository {
         .map((e) => GlossaryEntry.fromJson(e as Map<String, dynamic>))
         .toList();
     final whyDecoded = jsonDecode(await b.loadString(whyAssetPath)) as Map<String, dynamic>;
-    final whyLinks = (whyDecoded['links'] as List)
+    final whyLinks = (whyDecoded['items'] as List)
         .map((e) => WhyLink.fromJson(e as Map<String, dynamic>))
         .toList();
     final mythDecoded = jsonDecode(await b.loadString(mythAssetPath)) as Map<String, dynamic>;
@@ -99,7 +116,16 @@ class TriviaRepository {
     final projects = (projDecoded['items'] as List)
         .map((e) => Project.fromJson(e as Map<String, dynamic>))
         .toList();
+    var categories = <TriviaCategory>[];
+    try {
+      final catDecoded =
+          jsonDecode(await b.loadString(categoryAssetPath)) as Map<String, dynamic>;
+      categories = (catDecoded['items'] as List)
+          .map((e) => TriviaCategory.fromJson(e as Map<String, dynamic>))
+          .toList();
+    } catch (_) {}
     return TriviaRepository(list,
+        categories: categories,
         quizzes: quizzes,
         choiceQuizzes: choiceQuizzes,
         glossary: glossary,
