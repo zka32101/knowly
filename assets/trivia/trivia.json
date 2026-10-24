@@ -153,12 +153,20 @@
         "cats_no_sweet",
         "crows_recognize_faces"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Octopus",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Octopus",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -329,12 +337,20 @@
         "banana_is_berry",
         "strawberry_200_seeds"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Honey - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Honey",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms ~18% water and acidic, high sugar; but states no edible honey has actually been found in Egyptian tombs (such claims were other substances), contradicting the tomb claim."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -508,12 +524,27 @@
         "strawberry_200_seeds",
         "popcorn_pop"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Berry (botany) - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Berry_(botany)",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Strawberry - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Strawberry",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -686,12 +717,20 @@
         "orbital_speed",
         "iss_sunrises"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Venus",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Venus",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -857,12 +896,27 @@
         "きょうりゅう"
       ],
       "related": [],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chondrichthyes",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Chondrichthyes",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Archaeopteris",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Archaeopteris",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -1036,12 +1090,27 @@
         "goosebumps_cold",
         "nails_grow"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "How Many Bones Does a Baby Have?",
+          "publisher": "Healthline",
+          "url": "https://healthline.com/health/how-many-bones-does-a-baby-have",
+          "license": "© Healthline (reference only)",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Bone - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bone",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Says babies are born with around 300 bones; adults 206. Some sources give 270-300."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -1217,12 +1286,20 @@
         "human_dna_same",
         "owl_head_turn"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Cervical vertebrae - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cervical_vertebrae",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms giraffe has seven cervical vertebrae; the ~25 cm per-vertebra figure was not verified in the opened pages."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -1394,12 +1471,27 @@
         "rainbow_full_circle",
         "thunder_count"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Lightning",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lightning",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Photosphere",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Photosphere",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -1757,12 +1849,20 @@
         "saturn_would_float",
         "bat_echolocation"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Sound - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sound",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -1941,12 +2041,20 @@
         "thunder_count",
         "fuji_3776"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Ice - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ice",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source gives density 0.9167-0.9168 g/cm3 and 9% volumetric expansion; lake-freezing point not checked."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2076,12 +2184,20 @@
         "japan_islands",
         "antarctica_desert"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Chimborazo",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Chimborazo",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2254,12 +2370,20 @@
         "koala_fingerprints",
         "sloth_slow"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Wombat",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wombat",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source says shape is thought to aid stacking/not rolling and intestine stretches unevenly; mechanism 'not well understood'."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2390,12 +2514,20 @@
         "baby_bones",
         "heart_100k"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Human genetic variation - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Human_genetic_variation",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2567,12 +2699,20 @@
         "wombat_cube_poop",
         "koala_fingerprints"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Flamingo - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Flamingo",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2747,12 +2887,20 @@
         "venus_day_longer",
         "iss_sunrises"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Lunar Laser Ranging experiment",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiment",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -2928,12 +3076,20 @@
         "dung_beetle_milky_way",
         "silkworm_thread"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Butterfly",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Butterfly",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source says taste receptors are on palps and feet; does not specifically mention front legs or egg-laying host-plant detection."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3105,12 +3261,20 @@
         "flamingo_flamboyance",
         "crows_recognize_faces"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Cat senses - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cat_senses",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Describes a Tas1r2 deletion/frame-shift; 'pseudogene' wording per article's gene description."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3284,12 +3448,20 @@
         "venus_day_longer",
         "moon_moving_away"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Sunlight - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sunlight",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source says about 8.3 minutes (about 8 min 18 s) from the Sun's surface."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3466,12 +3638,20 @@
         "sunlight_8_minutes",
         "steel_ship_floats"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Saturn",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Saturn",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Mean density listed as 0.6871 g/cm3; hydrogen/helium composition not separately checked on this page."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3822,12 +4002,20 @@
         "giraffe_seven_vertebrae",
         "baby_bones"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "NOVA Online: Heart facts",
+          "publisher": "PBS NOVA",
+          "url": "https://www.pbs.org/wgbh/nova/eheart/facts.html",
+          "license": "© PBS/WGBH (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Says ~100,000 beats/day, ~35 million/year, more than 2.5 billion in a lifetime."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3999,12 +4187,20 @@
         "squirrel_acorns",
         "tree_rings"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Bamboo - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bamboo",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source: 91 cm in 24 h for certain species, up to 120 cm for Phyllostachys bambusoides; rhizome-energy mechanism is not explicitly confirmed."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -4177,12 +4373,20 @@
         "owl_head_turn",
         "squirrel_acorns"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Anger a Crow and It Will Never Forget Your Face",
+          "publisher": "NBC News",
+          "url": "https://www.nbcnews.com/news/amp/wbna43570637",
+          "license": "© NBC News (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Describes UW study (Marzluff) with mask-wearing trapper; other crows joined scolding. Source says 'years of retribution'; trapping was of 7-15 birds at five sites."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -4353,12 +4557,20 @@
         "lightning_hotter_than_sun",
         "eiffel_grows_summer"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Rainbow",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rainbow",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Page has a 'Full-circle rainbow' section and says each raindrop scatters light over a circular disc; aircraft viewing not explicitly verified."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -4532,12 +4744,27 @@
         "camel_hump_fat",
         "bat_echolocation"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Elephant communication - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Elephant_communication",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Elephant cognition - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Elephant_cognition",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -4713,12 +4940,20 @@
         "giraffe_seven_vertebrae",
         "salmon_return"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Unihemispheric slow-wave sleep - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Unihemispheric_slow-wave_sleep",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Supports unihemispheric sleep in dolphins; 'voluntary breathing' wording not seen in the page text."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -4890,12 +5125,27 @@
         "japan_islands",
         "camel_hump_fat"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Desert",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Desert",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Antarctica",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Antarctica",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Antarctic interior receives under 50 mm/yr; area 14.2 million km2. Sahara area not checked on this page."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -5069,12 +5319,20 @@
         "penguin_huddle",
         "sloth_slow"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Fingerprint",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fingerprint",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Cites a study: koala and human fingerprints are hard to distinguish even with electron microscope. Convergent-evolution framing not checked on this page."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -5247,12 +5505,20 @@
         "chimborazo_farthest",
         "fuji_3776"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "List of islands of Japan - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_islands_of_Japan",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms 14,125 after a 2023 recount using digital maps; the earlier 6,852 figure was not confirmed in fetched text."
       },
       "volatility": "changing",
       "reviewDueAt": "2027-04-23",
@@ -5604,12 +5870,27 @@
         "butterfly_taste_feet",
         "ant_strong"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Meganeura",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Meganeura",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Dinosaur",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dinosaur",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Late Carboniferous ~300 Mya; wingspan estimates up to 70-75 cm. Meganeura is a dragonfly-like meganisopteran, not a true dragonfly.; Oldest well-known dinosaur fossils ~231-230 Mya (Carnian, Triassic)."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -5785,12 +6066,20 @@
         "ant_strong",
         "dragonfly_before_dinosaurs"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Firefly",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Firefly",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms luciferin/luciferase/oxygen and 'cold light'; 'nearly all energy as light' not explicitly stated."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -5964,12 +6253,20 @@
         "dragonfly_before_dinosaurs",
         "firefly_cold_light"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Waggle dance - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Waggle_dance",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -6142,12 +6439,20 @@
         "bee_waggle_dance",
         "cricket_sing"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Magicicada - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Magicicada",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -6322,12 +6627,20 @@
         "cicada_17_years",
         "cricket_sing"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Mosquito",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mosquito",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -6501,12 +6814,27 @@
         "mosquito_female_bites",
         "ladybug_spots"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Insect",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Insect",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Spider",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Spider",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -6679,12 +7007,27 @@
         "spider_not_insect",
         "ladybug_spots"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Beetle - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Beetle",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "J. B. S. Haldane - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/J._B._S._Haldane",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。About 400,000 described species, almost 40% of described arthropods; 'quarter of all animal species' not confirmed on this page.; Source of the 'inordinate fondness for beetles' quip (attributed)."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -6857,12 +7200,20 @@
         "spider_not_insect",
         "beetle_quarter"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Dung beetle - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dung_beetle",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Page says dung beetles are among the few invertebrates known to use the Milky Way; 'first insect' / 2013 not verified in the page text."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7039,12 +7390,27 @@
         "beetle_quarter",
         "dung_beetle_milky_way"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Bombyx mori",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bombyx_mori",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Sericulture",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sericulture",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。DISCREPANCY: source says cocoon thread is about 300-900 m long, not 1,000-1,500 m.; Continuous filament of fibroin with sericin gum confirmed; length figure not given."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7223,12 +7589,20 @@
         "shipping_80_percent",
         "shinkansen_kingfisher"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Tokaido Shinkansen",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tokaido_Shinkansen",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Opened 1 Oct 1964, timed for Tokyo Olympics; designed for 210 km/h. 'First above 200 km/h' not verified here."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7402,12 +7776,20 @@
         "maglev_603",
         "black_box_orange"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Cabin pressurization - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cabin_pressurization",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Cruising altitude around 10,000 m; cabin altitude must be at most 2,438 m (8,000 ft). -50 C temperature not confirmed here."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7581,12 +7963,27 @@
         "tokyo_first_subway",
         "bicycle_first"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Wright Flyer - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wright_Flyer",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Wright brothers - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wright_brothers",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7765,12 +8162,27 @@
         "maglev_603",
         "bicycle_first"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Tokyo Metro Ginza Line",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tokyo_Metro_Ginza_Line",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Tokyo Underground Railway",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tokyo_Underground_Railway",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms Ueno-Asakusa opening in 1927; the 2.2 km length was not verified on the page."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -7948,12 +8360,27 @@
         "plane_window_hole",
         "apple_floats"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Ship",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ship",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Buoyancy",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Buoyancy",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -8129,12 +8556,20 @@
         "steel_ship_floats",
         "plane_window_hole"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Low Earth orbit - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Low_Earth_orbit",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Article gives about 7.8 km/s (28,000 km/h), claim says 7.9 km/s."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -8312,12 +8747,20 @@
         "shipping_80_percent",
         "shinkansen_kingfisher"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "SCMaglev - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/SCMaglev",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms 603 km/h crewed record; the L0 Series name and April 2015 date were not checked in the opened text."
       },
       "volatility": "changing",
       "reviewDueAt": "2027-04-23",
@@ -8493,12 +8936,20 @@
         "wright_first_flight",
         "black_box_orange"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Here's why there's a tiny hole in airplane windows",
+          "publisher": "ScienceAlert",
+          "url": "https://www.sciencealert.com/here-s-why-there-s-a-tiny-hole-in-airplane-windows",
+          "license": "© ScienceAlert (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Bleed hole is in the middle pane (claim says 'one pane'); outer pane bears pressure; hole helps prevent fogging."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -8677,12 +9128,20 @@
         "steel_ship_floats",
         "orbital_speed"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "International Space Station",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Page infobox: 92.9 min period, 15.5 orbits/day, 27,600 km/h; body text says 16 sunrises/sunsets daily. Claim's 'about 28,000 km/h' and '16 orbits' slightly rounded."
       },
       "volatility": "changing",
       "reviewDueAt": "2027-04-23",
@@ -8857,12 +9316,20 @@
         "orbital_speed",
         "iss_sunrises"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Review of Maritime Transport",
+          "publisher": "UNCTAD",
+          "url": "https://unctad.org/topic/transport-and-trade-logistics/review-of-maritime-transport",
+          "license": "© UNCTAD (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Around 80% of the volume of international trade in goods is carried by sea."
       },
       "volatility": "changing",
       "reviewDueAt": "2027-04-23",
@@ -9037,12 +9504,20 @@
         "honey_never_spoils",
         "banana_is_berry"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Watermelon - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Watermelon",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Nutrition table gives water 91.45 g per 100 g; lycopene and citrulline confirmed (citrulline is described as produced in the rind)."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -9221,12 +9696,27 @@
         "honey_never_spoils",
         "watermelon_92_water"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Cocoa bean",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cocoa_bean",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Aztecs",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Aztecs",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Cacao beans used for small purchases; tribute payment in cacao not verified on page."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -9403,12 +9893,27 @@
         "watermelon_92_water",
         "cacao_money"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Rice",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rice",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "International Rice Research Institute",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/International_Rice_Research_Institute",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Genebank holds more than 127,000 accessions (consistent with >100,000)."
       },
       "volatility": "changing",
       "reviewDueAt": "2027-04-23",
@@ -9582,12 +10087,20 @@
         "cacao_money",
         "rice_half_world"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Carrot - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Carrot",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Purple roots (West Asia, India, Europe) noted; orange colour from beta-carotene, source of vitamin A."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -9760,12 +10273,20 @@
         "rice_half_world",
         "carrot_colors"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Peanut - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Peanut",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Confirms geocarpy and gynophore/peg; the Japanese name rakkasei is not covered."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -9936,12 +10457,20 @@
         "carrot_colors",
         "peanut_not_nut"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Pineapple",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pineapple",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Page says 12-20 months to flowering, after which fruit develops; suckers used for propagation. Total 18-24 months not stated exactly."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -10118,12 +10647,20 @@
         "peanut_not_nut",
         "pineapple_two_years"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Why do apples float?",
+          "publisher": "FreshPlaza",
+          "url": "https://www.freshplaza.com/north-america/article/2004965/why-do-apples-float/",
+          "license": "© FreshPlaza (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Trade-news article; states 25% of apple volume is air."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -10295,12 +10832,20 @@
         "pineapple_two_years",
         "apple_floats"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Wasabi - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Wasabi",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -10471,12 +11016,20 @@
         "apple_floats",
         "wasabi_nose"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Popcorn - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Popcorn",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source gives 14-20% moisture; the 180 C figure was not verified."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -10651,12 +11204,27 @@
         "wasabi_nose",
         "popcorn_pop"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Strawberry",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Strawberry",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Why do strawberries have seeds on the outside?",
+          "publisher": "Live Science",
+          "url": "https://www.livescience.com/planet-earth/plants/why-do-strawberries-have-seeds-on-the-outside",
+          "license": "© Live Science (reference only)",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -10830,12 +11398,20 @@
         "snow_hexagon",
         "goosebumps_cold"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Emperor penguin",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11006,12 +11582,20 @@
         "crows_recognize_faces",
         "blink_times"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Owl - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Owl",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11181,12 +11765,20 @@
         "antarctica_desert",
         "elephant_ground_sounds"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Camel - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Camel",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11356,12 +11948,20 @@
         "koala_fingerprints",
         "wombat_cube_poop"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Sloth",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sloth",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Three-toed sloths descend about once a week; digestion can take a month or more (claim says 'many days')."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11533,12 +12133,20 @@
         "sea_otters_hold_hands",
         "dolphin_half_sleep"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Salmon",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Salmon",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Homing depends on olfactory memory; mostly return to natal stream, some stray."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11710,12 +12318,20 @@
         "bamboo_fast",
         "crows_recognize_faces"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Squirrel - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Squirrel",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -11885,12 +12501,27 @@
         "no_sound_in_space",
         "elephant_ground_sounds"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Bat - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bat",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Animal echolocation - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Animal_echolocation",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12060,12 +12691,27 @@
         "beetle_quarter",
         "spider_not_insect"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Myth buster: Can you tell a ladybug's age by its spots? In a word, no",
+          "publisher": "Forest Preserve District of Will County",
+          "url": "https://www.reconnectwithnature.org/headlines/news/myth-buster-can-you-tell-a-ladybug-s-age-by-its-spots",
+          "license": "© Forest Preserve District of Will County (reference only)",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Coccinella septempunctata",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Coccinella_septempunctata",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12237,12 +12883,20 @@
         "cicada_17_years",
         "mosquito_female_bites"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Cricket (insect)",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cricket_(insect)",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Wikipedia: males chirp by rubbing front wings (elytra); ears (tympana) on front-leg tibiae."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12412,12 +13066,27 @@
         "wright_first_flight",
         "tokyo_first_subway"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Dandy horse - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dandy_horse",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Bicycle - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bicycle",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12587,12 +13256,20 @@
         "airliner_cruise",
         "plane_window_hole"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Flight recorder - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Flight_recorder",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。The nickname's origin was not checked in the opened text; the page calls 'black box' a misnomer."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12762,12 +13439,20 @@
         "shinkansen_1964",
         "maglev_603"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "500 Series Shinkansen",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/500_Series_Shinkansen",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Page says nose mimics a kingfisher's beak; tagged 'better source needed'."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -12940,12 +13625,20 @@
         "penguin_huddle",
         "maple_red"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Snowflake",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Snowflake",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -13119,12 +13812,20 @@
         "nails_grow",
         "brain_energy"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Goose bumps - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Goose_bumps",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Described as considered by some a vestigial reflex."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -13297,12 +13998,20 @@
         "snow_hexagon",
         "sunflower_sun"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Autumn leaf color - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Autumn_leaf_color",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Covers anthocyanin red coloration; the sugar-to-anthocyanin detail was not verified in the page text."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -13472,12 +14181,27 @@
         "bamboo_fast",
         "sunflower_sun"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Tree ring",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tree_ring",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        },
+        {
+          "title": "Dendrochronology",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dendrochronology",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -13649,12 +14373,20 @@
         "maple_red",
         "tree_rings"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Heliotropism",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Heliotropism",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Immature buds track the sun; mature flowerheads face east."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -13826,12 +14558,20 @@
         "lightning_hotter_than_sun",
         "ice_floats"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Speed of sound - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Speed_of_sound",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。About 343 m/s at 20 C; claim rounds to 340."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -14002,12 +14742,20 @@
         "baby_bones",
         "brain_energy"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Nail (anatomy) - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Source says about 3.5 mm per month for fingernails (claim says 3 mm); seasonal speed-up not verified."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -14178,12 +14926,20 @@
         "goosebumps_cold",
         "blink_times"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Human brain",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Human_brain",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -14353,12 +15109,20 @@
         "brain_energy",
         "owl_head_turn"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Blinking",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Blinking",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。Notes blink rate falls when focused, e.g. reading/computer screens; moisture function confirmed."
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -14529,12 +15293,20 @@
         "japan_islands",
         "ice_floats"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "Mount Fuji - Wikipedia",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mount_Fuji",
+          "license": "CC BY-SA 4.0",
+          "accessedAt": "2026-10-24"
+        }
+      ],
       "verification": {
         "status": "unverified",
         "verifiedBy": null,
         "verifiedAt": null,
-        "note": null
+        "note": "出典あり・人の確認待ち。"
       },
       "volatility": "stable",
       "contentFlags": [],

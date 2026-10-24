@@ -175,6 +175,8 @@ TriviaRepository _repo({bool withSources = false}) {
         m['sources'] = [
           {'title': 'テスト出典', 'publisher': '国立テスト館', 'url': 'https://example.com'},
         ];
+      } else {
+        m['sources'] = [];
       }
       return Trivia.fromJson(m);
     }).toList(),
