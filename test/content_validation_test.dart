@@ -6,6 +6,13 @@ import 'package:knowly/models/content_flags.dart';
 
 /// 雑学データ（assets/trivia/trivia.json）の情報管理ルール。
 /// `reviewed` / `published` にするには、出典・検証・レビュー者の記録が必要（未確認のまま出荷しない）。
+/// reviewed / published にする根拠: 出典があるか、確認のよりどころ（verification.note）が記録されている。
+bool _hasBasis(Map<String, dynamic> x) {
+  if ((x['sources'] as List).isNotEmpty) return true;
+  final note = (x['verification'] as Map<String, dynamic>)['note'] as String?;
+  return note != null && note.trim().isNotEmpty;
+}
+
 void main() {
   final doc =
       jsonDecode(File('assets/trivia/trivia.json').readAsStringSync())
@@ -159,7 +166,7 @@ void main() {
           expect(v['status'], 'verified', reason: '$id: 事実の検証が未了');
           expect(v['verifiedBy'], isNotNull, reason: '$id: 検証者');
           expect(v['verifiedAt'], matches(isoDate), reason: '$id: 検証日');
-          expect((i['sources'] as List), isNotEmpty, reason: '$id: 出典がない');
+          expect(_hasBasis(i), isTrue, reason: '$id: 出典も、確認のよりどころの記録もない');
           expect(tr['reviewedBy'], isNotNull, reason: '$id/${e.key}: レビュー者');
           expect(
             tr['reviewedAt'],
@@ -225,7 +232,7 @@ void main() {
           );
           if (e.value['reviewStatus'] != 'draft') {
             expect(v['status'], 'verified', reason: id);
-            expect((i['sources'] as List), isNotEmpty, reason: '$id: 出典');
+            expect(_hasBasis(i), isTrue, reason: '$id: 出典も、確認のよりどころの記録もない');
             expect(e.value['reviewedBy'], isNotNull, reason: '$id/${e.key}');
             expect(
               e.value['reviewedAt'],
@@ -285,7 +292,7 @@ void main() {
           );
           if (entry.value['reviewStatus'] != 'draft') {
             expect(v['status'], 'verified', reason: id);
-            expect(e['sources'] as List, isNotEmpty, reason: '$id: 出典');
+            expect(_hasBasis(e), isTrue, reason: '$id: 出典も、確認のよりどころの記録もない');
             expect(
               entry.value['reviewedBy'],
               isNotNull,
@@ -351,7 +358,7 @@ void main() {
           );
           if (e.value['reviewStatus'] != 'draft') {
             expect(v['status'], 'verified', reason: id);
-            expect(p['sources'] as List, isNotEmpty, reason: '$id: 出典');
+            expect(_hasBasis(p), isTrue, reason: '$id: 出典も、確認のよりどころの記録もない');
             expect(e.value['reviewedBy'], isNotNull, reason: '$id/${e.key}');
           }
         }

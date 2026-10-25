@@ -14,22 +14,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "{氷|こおり}は{水|みず}にうくのはなぜ？",
           "summary": "{氷|こおり}を{水|みず}にうかべて、とけたときの{水|みず}のたかさをしらべよう。",
           "materials": [
@@ -49,9 +49,9 @@
           "safety": "ガラスのコップはわれやすいので、プラスチックのコップをつかうとあんしんです。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Why does ice float on water?",
           "summary": "Float ice in water and watch the water level as it melts.",
           "materials": [
@@ -71,9 +71,9 @@
           "safety": "Glass cups can break. A plastic cup is safer."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "冰为什么会浮在水上？",
           "summary": "让冰浮在水里，观察它融化时水位的变化。",
           "materials": [
@@ -93,9 +93,9 @@
           "safety": "玻璃杯会碎。用塑料杯更安全。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "얼음은 왜 물에 뜰까?",
           "summary": "물에 얼음을 띄우고 얼음이 녹을 때 물의 높이를 관찰해요.",
           "materials": [
@@ -115,9 +115,9 @@
           "safety": "유리컵은 깨질 수 있어요. 플라스틱 컵이 더 안전해요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "¿Por qué flota el hielo en el agua?",
           "summary": "Haz flotar hielo en agua y observa el nivel del agua mientras se derrite.",
           "materials": [
@@ -149,22 +149,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "うくくだもの、しずむくだもの",
           "summary": "いろいろなくだものを{水|みず}に{入|い}れて、うくかしずむかをしらべよう。",
           "materials": [
@@ -186,9 +186,9 @@
           "safety": "くだものは、{実験|じっけん}のあとによくあらってから{食|た}べよう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Fruits that float, fruits that sink",
           "summary": "Test which fruits float in water.",
           "materials": [
@@ -210,9 +210,9 @@
           "safety": "Wash the fruit well before eating it."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "会浮的水果和会沉的水果",
           "summary": "测试哪些水果能浮在水上。",
           "materials": [
@@ -234,9 +234,9 @@
           "safety": "水果吃之前要洗干净。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "뜨는 과일, 가라앉는 과일",
           "summary": "어떤 과일이 물에 뜨는지 실험해요.",
           "materials": [
@@ -258,9 +258,9 @@
           "safety": "과일은 먹기 전에 깨끗이 씻어요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Frutas que flotan, frutas que se hunden",
           "summary": "Comprueba qué frutas flotan en el agua.",
           "materials": [
@@ -294,22 +294,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "アルミホイルのふねをつくろう",
           "summary": "かたちをかえて、いちばんたくさんのせられるふねをさがそう。",
           "materials": [
@@ -329,9 +329,9 @@
           "safety": "{水|みず}をこぼしたらすぐにふこう。{1円玉|いちえんだま}は{口|くち}に{入|い}れないでね。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Build an aluminum foil boat",
           "summary": "Change the shape and find the boat that holds the most.",
           "materials": [
@@ -351,9 +351,9 @@
           "safety": "Wipe up spills right away. Keep coins out of your mouth."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "做一艘铝箔小船",
           "summary": "改变形状，找出能装最多东西的小船。",
           "materials": [
@@ -373,9 +373,9 @@
           "safety": "洒出的水要马上擦干。硬币不要放进嘴里。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "알루미늄 포일 배 만들기",
           "summary": "모양을 바꿔서 가장 많이 싣는 배를 찾아요.",
           "materials": [
@@ -395,9 +395,9 @@
           "safety": "물이 흘렀으면 바로 닦아요. 동전을 입에 넣지 않아요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Construye un barco de papel de aluminio",
           "summary": "Cambia la forma y encuentra el barco que aguanta más peso.",
           "materials": [
@@ -431,22 +431,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "にじをつくってみよう",
           "summary": "{晴|は}れた{日|ひ}に、みずのつぶでにじをつくろう。",
           "materials": [
@@ -464,9 +464,9 @@
           "safety": "{太陽|たいよう}をちょくせつ{見|み}てはいけません。ぜったいに{目|め}をいためます。{暑|あつ}いひは{水分|すいぶん}をとろう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Make a rainbow",
           "summary": "Make a rainbow from tiny water drops on a sunny day.",
           "materials": [
@@ -484,9 +484,9 @@
           "safety": "Never look straight at the Sun; it can hurt your eyes. Drink water on hot days."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "制造彩虹",
           "summary": "在晴天用细小的水滴做出彩虹。",
           "materials": [
@@ -504,9 +504,9 @@
           "safety": "千万不要直视太阳，会伤害眼睛。天热时要多喝水。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "무지개 만들기",
           "summary": "해가 쨍쨍한 날 작은 물방울로 무지개를 만들어요.",
           "materials": [
@@ -524,9 +524,9 @@
           "safety": "태양을 똑바로 보지 마세요. 눈을 다칠 수 있어요. 더운 날에는 물을 마셔요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Haz un arcoíris",
           "summary": "Crea un arcoíris con gotitas de agua en un día soleado.",
           "materials": [
@@ -556,22 +556,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "{糸電話|いとでんわ}で{音|おと}のふしぎ",
           "summary": "{音|おと}は「ふるえ」でつたわることを、{糸電話|いとでんわ}でたしかめよう。",
           "materials": [
@@ -590,9 +590,9 @@
           "safety": "あなあけは、かならずおとなにやってもらってください。つまようじはさきがとがっています。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "A string phone and the mystery of sound",
           "summary": "Use a string phone to see that sound travels as vibrations.",
           "materials": [
@@ -611,9 +611,9 @@
           "safety": "Always have an adult make the holes. The toothpick is sharp."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "线电话和声音的奥秘",
           "summary": "用线电话看看声音是以振动的方式传播的。",
           "materials": [
@@ -632,9 +632,9 @@
           "safety": "一定要请大人来戳洞。牙签很尖。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "실 전화기와 소리의 비밀",
           "summary": "실 전화기로 소리가 떨림으로 전해지는 것을 확인해요.",
           "materials": [
@@ -653,9 +653,9 @@
           "safety": "구멍은 꼭 어른이 뚫어요. 이쑤시개는 뾰족해요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Un teléfono de hilo y el misterio del sonido",
           "summary": "Usa un teléfono de hilo para comprobar que el sonido viaja en forma de vibraciones.",
           "materials": [
@@ -688,22 +688,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "アリのぎょうれつをかんさつ",
           "summary": "さとうにあつまるアリのかずを、じかんごとにかぞえよう。",
           "materials": [
@@ -722,9 +722,9 @@
           "safety": "アリにはさわらない、すをこわさない。かまれることもあるので、おとなといっしょに。おわったらてをあらおう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Watch an ant line",
           "summary": "Count the ants that gather around sugar over time.",
           "materials": [
@@ -743,9 +743,9 @@
           "safety": "Do not touch the ants or damage their nest. Some bite, so go with an adult. Wash your hands afterwards."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "观察蚂蚁排队",
           "summary": "数一数随着时间推移聚集到糖边的蚂蚁。",
           "materials": [
@@ -764,9 +764,9 @@
           "safety": "不要碰蚂蚁，也不要破坏它们的巢。有些蚂蚁会咬人，所以要和大人一起去。之后要洗手。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "개미 행렬 관찰하기",
           "summary": "설탕 주위에 모이는 개미의 수를 시간에 따라 세어요.",
           "materials": [
@@ -785,9 +785,9 @@
           "safety": "개미를 만지거나 집을 망가뜨리지 않아요. 물리는 개미도 있으니 어른과 함께 가요. 끝나면 손을 씻어요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Observa una fila de hormigas",
           "summary": "Cuenta las hormigas que se reúnen alrededor del azúcar con el paso del tiempo.",
           "materials": [
@@ -820,22 +820,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "せいでんきで「ちいさなかみなり」",
           "summary": "ふうせんをこすって、ぱちっとするせいでんきをためしてみよう。",
           "materials": [
@@ -853,9 +853,9 @@
           "safety": "ふうせんは、ちいさなこが{口|くち}に{入|い}れるとあぶないので、おとなといっしょに。われたかけらもすぐにかたづけよう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "A tiny lightning bolt from static electricity",
           "summary": "Rub a balloon and try out static electricity.",
           "materials": [
@@ -873,9 +873,9 @@
           "safety": "Balloons are a choking risk for little children, so use them with an adult. Pick up broken pieces right away."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "静电产生的小闪电",
           "summary": "摩擦气球，试一试静电。",
           "materials": [
@@ -893,9 +893,9 @@
           "safety": "气球对小朋友有噎住的危险，所以要和大人一起玩。破了的碎片要马上捡起来。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "정전기로 만드는 작은 번개",
           "summary": "풍선을 문질러 정전기를 체험해요.",
           "materials": [
@@ -913,9 +913,9 @@
           "safety": "풍선은 어린 아이가 삼키면 질식할 위험이 있으니 어른과 함께 사용해요. 터진 조각은 바로 주워요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Un pequeño rayo de electricidad estática",
           "summary": "Frota un globo y prueba la electricidad estática.",
           "materials": [
@@ -945,22 +945,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "いちごのつぶつぶをかぞえよう",
           "summary": "いちごのおもてのつぶつぶ（ほんとうの{実|み}）が{何|なん}こあるかしらべよう。",
           "materials": [
@@ -979,9 +979,9 @@
           "safety": "いちごアレルギーのひとはさわらないでね。おわったらよくてをあらい、いちごはあらってから{食|た}べよう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Count the dots on a strawberry",
           "summary": "Find out how many true fruits (the dots) a strawberry has.",
           "materials": [
@@ -1000,9 +1000,9 @@
           "safety": "Do not handle them if you are allergic to strawberries. Wash your hands, and wash the fruit before eating."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "数一数草莓上的小点",
           "summary": "找出一颗草莓有多少个真正的果实（那些小点）。",
           "materials": [
@@ -1021,9 +1021,9 @@
           "safety": "对草莓过敏的话不要碰。吃之前要洗手，也要把草莓洗干净。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "딸기의 점 세어 보기",
           "summary": "딸기에 진짜 열매(점)가 몇 개 있는지 알아봐요.",
           "materials": [
@@ -1042,9 +1042,9 @@
           "safety": "딸기 알레르기가 있으면 만지지 마세요. 손을 씻고, 먹기 전에 딸기도 씻어요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Cuenta los puntitos de una fresa",
           "summary": "Descubre cuántos frutos verdaderos (los puntitos) tiene una fresa.",
           "materials": [
@@ -1075,22 +1075,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "つきのかたちをまいにちきろく",
           "summary": "{1か月|いっかげつ}、つきのかたちとみえるばしょをきろくしよう。",
           "materials": [
@@ -1108,9 +1108,9 @@
           "safety": "よるにそとにでるときは、おとなといっしょに。{道|みち}や{車|くるま}にちゅういしよう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Keep a Moon diary",
           "summary": "Record the shape and position of the Moon for a month.",
           "materials": [
@@ -1128,9 +1128,9 @@
           "safety": "Go outside at night with an adult, and watch out for roads and cars."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "写一本月亮日记",
           "summary": "记录一个月里月亮的形状和位置。",
           "materials": [
@@ -1148,9 +1148,9 @@
           "safety": "晚上要和大人一起出门，注意马路和车辆。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "달 일기 쓰기",
           "summary": "한 달 동안 달의 모양과 위치를 기록해요.",
           "materials": [
@@ -1168,9 +1168,9 @@
           "safety": "밤에 밖에 나갈 때는 어른과 함께 가고, 도로와 자동차를 조심해요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Lleva un diario de la Luna",
           "summary": "Registra la forma y la posición de la Luna durante un mes.",
           "materials": [
@@ -1200,22 +1200,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "{脈|みゃく}をはかってみよう",
           "summary": "じっとしているときと、うんどうしたあとの{脈|みゃく}をくらべよう。",
           "materials": [
@@ -1232,9 +1232,9 @@
           "safety": "きぶんがわるくなったらすぐにやめて{休|やす}もう。むりはしないこと。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Take your pulse",
           "summary": "Compare your pulse at rest and after exercise.",
           "materials": [
@@ -1251,9 +1251,9 @@
           "safety": "Stop and rest if you feel unwell. Do not push yourself."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "测一测脉搏",
           "summary": "比较安静时和运动后的脉搏。",
           "materials": [
@@ -1270,9 +1270,9 @@
           "safety": "如果感到不舒服，就停下来休息。不要勉强自己。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "맥박 재기",
           "summary": "쉴 때와 운동한 뒤의 맥박을 비교해요.",
           "materials": [
@@ -1289,9 +1289,9 @@
           "safety": "몸이 안 좋으면 멈추고 쉬어요. 무리하지 마세요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Toma tu pulso",
           "summary": "Compara tu pulso en reposo y después de hacer ejercicio.",
           "materials": [
@@ -1322,22 +1322,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "すいかのしるをしぼってはかろう",
           "summary": "すいかをしぼってしるのりょうをはかり、{水分|すいぶん}のおおさをかんじよう。",
           "materials": [
@@ -1357,9 +1357,9 @@
           "safety": "すいかを{切|き}るのはかならずおとなにやってもらおう。たねはのどにつまらせないようにね。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Squeeze and measure watermelon juice",
           "summary": "Squeeze watermelon, measure the juice and feel how watery it is.",
           "materials": [
@@ -1379,9 +1379,9 @@
           "safety": "Always have an adult cut the melon. Be careful that seeds do not get stuck in your throat."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "挤一挤、量一量西瓜汁",
           "summary": "挤压西瓜，量出果汁，感受它有多少水分。",
           "materials": [
@@ -1401,9 +1401,9 @@
           "safety": "西瓜一定要由大人来切。小心别让瓜子卡在喉咙里。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "수박 즙 짜서 재기",
           "summary": "수박을 짜서 즙을 재고 얼마나 물이 많은지 느껴 봐요.",
           "materials": [
@@ -1423,9 +1423,9 @@
           "safety": "수박은 꼭 어른이 잘라요. 씨가 목에 걸리지 않게 조심해요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Exprime y mide el jugo de sandía",
           "summary": "Exprime una sandía, mide el jugo y comprueba cuánta agua tiene.",
           "materials": [
@@ -1459,22 +1459,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "かげのうごきで{太陽|たいよう}をしらべよう",
           "summary": "あさ・ひる・ゆうがたに、{棒|ぼう}のかげのむきとながさをはかろう。",
           "materials": [
@@ -1493,9 +1493,9 @@
           "safety": "{太陽|たいよう}をちょくせつ{見|み}ない。{暑|あつ}いひはぼうしをかぶり、{水分|すいぶん}をとろう。"
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Study the Sun with shadows",
           "summary": "Measure the direction and length of a stick shadow in the morning, noon and evening.",
           "materials": [
@@ -1514,9 +1514,9 @@
           "safety": "Never look straight at the Sun. Wear a hat and drink water on hot days."
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "用影子研究太阳",
           "summary": "在早晨、中午和傍晚，测量一根木棍影子的方向和长度。",
           "materials": [
@@ -1535,9 +1535,9 @@
           "safety": "千万不要直视太阳。天热时要戴帽子、多喝水。"
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "그림자로 태양 알아보기",
           "summary": "아침, 낮, 저녁에 막대 그림자의 방향과 길이를 재요.",
           "materials": [
@@ -1556,9 +1556,9 @@
           "safety": "태양을 똑바로 보지 마세요. 더운 날에는 모자를 쓰고 물을 마셔요."
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "title": "Estudia el Sol con sombras",
           "summary": "Mide la dirección y la longitud de la sombra de un palo por la mañana, al mediodía y por la tarde.",
           "materials": [

@@ -10,12 +10,15 @@
 - [ ] **sea_otters_hold_hands**（animals）ラッコの手つなぎ行動
   - ラッコは海上で休む際、群れが離れないよう互いの手を握ることが知られています。ケルプに体を巻き付けて係留する行動も観察されています。
   - Resting sea otters are known to hold each other's paws to keep the group together on the water. They have also been observed wrapping themselves in kelp as an anchor.
+  - 注記: オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）
 - [ ] **ant_strong**（bugs）アリの怪力はスケール効果で説明できる
   - アリは自分の体重の10〜50倍の荷物を運びます。体が小さいほど体重(体積に比例)に対して筋肉の断面積が相対的に大きくなるため、同じ筋力でも体重比の力が強く見えます。これは体長のスケール効果で、人間が同じ比率で運べるわけではありません。
   - Ants carry loads of 10-50 times their body weight. Because weight scales with volume while muscle strength scales with cross-sectional area, smaller animals are relatively stronger. This does not mean a human could do the same at that ratio.
+  - 注記: オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）
 - [ ] **eiffel_grows_summer**（science）エッフェル塔の高さは季節で変わる
   - エッフェル塔は錬鉄製で、熱膨張により気温が高い夏には冬に比べて最大約15cm高くなると言われます。日当たりで塔の片側が膨張するため、頂部がわずかに傾くこともあります。
   - The tower is made of wrought iron, which expands as it warms, so it can be up to about 15 cm taller in summer than in winter. Uneven sun exposure can also make its top lean slightly.
+  - 注記: オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）
 
 ## 注記あり
 

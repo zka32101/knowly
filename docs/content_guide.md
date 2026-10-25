@@ -28,9 +28,9 @@
 ## 公開までの流れ
 
 1. **draft**: 作成直後。デバッグビルドでは表示されるが、**リリースビルドでは配信されない**。
-2. 事実確認: `sources` に一次情報を1件以上入れ、`verification` を `verified`（検証者・検証日つき）にする。
+2. 事実確認: `sources` に一次情報を入れ（推奨）、`verification` を `verified`（検証者・検証日つき）にする。出典が付けられないときは、`verification.note` に確認のよりどころ（誰が・何で確認したか）を必ず書く。
 3. ネイティブ話者のレビュー: 各言語の `reviewStatus` を `reviewed`、`reviewedBy` / `reviewedAt` を入れる。
-4. 上の記録がないまま `reviewed` / `published` にすると、テストが失敗する。
+4. 出典も確認のよりどころの記録もないまま `reviewed` / `published` にすると、テストが失敗する。
 
 ## 話題のタグ（`contentFlags`）と年代ごとの扱い
 

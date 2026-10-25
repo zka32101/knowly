@@ -12,22 +12,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "カメレオンは まわりの いろに あわせて かくれる。",
             "explanation": "うそ！ いろが かわるのは、きもちや たいおん、なかまへの あいずが おもな りゆうだよ。"
@@ -38,9 +38,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "A chameleon changes color to match what is around it.",
             "explanation": "False! It changes color because of its mood, its body heat, and to talk to other chameleons."
@@ -51,9 +51,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "变色龙会变成周围东西的颜色。",
             "explanation": "不对！它变色是因为心情、体温，还有和其他变色龙“说话”。"
@@ -64,9 +64,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "카멜레온은 주변과 똑같은 색으로 변해요.",
             "explanation": "틀렸어요! 카멜레온은 기분과 몸의 온도 때문에, 또 다른 카멜레온과 이야기하려고 색을 바꿔요."
@@ -77,9 +77,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "¡Un camaleón cambia de color para parecerse a lo que lo rodea.",
             "explanation": "¡Falso! Cambia de color por su estado de ánimo, por el calor de su cuerpo y para hablar con otros camaleones."
@@ -100,22 +100,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "きんぎょは 3びょうで ぜんぶ わすれる。",
             "explanation": "うそ！ きんぎょは えさの じかんや ばしょを、なんかげつも おぼえて いられるよ。"
@@ -126,9 +126,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "A goldfish forgets everything after 3 seconds.",
             "explanation": "False! Goldfish can remember feeding times and places for weeks or even months."
@@ -139,9 +139,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "金鱼3秒钟就会忘掉一切。",
             "explanation": "不对！金鱼能记住喂食的时间和地点，可以记好几周甚至好几个月。"
@@ -152,9 +152,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "금붕어는 3초 뒤면 모든 걸 잊어버려요.",
             "explanation": "틀렸어요! 금붕어는 먹이 시간과 장소를 몇 주, 심지어 몇 달 동안 기억할 수 있어요."
@@ -165,9 +165,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Un pez dorado lo olvida todo después de 3 segundos.",
             "explanation": "¡Falso! Los peces dorados pueden recordar las horas y los lugares de comida durante semanas o incluso meses."
@@ -188,22 +188,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ラクダの こぶには みずが はいっている。",
             "explanation": "うそ！ こぶの なかみは しぼうだよ。しぼうは ごはんの かわりに なるんだ。"
@@ -214,9 +214,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "A camel's hump is full of water.",
             "explanation": "False! The hump is full of fat. Fat gives the camel energy when food is hard to find."
@@ -227,9 +227,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "骆驼的驼峰里装满了水。",
             "explanation": "不对！驼峰里装的是脂肪。找不到食物时，脂肪能给骆驼提供能量。"
@@ -240,9 +240,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "낙타의 혹에는 물이 가득 들어 있어요.",
             "explanation": "틀렸어요! 혹에는 지방이 가득해요. 먹이를 구하기 어려울 때 지방이 낙타에게 힘을 줘요."
@@ -253,9 +253,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "La joroba de un camello está llena de agua.",
             "explanation": "¡Falso! La joroba está llena de grasa. La grasa le da energía al camello cuando es difícil encontrar comida."
@@ -276,22 +276,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ひとは のうの 10パーセントしか つかっていない。",
             "explanation": "うそ！ のうは いちにちじゅう、ほとんど ぜんぶの ばしょを つかって いるよ。"
@@ -302,9 +302,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "People only use 10 percent of their brain.",
             "explanation": "False! Your brain uses almost every part of itself during a normal day."
@@ -315,9 +315,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "人只用了大脑的百分之十。",
             "explanation": "不对！平常的一天里，你的大脑几乎每个部分都在工作。"
@@ -328,9 +328,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "사람은 뇌의 10퍼센트만 써요.",
             "explanation": "틀렸어요! 우리 뇌는 평범한 하루 동안 거의 모든 부분을 사용해요."
@@ -341,9 +341,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Las personas solo usan el 10 por ciento del cerebro.",
             "explanation": "¡Falso! Tu cerebro usa casi todas sus partes durante un día normal."
@@ -364,22 +364,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "かみなりは おなじ ところに にどは おちない。",
             "explanation": "うそ！ たかい たてものには、なんども おちる ことが あるよ。"
@@ -390,9 +390,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Lightning never strikes the same place twice.",
             "explanation": "False! Tall buildings can be struck many times."
@@ -403,9 +403,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "闪电从不会打在同一个地方两次。",
             "explanation": "不对！高大的建筑可能被击中很多次。"
@@ -416,9 +416,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "번개는 같은 곳에 두 번 떨어지지 않아요.",
             "explanation": "틀렸어요! 높은 건물에는 여러 번 떨어질 수 있어요."
@@ -429,9 +429,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Un rayo nunca cae dos veces en el mismo lugar.",
             "explanation": "¡Falso! Los edificios altos pueden ser alcanzados muchas veces."
@@ -452,22 +452,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ダチョウは あぶないと あたまを すなに うめる。",
             "explanation": "うそ！ ダチョウは あぶないと、はしって にげるよ。たまごを うめた ばしょを みる ときに、あたまを さげて いるだけなんだ。"
@@ -478,9 +478,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "An ostrich hides its head in the sand when it is scared.",
             "explanation": "False! It runs away. It only lowers its head to turn its eggs in the nest."
@@ -491,9 +491,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "鸵鸟害怕时会把头埋进沙子里。",
             "explanation": "不对！它会跑开。它只是低下头去翻动巢里的蛋。"
@@ -504,9 +504,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "타조는 무서우면 머리를 모래에 숨겨요.",
             "explanation": "틀렸어요! 타조는 도망가요. 머리를 숙이는 건 둥지의 알을 굴릴 때뿐이에요."
@@ -517,9 +517,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Un avestruz esconde la cabeza en la arena cuando tiene miedo.",
             "explanation": "¡Falso! Sale corriendo. Solo baja la cabeza para dar vuelta a sus huevos en el nido."
@@ -540,22 +540,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ばんりの ちょうじょうは うちゅうから はっきり みえる。",
             "explanation": "うそ！ ほそくて ちいさく、まわりと おなじ いろなので、うちゅうからは ほとんど みえないよ。"
@@ -566,9 +566,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "You can clearly see the Great Wall of China from space.",
             "explanation": "False! It is narrow and about the same color as the land, so astronauts can hardly see it."
@@ -579,9 +579,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "从太空能清楚地看到中国的长城。",
             "explanation": "不对！长城又窄，颜色又和大地差不多，宇航员几乎看不见它。"
@@ -592,9 +592,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "우주에서 만리장성이 또렷하게 보여요.",
             "explanation": "틀렸어요! 폭이 좁고 땅과 색이 비슷해서 우주비행사도 거의 볼 수 없어요."
@@ -605,9 +605,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "¡Se puede ver claramente la Gran Muralla China desde el espacio.",
             "explanation": "¡Falso! Es angosta y casi del mismo color que la tierra, así que los astronautas apenas pueden verla."
@@ -628,22 +628,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ガムを のみこむと 7ねん おなかに のこる。",
             "explanation": "うそ！ ガムは ふつう、すうじつで うんちと いっしょに でて いくよ。"
@@ -654,9 +654,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "If you swallow gum, it stays in your tummy for seven years.",
             "explanation": "False! Gum usually passes out of your body within a few days."
@@ -667,9 +667,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "吞下口香糖，它会在肚子里待七年。",
             "explanation": "不对！口香糖通常几天就会排出体外。"
@@ -680,9 +680,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "껌을 삼키면 7년 동안 배 속에 남아요.",
             "explanation": "틀렸어요! 껌은 보통 며칠 안에 몸 밖으로 나와요."
@@ -693,9 +693,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Si te tragas un chicle, se queda en la barriga siete años.",
             "explanation": "¡Falso! El chicle suele salir de tu cuerpo en pocos días."
@@ -716,22 +716,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "うしは あかい ものを みると こうふんする。",
             "explanation": "うそ！ うしは あかを みわけにくいんだ。ひらひら うごく ものに はんのうするよ。"
@@ -742,9 +742,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Cows get excited when they see red.",
             "explanation": "False! Cows cannot tell red well. They react to things that wave and move."
@@ -755,9 +755,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "牛看到红色就会兴奋。",
             "explanation": "不对！牛分不太清红色。它们对晃动、移动的东西有反应。"
@@ -768,9 +768,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "소는 빨간색을 보면 흥분해요.",
             "explanation": "틀렸어요! 소는 빨간색을 잘 구별하지 못해요. 흔들리고 움직이는 것에 반응해요."
@@ -781,9 +781,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Las vacas se emocionan cuando ven el rojo.",
             "explanation": "¡Falso! Las vacas no distinguen bien el rojo. Reaccionan a las cosas que se agitan y se mueven."
@@ -804,22 +804,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "たいようの ほんとうの いろは きいろ。",
             "explanation": "うそ！ たいようは ほんとうは しろに ちかいよ。そらの くうきを とおると きいろく みえるんだ。"
@@ -830,9 +830,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "The Sun is really yellow.",
             "explanation": "False! The Sun is almost white. It looks yellow after its light goes through our air."
@@ -843,9 +843,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "太阳其实是黄色的。",
             "explanation": "不对！太阳几乎是白色的。它的光穿过空气后，看起来才变黄。"
@@ -856,9 +856,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "태양은 정말 노란색이에요.",
             "explanation": "틀렸어요! 태양은 거의 하얀색이에요. 빛이 공기를 지나면서 노랗게 보여요."
@@ -869,9 +869,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "El Sol es de verdad amarillo.",
             "explanation": "¡Falso! El Sol es casi blanco. Se ve amarillo después de que su luz atraviesa nuestro aire."
@@ -892,22 +892,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ふゆが さむいのは、ちきゅうが たいように とおく なるから。",
             "explanation": "うそ！ ふゆは ちきゅうが かたむいて、ひかりが よわく あたるからだよ。"
@@ -918,9 +918,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Winter is cold because the Earth is farther from the Sun.",
             "explanation": "False! Earth is tilted, so in winter the sunlight hits us at a slant and is weaker."
@@ -931,9 +931,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "冬天冷是因为地球离太阳更远。",
             "explanation": "不对！地球是倾斜的，冬天阳光斜着照到我们身上，所以更弱。"
@@ -944,9 +944,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "지구가 태양에서 더 멀어서 겨울이 추워요.",
             "explanation": "틀렸어요! 지구가 기울어져 있어서 겨울에는 햇빛이 비스듬히 비쳐 약해져요."
@@ -957,9 +957,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "El invierno es frío porque la Tierra está más lejos del Sol.",
             "explanation": "¡Falso! La Tierra está inclinada, así que en invierno la luz del Sol llega de lado y es más débil."
@@ -980,22 +980,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "したの ばしょごとに かんじる あじが きまっている。",
             "explanation": "うそ！ したの どこでも、あまい・しょっぱい・すっぱい・にがいを かんじられるよ。"
@@ -1006,9 +1006,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Each part of the tongue tastes only one flavor.",
             "explanation": "False! Every part of your tongue can taste sweet, salty, sour and bitter."
@@ -1019,9 +1019,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "舌头的每个部分只能尝出一种味道。",
             "explanation": "不对！舌头的每个部分都能尝到甜、咸、酸和苦。"
@@ -1032,9 +1032,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "혀의 각 부분은 한 가지 맛만 느껴요.",
             "explanation": "틀렸어요! 혀의 어느 부분이든 단맛, 짠맛, 신맛, 쓴맛을 모두 느낄 수 있어요."
@@ -1045,9 +1045,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Cada parte de la lengua saborea un solo sabor.",
             "explanation": "¡Falso! Cada parte de tu lengua puede sentir lo dulce, lo salado, lo ácido y lo amargo."
@@ -1068,22 +1068,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "コウモリは めが みえない。",
             "explanation": "うそ！ コウモリも めで みえるよ。くらい ところでは、こえの はんしゃも つかうんだ。"
@@ -1094,9 +1094,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Bats are blind.",
             "explanation": "False! Bats can see. In the dark they also use echoes of their own sounds."
@@ -1107,9 +1107,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "蝙蝠是瞎的。",
             "explanation": "不对！蝙蝠能看见。在黑暗中，它们还会利用自己发出的声音的回声。"
@@ -1120,9 +1120,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "박쥐는 앞을 못 봐요.",
             "explanation": "틀렸어요! 박쥐는 볼 수 있어요. 어두운 곳에서는 자기가 낸 소리의 메아리도 이용해요."
@@ -1133,9 +1133,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Los murciélagos son ciegos.",
             "explanation": "¡Falso! Los murciélagos pueden ver. En la oscuridad también usan los ecos de sus propios sonidos."
@@ -1156,22 +1156,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "へびの からだは ぬるぬる している。",
             "explanation": "うそ！ へびの ひふは かわいていて、うろこで おおわれているよ。"
@@ -1182,9 +1182,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "A snake's body is slimy.",
             "explanation": "False! A snake's skin is dry and covered in scales."
@@ -1195,9 +1195,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "蛇的身体黏糊糊的。",
             "explanation": "不对！蛇的皮肤是干的，上面覆盖着鳞片。"
@@ -1208,9 +1208,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "뱀의 몸은 미끈미끈해요.",
             "explanation": "틀렸어요! 뱀의 피부는 말라 있고 비늘로 덮여 있어요."
@@ -1221,9 +1221,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "El cuerpo de una serpiente es baboso.",
             "explanation": "¡Falso! La piel de una serpiente es seca y está cubierta de escamas."
@@ -1244,22 +1244,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "カエルを さわると いぼが できる。",
             "explanation": "うそ！ いぼは ウイルスで できるよ。カエルは かんけい ないんだ。さわったら てを あらおうね。"
@@ -1270,9 +1270,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Touching a frog gives you warts.",
             "explanation": "False! Warts come from a virus, not from frogs. But do wash your hands after touching one."
@@ -1283,9 +1283,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "摸青蛙会长疣。",
             "explanation": "不对！疣是病毒引起的，不是青蛙造成的。不过摸完以后一定要洗手。"
@@ -1296,9 +1296,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "개구리를 만지면 사마귀가 생겨요.",
             "explanation": "틀렸어요! 사마귀는 바이러스 때문에 생겨요, 개구리 때문이 아니에요. 그래도 만진 뒤에는 손을 꼭 씻어요."
@@ -1309,9 +1309,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Si tocas una rana, te salen verrugas.",
             "explanation": "¡Falso! Las verrugas vienen de un virus, no de las ranas. Pero lávate las manos después de tocar una."
@@ -1332,22 +1332,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "ゾウは ネズミを こわがる。",
             "explanation": "うそ！ ゾウが ネズミを こわがる ところは、ほとんど みられて いないよ。"
@@ -1358,9 +1358,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Elephants are afraid of mice.",
             "explanation": "False! There is no good evidence that elephants are scared of mice."
@@ -1371,9 +1371,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "大象怕老鼠。",
             "explanation": "不对！没有什么可靠的证据表明大象害怕老鼠。"
@@ -1384,9 +1384,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "코끼리는 쥐를 무서워해요.",
             "explanation": "틀렸어요! 코끼리가 쥐를 무서워한다는 확실한 증거는 없어요."
@@ -1397,9 +1397,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Los elefantes les tienen miedo a los ratones.",
             "explanation": "¡Falso! No hay buenas pruebas de que los elefantes se asusten de los ratones."
@@ -1420,22 +1420,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "はちみつは ほとんど くさらない。",
             "explanation": "ほんと！ みずが すくなくて あまいので、ばいきんが ふえにくいんだ。"
@@ -1446,9 +1446,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Honey almost never goes bad.",
             "explanation": "True! It has little water and lots of sugar, so germs can hardly grow."
@@ -1459,9 +1459,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "蜂蜜几乎不会变坏。",
             "explanation": "对！它水分很少、糖很多，细菌几乎长不出来。"
@@ -1472,9 +1472,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "꿀은 거의 상하지 않아요.",
             "explanation": "맞아요! 물이 적고 설탕이 많아서 세균이 거의 자랄 수 없어요."
@@ -1485,9 +1485,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "La miel casi nunca se echa a perder.",
             "explanation": "¡Verdadero! Tiene poca agua y mucho azúcar, así que los microbios casi no pueden crecer."
@@ -1508,22 +1508,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "サメは きより ふるい いきもの。",
             "explanation": "ほんと！ サメの なかまは、きが うまれる まえから うみに いたんだよ。"
@@ -1534,9 +1534,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Sharks are older than trees.",
             "explanation": "True! Sharks were in the sea before there were trees."
@@ -1547,9 +1547,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "鲨鱼比树还古老。",
             "explanation": "对！在还没有树的时候，海里就已经有鲨鱼了。"
@@ -1560,9 +1560,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "상어는 나무보다 먼저 있었어요.",
             "explanation": "맞아요! 나무가 생기기 전에 상어는 이미 바다에 있었어요."
@@ -1573,9 +1573,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Los tiburones son más antiguos que los árboles.",
             "explanation": "¡Verdadero! Los tiburones ya estaban en el mar antes de que existieran los árboles."
@@ -1596,22 +1596,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "うちゅうでは おとが つたわらない。",
             "explanation": "ほんと！ おとは くうきが ふるえて つたわるけど、うちゅうには くうきが ないんだ。"
@@ -1622,9 +1622,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Sound cannot travel in space.",
             "explanation": "True! Sound travels by shaking air, and space has no air."
@@ -1635,9 +1635,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "声音在太空中传不出去。",
             "explanation": "对！声音靠空气的振动传播，而太空里没有空气。"
@@ -1648,9 +1648,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "우주에서는 소리가 전해지지 않아요.",
             "explanation": "맞아요! 소리는 공기가 흔들려서 전해지는데, 우주에는 공기가 없어요."
@@ -1661,9 +1661,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "El sonido no puede viajar por el espacio.",
             "explanation": "¡Verdadero! El sonido viaja haciendo vibrar el aire, y en el espacio no hay aire."
@@ -1684,22 +1684,22 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "regions": [],
       "excludeRegions": [],
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "にじは ほんとうは まるい かたち。",
             "explanation": "ほんと！ じめんが じゃまを して、はんぶんしか みえない ことが おおいんだ。"
@@ -1710,9 +1710,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "A rainbow is really a circle.",
             "explanation": "True! The ground hides the bottom half, so we usually see only an arch."
@@ -1723,9 +1723,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "彩虹其实是一个圆。",
             "explanation": "对！下半部分被地面挡住了，所以我们通常只看到一道弧。"
@@ -1736,9 +1736,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "무지개는 사실 동그란 원이에요.",
             "explanation": "맞아요! 땅이 아랫부분을 가려서 보통은 아치 모양만 보여요."
@@ -1749,9 +1749,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "statement": "Un arcoíris es en realidad un círculo.",
             "explanation": "¡Verdadero! El suelo oculta la mitad de abajo, por eso solemos ver solo un arco."

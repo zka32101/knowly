@@ -1538,7 +1538,7 @@
       "illustration": "otter",
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "ラッコは てを つなぐ",
@@ -1557,11 +1557,11 @@
               "body": "ラッコは海上で休む際、群れが離れないよう互いの手を握ることが知られています。ケルプに体を巻き付けて係留する行動も観察されています。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "en": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "Sea otters hold hands",
@@ -1580,11 +1580,11 @@
               "body": "Resting sea otters are known to hold each other's paws to keep the group together on the water. They have also been observed wrapping themselves in kelp as an anchor."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "zh": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "海獭会手拉手",
@@ -1603,11 +1603,11 @@
               "body": "已知休息中的海獭会互相牵着爪子，以便在水面上保持群体不散。也曾观察到它们把自己裹在海带里作为锚定。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "ko": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "해달은 손을 잡아요",
@@ -1626,11 +1626,11 @@
               "body": "쉬고 있는 해달은 무리가 물 위에서 흩어지지 않도록 서로의 앞발을 잡는 것으로 알려져 있습니다. 켈프를 몸에 감아 닻처럼 쓰는 모습도 관찰되었습니다."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "es": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "Las nutrias marinas se dan la mano",
@@ -1649,8 +1649,8 @@
               "body": "Se sabe que las nutrias marinas en reposo se toman de las patas para mantener unido al grupo sobre el agua. También se las ha observado envolverse en algas kelp como ancla."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         }
       },
       "seasons": [],
@@ -1661,7 +1661,7 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "excludeRegions": [],
       "keywords": [
         "らっこ",
@@ -1682,10 +1682,10 @@
       ],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -3710,7 +3710,7 @@
       "illustration": "tower",
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "エッフェルとうは なつに のびる",
@@ -3729,11 +3729,11 @@
               "body": "エッフェル塔は錬鉄製で、熱膨張により気温が高い夏には冬に比べて最大約15cm高くなると言われます。日当たりで塔の片側が膨張するため、頂部がわずかに傾くこともあります。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "en": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "The Eiffel Tower grows",
@@ -3752,11 +3752,11 @@
               "body": "The tower is made of wrought iron, which expands as it warms, so it can be up to about 15 cm taller in summer than in winter. Uneven sun exposure can also make its top lean slightly."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "zh": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "埃菲尔铁塔会长高",
@@ -3775,11 +3775,11 @@
               "body": "铁塔由锻铁制成，受热会膨胀，因此夏天最多可比冬天高出约15厘米。阳光照射不均匀还会使塔顶略微倾斜。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "ko": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "에펠탑이 자라요",
@@ -3798,11 +3798,11 @@
               "body": "탑은 연철로 만들어져 따뜻해지면 팽창하므로 여름에는 겨울보다 최대 약 15cm 높아질 수 있습니다. 햇빛이 고르지 않게 닿으면 꼭대기가 살짝 기울기도 합니다."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "es": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "La torre Eiffel crece",
@@ -3821,8 +3821,8 @@
               "body": "La torre está hecha de hierro forjado, que se dilata al calentarse, por lo que puede ser hasta unos 15 cm más alta en verano que en invierno. La exposición desigual al sol también puede hacer que su cima se incline ligeramente."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         }
       },
       "seasons": [
@@ -3833,7 +3833,7 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "excludeRegions": [],
       "keywords": [
         "えっふぇるとう",
@@ -3855,10 +3855,10 @@
       ],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "volatility": "stable",
       "contentFlags": [],
@@ -5597,7 +5597,7 @@
       "illustration": "ant",
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "アリは ちからもち",
@@ -5616,11 +5616,11 @@
               "body": "アリは自分の体重の10〜50倍の荷物を運びます。体が小さいほど体重(体積に比例)に対して筋肉の断面積が相対的に大きくなるため、同じ筋力でも体重比の力が強く見えます。これは体長のスケール効果で、人間が同じ比率で運べるわけではありません。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "en": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "Ants are strong",
@@ -5639,11 +5639,11 @@
               "body": "Ants carry loads of 10-50 times their body weight. Because weight scales with volume while muscle strength scales with cross-sectional area, smaller animals are relatively stronger. This does not mean a human could do the same at that ratio."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "zh": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "蚂蚁很有力气",
@@ -5662,11 +5662,11 @@
               "body": "蚂蚁能搬运相当于自身体重10至50倍的重物。由于体重随体积增长，而肌肉力量随横截面积增长，所以体型越小的动物相对越有力。但这并不意味着人类按这个比例也能做到。"
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "ko": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "개미는 힘이 세요",
@@ -5685,11 +5685,11 @@
               "body": "개미는 자기 몸무게의 10~50배에 달하는 짐을 나릅니다. 몸무게는 부피에 비례하고 근력은 단면적에 비례하므로 작은 동물일수록 상대적으로 더 힘이 셉니다. 이것이 사람이 같은 비율로 같은 일을 할 수 있다는 뜻은 아닙니다."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         },
         "es": {
-          "reviewStatus": "draft",
+          "reviewStatus": "reviewed",
           "levels": {
             "kids": {
               "title": "Las hormigas son fuertes",
@@ -5708,8 +5708,8 @@
               "body": "Las hormigas cargan pesos de 10 a 50 veces el de su cuerpo. Como el peso crece con el volumen mientras que la fuerza muscular crece con el área de la sección transversal, los animales pequeños son relativamente más fuertes. Esto no significa que un humano pudiera hacer lo mismo con esa proporción."
             }
           },
-          "reviewedBy": null,
-          "reviewedAt": null
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25"
         }
       },
       "seasons": [],
@@ -5718,7 +5718,7 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "excludeRegions": [],
       "keywords": [
         "あり",
@@ -5735,10 +5735,10 @@
       ],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "volatility": "stable",
       "contentFlags": [],

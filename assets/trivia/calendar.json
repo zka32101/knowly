@@ -13,20 +13,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "あけまして おめでとう",
             "body": "きょうは 1がつ1にち。あたらしい としの はじまりだよ。"
@@ -37,9 +37,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "A new year begins",
             "body": "Today is January 1. A new year starts on the calendar!"
@@ -50,9 +50,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "新的一年开始了",
             "body": "今天是1月1日。日历上新的一年开始啦！"
@@ -63,9 +63,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "새해가 시작돼요",
             "body": "오늘은 1월 1일이에요. 달력에서 새해가 시작돼요!"
@@ -76,9 +76,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Empieza un año nuevo",
             "body": "Hoy es 1 de enero. ¡Un año nuevo comienza en el calendario!"
@@ -100,20 +100,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "バレンタインデー",
             "body": "だいすきな ひとに「ありがとう」を つたえる ひ。チョコレートの もとの カカオは、むかし おかねの ように つかわれたよ。"
@@ -124,9 +124,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Valentine's Day",
             "body": "A day to tell people you care about them. Cacao beans, which chocolate comes from, were once used like money!"
@@ -137,9 +137,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "情人节",
             "body": "这一天要对你在乎的人说出心意。做巧克力的可可豆，从前还被当作钱来用呢！"
@@ -150,9 +150,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "밸런타인데이",
             "body": "소중한 사람에게 마음을 전하는 날이에요. 초콜릿의 재료인 카카오 콩은 옛날에 돈처럼 쓰였어요!"
@@ -163,9 +163,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de San Valentín",
             "body": "Un día para decirles a las personas que quieres que te importan. ¡Los granos de cacao, de los que sale el chocolate, se usaban antes como dinero!"
@@ -187,20 +187,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "えんしゅうりつの ひ",
             "body": "3.14 は、まるい えんの ふしぎな かず。3がつ14にちは「えんしゅうりつの ひ」だよ。"
@@ -211,9 +211,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Pi Day",
             "body": "Pi is a magic number for circles: 3.14. March 14 is Pi Day!"
@@ -224,9 +224,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "圆周率日",
             "body": "圆周率是圆的魔法数字：3.14。3月14日就是圆周率日！"
@@ -237,9 +237,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "파이 데이",
             "body": "파이는 원에 숨어 있는 마법의 수예요. 3.14예요. 3월 14일은 파이 데이예요!"
@@ -250,9 +250,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de Pi",
             "body": "Pi es un número mágico para los círculos: 3,14. ¡El 14 de marzo es el Día de Pi!"
@@ -274,20 +274,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "せかい みずの ひ",
             "body": "みずは いきものに とって たいせつ。みずを だいじに つかう ことを かんがえる ひだよ。"
@@ -298,9 +298,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "World Water Day",
             "body": "Water is important for every living thing. Let us think about using it wisely."
@@ -311,9 +311,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界水日",
             "body": "水对每一种生物都很重要。让我们想一想怎样节约用水。"
@@ -324,9 +324,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 물의 날",
             "body": "물은 모든 생물에게 중요해요. 물을 아껴 쓰는 방법을 생각해 봐요."
@@ -337,9 +337,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Mundial del Agua",
             "body": "El agua es importante para todos los seres vivos. Pensemos en usarla con cuidado."
@@ -361,20 +361,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "にんげんが はじめて うちゅうへ",
             "body": "1961ねんの きょう、ガガーリンさんが にんげんで はじめて うちゅうへ いったよ。"
@@ -385,9 +385,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "First person in space",
             "body": "On this day in 1961, Yuri Gagarin became the first person to travel into space."
@@ -398,9 +398,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "第一个进入太空的人",
             "body": "1961年的今天，尤里·加加林成为第一个飞向太空的人。"
@@ -411,9 +411,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "우주에 간 첫 번째 사람",
             "body": "1961년 오늘, 유리 가가린이 처음으로 우주를 여행한 사람이 되었어요."
@@ -424,9 +424,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "La primera persona en el espacio",
             "body": "En este día de 1961, Yuri Gagarin fue la primera persona en viajar al espacio."
@@ -448,20 +448,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "アースデイ",
             "body": "ちきゅうの しぜんを まもる ことを かんがえる ひ。ごみを へらす ことも たいせつだよ。"
@@ -472,9 +472,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Earth Day",
             "body": "A day to think about taking care of nature. Making less trash helps too!"
@@ -485,9 +485,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "地球日",
             "body": "想一想怎样爱护大自然的日子。少扔垃圾也有帮助哦！"
@@ -498,9 +498,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "지구의 날",
             "body": "자연을 소중히 하는 방법을 생각하는 날이에요. 쓰레기를 줄이는 것도 도움이 돼요!"
@@ -511,9 +511,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de la Tierra",
             "body": "Un día para pensar en cuidar la naturaleza. ¡Hacer menos basura también ayuda!"
@@ -535,20 +535,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "せかい ほんの ひ",
             "body": "ほんを よむ たのしさを みんなで かんがえる ひ。きょうは すきな ほんを ひらいて みよう。"
@@ -559,9 +559,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "World Book Day",
             "body": "A day to enjoy reading. Why not open a favorite book today?"
@@ -572,9 +572,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界读书日",
             "body": "享受阅读的日子。今天何不翻开一本最喜欢的书呢？"
@@ -585,9 +585,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 책의 날",
             "body": "책 읽기를 즐기는 날이에요. 오늘 좋아하는 책을 펼쳐 볼까요?"
@@ -598,9 +598,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Mundial del Libro",
             "body": "Un día para disfrutar de la lectura. ¿Por qué no abrir hoy un libro favorito?"
@@ -622,20 +622,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "いきものの ひ",
             "body": "いろいろな いきものが いることは、とても だいじ。みんなで まもる ことを かんがえる ひ。"
@@ -646,9 +646,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Biodiversity Day",
             "body": "Having many kinds of living things is important. A day to think about protecting them."
@@ -659,9 +659,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "生物多样性日",
             "body": "拥有许多种类的生物很重要。这是想一想如何保护它们的日子。"
@@ -672,9 +672,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "생물 다양성의 날",
             "body": "여러 종류의 생물이 있는 건 중요해요. 생물을 지키는 방법을 생각하는 날이에요."
@@ -685,9 +685,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de la Biodiversidad",
             "body": "Es importante que haya muchas clases de seres vivos. Un día para pensar en protegerlos."
@@ -709,20 +709,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "かんきょうの ひ",
             "body": "ちきゅうの かんきょうを まもる ために、わたしたちに できる ことを かんがえる ひ。"
@@ -733,9 +733,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "World Environment Day",
             "body": "A day to think about what we can do to protect our planet."
@@ -746,9 +746,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界环境日",
             "body": "想一想我们能为保护地球做些什么的日子。"
@@ -759,9 +759,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 환경의 날",
             "body": "우리 지구를 지키기 위해 무엇을 할 수 있는지 생각하는 날이에요."
@@ -772,9 +772,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Mundial del Medioambiente",
             "body": "Un día para pensar en lo que podemos hacer para proteger nuestro planeta."
@@ -796,20 +796,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "つきに おりた ひ",
             "body": "1969ねん7がつ20にち、アポロ11ごうが はじめて にんげんを つきに おろしたよ。"
@@ -820,9 +820,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "First steps on the Moon",
             "body": "On July 20, 1969, Apollo 11 astronauts became the first people to walk on the Moon."
@@ -833,9 +833,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "在月球上迈出的第一步",
             "body": "1969年7月20日，阿波罗11号的宇航员成为第一批在月球上行走的人。"
@@ -846,9 +846,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "달에서의 첫걸음",
             "body": "1969년 7월 20일, 아폴로 11호의 우주비행사들이 처음으로 달 위를 걸었어요."
@@ -859,9 +859,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Los primeros pasos en la Luna",
             "body": "El 20 de julio de 1969, los astronautas del Apolo 11 fueron las primeras personas en caminar sobre la Luna."
@@ -883,20 +883,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "どうぶつの ひ",
             "body": "どうぶつの ことを しって、たいせつに することを かんがえる ひだよ。"
@@ -907,9 +907,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "World Animal Day",
             "body": "A day to learn about animals and think about caring for them."
@@ -920,9 +920,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界动物日",
             "body": "了解动物、想一想如何爱护它们的日子。"
@@ -933,9 +933,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 동물의 날",
             "body": "동물에 대해 배우고 동물을 돌보는 방법을 생각하는 날이에요."
@@ -946,9 +946,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Mundial de los Animales",
             "body": "Un día para aprender sobre los animales y pensar en cuidarlos."
@@ -970,20 +970,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "せかい ゆうびんの ひ",
             "body": "てがみや にもつを とどけて くれる ひとに ありがとうを おもう ひ。"
@@ -994,9 +994,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "World Post Day",
             "body": "A day to say thanks to the people who deliver letters and parcels."
@@ -1007,9 +1007,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界邮政日",
             "body": "感谢送信和送包裹的人的日子。"
@@ -1020,9 +1020,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 우편의 날",
             "body": "편지와 택배를 배달해 주는 분들께 고마움을 전하는 날이에요."
@@ -1033,9 +1033,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Mundial del Correo",
             "body": "Un día para dar las gracias a las personas que reparten cartas y paquetes."
@@ -1057,20 +1057,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "せかい こどもの ひ",
             "body": "せかいじゅうの こどもたちの しあわせを かんがえる ひ。"
@@ -1081,9 +1081,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Universal Children's Day",
             "body": "A day to think about the happiness of children all over the world."
@@ -1094,9 +1094,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "世界儿童日",
             "body": "想一想全世界孩子们是否幸福的日子。"
@@ -1107,9 +1107,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "세계 어린이의 날",
             "body": "전 세계 어린이들의 행복을 생각하는 날이에요."
@@ -1120,9 +1120,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día Universal del Niño",
             "body": "Un día para pensar en la felicidad de los niños de todo el mundo."
@@ -1146,20 +1146,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "ねこの ひ",
             "body": "2がつ22にちは「にゃん にゃん にゃん」で ねこの ひ。ねこは あまい あじが わからない ふしぎな どうぶつだよ。"
@@ -1170,9 +1170,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Cat Day (Japan)",
             "body": "February 22 is Cat Day in Japan, from the cat sound \"nyan nyan nyan\"."
@@ -1183,9 +1183,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "猫之日（日本）",
             "body": "2月22日是日本的猫之日，因为猫叫声是“喵喵喵”。"
@@ -1196,9 +1196,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "고양이의 날(일본)",
             "body": "2월 22일은 일본의 고양이의 날이에요. 고양이 울음소리 '냥냥냥'에서 왔어요."
@@ -1209,9 +1209,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día del Gato (Japón)",
             "body": "El 22 de febrero es el Día del Gato en Japón, por el sonido del gato: «nyan nyan nyan»."
@@ -1235,20 +1235,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "ひなまつり",
             "body": "おんなのこの せいちょうを いわう おまつり。おひなさまを かざるよ。"
@@ -1259,9 +1259,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Hinamatsuri (Japan)",
             "body": "A Japanese festival wishing girls a healthy life. People display Hina dolls."
@@ -1272,9 +1272,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "女儿节（日本）",
             "body": "祝愿女孩们健康成长的日本节日。人们会摆出雏人偶。"
@@ -1285,9 +1285,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "히나마쓰리(일본)",
             "body": "여자아이가 건강하게 자라기를 비는 일본의 축제예요. 히나 인형을 장식해요."
@@ -1298,9 +1298,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Hinamatsuri (Japón)",
             "body": "Una fiesta japonesa que desea una vida sana a las niñas. La gente exhibe muñecas Hina."
@@ -1324,20 +1324,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "こどもの ひ",
             "body": "こどもの せいちょうを よろこび、おかあさんに ありがとうを いう ひ。"
@@ -1348,9 +1348,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Children's Day (Japan)",
             "body": "A Japanese holiday to celebrate children and thank mothers."
@@ -1361,9 +1361,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "儿童节（日本）",
             "body": "庆祝孩子们、感谢妈妈们的日本节日。"
@@ -1374,9 +1374,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "어린이날(일본)",
             "body": "어린이를 축하하고 어머니께 감사하는 일본의 공휴일이에요."
@@ -1387,9 +1387,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día del Niño (Japón)",
             "body": "Una fiesta japonesa para celebrar a los niños y dar las gracias a las madres."
@@ -1413,20 +1413,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "むしの ひ",
             "body": "6がつ4にちは「む(6)し(4)」で むしの ひ。むしは いきものの なかで いちばん たくさん いるよ。"
@@ -1437,9 +1437,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Bug Day (Japan)",
             "body": "June 4 is Bug Day in Japan because 6-4 sounds like \"mushi\", the Japanese word for bug."
@@ -1450,9 +1450,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "虫之日（日本）",
             "body": "6月4日是日本的虫之日，因为6和4读起来像日语里表示虫子的“mushi”。"
@@ -1463,9 +1463,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "벌레의 날(일본)",
             "body": "6월 4일은 일본의 벌레의 날이에요. 6-4가 일본어로 벌레를 뜻하는 '무시'처럼 들리거든요."
@@ -1476,9 +1476,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de los Bichos (Japón)",
             "body": "El 4 de junio es el Día de los Bichos en Japón porque 6-4 suena como «mushi», la palabra japonesa para bicho."
@@ -1502,20 +1502,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "たなばた",
             "body": "ささに ねがいごとを かいた たんざくを かざる ひ。おりひめと ひこぼしの おはなしが あるよ。"
@@ -1526,9 +1526,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Tanabata (Japan)",
             "body": "People hang wishes on bamboo branches. It is linked to the story of two stars, Orihime and Hikoboshi."
@@ -1539,9 +1539,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "七夕（日本）",
             "body": "人们把心愿挂在竹枝上。这和织女星与牛郎星（日语叫Orihime和Hikoboshi）两颗星星的故事有关。"
@@ -1552,9 +1552,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "칠석(다나바타, 일본)",
             "body": "대나무 가지에 소원을 걸어요. 오리히메와 히코보시라는 두 별의 이야기와 관련이 있어요."
@@ -1565,9 +1565,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Tanabata (Japón)",
             "body": "La gente cuelga deseos en ramas de bambú. Está ligada a la historia de dos estrellas, Orihime y Hikoboshi."
@@ -1591,20 +1591,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "はちみつの ひ",
             "body": "8がつ3にちは「は(8)ち み(3)つ」で はちみつの ひ。はちみつは ほとんど くさらないよ。"
@@ -1615,9 +1615,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Honey Day (Japan)",
             "body": "August 3 is Honey Day in Japan because 8-3 sounds like \"ha-chi-mi-tsu\"."
@@ -1628,9 +1628,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "蜂蜜日（日本）",
             "body": "8月3日是日本的蜂蜜日，因为8-3读起来像日语的“ha-chi-mi-tsu”。"
@@ -1641,9 +1641,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "꿀의 날(일본)",
             "body": "8월 3일은 일본의 꿀의 날이에요. 8-3이 '하치미쓰'처럼 들리거든요."
@@ -1654,9 +1654,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de la Miel (Japón)",
             "body": "El 3 de agosto es el Día de la Miel en Japón porque 8-3 suena como «ha-chi-mi-tsu»."
@@ -1680,20 +1680,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "バナナの ひ",
             "body": "8がつ7にちは「ば(8)な な(7)」で バナナの ひ。バナナは ベリーの なかまなんだよ。"
@@ -1704,9 +1704,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Banana Day (Japan)",
             "body": "August 7 is Banana Day in Japan because 8-7 sounds like \"ba-na-na\"."
@@ -1717,9 +1717,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "香蕉日（日本）",
             "body": "8月7日是日本的香蕉日，因为8-7读起来像日语的“ba-na-na”。"
@@ -1730,9 +1730,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "바나나의 날(일본)",
             "body": "8월 7일은 일본의 바나나의 날이에요. 8-7이 '바나나'처럼 들리거든요."
@@ -1743,9 +1743,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día del Plátano (Japón)",
             "body": "El 7 de agosto es el Día del Plátano en Japón porque 8-7 suena como «ba-na-na»."
@@ -1769,20 +1769,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "ぶんかの ひ",
             "body": "ふるくから つたわる ぶんかを たいせつに する ひ。"
@@ -1793,9 +1793,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Culture Day (Japan)",
             "body": "A Japanese holiday to value culture."
@@ -1806,9 +1806,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "文化日（日本）",
             "body": "日本重视文化的节假日。"
@@ -1819,9 +1819,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "문화의 날(일본)",
             "body": "문화를 소중히 여기는 일본의 공휴일이에요."
@@ -1832,9 +1832,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Día de la Cultura (Japón)",
             "body": "Una fiesta japonesa para valorar la cultura."
@@ -1858,20 +1858,20 @@
       "status": "active",
       "version": 1,
       "createdAt": "2026-10-23",
-      "updatedAt": "2026-10-23",
+      "updatedAt": "2026-10-25",
       "contentFlags": [],
       "sources": [],
       "verification": {
-        "status": "unverified",
-        "verifiedBy": null,
-        "verifiedAt": null,
-        "note": null
+        "status": "verified",
+        "verifiedBy": "owner",
+        "verifiedAt": "2026-10-25",
+        "note": "オーナー確認（出典の記録なし。確認日に、オーナーが「すべて確認済み」と申告）"
       },
       "translations": {
         "ja": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "おおみそか",
             "body": "1ねんの さいごの ひ。ことしを ふりかえって、あたらしい としを むかえる じゅんびを するよ。"
@@ -1882,9 +1882,9 @@
           }
         },
         "en": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Omisoka (Japan)",
             "body": "The last day of the year. People look back and get ready for the new year."
@@ -1895,9 +1895,9 @@
           }
         },
         "zh": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "除夕（日本）",
             "body": "一年的最后一天。人们回顾这一年，并为新年做准备。"
@@ -1908,9 +1908,9 @@
           }
         },
         "ko": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "오미소카(일본)",
             "body": "한 해의 마지막 날이에요. 한 해를 돌아보고 새해를 준비해요."
@@ -1921,9 +1921,9 @@
           }
         },
         "es": {
-          "reviewStatus": "draft",
-          "reviewedBy": null,
-          "reviewedAt": null,
+          "reviewStatus": "reviewed",
+          "reviewedBy": "owner",
+          "reviewedAt": "2026-10-25",
           "child": {
             "title": "Omisoka (Japón)",
             "body": "El último día del año. La gente hace un balance y se prepara para el año nuevo."
