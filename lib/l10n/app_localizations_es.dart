@@ -252,7 +252,12 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get premiumBenefit3 =>
-      'Guardado sin conexión y explicaciones a fondo (próximamente)';
+      'Biblioteca completa de datos pasados y análisis a fondo (próximamente)';
+
+  @override
+  String premiumSave(int n) {
+    return 'Ahorra $n%';
+  }
 
   @override
   String get premiumKidsFree =>

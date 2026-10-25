@@ -16,12 +16,25 @@ class PurchaseOffer {
     required this.period,
     required this.priceString,
     this.hasFreeTrial = false,
+    this.price = 0,
   });
 
   final String id;
   final PurchasePeriod period;
   final String priceString;
   final bool hasFreeTrial;
+
+  /// ストアの価格（数値。割引率の計算にだけ使う。0 は不明）。
+  final double price;
+}
+
+/// 年額が、月額を12回払うより何％安いか（月額・年額の価格が分かるときだけ）。1〜99 の整数、なければ null。
+int? annualSavingsPercent(List<PurchaseOffer> offers) {
+  final monthly = offers.where((o) => o.period == PurchasePeriod.monthly && o.price > 0).firstOrNull;
+  final annual = offers.where((o) => o.period == PurchasePeriod.annual && o.price > 0).firstOrNull;
+  if (monthly == null || annual == null) return null;
+  final pct = ((1 - annual.price / (monthly.price * 12)) * 100).round();
+  return pct >= 1 && pct <= 99 ? pct : null;
 }
 
 enum PurchaseOutcome { success, cancelled, failed, unavailable }
@@ -103,6 +116,7 @@ class RevenueCatEntitlementService implements EntitlementService {
           period: period,
           priceString: p.storeProduct.priceString,
           hasFreeTrial: intro != null && intro.price == 0,
+          price: p.storeProduct.price,
         ));
       }
       // 月額 → 年額の順。

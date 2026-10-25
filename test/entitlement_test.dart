@@ -85,4 +85,39 @@ void main() {
       expect(await premiumWithOfflineCache(offline, prefs, back), isFalse);
     });
   });
+
+  test('年額の割引率: 月額を12回払うより何％安いか', () {
+    const m = PurchaseOffer(
+      id: 'm',
+      period: PurchasePeriod.monthly,
+      priceString: '',
+      price: 1.99,
+    );
+    const a = PurchaseOffer(
+      id: 'a',
+      period: PurchasePeriod.annual,
+      priceString: '',
+      price: 14.99,
+    );
+    expect(annualSavingsPercent([m, a]), 37); // 14.99 ÷ 23.88 = 0.628
+    expect(annualSavingsPercent([m]), isNull); // 年額がない
+    expect(
+      annualSavingsPercent([
+        const PurchaseOffer(
+          id: 'm',
+          period: PurchasePeriod.monthly,
+          priceString: '',
+        ),
+        a,
+      ]),
+      isNull,
+    ); // 価格が分からない
+    const dear = PurchaseOffer(
+      id: 'a',
+      period: PurchasePeriod.annual,
+      priceString: '',
+      price: 30,
+    );
+    expect(annualSavingsPercent([m, dear]), isNull); // 割引にならない
+  });
 }

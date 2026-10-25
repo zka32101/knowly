@@ -249,7 +249,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get premiumBenefit2 => 'Unlimited saves';
 
   @override
-  String get premiumBenefit3 => 'Offline saving and deep dives (coming soon)';
+  String get premiumBenefit3 =>
+      'Full library of past facts and deep dives (coming soon)';
+
+  @override
+  String premiumSave(int n) {
+    return 'Save $n%';
+  }
 
   @override
   String get premiumKidsFree => 'Kids and Junior facts are always free.';

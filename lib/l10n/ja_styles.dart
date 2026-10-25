@@ -203,6 +203,9 @@ class AppLocalizationsJaJunior extends AppLocalizationsJa {
   String get ratingHeh => _jr(super.ratingHeh);
 
   @override
+  String premiumSave(int n) => _jr(super.premiumSave(n));
+
+  @override
   String get gateOk => _jr(super.gateOk);
 
   @override
@@ -863,6 +866,11 @@ class AppLocalizationsJaAdult extends AppLocalizationsJa {
 
   @override
   String get ratingHeh => 'へぇ！';
+
+  @override
+  String premiumSave(int n) {
+    return '${n}%お得';
+  }
 
   @override
   String get gateOk => '次へ';

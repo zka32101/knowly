@@ -105,16 +105,34 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                         for (final o in list)
                           Card(
                             key: Key('offer_${o.id}'),
+                            shape: o.period == PurchasePeriod.annual
+                                ? RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    side: BorderSide(color: theme.colorScheme.primary, width: 2))
+                                : null,
                             child: Padding(
                               padding: const EdgeInsets.all(16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    o.period == PurchasePeriod.monthly
-                                        ? l.premiumMonthly
-                                        : l.premiumAnnual,
-                                    style: theme.textTheme.titleMedium,
+                                  Row(
+                                    children: [
+                                      Text(
+                                        o.period == PurchasePeriod.monthly
+                                            ? l.premiumMonthly
+                                            : l.premiumAnnual,
+                                        style: theme.textTheme.titleMedium,
+                                      ),
+                                      if (o.period == PurchasePeriod.annual &&
+                                          annualSavingsPercent(list) != null) ...[
+                                        const SizedBox(width: 8),
+                                        Chip(
+                                          key: const Key('annual_savings'),
+                                          label: Text(l.premiumSave(annualSavingsPercent(list)!)),
+                                          visualDensity: VisualDensity.compact,
+                                        ),
+                                      ],
+                                    ],
                                   ),
                                   const SizedBox(height: 4),
                                   Text(o.priceString,

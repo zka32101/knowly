@@ -244,7 +244,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get premiumBenefit2 => '保存が無制限';
 
   @override
-  String get premiumBenefit3 => 'オフライン保存・深掘り解説（準備中）';
+  String get premiumBenefit3 => '全バックカタログのライブラリと深掘り解説（準備中）';
+
+  @override
+  String premiumSave(int n) {
+    return '$n%おトク';
+  }
 
   @override
   String get premiumKidsFree => 'キッズ・ジュニアの雑学はずっと無料です。';

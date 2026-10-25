@@ -280,12 +280,14 @@ class FakePurchases implements EntitlementService {
         id: 'monthly',
         period: PurchasePeriod.monthly,
         priceString: '¥300',
+        price: 300,
       ),
       PurchaseOffer(
         id: 'annual',
         period: PurchasePeriod.annual,
         priceString: '¥1,800',
         hasFreeTrial: true,
+        price: 1800,
       ),
     ],
     this.outcome = PurchaseOutcome.success,
@@ -433,6 +435,14 @@ Future<void> _reveal(WidgetTester tester, Key key) async {
 Future<void> _back(WidgetTester tester) async {
   await tester.tap(find.byType(BackButton));
   await tester.pumpAndSettle();
+}
+
+/// 購入ボタンまでスクロールして押す（画面の下の端ぎりぎりだと押せないので、少し余分に上げる）。
+Future<void> _tapBuy(WidgetTester tester, Key key) async {
+  await tester.ensureVisible(find.byKey(key));
+  await tester.drag(find.byType(ListView).last, const Offset(0, -150));
+  await tester.pumpAndSettle();
+  await tester.tap(find.byKey(key));
 }
 
 /// 設定画面など縦に長い画面で、遅延生成される項目が見える位置までスクロールする。
@@ -2572,6 +2582,9 @@ void main() {
         '¥1,800',
       );
       expect(find.text('無料トライアルあり'), findsOneWidget); // 年額だけ
+      // 年額は、月額を12回払うより 50% 安い（¥1,800 ÷ ¥3,600）
+      expect(find.byKey(const Key('annual_savings')), findsOneWidget);
+      expect(find.text('50%お得'), findsOneWidget);
       expect(find.byKey(const Key('premium_unavailable')), findsNothing);
     });
 
@@ -2582,7 +2595,7 @@ void main() {
       expect(c.read(feedDaysProvider), 7);
       expect(c.read(unlockedIdsProvider), isNotNull); // 無料は一部だけ
       await openPremium(tester);
-      await tester.tap(find.byKey(const Key('buy_annual')));
+      await _tapBuy(tester, const Key('buy_annual'));
       await tester.pumpAndSettle();
       expect(fake.purchased, ['annual']);
       expect(find.text('ご購入ありがとうございます！'), findsOneWidget);
@@ -2596,7 +2609,7 @@ void main() {
       final fake = FakePurchases(outcome: PurchaseOutcome.cancelled);
       await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
       await openPremium(tester);
-      await tester.tap(find.byKey(const Key('buy_monthly')));
+      await _tapBuy(tester, const Key('buy_monthly'));
       await tester.pumpAndSettle();
       expect(find.text('購入をやめました'), findsOneWidget);
       expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
@@ -2606,7 +2619,7 @@ void main() {
       final fake = FakePurchases(outcome: PurchaseOutcome.failed);
       await _pump(tester, prefs: {'ageBand': 'adult'}, entitlement: fake);
       await openPremium(tester);
-      await tester.tap(find.byKey(const Key('buy_monthly')));
+      await _tapBuy(tester, const Key('buy_monthly'));
       await tester.pumpAndSettle();
       expect(find.textContaining('購入できませんでした'), findsOneWidget);
       expect(containerOf(tester).read(isPremiumNowProvider), isFalse);

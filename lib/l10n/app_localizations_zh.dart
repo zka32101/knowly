@@ -242,7 +242,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumBenefit2 => '无限收藏';
 
   @override
-  String get premiumBenefit3 => '离线保存与深度解读（即将推出）';
+  String get premiumBenefit3 => '全部往期知识库和深度解读（即将推出）';
+
+  @override
+  String premiumSave(int n) {
+    return '省 $n%';
+  }
 
   @override
   String get premiumKidsFree => 'Kids 和 Junior 的冷知识永远免费。';

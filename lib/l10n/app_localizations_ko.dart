@@ -246,7 +246,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premiumBenefit2 => '무제한 저장';
 
   @override
-  String get premiumBenefit3 => '오프라인 저장과 심화 해설 (준비 중)';
+  String get premiumBenefit3 => '지난 상식 전체 라이브러리와 심화 해설 (준비 중)';
+
+  @override
+  String premiumSave(int n) {
+    return '$n% 절약';
+  }
 
   @override
   String get premiumKidsFree => 'Kids와 Junior의 상식은 언제나 무료예요.';

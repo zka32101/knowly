@@ -557,8 +557,14 @@ abstract class AppLocalizations {
   /// No description provided for @premiumBenefit3.
   ///
   /// In ja, this message translates to:
-  /// **'オフライン保存・深掘り解説（準備中）'**
+  /// **'全バックカタログのライブラリと深掘り解説（準備中）'**
   String get premiumBenefit3;
+
+  /// No description provided for @premiumSave.
+  ///
+  /// In ja, this message translates to:
+  /// **'{n}%おトク'**
+  String premiumSave(int n);
 
   /// No description provided for @premiumKidsFree.
   ///
