@@ -523,4 +523,17 @@ void main() {
       }
     });
   });
+
+  test('公開ビルドに出せる（reviewed）雑学が、日本語・英語ともに、Kids 向けにある', () {
+    for (final lang in ['ja', 'en']) {
+      final shippable = items.where((i) {
+        final t = (i['translations'] as Map)[lang] as Map<String, dynamic>?;
+        return i['minAgeBand'] == 'kids' &&
+            t != null &&
+            (t['reviewStatus'] == 'reviewed' ||
+                t['reviewStatus'] == 'published');
+      });
+      expect(shippable.length, greaterThan(50), reason: lang);
+    }
+  });
 }
