@@ -350,7 +350,15 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                     );
                     if (!ok) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text(l.savedLimit(freeSaveLimit))),
+                        SnackBar(
+                          content: Text(l.savedLimit(freeSaveLimit)),
+                          // 上限に達したときだけ、プレミアムの案内へ（いつも出さない）。
+                          action: SnackBarAction(
+                            key: const Key('saved_limit_premium'),
+                            label: l.premiumTitle,
+                            onPressed: () => context.push('/premium'),
+                          ),
+                        ),
                       );
                     }
                   },

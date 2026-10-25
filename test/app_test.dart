@@ -895,6 +895,11 @@ void main() {
     await tester.tap(find.byKey(const Key('save_button')));
     await tester.pump();
     expect(find.textContaining('20件'), findsOneWidget);
+    // 上限に達したときだけ、プレミアムの案内へ行ける
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.tap(find.byKey(const Key('saved_limit_premium')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const Key('premium_unavailable')), findsOneWidget);
   });
 
   testWidgets('英語の端末では英語で表示される', (tester) async {
