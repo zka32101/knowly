@@ -307,6 +307,7 @@ class FakePurchases implements EntitlementService {
   @override
   Future<bool> isPremium() async {
     isPremiumCalls++;
+    if (offline) throw Exception('offline');
     return premium;
   }
 
@@ -2557,6 +2558,37 @@ void main() {
       await openPremium(tester);
       expect(find.byKey(const Key('premium_unavailable')), findsOneWidget);
       expect(containerOf(tester).read(isPremiumNowProvider), isFalse);
+    });
+
+    testWidgets('オフラインでも、最近まで確認できていたプレミアムは続く（無料に戻らない）', (tester) async {
+      final now = DateTime(2026, 10, 23);
+      final twoDaysAgo = now
+          .subtract(const Duration(days: 2))
+          .millisecondsSinceEpoch;
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult', 'premiumCache': 'true|$twoDaysAgo'},
+        entitlement: FakePurchases(offline: true),
+        now: now,
+      );
+      final c = containerOf(tester);
+      await c.read(isPremiumProvider.future);
+      expect(c.read(isPremiumNowProvider), isTrue);
+      expect(c.read(feedDaysProvider), 30);
+    });
+
+    testWidgets('オフラインで、14日以上たっていたら、無料に戻る', (tester) async {
+      final now = DateTime(2026, 10, 23);
+      final old = now.subtract(const Duration(days: 15)).millisecondsSinceEpoch;
+      await _pump(
+        tester,
+        prefs: {'ageBand': 'adult', 'premiumCache': 'true|$old'},
+        entitlement: FakePurchases(offline: true),
+        now: now,
+      );
+      final c = containerOf(tester);
+      await c.read(isPremiumProvider.future);
+      expect(c.read(isPremiumNowProvider), isFalse);
     });
 
     testWidgets('オフラインでプランを読めないときは、ネットにつなぐよう案内する', (tester) async {
