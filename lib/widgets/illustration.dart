@@ -3,23 +3,81 @@ import 'package:flutter/material.dart';
 /// 仮のイラスト（絵文字）。AI 生成イラストができたら、`assets/illustrations/<id>.png` を
 /// 用意してここを Image.asset に差し替える。
 const _emoji = {
-  'octopus': '🐙', 'honey': '🍯', 'banana': '🍌', 'venus': '🪐', 'shark': '🦈',
-  'skeleton': '🦴', 'giraffe': '🦒', 'lightning': '⚡', 'otter': '🦦',
-  'astronaut': '🧑‍🚀', 'ice': '🧊', 'mountain': '🏔️', 'wombat': '🐾', 'dna': '🧬',
-  'flamingo': '🦩', 'moon': '🌙', 'butterfly': '🦋', 'cat': '🐱', 'sun': '☀️',
-  'saturn': '🪐', 'tower': '🗼', 'heart': '❤️', 'bamboo': '🎋', 'crow': '🐦‍⬛',
-  'rainbow': '🌈', 'elephant': '🐘', 'dolphin': '🐬', 'antarctica': '🧊',
-  'koala': '🐨', 'japan': '🗾',
-  'ant': '🐜', 'dragonfly': '🪽', 'firefly': '✨', 'bee': '🐝', 'cicada': '🪲',
-  'mosquito': '🦟', 'spider': '🕷️', 'beetle': '🪲', 'dungbeetle': '🪲',
-  'silkworm': '🐛', 'train': '🚄', 'plane': '✈️', 'wright': '🛩️', 'subway': '🚇',
-  'ship': '🚢', 'rocket': '🚀', 'maglev': '🚅', 'window': '🪟', 'iss': '🛰️',
-  'container': '📦', 'watermelon': '🍉', 'cacao': '🍫', 'rice': '🍚', 'carrot': '🥕',
-  'peanut': '🥜', 'pineapple': '🍍', 'apple': '🍎', 'wasabi': '🌿', 'popcorn': '🍿',
+  'octopus': '🐙',
+  'honey': '🍯',
+  'banana': '🍌',
+  'venus': '🪐',
+  'shark': '🦈',
+  'skeleton': '🦴',
+  'giraffe': '🦒',
+  'lightning': '⚡',
+  'otter': '🦦',
+  'astronaut': '🧑‍🚀',
+  'ice': '🧊',
+  'mountain': '🏔️',
+  'wombat': '🐾',
+  'dna': '🧬',
+  'flamingo': '🦩',
+  'moon': '🌙',
+  'butterfly': '🦋',
+  'cat': '🐱',
+  'sun': '☀️',
+  'saturn': '🪐',
+  'tower': '🗼',
+  'heart': '❤️',
+  'bamboo': '🎋',
+  'crow': '🐦‍⬛',
+  'rainbow': '🌈',
+  'elephant': '🐘',
+  'dolphin': '🐬',
+  'antarctica': '🧊',
+  'koala': '🐨',
+  'japan': '🗾',
+  'ant': '🐜',
+  'dragonfly': '🪽',
+  'firefly': '✨',
+  'bee': '🐝',
+  'cicada': '🪲',
+  'mosquito': '🦟',
+  'spider': '🕷️',
+  'beetle': '🪲',
+  'dungbeetle': '🪲',
+  'silkworm': '🐛',
+  'train': '🚄',
+  'plane': '✈️',
+  'wright': '🛩️',
+  'subway': '🚇',
+  'ship': '🚢',
+  'rocket': '🚀',
+  'maglev': '🚅',
+  'window': '🪟',
+  'iss': '🛰️',
+  'container': '📦',
+  'watermelon': '🍉',
+  'cacao': '🍫',
+  'rice': '🍚',
+  'carrot': '🥕',
+  'peanut': '🥜',
+  'pineapple': '🍍',
+  'apple': '🍎',
+  'wasabi': '🌿',
+  'popcorn': '🍿',
   'strawberry': '🍓',
-  'penguin': '🐧', 'owl': '🦉', 'camel': '🐫', 'sloth': '🦥', 'salmon': '🐟',
-  'squirrel': '🐿️', 'bat': '🦇', 'ladybug': '🐞', 'cricket': '🦗', 'bicycle': '🚲',
-  'airplane': '✈️', 'snow': '❄️', 'maple': '🍁', 'tree': '🌳', 'sunflower': '🌻',
+  'penguin': '🐧',
+  'owl': '🦉',
+  'camel': '🐫',
+  'sloth': '🦥',
+  'salmon': '🐟',
+  'squirrel': '🐿️',
+  'bat': '🦇',
+  'ladybug': '🐞',
+  'cricket': '🦗',
+  'bicycle': '🚲',
+  'airplane': '✈️',
+  'snow': '❄️',
+  'maple': '🍁',
+  'tree': '🌳',
+  'sunflower': '🌻',
   'fog': '🌫️',
   'hail': '🧊',
   'wind': '🌬️',
@@ -57,11 +115,17 @@ const _emoji = {
   'emoji': '😀',
   'backpack': '🎒',
   'ramen': '🍜',
-  'hand': '✋', 'brain': '🧠', 'eye': '👁️',
+  'hand': '✋',
+  'brain': '🧠',
+  'eye': '👁️',
 };
 
 /// 絵の id から、仮の絵文字を返す（共有画像など、ウィジェット以外で使う）。
 String emojiForIllustration(String id) => _emoji[id] ?? '💡';
+
+/// 本番の絵（assets/illustrations/(id).png）がある絵の id。ここに足すと、絵文字のかわりに画像を出す。
+/// 作り方は docs/illustration_prompts.md。`python3 tool/content/make_illustration_prompts.py` が、この一覧を作る。
+final Set<String> illustrationImages = {};
 
 class TriviaIllustration extends StatelessWidget {
   const TriviaIllustration({super.key, required this.id, this.size = 48});
@@ -70,9 +134,22 @@ class TriviaIllustration extends StatelessWidget {
   final double size;
 
   @override
-  Widget build(BuildContext context) => Text(
-        _emoji[id] ?? '💡',
-        style: TextStyle(fontSize: size),
-        semanticsLabel: '',
-      );
+  Widget build(BuildContext context) {
+    final emoji = Text(
+      _emoji[id] ?? '💡',
+      style: TextStyle(fontSize: size),
+      semanticsLabel: '',
+    );
+    if (!illustrationImages.contains(id)) return emoji;
+    return Image.asset(
+      'assets/illustrations/$id.png',
+      key: Key('illustration_image_$id'),
+      width: size * 1.25,
+      height: size * 1.25,
+      fit: BoxFit.contain,
+      excludeFromSemantics: true,
+      // 画像が読めなかったときは、絵文字に戻す。
+      errorBuilder: (_, _, _) => emoji,
+    );
+  }
 }
