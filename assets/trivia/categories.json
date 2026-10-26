@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "2026.10.23",
+  "updatedAt": "2026-10-23",
+  "items": [
+    {
+      "id": "animals",
+      "order": 10,
+      "emoji": "🐾",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "どうぶつ",
+          "junior": "動物（どうぶつ）",
+          "adult": "動物"
+        },
+        "en": "Animals",
+        "zh": "动物",
+        "ko": "동물",
+        "es": "Animales"
+      }
+    },
+    {
+      "id": "bugs",
+      "order": 20,
+      "emoji": "🐞",
+      "status": "active",
+      "parent": "animals",
+      "labels": {
+        "ja": {
+          "kids": "むし",
+          "junior": "虫（むし）",
+          "adult": "虫"
+        },
+        "en": "Bugs",
+        "zh": "昆虫",
+        "ko": "곤충",
+        "es": "Insectos"
+      }
+    },
+    {
+      "id": "nature",
+      "order": 30,
+      "emoji": "🌿",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "しぜん",
+          "junior": "自然（しぜん）",
+          "adult": "自然"
+        },
+        "en": "Nature",
+        "zh": "自然",
+        "ko": "자연",
+        "es": "Naturaleza"
+      }
+    },
+    {
+      "id": "weather",
+      "order": 40,
+      "emoji": "🌦️",
+      "status": "active",
+      "parent": "nature",
+      "labels": {
+        "ja": {
+          "kids": "てんき",
+          "junior": "天気（てんき）",
+          "adult": "天気"
+        },
+        "en": "Weather",
+        "zh": "天气",
+        "ko": "날씨",
+        "es": "El tiempo"
+      }
+    },
+    {
+      "id": "ocean",
+      "order": 50,
+      "emoji": "🌊",
+      "status": "active",
+      "parent": "nature",
+      "labels": {
+        "ja": {
+          "kids": "うみ",
+          "junior": "海（うみ）",
+          "adult": "海"
+        },
+        "en": "Ocean",
+        "zh": "海洋",
+        "ko": "바다",
+        "es": "Océano"
+      }
+    },
+    {
+      "id": "plants",
+      "order": 60,
+      "emoji": "🌱",
+      "status": "active",
+      "parent": "nature",
+      "labels": {
+        "ja": {
+          "kids": "しょくぶつ",
+          "junior": "植物（しょくぶつ）",
+          "adult": "植物"
+        },
+        "en": "Plants",
+        "zh": "植物",
+        "ko": "식물",
+        "es": "Plantas"
+      }
+    },
+    {
+      "id": "science",
+      "order": 70,
+      "emoji": "🔬",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "かがく",
+          "junior": "科学（かがく）",
+          "adult": "科学"
+        },
+        "en": "Science",
+        "zh": "科学",
+        "ko": "과학",
+        "es": "Ciencia"
+      }
+    },
+    {
+      "id": "space",
+      "order": 80,
+      "emoji": "🪐",
+      "status": "active",
+      "parent": "science",
+      "labels": {
+        "ja": {
+          "kids": "うちゅう",
+          "junior": "宇宙（うちゅう）",
+          "adult": "宇宙"
+        },
+        "en": "Space",
+        "zh": "宇宙",
+        "ko": "우주",
+        "es": "Espacio"
+      }
+    },
+    {
+      "id": "body",
+      "order": 90,
+      "emoji": "🫀",
+      "status": "active",
+      "parent": "science",
+      "labels": {
+        "ja": {
+          "kids": "からだ",
+          "junior": "体（からだ）",
+          "adult": "体"
+        },
+        "en": "Body",
+        "zh": "身体",
+        "ko": "몸",
+        "es": "Cuerpo"
+      }
+    },
+    {
+      "id": "math",
+      "order": 100,
+      "emoji": "🔢",
+      "status": "active",
+      "parent": "science",
+      "labels": {
+        "ja": {
+          "kids": "さんすう",
+          "junior": "算数（さんすう）",
+          "adult": "数学"
+        },
+        "en": "Math",
+        "zh": "数学",
+        "ko": "수학",
+        "es": "Matemáticas"
+      }
+    },
+    {
+      "id": "inventions",
+      "order": 110,
+      "emoji": "💡",
+      "status": "active",
+      "parent": "science",
+      "labels": {
+        "ja": {
+          "kids": "はつめい",
+          "junior": "発明（はつめい）",
+          "adult": "発明"
+        },
+        "en": "Inventions",
+        "zh": "发明",
+        "ko": "발명",
+        "es": "Inventos"
+      }
+    },
+    {
+      "id": "vehicles",
+      "order": 120,
+      "emoji": "🚆",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "のりもの",
+          "junior": "乗（の）り物（もの）",
+          "adult": "乗り物"
+        },
+        "en": "Vehicles",
+        "zh": "交通工具",
+        "ko": "탈것",
+        "es": "Vehículos"
+      }
+    },
+    {
+      "id": "geography",
+      "order": 130,
+      "emoji": "🗺️",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "ちり",
+          "junior": "地理（ちり）",
+          "adult": "地理"
+        },
+        "en": "Geography",
+        "zh": "地理",
+        "ko": "지리",
+        "es": "Geografía"
+      }
+    },
+    {
+      "id": "japan",
+      "order": 140,
+      "emoji": "🗾",
+      "status": "active",
+      "parent": "geography",
+      "labels": {
+        "ja": {
+          "kids": "にほん",
+          "junior": "日本（にほん）",
+          "adult": "日本"
+        },
+        "en": "Japan",
+        "zh": "日本",
+        "ko": "일본",
+        "es": "Japón"
+      }
+    },
+    {
+      "id": "culture",
+      "order": 150,
+      "emoji": "🏮",
+      "status": "active",
+      "labels": {
+        "ja": {
+          "kids": "くらし",
+          "junior": "くらし",
+          "adult": "暮らし・文化"
+        },
+        "en": "Life & culture",
+        "zh": "生活文化",
+        "ko": "생활·문화",
+        "es": "Vida y cultura"
+      }
+    },
+    {
+      "id": "food",
+      "order": 160,
+      "emoji": "🍙",
+      "status": "active",
+      "parent": "culture",
+      "labels": {
+        "ja": {
+          "kids": "たべもの",
+          "junior": "食（た）べ物（もの）",
+          "adult": "食べ物"
+        },
+        "en": "Food",
+        "zh": "食物",
+        "ko": "음식",
+        "es": "Comida"
+      }
+    },
+    {
+      "id": "sports",
+      "order": 170,
+      "emoji": "⚽",
+      "status": "active",
+      "parent": "culture",
+      "labels": {
+        "ja": {
+          "kids": "スポーツ",
+          "junior": "スポーツ",
+          "adult": "スポーツ"
+        },
+        "en": "Sports",
+        "zh": "体育运动",
+        "ko": "스포츠",
+        "es": "Deportes"
+      }
+    },
+    {
+      "id": "music",
+      "order": 180,
+      "emoji": "🎵",
+      "status": "active",
+      "parent": "culture",
+      "labels": {
+        "ja": {
+          "kids": "おんがく",
+          "junior": "音楽（おんがく）",
+          "adult": "音楽"
+        },
+        "en": "Music",
+        "zh": "音乐",
+        "ko": "음악",
+        "es": "Música"
+      }
+    },
+    {
+      "id": "buildings",
+      "order": 190,
+      "emoji": "🏛️",
+      "status": "active",
+      "parent": "culture",
+      "labels": {
+        "ja": {
+          "kids": "たてもの",
+          "junior": "たてもの",
+          "adult": "建物"
+        },
+        "en": "Buildings",
+        "zh": "建筑",
+        "ko": "건물",
+        "es": "Edificios"
+      }
+    }
+  ]
+}

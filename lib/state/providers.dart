@@ -3,12 +3,14 @@ import 'package:flutter_timezone/flutter_timezone.dart';
 
 import '../data/trivia_repository.dart';
 import '../logic/mascot.dart';
+import '../logic/stamps.dart';
 import '../logic/daily_pick.dart';
 import '../logic/interests.dart';
 import '../logic/search.dart';
 import '../logic/timing.dart';
 import '../models/age_band.dart';
 import '../models/calendar_event.dart';
+import '../models/glossary.dart';
 import '../models/myth.dart';
 import '../models/project.dart';
 import '../models/trivia.dart';
@@ -17,6 +19,10 @@ import 'settings.dart';
 
 final triviaRepositoryProvider =
     Provider<TriviaRepository>((ref) => throw UnimplementedError());
+
+/// 選択肢に出すカテゴリーの id（表示順）。
+final categoryIdsProvider = Provider<List<String>>(
+    (ref) => ref.watch(triviaRepositoryProvider).categoryIds);
 
 /// 「今日」の基準。テストで差し替える。
 final nowProvider = Provider<DateTime>((ref) => DateTime.now());
@@ -48,7 +54,7 @@ final regionProvider = Provider<({String? code, bool any})>((ref) {
 const _southernRegions = {'AU', 'NZ', 'BR', 'AR', 'CL', 'ZA', 'PE', 'UY', 'PY', 'BO'};
 
 /// 季節に使う半球。null は「季節を使わない」。
-final hemisphereProvider = Provider<Hemisphere?>((ref) {
+final Provider<Hemisphere?> hemisphereProvider = Provider<Hemisphere?>((ref) {
   final settings = ref.watch(settingsProvider);
   switch (settings.seasonMode) {
     case 'off':
@@ -118,7 +124,7 @@ final searchIndexProvider = Provider<Map<String, SearchEntry>>((ref) {
   for (final t in ref.watch(triviaRepositoryProvider).items) {
     final titles = StringBuffer('${t.category} ${t.keywords.join(' ')}');
     final bodies = StringBuffer();
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final level = t.levelFor(band, lang, allowDraft: kAllowDraftContent);
       if (level == null) continue;
       titles.write(' ${level.title}');
@@ -330,3 +336,43 @@ final mascotPointsProvider = Provider<int>((ref) {
     learned: s.knowledge.values.where((k) => k == Knowledge.learned).length,
   );
 });
+
+/// ことば機能（ことばずかん・ことばクイズ）を使える年代・言語か。
+/// 用語の説明は、Teen/Adult と、Junior の英語だけ（Kids と日本語の子ども向けは対象外）。
+final wordsEnabledProvider = Provider<bool>((ref) {
+  final band = ref.watch(settingsProvider.select((s) => s.ageBand));
+  if (band == null || band == AgeBand.kids) return false;
+  if (band == AgeBand.junior && ref.watch(contentLanguageProvider) == 'ja') return false;
+  return true;
+});
+
+/// いまの本文の言語の用語（説明のあるものだけ）。
+final glossaryListProvider = Provider<List<(GlossaryEntry, GlossaryText)>>((ref) {
+  final lang = ref.watch(contentLanguageProvider);
+  return [
+    for (final e in ref.watch(triviaRepositoryProvider).glossary)
+      if (e.forLanguage(lang) case final t?) (e, t),
+  ];
+});
+
+/// 雑学を開いたとき、いまの季節の雑学なら、季節のスタンプを押す。
+/// 季節はタイムゾーンから推定した半球で決める（季節の設定がオフのときは北半球として数える）。
+final Provider<void Function(String id)> stampRecorderProvider = Provider<void Function(String id)>((ref) {
+  return (id) {
+    final t = ref.read(triviaRepositoryProvider).byId(id);
+    if (t == null || t.seasons.isEmpty) return;
+    final hemisphere = ref.read(hemisphereProvider) ?? Hemisphere.north;
+    final now = ref.read(nowProvider);
+    final season = seasonFor(now, hemisphere);
+    if (!t.seasons.contains(season.name)) return;
+    ref.read(settingsProvider.notifier).addStamp(
+        stampKey(stampYear(now, season, hemisphere), season, id));
+  };
+});
+
+/// 相棒が着ている、今の季節の飾り（なければ null）。
+final mascotAccessoryProvider = Provider<String?>((ref) => currentAccessory(
+      ref.watch(settingsProvider.select((s) => s.stamps)),
+      ref.watch(nowProvider),
+      ref.watch(hemisphereProvider),
+    ));

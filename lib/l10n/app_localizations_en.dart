@@ -27,6 +27,75 @@ class AppLocalizationsEn extends AppLocalizations {
   String get continueButton => 'Next';
 
   @override
+  String get worldAskTitle => 'People around the world are reading this too';
+
+  @override
+  String get worldAskBody =>
+      'See how many people viewed this fact today, and from how many countries. Only the fact ID, country and date are sent, with no name or account.';
+
+  @override
+  String get worldJoin => 'Join';
+
+  @override
+  String get worldNotNow => 'Not now';
+
+  @override
+  String worldToday(int total, int countries) {
+    return 'Read today by $total people from $countries countries';
+  }
+
+  @override
+  String get settingsWorld => 'Join world stats';
+
+  @override
+  String get settingsWorldNote =>
+      'Share anonymous counts of today\'s facts with the world (turn off any time)';
+
+  @override
+  String reportThisWeek(int seen, int answered) {
+    return 'This week: $seen facts seen, $answered questions answered';
+  }
+
+  @override
+  String get settingsJuniorRuby => 'Show readings (furigana)';
+
+  @override
+  String get listenSlow => 'Slow';
+
+  @override
+  String get settingsTextSize => 'Text size';
+
+  @override
+  String get textSizeNormal => 'Normal';
+
+  @override
+  String get textSizeLarge => 'Large';
+
+  @override
+  String get textSizeXLarge => 'Extra large';
+
+  @override
+  String relatedMore(int n) {
+    return 'Show more ($n more)';
+  }
+
+  @override
+  String get searchRecent => 'Recent';
+
+  @override
+  String get hintHomeTips =>
+      'Tap a card to flip it. Find quizzes in the Play tab!';
+
+  @override
+  String get hintGotIt => 'Got it';
+
+  @override
+  String get onboardingSkip => 'Maybe later';
+
+  @override
+  String get onboardingPickBand => 'Or just pick what fits best';
+
+  @override
   String get birthYearTitle => 'Choose your birth year';
 
   @override
@@ -116,7 +185,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get savedTitle => 'Saved';
 
   @override
-  String get savedEmpty => 'Nothing saved yet';
+  String get savedEmpty =>
+      'Nothing saved yet. Tap the bookmark on a fact to keep it here.';
 
   @override
   String savedLimit(int count) {
@@ -179,13 +249,23 @@ class AppLocalizationsEn extends AppLocalizations {
   String get premiumBenefit2 => 'Unlimited saves';
 
   @override
-  String get premiumBenefit3 => 'Offline saving and deep dives (coming soon)';
+  String get premiumBenefit3 =>
+      'Full library of past facts and deep dives (coming soon)';
+
+  @override
+  String premiumSave(int n) {
+    return 'Save $n%';
+  }
 
   @override
   String get premiumKidsFree => 'Kids and Junior facts are always free.';
 
   @override
   String get premiumUnavailable => 'Purchases are coming soon';
+
+  @override
+  String get premiumOffline =>
+      'Couldn\'t load plans. Connect to the internet and open this screen again.';
 
   @override
   String get gateTitle => 'For parents';
@@ -580,9 +660,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get listenSpeedLabel => 'Speed';
 
   @override
-  String get listenSlow => 'Slow';
-
-  @override
   String get listenNormal => 'Normal';
 
   @override
@@ -704,7 +781,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app.';
+      'Teen and Adult modes may connect to show app recommendations (can be turned off in Settings) and to check your Premium status. Payment details never reach the app. If you turn on \"world stats\", only the fact ID, country and date are sent, with no name or account.';
 
   @override
   String privacyContact(String email) {
@@ -1178,4 +1255,175 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => 'Word explained';
+
+  @override
+  String get wordSimple => 'In short';
+
+  @override
+  String get wordDetail => 'In detail';
+
+  @override
+  String get wordFacts => 'Facts that use this word';
+
+  @override
+  String get wordHint => 'Tap an underlined word to see what it means.';
+
+  @override
+  String get wordNotFound => 'No explanation found.';
+
+  @override
+  String get wordsTitle => 'Word book';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '$n of $total words';
+  }
+
+  @override
+  String get wordOfDay => 'Word of the day';
+
+  @override
+  String get wordQuizTitle => 'Word quiz';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return 'What does \"$term\" mean?';
+  }
+
+  @override
+  String get wordsHint => 'Words you look up are added here.';
+
+  @override
+  String get mapTitle => 'Link map';
+
+  @override
+  String mapLinkCount(int n) {
+    return '$n linked facts';
+  }
+
+  @override
+  String get mapNoLinks => 'No linked facts yet';
+
+  @override
+  String get mapOpen => 'See links';
+
+  @override
+  String get voiceQuizTitle => 'Listen quiz';
+
+  @override
+  String get voiceReplay => 'Listen again';
+
+  @override
+  String get voiceQuizSub => 'Hear it, then answer';
+
+  @override
+  String get leagueTitle => 'Family league';
+
+  @override
+  String get leagueNote =>
+      'Scores from battles played on this device are tallied each week. Nothing is sent anywhere.';
+
+  @override
+  String get leagueThisWeek => 'This week';
+
+  @override
+  String leagueLastWinner(String name) {
+    return 'Last week\'s champion: $name';
+  }
+
+  @override
+  String get leagueEmpty =>
+      'No records yet. Play a battle with two or more players and it will show up here.';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n games, $wins wins';
+  }
+
+  @override
+  String get leaguePlay => 'Play a battle';
+
+  @override
+  String get leagueClear => 'Clear this week\'s records';
+
+  @override
+  String get leagueClearTitle => 'Clear this week\'s records?';
+
+  @override
+  String get leagueClearBody =>
+      'This week\'s scores will be erased. Last week\'s champion stays.';
+
+  @override
+  String get leagueRecord => 'Record in the family league';
+
+  @override
+  String get leagueSub => 'A week-long contest';
+
+  @override
+  String get recapTitle => 'Weekly recap';
+
+  @override
+  String get recapNote => 'The last 7 days, compared with the 7 days before.';
+
+  @override
+  String get recapSeen => 'Facts seen';
+
+  @override
+  String get recapLearned => 'New things learned';
+
+  @override
+  String get recapQuiz => 'Quiz answers right';
+
+  @override
+  String get recapActiveDays => 'Active days';
+
+  @override
+  String get recapMsgNone => 'A quiet week. Read one fact to get going again!';
+
+  @override
+  String get recapMsgSome => 'Nice pace! It adds up bit by bit.';
+
+  @override
+  String get recapMsgGreat => 'Amazing! You played almost every day!';
+
+  @override
+  String get recapChip => 'Recap';
+
+  @override
+  String get recapBanner => 'Your weekly recap is ready';
+
+  @override
+  String get stampsTitle => 'Seasonal stamp book';
+
+  @override
+  String get stampsChip => 'Stamps';
+
+  @override
+  String stampsHint(int n) {
+    return 'Read a fact that suits the current season to earn a stamp. Collect $n and your buddy wears that season\'s outfit.';
+  }
+
+  @override
+  String get stampsSpring => 'Spring';
+
+  @override
+  String get stampsSummer => 'Summer';
+
+  @override
+  String get stampsAutumn => 'Autumn';
+
+  @override
+  String get stampsWinter => 'Winter';
+
+  @override
+  String get stampsNow => 'Now';
+
+  @override
+  String get stampsOutfit => 'Outfit unlocked!';
+
+  @override
+  String get celebrateOutfit => 'Seasonal outfit unlocked!';
 }

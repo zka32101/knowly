@@ -27,6 +27,73 @@ class AppLocalizationsJa extends AppLocalizations {
   String get continueButton => 'つぎへ';
 
   @override
+  String get worldAskTitle => '世界の人も、この雑学を見ています';
+
+  @override
+  String get worldAskBody =>
+      '今日この雑学を見た人の数と、国の数が分かります。見たことは、雑学の id・国・日付だけを、名前などなしで送ります。';
+
+  @override
+  String get worldJoin => '参加する';
+
+  @override
+  String get worldNotNow => 'いまはしない';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '今日、この雑学を見た人: $total人（$countriesか国）';
+  }
+
+  @override
+  String get settingsWorld => '世界の集計に参加';
+
+  @override
+  String get settingsWorldNote => '今日の雑学を見た人の数を、匿名で世界と共有します（設定でいつでもオフにできます）';
+
+  @override
+  String reportThisWeek(int seen, int answered) {
+    return 'こんしゅう：$seenこ みて、$answeredもん とけたよ';
+  }
+
+  @override
+  String get settingsJuniorRuby => 'ふりがなを つける';
+
+  @override
+  String get listenSlow => 'ゆっくり';
+
+  @override
+  String get settingsTextSize => '文字の大きさ';
+
+  @override
+  String get textSizeNormal => 'ふつう';
+
+  @override
+  String get textSizeLarge => '大きい';
+
+  @override
+  String get textSizeXLarge => 'とても大きい';
+
+  @override
+  String relatedMore(int n) {
+    return 'もっと みる（あと$nこ）';
+  }
+
+  @override
+  String get searchRecent => '最近の検索';
+
+  @override
+  String get hintHomeTips => 'カードを タップすると めくれるよ。「あそぶ」には クイズも あるよ！';
+
+  @override
+  String get hintGotIt => 'わかった';
+
+  @override
+  String get onboardingSkip => 'あとで';
+
+  @override
+  String get onboardingPickBand => '年齢にいちばん近いものを選んでください';
+
+  @override
   String get birthYearTitle => '生まれた年を えらんでください';
 
   @override
@@ -115,7 +182,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get savedTitle => '保存した雑学';
 
   @override
-  String get savedEmpty => 'まだ保存した雑学はありません';
+  String get savedEmpty => 'まだ保存した雑学はありません。雑学の詳細で、しおりのマークを押すと、ここにたまります';
 
   @override
   String savedLimit(int count) {
@@ -177,13 +244,21 @@ class AppLocalizationsJa extends AppLocalizations {
   String get premiumBenefit2 => '保存が無制限';
 
   @override
-  String get premiumBenefit3 => 'オフライン保存・深掘り解説（準備中）';
+  String get premiumBenefit3 => '全バックカタログのライブラリと深掘り解説（準備中）';
+
+  @override
+  String premiumSave(int n) {
+    return '$n%おトク';
+  }
 
   @override
   String get premiumKidsFree => 'キッズ・ジュニアの雑学はずっと無料です。';
 
   @override
   String get premiumUnavailable => '購入機能は準備中です';
+
+  @override
+  String get premiumOffline => 'プランを読み込めませんでした。ネットワークにつないでからもう一度ひらいてください';
 
   @override
   String get gateTitle => '保護者の方へ確認';
@@ -570,9 +645,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get listenSpeedLabel => '速さ';
 
   @override
-  String get listenSlow => 'ゆっくり';
-
-  @override
   String get listenNormal => 'ふつう';
 
   @override
@@ -688,7 +760,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。';
+      'Teen / Adult では、おすすめアプリの案内（設定でオフにできます）と、プレミアムの購入状態の確認のために通信することがあります。支払い情報はアプリには届きません。「世界の人の集計」をオンにしたときだけ、見た雑学の id・国・日付を、名前などなしで送ります。';
 
   @override
   String privacyContact(String email) {
@@ -1159,4 +1231,173 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => 'ことばの せつめい';
+
+  @override
+  String get wordSimple => 'かんたんに いうと';
+
+  @override
+  String get wordDetail => 'くわしく';
+
+  @override
+  String get wordFacts => 'この ことばが でてくる ざつがく';
+
+  @override
+  String get wordHint => '線のついた ことばを タップすると、いみが わかるよ。';
+
+  @override
+  String get wordNotFound => 'せつめいが みつかりません。';
+
+  @override
+  String get wordsTitle => 'ことばずかん';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '$n / $total ことば';
+  }
+
+  @override
+  String get wordOfDay => 'きょうの ことば';
+
+  @override
+  String get wordQuizTitle => 'ことばクイズ';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '「$term」の いみは？';
+  }
+
+  @override
+  String get wordsHint => 'ことばの せつめいを みると、ここに ふえていくよ。';
+
+  @override
+  String get mapTitle => 'つながりマップ';
+
+  @override
+  String mapLinkCount(int n) {
+    return 'つながる ざつがく $nこ';
+  }
+
+  @override
+  String get mapNoLinks => 'つながる ざつがくは まだ ないよ';
+
+  @override
+  String get mapOpen => 'つながりを みる';
+
+  @override
+  String get voiceQuizTitle => 'みみで クイズ';
+
+  @override
+  String get voiceReplay => 'もういちど きく';
+
+  @override
+  String get voiceQuizSub => 'よみあげて こたえる';
+
+  @override
+  String get leagueTitle => 'かぞくリーグ';
+
+  @override
+  String get leagueNote =>
+      'この たんまつで あそんだ たいせんの てんすうを、1しゅうかんごとに あつめるよ。そとには おくらないよ。';
+
+  @override
+  String get leagueThisWeek => 'こんしゅうの じゅんい';
+
+  @override
+  String leagueLastWinner(String name) {
+    return 'せんしゅうの ゆうしょう：$name';
+  }
+
+  @override
+  String get leagueEmpty => 'まだ きろくが ないよ。2にんいじょうで たいせんすると、ここに のるよ。';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$nしあい・$winsしょう';
+  }
+
+  @override
+  String get leaguePlay => 'たいせんする';
+
+  @override
+  String get leagueClear => 'こんしゅうの きろくを けす';
+
+  @override
+  String get leagueClearTitle => 'こんしゅうの きろくを けしますか？';
+
+  @override
+  String get leagueClearBody => 'こんしゅうの てんすうが きえます。せんしゅうの ゆうしょうしゃは のこります。';
+
+  @override
+  String get leagueRecord => 'かぞくリーグに きろくする';
+
+  @override
+  String get leagueSub => '1しゅうかんの しょうぶ';
+
+  @override
+  String get recapTitle => '1しゅうかんの ふりかえり';
+
+  @override
+  String get recapNote => 'きょうまでの 7にちかんと、そのまえの 7にちかんを くらべるよ。';
+
+  @override
+  String get recapSeen => 'みた ざつがく';
+
+  @override
+  String get recapLearned => 'あたらしく しれた';
+
+  @override
+  String get recapQuiz => 'クイズの せいかい';
+
+  @override
+  String get recapActiveDays => 'あそんだ ひ';
+
+  @override
+  String get recapMsgNone => 'こんしゅうは おやすみだったね。また ひとつ、よんでみよう！';
+
+  @override
+  String get recapMsgSome => 'いい ちょうし！ すこしずつ ふえていくよ。';
+
+  @override
+  String get recapMsgGreat => 'すごい！ まいにちの ように あそんだね！';
+
+  @override
+  String get recapChip => 'ふりかえり';
+
+  @override
+  String get recapBanner => 'こんしゅうの ふりかえりが できたよ';
+
+  @override
+  String get stampsTitle => 'きせつの スタンプちょう';
+
+  @override
+  String get stampsChip => 'スタンプちょう';
+
+  @override
+  String stampsHint(int n) {
+    return 'いまの きせつに ぴったりの ざつがくを よむと、スタンプが 1つ。$nつ あつめると、あいぼうが その きせつの ようふくを きるよ。';
+  }
+
+  @override
+  String get stampsSpring => 'はる';
+
+  @override
+  String get stampsSummer => 'なつ';
+
+  @override
+  String get stampsAutumn => 'あき';
+
+  @override
+  String get stampsWinter => 'ふゆ';
+
+  @override
+  String get stampsNow => 'いま';
+
+  @override
+  String get stampsOutfit => 'ようふくゲット！';
+
+  @override
+  String get celebrateOutfit => 'きせつの ようふくを ゲット！';
 }

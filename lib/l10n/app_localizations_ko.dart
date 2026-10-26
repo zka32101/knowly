@@ -27,6 +27,74 @@ class AppLocalizationsKo extends AppLocalizations {
   String get continueButton => '다음';
 
   @override
+  String get worldAskTitle => '전 세계 사람들도 이 상식을 보고 있어요';
+
+  @override
+  String get worldAskBody =>
+      '오늘 이 상식을 본 사람 수와 나라 수를 볼 수 있어요. 상식 ID, 국가, 날짜만 이름이나 계정 없이 보내요.';
+
+  @override
+  String get worldJoin => '참여하기';
+
+  @override
+  String get worldNotNow => '나중에';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '오늘 $countries개국 $total명이 봤어요';
+  }
+
+  @override
+  String get settingsWorld => '세계 통계에 참여';
+
+  @override
+  String get settingsWorldNote =>
+      '오늘의 상식을 본 사람 수를 익명으로 공유해요 (설정에서 언제든 끌 수 있어요)';
+
+  @override
+  String reportThisWeek(int seen, int answered) {
+    return '이번 주: $seen개 봤고, $answered문제 풀었어요';
+  }
+
+  @override
+  String get settingsJuniorRuby => '후리가나 표시';
+
+  @override
+  String get listenSlow => '느리게';
+
+  @override
+  String get settingsTextSize => '글자 크기';
+
+  @override
+  String get textSizeNormal => '보통';
+
+  @override
+  String get textSizeLarge => '크게';
+
+  @override
+  String get textSizeXLarge => '아주 크게';
+
+  @override
+  String relatedMore(int n) {
+    return '더 보기 ($n개 더)';
+  }
+
+  @override
+  String get searchRecent => '최근 검색';
+
+  @override
+  String get hintHomeTips => '카드를 누르면 뒤집혀요. ‘놀기’에는 퀴즈도 있어요!';
+
+  @override
+  String get hintGotIt => '알겠어요';
+
+  @override
+  String get onboardingSkip => '나중에';
+
+  @override
+  String get onboardingPickBand => '또는 가장 알맞은 것을 골라 주세요';
+
+  @override
   String get birthYearTitle => '태어난 해를 선택하세요';
 
   @override
@@ -116,7 +184,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get savedTitle => '저장함';
 
   @override
-  String get savedEmpty => '아직 저장한 것이 없어요';
+  String get savedEmpty => '아직 저장한 것이 없어요. 상세 화면에서 책갈피 아이콘을 누르면 여기에 모여요.';
 
   @override
   String savedLimit(int count) {
@@ -178,13 +246,21 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premiumBenefit2 => '무제한 저장';
 
   @override
-  String get premiumBenefit3 => '오프라인 저장과 심화 해설 (준비 중)';
+  String get premiumBenefit3 => '지난 상식 전체 라이브러리와 심화 해설 (준비 중)';
+
+  @override
+  String premiumSave(int n) {
+    return '$n% 절약';
+  }
 
   @override
   String get premiumKidsFree => 'Kids와 Junior의 상식은 언제나 무료예요.';
 
   @override
   String get premiumUnavailable => '결제 기능은 준비 중이에요';
+
+  @override
+  String get premiumOffline => '요금제를 불러오지 못했어요. 인터넷에 연결한 뒤 다시 열어 주세요.';
 
   @override
   String get gateTitle => '부모님께';
@@ -571,9 +647,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get listenSpeedLabel => '속도';
 
   @override
-  String get listenSlow => '느리게';
-
-  @override
   String get listenNormal => '보통';
 
   @override
@@ -690,7 +763,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen과 Adult 모드는 앱 추천 표시(설정에서 끌 수 있어요)와 Premium 상태 확인을 위해 연결될 수 있어요. 결제 정보는 앱에 전달되지 않아요.';
+      'Teen과 Adult 모드는 앱 추천 표시(설정에서 끌 수 있어요)와 Premium 상태 확인을 위해 연결될 수 있어요. 결제 정보는 앱에 전달되지 않아요. ‘세계 통계’를 켠 경우에만 상식 ID, 국가, 날짜를 이름이나 계정 없이 보내요.';
 
   @override
   String privacyContact(String email) {
@@ -1159,4 +1232,172 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => '낱말 설명';
+
+  @override
+  String get wordSimple => '쉽게 말하면';
+
+  @override
+  String get wordDetail => '자세히';
+
+  @override
+  String get wordFacts => '이 낱말이 나오는 상식';
+
+  @override
+  String get wordHint => '밑줄 친 낱말을 누르면 뜻을 알 수 있어요.';
+
+  @override
+  String get wordNotFound => '설명을 찾지 못했어요.';
+
+  @override
+  String get wordsTitle => '낱말 도감';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '낱말 $total개 중 $n개';
+  }
+
+  @override
+  String get wordOfDay => '오늘의 낱말';
+
+  @override
+  String get wordQuizTitle => '낱말 퀴즈';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '\'$term\'의 뜻은?';
+  }
+
+  @override
+  String get wordsHint => '설명을 본 낱말이 여기에 쌓여요.';
+
+  @override
+  String get mapTitle => '연결 지도';
+
+  @override
+  String mapLinkCount(int n) {
+    return '연결된 상식 $n개';
+  }
+
+  @override
+  String get mapNoLinks => '아직 연결된 상식이 없어요';
+
+  @override
+  String get mapOpen => '연결 보기';
+
+  @override
+  String get voiceQuizTitle => '귀로 하는 퀴즈';
+
+  @override
+  String get voiceReplay => '다시 듣기';
+
+  @override
+  String get voiceQuizSub => '듣고 답하기';
+
+  @override
+  String get leagueTitle => '가족 리그';
+
+  @override
+  String get leagueNote => '이 기기에서 한 대결의 점수를 한 주 단위로 모아요. 어디로도 전송되지 않아요.';
+
+  @override
+  String get leagueThisWeek => '이번 주 순위';
+
+  @override
+  String leagueLastWinner(String name) {
+    return '지난주 우승: $name';
+  }
+
+  @override
+  String get leagueEmpty => '아직 기록이 없어요. 2명 이상이 대결하면 여기에 나타나요.';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n경기 $wins승';
+  }
+
+  @override
+  String get leaguePlay => '대결하러 가기';
+
+  @override
+  String get leagueClear => '이번 주 기록 지우기';
+
+  @override
+  String get leagueClearTitle => '이번 주 기록을 지울까요?';
+
+  @override
+  String get leagueClearBody => '이번 주 점수가 지워져요. 지난주 우승자는 남아요.';
+
+  @override
+  String get leagueRecord => '가족 리그에 기록하기';
+
+  @override
+  String get leagueSub => '일주일 승부';
+
+  @override
+  String get recapTitle => '주간 돌아보기';
+
+  @override
+  String get recapNote => '최근 7일을 그 전 7일과 비교해요.';
+
+  @override
+  String get recapSeen => '본 상식';
+
+  @override
+  String get recapLearned => '새로 알게 된 것';
+
+  @override
+  String get recapQuiz => '퀴즈 정답';
+
+  @override
+  String get recapActiveDays => '활동한 날';
+
+  @override
+  String get recapMsgNone => '이번 주는 쉬었네요. 하나만 읽고 다시 시작해 봐요!';
+
+  @override
+  String get recapMsgSome => '좋은 페이스예요! 조금씩 쌓여 가요.';
+
+  @override
+  String get recapMsgGreat => '대단해요! 거의 매일 했어요!';
+
+  @override
+  String get recapChip => '돌아보기';
+
+  @override
+  String get recapBanner => '이번 주 돌아보기가 준비됐어요';
+
+  @override
+  String get stampsTitle => '계절 스탬프북';
+
+  @override
+  String get stampsChip => '스탬프북';
+
+  @override
+  String stampsHint(int n) {
+    return '지금 계절에 어울리는 상식을 읽으면 스탬프가 하나. $n개를 모으면 단짝이 그 계절의 옷을 입어요.';
+  }
+
+  @override
+  String get stampsSpring => '봄';
+
+  @override
+  String get stampsSummer => '여름';
+
+  @override
+  String get stampsAutumn => '가을';
+
+  @override
+  String get stampsWinter => '겨울';
+
+  @override
+  String get stampsNow => '지금';
+
+  @override
+  String get stampsOutfit => '옷 획득!';
+
+  @override
+  String get celebrateOutfit => '계절 옷을 얻었어요!';
 }

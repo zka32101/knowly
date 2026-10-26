@@ -1,3 +1,4 @@
+import '../models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +10,8 @@ import '../models/trivia.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import '../widgets/illustration.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// レア度の色（ふつう＝灰、レア＝青、スーパーレア＝金）。
 Color rarityColor(Rarity r) => switch (r) {
@@ -42,12 +45,39 @@ class _ZukanScreenState extends ConsumerState<ZukanScreen> {
     final theme = Theme.of(context);
     final all = ref.watch(allEligibleProvider);
     final seen = ref.watch(settingsProvider.select((s) => s.seen));
-    final categories = [for (final c in allCategories) if (all.any((t) => t.category == c)) c];
-    final shown = [for (final t in all) if (_category == null || t.category == _category) t];
+    final categories = [for (final c in ref.watch(categoryIdsProvider)) if (all.any((t) => CategoryRegistry.matches({c}, t.category))) c];
+    final shown = [for (final t in all) if (_category == null || CategoryRegistry.matches({_category!}, t.category)) t];
     final found = shown.where((t) => seen.contains(t.id)).length;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.zukanTitle)),
+      appBar: AppBar(
+        title: Text(l.zukanTitle),
+        actions: [
+          ShareButton(
+            buttonKey: const Key('zukan_share'),
+            compact: true,
+            text: '${l.appName} ${l.zukanTitle} ${l.zukanFound(found, shown.length)}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji('📖'),
+              gap8,
+              cardTitle(l.zukanTitle),
+              gap8,
+              cardBig('$found / ${shown.length}'),
+              gap8,
+              // 見つけた雑学の絵を、ならべる（最大24個）
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 6,
+                runSpacing: 6,
+                children: [
+                  for (final t in shown.where((t) => seen.contains(t.id)).take(24))
+                    Text(emojiForIllustration(t.illustration), style: const TextStyle(fontSize: 26)),
+                ],
+              ),
+            ]),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),
@@ -110,7 +140,8 @@ class _Cell extends StatelessWidget {
       onTap: found ? () => context.push('/detail/${item.id}') : null,
       child: Container(
         width: 64,
-        height: 72,
+        constraints: const BoxConstraints(minHeight: 72),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -120,6 +151,7 @@ class _Cell extends StatelessWidget {
         ),
         child: found
             ? Column(
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TriviaIllustration(id: item.illustration, size: 28),

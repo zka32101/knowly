@@ -5,6 +5,8 @@ import '../l10n/app_localizations.dart';
 import '../logic/badges.dart';
 import '../models/age_band.dart';
 import '../state/settings.dart';
+import '../widgets/share_cards.dart';
+import '../widgets/share_sheet.dart';
 
 /// バッジの集計。子ども（Kids/Junior）には連続日数の記録がないので、そのバッジは出さない。
 final badgeStatsProvider = Provider<BadgeStats>((ref) {
@@ -47,7 +49,32 @@ class BadgesScreen extends ConsumerWidget {
     final defs = badgesFor(band);
     final earned = defs.where((b) => isEarned(b, stats)).length;
     return Scaffold(
-      appBar: AppBar(title: Text(l.badgesTitle)),
+      appBar: AppBar(
+        title: Text(l.badgesTitle),
+        actions: [
+          ShareButton(
+            buttonKey: const Key('badges_share'),
+            compact: true,
+            text: '${l.appName} ${l.badgesTitle} ${l.badgesCount(earned, defs.length)}\n#${l.appName}',
+            card: ShareFrame(appName: l.appName, children: [
+              bigEmoji('🏅'),
+              gap8,
+              cardTitle(l.badgesTitle),
+              gap8,
+              cardBig('$earned / ${defs.length}'),
+              gap8,
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 6,
+                children: [
+                  for (final b in defs.where((b) => isEarned(b, stats)))
+                    Text(b.emoji, style: const TextStyle(fontSize: 30)),
+                ],
+              ),
+            ]),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(16),

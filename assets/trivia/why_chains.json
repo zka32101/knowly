@@ -1,354 +1,703 @@
 {
- "schemaVersion": 1,
- "updatedAt": "2026-10-23",
- "links": [
-  {
-   "from": "ice_floats",
-   "to": "apple_floats",
-   "ja": {
-    "child": "じゃあ、りんごは どうして うくの？",
-    "default": "では、リンゴが水に浮くのはなぜ？"
-   },
-   "en": {
-    "child": "Then why does an apple float?",
-    "default": "Then why does an apple float?"
-   }
-  },
-  {
-   "from": "apple_floats",
-   "to": "steel_ship_floats",
-   "ja": {
-    "child": "てつの ふねも うくのは、なぜ？",
-    "default": "鉄の船が浮くのはなぜ？"
-   },
-   "en": {
-    "child": "Why can a steel ship float too?",
-    "default": "Why can a steel ship float too?"
-   }
-  },
-  {
-   "from": "steel_ship_floats",
-   "to": "saturn_would_float",
-   "ja": {
-    "child": "ほしも みずに うかぶ ことが あるの？",
-    "default": "星が水に浮かぶことはあるの？"
-   },
-   "en": {
-    "child": "Could a planet float on water?",
-    "default": "Could a planet float on water?"
-   }
-  },
-  {
-   "from": "saturn_would_float",
-   "to": "venus_day_longer",
-   "ja": {
-    "child": "ほかの わくせいは どんな ほし？",
-    "default": "ほかの惑星はどんな星？"
-   },
-   "en": {
-    "child": "What are the other planets like?",
-    "default": "What are the other planets like?"
-   }
-  },
-  {
-   "from": "venus_day_longer",
-   "to": "sunlight_8_minutes",
-   "ja": {
-    "child": "たいように ひかりは どれくらいで とどくの？",
-    "default": "太陽の光はどれくらいで届くの？"
-   },
-   "en": {
-    "child": "How long does sunlight take to reach us?",
-    "default": "How long does sunlight take to reach us?"
-   }
-  },
-  {
-   "from": "sunlight_8_minutes",
-   "to": "moon_moving_away",
-   "ja": {
-    "child": "おつきさまは どうなっているの？",
-    "default": "月はどうなっているの？"
-   },
-   "en": {
-    "child": "What is the Moon doing?",
-    "default": "What is the Moon doing?"
-   }
-  },
-  {
-   "from": "moon_moving_away",
-   "to": "no_sound_in_space",
-   "ja": {
-    "child": "うちゅうは しずかなの？",
-    "default": "宇宙は静かなの？"
-   },
-   "en": {
-    "child": "Is space quiet?",
-    "default": "Is space quiet?"
-   }
-  },
-  {
-   "from": "no_sound_in_space",
-   "to": "orbital_speed",
-   "ja": {
-    "child": "うちゅうに いくには どれくらい はやく とぶの？",
-    "default": "宇宙に行くには、どれくらいの速さが必要？"
-   },
-   "en": {
-    "child": "How fast do you need to go to reach space?",
-    "default": "How fast do you need to go to reach space?"
-   }
-  },
-  {
-   "from": "orbital_speed",
-   "to": "iss_sunrises",
-   "ja": {
-    "child": "うちゅうステーションの あさと よるは どうなるの？",
-    "default": "宇宙ステーションの朝と夜はどうなるの？"
-   },
-   "en": {
-    "child": "What are days and nights like on the space station?",
-    "default": "What are days and nights like on the space station?"
-   }
-  },
-  {
-   "from": "lightning_hotter_than_sun",
-   "to": "rainbow_full_circle",
-   "ja": {
-    "child": "そらの ふしぎ、にじは どうなっているの？",
-    "default": "空の不思議、虹はどうなっているの？"
-   },
-   "en": {
-    "child": "What about another sky wonder, the rainbow?",
-    "default": "What about another sky wonder, the rainbow?"
-   }
-  },
-  {
-   "from": "octopus_blue_blood",
-   "to": "heart_100k",
-   "ja": {
-    "child": "ひとの しんぞうは どうなの？",
-    "default": "人間の心臓はどうなの？"
-   },
-   "en": {
-    "child": "What about the human heart?",
-    "default": "What about the human heart?"
-   }
-  },
-  {
-   "from": "heart_100k",
-   "to": "baby_bones",
-   "ja": {
-    "child": "からだの ほねは なんぼん？",
-    "default": "体の骨は何本？"
-   },
-   "en": {
-    "child": "How many bones are in the body?",
-    "default": "How many bones are in the body?"
-   }
-  },
-  {
-   "from": "baby_bones",
-   "to": "giraffe_seven_vertebrae",
-   "ja": {
-    "child": "キリンの くびの ほねは なんこ？",
-    "default": "キリンの首の骨は何個？"
-   },
-   "en": {
-    "child": "How many neck bones does a giraffe have?",
-    "default": "How many neck bones does a giraffe have?"
-   }
-  },
-  {
-   "from": "giraffe_seven_vertebrae",
-   "to": "koala_fingerprints",
-   "ja": {
-    "child": "ひとに にている どうぶつは ほかにも いる？",
-    "default": "人に似た動物はほかにもいる？"
-   },
-   "en": {
-    "child": "Are there other animals that look like us?",
-    "default": "Are there other animals that look like us?"
-   }
-  },
-  {
-   "from": "sea_otters_hold_hands",
-   "to": "dolphin_half_sleep",
-   "ja": {
-    "child": "うみの ほかの いきものは どうやって ねるの？",
-    "default": "海のほかの生き物はどうやって眠るの？"
-   },
-   "en": {
-    "child": "How do other sea animals sleep?",
-    "default": "How do other sea animals sleep?"
-   }
-  },
-  {
-   "from": "dolphin_half_sleep",
-   "to": "crows_recognize_faces",
-   "ja": {
-    "child": "あたまの いい どうぶつは ほかに いる？",
-    "default": "頭のいい動物はほかにいる？"
-   },
-   "en": {
-    "child": "Which other animals are clever?",
-    "default": "Which other animals are clever?"
-   }
-  },
-  {
-   "from": "crows_recognize_faces",
-   "to": "elephant_ground_sounds",
-   "ja": {
-    "child": "ふしぎな こえを だす どうぶつは？",
-    "default": "不思議な声を出す動物は？"
-   },
-   "en": {
-    "child": "Which animals have strange voices?",
-    "default": "Which animals have strange voices?"
-   }
-  },
-  {
-   "from": "ant_strong",
-   "to": "beetle_quarter",
-   "ja": {
-    "child": "むしは どれくらい いるの？",
-    "default": "虫はどれくらいの種類がいるの？"
-   },
-   "en": {
-    "child": "How many kinds of bugs are there?",
-    "default": "How many kinds of bugs are there?"
-   }
-  },
-  {
-   "from": "beetle_quarter",
-   "to": "dung_beetle_milky_way",
-   "ja": {
-    "child": "コウチュウの なかで ふしぎな むしは？",
-    "default": "甲虫の仲間で不思議な虫は？"
-   },
-   "en": {
-    "child": "Which beetle is the most surprising?",
-    "default": "Which beetle is the most surprising?"
-   }
-  },
-  {
-   "from": "dung_beetle_milky_way",
-   "to": "firefly_cold_light",
-   "ja": {
-    "child": "よるに かつやくする むしは ほかに いる？",
-    "default": "夜に活躍する虫はほかにいる？"
-   },
-   "en": {
-    "child": "Which other bugs shine at night?",
-    "default": "Which other bugs shine at night?"
-   }
-  },
-  {
-   "from": "firefly_cold_light",
-   "to": "bee_waggle_dance",
-   "ja": {
-    "child": "なかまに おしえる むしは いる？",
-    "default": "仲間に知らせる虫はいる？"
-   },
-   "en": {
-    "child": "Which bugs tell their friends things?",
-    "default": "Which bugs tell their friends things?"
-   }
-  },
-  {
-   "from": "bee_waggle_dance",
-   "to": "honey_never_spoils",
-   "ja": {
-    "child": "ミツバチが つくる はちみつは どうなの？",
-    "default": "ミツバチが作るハチミツはどうなの？"
-   },
-   "en": {
-    "child": "What about the honey bees make?",
-    "default": "What about the honey bees make?"
-   }
-  },
-  {
-   "from": "mosquito_female_bites",
-   "to": "spider_not_insect",
-   "ja": {
-    "child": "むしって どんな いきもの？",
-    "default": "虫ってどんな生き物？"
-   },
-   "en": {
-    "child": "What exactly is an insect?",
-    "default": "What exactly is an insect?"
-   }
-  },
-  {
-   "from": "shinkansen_1964",
-   "to": "maglev_603",
-   "ja": {
-    "child": "もっと はやい でんしゃは あるの？",
-    "default": "もっと速い電車はあるの？"
-   },
-   "en": {
-    "child": "Is there an even faster train?",
-    "default": "Is there an even faster train?"
-   }
-  },
-  {
-   "from": "wright_first_flight",
-   "to": "airliner_cruise",
-   "ja": {
-    "child": "いまの ひこうきは どこを とぶの？",
-    "default": "今の飛行機はどこを飛ぶの？"
-   },
-   "en": {
-    "child": "Where do airplanes fly today?",
-    "default": "Where do airplanes fly today?"
-   }
-  },
-  {
-   "from": "airliner_cruise",
-   "to": "plane_window_hole",
-   "ja": {
-    "child": "ひこうきの まどには なにが あるの？",
-    "default": "飛行機の窓には何があるの？"
-   },
-   "en": {
-    "child": "What is special about an airplane window?",
-    "default": "What is special about an airplane window?"
-   }
-  },
-  {
-   "from": "watermelon_92_water",
-   "to": "strawberry_200_seeds",
-   "ja": {
-    "child": "ほかの くだものにも ふしぎは ある？",
-    "default": "ほかの果物にも不思議はある？"
-   },
-   "en": {
-    "child": "Do other fruits hold surprises too?",
-    "default": "Do other fruits hold surprises too?"
-   }
-  },
-  {
-   "from": "strawberry_200_seeds",
-   "to": "banana_is_berry",
-   "ja": {
-    "child": "バナナは なんの なかま？",
-    "default": "バナナは何の仲間？"
-   },
-   "en": {
-    "child": "What is a banana, really?",
-    "default": "What is a banana, really?"
-   }
-  },
-  {
-   "from": "banana_is_berry",
-   "to": "peanut_not_nut",
-   "ja": {
-    "child": "ほかにも まちがえやすい たべものは？",
-    "default": "ほかにも間違えやすい食べ物は？"
-   },
-   "en": {
-    "child": "Which other foods are easy to mix up?",
-    "default": "Which other foods are easy to mix up?"
-   }
-  }
- ]
+  "schemaVersion": 1,
+  "contentVersion": "2026.10.23",
+  "updatedAt": "2026-10-23",
+  "items": [
+    {
+      "from": "ice_floats",
+      "to": "apple_floats",
+      "ja": {
+        "child": "じゃあ、りんごは どうして うくの？",
+        "default": "では、リンゴが水に浮くのはなぜ？"
+      },
+      "en": {
+        "child": "Then why does an apple float?",
+        "default": "Then why does an apple float?"
+      },
+      "zh": {
+        "child": "那苹果为什么会浮起来呢？",
+        "default": "那么，苹果为什么会浮起来？"
+      },
+      "ko": {
+        "child": "그렇다면 사과는 왜 뜰까요?",
+        "default": "그렇다면 사과는 왜 뜹니까?"
+      },
+      "es": {
+        "child": "Entonces, ¿por qué flota una manzana?",
+        "default": "Entonces, ¿por qué flota una manzana?"
+      }
+    },
+    {
+      "from": "apple_floats",
+      "to": "steel_ship_floats",
+      "ja": {
+        "child": "てつの ふねも うくのは、なぜ？",
+        "default": "鉄の船が浮くのはなぜ？"
+      },
+      "en": {
+        "child": "Why can a steel ship float too?",
+        "default": "Why can a steel ship float too?"
+      },
+      "zh": {
+        "child": "钢铁做的船为什么也能浮着？",
+        "default": "为什么钢铁制成的船也能浮在水上？"
+      },
+      "ko": {
+        "child": "강철 배도 왜 뜰 수 있을까요?",
+        "default": "강철 배도 왜 뜰 수 있습니까?"
+      },
+      "es": {
+        "child": "¿Por qué también puede flotar un barco de acero?",
+        "default": "¿Por qué también puede flotar un barco de acero?"
+      }
+    },
+    {
+      "from": "steel_ship_floats",
+      "to": "saturn_would_float",
+      "ja": {
+        "child": "ほしも みずに うかぶ ことが あるの？",
+        "default": "星が水に浮かぶことはあるの？"
+      },
+      "en": {
+        "child": "Could a planet float on water?",
+        "default": "Could a planet float on water?"
+      },
+      "zh": {
+        "child": "行星能浮在水上吗？",
+        "default": "行星能浮在水上吗？"
+      },
+      "ko": {
+        "child": "행성도 물에 뜰 수 있을까요?",
+        "default": "행성도 물에 뜰 수 있습니까?"
+      },
+      "es": {
+        "child": "¿Podría flotar un planeta en el agua?",
+        "default": "¿Podría flotar un planeta en el agua?"
+      }
+    },
+    {
+      "from": "saturn_would_float",
+      "to": "venus_day_longer",
+      "ja": {
+        "child": "ほかの わくせいは どんな ほし？",
+        "default": "ほかの惑星はどんな星？"
+      },
+      "en": {
+        "child": "What are the other planets like?",
+        "default": "What are the other planets like?"
+      },
+      "zh": {
+        "child": "其他的行星是什么样的呢？",
+        "default": "其他行星是什么样的？"
+      },
+      "ko": {
+        "child": "다른 행성들은 어떨까요?",
+        "default": "다른 행성들은 어떻습니까?"
+      },
+      "es": {
+        "child": "¿Cómo son los demás planetas?",
+        "default": "¿Cómo son los demás planetas?"
+      }
+    },
+    {
+      "from": "venus_day_longer",
+      "to": "sunlight_8_minutes",
+      "ja": {
+        "child": "たいように ひかりは どれくらいで とどくの？",
+        "default": "太陽の光はどれくらいで届くの？"
+      },
+      "en": {
+        "child": "How long does sunlight take to reach us?",
+        "default": "How long does sunlight take to reach us?"
+      },
+      "zh": {
+        "child": "阳光要多久才能到达我们这里？",
+        "default": "阳光需要多长时间才能到达我们这里？"
+      },
+      "ko": {
+        "child": "햇빛이 우리에게 오는 데 얼마나 걸릴까요?",
+        "default": "햇빛이 지구에 도달하는 데 얼마나 걸립니까?"
+      },
+      "es": {
+        "child": "¿Cuánto tarda la luz del Sol en llegar hasta nosotros?",
+        "default": "¿Cuánto tarda la luz del Sol en llegar hasta nosotros?"
+      }
+    },
+    {
+      "from": "sunlight_8_minutes",
+      "to": "moon_moving_away",
+      "ja": {
+        "child": "おつきさまは どうなっているの？",
+        "default": "月はどうなっているの？"
+      },
+      "en": {
+        "child": "What is the Moon doing?",
+        "default": "What is the Moon doing?"
+      },
+      "zh": {
+        "child": "月亮在做什么呢？",
+        "default": "月球在发生什么变化？"
+      },
+      "ko": {
+        "child": "달은 무엇을 하고 있을까요?",
+        "default": "달은 어떻게 움직이고 있습니까?"
+      },
+      "es": {
+        "child": "¿Qué está haciendo la Luna?",
+        "default": "¿Qué está haciendo la Luna?"
+      }
+    },
+    {
+      "from": "moon_moving_away",
+      "to": "no_sound_in_space",
+      "ja": {
+        "child": "うちゅうは しずかなの？",
+        "default": "宇宙は静かなの？"
+      },
+      "en": {
+        "child": "Is space quiet?",
+        "default": "Is space quiet?"
+      },
+      "zh": {
+        "child": "太空是安静的吗？",
+        "default": "太空是安静的吗？"
+      },
+      "ko": {
+        "child": "우주는 조용할까요?",
+        "default": "우주는 조용합니까?"
+      },
+      "es": {
+        "child": "¿Hay silencio en el espacio?",
+        "default": "¿Hay silencio en el espacio?"
+      }
+    },
+    {
+      "from": "no_sound_in_space",
+      "to": "orbital_speed",
+      "ja": {
+        "child": "うちゅうに いくには どれくらい はやく とぶの？",
+        "default": "宇宙に行くには、どれくらいの速さが必要？"
+      },
+      "en": {
+        "child": "How fast do you need to go to reach space?",
+        "default": "How fast do you need to go to reach space?"
+      },
+      "zh": {
+        "child": "要多快才能到达太空？",
+        "default": "需要多快的速度才能到达太空？"
+      },
+      "ko": {
+        "child": "우주에 가려면 얼마나 빨라야 할까요?",
+        "default": "우주에 도달하려면 얼마나 빨라야 합니까?"
+      },
+      "es": {
+        "child": "¿A qué velocidad hay que ir para llegar al espacio?",
+        "default": "¿A qué velocidad hay que ir para llegar al espacio?"
+      }
+    },
+    {
+      "from": "orbital_speed",
+      "to": "iss_sunrises",
+      "ja": {
+        "child": "うちゅうステーションの あさと よるは どうなるの？",
+        "default": "宇宙ステーションの朝と夜はどうなるの？"
+      },
+      "en": {
+        "child": "What are days and nights like on the space station?",
+        "default": "What are days and nights like on the space station?"
+      },
+      "zh": {
+        "child": "空间站上的白天和黑夜是什么样的？",
+        "default": "空间站上的白天和黑夜是怎样的？"
+      },
+      "ko": {
+        "child": "우주 정거장에서는 낮과 밤이 어떨까요?",
+        "default": "우주 정거장에서는 낮과 밤이 어떻습니까?"
+      },
+      "es": {
+        "child": "¿Cómo son los días y las noches en la estación espacial?",
+        "default": "¿Cómo son los días y las noches en la estación espacial?"
+      }
+    },
+    {
+      "from": "lightning_hotter_than_sun",
+      "to": "rainbow_full_circle",
+      "ja": {
+        "child": "そらの ふしぎ、にじは どうなっているの？",
+        "default": "空の不思議、虹はどうなっているの？"
+      },
+      "en": {
+        "child": "What about another sky wonder, the rainbow?",
+        "default": "What about another sky wonder, the rainbow?"
+      },
+      "zh": {
+        "child": "另一个天空奇观——彩虹呢？",
+        "default": "再来看看另一个天空奇观——彩虹？"
+      },
+      "ko": {
+        "child": "하늘의 또 다른 신기한 것, 무지개는 어떨까요?",
+        "default": "하늘의 또 다른 경이로운 현상인 무지개는 어떻습니까?"
+      },
+      "es": {
+        "child": "¿Y qué hay de otra maravilla del cielo, el arcoíris?",
+        "default": "¿Y qué hay de otra maravilla del cielo, el arcoíris?"
+      }
+    },
+    {
+      "from": "octopus_blue_blood",
+      "to": "heart_100k",
+      "ja": {
+        "child": "ひとの しんぞうは どうなの？",
+        "default": "人間の心臓はどうなの？"
+      },
+      "en": {
+        "child": "What about the human heart?",
+        "default": "What about the human heart?"
+      },
+      "zh": {
+        "child": "人的心脏是什么样的呢？",
+        "default": "那么人类的心脏呢？"
+      },
+      "ko": {
+        "child": "사람의 심장은 어떨까요?",
+        "default": "사람의 심장은 어떻습니까?"
+      },
+      "es": {
+        "child": "¿Y qué pasa con el corazón humano?",
+        "default": "¿Y qué pasa con el corazón humano?"
+      }
+    },
+    {
+      "from": "heart_100k",
+      "to": "baby_bones",
+      "ja": {
+        "child": "からだの ほねは なんぼん？",
+        "default": "体の骨は何本？"
+      },
+      "en": {
+        "child": "How many bones are in the body?",
+        "default": "How many bones are in the body?"
+      },
+      "zh": {
+        "child": "身体里有多少块骨头？",
+        "default": "人体里有多少块骨头？"
+      },
+      "ko": {
+        "child": "몸에는 뼈가 몇 개 있을까요?",
+        "default": "몸에는 뼈가 몇 개 있습니까?"
+      },
+      "es": {
+        "child": "¿Cuántos huesos hay en el cuerpo?",
+        "default": "¿Cuántos huesos hay en el cuerpo?"
+      }
+    },
+    {
+      "from": "baby_bones",
+      "to": "giraffe_seven_vertebrae",
+      "ja": {
+        "child": "キリンの くびの ほねは なんこ？",
+        "default": "キリンの首の骨は何個？"
+      },
+      "en": {
+        "child": "How many neck bones does a giraffe have?",
+        "default": "How many neck bones does a giraffe have?"
+      },
+      "zh": {
+        "child": "长颈鹿的脖子里有几块骨头？",
+        "default": "长颈鹿有多少块颈椎骨？"
+      },
+      "ko": {
+        "child": "기린은 목뼈가 몇 개일까요?",
+        "default": "기린의 목뼈는 몇 개입니까?"
+      },
+      "es": {
+        "child": "¿Cuántos huesos tiene una jirafa en el cuello?",
+        "default": "¿Cuántos huesos tiene una jirafa en el cuello?"
+      }
+    },
+    {
+      "from": "giraffe_seven_vertebrae",
+      "to": "koala_fingerprints",
+      "ja": {
+        "child": "ひとに にている どうぶつは ほかにも いる？",
+        "default": "人に似た動物はほかにもいる？"
+      },
+      "en": {
+        "child": "Are there other animals that look like us?",
+        "default": "Are there other animals that look like us?"
+      },
+      "zh": {
+        "child": "还有别的动物长得像我们吗？",
+        "default": "还有其他和我们相似的动物吗？"
+      },
+      "ko": {
+        "child": "우리와 닮은 다른 동물도 있을까요?",
+        "default": "사람과 닮은 다른 동물도 있습니까?"
+      },
+      "es": {
+        "child": "¿Hay otros animales que se parezcan a nosotros?",
+        "default": "¿Hay otros animales que se parezcan a nosotros?"
+      }
+    },
+    {
+      "from": "sea_otters_hold_hands",
+      "to": "dolphin_half_sleep",
+      "ja": {
+        "child": "うみの ほかの いきものは どうやって ねるの？",
+        "default": "海のほかの生き物はどうやって眠るの？"
+      },
+      "en": {
+        "child": "How do other sea animals sleep?",
+        "default": "How do other sea animals sleep?"
+      },
+      "zh": {
+        "child": "其他海洋动物是怎么睡觉的？",
+        "default": "其他海洋动物是怎样睡觉的？"
+      },
+      "ko": {
+        "child": "다른 바다 동물들은 어떻게 잘까요?",
+        "default": "다른 바다 동물들은 어떻게 잠을 잡니까?"
+      },
+      "es": {
+        "child": "¿Cómo duermen otros animales marinos?",
+        "default": "¿Cómo duermen otros animales marinos?"
+      }
+    },
+    {
+      "from": "dolphin_half_sleep",
+      "to": "crows_recognize_faces",
+      "ja": {
+        "child": "あたまの いい どうぶつは ほかに いる？",
+        "default": "頭のいい動物はほかにいる？"
+      },
+      "en": {
+        "child": "Which other animals are clever?",
+        "default": "Which other animals are clever?"
+      },
+      "zh": {
+        "child": "还有哪些动物很聪明？",
+        "default": "还有哪些动物很聪明？"
+      },
+      "ko": {
+        "child": "또 어떤 동물이 똑똑할까요?",
+        "default": "또 어떤 동물이 영리합니까?"
+      },
+      "es": {
+        "child": "¿Qué otros animales son inteligentes?",
+        "default": "¿Qué otros animales son inteligentes?"
+      }
+    },
+    {
+      "from": "crows_recognize_faces",
+      "to": "elephant_ground_sounds",
+      "ja": {
+        "child": "ふしぎな こえを だす どうぶつは？",
+        "default": "不思議な声を出す動物は？"
+      },
+      "en": {
+        "child": "Which animals have strange voices?",
+        "default": "Which animals have strange voices?"
+      },
+      "zh": {
+        "child": "哪些动物的声音很奇怪？",
+        "default": "哪些动物的声音很奇特？"
+      },
+      "ko": {
+        "child": "어떤 동물이 신기한 목소리를 낼까요?",
+        "default": "어떤 동물이 특이한 소리를 냅니까?"
+      },
+      "es": {
+        "child": "¿Qué animales tienen voces extrañas?",
+        "default": "¿Qué animales tienen voces extrañas?"
+      }
+    },
+    {
+      "from": "ant_strong",
+      "to": "beetle_quarter",
+      "ja": {
+        "child": "むしは どれくらい いるの？",
+        "default": "虫はどれくらいの種類がいるの？"
+      },
+      "en": {
+        "child": "How many kinds of bugs are there?",
+        "default": "How many kinds of bugs are there?"
+      },
+      "zh": {
+        "child": "虫子有多少种？",
+        "default": "昆虫有多少种？"
+      },
+      "ko": {
+        "child": "벌레는 몇 종류나 있을까요?",
+        "default": "곤충은 몇 종류나 있습니까?"
+      },
+      "es": {
+        "child": "¿Cuántas clases de insectos hay?",
+        "default": "¿Cuántas clases de insectos hay?"
+      }
+    },
+    {
+      "from": "beetle_quarter",
+      "to": "dung_beetle_milky_way",
+      "ja": {
+        "child": "コウチュウの なかで ふしぎな むしは？",
+        "default": "甲虫の仲間で不思議な虫は？"
+      },
+      "en": {
+        "child": "Which beetle is the most surprising?",
+        "default": "Which beetle is the most surprising?"
+      },
+      "zh": {
+        "child": "哪种甲虫最让人惊讶？",
+        "default": "哪种甲虫最令人惊讶？"
+      },
+      "ko": {
+        "child": "가장 놀라운 딱정벌레는 무엇일까요?",
+        "default": "가장 놀라운 딱정벌레는 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Cuál es el escarabajo más sorprendente?",
+        "default": "¿Cuál es el escarabajo más sorprendente?"
+      }
+    },
+    {
+      "from": "dung_beetle_milky_way",
+      "to": "firefly_cold_light",
+      "ja": {
+        "child": "よるに かつやくする むしは ほかに いる？",
+        "default": "夜に活躍する虫はほかにいる？"
+      },
+      "en": {
+        "child": "Which other bugs shine at night?",
+        "default": "Which other bugs shine at night?"
+      },
+      "zh": {
+        "child": "还有哪些虫子晚上会发光？",
+        "default": "还有哪些昆虫会在夜晚发光？"
+      },
+      "ko": {
+        "child": "밤에 빛나는 다른 벌레는 무엇일까요?",
+        "default": "밤에 빛나는 다른 곤충은 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Qué otros insectos brillan de noche?",
+        "default": "¿Qué otros insectos brillan de noche?"
+      }
+    },
+    {
+      "from": "firefly_cold_light",
+      "to": "bee_waggle_dance",
+      "ja": {
+        "child": "なかまに おしえる むしは いる？",
+        "default": "仲間に知らせる虫はいる？"
+      },
+      "en": {
+        "child": "Which bugs tell their friends things?",
+        "default": "Which bugs tell their friends things?"
+      },
+      "zh": {
+        "child": "哪些虫子会告诉朋友事情？",
+        "default": "哪些昆虫会向同伴传递信息？"
+      },
+      "ko": {
+        "child": "친구에게 소식을 전하는 벌레는 무엇일까요?",
+        "default": "동료에게 정보를 전달하는 곤충은 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Qué insectos se cuentan cosas entre ellos?",
+        "default": "¿Qué insectos se cuentan cosas entre ellos?"
+      }
+    },
+    {
+      "from": "bee_waggle_dance",
+      "to": "honey_never_spoils",
+      "ja": {
+        "child": "ミツバチが つくる はちみつは どうなの？",
+        "default": "ミツバチが作るハチミツはどうなの？"
+      },
+      "en": {
+        "child": "What about the honey bees make?",
+        "default": "What about the honey bees make?"
+      },
+      "zh": {
+        "child": "蜜蜂酿的蜂蜜呢？",
+        "default": "那么蜜蜂酿造的蜂蜜呢？"
+      },
+      "ko": {
+        "child": "벌이 만드는 꿀은 어떨까요?",
+        "default": "벌이 만드는 꿀은 어떻습니까?"
+      },
+      "es": {
+        "child": "¿Y qué hay de la miel que hacen las abejas?",
+        "default": "¿Y qué hay de la miel que hacen las abejas?"
+      }
+    },
+    {
+      "from": "mosquito_female_bites",
+      "to": "spider_not_insect",
+      "ja": {
+        "child": "むしって どんな いきもの？",
+        "default": "虫ってどんな生き物？"
+      },
+      "en": {
+        "child": "What exactly is an insect?",
+        "default": "What exactly is an insect?"
+      },
+      "zh": {
+        "child": "到底什么是昆虫？",
+        "default": "究竟什么才算昆虫？"
+      },
+      "ko": {
+        "child": "곤충이란 정확히 무엇일까요?",
+        "default": "곤충이란 정확히 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Qué es exactamente un insecto?",
+        "default": "¿Qué es exactamente un insecto?"
+      }
+    },
+    {
+      "from": "shinkansen_1964",
+      "to": "maglev_603",
+      "ja": {
+        "child": "もっと はやい でんしゃは あるの？",
+        "default": "もっと速い電車はあるの？"
+      },
+      "en": {
+        "child": "Is there an even faster train?",
+        "default": "Is there an even faster train?"
+      },
+      "zh": {
+        "child": "还有更快的火车吗？",
+        "default": "还有更快的列车吗？"
+      },
+      "ko": {
+        "child": "더 빠른 열차도 있을까요?",
+        "default": "더 빠른 열차도 있습니까?"
+      },
+      "es": {
+        "child": "¿Hay un tren aún más rápido?",
+        "default": "¿Hay un tren aún más rápido?"
+      }
+    },
+    {
+      "from": "wright_first_flight",
+      "to": "airliner_cruise",
+      "ja": {
+        "child": "いまの ひこうきは どこを とぶの？",
+        "default": "今の飛行機はどこを飛ぶの？"
+      },
+      "en": {
+        "child": "Where do airplanes fly today?",
+        "default": "Where do airplanes fly today?"
+      },
+      "zh": {
+        "child": "今天的飞机飞在哪里？",
+        "default": "如今的飞机在什么高度飞行？"
+      },
+      "ko": {
+        "child": "지금 비행기는 어디를 날까요?",
+        "default": "오늘날 비행기는 어디를 비행합니까?"
+      },
+      "es": {
+        "child": "¿Por dónde vuelan hoy los aviones?",
+        "default": "¿Por dónde vuelan hoy los aviones?"
+      }
+    },
+    {
+      "from": "airliner_cruise",
+      "to": "plane_window_hole",
+      "ja": {
+        "child": "ひこうきの まどには なにが あるの？",
+        "default": "飛行機の窓には何があるの？"
+      },
+      "en": {
+        "child": "What is special about an airplane window?",
+        "default": "What is special about an airplane window?"
+      },
+      "zh": {
+        "child": "飞机的窗户有什么特别的地方？",
+        "default": "飞机的舷窗有什么特别之处？"
+      },
+      "ko": {
+        "child": "비행기 창문에는 어떤 특별한 점이 있을까요?",
+        "default": "비행기 창문에는 어떤 특별한 점이 있습니까?"
+      },
+      "es": {
+        "child": "¿Qué tiene de especial la ventanilla de un avión?",
+        "default": "¿Qué tiene de especial la ventanilla de un avión?"
+      }
+    },
+    {
+      "from": "watermelon_92_water",
+      "to": "strawberry_200_seeds",
+      "ja": {
+        "child": "ほかの くだものにも ふしぎは ある？",
+        "default": "ほかの果物にも不思議はある？"
+      },
+      "en": {
+        "child": "Do other fruits hold surprises too?",
+        "default": "Do other fruits hold surprises too?"
+      },
+      "zh": {
+        "child": "别的水果也有惊喜吗？",
+        "default": "其他水果也藏着惊喜吗？"
+      },
+      "ko": {
+        "child": "다른 과일에도 놀라운 점이 있을까요?",
+        "default": "다른 과일에도 놀라운 점이 있습니까?"
+      },
+      "es": {
+        "child": "¿Las otras frutas también guardan sorpresas?",
+        "default": "¿Las otras frutas también guardan sorpresas?"
+      }
+    },
+    {
+      "from": "strawberry_200_seeds",
+      "to": "banana_is_berry",
+      "ja": {
+        "child": "バナナは なんの なかま？",
+        "default": "バナナは何の仲間？"
+      },
+      "en": {
+        "child": "What is a banana, really?",
+        "default": "What is a banana, really?"
+      },
+      "zh": {
+        "child": "香蕉到底是什么？",
+        "default": "香蕉究竟是什么？"
+      },
+      "ko": {
+        "child": "바나나는 사실 무엇일까요?",
+        "default": "바나나는 사실 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Qué es en realidad un plátano?",
+        "default": "¿Qué es en realidad un plátano?"
+      }
+    },
+    {
+      "from": "banana_is_berry",
+      "to": "peanut_not_nut",
+      "ja": {
+        "child": "ほかにも まちがえやすい たべものは？",
+        "default": "ほかにも間違えやすい食べ物は？"
+      },
+      "en": {
+        "child": "Which other foods are easy to mix up?",
+        "default": "Which other foods are easy to mix up?"
+      },
+      "zh": {
+        "child": "还有哪些食物容易被搞混？",
+        "default": "还有哪些食物容易被混淆？"
+      },
+      "ko": {
+        "child": "헷갈리기 쉬운 다른 음식은 무엇일까요?",
+        "default": "혼동하기 쉬운 다른 음식은 무엇입니까?"
+      },
+      "es": {
+        "child": "¿Qué otros alimentos es fácil confundir?",
+        "default": "¿Qué otros alimentos es fácil confundir?"
+      }
+    }
+  ]
 }

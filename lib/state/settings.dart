@@ -4,28 +4,42 @@ import 'dart:ui';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../logic/activity.dart';
 import '../logic/interests.dart';
+import '../logic/league.dart';
 import '../logic/review.dart';
 import '../logic/search.dart';
 import '../logic/streak.dart';
 import '../models/age_band.dart';
+import 'providers.dart' show nowProvider, stampRecorderProvider, triviaRepositoryProvider;
 
 /// 画面の言語。
 const supportedLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
 
 /// 雑学の本文がある言語。ほかの言語の画面では、本文は英語で出す。
-const contentLanguageCodes = ['ja', 'en'];
+const contentLanguageCodes = ['ja', 'en', 'zh', 'ko', 'es'];
 
 /// 端末の言語から対応言語を選ぶ。対応外は英語。
 String resolveLanguage(String? code) =>
     supportedLanguageCodes.contains(code) ? code! : 'en';
 
-/// 雑学の本文の言語（日本語または英語）。本文のない言語は英語にする。
-String resolveContentLanguage(String? code) => code == 'ja' ? 'ja' : 'en';
+/// 雑学の本文の言語。本文のない言語は英語にする（個々の雑学に訳がなければ、そこだけ英語）。
+String resolveContentLanguage(String? code) =>
+    contentLanguageCodes.contains(code) ? code! : 'en';
 
 /// 関心事のキーワードの上限（個数・1つあたりの文字数）。
 const maxInterestKeywords = 10;
 const maxInterestKeywordLength = 20;
+
+/// 読み上げの速さ（ふつう / ゆっくり）。
+const speechRateNormal = 0.4;
+const speechRateSlow = 0.28;
+
+/// 文字の大きさの段階ごとの拡大率。
+const textSizeFactors = [1.0, 1.15, 1.3];
+
+/// 最近の検索ことばを残す件数。
+const maxRecentSearches = 5;
 
 /// 無料プランで保存できる件数。
 const freeSaveLimit = 20;
@@ -67,6 +81,17 @@ class AppSettings {
     this.celebratedStage,
     this.celebratedBadges,
     this.capsule,
+    this.words = const {},
+    this.hintsSeen = const {},
+    this.textSize = 0,
+    this.worldOptIn = false,
+    this.juniorRuby = true,
+    this.slowSpeech = false,
+    this.recentSearches = const [],
+    this.league = const LeagueData(),
+    this.activity = const {},
+    this.stamps = const {},
+    this.celebratedOutfits,
   });
 
   /// 生まれた年そのものは保存せず、年代だけを端末内に保存する。
@@ -120,6 +145,39 @@ class AppSettings {
   /// 今日のカプセル（"yyyy-MM-dd:雑学のid"）。1日1回。
   final String? capsule;
 
+  /// 説明を見たことのある用語の id（ことばずかん用）。
+  final Set<String> words;
+
+  /// もう見せたヒント（初回だけ出す案内の id）。
+  final Set<String> hintsSeen;
+
+  /// 文字の大きさ（0=ふつう / 1=大きい / 2=とても大きい）。年代の拡大率に上乗せする。
+  final int textSize;
+
+  /// 「世界の人の集計」に、匿名で参加する（Teen/Adult の設定。初期はオフ）。
+  final bool worldOptIn;
+
+  /// Junior の画面で、漢字に読み仮名を付ける。
+  final bool juniorRuby;
+
+  /// 読み上げをゆっくりにする。
+  final bool slowSpeech;
+
+  /// 最近の検索ことば（新しい順、最大 $maxRecentSearches 件）。
+  final List<String> recentSearches;
+
+  /// 家族リーグ（この端末で遊んだ対戦の、週ごとの得点）。
+  final LeagueData league;
+
+  /// 1日ごとの記録（週のふりかえり用。直近60日）。
+  final Map<String, DayActivity> activity;
+
+  /// 季節のスタンプ（"年-季節:雑学のid"）。
+  final Set<String> stamps;
+
+  /// 飾り（スタンプ帳の完成）のお祝いを出し終えたもの（"年-季節"）。null は基準が未設定。
+  final Set<String>? celebratedOutfits;
+
   Interests get interests => Interests(
         categories: interestCategories,
         scenes: interestScenes,
@@ -156,6 +214,17 @@ class AppSettings {
     int? celebratedStage,
     Set<String>? celebratedBadges,
     String? capsule,
+    Set<String>? words,
+    Set<String>? hintsSeen,
+    int? textSize,
+    bool? worldOptIn,
+    bool? juniorRuby,
+    bool? slowSpeech,
+    List<String>? recentSearches,
+    LeagueData? league,
+    Map<String, DayActivity>? activity,
+    Set<String>? stamps,
+    Set<String>? celebratedOutfits,
   }) =>
       AppSettings(
         ageBand: ageBand ?? this.ageBand,
@@ -184,18 +253,91 @@ class AppSettings {
         celebratedStage: celebratedStage ?? this.celebratedStage,
         celebratedBadges: celebratedBadges ?? this.celebratedBadges,
         capsule: capsule ?? this.capsule,
+        words: words ?? this.words,
+        hintsSeen: hintsSeen ?? this.hintsSeen,
+        textSize: textSize ?? this.textSize,
+        worldOptIn: worldOptIn ?? this.worldOptIn,
+        juniorRuby: juniorRuby ?? this.juniorRuby,
+        slowSpeech: slowSpeech ?? this.slowSpeech,
+        recentSearches: recentSearches ?? this.recentSearches,
+        league: league ?? this.league,
+        activity: activity ?? this.activity,
+        stamps: stamps ?? this.stamps,
+        celebratedOutfits: celebratedOutfits ?? this.celebratedOutfits,
       );
 }
 
 class SettingsNotifier extends StateNotifier<AppSettings> {
-  SettingsNotifier(this._prefs) : super(_read(_prefs));
+  SettingsNotifier(this._prefs, {DateTime Function()? now, void Function(String id)? onView})
+      : _now = now ?? DateTime.now,
+        _onView = onView,
+        super(_read(_prefs));
 
   final SharedPreferences _prefs;
+
+  /// 「いま」。テストでは差し替える。
+  final DateTime Function() _now;
+
+  /// 雑学を開くたびに呼ぶ（季節のスタンプ用。すでに見た雑学でも呼ぶ）。
+  final void Function(String id)? _onView;
+
+  /// 今日の記録に [f] を加える（週のふりかえり用）。
+  void _bump(DayActivity Function(DayActivity) f) {
+    final today = _now();
+    final key = dayKey(today);
+    final map = {...state.activity};
+    map[key] = f(map[key] ?? const DayActivity());
+    final keys = map.keys.toList()..sort();
+    if (keys.length > activityKeepDays) {
+      for (final k in keys.take(keys.length - activityKeepDays)) {
+        map.remove(k);
+      }
+    }
+    state = state.copyWith(activity: map);
+    _prefs.setStringList('activity', [for (final e in map.entries) e.value.encode(e.key)]);
+  }
 
   /// 端末に保存した設定・保存・記録をすべて消して、初期状態に戻す。
   Future<void> resetAll() async {
     await _prefs.clear();
     state = _read(_prefs);
+  }
+
+  static LeagueData _readLeague(SharedPreferences p) {
+    final scores = <String, LeagueEntry>{};
+    for (final raw in p.getStringList('leagueScores') ?? const <String>[]) {
+      final f = raw.split('|');
+      if (f.length != 4) continue;
+      final pts = int.tryParse(f[1]);
+      final games = int.tryParse(f[2]);
+      final wins = int.tryParse(f[3]);
+      if (pts == null || games == null || wins == null) continue;
+      scores[f[0]] = LeagueEntry(points: pts, games: games, wins: wins);
+    }
+    return LeagueData(
+      week: p.getString('leagueWeek'),
+      scores: scores,
+      lastWinner: p.getString('leagueLastWinner'),
+      lastPoints: p.getInt('leagueLastPoints') ?? 0,
+    );
+  }
+
+  void _saveLeague(LeagueData d) {
+    if (d.week != null) {
+      _prefs.setString('leagueWeek', d.week!);
+    } else {
+      _prefs.remove('leagueWeek');
+    }
+    _prefs.setStringList('leagueScores', [
+      for (final e in d.scores.entries)
+        '${e.key.replaceAll('|', ' ')}|${e.value.points}|${e.value.games}|${e.value.wins}',
+    ]);
+    if (d.lastWinner != null) {
+      _prefs.setString('leagueLastWinner', d.lastWinner!);
+    } else {
+      _prefs.remove('leagueLastWinner');
+    }
+    _prefs.setInt('leagueLastPoints', d.lastPoints);
   }
 
   static AppSettings _read(SharedPreferences p) {
@@ -242,6 +384,20 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
       quizCorrect: p.getInt('quizCorrect') ?? 0,
       seen: (p.getStringList('seen') ?? const []).toSet(),
       capsule: p.getString('capsule'),
+      words: (p.getStringList('words') ?? const []).toSet(),
+      hintsSeen: (p.getStringList('hintsSeen') ?? const []).toSet(),
+      slowSpeech: p.getBool('slowSpeech') ?? false,
+      worldOptIn: p.getBool('worldOptIn') ?? false,
+      juniorRuby: p.getBool('juniorRuby') ?? true,
+      textSize: (p.getInt('textSize') ?? 0).clamp(0, textSizeFactors.length - 1),
+      recentSearches: p.getStringList('recentSearches') ?? const [],
+      league: _readLeague(p),
+      stamps: (p.getStringList('stamps') ?? const []).toSet(),
+      celebratedOutfits: p.getStringList('celebratedOutfits')?.toSet(),
+      activity: {
+        for (final raw in (p.getStringList('activity') ?? const <String>[]))
+          if (DayActivity.decode(raw) case (final day, final a)?) day: a,
+      },
       celebratedStage: p.getInt('celebratedStage'),
       celebratedBadges: p.getStringList('celebratedBadges')?.toSet(),
       dailyResults: {
@@ -318,6 +474,27 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     _prefs.setInt('notifyMinute', minute);
   }
 
+  void setWorldOptIn(bool on) {
+    state = state.copyWith(worldOptIn: on);
+    _prefs.setBool('worldOptIn', on);
+  }
+
+  void setJuniorRuby(bool on) {
+    state = state.copyWith(juniorRuby: on);
+    _prefs.setBool('juniorRuby', on);
+  }
+
+  void setSlowSpeech(bool slow) {
+    state = state.copyWith(slowSpeech: slow);
+    _prefs.setBool('slowSpeech', slow);
+  }
+
+  void setTextSize(int size) {
+    final v = size.clamp(0, textSizeFactors.length - 1);
+    state = state.copyWith(textSize: v);
+    _prefs.setInt('textSize', v);
+  }
+
   void setUiLanguage(String? code) {
     state = code == null
         ? state.copyWith(clearUiLanguage: true)
@@ -379,7 +556,9 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     } else {
       reviews.remove(id);
     }
+    final becameLearned = map[id] == Knowledge.learned;
     state = state.copyWith(knowledge: map, reviews: reviews);
+    if (becameLearned) _bump((a) => a.copyWith(learned: a.learned + 1));
     _prefs.setStringList(
         'knowledge', [for (final e in map.entries) '${e.key}:${e.value.name}']);
     _saveReviews(reviews);
@@ -401,10 +580,77 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
 
   /// 雑学を開いたことを記録する（相棒の成長用）。初めて開いたときだけ状態が変わる。
   void markSeen(String id) {
+    _onView?.call(id);
     if (state.seen.contains(id)) return;
     final seen = {...state.seen, id};
     state = state.copyWith(seen: seen);
     _prefs.setStringList('seen', seen.toList());
+    _bump((a) => a.copyWith(seen: a.seen + 1));
+  }
+
+  /// 対戦（2人以上）の結果を、家族リーグに加える。
+  void recordLeagueGame(DateTime today,
+      {required List<String> names, required List<int> scores, required List<int> winners}) {
+    final next = addGame(state.league, today,
+        names: [for (final n in names) n.replaceAll('|', ' ')],
+        scores: scores,
+        winners: winners);
+    state = state.copyWith(league: next);
+    _saveLeague(next);
+  }
+
+  /// 今週のリーグの記録を消す（先週の優勝者は残す）。
+  void clearLeagueWeek(DateTime today) {
+    final base = rollWeek(state.league, today);
+    final next = LeagueData(
+        week: base.week, lastWinner: base.lastWinner, lastPoints: base.lastPoints);
+    state = state.copyWith(league: next);
+    _saveLeague(next);
+  }
+
+  /// 季節のスタンプを押す（同じ印は1回だけ）。
+  void addStamp(String key) {
+    if (state.stamps.contains(key)) return;
+    final stamps = {...state.stamps, key};
+    state = state.copyWith(stamps: stamps);
+    _prefs.setStringList('stamps', stamps.toList());
+  }
+
+  /// 飾りのお祝いを出し終えた（または最初の基準にした）ことを記録する。
+  void ackOutfits(Iterable<String> books) {
+    final set = {...?state.celebratedOutfits, ...books};
+    state = state.copyWith(celebratedOutfits: set);
+    _prefs.setStringList('celebratedOutfits', set.toList());
+  }
+
+  /// 検索したことばを記録する（短すぎるものは記録しない。同じことばは新しい順に1つだけ）。
+  void addRecentSearch(String query) {
+    final q = query.trim();
+    if (q.runes.length < 2) return;
+    final next = [q, ...state.recentSearches.where((e) => e != q)].take(maxRecentSearches).toList();
+    state = state.copyWith(recentSearches: next);
+    _prefs.setStringList('recentSearches', next);
+  }
+
+  void clearRecentSearches() {
+    state = state.copyWith(recentSearches: const []);
+    _prefs.remove('recentSearches');
+  }
+
+  /// 初回だけ出す案内を、見たことにする。
+  void markHintSeen(String id) {
+    if (state.hintsSeen.contains(id)) return;
+    final next = {...state.hintsSeen, id};
+    state = state.copyWith(hintsSeen: next);
+    _prefs.setStringList('hintsSeen', next.toList());
+  }
+
+  /// 用語の説明を見たことを記録する（ことばずかん用）。
+  void markWordSeen(String id) {
+    if (state.words.contains(id)) return;
+    final words = {...state.words, id};
+    state = state.copyWith(words: words);
+    _prefs.setStringList('words', words.toList());
   }
 
   /// 今日のカプセルで出た雑学を記録する（見た雑学にもなる）。
@@ -435,6 +681,7 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
     state = state.copyWith(quizAnswered: answered, quizCorrect: right);
     _prefs.setInt('quizAnswered', answered);
     _prefs.setInt('quizCorrect', right);
+    _bump((a) => a.copyWith(answered: a.answered + 1, correct: a.correct + (correct ? 1 : 0)));
   }
 
   /// 今日のチャレンジの結果（正誤を "101" のように並べた文字列）を記録する。
@@ -480,8 +727,9 @@ class SettingsNotifier extends StateNotifier<AppSettings> {
 final sharedPreferencesProvider =
     Provider<SharedPreferences>((ref) => throw UnimplementedError());
 
-final settingsProvider = StateNotifierProvider<SettingsNotifier, AppSettings>(
-  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider)),
+final StateNotifierProvider<SettingsNotifier, AppSettings> settingsProvider =
+    StateNotifierProvider<SettingsNotifier, AppSettings>(
+  (ref) => SettingsNotifier(ref.watch(sharedPreferencesProvider), now: () => ref.read(nowProvider), onView: (id) => ref.read(stampRecorderProvider)(id)),
 );
 
 /// 端末の言語。テストで差し替える。
@@ -495,5 +743,10 @@ final deviceRegionProvider =
 final uiLanguageProvider = Provider<String>((ref) =>
     resolveLanguage(ref.watch(settingsProvider).uiLanguage ?? ref.watch(deviceLanguageProvider)));
 
-final contentLanguageProvider = Provider<String>((ref) => resolveContentLanguage(
-    ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider)));
+/// 雑学の本文の言語。ja/en 以外は、その言語のレビュー済みの本文がある配信だけ（辞典・クイズも同じ言語になる）。
+final contentLanguageProvider = Provider<String>((ref) {
+  final lang = resolveContentLanguage(
+      ref.watch(settingsProvider).contentLanguage ?? ref.watch(uiLanguageProvider));
+  if (lang == 'ja' || lang == 'en') return lang;
+  return ref.watch(triviaRepositoryProvider).hasShippableContent(lang) ? lang : 'en';
+});

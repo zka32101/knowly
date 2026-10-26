@@ -2,11 +2,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../logic/badges.dart';
 import '../logic/mascot.dart';
+import '../logic/stamps.dart';
+import '../logic/timing.dart';
 import '../screens/badges_screen.dart';
 import 'providers.dart';
 import 'settings.dart';
 
-enum CelebrationKind { stage, badge }
+enum CelebrationKind { stage, badge, outfit }
 
 class Celebration {
   const Celebration(this.kind, this.id, this.emoji);
@@ -40,6 +42,18 @@ final pendingCelebrationsProvider = Provider<List<Celebration>>((ref) {
       }
     }
   }
+
+  final celebratedOutfits = s.celebratedOutfits;
+  if (celebratedOutfits != null) {
+    for (final book in completedBooks(s.stamps)) {
+      if (!celebratedOutfits.contains(book)) {
+        // 保存データに知らない季節があっても、アプリ全体を止めない。
+        final season = Season.values.where((x) => book.endsWith('-${x.name}')).firstOrNull;
+        if (season == null) continue;
+        out.add(Celebration(CelebrationKind.outfit, book, seasonAccessory[season]!));
+      }
+    }
+  }
   return out;
 });
 
@@ -51,6 +65,9 @@ void ensureCelebrationBaseline(WidgetRef ref) {
   final notifier = ref.read(settingsProvider.notifier);
   if (s.celebratedStage == null) {
     notifier.ackStage(mascotStages.indexOf(mascotStageFor(ref.read(mascotPointsProvider))));
+  }
+  if (s.celebratedOutfits == null) {
+    notifier.ackOutfits(completedBooks(s.stamps));
   }
   if (s.celebratedBadges == null) {
     final stats = ref.read(badgeStatsProvider);

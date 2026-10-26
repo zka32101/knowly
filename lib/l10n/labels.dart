@@ -1,5 +1,7 @@
 import '../models/age_band.dart';
+import '../models/category.dart';
 import 'app_localizations.dart';
+import 'ja_styles.dart';
 
 String categoryLabel(AppLocalizations l, String category) => switch (category) {
       'animals' => l.catAnimals,
@@ -11,8 +13,18 @@ String categoryLabel(AppLocalizations l, String category) => switch (category) {
       'bugs' => l.catBugs,
       'vehicles' => l.catVehicles,
       'food' => l.catFood,
-      _ => category,
+      _ => _dataCategoryLabel(l, category),
     };
+
+/// ARB にないカテゴリー（categories.json で足したもの）の名前。
+String _dataCategoryLabel(AppLocalizations l, String id) {
+  final c = CategoryRegistry.get(id);
+  if (c == null) return id;
+  final style = l is AppLocalizationsJaJunior
+      ? 'junior'
+      : (l is AppLocalizationsJaAdult ? 'adult' : 'kids');
+  return c.label(l.localeName, style: style);
+}
 
 String sceneLabel(AppLocalizations l, String scene) => switch (scene) {
       'friends' => l.sceneFriends,
@@ -30,7 +42,4 @@ String modeLabel(AppLocalizations l, AgeBand band) => switch (band) {
       AgeBand.adult => l.modeAdult,
     };
 
-const allCategories = [
-  'animals', 'bugs', 'vehicles', 'food', 'space', 'body', 'nature', 'science', 'geography',
-];
 const allScenes = ['friends', 'kids', 'work', 'family', 'learning'];

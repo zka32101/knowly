@@ -1,3 +1,4 @@
+import '../models/category.dart';
 import '../models/trivia.dart';
 import 'daily_pick.dart';
 import 'search.dart';
@@ -19,7 +20,7 @@ class Interests {
 
 /// 関心事に当てはまるか。キーワードは、そろえた本文 [entry] に含まれるか（1語でも一致すれば当てはまる）。
 bool matchesInterests(Trivia t, Interests interests, SearchEntry? entry) {
-  if (interests.categories.contains(t.category)) return true;
+  if (CategoryRegistry.matches(interests.categories, t.category)) return true;
   if (t.scenes.any(interests.scenes.contains)) return true;
   if (entry != null) {
     final text = '${entry.title} ${entry.body}';

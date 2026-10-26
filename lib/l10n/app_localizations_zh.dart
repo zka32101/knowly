@@ -27,6 +27,72 @@ class AppLocalizationsZh extends AppLocalizations {
   String get continueButton => '下一步';
 
   @override
+  String get worldAskTitle => '世界各地的人也在看这条知识';
+
+  @override
+  String get worldAskBody => '可以看到今天有多少人看了这条知识，来自多少个国家。只会发送知识编号、国家和日期，不含姓名或账号。';
+
+  @override
+  String get worldJoin => '参加';
+
+  @override
+  String get worldNotNow => '暂不';
+
+  @override
+  String worldToday(int total, int countries) {
+    return '今天有 $total 人（来自 $countries 个国家）看了这条';
+  }
+
+  @override
+  String get settingsWorld => '参加世界统计';
+
+  @override
+  String get settingsWorldNote => '匿名共享今日知识的阅读人数（可随时在设置中关闭）';
+
+  @override
+  String reportThisWeek(int seen, int answered) {
+    return '本周：看了$seen条，答了$answered题';
+  }
+
+  @override
+  String get settingsJuniorRuby => '显示读音（假名）';
+
+  @override
+  String get listenSlow => '慢';
+
+  @override
+  String get settingsTextSize => '文字大小';
+
+  @override
+  String get textSizeNormal => '标准';
+
+  @override
+  String get textSizeLarge => '大';
+
+  @override
+  String get textSizeXLarge => '特大';
+
+  @override
+  String relatedMore(int n) {
+    return '查看更多（还有$n条）';
+  }
+
+  @override
+  String get searchRecent => '最近搜索';
+
+  @override
+  String get hintHomeTips => '点按卡片可以翻面。“玩”里还有测验哦！';
+
+  @override
+  String get hintGotIt => '知道了';
+
+  @override
+  String get onboardingSkip => '稍后再说';
+
+  @override
+  String get onboardingPickBand => '或者直接选择最合适的';
+
+  @override
   String get birthYearTitle => '请选择出生年份';
 
   @override
@@ -114,7 +180,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get savedTitle => '已收藏';
 
   @override
-  String get savedEmpty => '还没有收藏';
+  String get savedEmpty => '还没有收藏。在详情页点按书签图标，就会收藏到这里。';
 
   @override
   String savedLimit(int count) {
@@ -176,13 +242,21 @@ class AppLocalizationsZh extends AppLocalizations {
   String get premiumBenefit2 => '无限收藏';
 
   @override
-  String get premiumBenefit3 => '离线保存与深度解读（即将推出）';
+  String get premiumBenefit3 => '全部往期知识库和深度解读（即将推出）';
+
+  @override
+  String premiumSave(int n) {
+    return '省 $n%';
+  }
 
   @override
   String get premiumKidsFree => 'Kids 和 Junior 的冷知识永远免费。';
 
   @override
   String get premiumUnavailable => '购买功能即将推出';
+
+  @override
+  String get premiumOffline => '无法加载套餐。请连接网络后重新打开此页面。';
 
   @override
   String get gateTitle => '致家长';
@@ -569,9 +643,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get listenSpeedLabel => '速度';
 
   @override
-  String get listenSlow => '慢';
-
-  @override
   String get listenNormal => '正常';
 
   @override
@@ -687,7 +758,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get privacyPointTeenAdult =>
-      'Teen 和 Adult 模式可能会联网，用于显示应用推荐（可在设置中关闭）和确认 Premium 状态。支付信息不会传到本应用。';
+      'Teen 和 Adult 模式可能会联网，用于显示应用推荐（可在设置中关闭）和确认 Premium 状态。支付信息不会传到本应用。只有开启“世界统计”时，才会发送知识编号、国家和日期，不含姓名或账号。';
 
   @override
   String privacyContact(String email) {
@@ -1156,4 +1227,172 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get languageEs => 'Español';
+
+  @override
+  String get wordTitle => '词语解释';
+
+  @override
+  String get wordSimple => '简单来说';
+
+  @override
+  String get wordDetail => '详细说明';
+
+  @override
+  String get wordFacts => '用到这个词的冷知识';
+
+  @override
+  String get wordHint => '点击带下划线的词语，就能看到它的意思。';
+
+  @override
+  String get wordNotFound => '没有找到解释。';
+
+  @override
+  String get wordsTitle => '词语图鉴';
+
+  @override
+  String wordsFound(int n, int total) {
+    return '已掌握 $n / $total 个词';
+  }
+
+  @override
+  String get wordOfDay => '今日词语';
+
+  @override
+  String get wordQuizTitle => '词语测验';
+
+  @override
+  String wordQuizQuestion(String term) {
+    return '“$term”是什么意思？';
+  }
+
+  @override
+  String get wordsHint => '查看过解释的词语会加到这里。';
+
+  @override
+  String get mapTitle => '关联图';
+
+  @override
+  String mapLinkCount(int n) {
+    return '相关冷知识 $n 条';
+  }
+
+  @override
+  String get mapNoLinks => '暂时没有相关冷知识';
+
+  @override
+  String get mapOpen => '查看关联';
+
+  @override
+  String get voiceQuizTitle => '听力测验';
+
+  @override
+  String get voiceReplay => '再听一遍';
+
+  @override
+  String get voiceQuizSub => '听题作答';
+
+  @override
+  String get leagueTitle => '家庭联赛';
+
+  @override
+  String get leagueNote => '在这台设备上对战的得分按周统计，不会发送到任何地方。';
+
+  @override
+  String get leagueThisWeek => '本周排名';
+
+  @override
+  String leagueLastWinner(String name) {
+    return '上周冠军：$name';
+  }
+
+  @override
+  String get leagueEmpty => '还没有记录。两人以上对战后会显示在这里。';
+
+  @override
+  String leagueGames(int n, int wins) {
+    return '$n 场，$wins 胜';
+  }
+
+  @override
+  String get leaguePlay => '去对战';
+
+  @override
+  String get leagueClear => '清除本周记录';
+
+  @override
+  String get leagueClearTitle => '要清除本周记录吗？';
+
+  @override
+  String get leagueClearBody => '本周的得分将被清除，上周冠军会保留。';
+
+  @override
+  String get leagueRecord => '记录到家庭联赛';
+
+  @override
+  String get leagueSub => '为期一周的比拼';
+
+  @override
+  String get recapTitle => '本周回顾';
+
+  @override
+  String get recapNote => '最近 7 天，与之前 7 天的对比。';
+
+  @override
+  String get recapSeen => '看过的冷知识';
+
+  @override
+  String get recapLearned => '新学到的';
+
+  @override
+  String get recapQuiz => '答对的测验题';
+
+  @override
+  String get recapActiveDays => '活跃天数';
+
+  @override
+  String get recapMsgNone => '这周比较安静。再读一条，重新开始吧！';
+
+  @override
+  String get recapMsgSome => '节奏不错！一点一点就会积累起来。';
+
+  @override
+  String get recapMsgGreat => '太棒了！你几乎每天都来玩！';
+
+  @override
+  String get recapChip => '回顾';
+
+  @override
+  String get recapBanner => '本周回顾已生成';
+
+  @override
+  String get stampsTitle => '季节印章册';
+
+  @override
+  String get stampsChip => '印章册';
+
+  @override
+  String stampsHint(int n) {
+    return '阅读适合当前季节的冷知识就能获得一枚印章。集齐 $n 枚，小伙伴就会换上该季节的装扮。';
+  }
+
+  @override
+  String get stampsSpring => '春天';
+
+  @override
+  String get stampsSummer => '夏天';
+
+  @override
+  String get stampsAutumn => '秋天';
+
+  @override
+  String get stampsWinter => '冬天';
+
+  @override
+  String get stampsNow => '当前';
+
+  @override
+  String get stampsOutfit => '获得装扮！';
+
+  @override
+  String get celebrateOutfit => '获得季节装扮！';
 }

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/trivia_repository.dart';
 import '../l10n/app_localizations.dart';
 import '../l10n/labels.dart';
+import '../logic/activity.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 
@@ -62,6 +63,15 @@ class ReportScreen extends ConsumerWidget {
           children: [
             Text(l.reportNote, style: theme.textTheme.bodySmall),
             const SizedBox(height: 8),
+            // 今週（きょうをふくむ7日）のようす
+            Builder(builder: (context) {
+              final week = sumActivity(s.activity, ref.watch(nowProvider), 7);
+              return ListTile(
+                key: const Key('report_week'),
+                leading: const Icon(Icons.date_range),
+                title: Text(l.reportThisWeek(week.seen, week.answered)),
+              );
+            }),
             stat(const Key('report_learned'), l.reportLearned, '${learnedIds.length}'),
             stat(const Key('report_knew'), l.reportKnew, '$knewCount'),
             stat(const Key('report_quiz'), l.reportQuiz,

@@ -40,3 +40,4 @@ flutter:
   generate: true
   assets:
     - assets/trivia/
+    - assets/illustrations/

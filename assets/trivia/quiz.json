@@ -1,577 +1,2675 @@
 {
- "version": 1,
- "items": [
-  {
-   "factId": "octopus_blue_blood",
-   "ja": {
-    "statement": "タコの ちは あおいろ。",
-    "answer": true
-   },
-   "en": {
-    "statement": "An octopus has blue blood.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "honey_never_spoils",
-   "ja": {
-    "statement": "はちみつは すぐに くさる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Honey goes bad very quickly.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "banana_is_berry",
-   "ja": {
-    "statement": "いちごは、しょくぶつがくでは ベリーの なかま。",
-    "answer": false
-   },
-   "en": {
-    "statement": "A strawberry counts as a berry in science.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "venus_day_longer",
-   "ja": {
-    "statement": "きんせいの 1にちは、1ねんより ながい。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A day on Venus is longer than its year.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "sharks_older_than_trees",
-   "ja": {
-    "statement": "サメは、きが うまれたあとに うまれた。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Sharks appeared after trees did.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "baby_bones",
-   "ja": {
-    "statement": "あかちゃんの ほねは、おとなより すくない。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Babies have fewer bones than grown-ups.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "giraffe_seven_vertebrae",
-   "ja": {
-    "statement": "キリンの くびの ほねは 7こ。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A giraffe has seven neck bones.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "lightning_hotter_than_sun",
-   "ja": {
-    "statement": "かみなりは、たいように ひょうめんより つめたい。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Lightning is cooler than the surface of the Sun.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "sea_otters_hold_hands",
-   "ja": {
-    "statement": "ラッコは、ねるとき てを つなぐことが ある。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Sea otters sometimes hold hands when they sleep.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "no_sound_in_space",
-   "ja": {
-    "statement": "うちゅうでは、おとが よく きこえる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "You can hear sounds well in space.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "ice_floats",
-   "ja": {
-    "statement": "こおりは、みずに しずむ。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Ice sinks in water.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "wombat_cube_poop",
-   "ja": {
-    "statement": "ウォンバットの うんちは、しかくい かたち。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Wombat poop is shaped like cubes.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "moon_moving_away",
-   "ja": {
-    "statement": "おつきさまは、すこしずつ ちきゅうから とおざかっている。",
-    "answer": true
-   },
-   "en": {
-    "statement": "The Moon is slowly moving away from Earth.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "butterfly_taste_feet",
-   "ja": {
-    "statement": "ちょうちょは、あしで あじを かんじる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Butterflies taste with their feet.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "cats_no_sweet",
-   "ja": {
-    "statement": "ねこは、あまい あじを かんじる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Cats can taste sweet things.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "sunlight_8_minutes",
-   "ja": {
-    "statement": "たいようの ひかりは、1びょうで ちきゅうに とどく。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Sunlight reaches Earth in one second.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "saturn_would_float",
-   "ja": {
-    "statement": "どせいは、みずに うかぶほど かるい。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Saturn is light enough to float on water.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "eiffel_grows_summer",
-   "ja": {
-    "statement": "エッフェルとうは、ふゆに すこし たかくなる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "The Eiffel Tower gets a bit taller in winter.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "heart_100k",
-   "ja": {
-    "statement": "しんぞうは、1にちに 10まんかいくらい うごく。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Your heart beats about 100,000 times a day.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "bamboo_fast",
-   "ja": {
-    "statement": "たけは、1にちで 1メートルくらい のびることが ある。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Some bamboo grows about a meter in one day.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "crows_recognize_faces",
-   "ja": {
-    "statement": "カラスは、ひとの かおを おぼえられる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Crows can remember people's faces.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "rainbow_full_circle",
-   "ja": {
-    "statement": "にじは、ほんとうは しかくい かたち。",
-    "answer": false
-   },
-   "en": {
-    "statement": "A rainbow is really shaped like a square.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "elephant_ground_sounds",
-   "ja": {
-    "statement": "ぞうは、ひとに きこえない ひくい こえで はなす。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Elephants talk in low sounds that people cannot hear.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "dolphin_half_sleep",
-   "ja": {
-    "statement": "イルカは、あたま ぜんぶで ぐっすり ねむる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Dolphins sleep with their whole brain at once.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "antarctica_desert",
-   "ja": {
-    "statement": "せかいで いちばん おおきい さばくは、みなみきょく。",
-    "answer": true
-   },
-   "en": {
-    "statement": "The biggest desert in the world is Antarctica.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "koala_fingerprints",
-   "ja": {
-    "statement": "コアラにも、ゆびもようが ある。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Koalas have fingerprints too.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "ant_strong",
-   "ja": {
-    "statement": "アリは、じぶんの おもさの 10ばいを はこべる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "An ant can carry ten times its own weight.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "dragonfly_before_dinosaurs",
-   "ja": {
-    "statement": "トンボの なかまは、きょうりゅうより あとに できた。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Dragonfly relatives appeared after the dinosaurs.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "firefly_cold_light",
-   "ja": {
-    "statement": "ホタルの ひかりは、さわれないほど あつい。",
-    "answer": false
-   },
-   "en": {
-    "statement": "A firefly's light is too hot to touch.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "bee_waggle_dance",
-   "ja": {
-    "statement": "ミツバチは、ダンスで おはなの ばしょを おしえる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Honeybees dance to show where flowers are.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "mosquito_female_bites",
-   "ja": {
-    "statement": "ひとを さす かは、めすだけ。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Only female mosquitoes bite people.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "spider_not_insect",
-   "ja": {
-    "statement": "クモは、こんちゅうの なかま。",
-    "answer": false
-   },
-   "en": {
-    "statement": "A spider is an insect.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "beetle_quarter",
-   "ja": {
-    "statement": "いきものの 4ぶんの 1くらいは、コウチュウの なかま。",
-    "answer": true
-   },
-   "en": {
-    "statement": "About a quarter of all animals are beetles.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "cicada_17_years",
-   "ja": {
-    "statement": "17ねんも つちの なかに いる セミが いる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Some cicadas stay underground for 17 years.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "dung_beetle_milky_way",
-   "ja": {
-    "statement": "フンコロガシは、あまのがわを めじるしに あるく。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Dung beetles use the Milky Way to find their way.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "silkworm_thread",
-   "ja": {
-    "statement": "カイコの まゆは、1ぽんの ながい いとで できている。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A silkworm cocoon is made of one long thread.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "shinkansen_1964",
-   "ja": {
-    "statement": "しんかんせんは、1964ねんに はしりはじめた。",
-    "answer": true
-   },
-   "en": {
-    "statement": "The Shinkansen started running in 1964.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "airliner_cruise",
-   "ja": {
-    "statement": "ひこうきが とぶ たかさの そとは、とても さむい。",
-    "answer": true
-   },
-   "en": {
-    "statement": "It is very cold outside where airplanes fly.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "wright_first_flight",
-   "ja": {
-    "statement": "さいしょの ひこうきは、1じかん とびつづけた。",
-    "answer": false
-   },
-   "en": {
-    "statement": "The first airplane flew for a whole hour.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "tokyo_first_subway",
-   "ja": {
-    "statement": "アジアで さいしょの ちかてつは、とうきょうに できた。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Asia's first subway was built in Tokyo.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "steel_ship_floats",
-   "ja": {
-    "statement": "てつの ふねは、なかに くうきが あるから うく。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A steel ship floats because it has air inside.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "maglev_603",
-   "ja": {
-    "statement": "リニアは、じしゃくの ちからで すこし うきながら はしる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A maglev train floats a little using magnets.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "plane_window_hole",
-   "ja": {
-    "statement": "ひこうきの まどには、ちいさな あなが ある。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Airplane windows have a tiny hole.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "iss_sunrises",
-   "ja": {
-    "statement": "うちゅうステーションでは、1にちに 16かいくらい ひのでが ある。",
-    "answer": true
-   },
-   "en": {
-    "statement": "On the space station, the Sun rises about 16 times a day.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "watermelon_92_water",
-   "ja": {
-    "statement": "すいかは、ほとんど みずで できている。",
-    "answer": true
-   },
-   "en": {
-    "statement": "A watermelon is almost all water.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "cacao_money",
-   "ja": {
-    "statement": "むかし、カカオの みが おかねの ように つかわれた。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Long ago, cacao beans were used like money.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "carrot_colors",
-   "ja": {
-    "statement": "むかしの にんじんは、ぜんぶ オレンジいろだった。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Long ago, all carrots were orange.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "peanut_not_nut",
-   "ja": {
-    "statement": "ピーナッツは、つちの なかで できる。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Peanuts grow underground.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "pineapple_two_years",
-   "ja": {
-    "statement": "パイナップルは、うえて 1しゅうかんで たべられる。",
-    "answer": false
-   },
-   "en": {
-    "statement": "You can eat a pineapple one week after planting it.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "apple_floats",
-   "ja": {
-    "statement": "りんごは、みずに しずむ。",
-    "answer": false
-   },
-   "en": {
-    "statement": "Apples sink in water.",
-    "answer": false
-   }
-  },
-  {
-   "factId": "popcorn_pop",
-   "ja": {
-    "statement": "ポップコーンは、なかの みずが ゆげに なって はじける。",
-    "answer": true
-   },
-   "en": {
-    "statement": "Popcorn pops because the water inside turns to steam.",
-    "answer": true
-   }
-  },
-  {
-   "factId": "strawberry_200_seeds",
-   "ja": {
-    "statement": "いちごの つぶつぶは、ほんとうの み。",
-    "answer": true
-   },
-   "en": {
-    "statement": "The little dots on a strawberry are real fruits.",
-    "answer": true
-   }
-  }
- ]
+  "schemaVersion": 1,
+  "contentVersion": "2026.10.23",
+  "updatedAt": "2026-10-23",
+  "items": [
+    {
+      "factId": "octopus_blue_blood",
+      "ja": {
+        "statement": "タコの ちは あおいろ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "An octopus has blue blood.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "章鱼的血是蓝色的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "문어의 피는 파란색이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un pulpo tiene sangre azul.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "honey_never_spoils",
+      "ja": {
+        "statement": "はちみつは すぐに くさる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Honey goes bad very quickly.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜂蜜很快就会变质。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "꿀은 아주 빨리 상해요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La miel se echa a perder muy rápido.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "banana_is_berry",
+      "ja": {
+        "statement": "いちごは、しょくぶつがくでは ベリーの なかま。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A strawberry counts as a berry in science.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "从科学上讲，草莓算是浆果。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "과학에서는 딸기도 베리로 봐요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Una fresa cuenta como baya en la ciencia.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "venus_day_longer",
+      "ja": {
+        "statement": "きんせいの 1にちは、1ねんより ながい。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A day on Venus is longer than its year.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "金星上的一天比它的一年还长。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "금성은 하루가 일 년보다 길어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un día en Venus es más largo que su año.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "sharks_older_than_trees",
+      "ja": {
+        "statement": "サメは、きが うまれたあとに うまれた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Sharks appeared after trees did.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "鲨鱼出现的时间晚于树木。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "상어는 나무보다 나중에 나타났어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los tiburones aparecieron después que los árboles.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "baby_bones",
+      "ja": {
+        "statement": "あかちゃんの ほねは、おとなより すくない。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Babies have fewer bones than grown-ups.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "婴儿的骨头比成年人少。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "아기는 어른보다 뼈가 적어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los bebés tienen menos huesos que los adultos.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "giraffe_seven_vertebrae",
+      "ja": {
+        "statement": "キリンの くびの ほねは 7こ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A giraffe has seven neck bones.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "长颈鹿有七块颈骨。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "기린의 목뼈는 일곱 개예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una jirafa tiene siete huesos en el cuello.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "lightning_hotter_than_sun",
+      "ja": {
+        "statement": "かみなりは、たいように ひょうめんより つめたい。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Lightning is cooler than the surface of the Sun.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "闪电的温度比太阳表面低。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "번개는 태양 표면보다 차가워요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El rayo es más frío que la superficie del Sol.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "sea_otters_hold_hands",
+      "ja": {
+        "statement": "ラッコは、ねるとき てを つなぐことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Sea otters sometimes hold hands when they sleep.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "海獭睡觉时有时会手拉手。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "해달은 잘 때 가끔 손을 잡아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "A veces las nutrias marinas se dan la mano cuando duermen.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "no_sound_in_space",
+      "ja": {
+        "statement": "うちゅうでは、おとが よく きこえる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "You can hear sounds well in space.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "在太空中可以清楚地听到声音。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "우주에서는 소리가 잘 들려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "En el espacio se oyen bien los sonidos.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "ice_floats",
+      "ja": {
+        "statement": "こおりは、みずに しずむ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Ice sinks in water.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "冰在水里会下沉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "얼음은 물에 가라앉아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El hielo se hunde en el agua.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "wombat_cube_poop",
+      "ja": {
+        "statement": "ウォンバットの うんちは、しかくい かたち。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Wombat poop is shaped like cubes.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "袋熊的粪便是立方体形状的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "웜뱃의 똥은 네모난 모양이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La caca del wombat tiene forma de cubos.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "moon_moving_away",
+      "ja": {
+        "statement": "おつきさまは、すこしずつ ちきゅうから とおざかっている。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The Moon is slowly moving away from Earth.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "月球正在慢慢远离地球。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "달은 지구에서 천천히 멀어지고 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La Luna se aleja lentamente de la Tierra.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "butterfly_taste_feet",
+      "ja": {
+        "statement": "ちょうちょは、あしで あじを かんじる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Butterflies taste with their feet.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蝴蝶用脚来尝味道。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나비는 발로 맛을 봐요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las mariposas saborean con las patas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "cats_no_sweet",
+      "ja": {
+        "statement": "ねこは、あまい あじを かんじる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Cats can taste sweet things.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "猫能尝出甜味。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "고양이는 단맛을 느낄 수 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los gatos pueden sentir el sabor dulce.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "sunlight_8_minutes",
+      "ja": {
+        "statement": "たいようの ひかりは、1びょうで ちきゅうに とどく。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Sunlight reaches Earth in one second.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "阳光一秒钟就能到达地球。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "햇빛은 1초 만에 지구에 닿아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La luz del Sol llega a la Tierra en un segundo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "saturn_would_float",
+      "ja": {
+        "statement": "どせいは、みずに うかぶほど かるい。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Saturn is light enough to float on water.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "土星轻得可以浮在水面上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "토성은 물에 뜰 만큼 가벼워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Saturno es lo bastante ligero para flotar en el agua.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "eiffel_grows_summer",
+      "ja": {
+        "statement": "エッフェルとうは、ふゆに すこし たかくなる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Eiffel Tower gets a bit taller in winter.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "埃菲尔铁塔在冬天会长高一点。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "에펠탑은 겨울에 조금 더 높아져요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La torre Eiffel se hace un poco más alta en invierno.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "heart_100k",
+      "ja": {
+        "statement": "しんぞうは、1にちに 10まんかいくらい うごく。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Your heart beats about 100,000 times a day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "你的心脏一天大约跳动10万次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "심장은 하루에 약 10만 번 뛰어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tu corazón late unas 100 000 veces al día.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "bamboo_fast",
+      "ja": {
+        "statement": "たけは、1にちで 1メートルくらい のびることが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Some bamboo grows about a meter in one day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "有些竹子一天能长高大约一米。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 대나무는 하루에 1미터쯤 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Algunos bambúes crecen cerca de un metro en un día.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "crows_recognize_faces",
+      "ja": {
+        "statement": "カラスは、ひとの かおを おぼえられる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Crows can remember people's faces.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "乌鸦能记住人的面孔。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "까마귀는 사람의 얼굴을 기억할 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las cornejas pueden recordar las caras de las personas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "rainbow_full_circle",
+      "ja": {
+        "statement": "にじは、ほんとうは しかくい かたち。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A rainbow is really shaped like a square.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "彩虹其实是正方形的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "무지개는 사실 네모난 모양이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un arcoíris tiene en realidad forma de cuadrado.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "elephant_ground_sounds",
+      "ja": {
+        "statement": "ぞうは、ひとに きこえない ひくい こえで はなす。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Elephants talk in low sounds that people cannot hear.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大象用人类听不到的低沉声音交流。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "코끼리는 사람이 들을 수 없는 낮은 소리로 이야기해요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los elefantes hablan con sonidos graves que las personas no pueden oír.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "dolphin_half_sleep",
+      "ja": {
+        "statement": "イルカは、あたま ぜんぶで ぐっすり ねむる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Dolphins sleep with their whole brain at once.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "海豚睡觉时整个大脑同时入睡。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "돌고래는 뇌 전체가 한꺼번에 자요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los delfines duermen con todo el cerebro a la vez.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "antarctica_desert",
+      "ja": {
+        "statement": "せかいで いちばん おおきい さばくは、みなみきょく。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The biggest desert in the world is Antarctica.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "世界上最大的沙漠是南极洲。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세계에서 가장 큰 사막은 남극이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El desierto más grande del mundo es la Antártida.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "koala_fingerprints",
+      "ja": {
+        "statement": "コアラにも、ゆびもようが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Koalas have fingerprints too.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "考拉也有指纹。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "코알라에게도 지문이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los koalas también tienen huellas dactilares.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "ant_strong",
+      "ja": {
+        "statement": "アリは、じぶんの おもさの 10ばいを はこべる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "An ant can carry ten times its own weight.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蚂蚁能搬运相当于自身体重十倍的东西。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "개미는 자기 몸무게의 열 배를 나를 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una hormiga puede cargar diez veces su propio peso.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "dragonfly_before_dinosaurs",
+      "ja": {
+        "statement": "トンボの なかまは、きょうりゅうより あとに できた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Dragonfly relatives appeared after the dinosaurs.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜻蜓的近亲出现在恐龙之后。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "잠자리의 친척은 공룡보다 나중에 나타났어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los parientes de las libélulas aparecieron después de los dinosaurios.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "firefly_cold_light",
+      "ja": {
+        "statement": "ホタルの ひかりは、さわれないほど あつい。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A firefly's light is too hot to touch.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "萤火虫的光烫得不能碰。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "반딧불이의 빛은 너무 뜨거워서 만질 수 없어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La luz de una luciérnaga está demasiado caliente para tocarla.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "bee_waggle_dance",
+      "ja": {
+        "statement": "ミツバチは、ダンスで おはなの ばしょを おしえる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Honeybees dance to show where flowers are.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蜜蜂通过跳舞来表示花在哪里。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "꿀벌은 꽃이 어디 있는지 알려 주려고 춤을 춰요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las abejas melíferas bailan para mostrar dónde hay flores.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "mosquito_female_bites",
+      "ja": {
+        "statement": "ひとを さす かは、めすだけ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Only female mosquitoes bite people.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "只有雌蚊子才会叮人。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "사람을 무는 건 암컷 모기뿐이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Solo las hembras de mosquito pican a las personas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "spider_not_insect",
+      "ja": {
+        "statement": "クモは、こんちゅうの なかま。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A spider is an insect.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "蜘蛛是昆虫。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "거미는 곤충이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Una araña es un insecto.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "beetle_quarter",
+      "ja": {
+        "statement": "いきものの 4ぶんの 1くらいは、コウチュウの なかま。",
+        "answer": true
+      },
+      "en": {
+        "statement": "About a quarter of all animals are beetles.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "所有动物中大约四分之一是甲虫。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "모든 동물 중 약 4분의 1이 딱정벌레예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Cerca de una cuarta parte de todos los animales son escarabajos.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "cicada_17_years",
+      "ja": {
+        "statement": "17ねんも つちの なかに いる セミが いる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Some cicadas stay underground for 17 years.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "有些蝉会在地下待17年。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 매미는 17년 동안 땅속에 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Algunas cigarras pasan 17 años bajo tierra.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "dung_beetle_milky_way",
+      "ja": {
+        "statement": "フンコロガシは、あまのがわを めじるしに あるく。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Dung beetles use the Milky Way to find their way.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蜣螂利用银河来辨别方向。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "쇠똥구리는 은하수를 보고 길을 찾아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los escarabajos peloteros usan la Vía Láctea para encontrar su camino.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "silkworm_thread",
+      "ja": {
+        "statement": "カイコの まゆは、1ぽんの ながい いとで できている。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A silkworm cocoon is made of one long thread.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "一个蚕茧是由一根长长的丝构成的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "누에고치는 긴 실 한 가닥으로 만들어져요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El capullo de un gusano de seda está hecho de un solo hilo largo.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "shinkansen_1964",
+      "ja": {
+        "statement": "しんかんせんは、1964ねんに はしりはじめた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The Shinkansen started running in 1964.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "新干线于1964年开始运行。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "신칸센은 1964년에 달리기 시작했어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El Shinkansen empezó a funcionar en 1964.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "airliner_cruise",
+      "ja": {
+        "statement": "ひこうきが とぶ たかさの そとは、とても さむい。",
+        "answer": true
+      },
+      "en": {
+        "statement": "It is very cold outside where airplanes fly.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "飞机飞行的高度，外面非常寒冷。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "비행기가 나는 곳은 바깥이 아주 추워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Hace mucho frío fuera, donde vuelan los aviones.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "wright_first_flight",
+      "ja": {
+        "statement": "さいしょの ひこうきは、1じかん とびつづけた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The first airplane flew for a whole hour.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "第一架飞机飞行了整整一个小时。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "최초의 비행기는 한 시간 내내 날았어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El primer avión voló durante una hora entera.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "tokyo_first_subway",
+      "ja": {
+        "statement": "アジアで さいしょの ちかてつは、とうきょうに できた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Asia's first subway was built in Tokyo.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "亚洲第一条地铁建在东京。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "아시아 최초의 지하철은 도쿄에 만들어졌어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El primer metro de Asia se construyó en Tokio.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "steel_ship_floats",
+      "ja": {
+        "statement": "てつの ふねは、なかに くうきが あるから うく。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A steel ship floats because it has air inside.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "钢铁船能浮起来，是因为里面有空气。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "강철 배는 속에 공기가 있어서 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un barco de acero flota porque tiene aire por dentro.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "maglev_603",
+      "ja": {
+        "statement": "リニアは、じしゃくの ちからで すこし うきながら はしる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A maglev train floats a little using magnets.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "磁悬浮列车借助磁铁会稍微浮起来。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "자기부상열차는 자석의 힘으로 살짝 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Un tren maglev flota un poco gracias a imanes.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "plane_window_hole",
+      "ja": {
+        "statement": "ひこうきの まどには、ちいさな あなが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Airplane windows have a tiny hole.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "飞机的舷窗上有一个小孔。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "비행기 창문에는 아주 작은 구멍이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las ventanillas de los aviones tienen un agujerito.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "iss_sunrises",
+      "ja": {
+        "statement": "うちゅうステーションでは、1にちに 16かいくらい ひのでが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "On the space station, the Sun rises about 16 times a day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "在空间站上，太阳一天大约升起16次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "우주정거장에서는 하루에 해가 약 16번 떠요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "En la estación espacial, el Sol sale unas 16 veces al día.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "watermelon_92_water",
+      "ja": {
+        "statement": "すいかは、ほとんど みずで できている。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A watermelon is almost all water.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "西瓜几乎全是水。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "수박은 거의 다 물이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una sandía es casi toda agua.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "cacao_money",
+      "ja": {
+        "statement": "むかし、カカオの みが おかねの ように つかわれた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Long ago, cacao beans were used like money.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "很久以前，可可豆曾被当作货币使用。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "아주 옛날에는 카카오 열매를 돈처럼 썼어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Hace mucho tiempo, los granos de cacao se usaban como dinero.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "carrot_colors",
+      "ja": {
+        "statement": "むかしの にんじんは、ぜんぶ オレンジいろだった。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Long ago, all carrots were orange.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "很久以前，所有的胡萝卜都是橙色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "아주 옛날에는 모든 당근이 주황색이었어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Hace mucho tiempo, todas las zanahorias eran anaranjadas.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "peanut_not_nut",
+      "ja": {
+        "statement": "ピーナッツは、つちの なかで できる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Peanuts grow underground.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "花生长在地下。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "땅콩은 땅속에서 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los cacahuetes crecen bajo tierra.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "pineapple_two_years",
+      "ja": {
+        "statement": "パイナップルは、うえて 1しゅうかんで たべられる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "You can eat a pineapple one week after planting it.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "菠萝种下一周后就能吃。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "파인애플은 심고 일주일 뒤에 먹을 수 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Puedes comer una piña una semana después de plantarla.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "apple_floats",
+      "ja": {
+        "statement": "りんごは、みずに しずむ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Apples sink in water.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "苹果在水里会下沉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "사과는 물에 가라앉아요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las manzanas se hunden en el agua.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "popcorn_pop",
+      "ja": {
+        "statement": "ポップコーンは、なかの みずが ゆげに なって はじける。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Popcorn pops because the water inside turns to steam.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "爆米花会爆开，是因为里面的水变成了水蒸气。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "팝콘은 속의 물이 수증기가 되어서 튀어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las palomitas estallan porque el agua de dentro se convierte en vapor.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "strawberry_200_seeds",
+      "ja": {
+        "statement": "いちごの つぶつぶは、ほんとうの み。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The little dots on a strawberry are real fruits.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "草莓表面的小点点是真正的果实。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "딸기에 있는 작은 점들은 진짜 열매예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los puntitos de una fresa son frutos de verdad.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "penguin_huddle",
+      "ja": {
+        "statement": "コウテイペンギンは、さむい ふゆに みんなで くっついて あたたまる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Emperor penguins huddle together to stay warm in winter.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "帝企鹅在冬天会挤在一起取暖。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "황제펭귄은 겨울에 따뜻하게 지내려고 모여 붙어 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los pingüinos emperador se juntan para darse calor en invierno.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "owl_head_turn",
+      "ja": {
+        "statement": "フクロウは、めを ぐるぐる うごかして うしろを みる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "An owl moves its eyes around to look behind it.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "猫头鹰转动眼珠来看身后。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "올빼미는 뒤를 보려고 눈을 굴려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un búho mueve los ojos de un lado a otro para mirar hacia atrás.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "camel_hump_fat",
+      "ja": {
+        "statement": "ラクダの こぶには、あぶらが はいっている。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A camel's hump stores fat.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "骆驼的驼峰里储存着脂肪。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "낙타의 혹에는 지방이 저장돼 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La joroba de un camello guarda grasa.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "sloth_slow",
+      "ja": {
+        "statement": "ナマケモノは、とても ゆっくり うごく。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Sloths move very slowly.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "树懒的动作非常缓慢。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나무늘보는 아주 느리게 움직여요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los perezosos se mueven muy despacio.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "salmon_return",
+      "ja": {
+        "statement": "サケは、うまれた かわに もどって たまごを うむ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Salmon return to the river where they were born to lay eggs.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "鲑鱼会回到自己出生的河流产卵。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "연어는 알을 낳으려고 태어난 강으로 돌아와요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los salmones regresan al río donde nacieron para poner huevos.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "squirrel_acorns",
+      "ja": {
+        "statement": "リスが うめた どんぐりは、ぜんぶ ぜったいに たべられる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Squirrels always eat every acorn they bury.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "松鼠总会把埋起来的橡果全部吃掉。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "다람쥐는 묻은 도토리를 언제나 모두 먹어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las ardillas siempre se comen todas las bellotas que entierran.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "bat_echolocation",
+      "ja": {
+        "statement": "コウモリは、おとの はねかえりで ものの いちを しる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Bats use bouncing sound to find where things are.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蝙蝠利用反弹回来的声音来确定物体的位置。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "박쥐는 튕겨 오는 소리로 물건이 어디 있는지 알아내요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los murciélagos usan el sonido que rebota para saber dónde están las cosas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "ladybug_spots",
+      "ja": {
+        "statement": "テントウムシの ほしの かずは、しゅるいで ちがう。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The number of spots on a ladybug depends on its kind.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "瓢虫身上斑点的数量取决于它的种类。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "무당벌레의 점 개수는 종류에 따라 달라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La cantidad de puntos de una mariquita depende de su clase.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "cricket_sing",
+      "ja": {
+        "statement": "コオロギは、はねを こすりあわせて おとを だす。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Crickets make sound by rubbing their wings together.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蟋蟀通过摩擦翅膀来发出声音。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "귀뚜라미는 날개를 비벼서 소리를 내요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los grillos producen sonido frotando las alas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "bicycle_first",
+      "ja": {
+        "statement": "さいしょの じてんしゃには、ペダルが なかった。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The very first bicycles had no pedals.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "最早的自行车没有踏板。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "맨 처음 자전거에는 페달이 없었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las primerísimas bicicletas no tenían pedales.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "black_box_orange",
+      "ja": {
+        "statement": "ひこうきの ブラックボックスは、まっくろな いろを している。",
+        "answer": false
+      },
+      "en": {
+        "statement": "An airplane's black box is jet black in color.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "飞机的黑匣子是纯黑色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "비행기의 블랙박스는 새까만 색이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La caja negra de un avión es de color negro azabache.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "shinkansen_kingfisher",
+      "ja": {
+        "statement": "しんかんせんの かたちは、カワセミの くちばしを ヒントに した。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The Shinkansen's shape was inspired by a kingfisher's beak.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "新干线的车头形状灵感来自翠鸟的喙。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "신칸센의 모양은 물총새의 부리에서 아이디어를 얻었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La forma del Shinkansen se inspiró en el pico de un martín pescador.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "snow_hexagon",
+      "ja": {
+        "statement": "ゆきの けっしょうは、ほとんど ろっかくけいの かたち。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Most snow crystals are six-sided.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大多数雪花晶体是六边形的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "대부분의 눈 결정은 여섯 모서리예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mayoría de los cristales de nieve tienen seis lados.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "goosebumps_cold",
+      "ja": {
+        "statement": "さむいと、はだに ぷつぷつが できる ことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Your skin can get goosebumps when you are cold.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "冷的时候，你的皮肤会起鸡皮疙瘩。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "추울 때 피부에 닭살이 돋을 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tu piel puede ponerse de gallina cuando tienes frío.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "maple_red",
+      "ja": {
+        "statement": "もみじは、なつに いちばん あかくなる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Maple leaves turn their reddest in summer.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "枫叶在夏天红得最鲜艳。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "단풍나무 잎은 여름에 가장 빨갛게 물들어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las hojas de arce se ponen más rojas en verano.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "tree_rings",
+      "ja": {
+        "statement": "きの ねんりんを かぞえると、としが わかる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Counting a tree's rings tells you its age.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "数一数树的年轮就能知道它的年龄。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "나무의 나이테를 세면 나이를 알 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Contar los anillos de un árbol indica su edad.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "sunflower_sun",
+      "ja": {
+        "statement": "わかい ひまわりは、たいように あわせて むきを かえる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Young sunflowers turn to follow the sun.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "幼小的向日葵会跟着太阳转动。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어린 해바라기는 해를 따라 몸을 돌려요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los girasoles jóvenes se giran para seguir al sol.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "thunder_count",
+      "ja": {
+        "statement": "かみなりは、ひかる まえに おとが きこえる。",
+        "answer": false
+      },
+      "en": {
+        "statement": "You hear thunder before you see the lightning.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "你会先听到雷声，后看到闪电。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "천둥소리는 번개를 보기 전에 먼저 들려요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Se oye el trueno antes de ver el rayo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "nails_grow",
+      "ja": {
+        "statement": "つめは、まいにち すこしずつ のびている。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Your nails grow a little every day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "你的指甲每天都会长一点。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "손톱은 날마다 조금씩 자라요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Tus uñas crecen un poquito cada día.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "brain_energy",
+      "ja": {
+        "statement": "のうは、からだの なかで たくさん エネルギーを つかう。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The brain uses a lot of energy.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大脑消耗大量能量。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "뇌는 에너지를 많이 써요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El cerebro usa mucha energía.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "blink_times",
+      "ja": {
+        "statement": "ひとは、1にちに なんまんかいも まばたきを する。",
+        "answer": true
+      },
+      "en": {
+        "statement": "People blink many thousands of times a day.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "人每天眨眼好几千次。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "사람은 하루에 수천 번 눈을 깜빡여요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las personas parpadean muchos miles de veces al día.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "fuji_3776",
+      "ja": {
+        "statement": "ふじさんは、にほんで いちばん ひくい やまだ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Mt. Fuji is the lowest mountain in Japan.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "富士山是日本最矮的山。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "후지산은 일본에서 가장 낮은 산이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El monte Fuji es la montaña más baja de Japón.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "flamingo_flamboyance",
+      "ja": {
+        "statement": "フラミンゴの むれを「フランボヤンス」と よぶ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A group of flamingos is called a flamboyance.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "一群火烈鸟被称为“flamboyance”。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "플라밍고 무리는 ‘플램보이언스’라고 불러요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "A un grupo de flamencos se le llama «flamboyance».",
+        "answer": true
+      }
+    },
+    {
+      "factId": "japan_islands",
+      "ja": {
+        "statement": "にほんには、1まん4000いじょうの しまが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Japan has more than 14,000 islands.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "日本有一万四千多个岛屿。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "일본에는 1만 4천 개가 넘는 섬이 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Japón tiene más de 14 000 islas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "orbital_speed",
+      "ja": {
+        "statement": "ロケットは、うちゅうへ いくために とても はやく とぶ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Rockets fly very fast to reach space.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "火箭为了到达太空，飞得非常快。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "로켓은 우주에 가려고 아주 빠르게 날아요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los cohetes vuelan muy rápido para llegar al espacio.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "shipping_80_percent",
+      "ja": {
+        "statement": "せかいの にもつの おおくは、ふねで はこばれる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Most of the world's goods are carried by ship.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "世界上大部分货物是用船运输的。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세계 물건의 대부분은 배로 옮겨져요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mayor parte de las mercancías del mundo viaja en barco.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "rice_half_world",
+      "ja": {
+        "statement": "こめは、せかいの おおくの ひとの おもな たべものだ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Rice is the main food for many people around the world.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "大米是世界上许多人的主食。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "쌀은 세계 많은 사람들의 주식이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El arroz es el alimento principal de muchas personas en el mundo.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "wasabi_nose",
+      "ja": {
+        "statement": "わさびの からさは、はなに ぬける。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Wasabi's spiciness goes up your nose.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "芥末的辣味会直冲鼻子。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "와사비의 매운맛은 코로 올라와요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El picante del wasabi sube por la nariz.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "fog_is_cloud",
+      "ja": {
+        "statement": "きりは、じめんの ちかくに できた くもの なかま。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Fog is a cloud near the ground.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "雾是靠近地面的云。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "안개는 땅 가까이에 생긴 구름이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La niebla es una nube cerca del suelo.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "hail_ice_layers",
+      "ja": {
+        "statement": "ひょうは、あつい ひに できる あたたかい みずの つぶ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Hail is made of warm water drops.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "冰雹是由温水滴形成的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "우박은 따뜻한 물방울로 만들어져요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El granizo está hecho de gotas de agua caliente.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "wind_named_from",
+      "ja": {
+        "statement": "きたかぜは、きたから ふいて くる かぜ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A north wind blows from the north.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "北风是从北边吹来的风。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "북풍은 북쪽에서 불어오는 바람이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El viento del norte sopla desde el norte.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "typhoon_eye_calm",
+      "ja": {
+        "statement": "たいふうの めの なかは、かぜが よわい ことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Winds can be weak inside the eye of a typhoon.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "台风眼里的风可能很弱。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "태풍의 눈 속은 바람이 약할 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Dentro del ojo de un tifón el viento puede ser débil.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "seahorse_dad_pouch",
+      "ja": {
+        "statement": "たつのおとしごは、オスが おなかの ふくろで たまごを そだてる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Male seahorses carry the eggs in a pouch.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "雄性海马用育儿袋带着卵。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "수컷 해마는 주머니에 알을 넣어 키워요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El caballito de mar macho lleva los huevos en una bolsa.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "blue_whale_largest",
+      "ja": {
+        "statement": "シロナガスクジラは、いままで しられている どうぶつで いちばん おおきい。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The blue whale is the largest animal known to have existed.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蓝鲸是已知曾经存在过的最大的动物。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "흰긴수염고래는 지금까지 알려진 가장 큰 동물이에요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La ballena azul es el animal más grande que se sabe que ha existido.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "jellyfish_no_brain",
+      "ja": {
+        "statement": "クラゲには、のうが ない。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Jellyfish have no brain.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "水母没有大脑。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "해파리는 뇌가 없어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las medusas no tienen cerebro.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "coral_is_animal",
+      "ja": {
+        "statement": "さんごは、しょくぶつの なかま。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Coral is a kind of plant.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "珊瑚是一种植物。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "산호는 식물의 한 종류예요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El coral es un tipo de planta.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "marathon_42195",
+      "ja": {
+        "statement": "まらそんは 42.195きろめーとる はしる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A marathon is 42.195 km long.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "马拉松全程是42.195公里。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "마라톤은 42.195킬로미터를 달려요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El maratón mide 42,195 km.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "basketball_hoop_305",
+      "ja": {
+        "statement": "ばすけっとぼーるの りんぐは、ゆかから 2めーとるの たかさ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A basketball hoop is 2 meters above the floor.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "篮球架的篮圈离地面2米。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "농구 링은 바닥에서 2미터 높이에 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El aro de baloncesto está a 2 metros del suelo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "olympic_five_rings",
+      "ja": {
+        "statement": "おりんぴっくの わは 7つ ある。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Olympic symbol has seven rings.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "奥运会的标志有七个环。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "올림픽 마크에는 고리가 일곱 개 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El símbolo olímpico tiene siete aros.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "table_tennis_ball_40mm",
+      "ja": {
+        "statement": "たっきゅうの ぼーるは、おおきさが 40みり。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A table tennis ball is 40 mm wide.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "乒乓球的直径是40毫米。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "탁구공의 지름은 40밀리미터예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La pelota de tenis de mesa mide 40 mm.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "zero_number",
+      "ja": {
+        "statement": "ぜろを たしても、かずは かわらない。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Adding zero to a number does not change it.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "给一个数加上零，这个数不会变。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "어떤 수에 영을 더해도 그 수는 그대로예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Si sumas cero a un número, el número no cambia.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "pi_circle_ratio",
+      "ja": {
+        "statement": "おおきい えんは、ちいさい えんより えんしゅうりつが おおきい。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A bigger circle has a bigger pi than a small circle.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "大圆的圆周率比小圆的圆周率大。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "큰 원은 작은 원보다 원주율이 더 커요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un círculo grande tiene un pi mayor que uno pequeño.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "triangle_180",
+      "ja": {
+        "statement": "さんかくの 3つの かどを たすと、いつも 180ど。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The three angles of a flat triangle always add up to 180 degrees.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "平面三角形的三个角加起来总是180度。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "평평한 삼각형의 세 각을 더하면 항상 180도예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los tres ángulos de un triángulo plano siempre suman 180 grados.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "two_even_prime",
+      "ja": {
+        "statement": "4は そすうである。",
+        "answer": false
+      },
+      "en": {
+        "statement": "4 is a prime number.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "4是质数。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "4는 소수예요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El 4 es un número primo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "piano_88_keys",
+      "ja": {
+        "statement": "ピアノの けんばんは ぜんぶで 88こ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The standard piano has 88 keys.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "标准钢琴一共有88个键。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "표준 피아노의 건반은 모두 88개예요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El piano estándar tiene 88 teclas.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "theremin_no_touch",
+      "ja": {
+        "statement": "テルミンは てで さわって ひく がっき。",
+        "answer": false
+      },
+      "en": {
+        "statement": "You must touch the theremin to play it.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "演奏特雷门琴必须用手碰它。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "테레민은 꼭 만져서 연주해야 해요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Para tocar el theremín hay que tocarlo.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "a440_tuning_pitch",
+      "ja": {
+        "statement": "ラの おとを 440ヘルツに あわせるのが ひょうじゅん。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The standard tuning pitch sets the note A to 440 hertz.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "标准调音是把音符A调到440赫兹。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "표준 조율은 라 음을 440헤르츠로 맞춰요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La afinación estándar pone la nota La en 440 hercios.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "beethoven_kept_composing",
+      "ja": {
+        "statement": "ベートーベンは みみが きこえにくく なってから おんがくを つくるのを やめた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Beethoven stopped composing as soon as his hearing faded.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "贝多芬听力变差后立刻不再作曲。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "베토벤은 청력이 나빠지자 곧바로 작곡을 그만뒀어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Beethoven dejó de componer en cuanto perdió oído.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "venus_flytrap_two_touches",
+      "ja": {
+        "statement": "ハエトリグサは、むしが にかい さわると とじるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A Venus flytrap closes when a bug touches it twice.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "当小虫碰到捕蝇草两次，它就会合上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "파리지옥은 벌레가 두 번 건드리면 닫혀요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La atrapamoscas se cierra cuando un bicho la toca dos veces.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "mimosa_shy_leaves",
+      "ja": {
+        "statement": "おじぎそうは、さわると はを とじるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A sensitive plant folds its leaves when touched.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "含羞草被碰到时会合起叶子。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "미모사는 만지면 잎을 접어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La mimosa pliega sus hojas cuando se la toca.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "redwood_tallest",
+      "ja": {
+        "statement": "セコイアは、ひゃく メートルを こえる ことが ある き。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Redwoods can grow taller than 100 meters.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "红杉可以长到一百米以上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "세쿼이아는 100미터 넘게 자랄 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las secuoyas pueden medir más de 100 metros.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "dandelion_parachute",
+      "ja": {
+        "statement": "たんぽぽの たねは、わたげで かぜに のるよ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Dandelion seeds travel on the wind using fluffy hairs.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "蒲公英的种子靠绒毛乘风飘行。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "민들레 씨앗은 솜털로 바람을 타요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Las semillas del diente de león viajan con el viento gracias a sus pelitos.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "velcro_burdock",
+      "ja": {
+        "statement": "いぬの けに ついた くさの みが ヒントで、めんファスナーが うまれた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Velcro was inspired by burrs stuck to a dog's fur.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "魔术贴的灵感来自粘在狗毛上的刺果。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "찍찍이는 강아지 털에 붙은 풀열매에서 힌트를 얻었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "El velcro se inspiró en semillas pegadas al pelo de un perro.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "postit_weak_glue",
+      "ja": {
+        "statement": "ふせんの のりは、とても つよい のりを めざして ねらいどおりに できた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Post-it glue came out exactly as the strong glue the scientist planned.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "便利贴的胶水正是科学家想要的强力胶。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "포스트잇 풀은 과학자가 계획한 대로 강력한 풀이었어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El pegamento de las Post-it fue justo el pegamento fuerte que planeaba el científico.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "instant_noodle_1958",
+      "ja": {
+        "statement": "チキンラーメンは 1958ねんに はつばい された。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Chikin Ramen was launched in 1958.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "鸡汤拉面于1958年上市。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "치킨 라멘은 1958년에 출시되었어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Chikin Ramen se lanzó en 1958.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "zipper_sundback",
+      "ja": {
+        "statement": "いまの ジッパーに ちかい かたちを つくったのは、にほんの ひとだ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "A Japanese person made the zipper design close to today's.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "做出接近今天拉链的是一位日本人。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "지금과 비슷한 지퍼를 만든 사람은 일본 사람이에요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Un japonés hizo la cremallera cercana a la actual.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "pisa_tower_lean",
+      "ja": {
+        "statement": "ピサの とうは、たてている ときから かたむき はじめた。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Pisa's tower started to lean while it was being built.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "比萨塔在建造的时候就开始倾斜了。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "피사의 탑은 짓는 동안 기울기 시작했어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "La torre de Pisa empezó a inclinarse mientras la construían.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "opera_house_tiles",
+      "ja": {
+        "statement": "オペラハウスの やねの タイルは、ぜんぶ まっくろ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Sydney Opera House roof tiles are all jet black.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "悉尼歌剧院屋顶的瓷砖全是黑色的。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "시드니 오페라 하우스 지붕의 타일은 전부 새까매요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Las baldosas del techo de la Ópera de Sídney son todas negras.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "golden_gate_orange",
+      "ja": {
+        "statement": "ゴールデンゲートブリッジは、ほんとうに きんいろ。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Golden Gate Bridge is painted real gold.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "金门大桥涂的是真正的金色。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "금문교는 진짜 금색으로 칠해져 있어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "El puente Golden Gate está pintado de verdadero dorado.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "skytree_634",
+      "ja": {
+        "statement": "スカイツリーの たかさ 634 メートルは、むかしの ちめい「むさし」に ちなむ。",
+        "answer": true
+      },
+      "en": {
+        "statement": "Skytree's 634 m height is a pun on the old name \"Musashi.\"",
+        "answer": true
+      },
+      "zh": {
+        "statement": "晴空塔634米的高度谐音旧地名“武藏”。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "스카이트리의 634m는 옛 이름 '무사시'에서 따왔어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Los 634 m de la Skytree juegan con el antiguo nombre \"Musashi\".",
+        "answer": true
+      }
+    },
+    {
+      "factId": "five_yen_hole",
+      "ja": {
+        "statement": "5えんだまには あなが ない。",
+        "answer": false
+      },
+      "en": {
+        "statement": "The Japanese 5-yen coin has no hole.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "日本的5日元硬币中间没有洞。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "일본의 5엔 동전에는 구멍이 없어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "La moneda japonesa de 5 yenes no tiene agujero.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "one_yen_floats",
+      "ja": {
+        "statement": "1えんだまは、そっと おくと みずに うく ことが ある。",
+        "answer": true
+      },
+      "en": {
+        "statement": "A 1-yen coin can float if you place it gently and flat.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "1日元硬币轻轻平放可以浮在水面上。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "1엔 동전은 살짝 평평하게 놓으면 물에 뜰 수 있어요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Una moneda de 1 yen puede flotar si la pones con suavidad y plana.",
+        "answer": true
+      }
+    },
+    {
+      "factId": "emoji_docomo_1999",
+      "ja": {
+        "statement": "えもじは アメリカで さいしょに つくられた。",
+        "answer": false
+      },
+      "en": {
+        "statement": "Emoji were first created in the United States.",
+        "answer": false
+      },
+      "zh": {
+        "statement": "绘文字最早诞生在美国。",
+        "answer": false
+      },
+      "ko": {
+        "statement": "이모지는 미국에서 처음 만들어졌어요.",
+        "answer": false
+      },
+      "es": {
+        "statement": "Los emojis se crearon por primera vez en Estados Unidos.",
+        "answer": false
+      }
+    },
+    {
+      "factId": "randoseru_ransel",
+      "ja": {
+        "statement": "ランドセルの なまえは、オランダごが もとと いわれる。",
+        "answer": true
+      },
+      "en": {
+        "statement": "The word randoseru is said to come from a Dutch word.",
+        "answer": true
+      },
+      "zh": {
+        "statement": "据说“ランドセル”这个词来自荷兰语。",
+        "answer": true
+      },
+      "ko": {
+        "statement": "란도세루라는 말은 네덜란드어에서 왔다고 해요.",
+        "answer": true
+      },
+      "es": {
+        "statement": "Se dice que la palabra randoseru viene del neerlandés.",
+        "answer": true
+      }
+    }
+  ]
 }

@@ -13,7 +13,7 @@ class WhyLink {
 
   factory WhyLink.fromJson(Map<String, dynamic> json) {
     final questions = <String, ({String child, String standard})>{};
-    for (final lang in ['ja', 'en']) {
+    for (final lang in const ['ja', 'en', 'zh', 'ko', 'es']) {
       final m = json[lang] as Map<String, dynamic>?;
       if (m != null) {
         questions[lang] = (child: m['child'] as String, standard: m['default'] as String);
